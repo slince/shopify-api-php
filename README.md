@@ -85,7 +85,7 @@ Available managers:
 - [FulfillmentService](./src/Manager/FulfillmentService/FulfillmentServiceManagerInterface.php)
 - [Location](./src/Manager/Location/LocationManagerInterface.php)
 - [Order](./src/Manager/Order/OrderManagerInterface.php)
-- [OrderRisk](./src/Manager/OrderRisk/OrderRiskManagerInterface.php)
+- [OrderRisk](./src/Manager/OrderRisk/RiskManagerInterface.php)
 - [Page](./src/Manager/Page/PageManagerInterface.php)
 - [Policy](./src/Manager/Policy/PolicyManagerInterface.php)
 - [Product](./src/Manager/Product/ProductManagerInterface.php)

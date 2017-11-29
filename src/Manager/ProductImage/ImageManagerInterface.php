@@ -16,59 +16,59 @@ interface ImageManagerInterface
     /**
      * Finds articles.
      *
-     * @param int   $blogId
+     * @param int   $productId
      * @param array $query
      *
      * @return Image[]
      */
-    public function findAll($blogId, array $query = []);
+    public function findAll($productId, array $query = []);
 
     /**
-     * Finds an article.
+     * Finds an product.
      *
-     * @param int $blogId
+     * @param int $productId
      * @param int $id
      *
      * @return Image
      */
-    public function find($blogId, $id);
+    public function find($productId, $id);
 
     /**
      * Gets the count.
      *
-     * @param int   $blogId
+     * @param int   $productId
      * @param array $query
      *
      * @return int
      */
-    public function count($blogId, array $query = []);
+    public function count($productId, array $query = []);
 
     /**
-     * Updates the article.
+     * Updates the product.
      *
-     * @param int   $blogId
+     * @param int   $productId
      * @param int   $id
      * @param array $data
      *
      * @return Image
      */
-    public function update($blogId, $id, array $data);
+    public function update($productId, $id, array $data);
 
     /**
-     * Removes the article by given blog id and.
+     * Removes the product by given id id and product id.
      *
-     * @param int $blogId
+     * @param int $productId
      * @param int $id
      */
-    public function remove($blogId, $id);
+    public function remove($productId, $id);
 
     /**
-     * Creates a article.
+     * Creates a product.
      *
-     * @param int   $blogId
+     * @param int   $productId
      * @param array $data
      *
      * @return Image
      */
-    public function create($blogId, array $data);
+    public function create($productId, array $data);
 }

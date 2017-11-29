@@ -16,59 +16,59 @@ interface AssetManagerInterface
     /**
      * Finds articles.
      *
-     * @param int   $blogId
+     * @param int   $themeId
      * @param array $query
      *
      * @return Asset[]
      */
-    public function findAll($blogId, array $query = []);
+    public function findAll($themeId, array $query = []);
 
     /**
-     * Finds an article.
+     * Finds an asset.
      *
-     * @param int $blogId
+     * @param int $themeId
      * @param int $id
      *
      * @return Asset
      */
-    public function find($blogId, $id);
+    public function find($themeId, $id);
 
     /**
      * Gets the count.
      *
-     * @param int   $blogId
+     * @param int   $themeId
      * @param array $query
      *
      * @return int
      */
-    public function count($blogId, array $query = []);
+    public function count($themeId, array $query = []);
 
     /**
-     * Updates the article.
+     * Updates the asset.
      *
-     * @param int   $blogId
+     * @param int   $themeId
      * @param int   $id
      * @param array $data
      *
      * @return Asset
      */
-    public function update($blogId, $id, array $data);
+    public function update($themeId, $id, array $data);
 
     /**
-     * Removes the article by given blog id and.
+     * Removes the asset by given id and theme id.
      *
-     * @param int $blogId
+     * @param int $themeId
      * @param int $id
      */
-    public function remove($blogId, $id);
+    public function remove($themeId, $id);
 
     /**
-     * Creates a article.
+     * Creates a asset.
      *
-     * @param int   $blogId
+     * @param int   $themeId
      * @param array $data
      *
      * @return Asset
      */
-    public function create($blogId, array $data);
+    public function create($themeId, array $data);
 }
