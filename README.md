@@ -47,7 +47,9 @@ You first need to initialize the client. For that you need your Shop Name and Ac
 ```php
 require __DIR__ . '/vendor/autoload.php';
 
-$credential = new Slince\Shopify\Credential('Access Token');
+$credential = new Slince\Shopify\PublicAppCredential('Access Token');
+//Or Private App
+$credential = new Slince\Shopify\PrivateAppCredential('API KEY', 'PASSWORD', 'SHARED SECRET');
 
 $client  = new Slince\Shopify\Client($credential, 'Shop Name');  //e.g. your-store.myshopify.com
 ```
