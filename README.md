@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://cdn.shopify.com/shopify-marketing_assets/builds/19.0.0/shopify-full-color-black.svg" width="300" /> 
+    <img src="https://cdn.shopify.com/shopify-marketing_assets/builds/19.0.0/shopify-full-color-black.svg" width="300"/> 
 </p>
 
 <p align="center">:rocket: PHP SDK for the Shopify API</p>
@@ -24,7 +24,7 @@
 
 <p align="center">
     <a href="https://www.phpdish.com/">
-        <img alt="PHPDish Comunity System" src="https://raw.githubusercontent.com/slince/phpdish/master/assets/img/logo.png"/>
+        <img alt="PHPDish Community System" src="https://raw.githubusercontent.com/slince/phpdish/master/assets/img/logo.png" width="350"/>
     </a>
 </p>
 
