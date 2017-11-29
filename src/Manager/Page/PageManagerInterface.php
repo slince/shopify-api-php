@@ -11,7 +11,6 @@
 
 namespace Slince\Shopify\Manager\Page;
 
-use Slince\Shopify\Page\Page;
 use Slince\Shopify\Common\Manager\ManagerInterface;
 
 interface PageManagerInterface extends ManagerInterface
