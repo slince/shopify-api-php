@@ -1,9 +1,32 @@
-# PHP SDK for the Shopify API
+<p align="center">
+    <img src="https://cdn.shopify.com/shopify-marketing_assets/builds/19.0.0/shopify-full-color-black.svg" width="300" /> 
+</p>
 
-[![Build Status](https://img.shields.io/travis/slince/shopify-api-php/master.svg?style=flat-square)](https://travis-ci.org/slince/shopify-api-php)
-[![Coverage Status](https://img.shields.io/codecov/c/github/slince/shopify-api-php.svg?style=flat-square)](https://codecov.io/github/slince/shopify-api-php)
-[![Latest Stable Version](https://img.shields.io/packagist/v/slince/shopify-api-php.svg?style=flat-square&label=stable)](https://packagist.org/packages/slince/shopify-api-php)
-[![Scrutinizer](https://img.shields.io/scrutinizer/g/slince/shopify-api-php.svg?style=flat-square)](https://scrutinizer-ci.com/g/slince/shopify-api-php/?branch=master)
+<p align="center">:rocket: PHP SDK for the Shopify API</p>
+
+<p align="center">
+    <a href="LICENSE" target="_blank">
+        <img alt="Software License" src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square">
+    </a>
+    <a href="https://travis-ci.org/slince/shopify-api-php">
+        <img src="https://img.shields.io/travis/slince/shopify-api-php/master.svg?style=flat-square" alt="Build Status">
+    </a>
+    <a href="https://codecov.io/github/slince/shopify-api-php">
+        <img src="https://img.shields.io/codecov/c/github/slince/shopify-api-php.svg?style=flat-square" alt="Coverage Status">
+    </a>
+    <a href="https://packagist.org/packages/slince/shopify-api-php">
+        <img src="https://img.shields.io/packagist/v/slince/shopify-api-php.svg?style=flat-square&amp;label=stable" alt="Latest Stable Version">
+    </a>
+    <a href="https://scrutinizer-ci.com/g/slince/shopify-api-php/?branch=master">
+        <img src="https://img.shields.io/scrutinizer/g/slince/shopify-api-php.svg?style=flat-square" alt="Scrutinizer">
+    </a>
+</p>
+
+<p align="center">
+    <a href="https://www.phpdish.com/">
+        <img alt="PHPDish Comunity System" src="https://raw.githubusercontent.com/slince/phpdish/master/assets/img/logo.png"/>
+    </a>
+</p>
 
 ## Installation
 
