@@ -76,7 +76,7 @@ class Transaction extends Model
     protected $status;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $test;
 

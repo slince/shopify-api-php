@@ -20,7 +20,7 @@ interface HydratorInterface
      * @param array                $data
      * @param TypeCollection|array $types
      *
-     * @return Object
+     * @return object
      */
     public function hydrate($target, array $data, $types = []);
 

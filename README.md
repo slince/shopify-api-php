@@ -87,7 +87,7 @@ The product is an instance of `Slince\Shopify\Manager\Product\Product`; You can 
  
 ```php
 echo $product->getTitle();
-echo $product->getCreatedAt() // DateTime Object
+echo $product->getCreatedAt(); // DateTime Object
 //...
 print_r($product->getVariants());
 print_r($product->getImages());

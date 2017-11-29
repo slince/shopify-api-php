@@ -51,7 +51,7 @@ abstract class GeneralCurdable extends AbstractManager
     {
         $data = $this->client->get(Inflector::pluralize($this->getResourceName()).'/'.$id);
 
-        return call_user_func([$this->getModelClass(), 'fromArray'], $data[$this->getResourceName()]);
+        return call_user_func([$this->getModelClass(), 'fromArray'], reset($data));
     }
 
     /**
@@ -75,9 +75,8 @@ abstract class GeneralCurdable extends AbstractManager
     public function update($id, array $data)
     {
         $data = $this->client->put(Inflector::pluralize($this->getResourceName()).'/'.$id, [$this->getResourceName() => $data]);
-        $modelClass = $this->getModelClass();
 
-        return call_user_func([$modelClass, 'fromArray'], $data[$this->getResourceName()]);
+        return call_user_func([$this->getModelClass(), 'fromArray'], reset($data));
     }
 
     /**
@@ -91,7 +90,7 @@ abstract class GeneralCurdable extends AbstractManager
     {
         $data = $this->client->post(Inflector::pluralize($this->getResourceName()), [$this->getResourceName() => $data]);
 
-        return call_user_func([$this->getModelClass(), 'fromArray'], $data[$this->getResourceName()]);
+        return call_user_func([$this->getModelClass(), 'fromArray'], reset($data));
     }
 
     /**

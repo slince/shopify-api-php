@@ -41,12 +41,12 @@ class Risk extends Model
     protected $recommendation;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $display;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $causeCancel;
 

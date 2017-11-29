@@ -50,7 +50,7 @@ interface VariantManagerInterface extends ManagerInterface
      * @param int   $id
      * @param array $data
      *
-     * @return boolean
+     * @return bool
      */
     public function update($id, array $data);
 
@@ -60,7 +60,7 @@ interface VariantManagerInterface extends ManagerInterface
      * @param int $productId
      * @param int $id
      *
-     * @return boolean
+     * @return bool
      */
     public function remove($productId, $id);
 

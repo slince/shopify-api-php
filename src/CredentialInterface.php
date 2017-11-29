@@ -1,15 +1,26 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: taosikai
- * Date: 2017/11/29
- * Time: 21:02
+
+/*
+ * This file is part of the slince/shopify-api-php
+ *
+ * (c) Taosikai <taosikai@yeah.net>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
  */
 
 namespace Slince\Shopify;
 
+use Psr\Http\Message\RequestInterface;
 
-class CredentialInterface
+interface CredentialInterface
 {
-
+    /**
+     * Apply the credential to the request.
+     *
+     * @param RequestInterface $request
+     *
+     * @return RequestInterface
+     */
+    public function applyToRequest(RequestInterface $request);
 }

@@ -44,5 +44,6 @@ class WebhookManager extends GeneralCurdable implements WebhookManagerInterface
      */
     public function checkIncomingWebhookIsValid($request)
     {
+        throw new \Exception('The method is not supported');
     }
 }

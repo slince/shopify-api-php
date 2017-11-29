@@ -31,7 +31,7 @@ class Collect extends Model
     protected $updatedAt;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $featured;
 

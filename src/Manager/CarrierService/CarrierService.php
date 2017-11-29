@@ -21,12 +21,12 @@ class CarrierService extends Model
     protected $name;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $active;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $serviceDiscovery;
 

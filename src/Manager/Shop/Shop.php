@@ -156,7 +156,7 @@ class Shop extends Model
     protected $provinceCode;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $taxesIncluded;
 
@@ -181,12 +181,12 @@ class Shop extends Model
     protected $planName;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $hasDiscounts;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $hasGiftCards;
 
@@ -216,42 +216,42 @@ class Shop extends Model
     protected $moneyWithCurrencyInEmailsFormat;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $eligibleForPayments;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $requiresExtraPaymentsAgreement;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $passwordEnabled;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $hasStoreFront;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $eligibleForCardReaderGiveaway;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $finances;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $setupRequired;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $forceSsl;
 

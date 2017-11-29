@@ -51,7 +51,7 @@ class LineItem extends Model
     protected $quantity;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $requiresShipping;
 
@@ -61,7 +61,7 @@ class LineItem extends Model
     protected $sku;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $title;
 
@@ -86,7 +86,7 @@ class LineItem extends Model
     protected $name;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $giftCard;
 
@@ -96,7 +96,7 @@ class LineItem extends Model
     protected $properties;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $taxable;
 

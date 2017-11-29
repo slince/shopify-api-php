@@ -24,7 +24,7 @@ class Customer extends Model
     protected $email;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $acceptsMarketing;
 
@@ -74,7 +74,7 @@ class Customer extends Model
     protected $note;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $verifiedEmail;
 
@@ -84,7 +84,7 @@ class Customer extends Model
     protected $multipassIdentifier;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $taxExempt;
 

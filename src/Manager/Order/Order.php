@@ -56,7 +56,7 @@ class Order extends Model
     protected $gateway;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $test;
 
@@ -81,7 +81,7 @@ class Order extends Model
     protected $totalTax;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $taxesIncluded;
 
@@ -96,7 +96,7 @@ class Order extends Model
     protected $financialStatus;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $confirmed;
 
@@ -116,7 +116,7 @@ class Order extends Model
     protected $cartToken;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $buyerAcceptsMarketing;
 

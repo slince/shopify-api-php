@@ -26,17 +26,17 @@ class FulfillmentService extends Model
     protected $callbackUrl;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $inventoryManagement;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $trackingSupport;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $requiresShippingMethod;
 

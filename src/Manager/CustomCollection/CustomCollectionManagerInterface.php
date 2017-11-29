@@ -47,7 +47,7 @@ interface CustomCollectionManagerInterface extends ManagerInterface
      *
      * @param int $id
      *
-     * @return boolean
+     * @return bool
      */
     public function remove($id);
 

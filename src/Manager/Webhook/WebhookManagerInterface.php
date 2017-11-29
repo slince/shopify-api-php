@@ -11,6 +11,8 @@
 
 namespace Slince\Shopify\Manager\Webhook;
 
+use Psr\Http\Message\RequestInterface;
+
 interface WebhookManagerInterface
 {
     /**
@@ -46,7 +48,7 @@ interface WebhookManagerInterface
      * @param int   $id
      * @param array $data
      *
-     * @return boolean
+     * @return bool
      */
     public function update($id, array $data);
 
@@ -55,7 +57,7 @@ interface WebhookManagerInterface
      *
      * @param int $id
      *
-     * @return boolean
+     * @return bool
      */
     public function remove($id);
 
@@ -71,9 +73,9 @@ interface WebhookManagerInterface
     /**
      * Checks whether the request is a valid webhook request.
      *
-     * @param $request
+     * @param RequestInterface $request
      *
-     * @return boolean
+     * @return bool
      */
     public function checkIncomingWebhookIsValid($request);
 }

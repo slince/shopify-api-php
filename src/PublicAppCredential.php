@@ -11,48 +11,18 @@
 
 namespace Slince\Shopify;
 
-class Credential
+use Psr\Http\Message\RequestInterface;
+
+class PublicAppCredential implements CredentialInterface
 {
-    /**
-     * @var string
-     */
-    protected $apiKey;
-
-    /**
-     * @var string
-     */
-    protected $apiSecret;
-
     /**
      * @var AccessToken
      */
     protected $accessToken;
 
-    public function __construct($accessToken, $apiKey = null, $apiSecret = null)
+    public function __construct($accessToken)
     {
-        $this->apiKey = $apiKey;
-        $this->apiSecret = $apiSecret;
         $this->accessToken = $accessToken instanceof AccessToken ? $accessToken : new AccessToken($accessToken);
-    }
-
-    /**
-     * Gets the api key.
-     *
-     * @return string
-     */
-    public function getApiKey()
-    {
-        return $this->apiKey;
-    }
-
-    /**
-     * Gets the api secret.
-     *
-     * @return string
-     */
-    public function getApiSecret()
-    {
-        return $this->apiSecret;
     }
 
     /**
@@ -63,5 +33,13 @@ class Credential
     public function getAccessToken()
     {
         return $this->accessToken;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function applyToRequest(RequestInterface $request)
+    {
+        return $request->withHeader('X-Shopify-Access-Token', $this->getAccessToken());
     }
 }

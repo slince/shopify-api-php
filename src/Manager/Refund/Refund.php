@@ -33,7 +33,7 @@ class Refund extends Model
     protected $note;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $restock;
 

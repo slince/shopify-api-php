@@ -41,12 +41,12 @@ class Theme extends Model
     protected $themeStoreId;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $previewable;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $processing;
 

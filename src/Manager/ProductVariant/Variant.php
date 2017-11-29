@@ -91,7 +91,7 @@ class Variant extends Model
     protected $updatedAt;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $taxable;
 
@@ -126,7 +126,7 @@ class Variant extends Model
     protected $oldInventoryQuantity;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $requiresShipping;
 

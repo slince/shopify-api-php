@@ -46,7 +46,7 @@ interface CommentManagerInterface
      * @param int   $id
      * @param array $data
      *
-     * @return boolean
+     * @return bool
      */
     public function update($id, array $data);
 
@@ -55,7 +55,7 @@ interface CommentManagerInterface
      *
      * @param int $id
      *
-     * @return boolean
+     * @return bool
      */
     public function remove($id);
 }

@@ -91,7 +91,7 @@ class Address extends Model
     protected $countryName;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $default;
 

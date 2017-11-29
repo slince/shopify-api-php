@@ -64,7 +64,7 @@ class Client
     protected $container;
 
     /**
-     * @var Credential
+     * @var CredentialInterface
      */
     protected $credential;
 
@@ -119,7 +119,7 @@ class Client
      */
     protected static $delayNextRequest = false;
 
-    public function __construct(Credential $credential, $shop, array $options = [])
+    public function __construct(CredentialInterface $credential, $shop, array $options = [])
     {
         $this->container = new Container();
         $this->container->instance($this);
@@ -142,7 +142,7 @@ class Client
     /**
      * Gets the credential.
      *
-     * @return Credential
+     * @return CredentialInterface
      */
     public function getCredential()
     {
@@ -286,8 +286,8 @@ class Client
      */
     public function sendRequest(RequestInterface $request, array $options = [])
     {
-        $request = $request->withHeader('Content-Type', 'application/json')
-            ->withHeader('X-Shopify-Access-Token', $this->credential->getAccessToken());
+        $request = $request->withHeader('Content-Type', 'application/json');
+        $request = $this->credential->applyToRequest($request);
         if (static::$delayNextRequest) {
             usleep(100 * rand(1, 10));
         }

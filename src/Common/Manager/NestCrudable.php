@@ -63,7 +63,7 @@ abstract class NestCrudable extends AbstractManager
         $resource = $this->createPartialResourceUrlForView($parentId, $id);
         $data = $this->client->get($resource);
 
-        return call_user_func([$this->getModelClass(), 'fromArray'], $data[$this->getResourceName()]);
+        return call_user_func([$this->getModelClass(), 'fromArray'], reset($data));
     }
 
     /**
@@ -92,7 +92,7 @@ abstract class NestCrudable extends AbstractManager
         $resource = $this->createPartialResourceUrlForView($parentId, $id);
         $data = $this->client->put($resource, [$this->getResourceName() => $data]);
 
-        return call_user_func([$this->getModelClass(), 'fromArray'], $data[$this->getResourceName()]);
+        return call_user_func([$this->getModelClass(), 'fromArray'], reset($data));
     }
 
     /**
@@ -108,7 +108,7 @@ abstract class NestCrudable extends AbstractManager
         $resource = $this->createPartialResourceUrlForList($parentId);
         $data = $this->client->post($resource, [$this->getResourceName() => $data]);
 
-        return call_user_func([$this->getModelClass(), 'fromArray'], $data[$this->getResourceName()]);
+        return call_user_func([$this->getModelClass(), 'fromArray'], reset($data));
     }
 
     /**
@@ -130,14 +130,12 @@ abstract class NestCrudable extends AbstractManager
     {
         return Inflector::pluralize($this->getParentResourceName())
             .'/'.$parentId
-            .Inflector::pluralize($this->getResourceName());
+            .'/'.Inflector::pluralize($this->getResourceName());
     }
 
     protected function createPartialResourceUrlForView($parentId, $id)
     {
-        return  Inflector::pluralize($this->getParentResourceName())
-            .'/'.$parentId
-            .Inflector::pluralize($this->getResourceName())
+        return  $this->createPartialResourceUrlForList($parentId)
             .'/'.$id;
     }
 }
