@@ -1,0 +1,192 @@
+<?php
+
+/*
+ * This file is part of the slince/shopify-api-php
+ *
+ * (c) Taosikai <taosikai@yeah.net>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
+ */
+
+namespace Slince\Shopify\Manager\Asset;
+
+use Slince\Shopify\Common\Model\Model;
+
+class Asset extends Model
+{
+    /**
+     * @var string
+     */
+    protected $key;
+
+    /**
+     * @var string
+     */
+    protected $publicUrl;
+
+    /**
+     * @var string
+     */
+    protected $createdAt;
+
+    /**
+     * @var string
+     */
+    protected $updatedAt;
+
+    /**
+     * @var string
+     */
+    protected $contentType;
+
+    /**
+     * @var number
+     */
+    protected $size;
+
+    /**
+     * @var int
+     */
+    protected $themeId;
+
+    /**
+     * @return string
+     */
+    public function getKey()
+    {
+        return $this->key;
+    }
+
+    /**
+     * @param string $key
+     *
+     * @return Asset
+     */
+    public function setKey($key)
+    {
+        $this->key = $key;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPublicUrl()
+    {
+        return $this->publicUrl;
+    }
+
+    /**
+     * @param string $publicUrl
+     *
+     * @return Asset
+     */
+    public function setPublicUrl($publicUrl)
+    {
+        $this->publicUrl = $publicUrl;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * @param string $createdAt
+     *
+     * @return Asset
+     */
+    public function setCreatedAt($createdAt)
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUpdatedAt()
+    {
+        return $this->updatedAt;
+    }
+
+    /**
+     * @param string $updatedAt
+     *
+     * @return Asset
+     */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getContentType()
+    {
+        return $this->contentType;
+    }
+
+    /**
+     * @param string $contentType
+     *
+     * @return Asset
+     */
+    public function setContentType($contentType)
+    {
+        $this->contentType = $contentType;
+
+        return $this;
+    }
+
+    /**
+     * @return number
+     */
+    public function getSize()
+    {
+        return $this->size;
+    }
+
+    /**
+     * @param number $size
+     *
+     * @return Asset
+     */
+    public function setSize($size)
+    {
+        $this->size = $size;
+
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getThemeId()
+    {
+        return $this->themeId;
+    }
+
+    /**
+     * @param int $themeId
+     *
+     * @return Asset
+     */
+    public function setThemeId($themeId)
+    {
+        $this->themeId = $themeId;
+
+        return $this;
+    }
+}

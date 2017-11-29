@@ -1,0 +1,13 @@
+{
+  "carrier_services": [
+    {
+      "id": 1006327367,
+      "name": "Purolator",
+      "active": true,
+      "service_discovery": true,
+      "carrier_service_type": "api",
+      "format": "json",
+      "callback_url": "http:\/\/example.com\/"
+    }
+  ]
+}

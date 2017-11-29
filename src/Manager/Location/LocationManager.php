@@ -1,0 +1,65 @@
+<?php
+
+/*
+ * This file is part of the slince/shopify-api-php
+ *
+ * (c) Taosikai <taosikai@yeah.net>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
+ */
+
+namespace Slince\Shopify\Manager\Location;
+
+use Slince\Shopify\Common\Manager\GeneralCurdable;
+
+class LocationManager extends GeneralCurdable implements LocationManagerInterface
+{
+    /**
+     * {@inheritdoc}
+     */
+    public static function getServiceName()
+    {
+        return 'locations';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getResourceName()
+    {
+        return 'location';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getModelClass()
+    {
+        return Location::class;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function count(array $query = [])
+    {
+        return new \Exception('The method is not supported');
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function update($id, array $data)
+    {
+        return new \Exception('The method is not supported');
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function remove($id)
+    {
+        return new \Exception('The method is not supported');
+    }
+}

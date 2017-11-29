@@ -1,0 +1,34 @@
+{
+  "themes": [
+    {
+      "id": 828155753,
+      "name": "Comfort",
+      "created_at": "2017-01-05T15:36:16-05:00",
+      "updated_at": "2017-01-05T15:36:16-05:00",
+      "role": "main",
+      "theme_store_id": null,
+      "previewable": true,
+      "processing": false
+    },
+    {
+      "id": 976877075,
+      "name": "Speed",
+      "created_at": "2017-01-05T15:36:16-05:00",
+      "updated_at": "2017-01-05T15:36:16-05:00",
+      "role": "mobile",
+      "theme_store_id": null,
+      "previewable": true,
+      "processing": false
+    },
+    {
+      "id": 752253240,
+      "name": "Sandbox",
+      "created_at": "2017-01-05T15:36:16-05:00",
+      "updated_at": "2017-01-05T15:36:16-05:00",
+      "role": "unpublished",
+      "theme_store_id": null,
+      "previewable": true,
+      "processing": false
+    }
+  ]
+}
