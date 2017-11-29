@@ -3,24 +3,24 @@
 namespace Slince\Shopify\Tests;
 
 use Slince\Shopify\Client;
-use Slince\Shopify\Credential;
+use Slince\Shopify\PublicAppCredential;
 use Slince\Shopify\Exception\InvalidArgumentException;
 
 class ClientTest extends TestCase
 {
     public function testShop()
     {
-        $client = new Client(new Credential('foobarbazfoobarbaz'), 'bar.myshopify.com');
+        $client = new Client(new PublicAppCredential('foobarbazfoobarbaz'), 'bar.myshopify.com');
         $this->assertEquals('bar.myshopify.com', $client->getShop());
         try{
-            new Client(new Credential('foobarbazfoobarbaz'),  'ab');
+            new Client(new PublicAppCredential('foobarbazfoobarbaz'),  'ab');
             $this->fail();
         } catch (\Exception $exception) {
             $this->assertInstanceOf(InvalidArgumentException::class, $exception);
         }
 
         try{
-            $client = new Client(new Credential('foobarbazfoobarbaz'),  'bar');
+            $client = new Client(new PublicAppCredential('foobarbazfoobarbaz'),  'bar');
             $client->setShop(str_repeat('abc', 100).'.myshopify.com');
             $this->fail();
         } catch (\Exception $exception) {
@@ -30,7 +30,7 @@ class ClientTest extends TestCase
 
     public function testHttpClient()
     {
-        $client = new Client(new Credential('foobarbazfoobarbaz'), 'bar.myshopify.com');
+        $client = new Client(new PublicAppCredential('foobarbazfoobarbaz'), 'bar.myshopify.com');
         $this->assertInstanceOf(\GuzzleHttp\Client::class, $client->getHttpClient());
 
         $httpClient = new \GuzzleHttp\Client([
@@ -40,7 +40,7 @@ class ClientTest extends TestCase
         $this->assertEquals($httpClient, $client->getHttpClient());
         $this->assertTrue($client->getHttpClient()->getConfig('verify'));
 
-        $client = new Client(new Credential('foobarbazfoobarbaz'), 'bar.myshopify.com', [
+        $client = new Client(new PublicAppCredential('foobarbazfoobarbaz'), 'bar.myshopify.com', [
             'httpClient' => $httpClient,
         ]);
         $this->assertEquals($httpClient, $client->getHttpClient());
@@ -80,14 +80,14 @@ class ClientTest extends TestCase
 
     public function testCredential()
     {
-        $credential = new Credential('foobarbazfoobarbaz');
+        $credential = new PublicAppCredential('foobarbazfoobarbaz');
         $client = new Client($credential, 'bar.myshopify.com');
         $this->assertEquals($credential, $client->getCredential());
     }
 
     public function testGetManager()
     {
-        $credential = new Credential('foobarbazfoobarbaz');
+        $credential = new PublicAppCredential('foobarbazfoobarbaz');
         $client = new Client($credential, 'bar.myshopify.com');
 
         foreach ($client->serviceClass as $serviceClass) {

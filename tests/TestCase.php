@@ -6,7 +6,7 @@ use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\Psr7\Stream;
 use PHPUnit\Framework\TestCase as BaseTestCase;
 use Slince\Shopify\Client;
-use Slince\Shopify\Credential;
+use Slince\Shopify\PublicAppCredential;
 
 class TestCase extends BaseTestCase
 {
@@ -27,7 +27,7 @@ class TestCase extends BaseTestCase
     {
         $fixture = static::FIXTURES_DIR.'/'.$fixture;
         $mock = $this->getMockBuilder(Client::class)
-            ->setConstructorArgs([new Credential(static::ACCESS_TOKEN), static::SHOP_NAME])
+            ->setConstructorArgs([new PublicAppCredential(static::ACCESS_TOKEN), static::SHOP_NAME])
             ->setMethods(['sendRequest'])
             ->getMock();
         $mock->method('sendRequest')
