@@ -32,6 +32,14 @@ class ShopManager extends AbstractManager implements ShopManagerInterface
     }
 
     /**
+     * {@inheritdoc}
+     */
+    public function getResourceName()
+    {
+        return 'shop';
+    }
+
+    /**
      * Gets the shop.
      *
      * @return Shop

@@ -34,6 +34,13 @@ abstract class AbstractManager implements ManagerInterface
     abstract public function getModelClass();
 
     /**
+     * Gets the resource name.
+     *
+     * @return string
+     */
+    abstract public function getResourceName();
+
+    /**
      * Create the model from an array.
      *
      * @param array $data
@@ -59,5 +66,16 @@ abstract class AbstractManager implements ManagerInterface
             $models[] = $this->fromArray($item);
         }
         return $models;
+    }
+
+    /**
+     * Converts the model to array.
+     *
+     * @param ModelInterface $model
+     * @return array
+     */
+    public function toArray($model)
+    {
+        return $this->client->getHydrator()->extract($model);
     }
 }

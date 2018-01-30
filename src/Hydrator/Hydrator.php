@@ -11,6 +11,8 @@
 
 namespace Slince\Shopify\Hydrator;
 
+use JMS\Serializer\Context;
+use JMS\Serializer\SerializationContext;
 use JMS\Serializer\Serializer;
 use JMS\Serializer\SerializerBuilder;
 
@@ -21,12 +23,18 @@ class Hydrator implements HydratorInterface
      */
     protected $serializer;
 
+    /**
+     * @var Context
+     */
+    protected $serializationContext;
+
     public function __construct($cacheDir, $metaDir)
     {
         $this->serializer = SerializerBuilder::create()
             ->setCacheDir($cacheDir)
             ->addMetadataDir($metaDir)
             ->build();
+        $this->serializationContext = SerializationContext::create()->setSerializeNull(true);
     }
 
     /**
@@ -34,7 +42,7 @@ class Hydrator implements HydratorInterface
      */
     public function extract($object)
     {
-        return $this->serializer->toArray($object);
+        return $this->serializer->toArray($object, $this->serializationContext);
     }
 
     /**

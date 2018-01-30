@@ -88,6 +88,7 @@ class HydratorTest  extends TestCase
                 ],
             ],
             'created_at' => '2010-07-12T15:31:50-0400',
+            'category' => null
         ], $data);
     }
 }

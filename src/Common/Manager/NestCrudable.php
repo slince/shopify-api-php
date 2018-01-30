@@ -17,13 +17,6 @@ use Slince\Shopify\Common\Model\ModelInterface;
 abstract class NestCrudable extends AbstractManager
 {
     /**
-     * Gets the resource name.
-     *
-     * @return string
-     */
-    abstract public function getResourceName();
-
-    /**
      * Gets the parent resource name.
      *
      * @return string

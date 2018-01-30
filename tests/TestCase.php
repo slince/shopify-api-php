@@ -52,4 +52,10 @@ class TestCase extends BaseTestCase
 
         return $mock;
     }
+
+    protected function readFixture($fixture)
+    {
+        $fixture = static::FIXTURES_DIR.'/'.$fixture;
+        return \GuzzleHttp\json_decode(file_get_contents($fixture), true);
+    }
 }

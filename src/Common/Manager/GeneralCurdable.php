@@ -17,13 +17,6 @@ use Slince\Shopify\Common\Model\ModelInterface;
 abstract class GeneralCurdable extends AbstractManager
 {
     /**
-     * Gets the resource name.
-     *
-     * @return string
-     */
-    abstract public function getResourceName();
-
-    /**
      * Finds the resources by given query condition.
      *
      * @param array $query
