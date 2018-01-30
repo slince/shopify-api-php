@@ -1,8 +1,12 @@
 <?php
-/**
- * Shopify library.
+
+/*
+ * This file is part of the slince/shopify-api-php
  *
- * @author Tao <taosikai@yeah.net>
+ * (c) Slince <taosikai@yeah.net>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
  */
 
 namespace Slince\Shopify\Common\Manager;
@@ -12,13 +16,6 @@ use Slince\Shopify\Common\Model\ModelInterface;
 
 abstract class GeneralCurdable extends AbstractManager
 {
-    /**
-     * Gets the model class.
-     *
-     * @return string
-     */
-    abstract public function getModelClass();
-
     /**
      * Gets the resource name.
      *
@@ -37,7 +34,7 @@ abstract class GeneralCurdable extends AbstractManager
     {
         $data = $this->client->get(Inflector::pluralize($this->getResourceName()), $query);
 
-        return call_user_func([$this->getModelClass(), 'createMany'], reset($data));
+        return $this->createMany(reset($data));
     }
 
     /**
@@ -51,7 +48,7 @@ abstract class GeneralCurdable extends AbstractManager
     {
         $data = $this->client->get(Inflector::pluralize($this->getResourceName()).'/'.$id);
 
-        return call_user_func([$this->getModelClass(), 'fromArray'], reset($data));
+        return $this->fromArray(reset($data));
     }
 
     /**
@@ -76,7 +73,7 @@ abstract class GeneralCurdable extends AbstractManager
     {
         $data = $this->client->put(Inflector::pluralize($this->getResourceName()).'/'.$id, [$this->getResourceName() => $data]);
 
-        return call_user_func([$this->getModelClass(), 'fromArray'], reset($data));
+        return $this->fromArray(reset($data));
     }
 
     /**
@@ -90,7 +87,7 @@ abstract class GeneralCurdable extends AbstractManager
     {
         $data = $this->client->post(Inflector::pluralize($this->getResourceName()), [$this->getResourceName() => $data]);
 
-        return call_user_func([$this->getModelClass(), 'fromArray'], reset($data));
+        return $this->fromArray(reset($data));
     }
 
     /**

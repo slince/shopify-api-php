@@ -1,8 +1,12 @@
 <?php
-/**
- * Shopify library.
+
+/*
+ * This file is part of the slince/shopify-api-php
  *
- * @author Tao <taosikai@yeah.net>
+ * (c) Slince <taosikai@yeah.net>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
  */
 
 namespace Slince\Shopify\Common\Model;
@@ -35,57 +39,5 @@ abstract class Model implements ModelInterface
         $this->id = $id;
 
         return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function jsonSerialize()
-    {
-        return $this->toArray();
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function toArray()
-    {
-        return Hydrator::instance()->extract($this);
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public static function fromArray(array $data)
-    {
-        return Hydrator::instance()->hydrate(
-            new static(),
-            $data
-        );
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public static function createMany(array $data)
-    {
-        $models = [];
-        foreach ($data as $item) {
-            $models[] = static::fromArray($item);
-        }
-
-        return $models;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public static function getTypeCollection()
-    {
-        return [
-            new DateTimeType('createdAt'),
-            new DateTimeType('updatedAt'),
-            new DateTimeType('publishedAt'),
-        ];
     }
 }

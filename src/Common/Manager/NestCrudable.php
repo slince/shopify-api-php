@@ -1,9 +1,12 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: taosikai
- * Date: 2017/11/28
- * Time: 11:18.
+
+/*
+ * This file is part of the slince/shopify-api-php
+ *
+ * (c) Slince <taosikai@yeah.net>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
  */
 
 namespace Slince\Shopify\Common\Manager;
@@ -13,13 +16,6 @@ use Slince\Shopify\Common\Model\ModelInterface;
 
 abstract class NestCrudable extends AbstractManager
 {
-    /**
-     * Gets the model class.
-     *
-     * @return string
-     */
-    abstract public function getModelClass();
-
     /**
      * Gets the resource name.
      *
@@ -47,7 +43,7 @@ abstract class NestCrudable extends AbstractManager
         $resource = $this->createPartialResourceUrlForList($parentId);
         $data = $this->client->get($resource, $query);
 
-        return call_user_func([$this->getModelClass(), 'createMany'], reset($data));
+        return $this->createMany(reset($data));
     }
 
     /**
@@ -63,7 +59,7 @@ abstract class NestCrudable extends AbstractManager
         $resource = $this->createPartialResourceUrlForView($parentId, $id);
         $data = $this->client->get($resource);
 
-        return call_user_func([$this->getModelClass(), 'fromArray'], reset($data));
+        return $this->fromArray(reset($data));
     }
 
     /**
@@ -92,7 +88,7 @@ abstract class NestCrudable extends AbstractManager
         $resource = $this->createPartialResourceUrlForView($parentId, $id);
         $data = $this->client->put($resource, [$this->getResourceName() => $data]);
 
-        return call_user_func([$this->getModelClass(), 'fromArray'], reset($data));
+        return $this->fromArray(reset($data));
     }
 
     /**
@@ -108,7 +104,7 @@ abstract class NestCrudable extends AbstractManager
         $resource = $this->createPartialResourceUrlForList($parentId);
         $data = $this->client->post($resource, [$this->getResourceName() => $data]);
 
-        return call_user_func([$this->getModelClass(), 'fromArray'], reset($data));
+        return $this->fromArray(reset($data));
     }
 
     /**

@@ -3,7 +3,7 @@
 /*
  * This file is part of the slince/shopify-api-php
  *
- * (c) Taosikai <taosikai@yeah.net>
+ * (c) Slince <taosikai@yeah.net>
  *
  * This source file is subject to the MIT license that is bundled
  * with this source code in the file LICENSE.
@@ -20,6 +20,7 @@ use Psr\Http\Message\ResponseInterface;
 use Slince\Shopify\Exception\InvalidArgumentException;
 use GuzzleHttp\Exception\RequestException;
 use Slince\Shopify\Exception\ClientException;
+use Slince\Shopify\Hydrator\Hydrator;
 
 /**
  * @method Manager\Article\ArticleManagerInterface getArticleManager
@@ -119,6 +120,16 @@ class Client
      */
     protected static $delayNextRequest = false;
 
+    /**
+     * @var string
+     */
+    protected $metaCacheDir;
+
+    /**
+     * @var Hydrator
+     */
+    protected $hydrator;
+
     public function __construct(CredentialInterface $credential, $shop, array $options = [])
     {
         $this->container = new Container();
@@ -126,6 +137,7 @@ class Client
         $this->credential = $credential;
         $this->setShop($shop);
         $this->applyOptions($options);
+        $this->hydrator = new Hydrator($this->metaCacheDir);
         $this->initializeBaseServices();
     }
 
@@ -311,6 +323,20 @@ class Client
     protected function applyOptions(array $options)
     {
         isset($options['httpClient']) && $this->httpClient = $options['httpClient'];
+        if (!isset($options['metaCacheDir'])) {
+            throw new InvalidArgumentException('You must provide option "metaCacheDir"');
+        }
+        $this->metaCacheDir = $options['metaCacheDir'];
+    }
+
+    /**
+     * Gets the hydrator instance
+     *
+     * @return Hydrator
+     */
+    public function getHydrator()
+    {
+        return $this->hydrator;
     }
 
     /**

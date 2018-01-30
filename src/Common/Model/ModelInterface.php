@@ -1,8 +1,12 @@
 <?php
-/**
- * Shopify library.
+
+/*
+ * This file is part of the slince/shopify-api-php
  *
- * @author Tao <taosikai@yeah.net>
+ * (c) Slince <taosikai@yeah.net>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
  */
 
 namespace Slince\Shopify\Common\Model;
@@ -10,7 +14,7 @@ namespace Slince\Shopify\Common\Model;
 use JsonSerializable;
 use Slince\Shopify\Hydrator\HydratableInterface;
 
-interface ModelInterface extends JsonSerializable, HydratableInterface
+interface ModelInterface
 {
     /**
      * Gets the id of the model.
@@ -34,22 +38,4 @@ interface ModelInterface extends JsonSerializable, HydratableInterface
      * @return array
      */
     public function toArray();
-
-    /**
-     * Create the model from an array.
-     *
-     * @param array $data
-     *
-     * @return static
-     */
-    public static function fromArray(array $data);
-
-    /**
-     * Create many models from an array.
-     *
-     * @param array $data
-     *
-     * @return static[]
-     */
-    public static function createMany(array $data);
 }

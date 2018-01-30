@@ -3,13 +3,15 @@
 /*
  * This file is part of the slince/shopify-api-php
  *
- * (c) Taosikai <taosikai@yeah.net>
+ * (c) Slince <taosikai@yeah.net>
  *
  * This source file is subject to the MIT license that is bundled
  * with this source code in the file LICENSE.
  */
 
 namespace Slince\Shopify\Hydrator;
+
+use Slince\Shopify\Common\Model\ModelInterface;
 
 interface HydratorInterface
 {
@@ -18,16 +20,15 @@ interface HydratorInterface
      *
      * @param string|object        $target
      * @param array                $data
-     * @param TypeCollection|array $types
      *
-     * @return object
+     * @return ModelInterface
      */
-    public function hydrate($target, array $data, $types = []);
+    public function hydrate($target, array $data);
 
     /**
      * Extracts data from an object.
      *
-     * @param object $object
+     * @param ModelInterface $object
      *
      * @return array
      */
