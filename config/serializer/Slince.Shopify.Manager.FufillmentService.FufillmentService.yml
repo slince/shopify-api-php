@@ -1,0 +1,14 @@
+Slince\Shopify\Manager\FulfillmentService\FulfillmentService:
+    properties:
+        id:
+            type: integer
+        name:
+            type: string
+        callbackUrl:
+            type: string
+        inventoryManagement:
+            type: boolean
+        trackingSupport:
+            type: boolean
+        requiresShippingMethod:
+            type: bool

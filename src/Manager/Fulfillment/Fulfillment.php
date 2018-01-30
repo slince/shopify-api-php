@@ -58,6 +58,11 @@ class Fulfillment extends Model
     protected $trackingNumber;
 
     /**
+     * @var array
+     */
+    protected $trackingNumbers;
+
+    /**
      * @var string
      */
     protected $trackingUrl;
@@ -313,6 +318,25 @@ class Fulfillment extends Model
     public function setLineItems($lineItems)
     {
         $this->lineItems = $lineItems;
+
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getTrackingNumbers()
+    {
+        return $this->trackingNumbers;
+    }
+
+    /**
+     * @param array $trackingNumbers
+     * @return Fulfillment
+     */
+    public function setTrackingNumbers($trackingNumbers)
+    {
+        $this->trackingNumbers = $trackingNumbers;
 
         return $this;
     }

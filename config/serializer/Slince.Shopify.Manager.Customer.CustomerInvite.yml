@@ -1,0 +1,14 @@
+Slince\Shopify\Customer\CustomerInvite:
+    properties:
+        id:
+            type: integer
+        to:
+            type: string
+        from:
+            type: string
+        subject:
+            type: string
+        bcc:
+            type: array<string>
+        customMessage:
+            type: string

@@ -276,12 +276,12 @@ class Order extends Model
     protected $shippingLines;
 
     /**
-     * @var array
+     * @var Address
      */
     protected $billingAddress;
 
     /**
-     * @var array
+     * @var Address
      */
     protected $shippingAddress;
 
@@ -291,7 +291,7 @@ class Order extends Model
     protected $fulfillments;
 
     /**
-     * @var array
+     * @var ClientDetails
      */
     protected $clientDetails;
 

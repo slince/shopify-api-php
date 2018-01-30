@@ -1,0 +1,30 @@
+Slince\Shopify\Manager\Fulfillment\Fulfillment:
+    properties:
+        id:
+            type: integer
+        orderId:
+            type: integer
+        status:
+            type: string
+        createdAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        updatedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        service:
+            type: string
+        shipmentStatus:
+            type: string
+        trackingCompany:
+            type: string
+        trackingNumber:
+            type: string
+        trackingNumbers:
+            type: array<string>
+        trackingUrl:
+            type: string
+        trackingUrls:
+            type: array<string>
+        recipt:
+            type: array<string,string>
+        lineItems:
+            type: array<Slince\Shopify\Manager\Order\LineItem>
