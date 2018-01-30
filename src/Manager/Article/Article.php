@@ -21,11 +21,6 @@ class Article extends Model
     protected $title;
 
     /**
-     * @var \DateTime
-     */
-    protected $createdAt;
-
-    /**
      * @var string
      */
     protected $bodyHtml;
@@ -44,6 +39,11 @@ class Article extends Model
      * @var int
      */
     protected $userId;
+
+    /**
+     * @var \DateTime
+     */
+    protected $createdAt;
 
     /**
      * @var \DateTime

@@ -1,0 +1,14 @@
+Slince\Shopify\Manager\Country\Country:
+    properties:
+        id:
+            type: integer
+        name:
+            type: string
+        tax:
+            type: double
+        code:
+            type: string
+        taxName:
+            type: string
+        provinces:
+            type: array<Slince\Shopify\Manager\Province\Province>

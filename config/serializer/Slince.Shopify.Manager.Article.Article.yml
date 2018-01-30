@@ -1,0 +1,26 @@
+Slince\Shopify\Manager\Article\Article:
+    properties:
+        id:
+            type: integer
+        title:
+            type: string
+        bodyHtml:
+            type: string
+        blogId:
+            type: integer
+        author:
+            type: string
+        userId:
+            type: integer
+        createdAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        updatedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        publishedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        templateSuffix:
+            type: string
+        handle:
+            type: string
+        tags:
+            type: string

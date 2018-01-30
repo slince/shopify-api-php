@@ -1,0 +1,10 @@
+Slince\Shopify\Manager\CustomCollection\CustomCollectionImage:
+    properties:
+        createdAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        src:
+            type: string
+        width:
+            type: integer
+        height:
+            type: integer

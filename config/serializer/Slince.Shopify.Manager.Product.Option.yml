@@ -1,0 +1,12 @@
+Slince\Shopify\Manager\Product\Option:
+    properties:
+        id:
+            type: integer
+        name:
+            type: string
+        position:
+            type: integer
+        productId:
+            type: integer
+        values:
+            type: array<string>

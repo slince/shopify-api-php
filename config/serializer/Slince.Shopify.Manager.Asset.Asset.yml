@@ -1,0 +1,18 @@
+Slince\Shopify\Manager\Asset\Asset:
+    properties:
+        id:
+            type: integer
+        key:
+            type: string
+        publicUrl:
+            type: string
+        createdAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        updatedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        contentType:
+            type: string
+        size:
+            type: integer
+        theme:
+            type: integer
