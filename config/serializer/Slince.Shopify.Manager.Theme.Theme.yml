@@ -1,0 +1,18 @@
+Slince\Shopify\Manager\Theme\Theme:
+    properties:
+        id:
+            type: integer
+        name:
+            type: string
+        createdAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        updatedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        role:
+            type: string
+        themeStoreId:
+            type: integer
+        previewable:
+            type: boolean
+        processing:
+            type: boolean

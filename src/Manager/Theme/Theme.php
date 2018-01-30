@@ -36,7 +36,7 @@ class Theme extends Model
     protected $role;
 
     /**
-     * @var string
+     * @var int
      */
     protected $themeStoreId;
 

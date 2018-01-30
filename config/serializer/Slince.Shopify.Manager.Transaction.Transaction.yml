@@ -1,0 +1,34 @@
+Slince\Shopify\Manager\Transaction\Transaction:
+    properties:
+        id:
+            type: integer
+        amount:
+            type: float
+        authorization:
+            type: string
+        createdAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        deviceId:
+            type: string
+        gateway:
+            type: string
+        sourceName:
+            type: string
+        paymentDetails:
+            type: Slince\Shopify\Manager\Order\ClientDetails
+        kind:
+            type: string
+        orderId:
+            type: string
+        receipt:
+            type: array
+        errorCode:
+            type: string
+        status:
+            type: string
+        test:
+            type: false
+        userId:
+            type: integer
+        currency:
+            type: string

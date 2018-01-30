@@ -24,11 +24,6 @@ class ShippingZone extends Model
     protected $name;
 
     /**
-     * @var string
-     */
-    protected $tax;
-
-    /**
      * @var Country[]
      */
     protected $countries;
@@ -69,26 +64,6 @@ class ShippingZone extends Model
     public function setName($name)
     {
         $this->name = $name;
-
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getTax()
-    {
-        return $this->tax;
-    }
-
-    /**
-     * @param string $tax
-     *
-     * @return ShippingZone
-     */
-    public function setTax($tax)
-    {
-        $this->tax = $tax;
 
         return $this;
     }

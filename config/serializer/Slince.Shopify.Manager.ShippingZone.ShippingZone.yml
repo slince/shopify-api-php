@@ -1,0 +1,16 @@
+Slince\Shopify\Manager\ShippingZone\ShippingZone:
+    properties:
+        id:
+            type: integer
+        name:
+            type: string
+        countries:
+            type: array<Slince\Shopify\Manager\Country\Country>
+        provinces:
+            type: array<Slince\Shopify\Manager\Province\Province>
+        carrierShippingRateProviders:
+            type: array
+        priceBasedShippingRates:
+            type: array
+        weightBasedShippingRates:
+            type: array

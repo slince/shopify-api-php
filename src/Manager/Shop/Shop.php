@@ -91,7 +91,7 @@ class Shop extends Model
     protected $longitude;
 
     /**
-     * @var string
+     * @var int
      */
     protected $primaryLocationId;
 
