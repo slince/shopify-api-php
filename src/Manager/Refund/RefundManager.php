@@ -71,6 +71,6 @@ class RefundManager extends NestCrudable implements RefundManagerInterface
         $resource = "/orders/{$orderId}/refunds/calculate";
         $json = $this->client->post($resource, ['refund' => $data])['refund'];
 
-        return Refund::fromArray($json);
+        return $this->fromArray($json);
     }
 }

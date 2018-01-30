@@ -1,4 +1,4 @@
-Slince\Shopify\Manager\Order\ClientDetails:
+Slince\Shopify\Manager\Order\PaymentDetails:
     properties:
         creditCardBin:
             type: string

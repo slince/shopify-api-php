@@ -40,6 +40,6 @@ class ShopManager extends AbstractManager implements ShopManagerInterface
     {
         $data = $this->client->get('shop');
 
-        return Shop::fromArray($data['shop']);
+        return $this->fromArray($data['shop']);
     }
 }

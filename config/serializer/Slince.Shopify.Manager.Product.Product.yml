@@ -6,8 +6,10 @@ Slince\Shopify\Manager\Product\Product:
             type: string
         id:
             type: integer
+        image:
+            type: Slince\Shopify\Manager\ProductImage\Image
         images:
-            type: array<Slince\Shopify\Manager\Product\ProductImage\Image>
+            type: array<Slince\Shopify\Manager\ProductImage\Image>
         options:
             type: array<Slince\Shopify\Manager\Product\Option>
         productType:
@@ -27,6 +29,6 @@ Slince\Shopify\Manager\Product\Product:
         updatedAt:
             type: DateTime<'Y-m-d\TH:i:sO'>
         variants:
-            type: array<Slince\Shopify\Manager\Product\ProductVariant\Variant>
+            type: array<Slince\Shopify\Manager\ProductVariant\Variant>
         vendor:
             type: string

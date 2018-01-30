@@ -2,8 +2,6 @@ Slince\Shopify\Manager\Fulfillment\Fulfillment:
     properties:
         id:
             type: integer
-        orderId:
-            type: integer
         status:
             type: string
         createdAt:
@@ -22,9 +20,11 @@ Slince\Shopify\Manager\Fulfillment\Fulfillment:
             type: array<string>
         trackingUrl:
             type: string
+        orderId:
+            type: integer
         trackingUrls:
             type: array<string>
-        recipt:
+        receipt:
             type: array<string,string>
         lineItems:
             type: array<Slince\Shopify\Manager\Order\LineItem>

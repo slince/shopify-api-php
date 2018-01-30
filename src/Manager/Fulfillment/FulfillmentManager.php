@@ -62,7 +62,7 @@ class FulfillmentManager extends NestCrudable implements FulfillmentManagerInter
     {
         $data = $this->client->post('orders/'.$orderId.'/fulfillments/'.$id.'/open', []);
 
-        return Fulfillment::fromArray($data['fulfillment']);
+        return $this->fromArray($data['fulfillment']);
     }
 
     /**
@@ -72,7 +72,7 @@ class FulfillmentManager extends NestCrudable implements FulfillmentManagerInter
     {
         $data = $this->client->post('orders/'.$orderId.'/fulfillments/'.$id.'/cancel', []);
 
-        return Fulfillment::fromArray($data['fulfillment']);
+        return $this->fromArray($data['fulfillment']);
     }
 
     /**
@@ -82,6 +82,6 @@ class FulfillmentManager extends NestCrudable implements FulfillmentManagerInter
     {
         $data = $this->client->post('orders/'.$orderId.'/fulfillments/'.$id.'/complete', []);
 
-        return Fulfillment::fromArray($data['fulfillment']);
+        return $this->fromArray($data['fulfillment']);
     }
 }

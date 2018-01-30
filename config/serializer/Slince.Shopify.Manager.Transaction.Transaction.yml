@@ -27,7 +27,7 @@ Slince\Shopify\Manager\Transaction\Transaction:
         status:
             type: string
         test:
-            type: false
+            type: boolean
         userId:
             type: integer
         currency:
