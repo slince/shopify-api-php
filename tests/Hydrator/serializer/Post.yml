@@ -9,4 +9,4 @@ Post:
         category:
             type: Category
         createdAt:
-            type: DateTime<'Y-m-d\TH:i:sO'>
+             type: DateTime<'Y-m-d\TH:i:sO'>

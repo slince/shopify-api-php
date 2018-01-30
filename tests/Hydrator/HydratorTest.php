@@ -43,7 +43,7 @@ class HydratorTest  extends TestCase
                     'body' => 'comment 2',
                 ],
             ],
-            'created_at' => '2010-07-12T15:31:50-04:00',
+            'created_at' => '2018-01-30T09:42:13+0000',
         ]);
 
         $this->assertInstanceOf(\Post::class, $post);
@@ -73,7 +73,7 @@ class HydratorTest  extends TestCase
                     'body' => 'comment 2',
                 ],
             ],
-            'created_at' => '2010-07-12T15:31:50-04:00',
+            'created_at' => '2018-01-30T09:42:13+0000',
         ]);
         $data = $this->hydrator->extract($post);
         $this->assertEquals([
@@ -87,7 +87,7 @@ class HydratorTest  extends TestCase
                     'body' => 'comment 2',
                 ],
             ],
-            'created_at' => '2010-07-12T15:31:50-0400',
+            'created_at' => '2018-01-30T09:42:13+0000',
             'category' => null
         ], $data);
     }
