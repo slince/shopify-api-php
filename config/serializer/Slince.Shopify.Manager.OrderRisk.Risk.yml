@@ -1,0 +1,22 @@
+Slince\Shopify\Manager\OrderRisk\Risk:
+    properties:
+        id:
+            type: integer
+        orderId:
+            type: integer
+        checkoutId:
+            type: integer
+        source:
+            type: string
+        score:
+            type: float
+        recommendation:
+            type: string
+        display:
+            type: string
+        causeCancel:
+            type: boolean
+        message:
+            type: string
+        merchantMessage:
+            type: string

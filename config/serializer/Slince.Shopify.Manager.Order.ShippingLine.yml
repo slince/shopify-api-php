@@ -1,0 +1,21 @@
+Slince\Shopify\Manager\Order\ShippingLine:
+    properties:
+        id:
+            type: integer
+        code:
+            type: string
+        price:
+            type: float
+        source:
+            type: string
+        title:
+            type: string
+        taxLines:
+            type: array<Slince\Shopify\Manager\Order\TaxLine>
+        carrierIdentifier:
+            type: string
+        requestedFulfillmentServiceId:
+            type: string
+
+
+

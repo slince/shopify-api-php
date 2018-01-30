@@ -41,22 +41,22 @@ class Page extends Model
     protected $author;
 
     /**
-     * @var string
+     * @var \DateTime
      */
     protected $createdAt;
 
     /**
-     * @var string
+     * @var \DateTime
      */
     protected $updatedAt;
 
     /**
-     * @var int
+     * @var \DateTime
      */
     protected $publishedAt;
 
     /**
-     * @var int
+     * @var string
      */
     protected $templateSuffix;
 

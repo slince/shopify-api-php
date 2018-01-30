@@ -1,0 +1,20 @@
+Slince\Shopify\Manager\Refund\Refund:
+    properties:
+        id:
+            type: integer
+        orderId:
+            type: integer
+        createdAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        note:
+            type: string
+        restock:
+            type: boolean
+        userId:
+            type: integer
+        processedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        refundLineItems:
+            type: array<Slince\Shopify\Manager\Refund\RefundLineItem>
+        transactions:
+            type: array<Slince\Shopify\Manager\Transaction\Transaction>

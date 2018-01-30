@@ -1,0 +1,22 @@
+Slince\Shopify\Manager\Page\Page:
+    properties:
+        id:
+            type: integer
+        title:
+            type: integer
+        shopId:
+            type: integer
+        handle:
+            type: string
+        bodyHtml:
+            type: string
+        author:
+            type: string
+        createdAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        updatedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        publishedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        templateSuffix:
+            type: string

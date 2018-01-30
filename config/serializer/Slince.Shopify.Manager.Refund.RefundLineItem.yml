@@ -1,0 +1,14 @@
+Slince\Shopify\Manager\Refund\RefundLineItem:
+    properties:
+        id:
+            type: integer
+        quantity:
+            type: integer
+        lineItemId:
+            type: integer
+        subtotal:
+            type: float
+        totalTax:
+            type: float
+        lineItem:
+            type: Slince\Shopify\Manager\Order\LineItem

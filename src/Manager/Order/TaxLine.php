@@ -20,7 +20,7 @@ class TaxLine
     protected $title;
 
     /**
-     * @var string
+     * @var float
      */
     protected $price;
 
@@ -49,7 +49,7 @@ class TaxLine
     }
 
     /**
-     * @return string
+     * @return float
      */
     public function getPrice()
     {
@@ -57,7 +57,7 @@ class TaxLine
     }
 
     /**
-     * @param string $price
+     * @param float $price
      * @return TaxLine
      */
     public function setPrice($price)

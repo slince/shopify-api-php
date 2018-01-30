@@ -1,0 +1,8 @@
+Slince\Shopify\Manager\Redirect\Redirect:
+    properties:
+        id:
+            type: integer
+        path:
+            type: string
+        target:
+            type: string

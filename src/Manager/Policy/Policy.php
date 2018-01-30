@@ -36,7 +36,7 @@ class Policy extends Model
     protected $updatedAt;
 
     /**
-     * @var int
+     * @var string
      */
     protected $url;
 
@@ -121,7 +121,7 @@ class Policy extends Model
     }
 
     /**
-     * @return int
+     * @return string
      */
     public function getUrl()
     {
@@ -129,7 +129,7 @@ class Policy extends Model
     }
 
     /**
-     * @param int $url
+     * @param string $url
      *
      * @return Policy
      */

@@ -36,7 +36,7 @@ class LineItem extends Model
     protected $grams;
 
     /**
-     * @var string
+     * @var float
      */
     protected $price;
 
@@ -61,7 +61,7 @@ class LineItem extends Model
     protected $sku;
 
     /**
-     * @var bool
+     * @var string
      */
     protected $title;
 

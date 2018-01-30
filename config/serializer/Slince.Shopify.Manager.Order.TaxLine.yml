@@ -1,0 +1,8 @@
+Slince\Shopify\Manager\Order\TaxLine:
+    properties:
+        title:
+            type: string
+        price:
+            type: float
+        rate:
+            type: float
