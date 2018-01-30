@@ -11,14 +11,25 @@ include __DIR__.'/test_classes.php';
 
 class HydratorTest  extends TestCase
 {
+    /**
+     * @var Hydrator
+     */
+    protected $hydrator;
+
+    public function setUp()
+    {
+        parent::setUp();
+        $this->hydrator = new Hydrator(__DIR__ . '/../tmp', __DIR__ . '/serializer');
+    }
+
     public function testInstance()
     {
-        $this->assertInstanceOf(HydratorInterface::class, Hydrator::instance());
+        $this->assertInstanceOf(HydratorInterface::class, $this->hydrator);
     }
 
     public function testHydrate()
     {
-        $post = Hydrator::instance()->hydrate(\Post::class, [
+        $post = $this->hydrator->hydrate(\Post::class, [
             'title' => 'this is a post title',
             'body' => 'this is a post body',
             'category' => [
@@ -32,11 +43,11 @@ class HydratorTest  extends TestCase
                     'body' => 'comment 2',
                 ],
             ],
-            'createdAt' => '2010-07-12T15:31:50-04:00',
+            'created_at' => '2010-07-12T15:31:50-04:00',
         ]);
 
         $this->assertInstanceOf(\Post::class, $post);
-        $this->assertInstanceOf(Carbon::class, $post->getCreatedAt());
+        $this->assertInstanceOf(\DateTime::class, $post->getCreatedAt());
         $this->assertEquals('this is a post title', $post->getTitle());
         $this->assertEquals('this is a post body', $post->getBody());
         $this->assertInstanceOf(\Category::class, $post->getCategory());
@@ -51,7 +62,7 @@ class HydratorTest  extends TestCase
 
     public function testExtract()
     {
-        $post = Hydrator::instance()->hydrate(\Post::class, [
+        $post = $this->hydrator->hydrate(\Post::class, [
             'title' => 'this is a post title',
             'body' => 'this is a post body',
             'comments' => [
@@ -64,7 +75,7 @@ class HydratorTest  extends TestCase
             ],
             'created_at' => '2010-07-12T15:31:50-04:00',
         ]);
-        $data = Hydrator::instance()->extract($post);
+        $data = $this->hydrator->extract($post);
         $this->assertEquals([
             'title' => 'this is a post title',
             'body' => 'this is a post body',
@@ -76,8 +87,7 @@ class HydratorTest  extends TestCase
                     'body' => 'comment 2',
                 ],
             ],
-            'category' => null,
-            'created_at' => '2010-07-12T15:31:50-04:00',
+            'created_at' => '2010-07-12T15:31:50-0400',
         ], $data);
     }
 }

@@ -137,7 +137,7 @@ class Client
         $this->credential = $credential;
         $this->setShop($shop);
         $this->applyOptions($options);
-        $this->hydrator = new Hydrator($this->metaCacheDir);
+        $this->hydrator = new Hydrator($this->metaCacheDir, __DIR__ . '/../config/serializer');
         $this->initializeBaseServices();
     }
 

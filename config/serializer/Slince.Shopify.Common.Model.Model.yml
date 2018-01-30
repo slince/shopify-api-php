@@ -1,0 +1,4 @@
+Slince\Shopify\Common\Model\Model:
+    properties:
+        id:
+            type: integer

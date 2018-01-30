@@ -19,7 +19,7 @@ Slince\Shopify\Manager\Transaction\Transaction:
         kind:
             type: string
         orderId:
-            type: string
+            type: integer
         receipt:
             type: array
         errorCode:

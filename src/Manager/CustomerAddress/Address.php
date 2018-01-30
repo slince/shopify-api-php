@@ -22,7 +22,6 @@ class Address extends Model
      */
     protected $customerId;
 
-
     /**
      * @var bool
      */

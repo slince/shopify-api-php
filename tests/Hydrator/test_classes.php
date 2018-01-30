@@ -1,6 +1,5 @@
 <?php
-
-class Post implements \Slince\Shopify\Hydrator\HydratableInterface
+class Post
 {
     protected $title;
 
@@ -110,15 +109,6 @@ class Post implements \Slince\Shopify\Hydrator\HydratableInterface
         $this->createdAt = $createdAt;
 
         return $this;
-    }
-
-    public static function getTypeCollection()
-    {
-        return [
-            new \Slince\Shopify\Hydrator\Association\HasOne('category', Category::class),
-            new \Slince\Shopify\Hydrator\Association\HasMany('comments', Comment::class),
-            new \Slince\Shopify\Hydrator\Type\DateTimeType('createdAt'),
-        ];
     }
 }
 

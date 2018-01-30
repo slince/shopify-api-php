@@ -53,8 +53,7 @@ class VariantManager extends AbstractManager implements VariantManagerInterface
     public function findAll($productId, array $query = [])
     {
         $data = $this->client->get('products'.'/'.$productId.'/variants', $query);
-
-        return Variant::createMany($data['variants']);
+        return $this->createMany($data['variants']);
     }
 
     /**
@@ -64,7 +63,7 @@ class VariantManager extends AbstractManager implements VariantManagerInterface
     {
         $data = $this->client->get('/variants/'.$id);
 
-        return Variant::fromArray($data['variant']);
+        return $this->fromArray($data['variant']);
     }
 
     /**
@@ -86,7 +85,7 @@ class VariantManager extends AbstractManager implements VariantManagerInterface
             'variant' => $data,
         ]);
 
-        return Variant::fromArray($data['variant']);
+        return $this->fromArray($data['variant']);
     }
 
     /**
@@ -106,6 +105,6 @@ class VariantManager extends AbstractManager implements VariantManagerInterface
             'variant' => $data,
         ]);
 
-        return Variant::fromArray($data['variant']);
+        return $this->fromArray($data['variant']);
     }
 }

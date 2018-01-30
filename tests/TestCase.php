@@ -7,6 +7,7 @@ use GuzzleHttp\Psr7\Stream;
 use PHPUnit\Framework\TestCase as BaseTestCase;
 use Slince\Shopify\Client;
 use Slince\Shopify\PublicAppCredential;
+use Symfony\Component\Filesystem\Filesystem;
 
 class TestCase extends BaseTestCase
 {
@@ -16,6 +17,15 @@ class TestCase extends BaseTestCase
 
     const SHOP_NAME = 'asasa.myshopify.com';
 
+    public function setUp()
+    {
+        (new Filesystem())->remove(__DIR__ . '/tmp');
+    }
+
+    public function tearDown()
+    {
+        (new Filesystem())->remove(__DIR__ . '/tmp');
+    }
     /**
      * @param string $fixture
      * @param int    $code
@@ -27,9 +37,16 @@ class TestCase extends BaseTestCase
     {
         $fixture = static::FIXTURES_DIR.'/'.$fixture;
         $mock = $this->getMockBuilder(Client::class)
-            ->setConstructorArgs([new PublicAppCredential(static::ACCESS_TOKEN), static::SHOP_NAME])
+            ->setConstructorArgs([
+                new PublicAppCredential(static::ACCESS_TOKEN),
+                static::SHOP_NAME,
+                [
+                    'metaCacheDir' => __DIR__ . '/tmp'
+                ]
+            ])
             ->setMethods(['sendRequest'])
             ->getMock();
+
         $mock->method('sendRequest')
             ->willReturn(new Response($code, $headers, new Stream(fopen($fixture, 'r'))));
 

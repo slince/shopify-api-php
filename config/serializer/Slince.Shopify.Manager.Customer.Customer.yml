@@ -10,9 +10,9 @@ Slince\Shopify\Manager\Customer\Customer:
             type: DateTime<'Y-m-d\TH:i:sO'>
         updatedAt:
             type: DateTime<'Y-m-d\TH:i:sO'>
-        fistname:
+        firstName:
             type: string
-        lastname:
+        lastName:
             type: string
         ordersCount:
             type: integer

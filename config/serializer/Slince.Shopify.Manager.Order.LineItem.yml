@@ -1,4 +1,4 @@
-Slince\Shopify\Manager\Order\ShippingLine:
+Slince\Shopify\Manager\Order\LineItem:
     properties:
         id:
             type: integer

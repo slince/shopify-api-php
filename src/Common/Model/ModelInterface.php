@@ -31,11 +31,4 @@ interface ModelInterface
      * @return ModelInterface
      */
     public function setId($id);
-
-    /**
-     * Converts the model to array.
-     *
-     * @return array
-     */
-    public function toArray();
 }

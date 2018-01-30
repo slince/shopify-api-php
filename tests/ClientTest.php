@@ -10,7 +10,9 @@ class ClientTest extends TestCase
 {
     public function testShop()
     {
-        $client = new Client(new PublicAppCredential('foobarbazfoobarbaz'), 'bar.myshopify.com');
+        $client = new Client(new PublicAppCredential('foobarbazfoobarbaz'), 'bar.myshopify.com', [
+            'metaCacheDir' => __DIR__ . '/tmp'
+        ]);
         $this->assertEquals('bar.myshopify.com', $client->getShop());
         try{
             new Client(new PublicAppCredential('foobarbazfoobarbaz'),  'ab');
@@ -30,7 +32,9 @@ class ClientTest extends TestCase
 
     public function testHttpClient()
     {
-        $client = new Client(new PublicAppCredential('foobarbazfoobarbaz'), 'bar.myshopify.com');
+        $client = new Client(new PublicAppCredential('foobarbazfoobarbaz'), 'bar.myshopify.com', [
+            'metaCacheDir' => __DIR__ . '/tmp'
+        ]);
         $this->assertInstanceOf(\GuzzleHttp\Client::class, $client->getHttpClient());
 
         $httpClient = new \GuzzleHttp\Client([
@@ -42,6 +46,7 @@ class ClientTest extends TestCase
 
         $client = new Client(new PublicAppCredential('foobarbazfoobarbaz'), 'bar.myshopify.com', [
             'httpClient' => $httpClient,
+            'metaCacheDir' => __DIR__ . '/tmp'
         ]);
         $this->assertEquals($httpClient, $client->getHttpClient());
     }
@@ -81,14 +86,18 @@ class ClientTest extends TestCase
     public function testCredential()
     {
         $credential = new PublicAppCredential('foobarbazfoobarbaz');
-        $client = new Client($credential, 'bar.myshopify.com');
+        $client = new Client($credential, 'bar.myshopify.com', [
+            'metaCacheDir' => __DIR__ . '/tmp'
+        ]);
         $this->assertEquals($credential, $client->getCredential());
     }
 
     public function testGetManager()
     {
         $credential = new PublicAppCredential('foobarbazfoobarbaz');
-        $client = new Client($credential, 'bar.myshopify.com');
+        $client = new Client($credential, 'bar.myshopify.com', [
+            'metaCacheDir' => __DIR__ . '/tmp'
+        ]);
 
         foreach ($client->serviceClass as $serviceClass) {
             $partials = explode('\\', $serviceClass);

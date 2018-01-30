@@ -21,11 +21,11 @@ class Hydrator implements HydratorInterface
      */
     protected $serializer;
 
-    public function __construct($cacheDir)
+    public function __construct($cacheDir, $metaDir)
     {
         $this->serializer = SerializerBuilder::create()
             ->setCacheDir($cacheDir)
-            ->addMetadataDir(__DIR__ . '/../../config/serializer')
+            ->addMetadataDir($metaDir)
             ->build();
     }
 

@@ -14,5 +14,5 @@ Slince\Shopify\Manager\Asset\Asset:
             type: string
         size:
             type: integer
-        theme:
+        themeId:
             type: integer

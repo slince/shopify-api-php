@@ -18,6 +18,8 @@ Slince\Shopify\Manager\Article\Article:
             type: DateTime<'Y-m-d\TH:i:sO'>
         publishedAt:
             type: DateTime<'Y-m-d\TH:i:sO'>
+        summaryHtml:
+            type: string
         templateSuffix:
             type: string
         handle:
