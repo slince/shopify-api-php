@@ -167,15 +167,4 @@ class ShippingZone extends Model
 
         return $this;
     }
-
-    /**
-     * {@inheritdoc}
-     */
-    public static function getTypeCollection()
-    {
-        return array_merge(parent::getTypeCollection(), [
-            new HasMany('countries', Country::class),
-            new HasMany('provinces', Province::class),
-        ]);
-    }
 }

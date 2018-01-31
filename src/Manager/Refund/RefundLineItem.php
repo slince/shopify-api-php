@@ -141,14 +141,4 @@ class RefundLineItem extends Model
 
         return $this;
     }
-
-    /**
-     * {@inheritdoc}
-     */
-    public static function getTypeCollection()
-    {
-        return array_merge(parent::getTypeCollection(), [
-            new HasOne('lineItem', LineItem::class),
-        ]);
-    }
 }

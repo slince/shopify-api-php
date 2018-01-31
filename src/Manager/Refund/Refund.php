@@ -216,15 +216,4 @@ class Refund extends Model
 
         return $this;
     }
-
-    /**
-     * {@inheritdoc}
-     */
-    public static function getTypeCollection()
-    {
-        return array_merge(parent::getTypeCollection(), [
-            new HasMany('refundLineItems', RefundLineItem::class),
-            new HasMany('transactions', Transaction::class),
-        ]);
-    }
 }
