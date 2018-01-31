@@ -20,6 +20,8 @@ $credential = new \Slince\Shopify\PrivateAppCredential(
 
 
 
-$client = new \Slince\Shopify\Client($credential, $shopName);
+$client = new \Slince\Shopify\Client($credential, $shopName, [
+    'metaCacheDir' => './tmp' //Metadata cache dir, required
+]);
 
 return $client;

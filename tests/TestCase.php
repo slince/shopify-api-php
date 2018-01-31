@@ -24,7 +24,8 @@ class TestCase extends BaseTestCase
 
     public function setUp()
     {
-        ($this->filesystem = new Filesystem())->remove(__DIR__ . '/tmp');
+        $this->filesystem = new Filesystem();
+        $this->filesystem->remove(__DIR__ . '/tmp');
     }
 
     public function tearDown()

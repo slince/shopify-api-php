@@ -51,19 +51,24 @@ $credential = new Slince\Shopify\PublicAppCredential('Access Token');
 //Or Private App
 $credential = new Slince\Shopify\PrivateAppCredential('API KEY', 'PASSWORD', 'SHARED SECRET');
 
-$client  = new Slince\Shopify\Client($credential, 'Shop Name');  //e.g. your-store.myshopify.com
+$client  = new Slince\Shopify\Client($credential, 'Shop Name', [
+    'metaCacheDir' => './tmp' //Metadata cache dir, required
+]);  //e.g. your-store.myshopify.com
 ```
 
 ### Use Manager to manipulate your data;
 
+* Lists products
 ```php
-//Lists products
 $products = $client->getProductManager()->findAll([
     // filter your product
+    'collection_id' => 841564295
+    'page' => 2
 ]);
+```
 
-
-//Get the specified product
+* Get the specified product
+```php
 $product = $client->getProductManager()->find(12800);
 
 //Update the given product
@@ -73,16 +78,20 @@ $product = $client->getProductManager()->update(12800, [
       "vendor"=> "Burton",
       "product_type" => "Snowboard",
 ]);
+```
 
-//Creates a new product
+* Creates a new product
+```php
 $product = $client->getProductManager()->post([
       "title" => "Burton Custom Freestyle 151",
       "body_html" => "<strong>Good snowboard!<\/strong>",
       "vendor"=> "Burton",
       "product_type" => "Snowboard",
 ]);
+```
 
-//Removes the product by its id
+* Removes the product by its id
+```php
 $client->getProductManager()->delete(12800);
 ```
 The product is an instance of `Slince\Shopify\Manager\Product\Product`; You can access properties like following:

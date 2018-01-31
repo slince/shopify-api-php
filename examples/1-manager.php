@@ -1,6 +1,8 @@
 <?php
 
-/* @var Slince\Shopify\Client */
+/**
+ * @var Slince\Shopify\Client
+ */
 $client = include __DIR__ . '/0-authorization.php';
 
 //Lists products
