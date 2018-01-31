@@ -12,8 +12,6 @@
 namespace Slince\Shopify\Manager\Order;
 
 use Slince\Shopify\Common\Model\Model;
-use Slince\Shopify\Hydrator\Association\HasMany;
-use Slince\Shopify\Hydrator\Type\DateTimeType;
 use Slince\Shopify\Manager\Fulfillment\Fulfillment;
 use Slince\Shopify\Manager\Refund\Refund;
 use Slince\Shopify\Manager\Transaction\Transaction;
@@ -1468,21 +1466,5 @@ class Order extends Model
         $this->transactions = $transactions;
 
         return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public static function getTypeCollection()
-    {
-        return array_merge(parent::getTypeCollection(), [
-            new DateTimeType('closedAt'),
-            new DateTimeType('cancelledAt'),
-            new HasMany('lineItems', LineItem::class),
-            new HasMany('refunds', Refund::class),
-            new HasMany('transactions', Transaction::class),
-            new HasMany('shippingLines', ShippingLine::class),
-            new HasMany('fulfillments', Fulfillment::class),
-        ]);
     }
 }

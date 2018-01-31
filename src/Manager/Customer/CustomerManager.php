@@ -59,6 +59,6 @@ class CustomerManager extends GeneralCurdable implements CustomerManagerInterfac
             'customer_invite' => $data,
         ]);
 
-        return CustomerInvite::fromArray($data);
+        return $this->fromArray($data, CustomerInvite::class);
     }
 }

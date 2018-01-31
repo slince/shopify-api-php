@@ -7,9 +7,9 @@ Slince\Shopify\Manager\Blog\Blog:
         handle:
             type: string
         createdAt:
-            type: DateTime<'Y-m-d\TH:i:sO'>
+            type: DateTime<'Y-m-d\TH:i:sP'>
         updatedAt:
-            type: DateTime<'Y-m-d\TH:i:sO'>
+            type: DateTime<'Y-m-d\TH:i:sP'>
         commentable:
             type: string
         feedburner:

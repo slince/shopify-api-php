@@ -43,6 +43,7 @@ class CustomCollectionImage
 
     /**
      * @param string $src
+     *
      * @return CustomCollectionImage
      */
     public function setSrc($src)
@@ -62,6 +63,7 @@ class CustomCollectionImage
 
     /**
      * @param int $width
+     *
      * @return CustomCollectionImage
      */
     public function setWidth($width)
@@ -81,6 +83,7 @@ class CustomCollectionImage
 
     /**
      * @param int $height
+     *
      * @return CustomCollectionImage
      */
     public function setHeight($height)
@@ -100,6 +103,7 @@ class CustomCollectionImage
 
     /**
      * @param \DateTime $createdAt
+     *
      * @return CustomCollectionImage
      */
     public function setCreatedAt($createdAt)

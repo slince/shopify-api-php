@@ -43,13 +43,18 @@ abstract class AbstractManager implements ManagerInterface
     /**
      * Create the model from an array.
      *
-     * @param array $data
+     * @param array  $data
+     * @param string $modelClass
      *
      * @return ModelInterface
      */
-    public function fromArray(array $data)
+    public function fromArray(array $data, $modelClass = null)
     {
-        return $this->client->getHydrator()->hydrate($this->getModelClass(), $data);
+        if (null === $modelClass) {
+            $modelClass = $this->getModelClass();
+        }
+
+        return $this->client->getHydrator()->hydrate($modelClass, $data);
     }
 
     /**
@@ -65,6 +70,7 @@ abstract class AbstractManager implements ManagerInterface
         foreach ($data as $item) {
             $models[] = $this->fromArray($item);
         }
+
         return $models;
     }
 
@@ -72,6 +78,7 @@ abstract class AbstractManager implements ManagerInterface
      * Converts the model to array.
      *
      * @param ModelInterface $model
+     *
      * @return array
      */
     public function toArray($model)

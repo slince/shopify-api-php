@@ -11,9 +11,6 @@
 
 namespace Slince\Shopify\Common\Model;
 
-use Slince\Shopify\Hydrator\Hydrator;
-use Slince\Shopify\Hydrator\Type\DateTimeType;
-
 abstract class Model implements ModelInterface
 {
     /**

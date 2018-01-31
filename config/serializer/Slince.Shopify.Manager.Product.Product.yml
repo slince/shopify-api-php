@@ -15,7 +15,7 @@ Slince\Shopify\Manager\Product\Product:
         productType:
             type: string
         publishedAt:
-            type: DateTime<'Y-m-d\TH:i:sO'>
+            type: DateTime<'Y-m-d\TH:i:sP'>
         publishedScope:
             type: string
         tags:
@@ -25,9 +25,9 @@ Slince\Shopify\Manager\Product\Product:
         title:
             type: string
         createdAt:
-            type: DateTime<'Y-m-d\TH:i:sO'>
+            type: DateTime<'Y-m-d\TH:i:sP'>
         updatedAt:
-            type: DateTime<'Y-m-d\TH:i:sO'>
+            type: DateTime<'Y-m-d\TH:i:sP'>
         variants:
             type: array<Slince\Shopify\Manager\ProductVariant\Variant>
         vendor:

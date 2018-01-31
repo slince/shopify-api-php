@@ -7,9 +7,9 @@ Slince\Shopify\Manager\CustomCollection\CustomCollection:
         title:
             type: string
         updatedAt:
-            type: DateTime<'Y-m-d\TH:i:sO'>
+            type: DateTime<'Y-m-d\TH:i:sP'>
         publishedAt:
-            type: DateTime<'Y-m-d\TH:i:sO'>
+            type: DateTime<'Y-m-d\TH:i:sP'>
         sortOrder:
             type: string
         bodyHtml:

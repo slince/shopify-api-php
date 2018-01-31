@@ -11,9 +11,6 @@
 
 namespace Slince\Shopify\Common\Model;
 
-use JsonSerializable;
-use Slince\Shopify\Hydrator\HydratableInterface;
-
 interface ModelInterface
 {
     /**

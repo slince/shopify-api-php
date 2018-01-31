@@ -5,7 +5,7 @@ Slince\Shopify\Manager\Refund\Refund:
         orderId:
             type: integer
         createdAt:
-            type: DateTime<'Y-m-d\TH:i:sO'>
+            type: DateTime<'Y-m-d\TH:i:sP'>
         note:
             type: string
         restock:
@@ -13,7 +13,7 @@ Slince\Shopify\Manager\Refund\Refund:
         userId:
             type: integer
         processedAt:
-            type: DateTime<'Y-m-d\TH:i:sO'>
+            type: DateTime<'Y-m-d\TH:i:sP'>
         refundLineItems:
             type: array<Slince\Shopify\Manager\Refund\RefundLineItem>
         transactions:

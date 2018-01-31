@@ -18,8 +18,8 @@ interface HydratorInterface
     /**
      * Hydrate object from array.
      *
-     * @param string|object        $target
-     * @param array                $data
+     * @param string $target
+     * @param array  $data
      *
      * @return ModelInterface
      */

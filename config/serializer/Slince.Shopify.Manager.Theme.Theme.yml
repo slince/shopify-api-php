@@ -5,9 +5,9 @@ Slince\Shopify\Manager\Theme\Theme:
         name:
             type: string
         createdAt:
-            type: DateTime<'Y-m-d\TH:i:sO'>
+            type: DateTime<'Y-m-d\TH:i:sP'>
         updatedAt:
-            type: DateTime<'Y-m-d\TH:i:sO'>
+            type: DateTime<'Y-m-d\TH:i:sP'>
         role:
             type: string
         themeStoreId:

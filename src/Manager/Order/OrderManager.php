@@ -46,7 +46,7 @@ class OrderManager extends GeneralCurdable implements OrderManagerInterface
     {
         $data = $this->client->post('orders/'.$id.'/open', []);
 
-        return Order::fromArray($data['order']);
+        return $this->fromArray($data['order']);
     }
 
     /**
@@ -56,7 +56,7 @@ class OrderManager extends GeneralCurdable implements OrderManagerInterface
     {
         $data = $this->client->post('orders/'.$id.'/close', []);
 
-        return Order::fromArray($data['order']);
+        return $this->fromArray($data['order']);
     }
 
     /**
@@ -66,6 +66,6 @@ class OrderManager extends GeneralCurdable implements OrderManagerInterface
     {
         $data = $this->client->post('orders/'.$id.'/cancel', []);
 
-        return Order::fromArray($data['order']);
+        return $this->fromArray($data['order']);
     }
 }

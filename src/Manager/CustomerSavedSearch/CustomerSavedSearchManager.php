@@ -12,7 +12,6 @@
 namespace Slince\Shopify\Manager\CustomerSavedSearch;
 
 use Slince\Shopify\Common\Manager\GeneralCurdable;
-use Slince\Shopify\Manager\Customer\Customer;
 
 class CustomerSavedSearchManager extends GeneralCurdable implements CustomerSavedSearchManagerInterface
 {
@@ -47,6 +46,6 @@ class CustomerSavedSearchManager extends GeneralCurdable implements CustomerSave
     {
         $data = $this->client->get('customer_saved_searches/'.$id.'/customers');
 
-        return Customer::createMany($data['customers']);
+        return $this->createMany($data['customers']);
     }
 }

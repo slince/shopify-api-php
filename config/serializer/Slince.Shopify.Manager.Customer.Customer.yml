@@ -7,9 +7,9 @@ Slince\Shopify\Manager\Customer\Customer:
         acceptsMarketing:
             type: boolean
         createdAt:
-            type: DateTime<'Y-m-d\TH:i:sO'>
+            type: DateTime<'Y-m-d\TH:i:sP'>
         updatedAt:
-            type: DateTime<'Y-m-d\TH:i:sO'>
+            type: DateTime<'Y-m-d\TH:i:sP'>
         firstName:
             type: string
         lastName:

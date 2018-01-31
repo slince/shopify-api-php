@@ -5,11 +5,11 @@ Slince\Shopify\Manager\Order\Order:
         email:
             type: string
         closedAt:
-            type: DateTime<'Y-m-d\TH:i:sO'>
+            type: DateTime<'Y-m-d\TH:i:sP'>
         updatedAt:
-            type: DateTime<'Y-m-d\TH:i:sO'>
+            type: DateTime<'Y-m-d\TH:i:sP'>
         deletedAt:
-            type: DateTime<'Y-m-d\TH:i:sO'>
+            type: DateTime<'Y-m-d\TH:i:sP'>
         number:
             type: integer
         note:
@@ -51,7 +51,7 @@ Slince\Shopify\Manager\Order\Order:
         landingSite:
             type: string
         cancelledAt:
-            type: DateTime<'Y-m-d\TH:i:sO'>
+            type: DateTime<'Y-m-d\TH:i:sP'>
         cancelReason:
             type: string
         totalPriceUsd:
@@ -69,7 +69,7 @@ Slince\Shopify\Manager\Order\Order:
         sourceUrl:
             type: string
         processedAt:
-            type: DateTime<'Y-m-d\TH:i:sO'>
+            type: DateTime<'Y-m-d\TH:i:sP'>
         deviceId:
             type: string
         phone:

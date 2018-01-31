@@ -31,7 +31,6 @@ abstract class GeneralCurdableTestCase extends TestCase
         $this->assertInstanceOf($service->getModelClass(), $entities[0]);
 
         $rawArray = $this->readFixture($fixture);
-//        $this->assertEquals(reset($rawArray)[0], $service->toArray($entities[0]));
     }
 
     public function testFind()
@@ -49,6 +48,15 @@ abstract class GeneralCurdableTestCase extends TestCase
         $json = json_decode(file_get_contents(static::FIXTURES_DIR.'/'.$fixture), true);
         $json = reset($json);
         $entity = $service->create($json);
+        $this->assertInstanceOf($service->getModelClass(), $entity);
+    }
+
+    public function testUpdate()
+    {
+        $fixture = $this->getFixturesDir().'/'.'view.json';
+        $service = $this->getService($fixture);
+        $json = $this->readFixture($fixture);
+        $entity = $service->update(12, reset($json));
         $this->assertInstanceOf($service->getModelClass(), $entity);
     }
 

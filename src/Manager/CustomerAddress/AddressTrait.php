@@ -83,7 +83,6 @@ trait AddressTrait
      */
     protected $countryName;
 
-
     /**
      * @return string
      */

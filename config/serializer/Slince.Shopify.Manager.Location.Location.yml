@@ -5,7 +5,7 @@ Slince\Shopify\Manager\Location\Location:
         name:
             type: string
         deletedAt:
-            type: DateTime<'Y-m-d\TH:i:sO'>
+            type: DateTime<'Y-m-d\TH:i:sP'>
         address1:
             type: string
         address2:
@@ -21,9 +21,9 @@ Slince\Shopify\Manager\Location\Location:
         phone:
             type: string
         createdAt:
-            type: DateTime<'Y-m-d\TH:i:sO'>
+            type: DateTime<'Y-m-d\TH:i:sP'>
         updatedAt:
-            type: DateTime<'Y-m-d\TH:i:sO'>
+            type: DateTime<'Y-m-d\TH:i:sP'>
         countryCode:
             type: string
         countryName:

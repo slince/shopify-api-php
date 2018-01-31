@@ -15,6 +15,17 @@ class PrivatAppCredentialTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals('baz', $credential->getSharedSecret());
     }
 
+    public function testSetter()
+    {
+        $credential = new PrivateAppCredential('foo', 'bar', 'baz');
+        $credential->setApiKey('foo2');
+        $credential->setPassword('bar2');
+        $credential->setSharedSecret('baz2');
+        $this->assertEquals('foo2', $credential->getApiKey());
+        $this->assertEquals('bar2', $credential->getPassword());
+        $this->assertEquals('baz2', $credential->getSharedSecret());
+    }
+
     public function testApplyToRequest()
     {
         $credential = new PrivateAppCredential('foo', 'bar', 'baz');

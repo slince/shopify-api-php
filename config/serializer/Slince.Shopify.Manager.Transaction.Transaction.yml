@@ -7,7 +7,7 @@ Slince\Shopify\Manager\Transaction\Transaction:
         authorization:
             type: string
         createdAt:
-            type: DateTime<'Y-m-d\TH:i:sO'>
+            type: DateTime<'Y-m-d\TH:i:sP'>
         deviceId:
             type: string
         gateway:

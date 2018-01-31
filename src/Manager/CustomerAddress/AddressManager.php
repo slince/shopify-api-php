@@ -67,6 +67,6 @@ class AddressManager extends NestCrudable implements AddressManagerInterface
     {
         $data = $this->client->put('customers/'.$customerId.'/addresses/'.$id.'/default', []);
 
-        return Address::fromArray($data['customer_address']);
+        return $this->fromArray($data['customer_address']);
     }
 }

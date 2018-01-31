@@ -45,7 +45,7 @@ abstract class ModelTestCase extends TestCase
     }
 
     /**
-     * @param $fulfillment boolean
+     * @param boolean $fulfillment
      *
      * @return ModelInterface
      */

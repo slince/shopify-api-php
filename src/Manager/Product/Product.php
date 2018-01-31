@@ -12,8 +12,6 @@
 namespace Slince\Shopify\Manager\Product;
 
 use Slince\Shopify\Common\Model\Model;
-use Slince\Shopify\Hydrator\Association\HasMany;
-use Slince\Shopify\Hydrator\Association\HasOne;
 use Slince\Shopify\Manager\ProductImage\Image;
 use Slince\Shopify\Manager\ProductVariant\Variant;
 
@@ -392,18 +390,5 @@ class Product extends Model
         $this->options = $options;
 
         return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public static function getTypeCollection()
-    {
-        return array_merge(parent::getTypeCollection(), [
-            new HasOne('image', Image::class),
-            new HasMany('images', Image::class),
-            new HasMany('variants', Variant::class),
-            new HasMany('options', Option::class),
-        ]);
     }
 }

@@ -29,9 +29,9 @@ Slince\Shopify\Manager\ProductVariant\Variant:
         option3:
             type: string
         createdAt:
-            type: DateTime<'Y-m-d\TH:i:sO'>
+            type: DateTime<'Y-m-d\TH:i:sP'>
         updatedAt:
-            type: DateTime<'Y-m-d\TH:i:sO'>
+            type: DateTime<'Y-m-d\TH:i:sP'>
         taxable:
             type: boolean
         barcode:

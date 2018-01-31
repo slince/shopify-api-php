@@ -34,12 +34,12 @@ class ClientDetails
     protected $sessionHash;
 
     /**
-     * @var integer
+     * @var int
      */
     protected $browserWidth;
 
     /**
-     * @var integer
+     * @var int
      */
     protected $browserHeight;
 
@@ -53,6 +53,7 @@ class ClientDetails
 
     /**
      * @param string $browserIp
+     *
      * @return ClientDetails
      */
     public function setBrowserIp($browserIp)
@@ -72,6 +73,7 @@ class ClientDetails
 
     /**
      * @param string $acceptLanguage
+     *
      * @return ClientDetails
      */
     public function setAcceptLanguage($acceptLanguage)
@@ -91,6 +93,7 @@ class ClientDetails
 
     /**
      * @param string $userAgent
+     *
      * @return ClientDetails
      */
     public function setUserAgent($userAgent)
@@ -110,6 +113,7 @@ class ClientDetails
 
     /**
      * @param string $sessionHash
+     *
      * @return ClientDetails
      */
     public function setSessionHash($sessionHash)
@@ -129,6 +133,7 @@ class ClientDetails
 
     /**
      * @param int $browserWidth
+     *
      * @return ClientDetails
      */
     public function setBrowserWidth($browserWidth)
@@ -148,6 +153,7 @@ class ClientDetails
 
     /**
      * @param int $browserHeight
+     *
      * @return ClientDetails
      */
     public function setBrowserHeight($browserHeight)

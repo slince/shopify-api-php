@@ -1,7 +1,7 @@
 Slince\Shopify\Manager\CustomCollection\CustomCollectionImage:
     properties:
         createdAt:
-            type: DateTime<'Y-m-d\TH:i:sO'>
+            type: DateTime<'Y-m-d\TH:i:sP'>
         src:
             type: string
         width:

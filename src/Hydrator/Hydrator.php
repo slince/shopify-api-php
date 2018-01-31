@@ -11,7 +11,6 @@
 
 namespace Slince\Shopify\Hydrator;
 
-use JMS\Serializer\Context;
 use JMS\Serializer\SerializationContext;
 use JMS\Serializer\Serializer;
 use JMS\Serializer\SerializerBuilder;
@@ -24,7 +23,7 @@ class Hydrator implements HydratorInterface
     protected $serializer;
 
     /**
-     * @var Context
+     * @var SerializationContext
      */
     protected $serializationContext;
 

@@ -5,9 +5,9 @@ Slince\Shopify\Manager\Fulfillment\Fulfillment:
         status:
             type: string
         createdAt:
-            type: DateTime<'Y-m-d\TH:i:sO'>
+            type: DateTime<'Y-m-d\TH:i:sP'>
         updatedAt:
-            type: DateTime<'Y-m-d\TH:i:sO'>
+            type: DateTime<'Y-m-d\TH:i:sP'>
         service:
             type: string
         shipmentStatus:

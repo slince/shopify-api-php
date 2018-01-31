@@ -17,15 +17,21 @@ class TestCase extends BaseTestCase
 
     const SHOP_NAME = 'asasa.myshopify.com';
 
+    /**
+     * @var Filesystem
+     */
+    protected $filesystem;
+
     public function setUp()
     {
-//        (new Filesystem())->remove(__DIR__ . '/tmp');
+        ($this->filesystem = new Filesystem())->remove(__DIR__ . '/tmp');
     }
 
     public function tearDown()
     {
-//        (new Filesystem())->remove(__DIR__ . '/tmp');
+        $this->filesystem->remove(__DIR__ . '/tmp');
     }
+
     /**
      * @param string $fixture
      * @param int    $code

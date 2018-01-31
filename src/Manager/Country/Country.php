@@ -12,7 +12,6 @@
 namespace Slince\Shopify\Manager\Country;
 
 use Slince\Shopify\Common\Model\Model;
-use Slince\Shopify\Hydrator\Association\HasMany;
 use Slince\Shopify\Manager\Province\Province;
 
 class Country extends Model
@@ -140,15 +139,5 @@ class Country extends Model
         $this->provinces = $provinces;
 
         return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public static function getTypeCollection()
-    {
-        return array_merge(parent::getTypeCollection(), [
-            new HasMany('provinces', Province::class),
-        ]);
     }
 }

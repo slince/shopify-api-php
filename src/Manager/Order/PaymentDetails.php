@@ -48,6 +48,7 @@ class PaymentDetails
 
     /**
      * @param string $creditCardBin
+     *
      * @return PaymentDetails
      */
     public function setCreditCardBin($creditCardBin)
@@ -67,6 +68,7 @@ class PaymentDetails
 
     /**
      * @param string $avsResultCode
+     *
      * @return PaymentDetails
      */
     public function setAvsResultCode($avsResultCode)
@@ -86,6 +88,7 @@ class PaymentDetails
 
     /**
      * @param string $cvvResultCode
+     *
      * @return PaymentDetails
      */
     public function setCvvResultCode($cvvResultCode)
@@ -105,6 +108,7 @@ class PaymentDetails
 
     /**
      * @param string $creditCardNumber
+     *
      * @return PaymentDetails
      */
     public function setCreditCardNumber($creditCardNumber)
@@ -124,6 +128,7 @@ class PaymentDetails
 
     /**
      * @param string $creditCardCompany
+     *
      * @return PaymentDetails
      */
     public function setCreditCardCompany($creditCardCompany)

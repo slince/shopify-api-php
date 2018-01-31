@@ -12,7 +12,6 @@
 namespace Slince\Shopify\Manager\Fulfillment;
 
 use Slince\Shopify\Common\Model\Model;
-use Slince\Shopify\Hydrator\Association\HasMany;
 use Slince\Shopify\Manager\Order\LineItem;
 
 class Fulfillment extends Model
@@ -332,6 +331,7 @@ class Fulfillment extends Model
 
     /**
      * @param array $trackingNumbers
+     *
      * @return Fulfillment
      */
     public function setTrackingNumbers($trackingNumbers)
@@ -339,15 +339,5 @@ class Fulfillment extends Model
         $this->trackingNumbers = $trackingNumbers;
 
         return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public static function getTypeCollection()
-    {
-        return array_merge(parent::getTypeCollection(), [
-            new HasMany('lineItems', LineItem::class),
-        ]);
     }
 }

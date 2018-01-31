@@ -16,7 +16,7 @@ use Slince\Shopify\Manager\CustomerAddress\AddressTrait;
 class Address
 {
     use AddressTrait;
-    
+
     /**
      * @var float
      */
@@ -37,6 +37,7 @@ class Address
 
     /**
      * @param float $latitude
+     *
      * @return Address
      */
     public function setLatitude($latitude)
@@ -56,6 +57,7 @@ class Address
 
     /**
      * @param float $longitude
+     *
      * @return Address
      */
     public function setLongitude($longitude)

@@ -5,8 +5,8 @@ Slince\Shopify\Manager\CustomerSavedSearch\CustomerSavedSearch:
         name:
             type: string
         createdAt:
-            type: DateTime<'Y-m-d\TH:i:sO'>
+            type: DateTime<'Y-m-d\TH:i:sP'>
         updatedAt:
-            type: DateTime<'Y-m-d\TH:i:sO'>
+            type: DateTime<'Y-m-d\TH:i:sP'>
         query:
             type: string
