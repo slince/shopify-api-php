@@ -130,6 +130,7 @@ Available managers:
 - [Province](./src/Manager/Province/ProvinceManagerInterface.php)
 - [Redirect](./src/Manager/Redirect/RedirectManagerInterface.php)
 - [Refund](./src/Manager/Refund/RefundManagerInterface.php)
+- [ScriptTag](./src/Manager/ScriptTag/ScriptTagManagerInterface.php)
 - [ShippingZone](./src/Manager/ShippingZone/ShippingZoneManagerInterface.php)
 - [Shop](./src/Manager/Shop/ShopManagerInterface.php)
 - [Theme](./src/Manager/Theme/ThemeManagerInterface.php)

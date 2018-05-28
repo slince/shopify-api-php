@@ -106,6 +106,7 @@ class Client
         Manager\Province\ProvinceManager::class,
         Manager\Redirect\RedirectManager::class,
         Manager\Refund\RefundManager::class,
+        Manager\ScriptTag\ScriptTagManager::class,
         Manager\ShippingZone\ShippingZoneManager::class,
         Manager\Shop\ShopManager::class,
         Manager\Theme\ThemeManager::class,
