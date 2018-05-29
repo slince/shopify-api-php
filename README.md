@@ -48,12 +48,12 @@ You first need to initialize the client. For that you need your Shop Name and Ac
 require __DIR__ . '/vendor/autoload.php';
 
 $credential = new Slince\Shopify\PublicAppCredential('Access Token');
-//Or Private App
+// Or Private App
 $credential = new Slince\Shopify\PrivateAppCredential('API KEY', 'PASSWORD', 'SHARED SECRET');
 
-$client  = new Slince\Shopify\Client($credential, 'Shop Name', [
-    'metaCacheDir' => './tmp' //Metadata cache dir, required
-]);  //e.g. your-store.myshopify.com
+$client  = new Slince\Shopify\Client($credential, 'your-store.myshopify.com', [
+    'metaCacheDir' => './tmp' // Metadata cache dir, required
+]);
 ```
 
 ### Use Manager to manipulate your data;
@@ -61,7 +61,7 @@ $client  = new Slince\Shopify\Client($credential, 'Shop Name', [
 * Lists products
 ```php
 $products = $client->getProductManager()->findAll([
-    // filter your product
+    // Filter your product
     'collection_id' => 841564295
     'page' => 2
 ]);
@@ -71,7 +71,7 @@ $products = $client->getProductManager()->findAll([
 ```php
 $product = $client->getProductManager()->find(12800);
 
-//Update the given product
+// Update the given product
 $product = $client->getProductManager()->update(12800, [
       "title" => "Burton Custom Freestyle 151",
       "body_html" => "<strong>Good snowboard!<\/strong>",
@@ -146,7 +146,7 @@ The returned value is just an array;
 
 ```php
 $products = $client->get('products', [
-    // filter your products
+    // Filter your products
 ]);
 
 $product = $client->get('products/12800');
