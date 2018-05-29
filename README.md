@@ -26,7 +26,7 @@
 
 <p align="center">
     <a href="https://www.phpdish.com/">
-        <img alt="PHPDish Community System" src="https://raw.githubusercontent.com/slince/phpdish/master/assets/img/logo.png" width="350"/>
+        <img alt="PHPDish Community System" src="https://raw.githubusercontent.com/slince/phpdish/master/assets/img/logo2.png" width="350"/>
     </a>
 </p>
 

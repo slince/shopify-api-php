@@ -2,8 +2,6 @@
 
 namespace Slince\Shopify\Manager\ScriptTag;
 
-use Psr\Http\Message\RequestInterface;
-
 interface ScriptTagManagerInterface
 {
     /**
@@ -11,7 +9,7 @@ interface ScriptTagManagerInterface
      *
      * @param array $query
      *
-     * @return ScripTag[]
+     * @return ScriptTag[]
      */
     public function findAll(array $query = []);
 
@@ -20,7 +18,7 @@ interface ScriptTagManagerInterface
      *
      * @param int $id
      *
-     * @return ScripTag
+     * @return ScriptTag
      */
     public function find($id);
 
@@ -57,7 +55,7 @@ interface ScriptTagManagerInterface
      *
      * @param array $data
      *
-     * @return Webhook
+     * @return ScriptTag
      */
     public function create(array $data);
 }
