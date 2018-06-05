@@ -302,7 +302,7 @@ class Client
         $request = $request->withHeader('Content-Type', 'application/json');
         $request = $this->credential->applyToRequest($request);
         if (static::$delayNextRequest) {
-            usleep(100 * rand(1, 10));
+            usleep(1000000 * rand(3, 10));
         }
         try {
             $response = $this->getHttpClient()->send($request, $options);
