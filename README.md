@@ -82,7 +82,7 @@ $product = $client->getProductManager()->update(12800, [
 
 * Creates a new product
 ```php
-$product = $client->getProductManager()->post([
+$product = $client->getProductManager()->create([
       "title" => "Burton Custom Freestyle 151",
       "body_html" => "<strong>Good snowboard!<\/strong>",
       "vendor"=> "Burton",
