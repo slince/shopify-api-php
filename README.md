@@ -35,7 +35,7 @@
 Install via composer
 
 ```bash
-$ composer require slince/shopify-api-php *@beta
+$ composer require slince/shopify-api-php
 ```
 
 ## Quick Start
