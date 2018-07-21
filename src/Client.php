@@ -263,9 +263,11 @@ class Client
      *
      * @param string $resource
      */
-    public function delete($resource)
+    public function delete($resource, $query = [])
     {
-        $this->doRequest('DELETE', $resource);
+        $this->doRequest('DELETE', $resource, [
+            'query' => $query
+        ]);
     }
 
     protected function doRequest($method, $resource, $options = [])
