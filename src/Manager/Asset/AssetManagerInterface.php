@@ -14,61 +14,38 @@ namespace Slince\Shopify\Manager\Asset;
 interface AssetManagerInterface
 {
     /**
-     * Finds articles.
+     * Finds assets.
      *
-     * @param int   $themeId
-     * @param array $query
+     * @param int $themeId
      *
      * @return Asset[]
      */
-    public function findAll($themeId, array $query = []);
+    public function findAll($themeId);
 
     /**
      * Finds an asset.
      *
-     * @param int $themeId
-     * @param int $id
+     * @param int    $themeId
+     * @param string $key
      *
      * @return Asset
      */
-    public function find($themeId, $id);
+    public function find($themeId, $key);
 
     /**
-     * Gets the count.
-     *
-     * @param int   $themeId
-     * @param array $query
-     *
-     * @return int
-     */
-    public function count($themeId, array $query = []);
-
-    /**
-     * Updates the asset.
-     *
-     * @param int   $themeId
-     * @param int   $id
-     * @param array $data
-     *
-     * @return Asset
-     */
-    public function update($themeId, $id, array $data);
-
-    /**
-     * Removes the asset by given id and theme id.
+     * Updates the assets.
      *
      * @param int $themeId
-     * @param int $id
-     */
-    public function remove($themeId, $id);
-
-    /**
-     * Creates a asset.
-     *
-     * @param int   $themeId
-     * @param array $data
      *
      * @return Asset
      */
-    public function create($themeId, array $data);
+    public function update($themeId, array $data);
+
+    /**
+     * Removes the asset by given key and theme id.
+     *
+     * @param int    $themeId
+     * @param string $key
+     */
+    public function remove($themeId, $key);
 }

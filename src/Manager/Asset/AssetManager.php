@@ -11,9 +11,10 @@
 
 namespace Slince\Shopify\Manager\Asset;
 
-use Slince\Shopify\Common\Manager\NestCrudable;
+use Doctrine\Common\Inflector\Inflector;
+use Slince\Shopify\Common\Manager\AbstractManager;
 
-class AssetManager extends NestCrudable implements AssetManagerInterface
+class AssetManager extends AbstractManager implements AssetManagerInterface
 {
     /**
      * {@inheritdoc}
@@ -46,12 +47,61 @@ class AssetManager extends NestCrudable implements AssetManagerInterface
     {
         return Asset::class;
     }
+    
+    /**
+     * {@inheritdoc}
+     */
+    public function findAll($themeId)
+    {
+        $resource = $this->createPartialResourceUrlForList($themeId);
+        $data = $this->client->get($resource);
+
+        return $this->createMany(reset($data));
+    }
 
     /**
      * {@inheritdoc}
      */
-    public function count($themeId, array $query = [])
+    public function find($themeId, $key)
     {
-        throw new \Exception('The action is not supported');
+        $resource = $this->createPartialResourceUrlForList($themeId);
+        $data = $this->client->get($resource, [
+            'asset' => [
+                'key' => $key
+            ]
+        ]);
+
+        return $this->fromArray(reset($data));
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function update($themeId, array $data)
+    {
+        $resource = $this->createPartialResourceUrlForList($themeId);
+        $data = $this->client->put($resource, [$this->getResourceName() => $data]);
+
+        return $this->fromArray(reset($data));
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function remove($themeId, $key)
+    {
+        $resource = $this->createPartialResourceUrlForList($themeId);
+        $this->client->delete($resource, [
+            'asset' => [
+                'key' => $key
+            ]
+        ]);
+    }
+
+    protected function createPartialResourceUrlForList($parentId)
+    {
+        return Inflector::pluralize($this->getParentResourceName())
+            .'/'.$parentId
+            .'/'.Inflector::pluralize($this->getResourceName());
     }
 }

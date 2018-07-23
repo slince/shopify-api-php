@@ -11,4 +11,9 @@ class AssetTest extends ModelTestCase
     {
         return Asset::class;
     }
+
+    public function testId()
+    {
+        $this->markTestSkipped();
+    }
 }

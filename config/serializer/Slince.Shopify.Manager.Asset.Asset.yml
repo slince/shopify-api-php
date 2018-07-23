@@ -1,7 +1,5 @@
 Slince\Shopify\Manager\Asset\Asset:
     properties:
-        id:
-            type: integer
         key:
             type: string
         publicUrl:
@@ -16,3 +14,5 @@ Slince\Shopify\Manager\Asset\Asset:
             type: integer
         themeId:
             type: integer
+        value:
+            type: string

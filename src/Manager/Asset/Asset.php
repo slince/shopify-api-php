@@ -11,9 +11,7 @@
 
 namespace Slince\Shopify\Manager\Asset;
 
-use Slince\Shopify\Common\Model\Model;
-
-class Asset extends Model
+class Asset
 {
     /**
      * @var string
@@ -49,6 +47,11 @@ class Asset extends Model
      * @var int
      */
     protected $themeId;
+
+    /**
+     * @var string
+     */
+    protected $value;
 
     /**
      * @return string
@@ -186,6 +189,26 @@ class Asset extends Model
     public function setThemeId($themeId)
     {
         $this->themeId = $themeId;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getValue()
+    {
+        return $this->value;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return Asset
+     */
+    public function setValue($value)
+    {
+        $this->value = $value;
 
         return $this;
     }
