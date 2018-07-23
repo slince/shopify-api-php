@@ -54,6 +54,10 @@ use Slince\Shopify\Hydrator\Hydrator;
  */
 class Client
 {
+    const NAME = 'SlinceShopifyClient';
+
+    const VERSION = '2.0.3';
+
     /**
      * @var HttpClient
      */
@@ -273,7 +277,9 @@ class Client
 
     protected function doRequest($method, $resource, $options = [])
     {
-        $request = new Request($method, $this->buildUrl($resource));
+        $request = new Request($method, $this->buildUrl($resource), [
+            'User-Agent' => static::NAME . '/' . static::VERSION
+        ]);
         $response = $this->sendRequest($request, $options);
 
         return \GuzzleHttp\json_decode($response->getBody(), true);
