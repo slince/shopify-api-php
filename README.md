@@ -107,7 +107,7 @@ print_r($product->getImages());
 Available managers:
 
 - [Article](./src/Manager/Article/ArticleManagerInterface.php)
-- [Asset](./src/Manager/Asset/AssetManagernterface.php)
+- [Asset](./src/Manager/Asset/AssetManagerInterface.php)
 - [Blog](./src/Manager/Blog/BlogManagerInterface.php)
 - [CarrierService](./src/Manager/CarrierService/CarrierServiceManagerInterface.php)
 - [Collect](./src/Manager/Collect/CollectManagerInterface.php)
