@@ -262,6 +262,7 @@ class Client
      * Perform a DELETE request.
      *
      * @param string $resource
+     * @param array  $query
      */
     public function delete($resource, $query = [])
     {

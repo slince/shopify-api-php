@@ -11,7 +11,6 @@
 
 namespace Slince\Shopify\Manager\Asset;
 
-use Doctrine\Common\Inflector\Inflector;
 use Slince\Shopify\Common\Manager\AbstractManager;
 
 class AssetManager extends AbstractManager implements AssetManagerInterface
@@ -30,14 +29,6 @@ class AssetManager extends AbstractManager implements AssetManagerInterface
     public function getResourceName()
     {
         return 'asset';
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getParentResourceName()
-    {
-        return 'theme';
     }
 
     /**
@@ -98,10 +89,8 @@ class AssetManager extends AbstractManager implements AssetManagerInterface
         ]);
     }
 
-    protected function createPartialResourceUrlForList($parentId)
+    protected function createPartialResourceUrlForList($themeId)
     {
-        return Inflector::pluralize($this->getParentResourceName())
-            .'/'.$parentId
-            .'/'.Inflector::pluralize($this->getResourceName());
+        return "themes/{$themeId}/assets";
     }
 }

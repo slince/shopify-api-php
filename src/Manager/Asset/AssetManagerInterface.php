@@ -36,7 +36,7 @@ interface AssetManagerInterface
      * Updates the assets.
      *
      * @param int $themeId
-     *
+     * @param array $data
      * @return Asset
      */
     public function update($themeId, array $data);
