@@ -1,0 +1,34 @@
+Slince\Shopify\Manager\RecurringApplicationCharge\RecurringApplicationCharge:
+    properties:
+        activatedOn:
+            type: DateTime<'Y-m-d'>
+        billingOn:
+            type: DateTime<'Y-m-d'>
+        canceledOn:
+            type: DateTime<'Y-m-d'>
+        cappedAmount:
+            type: integer
+        confirmationUrl:
+            type: string
+        createdAt:
+            type: DateTime<'Y-m-d\TH:i:sP'>
+        decoratedReturnUrl:
+            type: string
+        name:
+            type: string
+        price:
+            type: float
+        returnUrl:
+            type: string
+        status:
+            type: string
+        terms:
+            type: string
+        test:
+            type: boolean
+        trialDays:
+            type: integer
+        trialEndsOn:
+            type: DateTime<'Y-m-d'>
+        updatedAt:
+            type: DateTime<'Y-m-d\TH:i:sP'>

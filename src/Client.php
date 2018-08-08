@@ -44,6 +44,7 @@ use Slince\Shopify\Hydrator\Hydrator;
  * @method Manager\ProductImage\ImageManagerInterface getProductImageManager
  * @method Manager\ProductVariant\VariantManagerInterface getProductVariantManager
  * @method Manager\Province\ProvinceManagerInterface getProvinceManager
+ * @method Manager\RecurringApplicationCharge\RecurringApplicationChargeManagerInterface getRecurringApplicationChargeManager
  * @method Manager\Redirect\RedirectManagerInterface getRedirectManager
  * @method Manager\Refund\RefundManagerInterface getRefundManager
  * @method Manager\ShippingZone\ShippingZoneManagerInterface getShippingZoneManager
@@ -108,6 +109,7 @@ class Client
         Manager\ProductImage\ImageManager::class,
         Manager\ProductVariant\VariantManager::class,
         Manager\Province\ProvinceManager::class,
+        Manager\RecurringApplicationCharge\RecurringApplicationChargeManager::class,
         Manager\Redirect\RedirectManager::class,
         Manager\Refund\RefundManager::class,
         Manager\ScriptTag\ScriptTagManager::class,
