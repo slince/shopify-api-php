@@ -1,0 +1,54 @@
+Slince\Shopify\Manager\PriceRule\PriceRule:
+    properties:
+        id:
+            type: integer
+        allocationMethod:
+            type: string
+        createdAt:
+            type: DateTime<'Y-m-d\TH:i:sP'>
+        customerSelection:
+            type: string
+        endsAt:
+            type: DateTime<'Y-m-d\TH:i:sP'>
+        entitledCollectionIds:
+            type: array
+        entitledCountryIds:
+            type: array
+        entitledProductIds:
+            type: array
+        entitledVariantIds:
+            type: array
+        oncePerCustomer:
+            type: boolean
+        prerequisiteCustomerIds:
+            type: array
+        prerequisiteQuantityRange:
+            type: array
+        prerequisiteSavedSearchIds:
+            type: array
+        prerequisiteShippingPriceRange:
+            type: array
+        prerequisiteSubtotalRange:
+            type: array
+        startsAt:
+            type: DateTime<'Y-m-d\TH:i:sP'>
+        targetSelection:
+            type: string
+        targetType:
+            type: string
+        title:
+            type: string
+        usageLimit:
+            type: integer
+        prerequisiteProductIds:
+            type: array
+        prerequisiteVariantIds:
+            type: array
+        prerequisiteCollectionIds:
+            type: array
+        value:
+            type: integer
+        valueType:
+            type: string
+        prerequisiteToEntitlementQuantityRatio:
+            type: array

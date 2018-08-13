@@ -34,12 +34,14 @@ use Slince\Shopify\Hydrator\Hydrator;
  * @method Manager\Customer\CustomerManagerInterface getCustomerManager
  * @method Manager\CustomerAddress\AddressManagerInterface getCustomerAddressManager
  * @method Manager\CustomerSavedSearch\CustomerSavedSearchManagerInterface getCustomerSavedSearchManager
+ * @method Manager\DiscountCode\DiscountCodeManagerInterface getDiscountCodeManager
  * @method Manager\Fulfillment\FulfillmentManagerInterface getFulfillmentManager
  * @method Manager\FulfillmentService\FulfillmentServiceManagerInterface getFulfillmentServiceManager
  * @method Manager\Order\OrderManagerInterface getOrderManager
  * @method Manager\OrderRisk\RiskManagerInterface getOrderRiskManager
  * @method Manager\Page\PageManagerInterface getPageManager
  * @method Manager\Policy\PolicyManagerInterface getPolicyManager
+ * @method Manager\PriceRule\PriceRuleManagerInterface getPriceRuleManager
  * @method Manager\Product\ProductManagerInterface getProductManager
  * @method Manager\ProductImage\ImageManagerInterface getProductImageManager
  * @method Manager\ProductVariant\VariantManagerInterface getProductVariantManager
@@ -97,6 +99,7 @@ class Client
         Manager\Customer\CustomerManager::class,
         Manager\CustomerAddress\AddressManager::class,
         Manager\CustomerSavedSearch\CustomerSavedSearchManager::class,
+        Manager\DiscountCode\DiscountCodeManager::class,
         Manager\Fulfillment\FulfillmentManager::class,
         Manager\FulfillmentService\FulfillmentServiceManager::class,
         Manager\Location\LocationManager::class,
@@ -104,6 +107,7 @@ class Client
         Manager\OrderRisk\RiskManager::class,
         Manager\Page\PageManager::class,
         Manager\Policy\PolicyManager::class,
+        Manager\PriceRule\PriceRuleManager::class,
         Manager\Product\ProductManager::class,
         Manager\ProductImage\ImageManager::class,
         Manager\ProductVariant\VariantManager::class,
