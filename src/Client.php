@@ -123,7 +123,7 @@ class Client
     ];
 
     /**
-     * Whether depay the next request.
+     * Whether delay the next request.
      *
      * @var bool
      */
