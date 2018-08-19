@@ -36,9 +36,4 @@ class ShippingZoneManagerTest extends GeneralCurdableTestCase
     {
         $this->markTestSkipped();
     }
-
-    public function testDelete()
-    {
-        $this->markTestSkipped();
-    }
 }

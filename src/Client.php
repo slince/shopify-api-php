@@ -285,8 +285,11 @@ class Client
             'User-Agent' => static::NAME . '/' . static::VERSION
         ]);
         $response = $this->sendRequest($request, $options);
+        $body = $response->getBody();
 
-        return \GuzzleHttp\json_decode($response->getBody(), true);
+        return $body->getSize()
+            ? \GuzzleHttp\json_decode($body, true)
+            : [];
     }
 
     /**
