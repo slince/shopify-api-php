@@ -1,6 +1,6 @@
 <?php
 
-namespace Slince\Shopify\Tests\Order;
+namespace Slince\Shopify\Tests\Transaction;
 
 use Slince\Shopify\Manager\Transaction\TransactionManager;
 use Slince\Shopify\Tests\Base\NestCurdableTestCase;
@@ -15,5 +15,10 @@ class TransactionManagerTest extends NestCurdableTestCase
     public function getServiceClass()
     {
         return TransactionManager::class;
+    }
+
+    public function testRemove()
+    {
+        $this->markTestSkipped('Skip delete test');
     }
 }

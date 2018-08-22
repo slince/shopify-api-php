@@ -16,4 +16,9 @@ class FulfillmentManagerTest extends NestCurdableTestCase
     {
         return FulfillmentManager::class;
     }
+
+    public function testRemove()
+    {
+        $this->markTestSkipped('Skip delete test');
+    }
 }
