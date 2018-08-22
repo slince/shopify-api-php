@@ -83,6 +83,12 @@ class ClientTest extends TestCase
         $client->delete('products/1');
     }
 
+    public function testDeleteNotContent()
+    {
+        $client = $this->getClientMock('PriceRule/delete.json');
+        $client->delete('price_rules/1');
+    }
+
     public function testCredential()
     {
         $credential = new PublicAppCredential('foobarbazfoobarbaz');
