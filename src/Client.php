@@ -212,7 +212,10 @@ class Client
      */
     public function getHttpClient()
     {
-        return $this->httpClient ?: new HttpClient([
+        if ($this->httpClient) {
+            return $this->httpClient;
+        }
+        return $this->httpClient = new HttpClient([
             'verify' => false,
         ]);
     }
