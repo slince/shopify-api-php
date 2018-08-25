@@ -69,6 +69,9 @@ abstract class GeneralCurdableTestCase extends TestCase
         $this->assertEquals($json['count'], $count);
     }
 
+    /**
+     * @doesNotPerformAssertions
+     */
     public function testRemove()
     {
         $fixture = $this->getFixturesDir().'/'.'delete.json';
