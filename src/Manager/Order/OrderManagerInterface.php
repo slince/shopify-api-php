@@ -43,7 +43,7 @@ interface OrderManagerInterface extends ManagerInterface
     public function count(array $query = []);
 
     /**
-     * Updates the blog.
+     * Updates the order.
      *
      * @param int   $id
      * @param array $data
@@ -53,7 +53,7 @@ interface OrderManagerInterface extends ManagerInterface
     public function update($id, array $data);
 
     /**
-     * Removes the blog.
+     * Removes the order.
      *
      * @param int $id
      *
@@ -62,7 +62,7 @@ interface OrderManagerInterface extends ManagerInterface
     public function remove($id);
 
     /**
-     * Creates a blog.
+     * Creates an order.
      *
      * @param array $data
      *
