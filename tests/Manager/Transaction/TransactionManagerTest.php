@@ -17,6 +17,11 @@ class TransactionManagerTest extends NestCurdableTestCase
         return TransactionManager::class;
     }
 
+    public function testUpdate()
+    {
+        $this->markTestSkipped();
+    }
+
     public function testRemove()
     {
         $this->markTestSkipped();

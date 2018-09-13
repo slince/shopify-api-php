@@ -49,6 +49,15 @@ abstract class NestCurdableTestCase extends TestCase
         $this->assertInstanceOf($service->getModelClass(), $article);
     }
 
+    public function testUpdate()
+    {
+        $fixture = $this->getFixturesDir().'/'.'view.json';
+        $service = $this->getService($fixture);
+        $json = $this->readFixture($fixture);
+        $entity = $service->update(1, 2, reset($json));
+        $this->assertInstanceOf($service->getModelClass(), $entity);
+    }
+
     public function testCount()
     {
         $fixture = $this->getFixturesDir().'/'.'count.json';

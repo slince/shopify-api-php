@@ -24,6 +24,15 @@ class AssetManagerTest extends NestCurdableTestCase
         return new $class($this->getClientMock($fixture));
     }
 
+    public function testUpdate()
+    {
+        $fixture = $this->getFixturesDir().'/'.'view.json';
+        $service = $this->getService($fixture);
+        $json = $this->readFixture($fixture);
+        $entity = $service->update(12, reset($json));
+        $this->assertInstanceOf($service->getModelClass(), $entity);
+    }
+
     public function testCreate()
     {
         $this->markTestSkipped();
