@@ -22,6 +22,18 @@ class RecurringApplicationChargeManagerTest extends GeneralCurdableTestCase
         $this->markTestSkipped();
     }
 
+    public function testRemove()
+    {
+        $this->markTestSkipped();
+    }
+
+    public function testCancel()
+    {
+        $fixture = $this->getFixturesDir().'/'.'delete.json';
+        $service = $this->getService($fixture);
+        $service->cancel(123);
+    }
+
     public function testActivate()
     {
         $fixture = $this->getFixturesDir().'/activate.json';
