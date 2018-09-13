@@ -34,12 +34,14 @@ use Slince\Shopify\Hydrator\Hydrator;
  * @method Manager\Customer\CustomerManagerInterface getCustomerManager
  * @method Manager\CustomerAddress\AddressManagerInterface getCustomerAddressManager
  * @method Manager\CustomerSavedSearch\CustomerSavedSearchManagerInterface getCustomerSavedSearchManager
+ * @method Manager\DiscountCode\DiscountCodeManagerInterface getDiscountCodeManager
  * @method Manager\Fulfillment\FulfillmentManagerInterface getFulfillmentManager
  * @method Manager\FulfillmentService\FulfillmentServiceManagerInterface getFulfillmentServiceManager
  * @method Manager\Order\OrderManagerInterface getOrderManager
  * @method Manager\OrderRisk\RiskManagerInterface getOrderRiskManager
  * @method Manager\Page\PageManagerInterface getPageManager
  * @method Manager\Policy\PolicyManagerInterface getPolicyManager
+ * @method Manager\PriceRule\PriceRuleManagerInterface getPriceRuleManager
  * @method Manager\Product\ProductManagerInterface getProductManager
  * @method Manager\ProductImage\ImageManagerInterface getProductImageManager
  * @method Manager\ProductVariant\VariantManagerInterface getProductVariantManager
@@ -57,7 +59,7 @@ class Client
 {
     const NAME = 'SlinceShopifyClient';
 
-    const VERSION = '2.0.3';
+    const VERSION = '2.1.0';
 
     /**
      * @var HttpClient
@@ -98,6 +100,7 @@ class Client
         Manager\Customer\CustomerManager::class,
         Manager\CustomerAddress\AddressManager::class,
         Manager\CustomerSavedSearch\CustomerSavedSearchManager::class,
+        Manager\DiscountCode\DiscountCodeManager::class,
         Manager\Fulfillment\FulfillmentManager::class,
         Manager\FulfillmentService\FulfillmentServiceManager::class,
         Manager\Location\LocationManager::class,
@@ -105,6 +108,7 @@ class Client
         Manager\OrderRisk\RiskManager::class,
         Manager\Page\PageManager::class,
         Manager\Policy\PolicyManager::class,
+        Manager\PriceRule\PriceRuleManager::class,
         Manager\Product\ProductManager::class,
         Manager\ProductImage\ImageManager::class,
         Manager\ProductVariant\VariantManager::class,
@@ -121,7 +125,7 @@ class Client
     ];
 
     /**
-     * Whether depay the next request.
+     * Whether delay the next request.
      *
      * @var bool
      */
@@ -210,7 +214,10 @@ class Client
      */
     public function getHttpClient()
     {
-        return $this->httpClient ?: new HttpClient([
+        if ($this->httpClient) {
+            return $this->httpClient;
+        }
+        return $this->httpClient = new HttpClient([
             'verify' => false,
         ]);
     }
@@ -283,8 +290,11 @@ class Client
             'User-Agent' => static::NAME . '/' . static::VERSION
         ]);
         $response = $this->sendRequest($request, $options);
+        $body = $response->getBody();
 
-        return \GuzzleHttp\json_decode($response->getBody(), true);
+        return $body->getSize()
+            ? \GuzzleHttp\json_decode($body, true)
+            : [];
     }
 
     /**

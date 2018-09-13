@@ -1,7 +1,7 @@
 {
     "name": "slince/shopify-api-php",
     "description": "Shopify API Client for PHP",
-    "keywords": ["shopify", "rest", "shopify-sdk", "shopify-api", "shopify-client", "shopify-client-php"],
+    "keywords": ["shopify", "restful", "shopify-sdk", "shopify-api", "shopify-client", "shopify-client-php"],
     "type": "library",
     "license": "MIT",
     "authors": [

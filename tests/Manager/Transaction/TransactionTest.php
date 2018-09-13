@@ -1,6 +1,6 @@
 <?php
 
-namespace Slince\Shopify\Tests\Order;
+namespace Slince\Shopify\Tests\Transaction;
 
 use Slince\Shopify\Manager\Transaction\Transaction;
 use Slince\Shopify\Tests\Base\ModelTestCase;

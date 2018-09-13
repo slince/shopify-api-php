@@ -31,9 +31,4 @@ class LocationManagerTest extends GeneralCurdableTestCase
     {
         $this->markTestSkipped();
     }
-
-    public function testDelete()
-    {
-        $this->markTestSkipped();
-    }
 }
