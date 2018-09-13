@@ -42,7 +42,7 @@ class ThemeManager extends GeneralCurdable implements ThemeManagerInterface
     /**
      * {@inheritdoc}
      */
-    public function count(array $filters = [], $parentResourceId = null)
+    public function count(array $query = [])
     {
         throw new \Exception('The action is not supported');
     }

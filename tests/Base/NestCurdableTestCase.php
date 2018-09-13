@@ -64,9 +64,6 @@ abstract class NestCurdableTestCase extends TestCase
     public function testRemove()
     {
         $fixture = $this->getFixturesDir().'/'.'delete.json';
-        if (!file_exists(static::FIXTURES_DIR . '/' . $fixture)) {
-            $fixture = 'Common/' . 'delete.json';
-        }
         $service = $this->getService($fixture);
         $service->remove(1, 2);
     }

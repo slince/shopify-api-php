@@ -36,4 +36,9 @@ class PolicyManagerTest extends GeneralCurdableTestCase
     {
         $this->markTestSkipped();
     }
+
+    public function testRemove()
+    {
+        $this->markTestSkipped();
+    }
 }

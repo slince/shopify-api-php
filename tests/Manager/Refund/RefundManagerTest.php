@@ -23,6 +23,11 @@ class RefundManagerTest extends NestCurdableTestCase
         $this->markTestSkipped();
     }
 
+    public function testRemove()
+    {
+        $this->markTestSkipped();
+    }
+
     public function testCalculate()
     {
         $service = $this->getService('Refund/view.json');

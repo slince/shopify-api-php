@@ -19,6 +19,6 @@ class TransactionManagerTest extends NestCurdableTestCase
 
     public function testRemove()
     {
-        $this->markTestSkipped('Skip delete test');
+        $this->markTestSkipped();
     }
 }

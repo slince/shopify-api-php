@@ -46,4 +46,12 @@ class DiscountCodeManager extends NestCrudable implements DiscountCodeManagerInt
     {
         return DiscountCode::class;
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function count($priceRuleId, array $query = [])
+    {
+        throw new \Exception('The action is not supported');
+    }
 }

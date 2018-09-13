@@ -38,4 +38,12 @@ class CollectManager extends GeneralCurdable implements CollectManagerInterface
     {
         return Collect::class;
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function update($id, array $data)
+    {
+        return new \Exception('The method is not supported');
+    }
 }

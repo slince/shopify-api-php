@@ -69,4 +69,12 @@ class AddressManager extends NestCrudable implements AddressManagerInterface
 
         return $this->fromArray($data['customer_address']);
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function count($customerId, array $query = [])
+    {
+        throw new \Exception('The action is not supported');
+    }
 }

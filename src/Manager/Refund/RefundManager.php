@@ -66,6 +66,14 @@ class RefundManager extends NestCrudable implements RefundManagerInterface
     /**
      * {@inheritdoc}
      */
+    public function remove($orderId, $id)
+    {
+        throw new \Exception('The action is not supported');
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function calculate($orderId, array $data)
     {
         $resource = "/orders/{$orderId}/refunds/calculate";

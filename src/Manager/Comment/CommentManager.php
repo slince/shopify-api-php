@@ -38,4 +38,12 @@ class CommentManager extends GeneralCurdable implements CommentManagerInterface
     {
         return Comment::class;
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function remove($id)
+    {
+        throw new \Exception('The action is not supported');
+    }
 }
