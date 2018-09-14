@@ -16,7 +16,7 @@ use Slince\Shopify\Common\Manager\ManagerInterface;
 interface OrderManagerInterface extends ManagerInterface
 {
     /**
-     * Gets all blogs.
+     * Gets all orders.
      *
      * @param array $query
      *
