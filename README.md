@@ -130,6 +130,7 @@ Available managers:
 - [ProductImage](./src/Manager/ProductImage/ImageManagerInterface.php)
 - [ProductVariant](./src/Manager/ProductVariant/VariantManagerInterface.php)
 - [Province](./src/Manager/Province/ProvinceManagerInterface.php)
+- [RecurringApplicationCharge](./src/Manager/RecurringApplicationCharge/RecurringApplicationChargeManagerInterface.php)
 - [Redirect](./src/Manager/Redirect/RedirectManagerInterface.php)
 - [Refund](./src/Manager/Refund/RefundManagerInterface.php)
 - [ScriptTag](./src/Manager/ScriptTag/ScriptTagManagerInterface.php)
