@@ -22,12 +22,12 @@ class LocationManagerTest extends GeneralCurdableTestCase
         $this->markTestSkipped();
     }
 
-    public function testCount()
+    public function testUpdate()
     {
         $this->markTestSkipped();
     }
 
-    public function testUpdate()
+    public function testRemove()
     {
         $this->markTestSkipped();
     }

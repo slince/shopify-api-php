@@ -49,6 +49,15 @@ abstract class NestCurdableTestCase extends TestCase
         $this->assertInstanceOf($service->getModelClass(), $article);
     }
 
+    public function testUpdate()
+    {
+        $fixture = $this->getFixturesDir().'/'.'view.json';
+        $service = $this->getService($fixture);
+        $json = $this->readFixture($fixture);
+        $entity = $service->update(1, 2, reset($json));
+        $this->assertInstanceOf($service->getModelClass(), $entity);
+    }
+
     public function testCount()
     {
         $fixture = $this->getFixturesDir().'/'.'count.json';
@@ -58,12 +67,12 @@ abstract class NestCurdableTestCase extends TestCase
         $this->assertEquals($json['count'], $count);
     }
 
+    /**
+     * @doesNotPerformAssertions
+     */
     public function testRemove()
     {
         $fixture = $this->getFixturesDir().'/'.'delete.json';
-        if (!file_exists(static::FIXTURES_DIR . '/' . $fixture)) {
-            $fixture = 'Common/' . 'delete.json';
-        }
         $service = $this->getService($fixture);
         $service->remove(1, 2);
     }

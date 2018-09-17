@@ -42,7 +42,7 @@ class LocationManager extends GeneralCurdable implements LocationManagerInterfac
     /**
      * {@inheritdoc}
      */
-    public function count(array $query = [])
+    public function create(array $data)
     {
         return new \Exception('The method is not supported');
     }

@@ -24,4 +24,13 @@ class VariantManagerTest extends NestCurdableTestCase
         $article = $service->find(1);
         $this->assertInstanceOf($service->getModelClass(), $article);
     }
+
+    public function testUpdate()
+    {
+        $fixture = $this->getFixturesDir().'/'.'view.json';
+        $service = $this->getService($fixture);
+        $json = $this->readFixture($fixture);
+        $entity = $service->update(12, reset($json));
+        $this->assertInstanceOf($service->getModelClass(), $entity);
+    }
 }

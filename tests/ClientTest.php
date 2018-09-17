@@ -77,13 +77,19 @@ class ClientTest extends TestCase
         $this->assertNotEmpty($json);
     }
 
+    /**
+     * @doesNotPerformAssertions
+     */
     public function testDelete()
     {
         $client = $this->getClientMock('Product/delete.json');
         $client->delete('products/1');
     }
 
-    public function testDeleteNotContent()
+    /**
+     * @doesNotPerformAssertions
+     */
+    public function testDeleteNoContent()
     {
         $client = $this->getClientMock('PriceRule/delete.json');
         $client->delete('price_rules/1');

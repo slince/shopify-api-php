@@ -13,7 +13,7 @@ namespace Slince\Shopify\Manager\Policy;
 
 use Slince\Shopify\Common\Manager\GeneralCurdable;
 
-class PolicyManager extends GeneralCurdable
+class PolicyManager extends GeneralCurdable implements PolicyManagerInterface
 {
     /**
      * {@inheritdoc}
@@ -50,7 +50,7 @@ class PolicyManager extends GeneralCurdable
     /**
      * {@inheritdoc}
      */
-    public function create(array $data, $parentResourceId = null)
+    public function create(array $data)
     {
         throw new \Exception('The action is not supported');
     }
@@ -58,7 +58,7 @@ class PolicyManager extends GeneralCurdable
     /**
      * {@inheritdoc}
      */
-    public function delete($id, $parentResourceId = null)
+    public function remove($id)
     {
         throw new \Exception('The action is not supported');
     }
@@ -66,7 +66,7 @@ class PolicyManager extends GeneralCurdable
     /**
      * {@inheritdoc}
      */
-    public function find($id, $parentResourceId = null)
+    public function find($id)
     {
         throw new \Exception('The action is not supported');
     }
@@ -74,7 +74,7 @@ class PolicyManager extends GeneralCurdable
     /**
      * {@inheritdoc}
      */
-    public function count(array $filters = [], $parentResourceId = null)
+    public function count(array $query = [])
     {
         throw new \Exception('The action is not supported');
     }

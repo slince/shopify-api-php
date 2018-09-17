@@ -9,7 +9,7 @@ class ImageManagerTest extends NestCurdableTestCase
 {
     public function getFixturesDir()
     {
-        return 'Image';
+        return 'ProductImage';
     }
 
     public function getServiceClass()

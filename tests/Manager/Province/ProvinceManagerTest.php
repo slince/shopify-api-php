@@ -21,4 +21,9 @@ class ProvinceManagerTest extends NestCurdableTestCase
     {
         $this->markTestSkipped();
     }
+
+    public function testRemove()
+    {
+        $this->markTestSkipped();
+    }
 }
