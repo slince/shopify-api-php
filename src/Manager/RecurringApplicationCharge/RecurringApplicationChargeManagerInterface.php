@@ -11,7 +11,6 @@
 
 namespace Slince\Shopify\Manager\RecurringApplicationCharge;
 
-use Slince\Shopify\RecurringApplicationCharge\RecurringApplicationCharge;
 use Slince\Shopify\Common\Manager\ManagerInterface;
 
 interface RecurringApplicationChargeManagerInterface extends ManagerInterface
