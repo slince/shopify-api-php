@@ -44,10 +44,14 @@ Slince\Shopify\Manager\ProductVariant\Variant:
             type: double
         weightUnit:
             type: string
+        inventoryItemId:
+            type: integer
         oldInventoryQuantity:
             type: integer
         requiresShipping:
             type: boolean
+        adminGraphqlApiId:
+            type: string
 
 
 

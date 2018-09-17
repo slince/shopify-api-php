@@ -123,12 +123,22 @@ class Variant extends Model
     /**
      * @var int
      */
+    protected $inventoryItemId;
+
+    /**
+     * @var int
+     */
     protected $oldInventoryQuantity;
 
     /**
      * @var bool
      */
     protected $requiresShipping;
+
+    /**
+     * @var string
+     */
+    protected $adminGraphqlApiId;
 
     /**
      * @return int
@@ -551,6 +561,22 @@ class Variant extends Model
     }
 
     /**
+     * @param int $inventoryItemId
+     */
+    public function setInventoryItemId($inventoryItemId)
+    {
+        $this->inventoryItemId = $inventoryItemId;
+    }
+
+    /**
+     * @return int
+     */
+    public function getInventoryItemId()
+    {
+        return $this->inventoryItemId;
+    }
+
+    /**
      * @return int
      */
     public function getOldInventoryQuantity()
@@ -588,5 +614,21 @@ class Variant extends Model
         $this->requiresShipping = $requiresShipping;
 
         return $this;
+    }
+
+    /**
+     * @param string $adminGraphqlApiId
+     */
+    public function setAdminGraphqlApiId($adminGraphqlApiId)
+    {
+        $this->adminGraphqlApiId = $adminGraphqlApiId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAdminGraphqlApiId()
+    {
+        return $this->adminGraphqlApiId;
     }
 }
