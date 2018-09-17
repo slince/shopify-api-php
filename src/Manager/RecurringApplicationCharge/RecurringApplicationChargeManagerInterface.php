@@ -47,6 +47,7 @@ interface RecurringApplicationChargeManagerInterface extends ManagerInterface
      * Cancels a recurring application charge.
      *
      * @param int $id
+     * @return void
      */
     public function cancel($id);
 
