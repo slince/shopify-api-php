@@ -22,14 +22,6 @@
     </a>
 </p>
 
-<h3 align="center">Recommendation</h3>
-
-<p align="center">
-    <a href="https://www.phpdish.com/">
-        <img alt="PHPDish Community System" src="https://raw.githubusercontent.com/slince/phpdish/master/assets/img/logo2.png" width="350"/>
-    </a>
-</p>
-
 ## Installation
 
 Install via composer
