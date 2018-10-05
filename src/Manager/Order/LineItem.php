@@ -111,6 +111,11 @@ class LineItem extends Model
     protected $totalDiscount;
 
     /**
+     * @var DiscountAllocation[]
+     */
+    protected $discountAllocations;
+
+    /**
      * @return int
      */
     public function getFulfillableQuantity()
@@ -486,6 +491,26 @@ class LineItem extends Model
     public function setTotalDiscount($totalDiscount)
     {
         $this->totalDiscount = $totalDiscount;
+
+        return $this;
+    }
+
+    /**
+     * @return DiscountAllocation[]
+     */
+    public function getDiscountAllocations()
+    {
+        return $this->discountAllocations;
+    }
+
+    /**
+     * @param DiscountAllocation[] $discountAllocations
+     * 
+     * @return LineItem
+     */
+    public function setDiscountAllocations($discountAllocations)
+    {
+        $this->discountAllocations = $discountAllocations;
 
         return $this;
     }

@@ -120,3 +120,5 @@ Slince\Shopify\Manager\Order\Order:
             type: array<Slince\Shopify\Manager\Transaction\Transaction>
         paymentDetails:
             type: Slince\Shopify\Manager\Order\PaymentDetails
+        discountApplications:
+            type: array<Slince\Shopify\Manager\Order\DiscountApplication>

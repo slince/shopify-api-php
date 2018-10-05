@@ -40,3 +40,5 @@ Slince\Shopify\Manager\Order\LineItem:
             type: array<Slince\Shopify\Manager\Order\TaxLine>
         totalDiscount:
             type: float
+        discountAllocations:
+            type: array<Slince\Shopify\Manager\Order\DiscountAllocation>

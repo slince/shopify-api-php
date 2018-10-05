@@ -1,0 +1,16 @@
+Slince\Shopify\Manager\Order\DiscountApplication:
+    properties:
+        type:
+            type: string
+        value:
+            type: string
+        valueType:
+            type: string
+        allocationMethod:
+            type: string
+        targetSelection:
+            type: string
+        targetType:
+            type: string
+        code:
+            type: string

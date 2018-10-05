@@ -309,6 +309,11 @@ class Order extends Model
     protected $paymentDetails;
 
     /**
+     * @var DiscountApplication[]
+     */
+    protected $discountApplications;
+
+    /**
      * @return string
      */
     public function getEmail()
@@ -1464,6 +1469,26 @@ class Order extends Model
     public function setTransactions($transactions)
     {
         $this->transactions = $transactions;
+
+        return $this;
+    }
+
+    /**
+     * @return DiscountApplication[]
+     */
+    public function getDiscountApplications()
+    {
+        return $this->discountApplications;
+    }
+
+    /**
+     * @param DiscountApplication[] $discountApplications
+     *
+     * @return Order
+     */
+    public function setDiscountApplications($discountApplications)
+    {
+        $this->discountApplications = $discountApplications;
 
         return $this;
     }
