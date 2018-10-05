@@ -101,7 +101,7 @@ class LineItem extends Model
     protected $taxable;
 
     /**
-     * @var array
+     * @var TaxLine[]
      */
     protected $taxLines;
 
@@ -456,7 +456,7 @@ class LineItem extends Model
     }
 
     /**
-     * @return array
+     * @return TaxLine[]
      */
     public function getTaxLines()
     {
@@ -464,7 +464,7 @@ class LineItem extends Model
     }
 
     /**
-     * @param array $taxLines
+     * @param TaxLine[] $taxLines
      *
      * @return LineItem
      */
