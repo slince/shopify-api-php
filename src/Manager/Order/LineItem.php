@@ -101,7 +101,7 @@ class LineItem extends Model
     protected $taxable;
 
     /**
-     * @var array
+     * @var TaxLine[]
      */
     protected $taxLines;
 
@@ -109,6 +109,11 @@ class LineItem extends Model
      * @var float
      */
     protected $totalDiscount;
+
+    /**
+     * @var DiscountAllocation[]
+     */
+    protected $discountAllocations;
 
     /**
      * @return int
@@ -451,7 +456,7 @@ class LineItem extends Model
     }
 
     /**
-     * @return array
+     * @return TaxLine[]
      */
     public function getTaxLines()
     {
@@ -459,7 +464,7 @@ class LineItem extends Model
     }
 
     /**
-     * @param array $taxLines
+     * @param TaxLine[] $taxLines
      *
      * @return LineItem
      */
@@ -486,6 +491,26 @@ class LineItem extends Model
     public function setTotalDiscount($totalDiscount)
     {
         $this->totalDiscount = $totalDiscount;
+
+        return $this;
+    }
+
+    /**
+     * @return DiscountAllocation[]
+     */
+    public function getDiscountAllocations()
+    {
+        return $this->discountAllocations;
+    }
+
+    /**
+     * @param DiscountAllocation[] $discountAllocations
+     * 
+     * @return LineItem
+     */
+    public function setDiscountAllocations($discountAllocations)
+    {
+        $this->discountAllocations = $discountAllocations;
 
         return $this;
     }
