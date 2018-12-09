@@ -86,4 +86,13 @@ interface CustomerManagerInterface extends ManagerInterface
      * @return mixed
      */
     public function sendInvite($id, array $data);
+
+    /**
+     * Searches for customers that match a supplied query.
+     *
+     * @param array $query
+     *
+     * @return Customer[]
+     */
+    public function search(array $query = []);
 }
