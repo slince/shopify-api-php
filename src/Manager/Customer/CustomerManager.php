@@ -61,4 +61,14 @@ class CustomerManager extends GeneralCurdable implements CustomerManagerInterfac
 
         return $this->fromArray($data, CustomerInvite::class);
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function search(array $query = [])
+    {
+        $data = $this->client->get('customers/search', $query);
+
+        return $this->createMany(reset($data));
+    }
 }

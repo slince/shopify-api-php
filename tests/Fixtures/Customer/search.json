@@ -1,0 +1,66 @@
+{
+  "customers": [
+    {
+      "id": 207119551,
+      "email": "bob.norman@hostmail.com",
+      "accepts_marketing": false,
+      "created_at": "2018-10-23T15:29:24-04:00",
+      "updated_at": "2018-10-23T15:29:24-04:00",
+      "first_name": "Bob",
+      "last_name": "Norman",
+      "orders_count": 1,
+      "state": "disabled",
+      "total_spent": "41.94",
+      "last_order_id": 450789469,
+      "note": null,
+      "verified_email": true,
+      "multipass_identifier": null,
+      "tax_exempt": false,
+      "phone": null,
+      "tags": "",
+      "last_order_name": "#1001",
+      "currency": "USD",
+      "addresses": [
+        {
+          "id": 207119551,
+          "customer_id": 207119551,
+          "first_name": null,
+          "last_name": null,
+          "company": null,
+          "address1": "Chestnut Street 92",
+          "address2": "",
+          "city": "Louisville",
+          "province": "Kentucky",
+          "country": "United States",
+          "zip": "40202",
+          "phone": "555-625-1199",
+          "name": "",
+          "province_code": "KY",
+          "country_code": "US",
+          "country_name": "United States",
+          "default": true
+        }
+      ],
+      "admin_graphql_api_id": "gid://shopify/Customer/207119551",
+      "default_address": {
+        "id": 207119551,
+        "customer_id": 207119551,
+        "first_name": null,
+        "last_name": null,
+        "company": null,
+        "address1": "Chestnut Street 92",
+        "address2": "",
+        "city": "Louisville",
+        "province": "Kentucky",
+        "country": "United States",
+        "zip": "40202",
+        "phone": "555-625-1199",
+        "name": "",
+        "province_code": "KY",
+        "country_code": "US",
+        "country_name": "United States",
+        "default": true
+      }
+    }
+  ]
+}

@@ -16,4 +16,12 @@ class CustomerManagerTest extends GeneralCurdableTestCase
     {
         return CustomerManager::class;
     }
+
+    public function testSearch()
+    {
+        $fixture = $this->getFixturesDir().'/'.'search.json';
+        $service = $this->getService($fixture);
+        $entities = $service->search([]);
+        $this->assertInstanceOf($service->getModelClass(), $entities[0]);
+    }
 }
