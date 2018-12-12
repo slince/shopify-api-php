@@ -27,6 +27,9 @@ class RecurringApplicationChargeManagerTest extends GeneralCurdableTestCase
         $this->markTestSkipped();
     }
 
+    /**
+     * @doesNotPerformAssertions
+     */
     public function testCancel()
     {
         $fixture = $this->getFixturesDir().'/'.'delete.json';
