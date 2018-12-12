@@ -43,7 +43,7 @@ $credential = new Slince\Shopify\PublicAppCredential('Access Token');
 // Or Private App
 $credential = new Slince\Shopify\PrivateAppCredential('API KEY', 'PASSWORD', 'SHARED SECRET');
 
-$client  = new Slince\Shopify\Client($credential, 'your-store.myshopify.com', [
+$client = new Slince\Shopify\Client($credential, 'your-store.myshopify.com', [
     'metaCacheDir' => './tmp' // Metadata cache dir, required
 ]);
 ```
@@ -112,6 +112,8 @@ Available managers:
 - [DiscountCode](./src/Manager/DiscountCode/DiscountCodeManagerInterface.php)
 - [Fulfillment](./src/Manager/Fulfillment/FulfillmentManagerInterface.php)
 - [FulfillmentService](./src/Manager/FulfillmentService/FulfillmentServiceManagerInterface.php)
+- [InventoryItem](./src/Manager/InventoryItem/InventoryItemManagerInterface.php)
+- [InventoryLevel](./src/Manager/InventoryLevel/InventoryLevelManagerInterface.php)
 - [Location](./src/Manager/Location/LocationManagerInterface.php)
 - [Order](./src/Manager/Order/OrderManagerInterface.php)
 - [OrderRisk](./src/Manager/OrderRisk/RiskManagerInterface.php)
