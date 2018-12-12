@@ -9,14 +9,14 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\Inventory;
+namespace Slince\Shopify\Manager\InventoryItem;
 
 use Slince\Shopify\Common\Manager\ManagerInterface;
 
 interface InventoryItemManagerInterface extends ManagerInterface
 {
     /**
-     * Gets all inventory item.
+     * Gets all inventory items.
      *
      * @param array $query
      *
@@ -34,9 +34,11 @@ interface InventoryItemManagerInterface extends ManagerInterface
     public function find($id);
 
     /**
-     * Updates the inventory item
+     * Updates the inventory item.
+     * 
      * @param int $id
      * @param array $data
+     * 
      * @return InventoryItem
      */
     public function update($id, array $data);

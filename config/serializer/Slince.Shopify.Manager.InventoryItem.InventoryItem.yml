@@ -1,4 +1,4 @@
-Slince\Shopify\Manager\Inventory\InventoryItem:
+Slince\Shopify\Manager\InventoryItem\InventoryItem:
     properties:
         id:
             type: integer

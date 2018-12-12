@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\Inventory;
+namespace Slince\Shopify\Manager\InventoryLevel;
 
 use Slince\Shopify\Common\Manager\ManagerInterface;
 
@@ -25,26 +25,37 @@ interface InventoryLevelManagerInterface extends ManagerInterface
     public function findAll(array $query = []);
 
     /**
-     * Deletes an inventory level of an inventory item at a location
-     *
-     * @param array $query
-     */
-    public function remove(array $query = []);
-
-    /**
-     * Adjusts the inventory level of an inventory item at a single location
+     * Adjusts the inventory level of an inventory item at a location.
+     * 
      * @param array $data
+     * 
      * @return InventoryLevel
      */
     public function adjust(array $data);
 
     /**
-     * Connects an inventory item to a location by creating an inventory level
-     * at that location.
+     * Deletes an inventory level of an inventory item at a location.
+     *
+     * @param integer $inventoryItemId
+     * @param integer $locationId
+     */
+    public function remove($inventoryItemId, $locationId);
+
+    /**
+     * Connects an inventory item to a location.
      *
      * @param int $id
      *
      * @return InventoryItem
      */
-    public function connect($id);
+    public function connect(array $data);
+
+    /**
+     * Sets the inventory level for an inventory item at a location.
+     * 
+     * @param array $data
+     * 
+     * @return InventoryLevel
+     */
+    public function set(array $data);
 }

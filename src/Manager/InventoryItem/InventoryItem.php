@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\Inventory;
+namespace Slince\Shopify\Manager\InventoryItem;
 
 use Slince\Shopify\Common\Model\Model;
 
@@ -55,11 +55,13 @@ class InventoryItem extends Model
 
     /**
      * @param string $sku
+     * 
      * @return InventoryItem
      */
     public function setSku($sku)
     {
         $this->sku = $sku;
+
         return $this;
     }
 
@@ -73,11 +75,13 @@ class InventoryItem extends Model
 
     /**
      * @param float $cost
+     * 
      * @return InventoryItem
      */
     public function setCost($cost)
     {
         $this->cost = $cost;
+
         return $this;
     }
 
@@ -91,11 +95,13 @@ class InventoryItem extends Model
 
     /**
      * @param bool $tracked
+     * 
      * @return InventoryItem
      */
     public function setTracked($tracked)
     {
         $this->tracked = $tracked;
+
         return $this;
     }
 
@@ -109,11 +115,13 @@ class InventoryItem extends Model
 
     /**
      * @param string $adminGraphqlApiId
+     * 
      * @return InventoryItem
      */
     public function setAdminGraphqlApiId($adminGraphqlApiId)
     {
         $this->adminGraphqlApiId = $adminGraphqlApiId;
+
         return $this;
     }
 
@@ -127,11 +135,13 @@ class InventoryItem extends Model
 
     /**
      * @param \DateTimeInterface $createdAt
+     * 
      * @return InventoryItem
      */
     public function setCreatedAt($createdAt)
     {
         $this->createdAt = $createdAt;
+
         return $this;
     }
 
@@ -150,6 +160,7 @@ class InventoryItem extends Model
     public function setUpdatedAt($updatedAt)
     {
         $this->updatedAt = $updatedAt;
+
         return $this;
     }
 }
