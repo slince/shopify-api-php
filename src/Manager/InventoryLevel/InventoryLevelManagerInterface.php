@@ -36,17 +36,17 @@ interface InventoryLevelManagerInterface extends ManagerInterface
     /**
      * Deletes an inventory level of an inventory item at a location.
      *
-     * @param integer $inventoryItemId
-     * @param integer $locationId
+     * @param int $inventoryItemId
+     * @param int $locationId
      */
     public function remove($inventoryItemId, $locationId);
 
     /**
      * Connects an inventory item to a location.
      *
-     * @param int $id
+     * @param array $data
      *
-     * @return InventoryItem
+     * @return InventoryLevel
      */
     public function connect(array $data);
 

@@ -155,6 +155,7 @@ class InventoryItem extends Model
 
     /**
      * @param \DateTimeInterface $updatedAt
+     * 
      * @return InventoryItem
      */
     public function setUpdatedAt($updatedAt)
