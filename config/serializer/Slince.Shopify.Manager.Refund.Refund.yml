@@ -18,3 +18,5 @@ Slince\Shopify\Manager\Refund\Refund:
             type: array<Slince\Shopify\Manager\Refund\RefundLineItem>
         transactions:
             type: array<Slince\Shopify\Manager\Transaction\Transaction>
+        adminGraphqlApiId:
+            type: string

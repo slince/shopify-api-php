@@ -12,11 +12,14 @@
 namespace Slince\Shopify\Manager\Refund;
 
 use Slince\Shopify\Common\Model\Model;
+use Slince\Shopify\Common\Model\AdminGraphqlApiId;
 use Slince\Shopify\Hydrator\Association\HasMany;
 use Slince\Shopify\Manager\Transaction\Transaction;
 
 class Refund extends Model
 {
+    use AdminGraphqlApiId;
+
     /**
      * @var int
      */

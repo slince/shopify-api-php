@@ -26,5 +26,7 @@ Slince\Shopify\Manager\Fulfillment\Fulfillment:
             type: array<string>
         receipt:
             type: array<string,string>
+        adminGraphqlApiId:
+            type: string
         lineItems:
             type: array<Slince\Shopify\Manager\Order\LineItem>

@@ -12,11 +12,14 @@
 namespace Slince\Shopify\Manager\Product;
 
 use Slince\Shopify\Common\Model\Model;
+use Slince\Shopify\Common\Model\AdminGraphqlApiId;
 use Slince\Shopify\Manager\ProductImage\Image;
 use Slince\Shopify\Manager\ProductVariant\Variant;
 
 class Product extends Model
 {
+    use AdminGraphqlApiId;
+
     /**
      * @var string
      */
