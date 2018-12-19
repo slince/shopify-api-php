@@ -12,6 +12,7 @@
 namespace Slince\Shopify\Manager\Location;
 
 use Slince\Shopify\Common\Manager\ManagerInterface;
+use Slince\Shopify\Manager\Inventory\InventoryLevel;
 
 interface LocationManagerInterface extends ManagerInterface
 {
@@ -32,4 +33,20 @@ interface LocationManagerInterface extends ManagerInterface
      * @return Location
      */
     public function find($id);
+
+    /**
+     * Gets the count.
+     *
+     * @param array $query
+     *
+     * @return int
+     */
+    public function count(array $query = []);
+
+    /**
+     * Gets the inventory levels of the location
+     * @param int $id
+     * @return InventoryLevel[]
+     */
+    public function getInventoryLevels($id);
 }

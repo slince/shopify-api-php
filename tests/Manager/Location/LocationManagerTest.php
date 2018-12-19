@@ -2,6 +2,7 @@
 
 namespace Slince\Shopify\Tests\Location;
 
+use Slince\Shopify\Manager\Inventory\InventoryLevel;
 use Slince\Shopify\Manager\Location\LocationManager;
 use Slince\Shopify\Tests\Base\GeneralCurdableTestCase;
 
@@ -30,5 +31,13 @@ class LocationManagerTest extends GeneralCurdableTestCase
     public function testRemove()
     {
         $this->markTestSkipped();
+    }
+
+    public function testGetInventoryLevels()
+    {
+        $fixture = $this->getFixturesDir().'/inventory_levels.json';
+        $service = $this->getService($fixture);
+        $inventoryLevels = $service->getInventoryLevels(1);
+        $this->assertInstanceOf(InventoryLevel::class, $inventoryLevels[0]);
     }
 }

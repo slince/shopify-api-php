@@ -12,6 +12,7 @@
 namespace Slince\Shopify\Manager\Location;
 
 use Slince\Shopify\Common\Manager\GeneralCurdable;
+use Slince\Shopify\Manager\Inventory\InventoryLevel;
 
 class LocationManager extends GeneralCurdable implements LocationManagerInterface
 {
@@ -61,5 +62,15 @@ class LocationManager extends GeneralCurdable implements LocationManagerInterfac
     public function remove($id)
     {
         return new \Exception('The method is not supported');
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getInventoryLevels($id)
+    {
+        $endpoint = sprintf('locations/%s/inventory_levels', $id);
+        $data = $this->client->get($endpoint);
+        return $this->createMany($data['inventory_levels'], InventoryLevel::class);
     }
 }
