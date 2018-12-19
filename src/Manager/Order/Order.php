@@ -12,12 +12,15 @@
 namespace Slince\Shopify\Manager\Order;
 
 use Slince\Shopify\Common\Model\Model;
+use Slince\Shopify\Common\Model\AdminGraphqlApiId;
 use Slince\Shopify\Manager\Fulfillment\Fulfillment;
 use Slince\Shopify\Manager\Refund\Refund;
 use Slince\Shopify\Manager\Transaction\Transaction;
 
 class Order extends Model
 {
+    use AdminGraphqlApiId;
+
     /**
      * @var string
      */

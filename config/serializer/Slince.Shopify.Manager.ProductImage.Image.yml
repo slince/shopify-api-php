@@ -18,4 +18,6 @@ Slince\Shopify\Manager\ProductImage\Image:
             type: string
         variantIds:
              type: array<integer>
+        adminGraphqlApiId:
+            type: string
 

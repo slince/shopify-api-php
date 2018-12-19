@@ -12,9 +12,12 @@
 namespace Slince\Shopify\Manager\Transaction;
 
 use Slince\Shopify\Common\Model\Model;
+use Slince\Shopify\Common\Model\AdminGraphqlApiId;
 
 class Transaction extends Model
 {
+    use AdminGraphqlApiId;
+
     /**
      * @var float
      */

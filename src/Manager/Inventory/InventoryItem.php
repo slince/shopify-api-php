@@ -12,9 +12,12 @@
 namespace Slince\Shopify\Manager\Inventory;
 
 use Slince\Shopify\Common\Model\Model;
+use Slince\Shopify\Common\Model\AdminGraphqlApiId;
 
 class InventoryItem extends Model
 {
+    use AdminGraphqlApiId;
+
     /**
      * @var string
      */
@@ -29,11 +32,6 @@ class InventoryItem extends Model
      * @var boolean
      */
     protected $tracked;
-
-    /**
-     * @var string
-     */
-    protected $adminGraphqlApiId;
 
     /**
      * @var \DateTimeInterface
@@ -96,24 +94,6 @@ class InventoryItem extends Model
     public function setTracked($tracked)
     {
         $this->tracked = $tracked;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getAdminGraphqlApiId()
-    {
-        return $this->adminGraphqlApiId;
-    }
-
-    /**
-     * @param string $adminGraphqlApiId
-     * @return InventoryItem
-     */
-    public function setAdminGraphqlApiId($adminGraphqlApiId)
-    {
-        $this->adminGraphqlApiId = $adminGraphqlApiId;
         return $this;
     }
 

@@ -32,3 +32,5 @@ Slince\Shopify\Manager\Transaction\Transaction:
             type: integer
         currency:
             type: string
+        adminGraphqlApiId:
+            type: string

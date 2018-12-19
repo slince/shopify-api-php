@@ -12,9 +12,12 @@
 namespace Slince\Shopify\Manager\CustomCollection;
 
 use Slince\Shopify\Common\Model\Model;
+use Slince\Shopify\Common\Model\AdminGraphqlApiId;
 
 class CustomCollection extends Model
 {
+    use AdminGraphqlApiId;
+
     /**
      * @var string
      */

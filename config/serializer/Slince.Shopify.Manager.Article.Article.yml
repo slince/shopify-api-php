@@ -26,3 +26,5 @@ Slince\Shopify\Manager\Article\Article:
             type: string
         tags:
             type: string
+        adminGraphqlApiId:
+            type: string

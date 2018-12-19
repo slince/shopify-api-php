@@ -12,9 +12,12 @@
 namespace Slince\Shopify\Manager\ProductVariant;
 
 use Slince\Shopify\Common\Model\Model;
+use Slince\Shopify\Common\Model\AdminGraphqlApiId;
 
 class Variant extends Model
 {
+    use AdminGraphqlApiId;
+
     /**
      * @var int
      */
@@ -134,11 +137,6 @@ class Variant extends Model
      * @var bool
      */
     protected $requiresShipping;
-
-    /**
-     * @var string
-     */
-    protected $adminGraphqlApiId;
 
     /**
      * @return int
@@ -614,21 +612,5 @@ class Variant extends Model
         $this->requiresShipping = $requiresShipping;
 
         return $this;
-    }
-
-    /**
-     * @param string $adminGraphqlApiId
-     */
-    public function setAdminGraphqlApiId($adminGraphqlApiId)
-    {
-        $this->adminGraphqlApiId = $adminGraphqlApiId;
-    }
-
-    /**
-     * @return string
-     */
-    public function getAdminGraphqlApiId()
-    {
-        return $this->adminGraphqlApiId;
     }
 }

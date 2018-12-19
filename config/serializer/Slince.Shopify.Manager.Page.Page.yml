@@ -20,3 +20,5 @@ Slince\Shopify\Manager\Page\Page:
             type: DateTime<'Y-m-d\TH:i:sP'>
         templateSuffix:
             type: string
+        adminGraphqlApiId:
+            type: string

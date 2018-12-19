@@ -16,3 +16,5 @@ Slince\Shopify\Manager\Theme\Theme:
             type: boolean
         processing:
             type: boolean
+        adminGraphqlApiId:
+            type: string
