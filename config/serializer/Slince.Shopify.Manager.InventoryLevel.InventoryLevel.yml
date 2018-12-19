@@ -1,7 +1,5 @@
-Slince\Shopify\Manager\Inventory\InventoryLevel:
+Slince\Shopify\Manager\InventoryLevel\InventoryLevel:
     properties:
-        id:
-            type: integer
         inventoryItemId:
             type: integer
         locationId:
