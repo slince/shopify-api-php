@@ -12,9 +12,12 @@
 namespace Slince\Shopify\Manager\ProductImage;
 
 use Slince\Shopify\Common\Model\Model;
+use Slince\Shopify\Common\Model\AdminGraphqlApiId;
 
 class Image extends Model
 {
+    use AdminGraphqlApiId;
+
     /**
      * @var int
      */

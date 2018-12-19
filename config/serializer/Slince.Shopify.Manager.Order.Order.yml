@@ -102,6 +102,8 @@ Slince\Shopify\Manager\Order\Order:
             type: string
         orderStatusUrl:
             type: string
+        adminGraphqlApiId:
+            type: string
         lineItems:
             type: array<Slince\Shopify\Manager\Order\LineItem>
         shippingLines:

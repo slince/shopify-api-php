@@ -52,3 +52,5 @@ Slince\Shopify\Manager\PriceRule\PriceRule:
             type: string
         prerequisiteToEntitlementQuantityRatio:
             type: array
+        adminGraphqlApiId:
+            type: string

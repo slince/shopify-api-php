@@ -30,3 +30,5 @@ Slince\Shopify\Manager\Location\Location:
             type: string
         provinceCode:
             type: string
+        adminGraphqlApiId:
+            type: string

@@ -20,3 +20,5 @@ Slince\Shopify\Manager\Blog\Blog:
             type: string
         tags:
             type: string
+        adminGraphqlApiId:
+            type: string

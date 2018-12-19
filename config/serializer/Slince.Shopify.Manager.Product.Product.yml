@@ -32,3 +32,5 @@ Slince\Shopify\Manager\Product\Product:
             type: array<Slince\Shopify\Manager\ProductVariant\Variant>
         vendor:
             type: string
+        adminGraphqlApiId:
+            type: string

@@ -12,9 +12,12 @@
 namespace Slince\Shopify\Manager\Article;
 
 use Slince\Shopify\Common\Model\Model;
+use Slince\Shopify\Common\Model\AdminGraphqlApiId;
 
 class Article extends Model
 {
+    use AdminGraphqlApiId;
+
     /**
      * @var string
      */

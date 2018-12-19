@@ -12,12 +12,15 @@
 namespace Slince\Shopify\Manager\Customer;
 
 use Slince\Shopify\Common\Model\Model;
+use Slince\Shopify\Common\Model\AdminGraphqlApiId;
 use Slince\Shopify\Hydrator\Association\HasMany;
 use Slince\Shopify\Hydrator\Association\HasOne;
 use Slince\Shopify\Manager\CustomerAddress\Address;
 
 class Customer extends Model
 {
+    use AdminGraphqlApiId;
+
     /**
      * @var string
      */

@@ -40,3 +40,5 @@ Slince\Shopify\Manager\Customer\Customer:
             type: array<Slince\Shopify\Manager\CustomerAddress\Address>
         defaultAddress:
             type: Slince\Shopify\Manager\CustomerAddress\Address
+        adminGraphqlApiId:
+            type: string
