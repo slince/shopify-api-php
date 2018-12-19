@@ -2,7 +2,7 @@
 
 namespace Slince\Shopify\Tests\Location;
 
-use Slince\Shopify\Manager\Inventory\InventoryLevel;
+use Slince\Shopify\Manager\InventoryLevel\InventoryLevel;
 use Slince\Shopify\Manager\Location\LocationManager;
 use Slince\Shopify\Tests\Base\GeneralCurdableTestCase;
 

@@ -12,7 +12,7 @@
 namespace Slince\Shopify\Manager\Location;
 
 use Slince\Shopify\Common\Manager\GeneralCurdable;
-use Slince\Shopify\Manager\Inventory\InventoryLevel;
+use Slince\Shopify\Manager\InventoryLevel\InventoryLevel;
 
 class LocationManager extends GeneralCurdable implements LocationManagerInterface
 {

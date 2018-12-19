@@ -12,7 +12,7 @@
 namespace Slince\Shopify\Manager\Location;
 
 use Slince\Shopify\Common\Manager\ManagerInterface;
-use Slince\Shopify\Manager\Inventory\InventoryLevel;
+use Slince\Shopify\Manager\InventoryLevel\InventoryLevel;
 
 interface LocationManagerInterface extends ManagerInterface
 {

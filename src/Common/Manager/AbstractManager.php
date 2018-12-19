@@ -61,14 +61,15 @@ abstract class AbstractManager implements ManagerInterface
      * Create many models from an array.
      *
      * @param array $data
+     * @param string $modelClass
      *
      * @return ModelInterface[]
      */
-    public function createMany(array $data)
+    public function createMany(array $data, $modelClass = null)
     {
         $models = [];
         foreach ($data as $item) {
-            $models[] = $this->fromArray($item);
+            $models[] = $this->fromArray($item, $modelClass);
         }
 
         return $models;
