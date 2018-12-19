@@ -12,12 +12,9 @@
 namespace Slince\Shopify\Manager\Location;
 
 use Slince\Shopify\Common\Model\Model;
-use Slince\Shopify\Common\Model\AdminGraphqlApiId;
 
 class Location extends Model
 {
-    use AdminGraphqlApiId;
-
     /**
      * @var string
      */

@@ -12,12 +12,9 @@
 namespace Slince\Shopify\Manager\PriceRule;
 
 use Slince\Shopify\Common\Model\Model;
-use Slince\Shopify\Common\Model\AdminGraphqlApiId;
 
 class PriceRule extends Model
 {
-    use AdminGraphqlApiId;
-
     /**
      * @var string
      */

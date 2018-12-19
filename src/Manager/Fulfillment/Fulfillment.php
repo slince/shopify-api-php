@@ -12,13 +12,10 @@
 namespace Slince\Shopify\Manager\Fulfillment;
 
 use Slince\Shopify\Common\Model\Model;
-use Slince\Shopify\Common\Model\AdminGraphqlApiId;
 use Slince\Shopify\Manager\Order\LineItem;
 
 class Fulfillment extends Model
 {
-    use AdminGraphqlApiId;
-
     /**
      * @var int
      */

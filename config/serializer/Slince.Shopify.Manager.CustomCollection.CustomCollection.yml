@@ -22,5 +22,3 @@ Slince\Shopify\Manager\CustomCollection\CustomCollection:
             type: boolean
         templateSuffix:
             type: string
-        adminGraphqlApiId:
-            type: string

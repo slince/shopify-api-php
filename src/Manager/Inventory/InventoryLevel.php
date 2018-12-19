@@ -12,12 +12,9 @@
 namespace Slince\Shopify\Manager\Inventory;
 
 use Slince\Shopify\Common\Model\Model;
-use Slince\Shopify\Common\Model\AdminGraphqlApiId;
 
 class InventoryLevel extends Model
 {
-    use AdminGraphqlApiId;
-
     /**
      * @var int
      */
@@ -37,4 +34,11 @@ class InventoryLevel extends Model
      * @var \DateTimeInterface
      */
     protected $updatedAt;
+
+    /**
+     * @var string
+     */
+    protected $adminGraphqlApiId;
+
+
 }
