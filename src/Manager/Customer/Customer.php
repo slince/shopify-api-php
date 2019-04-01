@@ -13,8 +13,6 @@ namespace Slince\Shopify\Manager\Customer;
 
 use Slince\Shopify\Common\Model\Model;
 use Slince\Shopify\Common\Model\AdminGraphqlApiId;
-use Slince\Shopify\Hydrator\Association\HasMany;
-use Slince\Shopify\Hydrator\Association\HasOne;
 use Slince\Shopify\Manager\CustomerAddress\Address;
 
 class Customer extends Model
@@ -494,16 +492,5 @@ class Customer extends Model
         $this->defaultAddress = $defaultAddress;
 
         return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public static function getTypesMap()
-    {
-        return array_merge(parent::getTypesMap(), [
-            new HasMany('addresses', Address::class),
-            new HasOne('defaultAddress', Address::class),
-        ]);
     }
 }

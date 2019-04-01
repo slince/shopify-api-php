@@ -12,7 +12,6 @@
 namespace Slince\Shopify\Manager\Refund;
 
 use Slince\Shopify\Common\Model\Model;
-use Slince\Shopify\Hydrator\Association\HasOne;
 use Slince\Shopify\Manager\Order\LineItem;
 
 class RefundLineItem extends Model

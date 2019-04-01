@@ -204,7 +204,7 @@ class Page extends Model
     }
 
     /**
-     * @return int
+     * @return \DateTime
      */
     public function getPublishedAt()
     {
@@ -212,7 +212,7 @@ class Page extends Model
     }
 
     /**
-     * @param int $publishedAt
+     * @param \DateTime $publishedAt
      *
      * @return Page
      */

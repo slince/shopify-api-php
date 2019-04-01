@@ -11,7 +11,6 @@
 
 namespace Slince\Shopify\Manager\Theme;
 
-use Slince\Shopify\Theme\Theme;
 use Slince\Shopify\Common\Manager\ManagerInterface;
 
 interface ThemeManagerInterface extends ManagerInterface

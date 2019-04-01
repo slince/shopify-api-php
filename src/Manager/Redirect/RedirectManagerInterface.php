@@ -11,7 +11,6 @@
 
 namespace Slince\Shopify\Manager\Redirect;
 
-use Slince\Shopify\Redirect\Redirect;
 use Slince\Shopify\Common\Manager\ManagerInterface;
 
 interface RedirectManagerInterface extends ManagerInterface

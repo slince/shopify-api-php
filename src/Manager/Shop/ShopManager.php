@@ -40,9 +40,7 @@ class ShopManager extends AbstractManager implements ShopManagerInterface
     }
 
     /**
-     * Gets the shop.
-     *
-     * @return Shop
+     * {@inheritdoc}
      */
     public function get()
     {
