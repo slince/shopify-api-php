@@ -12,6 +12,7 @@
 namespace Slince\Shopify;
 
 use Doctrine\Common\Inflector\Inflector;
+use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Psr7\Request;
 use Slince\Di\Container;
 use GuzzleHttp\Client as HttpClient;
@@ -317,9 +318,10 @@ class Client
      * Send a request.
      *
      * @param RequestInterface $request
-     * @param array            $options
+     * @param array $options
      *
      * @return ResponseInterface
+     * @throws GuzzleException
      * @codeCoverageIgnore
      */
     public function sendRequest(RequestInterface $request, array $options = [])

@@ -36,7 +36,7 @@ class DiscountCode extends Model
     protected $usageCount;
 
     /**
-     * @var string
+     * @return string
      */
     public function getCode()
     {
@@ -56,7 +56,7 @@ class DiscountCode extends Model
     }
 
     /**
-     * @var string
+     * @return string
      */
     public function getCreatedAt()
     {
@@ -76,7 +76,7 @@ class DiscountCode extends Model
     }
 
     /**
-     * @var int
+     * @return int
      */
     public function getPriceRuleId()
     {
@@ -96,7 +96,7 @@ class DiscountCode extends Model
     }
 
     /**
-     * @var int
+     * @return int
      */
     public function getUsageCount()
     {

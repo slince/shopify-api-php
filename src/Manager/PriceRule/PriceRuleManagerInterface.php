@@ -11,13 +11,12 @@
 
 namespace Slince\Shopify\Manager\PriceRule;
 
-use Slince\Shopify\PriceRule\PriceRule;
 use Slince\Shopify\Common\Manager\ManagerInterface;
 
 interface PriceRuleManagerInterface extends ManagerInterface
 {
     /**
-     * Gets all pric rules.
+     * Gets all price rules.
      *
      * @param array $query
      *
@@ -26,7 +25,7 @@ interface PriceRuleManagerInterface extends ManagerInterface
     public function findAll(array $query = []);
 
     /**
-     * Gets the pric rule by its id.
+     * Gets the price rule by its id.
      *
      * @param int $id
      *
@@ -35,7 +34,7 @@ interface PriceRuleManagerInterface extends ManagerInterface
     public function find($id);
 
     /**
-     * Updates the pric rule.
+     * Updates the price rule.
      *
      * @param int   $id
      * @param array $data
@@ -45,7 +44,7 @@ interface PriceRuleManagerInterface extends ManagerInterface
     public function update($id, array $data);
 
     /**
-     * Removes the pric rule.
+     * Removes the price rule.
      *
      * @param int $id
      *
@@ -54,7 +53,7 @@ interface PriceRuleManagerInterface extends ManagerInterface
     public function remove($id);
 
     /**
-     * Creates a pric rule.
+     * Creates a price rule.
      *
      * @param array $data
      *

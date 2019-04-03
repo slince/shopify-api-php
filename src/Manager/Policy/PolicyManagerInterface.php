@@ -11,7 +11,6 @@
 
 namespace Slince\Shopify\Manager\Policy;
 
-use Slince\Shopify\Policy\Policy;
 use Slince\Shopify\Common\Manager\ManagerInterface;
 
 interface PolicyManagerInterface extends ManagerInterface

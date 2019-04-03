@@ -11,7 +11,6 @@
 
 namespace Slince\Shopify\Manager\CarrierService;
 
-use Slince\Shopify\CarrierService\CarrierService;
 use Slince\Shopify\Common\Manager\ManagerInterface;
 
 interface CarrierServiceManagerInterface extends ManagerInterface

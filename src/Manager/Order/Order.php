@@ -1337,7 +1337,7 @@ class Order extends Model
     }
 
     /**
-     * @return array
+     * @return Address
      */
     public function getBillingAddress()
     {
@@ -1345,7 +1345,7 @@ class Order extends Model
     }
 
     /**
-     * @param array $billingAddress
+     * @param Address $billingAddress
      *
      * @return Order
      */
@@ -1357,7 +1357,7 @@ class Order extends Model
     }
 
     /**
-     * @return array
+     * @return Address
      */
     public function getShippingAddress()
     {
@@ -1365,7 +1365,7 @@ class Order extends Model
     }
 
     /**
-     * @param array $shippingAddress
+     * @param Address $shippingAddress
      *
      * @return Order
      */
@@ -1397,7 +1397,7 @@ class Order extends Model
     }
 
     /**
-     * @return array
+     * @return ClientDetails
      */
     public function getClientDetails()
     {
@@ -1405,7 +1405,7 @@ class Order extends Model
     }
 
     /**
-     * @param array $clientDetails
+     * @param ClientDetails $clientDetails
      *
      * @return Order
      */

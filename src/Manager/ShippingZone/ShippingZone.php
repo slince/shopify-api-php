@@ -13,7 +13,6 @@ namespace Slince\Shopify\Manager\ShippingZone;
 
 use Slince\Shopify\Manager\Country\Country;
 use Slince\Shopify\Common\Model\Model;
-use Slince\Shopify\Hydrator\Association\HasMany;
 use Slince\Shopify\Manager\Province\Province;
 
 class ShippingZone extends Model

@@ -11,7 +11,6 @@
 
 namespace Slince\Shopify\Manager\Collect;
 
-use Slince\Shopify\Collect\Collect;
 use Slince\Shopify\Common\Manager\ManagerInterface;
 
 interface CollectManagerInterface extends ManagerInterface
