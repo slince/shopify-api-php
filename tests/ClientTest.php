@@ -3,8 +3,12 @@
 namespace Slince\Shopify\Tests;
 
 use Slince\Shopify\Client;
+use Slince\Shopify\Common\Manager\ManagerInterface;
+use Slince\Shopify\Exception\RuntimeException;
 use Slince\Shopify\PublicAppCredential;
 use Slince\Shopify\Exception\InvalidArgumentException;
+
+include_once __DIR__.'/Hydrator/test_classes.php';
 
 class ClientTest extends TestCase
 {
@@ -117,5 +121,63 @@ class ClientTest extends TestCase
 
             $this->assertInstanceOf($serviceClass, $manager);
         }
+    }
+
+    public function testAddMetaDir()
+    {
+        $credential = new PublicAppCredential('foobarbazfoobarbaz');
+        $client = new Client($credential, 'bar.myshopify.com', [
+            'metaCacheDir' => __DIR__ . '/tmp'
+        ]);
+        $client->addMetaDir('', __DIR__ . '/Hydrator/serializer');
+        $hydrator = $client->getHydrator();
+        $post = $hydrator->hydrate(\Post::class, [
+            'title' => 'this is a post title',
+            'body' => 'this is a post body',
+            'category' => [
+                'name' => 'test category',
+            ],
+            'comments' => [
+                [
+                    'body' => 'comment 1',
+                ],
+                [
+                    'body' => 'comment 2',
+                ],
+            ],
+            'created_at' => '2018-01-30T09:42:13+0000',
+        ]);
+        $this->assertInstanceOf(\Post::class, $post);
+
+        $this->expectException(RuntimeException::class);
+        $client->addMetaDir('', __DIR__ . '/Hydrator/serializer2');
+    }
+
+    public function testCustomService()
+    {
+        $credential = new PublicAppCredential('foobarbazfoobarbaz');
+        $client = new Client($credential, 'bar.myshopify.com', [
+            'metaCacheDir' => __DIR__ . '/tmp'
+        ]);
+        $client->addServiceClass(FooPostManager::class);
+        $this->assertInstanceOf(FooPostManager::class, $client->getFooPostManager());
+        $this->expectException(InvalidArgumentException::class);
+        $client->addServiceClass(BarPostManager::class);
+    }
+}
+
+class FooPostManager implements ManagerInterface
+{
+    public static function getServiceName()
+    {
+        return 'foo_posts';
+    }
+}
+
+class BarPostManager
+{
+    public static function getServiceName()
+    {
+        return 'foo_posts';
     }
 }

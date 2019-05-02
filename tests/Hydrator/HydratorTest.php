@@ -7,7 +7,7 @@ use Slince\Shopify\Hydrator\Hydrator;
 use Slince\Shopify\Hydrator\HydratorInterface;
 use Slince\Shopify\Tests\TestCase;
 
-include __DIR__.'/test_classes.php';
+include_once __DIR__.'/test_classes.php';
 
 class HydratorTest  extends TestCase
 {

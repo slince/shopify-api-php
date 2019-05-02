@@ -18,9 +18,11 @@ use Slince\Di\Container;
 use GuzzleHttp\Client as HttpClient;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
+use Slince\Shopify\Common\Manager\ManagerInterface;
 use Slince\Shopify\Exception\InvalidArgumentException;
 use GuzzleHttp\Exception\RequestException;
 use Slince\Shopify\Exception\ClientException;
+use Slince\Shopify\Exception\RuntimeException;
 use Slince\Shopify\Hydrator\Hydrator;
 
 /**
@@ -154,7 +156,7 @@ class Client
     public function __construct(CredentialInterface $credential, $shop, array $options = [])
     {
         $this->container = new Container();
-        $this->container->instance($this);
+        $this->container->register($this);
         $this->credential = $credential;
         $this->setShop($shop);
         $this->applyOptions($options);
@@ -375,12 +377,42 @@ class Client
     }
 
     /**
+     * Add a custom meta dir.
+     *
+     * @param string $namespace
+     * @param string $path
+     * @throws RuntimeException
+     */
+    public function addMetaDir($namespace, $path)
+    {
+        if ($this->hydrator) {
+            throw new RuntimeException(sprintf('The hydrator has been built, you should add meta dir before getting manager.'));
+        }
+        $this->metaDirs[$namespace] = $path;
+    }
+
+    /**
+     * Add a custom service class.
+     *
+     * @param string $serviceClass
+     * @throws InvalidArgumentException
+     */
+    public function addServiceClass($serviceClass)
+    {
+        if (!is_subclass_of($serviceClass, ManagerInterface::class)) {
+            throw new InvalidArgumentException(sprintf('The service class "%s" should implement "ManagerInterface"', $serviceClass));
+        }
+        $this->serviceClass[] = $serviceClass;
+        $this->container->register($serviceClass::getServiceName(), $serviceClass);
+    }
+
+    /**
      * Initialize base services.
      */
     protected function initializeBaseServices()
     {
         foreach ($this->serviceClass as $serviceClass) {
-            $this->container->define($serviceClass::getServiceName(), $serviceClass);
+            $this->container->register($serviceClass::getServiceName(), $serviceClass);
         }
     }
 }
