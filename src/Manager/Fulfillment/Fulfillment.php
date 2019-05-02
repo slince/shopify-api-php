@@ -85,6 +85,31 @@ class Fulfillment extends Model
     protected $lineItems;
 
     /**
+     * @var integer
+     */
+    protected $locationId;
+
+    /**
+     * @return int
+     */
+    public function getLocationId()
+    {
+        return $this->locationId;
+    }
+
+    /**
+     * @param int $locationId
+     *
+     * @return Fulfillment
+     */
+    public function setLocationId($locationId)
+    {
+        $this->locationId = $locationId;
+
+        return $this;
+    }
+
+    /**
      * @return string
      */
     public function getService()
