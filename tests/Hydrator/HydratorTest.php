@@ -19,7 +19,7 @@ class HydratorTest  extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $this->hydrator = new Hydrator(__DIR__ . '/../tmp', __DIR__ . '/serializer');
+        $this->hydrator = new Hydrator(__DIR__ . '/../tmp', ['' => __DIR__ . '/serializer']);
     }
 
     public function testInstance()

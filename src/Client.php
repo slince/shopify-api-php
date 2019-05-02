@@ -130,6 +130,10 @@ class Client
         Manager\Webhook\WebhookManager::class,
     ];
 
+    protected $metaDirs = [
+        'Slince\Shopify' => __DIR__.'/../config/serializer'
+    ];
+
     /**
      * Whether delay the next request.
      *
@@ -154,7 +158,6 @@ class Client
         $this->credential = $credential;
         $this->setShop($shop);
         $this->applyOptions($options);
-        $this->hydrator = new Hydrator($this->metaCacheDir, __DIR__.'/../config/serializer');
         $this->initializeBaseServices();
     }
 
@@ -365,7 +368,10 @@ class Client
      */
     public function getHydrator()
     {
-        return $this->hydrator;
+        if ($this->hydrator) {
+            return $this->hydrator;
+        }
+        return $this->hydrator = new Hydrator($this->metaCacheDir, $this->metaDirs);
     }
 
     /**
