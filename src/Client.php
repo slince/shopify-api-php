@@ -40,6 +40,7 @@ use Slince\Shopify\Hydrator\Hydrator;
  * @method Manager\FulfillmentService\FulfillmentServiceManagerInterface getFulfillmentServiceManager
  * @method Manager\InventoryItem\InventoryItemManagerInterface getInventoryItemManager
  * @method Manager\InventoryLevel\InventoryLevelManagerInterface getInventoryLevelManager
+ * @method Manager\Location\LocationManagerInterface getLocationManager
  * @method Manager\Order\OrderManagerInterface getOrderManager
  * @method Manager\OrderRisk\RiskManagerInterface getOrderRiskManager
  * @method Manager\Page\PageManagerInterface getPageManager
