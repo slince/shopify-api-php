@@ -30,3 +30,5 @@ Slince\Shopify\Manager\Fulfillment\Fulfillment:
             type: string
         lineItems:
             type: array<Slince\Shopify\Manager\Order\LineItem>
+        locationId:
+            type: integer
