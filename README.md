@@ -84,7 +84,7 @@ $product = $client->getProductManager()->create([
 
 * Removes the product by its id
 ```php
-$client->getProductManager()->delete(12800);
+$client->getProductManager()->remove(12800);
 ```
 The product is an instance of `Slince\Shopify\Manager\Product\Product`; You can access properties like following:
  
