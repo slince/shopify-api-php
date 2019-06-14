@@ -29,7 +29,7 @@ class Transaction extends Model
     protected $authorization;
 
     /**
-     * @var string
+     * @var \DateTimeInterface
      */
     protected $createdAt;
 
@@ -134,7 +134,7 @@ class Transaction extends Model
     }
 
     /**
-     * @return string
+     * @return \DateTimeInterface
      */
     public function getCreatedAt()
     {
@@ -142,7 +142,7 @@ class Transaction extends Model
     }
 
     /**
-     * @param string $createdAt
+     * @param \DateTimeInterface $createdAt
      *
      * @return Transaction
      */

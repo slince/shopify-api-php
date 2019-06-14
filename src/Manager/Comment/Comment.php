@@ -51,12 +51,12 @@ class Comment extends Model
     protected $blogId;
 
     /**
-     * @var \DateTime
+     * @var \DateTimeInterface
      */
     protected $createdAt;
 
     /**
-     * @var \DateTime
+     * @var \DateTimeInterface
      */
     protected $updatedAt;
 
@@ -71,7 +71,7 @@ class Comment extends Model
     protected $userAgent;
 
     /**
-     * @var \DateTime
+     * @var \DateTimeInterface
      */
     protected $publishedAt;
 
@@ -216,7 +216,7 @@ class Comment extends Model
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTimeInterface
      */
     public function getCreatedAt()
     {
@@ -224,7 +224,7 @@ class Comment extends Model
     }
 
     /**
-     * @param \DateTime $createdAt
+     * @param \DateTimeInterface $createdAt
      *
      * @return Comment
      */
@@ -244,7 +244,7 @@ class Comment extends Model
     }
 
     /**
-     * @param \DateTime $updatedAt
+     * @param \DateTimeInterface $updatedAt
      *
      * @return Comment
      */
@@ -304,7 +304,7 @@ class Comment extends Model
     }
 
     /**
-     * @param \DateTime $publishedAt
+     * @param \DateTimeInterface $publishedAt
      *
      * @return Comment
      */

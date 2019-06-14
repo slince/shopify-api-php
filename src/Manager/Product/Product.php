@@ -41,7 +41,7 @@ class Product extends Model
     protected $productType;
 
     /**
-     * @var string
+     * @var \DateTimeInterface
      */
     protected $createdAt;
 
@@ -51,12 +51,12 @@ class Product extends Model
     protected $handle;
 
     /**
-     * @var string
+     * @var \DateTimeInterface
      */
     protected $updatedAt;
 
     /**
-     * @var string
+     * @var \DateTimeInterface
      */
     protected $publishedAt;
 
@@ -176,7 +176,7 @@ class Product extends Model
     }
 
     /**
-     * @return string
+     * @return \DateTimeInterface
      */
     public function getCreatedAt()
     {
@@ -184,7 +184,7 @@ class Product extends Model
     }
 
     /**
-     * @param string $createdAt
+     * @param \DateTimeInterface $createdAt
      *
      * @return Product
      */
@@ -216,7 +216,7 @@ class Product extends Model
     }
 
     /**
-     * @return string
+     * @return \DateTimeInterface
      */
     public function getUpdatedAt()
     {
@@ -224,7 +224,7 @@ class Product extends Model
     }
 
     /**
-     * @param string $updatedAt
+     * @param \DateTimeInterface $updatedAt
      *
      * @return Product
      */
@@ -236,7 +236,7 @@ class Product extends Model
     }
 
     /**
-     * @return string
+     * @return \DateTimeInterface
      */
     public function getPublishedAt()
     {
@@ -244,7 +244,7 @@ class Product extends Model
     }
 
     /**
-     * @param string $publishedAt
+     * @param \DateTimeInterface $publishedAt
      *
      * @return Product
      */

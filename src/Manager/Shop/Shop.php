@@ -31,7 +31,7 @@ class Shop extends Model
     protected $domain;
 
     /**
-     * @var string
+     * @var \DateTimeInterface
      */
     protected $createdAt;
 
@@ -316,7 +316,7 @@ class Shop extends Model
     }
 
     /**
-     * @return string
+     * @return \DateTimeInterface
      */
     public function getCreatedAt()
     {
@@ -324,7 +324,7 @@ class Shop extends Model
     }
 
     /**
-     * @param string $createdAt
+     * @param \DateTimeInterface $createdAt
      *
      * @return Shop
      */

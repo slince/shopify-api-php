@@ -29,12 +29,12 @@ class Image extends Model
     protected $position;
 
     /**
-     * @var \DateTime
+     * @var \DateTimeInterface
      */
     protected $createdAt;
 
     /**
-     * @var \DateTime
+     * @var \DateTimeInterface
      */
     protected $updatedAt;
 
@@ -99,7 +99,7 @@ class Image extends Model
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTimeInterface
      */
     public function getCreatedAt()
     {
@@ -107,7 +107,7 @@ class Image extends Model
     }
 
     /**
-     * @param \DateTime $createdAt
+     * @param \DateTimeInterface $createdAt
      *
      * @return Image
      */
@@ -119,7 +119,7 @@ class Image extends Model
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTimeInterface
      */
     public function getUpdatedAt()
     {
@@ -127,7 +127,7 @@ class Image extends Model
     }
 
     /**
-     * @param \DateTime $updatedAt
+     * @param \DateTimeInterface $updatedAt
      *
      * @return Image
      */

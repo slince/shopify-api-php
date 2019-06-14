@@ -26,12 +26,12 @@ class Webhook extends Model
     protected $topic;
 
     /**
-     * @var string
+     * @var \DateTimeInterface
      */
     protected $createdAt;
 
     /**
-     * @var string
+     * @var \DateTimeInterface
      */
     protected $updatedAt;
 
@@ -91,7 +91,7 @@ class Webhook extends Model
     }
 
     /**
-     * @return string
+     * @return \DateTimeInterface
      */
     public function getCreatedAt()
     {
@@ -99,7 +99,7 @@ class Webhook extends Model
     }
 
     /**
-     * @param string $createdAt
+     * @param \DateTimeInterface $createdAt
      *
      * @return Webhook
      */
@@ -111,7 +111,7 @@ class Webhook extends Model
     }
 
     /**
-     * @return string
+     * @return \DateTimeInterface
      */
     public function getUpdatedAt()
     {
@@ -119,7 +119,7 @@ class Webhook extends Model
     }
 
     /**
-     * @param string $updatedAt
+     * @param \DateTimeInterface $updatedAt
      *
      * @return Webhook
      */

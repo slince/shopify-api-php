@@ -21,12 +21,12 @@ class Collect extends Model
     protected $collectionId;
 
     /**
-     * @var string
+     * @var \DateTimeInterface
      */
     protected $createdAt;
 
     /**
-     * @var string
+     * @var \DateTimeInterface
      */
     protected $updatedAt;
 
@@ -71,7 +71,7 @@ class Collect extends Model
     }
 
     /**
-     * @return string
+     * @return \DateTimeInterface
      */
     public function getCreatedAt()
     {
@@ -79,7 +79,7 @@ class Collect extends Model
     }
 
     /**
-     * @param string $createdAt
+     * @param \DateTimeInterface $createdAt
      *
      * @return Collect
      */
@@ -91,7 +91,7 @@ class Collect extends Model
     }
 
     /**
-     * @return string
+     * @return \DateTimeInterface
      */
     public function getUpdatedAt()
     {
@@ -99,7 +99,7 @@ class Collect extends Model
     }
 
     /**
-     * @param string $updatedAt
+     * @param \DateTimeInterface $updatedAt
      *
      * @return Collect
      */

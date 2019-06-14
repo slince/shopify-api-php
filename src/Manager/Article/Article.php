@@ -44,17 +44,17 @@ class Article extends Model
     protected $userId;
 
     /**
-     * @var \DateTime
+     * @var \DateTimeInterface
      */
     protected $createdAt;
 
     /**
-     * @var \DateTime
+     * @var \DateTimeInterface
      */
     protected $publishedAt;
 
     /**
-     * @var \DateTime
+     * @var \DateTimeInterface
      */
     protected $updatedAt;
 
@@ -99,7 +99,7 @@ class Article extends Model
     }
 
     /**
-     * @return string
+     * @return \DateTimeInterface
      */
     public function getCreatedAt()
     {
@@ -107,7 +107,7 @@ class Article extends Model
     }
 
     /**
-     * @param string $createdAt
+     * @param \DateTimeInterface $createdAt
      *
      * @return Article
      */
@@ -199,7 +199,7 @@ class Article extends Model
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTimeInterface
      */
     public function getPublishedAt()
     {
@@ -207,7 +207,7 @@ class Article extends Model
     }
 
     /**
-     * @param \DateTime $publishedAt
+     * @param \DateTimeInterface $publishedAt
      *
      * @return Article
      */
@@ -219,7 +219,7 @@ class Article extends Model
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTimeInterface
      */
     public function getUpdatedAt()
     {
@@ -227,7 +227,7 @@ class Article extends Model
     }
 
     /**
-     * @param \DateTime $updatedAt
+     * @param \DateTimeInterface $updatedAt
      *
      * @return Article
      */

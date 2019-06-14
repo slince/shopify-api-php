@@ -29,7 +29,7 @@ class CustomCollection extends Model
     protected $title;
 
     /**
-     * @var \DateTime
+     * @var \DateTimeInterface
      */
     protected $updatedAt;
 
@@ -39,7 +39,7 @@ class CustomCollection extends Model
     protected $bodyHtml;
 
     /**
-     * @var \DateTime
+     * @var \DateTimeInterface
      */
     protected $publishedAt;
 
@@ -104,7 +104,7 @@ class CustomCollection extends Model
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTimeInterface
      */
     public function getUpdatedAt()
     {
@@ -112,7 +112,7 @@ class CustomCollection extends Model
     }
 
     /**
-     * @param \DateTime $updatedAt
+     * @param \DateTimeInterface $updatedAt
      *
      * @return CustomCollection
      */
@@ -144,7 +144,7 @@ class CustomCollection extends Model
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTimeInterface
      */
     public function getPublishedAt()
     {
@@ -152,7 +152,7 @@ class CustomCollection extends Model
     }
 
     /**
-     * @param \DateTime $publishedAt
+     * @param \DateTimeInterface $publishedAt
      *
      * @return CustomCollection
      */

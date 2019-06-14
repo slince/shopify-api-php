@@ -16,7 +16,7 @@ use Slince\Shopify\Common\Model\Model;
 class ScriptTag extends Model
 {
     /**
-     * @var string
+     * @var \DateTimeInterface
      */
     protected $createdAt;
 
@@ -41,7 +41,7 @@ class ScriptTag extends Model
     protected $updatedAt;
 
     /**
-     * @return string
+     * @return \DateTimeInterface
      */
     public function getCreatedAt()
     {
@@ -49,7 +49,7 @@ class ScriptTag extends Model
     }
 
     /**
-     * @param string $createdAt
+     * @param \DateTimeInterface $createdAt
      *
      * @return ScriptTag
      */

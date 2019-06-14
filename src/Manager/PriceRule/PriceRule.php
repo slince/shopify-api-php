@@ -24,7 +24,7 @@ class PriceRule extends Model
     protected $allocationMethod;
 
     /**
-     * @var string
+     * @var \DateTimeInterface
      */
     protected $createdAt;
 
@@ -34,7 +34,7 @@ class PriceRule extends Model
     protected $customerSelection;
 
     /**
-     * @var string
+     * @var \DateTimeInterface
      */
     protected $endsAt;
 
@@ -164,7 +164,7 @@ class PriceRule extends Model
     }
 
     /**
-     * @return string
+     * @return \DateTimeInterface
      */
     public function getCreatedAt()
     {
@@ -172,7 +172,7 @@ class PriceRule extends Model
     }
 
     /**
-     * @param string $createdAt
+     * @param \DateTimeInterface $createdAt
      *
      * @return PriceRule
      */
@@ -204,7 +204,7 @@ class PriceRule extends Model
     }
 
     /**
-     * @return string
+     * @return \DateTimeInterface
      */
     public function getEndsAt()
     {
@@ -212,7 +212,7 @@ class PriceRule extends Model
     }
 
     /**
-     * @param string $endsAt
+     * @param \DateTimeInterface $endsAt
      *
      * @return PriceRule
      */

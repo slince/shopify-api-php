@@ -29,7 +29,7 @@ class CustomCollectionImage
     protected $height;
 
     /**
-     * @var \DateTime
+     * @var \DateTimeInterface
      */
     protected $createdAt;
 
@@ -94,7 +94,7 @@ class CustomCollectionImage
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTimeInterface
      */
     public function getCreatedAt()
     {
@@ -102,7 +102,7 @@ class CustomCollectionImage
     }
 
     /**
-     * @param \DateTime $createdAt
+     * @param \DateTimeInterface $createdAt
      *
      * @return CustomCollectionImage
      */

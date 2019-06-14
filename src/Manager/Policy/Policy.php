@@ -26,12 +26,12 @@ class Policy extends Model
     protected $body;
 
     /**
-     * @var string
+     * @var \DateTimeInterface
      */
     protected $createdAt;
 
     /**
-     * @var string
+     * @var \DateTimeInterface
      */
     protected $updatedAt;
 
@@ -81,7 +81,7 @@ class Policy extends Model
     }
 
     /**
-     * @return string
+     * @return \DateTimeInterface
      */
     public function getCreatedAt()
     {
@@ -89,7 +89,7 @@ class Policy extends Model
     }
 
     /**
-     * @param string $createdAt
+     * @param \DateTimeInterface $createdAt
      *
      * @return Policy
      */
@@ -101,7 +101,7 @@ class Policy extends Model
     }
 
     /**
-     * @return string
+     * @return \DateTimeInterface
      */
     public function getUpdatedAt()
     {
@@ -109,7 +109,7 @@ class Policy extends Model
     }
 
     /**
-     * @param string $updatedAt
+     * @param \DateTimeInterface $updatedAt
      *
      * @return Policy
      */

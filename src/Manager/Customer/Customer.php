@@ -30,12 +30,12 @@ class Customer extends Model
     protected $acceptsMarketing;
 
     /**
-     * @var \DateTime
+     * @var \DateTimeInterface
      */
     protected $createdAt;
 
     /**
-     * @var \DateTime
+     * @var \DateTimeInterface
      */
     protected $updatedAt;
 
@@ -155,7 +155,7 @@ class Customer extends Model
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTimeInterface
      */
     public function getCreatedAt()
     {
@@ -163,7 +163,7 @@ class Customer extends Model
     }
 
     /**
-     * @param \DateTime $createdAt
+     * @param \DateTimeInterface $createdAt
      *
      * @return Customer
      */
@@ -175,7 +175,7 @@ class Customer extends Model
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTimeInterface
      */
     public function getUpdatedAt()
     {
@@ -183,7 +183,7 @@ class Customer extends Model
     }
 
     /**
-     * @param \DateTime $updatedAt
+     * @param \DateTimeInterface $updatedAt
      *
      * @return Customer
      */

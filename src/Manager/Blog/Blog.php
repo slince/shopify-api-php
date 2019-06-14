@@ -29,7 +29,7 @@ class Blog extends Model
     protected $title;
 
     /**
-     * @var \DateTime
+     * @var \DateTimeInterface
      */
     protected $updatedAt;
 
@@ -49,7 +49,7 @@ class Blog extends Model
     protected $feedburnerLocation;
 
     /**
-     * @var \DateTime
+     * @var \DateTimeInterface
      */
     protected $createdAt;
 
@@ -96,7 +96,7 @@ class Blog extends Model
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTimeInterface
      */
     public function getUpdatedAt()
     {
@@ -104,7 +104,7 @@ class Blog extends Model
     }
 
     /**
-     * @param \DateTime $updatedAt
+     * @param \DateTimeInterface $updatedAt
      */
     public function setUpdatedAt($updatedAt)
     {
@@ -160,7 +160,7 @@ class Blog extends Model
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTimeInterface
      */
     public function getCreatedAt()
     {
@@ -168,7 +168,7 @@ class Blog extends Model
     }
 
     /**
-     * @param \DateTime $createdAt
+     * @param \DateTimeInterface $createdAt
      */
     public function setCreatedAt($createdAt)
     {

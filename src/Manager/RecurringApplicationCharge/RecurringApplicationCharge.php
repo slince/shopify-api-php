@@ -41,7 +41,7 @@ class RecurringApplicationCharge extends Model
     protected $confirmationUrl;
 
     /**
-     * @var \DateTime
+     * @var \DateTimeInterface
      */
     protected $createdAt;
 
@@ -91,7 +91,7 @@ class RecurringApplicationCharge extends Model
     protected $trialEndsOn;
 
     /**
-     * @var \DateTime
+     * @var \DateTimeInterface
      */
     protected $updatedAt;
 
@@ -196,7 +196,7 @@ class RecurringApplicationCharge extends Model
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTimeInterface
      */
     public function getCreatedAt()
     {
@@ -204,7 +204,7 @@ class RecurringApplicationCharge extends Model
     }
 
     /**
-     * @param \DateTime $createdAt
+     * @param \DateTimeInterface $createdAt
      *                                                                
      * @return RecurringApplicationCharge
      */
@@ -396,7 +396,7 @@ class RecurringApplicationCharge extends Model
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTimeInterface
      */
     public function getUpdatedAt()
     {
@@ -404,7 +404,7 @@ class RecurringApplicationCharge extends Model
     }
 
     /**
-     * @param \DateTime $updatedAt
+     * @param \DateTimeInterface $updatedAt
      *                                                                
      * @return RecurringApplicationCharge
      */

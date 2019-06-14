@@ -24,12 +24,12 @@ class Theme extends Model
     protected $name;
 
     /**
-     * @var string
+     * @var \DateTimeInterface
      */
     protected $createdAt;
 
     /**
-     * @var string
+     * @var \DateTimeInterface
      */
     protected $updatedAt;
 
@@ -82,7 +82,7 @@ class Theme extends Model
     }
 
     /**
-     * @param string $createdAt
+     * @param \DateTimeInterface $createdAt
      *
      * @return Theme
      */
@@ -94,7 +94,7 @@ class Theme extends Model
     }
 
     /**
-     * @return string
+     * @return \DateTimeInterface
      */
     public function getUpdatedAt()
     {
@@ -102,7 +102,7 @@ class Theme extends Model
     }
 
     /**
-     * @param string $updatedAt
+     * @param \DateTimeInterface $updatedAt
      *
      * @return Theme
      */

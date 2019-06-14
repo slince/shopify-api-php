@@ -26,7 +26,7 @@ class CustomerSavedSearch extends Model
     protected $createdAt;
 
     /**
-     * @var \DateTime
+     * @var \DateTimeInterface
      */
     protected $updatedAt;
 
@@ -56,7 +56,7 @@ class CustomerSavedSearch extends Model
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTimeInterface
      */
     public function getCreatedAt()
     {
@@ -64,7 +64,7 @@ class CustomerSavedSearch extends Model
     }
 
     /**
-     * @param \DateTime $createdAt
+     * @param \DateTimeInterface $createdAt
      *
      * @return CustomerSavedSearch
      */
@@ -76,7 +76,7 @@ class CustomerSavedSearch extends Model
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTimeInterface
      */
     public function getUpdatedAt()
     {
@@ -84,7 +84,7 @@ class CustomerSavedSearch extends Model
     }
 
     /**
-     * @param \DateTime $updatedAt
+     * @param \DateTimeInterface $updatedAt
      *
      * @return CustomerSavedSearch
      */

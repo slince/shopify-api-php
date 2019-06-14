@@ -25,7 +25,7 @@ class Refund extends Model
     protected $orderId;
 
     /**
-     * @var string
+     * @var \DateTimeInterface
      */
     protected $createdAt;
 
@@ -80,7 +80,7 @@ class Refund extends Model
     }
 
     /**
-     * @return string
+     * @return \DateTimeInterface
      */
     public function getCreatedAt()
     {
@@ -88,7 +88,7 @@ class Refund extends Model
     }
 
     /**
-     * @param string $createdAt
+     * @param \DateTimeInterface $createdAt
      *
      * @return Refund
      */

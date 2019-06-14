@@ -21,7 +21,7 @@ class DiscountCode extends Model
     protected $code;
 
     /**
-     * @var string
+     * @var \DateTimeInterface
      */
     protected $createdAt;
 
@@ -56,7 +56,7 @@ class DiscountCode extends Model
     }
 
     /**
-     * @return string
+     * @return \DateTimeInterface
      */
     public function getCreatedAt()
     {
@@ -64,7 +64,7 @@ class DiscountCode extends Model
     }
 
     /**
-     * @param string $createdAt
+     * @param \DateTimeInterface $createdAt
      *
      * @return DiscountCode
      */

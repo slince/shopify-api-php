@@ -64,12 +64,12 @@ class Location extends Model
     protected $phone;
 
     /**
-     * @var int
+     * @var \DateTimeInterface
      */
     protected $createdAt;
 
     /**
-     * @var string
+     * @var \DateTimeInterface
      */
     protected $updatedAt;
 
@@ -269,7 +269,7 @@ class Location extends Model
     }
 
     /**
-     * @return int
+     * @return \DateTimeInterface
      */
     public function getCreatedAt()
     {
@@ -277,7 +277,7 @@ class Location extends Model
     }
 
     /**
-     * @param int $createdAt
+     * @param \DateTimeInterface $createdAt
      *
      * @return Location
      */
@@ -289,7 +289,7 @@ class Location extends Model
     }
 
     /**
-     * @return string
+     * @return \DateTimeInterface
      */
     public function getUpdatedAt()
     {
@@ -297,7 +297,7 @@ class Location extends Model
     }
 
     /**
-     * @param string $updatedAt
+     * @param \DateTimeInterface $updatedAt
      *
      * @return Location
      */

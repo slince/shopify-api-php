@@ -44,17 +44,17 @@ class Page extends Model
     protected $author;
 
     /**
-     * @var \DateTime
+     * @var \DateTimeInterface
      */
     protected $createdAt;
 
     /**
-     * @var \DateTime
+     * @var \DateTimeInterface
      */
     protected $updatedAt;
 
     /**
-     * @var \DateTime
+     * @var \DateTimeInterface
      */
     protected $publishedAt;
 
@@ -164,7 +164,7 @@ class Page extends Model
     }
 
     /**
-     * @return string
+     * @return \DateTimeInterface
      */
     public function getCreatedAt()
     {
@@ -172,7 +172,7 @@ class Page extends Model
     }
 
     /**
-     * @param string $createdAt
+     * @param \DateTimeInterface $createdAt
      *
      * @return Page
      */
@@ -184,7 +184,7 @@ class Page extends Model
     }
 
     /**
-     * @return string
+     * @return \DateTimeInterface
      */
     public function getUpdatedAt()
     {
@@ -192,7 +192,7 @@ class Page extends Model
     }
 
     /**
-     * @param string $updatedAt
+     * @param \DateTimeInterface $updatedAt
      *
      * @return Page
      */
@@ -204,7 +204,7 @@ class Page extends Model
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTimeInterface
      */
     public function getPublishedAt()
     {
@@ -212,7 +212,7 @@ class Page extends Model
     }
 
     /**
-     * @param \DateTime $publishedAt
+     * @param \DateTimeInterface $publishedAt
      *
      * @return Page
      */
