@@ -53,7 +53,7 @@ class InventoryItem extends Model
 
     /**
      * @param string $sku
-     * 
+     *                                                                
      * @return InventoryItem
      */
     public function setSku($sku)
@@ -73,7 +73,7 @@ class InventoryItem extends Model
 
     /**
      * @param float $cost
-     * 
+     *                                                                
      * @return InventoryItem
      */
     public function setCost($cost)
@@ -93,7 +93,7 @@ class InventoryItem extends Model
 
     /**
      * @param bool $tracked
-     * 
+     *                                                                
      * @return InventoryItem
      */
     public function setTracked($tracked)
@@ -113,7 +113,7 @@ class InventoryItem extends Model
 
     /**
      * @param string $adminGraphqlApiId
-     * 
+     *                                                                
      * @return InventoryItem
      */
     public function setAdminGraphqlApiId($adminGraphqlApiId)
@@ -133,7 +133,7 @@ class InventoryItem extends Model
 
     /**
      * @param \DateTimeInterface $createdAt
-     * 
+     *                                                                
      * @return InventoryItem
      */
     public function setCreatedAt($createdAt)
@@ -153,7 +153,7 @@ class InventoryItem extends Model
 
     /**
      * @param \DateTimeInterface $updatedAt
-     * 
+     *                                                                
      * @return InventoryItem
      */
     public function setUpdatedAt($updatedAt)

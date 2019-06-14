@@ -62,19 +62,19 @@ interface RecurringApplicationChargeManagerInterface extends ManagerInterface
 
     /**
      * Activate a recurring application charge.
-     * 
+     *                                                                
      * @param int $id
-     * 
+     *                                                                
      * @return RecurringApplicationCharge
      */
     public function activate($id);
 
     /**
      * Updates the capped amount of an active recurring application charge.
-     * 
+     *                                                                
      * @param int $id
      * @param int $cappedAmount
-     * 
+     *                                                                
      * @return RecurringApplicationCharge
      */
     public function customize($id, $cappedAmount);

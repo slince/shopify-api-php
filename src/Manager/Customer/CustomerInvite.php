@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Customer;
+namespace Slince\Shopify\Manager\Customer;
 
 use Slince\Shopify\Common\Model\Model;
 

@@ -105,7 +105,7 @@ class RecurringApplicationCharge extends Model
 
     /**
      * @param string $activatedOn
-     * 
+     *                                                                
      * @return RecurringApplicationCharge
      */
     public function setActivatedOn($activatedOn)
@@ -125,7 +125,7 @@ class RecurringApplicationCharge extends Model
 
     /**
      * @param string $billingOn
-     * 
+     *                                                                
      * @return RecurringApplicationCharge
      */
     public function setBillingOn($billingOn)
@@ -145,7 +145,7 @@ class RecurringApplicationCharge extends Model
 
     /**
      * @param string $canceledOn
-     * 
+     *                                                                
      * @return RecurringApplicationCharge
      */
     public function setCanceledOn($canceledOn)
@@ -165,7 +165,7 @@ class RecurringApplicationCharge extends Model
 
     /**
      * @param int $cappedAmount
-     * 
+     *                                                                
      * @return RecurringApplicationCharge
      */
     public function setCappedAmount($cappedAmount)
@@ -185,7 +185,7 @@ class RecurringApplicationCharge extends Model
 
     /**
      * @param string $confirmationUrl
-     * 
+     *                                                                
      * @return RecurringApplicationCharge
      */
     public function setConfirmationUrl($confirmationUrl)
@@ -205,7 +205,7 @@ class RecurringApplicationCharge extends Model
 
     /**
      * @param \DateTime $createdAt
-     * 
+     *                                                                
      * @return RecurringApplicationCharge
      */
     public function setCreatedAt($createdAt)
@@ -225,7 +225,7 @@ class RecurringApplicationCharge extends Model
 
     /**
      * @param string $decoratedReturnUrl
-     * 
+     *                                                                
      * @return RecurringApplicationCharge
      */
     public function setDecoratedReturnUrl($decoratedReturnUrl)
@@ -245,7 +245,7 @@ class RecurringApplicationCharge extends Model
 
     /**
      * @param string $name
-     * 
+     *                                                                
      * @return RecurringApplicationCharge
      */
     public function setName($name)
@@ -265,7 +265,7 @@ class RecurringApplicationCharge extends Model
 
     /**
      * @param float $price
-     * 
+     *                                                                
      * @return RecurringApplicationCharge
      */
     public function setPrice($price)
@@ -285,7 +285,7 @@ class RecurringApplicationCharge extends Model
 
     /**
      * @param string $returnUrl
-     * 
+     *                                                                
      * @return RecurringApplicationCharge
      */
     public function setReturnUrl($returnUrl)
@@ -305,7 +305,7 @@ class RecurringApplicationCharge extends Model
 
     /**
      * @param string $status
-     * 
+     *                                                                
      * @return RecurringApplicationCharge
      */
     public function setStatus($status)
@@ -325,7 +325,7 @@ class RecurringApplicationCharge extends Model
 
     /**
      * @param string $terms
-     * 
+     *                                                                
      * @return RecurringApplicationCharge
      */
     public function setTerms($terms)
@@ -345,7 +345,7 @@ class RecurringApplicationCharge extends Model
 
     /**
      * @param bool $test
-     * 
+     *                                                                
      * @return RecurringApplicationCharge
      */
     public function setTest($test)
@@ -365,7 +365,7 @@ class RecurringApplicationCharge extends Model
 
     /**
      * @param int $trialDays
-     * 
+     *                                                                
      * @return RecurringApplicationCharge
      */
     public function setTrialDays($trialDays)
@@ -385,7 +385,7 @@ class RecurringApplicationCharge extends Model
 
     /**
      * @param bool $trialEndsOn
-     * 
+     *                                                                
      * @return RecurringApplicationCharge
      */
     public function setTrialEndsOn($trialEndsOn)
@@ -405,7 +405,7 @@ class RecurringApplicationCharge extends Model
 
     /**
      * @param \DateTime $updatedAt
-     * 
+     *                                                                
      * @return RecurringApplicationCharge
      */
     public function setUpdatedAt($updatedAt)

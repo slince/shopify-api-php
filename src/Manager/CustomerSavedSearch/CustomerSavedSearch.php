@@ -21,7 +21,7 @@ class CustomerSavedSearch extends Model
     protected $name;
 
     /**
-     * @var \DateTime
+     * @var \DateTimeInterface
      */
     protected $createdAt;
 

@@ -12,7 +12,6 @@
 namespace Slince\Shopify\Manager\Customer;
 
 use Slince\Shopify\Common\Manager\GeneralCurdable;
-use Slince\Shopify\Customer\CustomerInvite;
 
 class CustomerManager extends GeneralCurdable implements CustomerManagerInterface
 {

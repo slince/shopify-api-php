@@ -60,7 +60,7 @@ class DiscountApplication extends Model
 
     /**
      * @param string $type
-     * 
+     *                                                                
      * @return DiscountApplication
      */
     public function setType($type)
@@ -80,7 +80,7 @@ class DiscountApplication extends Model
 
     /**
      * @param string $value
-     * 
+     *                                                                
      * @return DiscountApplication
      */
     public function setValue($value)
@@ -100,7 +100,7 @@ class DiscountApplication extends Model
 
     /**
      * @param string $valueType
-     * 
+     *                                                                
      * @return DiscountApplication
      */
     public function setValueType($valueType)
@@ -120,7 +120,7 @@ class DiscountApplication extends Model
 
     /**
      * @param string $allocationMethod
-     * 
+     *                                                                
      * @return DiscountApplication
      */
     public function setAllocationMethod($allocationMethod)
@@ -140,7 +140,7 @@ class DiscountApplication extends Model
 
     /**
      * @param string $targetSelection
-     * 
+     *                                                                
      * @return DiscountApplication
      */
     public function setTargetSelection($targetSelection)
@@ -160,7 +160,7 @@ class DiscountApplication extends Model
 
     /**
      * @param string $targetType
-     * 
+     *                                                                
      * @return DiscountApplication
      */
     public function setTargetType($targetType)
@@ -180,7 +180,7 @@ class DiscountApplication extends Model
 
     /**
      * @param string $code
-     * 
+     *                                                                
      * @return DiscountApplication
      */
     public function setCode($code)
