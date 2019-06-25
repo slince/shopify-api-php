@@ -20,7 +20,7 @@ interface SmartCollectionManagerInterface extends ManagerInterface
      *
      * @param array $query
      *
-     * @return CustomCollection[]
+     * @return SmartCollection[]
      */
     public function findAll(array $query = []);
 
@@ -29,7 +29,7 @@ interface SmartCollectionManagerInterface extends ManagerInterface
      *
      * @param int $id
      *
-     * @return CustomCollection
+     * @return SmartCollection
      */
     public function find($id);
 
@@ -52,11 +52,11 @@ interface SmartCollectionManagerInterface extends ManagerInterface
     public function remove($id);
 
     /**
-     * Creates a blog.
+     * Creates a smart collection.
      *
      * @param array $data
      *
-     * @return CustomCollection
+     * @return SmartCollection
      */
     public function create(array $data);
 }
