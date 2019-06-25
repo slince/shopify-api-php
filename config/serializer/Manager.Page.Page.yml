@@ -3,7 +3,7 @@ Slince\Shopify\Manager\Page\Page:
         id:
             type: integer
         title:
-            type: integer
+            type: string
         shopId:
             type: integer
         handle:
