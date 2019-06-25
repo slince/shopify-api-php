@@ -298,13 +298,13 @@ class LineItem extends Model
     /**
      * @return string
      */
-    public function isTitle()
+    public function getTitle()
     {
         return $this->title;
     }
 
     /**
-     * @param bool $title
+     * @param string $title
      *
      * @return LineItem
      */
