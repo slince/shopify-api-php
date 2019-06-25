@@ -295,6 +295,10 @@ class Client
         ]);
     }
 
+    /**
+     * @param string $method
+     * @param string $resource
+     */
     protected function doRequest($method, $resource, $options = [])
     {
         $request = new Request($method, $this->buildUrl($resource), [
