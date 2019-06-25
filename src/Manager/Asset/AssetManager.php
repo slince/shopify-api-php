@@ -89,6 +89,11 @@ class AssetManager extends AbstractManager implements AssetManagerInterface
         ]);
     }
 
+    /**
+     * @param integer $themeId
+     *
+     * @return string
+     */
     protected function createPartialResourceUrlForList($themeId)
     {
         return "themes/{$themeId}/assets";

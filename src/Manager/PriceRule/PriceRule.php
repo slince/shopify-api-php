@@ -304,7 +304,7 @@ class PriceRule extends Model
     }
 
     /**
-     * @return boolean
+     * @return string
      */
     public function getOncePerCustomer()
     {

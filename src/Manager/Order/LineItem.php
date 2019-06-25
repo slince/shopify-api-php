@@ -196,7 +196,7 @@ class LineItem extends Model
     }
 
     /**
-     * @return string
+     * @return double
      */
     public function getPrice()
     {
@@ -296,7 +296,7 @@ class LineItem extends Model
     }
 
     /**
-     * @return bool
+     * @return string
      */
     public function isTitle()
     {

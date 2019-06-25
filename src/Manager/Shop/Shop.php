@@ -556,7 +556,7 @@ class Shop extends Model
     }
 
     /**
-     * @return string
+     * @return integer
      */
     public function getPrimaryLocationId()
     {
