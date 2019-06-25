@@ -74,7 +74,7 @@ class Theme extends Model
     }
 
     /**
-     * @return string
+     * @return \DateTimeInterface
      */
     public function getCreatedAt()
     {
@@ -134,7 +134,7 @@ class Theme extends Model
     }
 
     /**
-     * @return string
+     * @return int
      */
     public function getThemeStoreId()
     {
@@ -142,7 +142,7 @@ class Theme extends Model
     }
 
     /**
-     * @param string $themeStoreId
+     * @param int $themeStoreId
      *
      * @return Theme
      */

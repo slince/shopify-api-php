@@ -224,7 +224,7 @@ class Page extends Model
     }
 
     /**
-     * @return int
+     * @return string
      */
     public function getTemplateSuffix()
     {
@@ -232,7 +232,7 @@ class Page extends Model
     }
 
     /**
-     * @param int $templateSuffix
+     * @param string $templateSuffix
      *
      * @return Page
      */
