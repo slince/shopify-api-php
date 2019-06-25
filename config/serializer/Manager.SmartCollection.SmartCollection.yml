@@ -1,0 +1,30 @@
+Slince\Shopify\Manager\SmartCollection\SmartCollection:
+    properties:
+        id:
+            type: integer
+        handle:
+            type: string
+        title:
+            type: string
+        updatedAt:
+            type: DateTime<'Y-m-d\TH:i:sP'>
+        publishedAt:
+            type: DateTime<'Y-m-d\TH:i:sP'>
+        sortOrder:
+            type: string
+        bodyHtml:
+            type: string
+        publishedScope:
+              type: string
+        image:
+            type: Slince\Shopify\Manager\CustomCollection\CustomCollectionImage
+        published:
+            type: boolean
+        templateSuffix:
+            type: string
+        disjunctive:
+            type: boolean
+        rules:
+            type: array
+        adminGraphqlApiId:
+            type: string

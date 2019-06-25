@@ -9,12 +9,12 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\CustomCollection;
+namespace Slince\Shopify\Manager\SmartCollection;
 
 use Slince\Shopify\Common\Model\Model;
 use Slince\Shopify\Common\Model\AdminGraphqlApiId;
 
-class CustomCollection extends Model
+class SmartCollection extends Model
 {
     use AdminGraphqlApiId;
 
@@ -54,12 +54,22 @@ class CustomCollection extends Model
     protected $templateSuffix;
 
     /**
+     * @var boolean
+     */
+    protected $disjunctive;
+
+    /**
+     * @var array
+     */
+    protected $rules;
+
+    /**
      * @var string
      */
     protected $publishedScope;
 
     /**
-     * @var CustomCollectionImage
+     * @var SmartCollectionImage
      */
     protected $image;
 
@@ -73,13 +83,11 @@ class CustomCollection extends Model
 
     /**
      * @param string $handle
-     *
-     * @return CustomCollection
+     * @return SmartCollection
      */
     public function setHandle($handle)
     {
         $this->handle = $handle;
-
         return $this;
     }
 
@@ -93,13 +101,11 @@ class CustomCollection extends Model
 
     /**
      * @param string $title
-     *
-     * @return CustomCollection
+     * @return SmartCollection
      */
     public function setTitle($title)
     {
         $this->title = $title;
-
         return $this;
     }
 
@@ -113,13 +119,11 @@ class CustomCollection extends Model
 
     /**
      * @param \DateTimeInterface $updatedAt
-     *
-     * @return CustomCollection
+     * @return SmartCollection
      */
     public function setUpdatedAt($updatedAt)
     {
         $this->updatedAt = $updatedAt;
-
         return $this;
     }
 
@@ -133,13 +137,11 @@ class CustomCollection extends Model
 
     /**
      * @param string $bodyHtml
-     *
-     * @return CustomCollection
+     * @return SmartCollection
      */
     public function setBodyHtml($bodyHtml)
     {
         $this->bodyHtml = $bodyHtml;
-
         return $this;
     }
 
@@ -153,13 +155,11 @@ class CustomCollection extends Model
 
     /**
      * @param \DateTimeInterface $publishedAt
-     *
-     * @return CustomCollection
+     * @return SmartCollection
      */
     public function setPublishedAt($publishedAt)
     {
         $this->publishedAt = $publishedAt;
-
         return $this;
     }
 
@@ -173,13 +173,11 @@ class CustomCollection extends Model
 
     /**
      * @param string $sortOrder
-     *
-     * @return CustomCollection
+     * @return SmartCollection
      */
     public function setSortOrder($sortOrder)
     {
         $this->sortOrder = $sortOrder;
-
         return $this;
     }
 
@@ -193,13 +191,47 @@ class CustomCollection extends Model
 
     /**
      * @param string $templateSuffix
-     *
-     * @return CustomCollection
+     * @return SmartCollection
      */
     public function setTemplateSuffix($templateSuffix)
     {
         $this->templateSuffix = $templateSuffix;
+        return $this;
+    }
 
+    /**
+     * @return bool
+     */
+    public function isDisjunctive()
+    {
+        return $this->disjunctive;
+    }
+
+    /**
+     * @param bool $disjunctive
+     * @return SmartCollection
+     */
+    public function setDisjunctive($disjunctive)
+    {
+        $this->disjunctive = $disjunctive;
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getRules()
+    {
+        return $this->rules;
+    }
+
+    /**
+     * @param array $rules
+     * @return SmartCollection
+     */
+    public function setRules($rules)
+    {
+        $this->rules = $rules;
         return $this;
     }
 
@@ -213,18 +245,16 @@ class CustomCollection extends Model
 
     /**
      * @param string $publishedScope
-     *
-     * @return CustomCollection
+     * @return SmartCollection
      */
     public function setPublishedScope($publishedScope)
     {
         $this->publishedScope = $publishedScope;
-
         return $this;
     }
 
     /**
-     * @return CustomCollectionImage
+     * @return SmartCollectionImage
      */
     public function getImage()
     {
@@ -232,14 +262,12 @@ class CustomCollection extends Model
     }
 
     /**
-     * @param CustomCollectionImage $image
-     *
-     * @return CustomCollection
+     * @param SmartCollectionImage $image
+     * @return SmartCollection
      */
     public function setImage($image)
     {
         $this->image = $image;
-
         return $this;
     }
 }

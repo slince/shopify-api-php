@@ -1,0 +1,23 @@
+{
+  "smart_collections":[
+    {
+      "id":133926027369,
+      "handle":"new-in",
+      "title":"New In",
+      "updated_at":"2019-06-25T00:55:34-04:00",
+      "body_html":"New In",
+      "published_at":"2019-06-25T00:54:42-04:00",
+      "sort_order":"best-selling",
+      "template_suffix":"",
+      "disjunctive":false,
+      "rules":[
+        {
+          "column":"tag",
+          "relation":"equals",
+          "condition":"123"
+        }
+      ],
+      "published_scope":"web"
+    }
+  ]
+}

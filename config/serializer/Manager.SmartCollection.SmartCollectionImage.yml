@@ -1,0 +1,10 @@
+Slince\Shopify\Manager\SmartCollection\SmartCollectionImage:
+    properties:
+        createdAt:
+            type: DateTime<'Y-m-d\TH:i:sP'>
+        src:
+            type: string
+        width:
+            type: integer
+        height:
+            type: integer
