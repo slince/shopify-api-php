@@ -130,6 +130,7 @@ Available managers:
 - [ScriptTag](./src/Manager/ScriptTag/ScriptTagManagerInterface.php)
 - [ShippingZone](./src/Manager/ShippingZone/ShippingZoneManagerInterface.php)
 - [Shop](./src/Manager/Shop/ShopManagerInterface.php)
+- [SmartCollection](./src/Manager/SmartCollection/SmartCollectionManagerInterface.php)
 - [Theme](./src/Manager/Theme/ThemeManagerInterface.php)
 - [Transaction](./src/Manager/Transaction/TransactionManagerInterface.php)
 - [Webhook](./src/Manager/Webhook/WebhookManagerInterface.php)
