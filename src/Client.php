@@ -57,6 +57,7 @@ use Slince\Shopify\Hydrator\Hydrator;
  * @method Manager\Refund\RefundManagerInterface getRefundManager
  * @method Manager\ShippingZone\ShippingZoneManagerInterface getShippingZoneManager
  * @method Manager\Shop\ShopManagerInterface getShopManager
+ * @method Manager\SmartCollection\SmartCollectionManager getSmartCollectionManager
  * @method Manager\Theme\ThemeManagerInterface getThemeManager
  * @method Manager\Transaction\TransactionManagerInterface getTransactionManager
  * @method Manager\Webhook\WebhookManagerInterface getWebhookManager
@@ -127,6 +128,7 @@ class Client
         Manager\ScriptTag\ScriptTagManager::class,
         Manager\ShippingZone\ShippingZoneManager::class,
         Manager\Shop\ShopManager::class,
+        Manager\SmartCollection\SmartCollectionManager::class,
         Manager\Theme\ThemeManager::class,
         Manager\Transaction\TransactionManager::class,
         Manager\Webhook\WebhookManager::class,
