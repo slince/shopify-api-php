@@ -13,6 +13,7 @@ namespace Slince\Shopify\Manager\Order;
 
 use Slince\Shopify\Common\Model\Model;
 use Slince\Shopify\Common\Model\AdminGraphqlApiId;
+use Slince\Shopify\Manager\Customer\Customer;
 use Slince\Shopify\Manager\Fulfillment\Fulfillment;
 use Slince\Shopify\Manager\Refund\Refund;
 use Slince\Shopify\Manager\Transaction\Transaction;
@@ -315,6 +316,11 @@ class Order extends Model
      * @var DiscountApplication[]
      */
     protected $discountApplications;
+
+    /**
+     * @var Customer
+     */
+    protected $customer;
 
     /**
      * @return string
@@ -1494,5 +1500,21 @@ class Order extends Model
         $this->discountApplications = $discountApplications;
 
         return $this;
+    }
+
+    /**
+     * @return Customer
+     */
+    public function getCustomer()
+    {
+        return $this->customer;
+    }
+
+    /**
+     * @param Customer $customer
+     */
+    public function setCustomer($customer)
+    {
+        $this->customer = $customer;
     }
 }

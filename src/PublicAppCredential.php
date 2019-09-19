@@ -40,6 +40,6 @@ class PublicAppCredential implements CredentialInterface
      */
     public function applyToRequest(RequestInterface $request)
     {
-        return $request->withHeader('X-Shopify-Access-Token', $this->getAccessToken());
+        return $request->withHeader('X-Shopify-Access-Token', (string)$this->getAccessToken());
     }
 }

@@ -91,4 +91,37 @@ class HydratorTest  extends TestCase
             'category' => null
         ], $data);
     }
+
+    public function testExtractMany()
+    {
+        $post = $this->hydrator->hydrate(\Post::class, [
+            'title' => 'this is a post title',
+            'body' => 'this is a post body',
+            'comments' => [
+                [
+                    'body' => 'comment 1',
+                ],
+                [
+                    'body' => 'comment 2',
+                ],
+            ],
+            'created_at' => '2018-01-30T09:42:13+0000',
+        ]);
+        $data = $this->hydrator->extract($post);
+        $data = $this->hydrator->extract($post);
+        $this->assertEquals([
+            'title' => 'this is a post title',
+            'body' => 'this is a post body',
+            'comments' => [
+                [
+                    'body' => 'comment 1',
+                ],
+                [
+                    'body' => 'comment 2',
+                ],
+            ],
+            'created_at' => '2018-01-30T09:42:13+0000',
+            'category' => null
+        ], $data);
+    }
 }

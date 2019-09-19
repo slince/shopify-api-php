@@ -22,18 +22,12 @@ class Hydrator implements HydratorInterface
      */
     protected $serializer;
 
-    /**
-     * @var SerializationContext
-     */
-    protected $serializationContext;
-
     public function __construct($cacheDir, $metaDirs)
     {
         $this->serializer = SerializerBuilder::create()
             ->setCacheDir($cacheDir)
             ->setMetadataDirs($metaDirs)
             ->build();
-        $this->serializationContext = SerializationContext::create()->setSerializeNull(true);
     }
 
     /**
@@ -41,7 +35,7 @@ class Hydrator implements HydratorInterface
      */
     public function extract($object)
     {
-        return $this->serializer->toArray($object, $this->serializationContext);
+        return $this->serializer->toArray($object, $this->createDefaultContext());
     }
 
     /**
@@ -50,5 +44,15 @@ class Hydrator implements HydratorInterface
     public function hydrate($target, array $data)
     {
         return $this->serializer->fromArray($data, $target);
+    }
+
+    /**
+     * Creates a default serializer context
+     *
+     * @return SerializationContext
+     */
+    protected function createDefaultContext()
+    {
+        return SerializationContext::create()->setSerializeNull(true);
     }
 }
