@@ -6,6 +6,8 @@ Slince\Shopify\Manager\Policy\Policy:
             type: string
         body:
             type: string
+        handle:
+            type: string
         createdAt:
             type: DateTime<'Y-m-d\TH:i:sP'>
         updatedAt:

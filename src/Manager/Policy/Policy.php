@@ -26,6 +26,11 @@ class Policy extends Model
     protected $body;
 
     /**
+     * @var string
+     */
+    protected $handle;
+
+    /**
      * @var \DateTimeInterface
      */
     protected $createdAt;
@@ -76,6 +81,26 @@ class Policy extends Model
     public function setBody($body)
     {
         $this->body = $body;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getHandle()
+    {
+        return $this->handle;
+    }
+
+    /**
+     * @param string $handle
+     *
+     * @return Policy
+     */
+    public function setHandle($handle)
+    {
+        $this->handle = $handle;
 
         return $this;
     }
