@@ -41,12 +41,15 @@ abstract class AbstractManager implements ManagerInterface
     abstract public function getResourceName();
 
     /**
-     * Create the model from an array.
-     *
-     * @param array  $data
-     * @param string $modelClass
-     *
-     * @return ModelInterface
+     * {@inheritdoc}
+     */
+    public function getClient()
+    {
+        return $this->client;
+    }
+
+    /**
+     * {@inheritdoc}
      */
     public function fromArray(array $data, $modelClass = null)
     {
@@ -58,12 +61,7 @@ abstract class AbstractManager implements ManagerInterface
     }
 
     /**
-     * Create many models from an array.
-     *
-     * @param array $data
-     * @param string $modelClass
-     *
-     * @return ModelInterface[]
+     * {@inheritdoc}
      */
     public function createMany(array $data, $modelClass = null)
     {
@@ -76,11 +74,7 @@ abstract class AbstractManager implements ManagerInterface
     }
 
     /**
-     * Converts the model to array.
-     *
-     * @param ModelInterface $model
-     *
-     * @return array
+     * {@inheritdoc}
      */
     public function toArray($model)
     {

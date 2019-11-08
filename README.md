@@ -55,8 +55,24 @@ $client = new Slince\Shopify\Client($credential, 'your-store.myshopify.com', [
 $products = $client->getProductManager()->findAll([
     // Filter your product
     'collection_id' => 841564295
-    'page' => 2
+    'page' => 2 // deprecated
 ]);
+```
+
+* Lists products by pagination
+
+```php
+$pagination = $client->getProductManager()->paginate([
+    // filter your product
+    'limit' => 3,
+    'created_at_min' => '2014-04-25T16:15:47-04:00'
+]);
+// $pagination is instance of `Slince\Shopify\Common\CursorBasedPagination`
+
+$currentProducts = $pagination->current();
+while ($pagination->hasNext()) {
+    $nextProducts = $pagination->next();
+}
 ```
 
 * Get the specified product

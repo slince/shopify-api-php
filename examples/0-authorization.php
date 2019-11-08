@@ -7,7 +7,7 @@ $shopName = 'your-store.myshopify.com';
 //Public App, link
 //https://help.shopify.com/api/getting-started/authentication/oauth
 $credential = new \Slince\Shopify\PublicAppCredential(
-    'd1b40509be0b57d62a83df43c59339fa'
+    'ab77c713e4db50220b9ba0e17b10bc29'
 );
 
 //Or Private App, link:

@@ -3,6 +3,7 @@
 namespace Slince\Shopify\Tests;
 
 use Slince\Shopify\Client;
+use Slince\Shopify\Common\Manager\AbstractManager;
 use Slince\Shopify\Common\Manager\ManagerInterface;
 use Slince\Shopify\Exception\RuntimeException;
 use Slince\Shopify\PublicAppCredential;
@@ -168,6 +169,22 @@ class ClientTest extends TestCase
 
 class FooPostManager implements ManagerInterface
 {
+    public function getClient()
+    {
+    }
+
+    public function createMany(array $data, $modelClass = null)
+    {
+    }
+
+    public function fromArray(array $data, $modelClass = null)
+    {
+    }
+
+    public function toArray($model)
+    {
+    }
+
     public static function getServiceName()
     {
         return 'foo_posts';

@@ -12,6 +12,7 @@
 namespace Slince\Shopify\Common\Manager;
 
 use Doctrine\Common\Inflector\Inflector;
+use Slince\Shopify\Common\CursorBasedPagination;
 use Slince\Shopify\Common\Model\ModelInterface;
 
 abstract class NestCrudable extends AbstractManager
@@ -37,6 +38,22 @@ abstract class NestCrudable extends AbstractManager
         $data = $this->client->get($resource, $query);
 
         return $this->createMany(reset($data));
+    }
+
+    /**
+     * Create a paging query.
+     *
+     * @param int   $parentId
+     * @param array $query
+     *
+     * @return CursorBasedPagination
+     * @codeCoverageIgnore
+     */
+    public function paginate($parentId, array $query = [])
+    {
+        $resource = $this->createPartialResourceUrlForList($parentId);
+
+        return new CursorBasedPagination($this, $resource, $query);
     }
 
     /**

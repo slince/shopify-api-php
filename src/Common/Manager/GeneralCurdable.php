@@ -12,6 +12,7 @@
 namespace Slince\Shopify\Common\Manager;
 
 use Doctrine\Common\Inflector\Inflector;
+use Slince\Shopify\Common\CursorBasedPagination;
 use Slince\Shopify\Common\Model\ModelInterface;
 
 abstract class GeneralCurdable extends AbstractManager
@@ -28,6 +29,21 @@ abstract class GeneralCurdable extends AbstractManager
         $data = $this->client->get(Inflector::pluralize($this->getResourceName()), $query);
 
         return $this->createMany(reset($data));
+    }
+
+    /**
+     * Create a paging query.
+     *
+     * @param array $query
+     *
+     * @return CursorBasedPagination
+     * @codeCoverageIgnore
+     */
+    public function paginate(array $query = [])
+    {
+        $resource = Inflector::pluralize($this->getResourceName());
+
+        return new CursorBasedPagination($this, $resource, $query);
     }
 
     /**

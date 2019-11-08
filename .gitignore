@@ -3,3 +3,4 @@
 composer.lock
 /logs/
 /tests/tmp/*
+*tmp*

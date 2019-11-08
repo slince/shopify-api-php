@@ -65,7 +65,6 @@ use Slince\Shopify\Hydrator\Hydrator;
 class Client
 {
     const NAME = 'SlinceShopifyClient';
-
     const VERSION = '2.3.0';
 
     /**
@@ -89,6 +88,16 @@ class Client
      * @var string
      */
     protected $shop;
+
+    /**
+     * @var string
+     */
+    protected $apiVersion = '2019-10';
+
+    /**
+     * @var ResponseInterface
+     */
+    protected $lastResponse;
 
     /**
      * Array of services classes.
@@ -298,13 +307,17 @@ class Client
     }
 
     /**
+     * Send an HTTP request
+     *
      * @param string $method
      * @param string $resource
+     * @param array $options
+     * @return array
      */
     protected function doRequest($method, $resource, $options = [])
     {
         $request = new Request($method, $this->buildUrl($resource), [
-            'User-Agent' => static::NAME . '/' . static::VERSION
+            'Content-Type' => 'application/json',
         ]);
         $response = $this->sendRequest($request, $options);
         $body = $response->getBody();
@@ -312,18 +325,6 @@ class Client
         return $body->getSize()
             ? \GuzzleHttp\json_decode($body, true)
             : [];
-    }
-
-    /**
-     * Builds an url by given resource name.
-     *
-     * @param string $resource
-     *
-     * @return string
-     */
-    protected function buildUrl($resource)
-    {
-        return sprintf('https://%s/admin/%s.json', $this->shop, $resource);
     }
 
     /**
@@ -338,21 +339,43 @@ class Client
      */
     public function sendRequest(RequestInterface $request, array $options = [])
     {
-        $request = $request->withHeader('Content-Type', 'application/json');
-        $request = $this->credential->applyToRequest($request);
         if (static::$delayNextRequest) {
             usleep(1000000 * rand(3, 10));
         }
+        $request = $request->withHeader('User-Agent', static::NAME . '/' . static::VERSION);
+        $request = $this->credential->applyToRequest($request);
         try {
             $response = $this->getHttpClient()->send($request, $options);
+            $this->lastResponse = $response;
         } catch (RequestException $exception) {
             $exception = new ClientException($request, $exception->getResponse(), $exception->getMessage());
             throw $exception;
         }
         list($callsMade, $callsLimit) = explode('/', $response->getHeaderLine('http_x_shopify_shop_api_call_limit'));
         static::$delayNextRequest = $callsMade / $callsLimit >= 0.8;
-
         return $response;
+    }
+
+    /**
+     * Gets the latest http response.
+     *
+     * @return ResponseInterface
+     */
+    public function getLastResponse()
+    {
+        return $this->lastResponse;
+    }
+
+    /**
+     * Builds an url by given resource name.
+     *
+     * @param string $resource
+     *
+     * @return string
+     */
+    protected function buildUrl($resource)
+    {
+        return sprintf('https://%s/admin/api/%s/%s.json', $this->shop, $this->apiVersion, $resource);
     }
 
     /**
@@ -367,6 +390,12 @@ class Client
             throw new InvalidArgumentException('You must provide option "metaCacheDir"');
         }
         $this->metaCacheDir = $options['metaCacheDir'];
+        if (isset($options['apiVersion'])) {
+            if (!preg_match('/^([0-9]{4}-[0-9]{2})|unstable%/', $options['apiVersion'])) {
+                throw new InvalidArgumentException('Version string must be of YYYY-MM or unstable');
+            }
+            $this->apiVersion = $options['apiVersion'];
+        }
     }
 
     /**
