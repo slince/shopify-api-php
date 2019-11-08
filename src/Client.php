@@ -393,7 +393,7 @@ class Client
         }
         $this->metaCacheDir = $options['metaCacheDir'];
         if (isset($options['apiVersion'])) {
-            if (!preg_match('/^([0-9]{4}-[0-9]{2})|unstable%/', $options['apiVersion'])) {
+            if (!preg_match('/^[0-9]{4}-[0-9]{2}$|^unstable$/', $options['apiVersion'])) {
                 throw new InvalidArgumentException('Version string must be of YYYY-MM or unstable');
             }
             $this->apiVersion = $options['apiVersion'];

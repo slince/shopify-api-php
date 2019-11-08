@@ -165,6 +165,39 @@ class ClientTest extends TestCase
         $this->expectException(InvalidArgumentException::class);
         $client->addServiceClass(BarPostManager::class);
     }
+
+    public function testVersion()
+    {
+        $credential = new PublicAppCredential('foobarbazfoobarbaz');
+        try {
+            new Client($credential, 'bar.myshopify.com', [
+                'metaCacheDir' => __DIR__ . '/tmp',
+                'apiVersion' => '201809'
+            ]);
+            new Client($credential, 'bar.myshopify.com', [
+                'metaCacheDir' => __DIR__ . '/tmp',
+                'apiVersion' => '2018-092'
+            ]);
+            new Client($credential, 'bar.myshopify.com', [
+                'metaCacheDir' => __DIR__ . '/tmp',
+                'apiVersion' => 'unstableas'
+            ]);
+            new Client($credential, 'bar.myshopify.com', [
+                'metaCacheDir' => __DIR__ . '/tmp',
+                'apiVersion' => 'prefixunstable'
+            ]);
+            $this->fail('fail to check version');
+        } catch (InvalidArgumentException $exception) {
+        }
+        new Client($credential, 'bar.myshopify.com', [
+            'metaCacheDir' => __DIR__ . '/tmp',
+            'apiVersion' => 'unstable'
+        ]);
+        new Client($credential, 'bar.myshopify.com', [
+            'metaCacheDir' => __DIR__ . '/tmp',
+            'apiVersion' => '2019-10'
+        ]);
+    }
 }
 
 class FooPostManager implements ManagerInterface
