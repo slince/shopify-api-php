@@ -1,0 +1,56 @@
+Slince\Shopify\Manager\DraftOrder\DraftOrder:
+    properties:
+        id:
+            type: integer
+        note:
+            type: string
+        email:
+            type: string
+        taxesIncluded:
+            type: boolean
+        currency:
+            type: string
+        invoiceSentAt:
+            type: DateTime<'Y-m-d\TH:i:sP'>
+        createdAt:
+            type: DateTime<'Y-m-d\TH:i:sP'>
+        updatedAt:
+            type: DateTime<'Y-m-d\TH:i:sP'>
+        taxExempt:
+            type: boolean
+        completedAt:
+            type: DateTime<'Y-m-d\TH:i:sP'>
+        name:
+            type: string
+        status:
+            type: string
+        billingAddress:
+            type: Slince\Shopify\Manager\Order\Address
+        shippingAddress:
+            type: Slince\Shopify\Manager\Order\Address
+        adminGraphqlApiId:
+            type: string
+        lineItems:
+            type: array<Slince\Shopify\Manager\Order\LineItem>
+        invoiceUrl:
+            type: string
+        appliedDiscount:
+            type: array
+        orderId:
+            type: integer
+        shippingLine:
+            type: array
+        taxLines:
+            type: array<Slince\Shopify\Manager\Order\TaxLine>
+        tag:
+            type: string
+        noteAttributes:
+            type: array
+        totalPrice:
+            type: float
+        subtotalPrice:
+            type: float
+        totalTax:
+            type: float
+        customer:
+            type: Slince\Shopify\Manager\Customer\Customer
