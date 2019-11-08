@@ -65,11 +65,12 @@ $products = $client->getProductManager()->findAll([
 $pagination = $client->getProductManager()->paginate([
     // filter your product
     'limit' => 3,
-    'created_at_min' => '2014-04-25T16:15:47-04:00'
+    'created_at_min' => '2015-04-25T16:15:47-04:00'
 ]);
 // $pagination is instance of `Slince\Shopify\Common\CursorBasedPagination`
 
-$currentProducts = $pagination->current();
+$currentProducts = $pagination->current(); //current page
+
 while ($pagination->hasNext()) {
     $nextProducts = $pagination->next();
 }
@@ -126,6 +127,7 @@ Available managers:
 - [CustomerAddress](./src/Manager/CustomerAddress/AddressManagerInterface.php)
 - [CustomerSavedSearch](./src/Manager/CustomerSavedSearch/CustomerSavedSearchManagerInterface.php)
 - [DiscountCode](./src/Manager/DiscountCode/DiscountCodeManagerInterface.php)
+- [DraftOrder](./src/Manager/DraftOrder/DraftOrderManagerInterface.php)
 - [Fulfillment](./src/Manager/Fulfillment/FulfillmentManagerInterface.php)
 - [FulfillmentService](./src/Manager/FulfillmentService/FulfillmentServiceManagerInterface.php)
 - [InventoryItem](./src/Manager/InventoryItem/InventoryItemManagerInterface.php)

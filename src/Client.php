@@ -38,6 +38,7 @@ use Slince\Shopify\Hydrator\Hydrator;
  * @method Manager\CustomerAddress\AddressManagerInterface getCustomerAddressManager
  * @method Manager\CustomerSavedSearch\CustomerSavedSearchManagerInterface getCustomerSavedSearchManager
  * @method Manager\DiscountCode\DiscountCodeManagerInterface getDiscountCodeManager
+ * @method Manager\DraftOrder\DraftOrderManagerInterface getDraftOrderManager
  * @method Manager\Fulfillment\FulfillmentManagerInterface getFulfillmentManager
  * @method Manager\FulfillmentService\FulfillmentServiceManagerInterface getFulfillmentServiceManager
  * @method Manager\InventoryItem\InventoryItemManagerInterface getInventoryItemManager
@@ -117,6 +118,7 @@ class Client
         Manager\CustomerAddress\AddressManager::class,
         Manager\CustomerSavedSearch\CustomerSavedSearchManager::class,
         Manager\DiscountCode\DiscountCodeManager::class,
+        Manager\DraftOrder\DraftOrderManager::class,
         Manager\Fulfillment\FulfillmentManager::class,
         Manager\FulfillmentService\FulfillmentServiceManager::class,
         Manager\InventoryItem\InventoryItemManager::class,
