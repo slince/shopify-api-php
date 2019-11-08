@@ -89,7 +89,7 @@ class CursorBasedPagination
      */
     public function prev()
     {
-        if (!$this->hasNext()) {
+        if (!$this->hasPrev()) {
             throw new RuntimeException("There's no previous page");
         }
         return $this->fetchResource($this->links['previous']);
