@@ -26,7 +26,7 @@ class ClientException extends RuntimeException
      */
     protected $response;
 
-    public function __construct($request, $response, $message = '', $code = 0)
+    public function __construct(RequestInterface $request, ResponseInterface $response = null, $message = '', $code = 0)
     {
         $this->request = $request;
         $this->response = $response;
