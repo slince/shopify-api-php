@@ -350,7 +350,7 @@ class Client
             $response = $this->getHttpClient()->send($request, $options);
             $this->lastResponse = $response;
         } catch (RequestException $exception) {
-            $exception = new ClientException($request, $exception->getResponse(), $exception->getMessage());
+            $exception = new ClientException($request, $exception->getResponse(), $exception->getMessage(), $exception->getCode());
             throw $exception;
         }
         list($callsMade, $callsLimit) = explode('/', $response->getHeaderLine('http_x_shopify_shop_api_call_limit'));

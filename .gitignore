@@ -4,3 +4,4 @@ composer.lock
 /logs/
 /tests/tmp/*
 *tmp*
+.DS_Store
