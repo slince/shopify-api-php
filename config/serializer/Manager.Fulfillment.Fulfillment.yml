@@ -25,7 +25,7 @@ Slince\Shopify\Manager\Fulfillment\Fulfillment:
         trackingUrls:
             type: array<string>
         receipt:
-            type: array<string,string>
+            type: array<string, array<Slince\Shopify\Manager\Order\GiftCard>>
         adminGraphqlApiId:
             type: string
         lineItems:
