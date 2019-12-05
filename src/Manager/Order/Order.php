@@ -35,6 +35,11 @@ class Order extends Model
     /**
      * @var string
      */
+    protected $createdAt;
+
+    /**
+     * @var string
+     */
     protected $updatedAt;
 
     /**
@@ -358,6 +363,26 @@ class Order extends Model
     public function setClosedAt($closedAt)
     {
         $this->closedAt = $closedAt;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * @param string $createdAt
+     *
+     * @return Order
+     */
+    public function setCreatedAt($createdAt)
+    {
+        $this->createdAt = $createdAt;
 
         return $this;
     }

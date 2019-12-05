@@ -6,6 +6,8 @@ Slince\Shopify\Manager\Order\Order:
             type: string
         closedAt:
             type: DateTime<'Y-m-d\TH:i:sP'>
+        createdAt:
+            type: DateTime<'Y-m-d\TH:i:sP'>
         updatedAt:
             type: DateTime<'Y-m-d\TH:i:sP'>
         deletedAt:
