@@ -20,4 +20,6 @@ Slince\Shopify\Manager\ProductImage\Image:
              type: array<integer>
         adminGraphqlApiId:
             type: string
+        alt:
+            type: string
 
