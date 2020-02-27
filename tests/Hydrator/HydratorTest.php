@@ -44,7 +44,6 @@ class HydratorTest  extends TestCase
             ],
             'created_at' => '2018-01-30T09:42:13+0000',
         ]);
-
         $this->assertInstanceOf(\Post::class, $post);
         $this->assertInstanceOf(\DateTime::class, $post->getCreatedAt());
         $this->assertEquals('this is a post title', $post->getTitle());
