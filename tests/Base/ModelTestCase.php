@@ -14,7 +14,7 @@ abstract class ModelTestCase extends TestCase
      */
     protected $accessor;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->accessor = PropertyAccess::createPropertyAccessor();
     }

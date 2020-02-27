@@ -22,13 +22,13 @@ class TestCase extends BaseTestCase
      */
     protected $filesystem;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->filesystem = new Filesystem();
         $this->filesystem->remove(__DIR__ . '/tmp');
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         $this->filesystem->remove(__DIR__ . '/tmp');
     }

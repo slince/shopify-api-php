@@ -410,22 +410,7 @@ class Client
         if ($this->hydrator) {
             return $this->hydrator;
         }
-        return $this->hydrator = new Hydrator($this->metaCacheDir, $this->metaDirs);
-    }
-
-    /**
-     * Add a custom meta dir.
-     *
-     * @param string $namespace
-     * @param string $path
-     * @throws RuntimeException
-     */
-    public function addMetaDir($namespace, $path)
-    {
-        if ($this->hydrator) {
-            throw new RuntimeException(sprintf('The hydrator has been built, you should add meta dir before getting manager.'));
-        }
-        $this->metaDirs[$namespace] = $path;
+        return $this->hydrator = new Hydrator();
     }
 
     /**

@@ -11,8 +11,6 @@
 
 namespace Slince\Shopify\Hydrator;
 
-use Slince\Shopify\Common\Model\ModelInterface;
-
 interface HydratorInterface
 {
     /**
@@ -21,14 +19,14 @@ interface HydratorInterface
      * @param string $target
      * @param array  $data
      *
-     * @return ModelInterface
+     * @return object
      */
-    public function hydrate($target, array $data);
+    public function hydrate(string $target, array $data);
 
     /**
      * Extracts data from an object.
      *
-     * @param ModelInterface $object
+     * @param object $object
      *
      * @return array
      */

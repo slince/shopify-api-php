@@ -2,7 +2,6 @@
 
 namespace Slince\Shopify\Tests\Hydrator;
 
-use Carbon\Carbon;
 use Slince\Shopify\Hydrator\Hydrator;
 use Slince\Shopify\Hydrator\HydratorInterface;
 use Slince\Shopify\Tests\TestCase;
@@ -16,10 +15,10 @@ class HydratorTest  extends TestCase
      */
     protected $hydrator;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
-        $this->hydrator = new Hydrator(__DIR__ . '/../tmp', ['' => __DIR__ . '/serializer']);
+        $this->hydrator = new Hydrator();
     }
 
     public function testInstance()

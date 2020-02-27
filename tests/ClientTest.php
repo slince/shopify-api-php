@@ -124,36 +124,6 @@ class ClientTest extends TestCase
         }
     }
 
-    public function testAddMetaDir()
-    {
-        $credential = new PublicAppCredential('foobarbazfoobarbaz');
-        $client = new Client($credential, 'bar.myshopify.com', [
-            'metaCacheDir' => __DIR__ . '/tmp'
-        ]);
-        $client->addMetaDir('', __DIR__ . '/Hydrator/serializer');
-        $hydrator = $client->getHydrator();
-        $post = $hydrator->hydrate(\Post::class, [
-            'title' => 'this is a post title',
-            'body' => 'this is a post body',
-            'category' => [
-                'name' => 'test category',
-            ],
-            'comments' => [
-                [
-                    'body' => 'comment 1',
-                ],
-                [
-                    'body' => 'comment 2',
-                ],
-            ],
-            'created_at' => '2018-01-30T09:42:13+0000',
-        ]);
-        $this->assertInstanceOf(\Post::class, $post);
-
-        $this->expectException(RuntimeException::class);
-        $client->addMetaDir('', __DIR__ . '/Hydrator/serializer2');
-    }
-
     public function testCustomService()
     {
         $credential = new PublicAppCredential('foobarbazfoobarbaz');
