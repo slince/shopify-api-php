@@ -16,8 +16,8 @@
         "doctrine/inflector": "^1.0",
         "slince/di": "^3.0",
         "symfony/yaml": "^3.4|^4.2|^5.0",
-        "symfony/serializer": "^5.0",
-        "symfony/property-info": "^5.0"
+        "symfony/serializer": "^4.2|^5.0",
+        "symfony/property-info": "^4.2|^5.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.0|^6.0|^7.0|^8.0",

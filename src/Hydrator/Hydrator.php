@@ -29,10 +29,7 @@ class Hydrator implements HydratorInterface
     public function __construct()
     {
         $normalizer = new ObjectNormalizer(null, null, null, new ReflectionExtractor());
-        $this->serializer = new Serializer([
-            new DateTimeNormalizer(),
-            $normalizer,
-        ]);
+        $this->serializer = new Serializer([new DateTimeNormalizer(), $normalizer]);
     }
 
     /**
