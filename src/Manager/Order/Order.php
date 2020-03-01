@@ -1513,7 +1513,7 @@ class Order extends Model
     /**
      * @param Customer $customer
      */
-    public function setCustomer($customer)
+    public function setCustomer(Customer $customer)
     {
         $this->customer = $customer;
     }

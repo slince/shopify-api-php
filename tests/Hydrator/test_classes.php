@@ -22,7 +22,7 @@ class Post
     protected $category;
 
     /**
-     * @var DateTimeInterface
+     * @var DateTime
      */
     protected $createdAt;
 
@@ -90,18 +90,23 @@ class Post
         $this->category = $category;
     }
 
+    public function addComment(Comment $comment)
+    {
+        $this->comments[] = $comment;
+    }
+
     /**
-     * @return DateTimeInterface
+     * @return DateTime
      */
-    public function getCreatedAt(): DateTimeInterface
+    public function getCreatedAt(): DateTime
     {
         return $this->createdAt;
     }
 
     /**
-     * @param DateTimeInterface $createdAt
+     * @param DateTime $createdAt
      */
-    public function setCreatedAt(DateTimeInterface $createdAt)
+    public function setCreatedAt(DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
     }
