@@ -9,9 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\Article;
+namespace Slince\Shopify\Service;
 
-use Slince\Shopify\Common\Manager\NestCrudable;
+use Slince\Shopify\Model\Article;
+use Slince\Shopify\Service\Contracts\ArticleManagerInterface;
 
 class ArticleManager extends NestCrudable implements ArticleManagerInterface
 {

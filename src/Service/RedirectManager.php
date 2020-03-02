@@ -9,9 +9,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\Redirect;
+namespace Slince\Shopify\Service;
 
-use Slince\Shopify\Common\Manager\GeneralCurdable;
+use Slince\Shopify\Model\Redirect;
 
 class RedirectManager extends GeneralCurdable
 {

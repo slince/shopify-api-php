@@ -9,9 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\Transaction;
+namespace Slince\Shopify\Service;
 
-use Slince\Shopify\Common\Manager\NestCrudable;
+use Slince\Shopify\Model\Transaction;
+use Slince\Shopify\Service\Contracts\TransactionManagerInterface;
 
 class TransactionManager extends NestCrudable implements TransactionManagerInterface
 {

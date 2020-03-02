@@ -9,9 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\FulfillmentService;
+namespace Slince\Shopify\Service;
 
-use Slince\Shopify\Common\Manager\GeneralCurdable;
+use Slince\Shopify\Model\FulfillmentService;
+use Slince\Shopify\Service\Contracts\FulfillmentServiceManagerInterface;
 
 class FulfillmentServiceManager extends GeneralCurdable implements FulfillmentServiceManagerInterface
 {

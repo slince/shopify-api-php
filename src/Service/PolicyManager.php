@@ -9,9 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\Policy;
+namespace Slince\Shopify\Service;
 
-use Slince\Shopify\Common\Manager\GeneralCurdable;
+use Slince\Shopify\Model\Policy;
+use Slince\Shopify\Service\Contracts\PolicyManagerInterface;
 
 class PolicyManager extends GeneralCurdable implements PolicyManagerInterface
 {

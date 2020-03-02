@@ -9,9 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\Blog;
+namespace Slince\Shopify\Service;
 
-use Slince\Shopify\Common\Manager\GeneralCurdable;
+use Slince\Shopify\Model\Blog;
+use Slince\Shopify\Service\Contracts\BlogManagerInterface;
 
 class BlogManager extends GeneralCurdable implements BlogManagerInterface
 {

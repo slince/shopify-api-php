@@ -9,9 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\Theme;
+namespace Slince\Shopify\Service;
 
-use Slince\Shopify\Common\Manager\GeneralCurdable;
+use Slince\Shopify\Model\Theme;
+use Slince\Shopify\Service\Contracts\ThemeManagerInterface;
 
 class ThemeManager extends GeneralCurdable implements ThemeManagerInterface
 {

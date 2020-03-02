@@ -9,9 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\OrderRisk;
+namespace Slince\Shopify\Service;
 
-use Slince\Shopify\Common\Manager\NestCrudable;
+use Slince\Shopify\Model\Risk;
+use Slince\Shopify\Service\Contracts\RiskManagerInterface;
 
 class RiskManager extends NestCrudable implements RiskManagerInterface
 {

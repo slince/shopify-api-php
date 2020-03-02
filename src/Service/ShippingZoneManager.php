@@ -9,9 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\ShippingZone;
+namespace Slince\Shopify\Service;
 
-use Slince\Shopify\Common\Manager\GeneralCurdable;
+use Slince\Shopify\Model\ShippingZone;
+use Slince\Shopify\Service\Contracts\ShippingZoneManagerInterface;
 
 class ShippingZoneManager extends GeneralCurdable implements ShippingZoneManagerInterface
 {

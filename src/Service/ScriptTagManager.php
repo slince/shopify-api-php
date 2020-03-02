@@ -9,9 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\ScriptTag;
+namespace Slince\Shopify\Service;
 
-use Slince\Shopify\Common\Manager\GeneralCurdable;
+use Slince\Shopify\Model\ScriptTag;
+use Slince\Shopify\Service\Contracts\ScriptTagManagerInterface;
 
 class ScriptTagManager extends GeneralCurdable implements ScriptTagManagerInterface
 {

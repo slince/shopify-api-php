@@ -9,9 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\CarrierService;
+namespace Slince\Shopify\Service;
 
-use Slince\Shopify\Common\Manager\GeneralCurdable;
+use Slince\Shopify\Model\CarrierService;
+use Slince\Shopify\Service\Contracts\CarrierServiceManagerInterface;
 
 class CarrierServiceManager extends GeneralCurdable implements CarrierServiceManagerInterface
 {

@@ -9,9 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\CustomerSavedSearch;
+namespace Slince\Shopify\Service;
 
-use Slince\Shopify\Common\Manager\GeneralCurdable;
+use Slince\Shopify\Model\CustomerSavedSearch;
+use Slince\Shopify\Service\Contracts\CustomerSavedSearchManagerInterface;
 
 class CustomerSavedSearchManager extends GeneralCurdable implements CustomerSavedSearchManagerInterface
 {

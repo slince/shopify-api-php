@@ -9,9 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\Comment;
+namespace Slince\Shopify\Service;
 
-use Slince\Shopify\Common\Manager\GeneralCurdable;
+use Slince\Shopify\Model\Comment;
+use Slince\Shopify\Service\Contracts\CommentManagerInterface;
 
 class CommentManager extends GeneralCurdable implements CommentManagerInterface
 {

@@ -11,6 +11,9 @@
 
 namespace Slince\Shopify\Service;
 
+use Slince\Shopify\Model\Address;
+use Slince\Shopify\Service\Contracts\AddressManagerInterface;
+
 class AddressManager extends NestCrudable implements AddressManagerInterface
 {
     /**

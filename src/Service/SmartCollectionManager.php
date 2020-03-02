@@ -9,9 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\SmartCollection;
+namespace Slince\Shopify\Service;
 
-use Slince\Shopify\Common\Manager\GeneralCurdable;
+use Slince\Shopify\Model\SmartCollection;
+use Slince\Shopify\Service\Contracts\SmartCollectionManagerInterface;
 
 class SmartCollectionManager extends GeneralCurdable implements SmartCollectionManagerInterface
 {

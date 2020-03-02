@@ -12,6 +12,7 @@
 namespace Slince\Shopify\Service;
 
 use Slince\Shopify\Client;
+use Slince\Shopify\Service\Contracts\ManagerInterface;
 
 abstract class AbstractManager implements ManagerInterface
 {

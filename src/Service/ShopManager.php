@@ -9,9 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\Shop;
+namespace Slince\Shopify\Service;
 
-use Slince\Shopify\Common\Manager\AbstractManager;
+use Slince\Shopify\Model\Shop;
+use Slince\Shopify\Service\Contracts\ShopManagerInterface;
 
 class ShopManager extends AbstractManager implements ShopManagerInterface
 {

@@ -9,11 +9,11 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Common\Manager;
+namespace Slince\Shopify\Service;
 
 use Doctrine\Common\Inflector\Inflector;
 use Slince\Shopify\Common\CursorBasedPagination;
-use Slince\Shopify\Common\Model\ModelInterface;
+use Slince\Shopify\Model\ModelInterface;
 
 abstract class GeneralCurdable extends AbstractManager
 {

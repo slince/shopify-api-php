@@ -9,9 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\Country;
+namespace Slince\Shopify\Service;
 
-use Slince\Shopify\Common\Manager\GeneralCurdable;
+use Slince\Shopify\Model\Country;
+use Slince\Shopify\Service\Contracts\CountryManagerInterface;
 
 class CountryManager extends GeneralCurdable implements CountryManagerInterface
 {

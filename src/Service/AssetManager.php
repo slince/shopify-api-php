@@ -9,9 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\Asset;
+namespace Slince\Shopify\Service;
 
-use Slince\Shopify\Common\Manager\AbstractManager;
+use Slince\Shopify\Model\Asset;
+use Slince\Shopify\Service\Contracts\AssetManagerInterface;
 
 class AssetManager extends AbstractManager implements AssetManagerInterface
 {

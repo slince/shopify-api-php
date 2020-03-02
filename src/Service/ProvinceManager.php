@@ -9,9 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\Province;
+namespace Slince\Shopify\Service;
 
-use Slince\Shopify\Common\Manager\NestCrudable;
+use Slince\Shopify\Model\Province;
+use Slince\Shopify\Service\Contracts\ProvinceManagerInterface;
 
 class ProvinceManager extends NestCrudable implements ProvinceManagerInterface
 {

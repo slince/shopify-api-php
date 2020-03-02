@@ -9,9 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\DiscountCode;
+namespace Slince\Shopify\Service;
 
-use Slince\Shopify\Common\Manager\NestCrudable;
+use Slince\Shopify\Model\DiscountCode;
+use Slince\Shopify\Service\Contracts\DiscountCodeManagerInterface;
 
 class DiscountCodeManager extends NestCrudable implements DiscountCodeManagerInterface
 {

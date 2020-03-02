@@ -10,8 +10,6 @@
  */
 
 namespace Slince\Shopify\Service\Contracts;
-
-use Slince\Shopify\Common\Manager\ManagerInterface;
 use Slince\Shopify\Model\CustomCollection;
 
 interface CustomCollectionManagerInterface extends ManagerInterface

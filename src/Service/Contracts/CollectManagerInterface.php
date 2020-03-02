@@ -11,10 +11,9 @@
 
 namespace Slince\Shopify\Service\Contracts;
 
-use Slince\Shopify\Common\Manager\ManagerInterface;
 use Slince\Shopify\Model\Collect;
 
-interface CollectManagerInterface extends ManagerInterface
+interface CollectManagerInterface
 {
     /**
      * Gets all collects.

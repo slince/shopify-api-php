@@ -9,9 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\InventoryItem;
+namespace Slince\Shopify\Service;
 
-use Slince\Shopify\Common\Manager\GeneralCurdable;
+use Slince\Shopify\Model\InventoryItem;
+use Slince\Shopify\Service\Contracts\InventoryItemManagerInterface;
 
 class InventoryItemManager extends GeneralCurdable implements InventoryItemManagerInterface
 {

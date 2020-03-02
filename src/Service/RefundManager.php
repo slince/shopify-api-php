@@ -9,9 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\Refund;
+namespace Slince\Shopify\Service;
 
-use Slince\Shopify\Common\Manager\NestCrudable;
+use Slince\Shopify\Model\Refund;
+use Slince\Shopify\Service\Contracts\RefundManagerInterface;
 
 class RefundManager extends NestCrudable implements RefundManagerInterface
 {

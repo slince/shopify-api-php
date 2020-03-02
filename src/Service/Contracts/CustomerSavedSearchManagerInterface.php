@@ -11,7 +11,6 @@
 
 namespace Slince\Shopify\Service\Contracts;
 
-use Slince\Shopify\Common\Manager\ManagerInterface;
 use Slince\Shopify\Model\Customer;
 use Slince\Shopify\Model\CustomerSavedSearch;
 

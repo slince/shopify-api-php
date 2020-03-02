@@ -9,10 +9,11 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\Location;
+namespace Slince\Shopify\Service;
 
-use Slince\Shopify\Common\Manager\GeneralCurdable;
-use Slince\Shopify\Manager\InventoryLevel\InventoryLevel;
+use Slince\Shopify\Model\InventoryLevel;
+use Slince\Shopify\Model\Location;
+use Slince\Shopify\Service\Contracts\LocationManagerInterface;
 
 class LocationManager extends GeneralCurdable implements LocationManagerInterface
 {

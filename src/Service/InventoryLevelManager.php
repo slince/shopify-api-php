@@ -9,9 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\InventoryLevel;
+namespace Slince\Shopify\Service;
 
-use Slince\Shopify\Common\Manager\AbstractManager;
+use Slince\Shopify\Model\InventoryLevel;
+use Slince\Shopify\Service\Contracts\InventoryLevelManagerInterface;
 
 class InventoryLevelManager extends AbstractManager implements InventoryLevelManagerInterface
 {

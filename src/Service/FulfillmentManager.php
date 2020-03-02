@@ -9,9 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\Fulfillment;
+namespace Slince\Shopify\Service;
 
-use Slince\Shopify\Common\Manager\NestCrudable;
+use Slince\Shopify\Model\Fulfillment;
+use Slince\Shopify\Service\Contracts\FulfillmentManagerInterface;
 
 class FulfillmentManager extends NestCrudable implements FulfillmentManagerInterface
 {

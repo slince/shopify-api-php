@@ -9,9 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\RecurringApplicationCharge;
+namespace Slince\Shopify\Service;
 
-use Slince\Shopify\Common\Manager\GeneralCurdable;
+use Slince\Shopify\Model\RecurringApplicationCharge;
+use Slince\Shopify\Service\Contracts\RecurringApplicationChargeManagerInterface;
 
 class RecurringApplicationChargeManager extends GeneralCurdable implements RecurringApplicationChargeManagerInterface
 {

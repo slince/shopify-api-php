@@ -9,9 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\ProductVariant;
+namespace Slince\Shopify\Service;
 
-use Slince\Shopify\Common\Manager\AbstractManager;
+use Slince\Shopify\Model\Variant;
+use Slince\Shopify\Service\Contracts\VariantManagerInterface;
 
 class VariantManager extends AbstractManager implements VariantManagerInterface
 {
@@ -52,7 +53,7 @@ class VariantManager extends AbstractManager implements VariantManagerInterface
      */
     public function findAll($productId, array $query = [])
     {
-        $data = $this->client->get('products'.'/'.$productId.'/variants', $query);
+        $data = $this->client->get("products/{$productId}/variants", $query);
 
         return $this->createMany($data['variants']);
     }
@@ -72,7 +73,7 @@ class VariantManager extends AbstractManager implements VariantManagerInterface
      */
     public function count($productId, array $query = [])
     {
-        $data = $this->client->get('products'.'/'.$productId.'/variants/count', $query);
+        $data = $this->client->get("products/{$productId}/variants/count", $query);
 
         return $data['count'];
     }
@@ -82,7 +83,7 @@ class VariantManager extends AbstractManager implements VariantManagerInterface
      */
     public function update($id, array $data)
     {
-        $data = $this->client->put('/variants/'.$id, [
+        $data = $this->client->put("/variants/{$id}", [
             'variant' => $data,
         ]);
 
@@ -94,7 +95,7 @@ class VariantManager extends AbstractManager implements VariantManagerInterface
      */
     public function remove($productId, $id)
     {
-        $this->client->delete('products'.'/'.$productId.'/variants/'.$id);
+        $this->client->delete("products/{$productId}/variants/{$id}");
     }
 
     /**
@@ -102,7 +103,7 @@ class VariantManager extends AbstractManager implements VariantManagerInterface
      */
     public function create($productId, array $data)
     {
-        $data = $this->client->post('products/'.$productId.'/variants', [
+        $data = $this->client->post("products/{$productId}/variants", [
             'variant' => $data,
         ]);
 

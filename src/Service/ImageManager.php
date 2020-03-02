@@ -9,9 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\ProductImage;
+namespace Slince\Shopify\Service;
 
-use Slince\Shopify\Common\Manager\NestCrudable;
+use Slince\Shopify\Model\Image;
+use Slince\Shopify\Service\Contracts\ImageManagerInterface;
 
 class ImageManager extends NestCrudable implements ImageManagerInterface
 {

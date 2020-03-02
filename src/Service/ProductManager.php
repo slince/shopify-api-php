@@ -9,9 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\Product;
+namespace Slince\Shopify\Service;
 
-use Slince\Shopify\Common\Manager\GeneralCurdable;
+use Slince\Shopify\Model\Product;
+use Slince\Shopify\Service\Contracts\ProductManagerInterface;
 
 class ProductManager extends GeneralCurdable implements ProductManagerInterface
 {

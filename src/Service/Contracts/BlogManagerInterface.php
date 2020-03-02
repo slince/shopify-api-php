@@ -11,10 +11,9 @@
 
 namespace Slince\Shopify\Service\Contracts;
 
-use Slince\Shopify\Common\Manager\ManagerInterface;
 use Slince\Shopify\Model\Blog;
 
-interface BlogManagerInterface extends ManagerInterface
+interface BlogManagerInterface
 {
     /**
      * Gets all blogs.
