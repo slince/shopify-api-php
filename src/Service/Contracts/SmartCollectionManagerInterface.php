@@ -10,6 +10,7 @@
  */
 
 namespace Slince\Shopify\Service\Contracts;
+
 use Slince\Shopify\Model\SmartCollection;
 
 interface SmartCollectionManagerInterface extends ManagerInterface

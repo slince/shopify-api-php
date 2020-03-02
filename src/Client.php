@@ -18,7 +18,7 @@ use Slince\Di\Container;
 use GuzzleHttp\Client as HttpClient;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use Slince\Shopify\Common\Manager\ManagerInterface;
+use Slince\Shopify\Service\Contracts;
 use Slince\Shopify\Exception\InvalidArgumentException;
 use GuzzleHttp\Exception\RequestException;
 use Slince\Shopify\Exception\ClientException;
@@ -26,42 +26,42 @@ use Slince\Shopify\Exception\RuntimeException;
 use Slince\Shopify\Hydrator\Hydrator;
 
 /**
- * @method Manager\Article\ArticleManagerInterface getArticleManager
- * @method Manager\Asset\AssetManagerInterface getAssetManager
- * @method Manager\Blog\BlogManagerInterface getBlogManager
- * @method Manager\CarrierService\CarrierServiceManagerInterface getCarrierServiceManager
- * @method Manager\Collect\CollectManagerInterface getCollectManager
- * @method Manager\Comment\CommentManagerInterface getCommentManager
- * @method Manager\Country\CountryManagerInterface getCountryManager
- * @method Manager\CustomCollection\CustomCollectionManagerInterface getCustomCollectionManager
- * @method Manager\Customer\CustomerManagerInterface getCustomerManager
- * @method Manager\CustomerAddress\AddressManagerInterface getCustomerAddressManager
- * @method Manager\CustomerSavedSearch\CustomerSavedSearchManagerInterface getCustomerSavedSearchManager
- * @method Manager\DiscountCode\DiscountCodeManagerInterface getDiscountCodeManager
- * @method Manager\DraftOrder\DraftOrderManagerInterface getDraftOrderManager
- * @method Manager\Fulfillment\FulfillmentManagerInterface getFulfillmentManager
- * @method Manager\FulfillmentService\FulfillmentServiceManagerInterface getFulfillmentServiceManager
- * @method Manager\InventoryItem\InventoryItemManagerInterface getInventoryItemManager
- * @method Manager\InventoryLevel\InventoryLevelManagerInterface getInventoryLevelManager
- * @method Manager\Location\LocationManagerInterface getLocationManager
- * @method Manager\Order\OrderManagerInterface getOrderManager
- * @method Manager\OrderRisk\RiskManagerInterface getOrderRiskManager
- * @method Manager\Page\PageManagerInterface getPageManager
- * @method Manager\Policy\PolicyManagerInterface getPolicyManager
- * @method Manager\PriceRule\PriceRuleManagerInterface getPriceRuleManager
- * @method Manager\Product\ProductManagerInterface getProductManager
- * @method Manager\ProductImage\ImageManagerInterface getProductImageManager
- * @method Manager\ProductVariant\VariantManagerInterface getProductVariantManager
- * @method Manager\Province\ProvinceManagerInterface getProvinceManager
- * @method Manager\RecurringApplicationCharge\RecurringApplicationChargeManagerInterface getRecurringApplicationChargeManager
- * @method Manager\Redirect\RedirectManagerInterface getRedirectManager
- * @method Manager\Refund\RefundManagerInterface getRefundManager
- * @method Manager\ShippingZone\ShippingZoneManagerInterface getShippingZoneManager
- * @method Manager\Shop\ShopManagerInterface getShopManager
- * @method Manager\SmartCollection\SmartCollectionManager getSmartCollectionManager
- * @method Manager\Theme\ThemeManagerInterface getThemeManager
- * @method Manager\Transaction\TransactionManagerInterface getTransactionManager
- * @method Manager\Webhook\WebhookManagerInterface getWebhookManager
+ * @method Contracts\ArticleManagerInterface getArticleManager
+ * @method Contracts\AssetManagerInterface getAssetManager
+ * @method Contracts\BlogManagerInterface getBlogManager
+ * @method Contracts\CarrierServiceManagerInterface getCarrierServiceManager
+ * @method Contracts\CollectManagerInterface getCollectManager
+ * @method Contracts\CommentManagerInterface getCommentManager
+ * @method Contracts\CountryManagerInterface getCountryManager
+ * @method Contracts\CustomCollectionManagerInterface getCustomCollectionManager
+ * @method Contracts\CustomerManagerInterface getCustomerManager
+ * @method Contracts\AddressManagerInterface getCustomerAddressManager
+ * @method Contracts\CustomerSavedSearchManagerInterface getCustomerSavedSearchManager
+ * @method Contracts\DiscountCodeManagerInterface getDiscountCodeManager
+ * @method Contracts\DraftOrderManagerInterface getDraftOrderManager
+ * @method Contracts\FulfillmentManagerInterface getFulfillmentManager
+ * @method Contracts\FulfillmentServiceManagerInterface getFulfillmentServiceManager
+ * @method Contracts\InventoryItemManagerInterface getInventoryItemManager
+ * @method Contracts\InventoryLevelManagerInterface getInventoryLevelManager
+ * @method Contracts\LocationManagerInterface getLocationManager
+ * @method Contracts\OrderManagerInterface getOrderManager
+ * @method Contracts\RiskManagerInterface getOrderRiskManager
+ * @method Contracts\PageManagerInterface getPageManager
+ * @method Contracts\PolicyManagerInterface getPolicyManager
+ * @method Contracts\PriceRuleManagerInterface getPriceRuleManager
+ * @method Contracts\ProductManagerInterface getProductManager
+ * @method Contracts\ImageManagerInterface getProductImageManager
+ * @method Contracts\VariantManagerInterface getProductVariantManager
+ * @method Contracts\ProvinceManagerInterface getProvinceManager
+ * @method Contracts\RecurringApplicationChargeManagerInterface getRecurringApplicationChargeManager
+ * @method Contracts\RedirectManagerInterface getRedirectManager
+ * @method Contracts\RefundManagerInterface getRefundManager
+ * @method Contracts\ShippingZoneManagerInterface getShippingZoneManager
+ * @method Contracts\ShopManagerInterface getShopManager
+ * @method Contracts\SmartCollectionManagerInterface getSmartCollectionManager
+ * @method Contracts\ThemeManagerInterface getThemeManager
+ * @method Contracts\TransactionManagerInterface getTransactionManager
+ * @method Contracts\WebhookManagerInterface getWebhookManager
  */
 class Client
 {
@@ -106,47 +106,43 @@ class Client
      * @var array
      */
     public $serviceClass = [
-        Manager\Article\ArticleManager::class,
-        Manager\Asset\AssetManager::class,
-        Manager\Blog\BlogManager::class,
-        Manager\CarrierService\CarrierServiceManager::class,
-        Manager\Collect\CollectManager::class,
-        Manager\Comment\CommentManager::class,
-        Manager\Country\CountryManager::class,
-        Manager\CustomCollection\CustomCollectionManager::class,
-        Manager\Customer\CustomerManager::class,
-        Manager\CustomerAddress\AddressManager::class,
-        Manager\CustomerSavedSearch\CustomerSavedSearchManager::class,
-        Manager\DiscountCode\DiscountCodeManager::class,
-        Manager\DraftOrder\DraftOrderManager::class,
-        Manager\Fulfillment\FulfillmentManager::class,
-        Manager\FulfillmentService\FulfillmentServiceManager::class,
-        Manager\InventoryItem\InventoryItemManager::class,
-        Manager\InventoryLevel\InventoryLevelManager::class,
-        Manager\Location\LocationManager::class,
-        Manager\Order\OrderManager::class,
-        Manager\OrderRisk\RiskManager::class,
-        Manager\Page\PageManager::class,
-        Manager\Policy\PolicyManager::class,
-        Manager\PriceRule\PriceRuleManager::class,
-        Manager\Product\ProductManager::class,
-        Manager\ProductImage\ImageManager::class,
-        Manager\ProductVariant\VariantManager::class,
-        Manager\Province\ProvinceManager::class,
-        Manager\RecurringApplicationCharge\RecurringApplicationChargeManager::class,
-        Manager\Redirect\RedirectManager::class,
-        Manager\Refund\RefundManager::class,
-        Manager\ScriptTag\ScriptTagManager::class,
-        Manager\ShippingZone\ShippingZoneManager::class,
-        Manager\Shop\ShopManager::class,
-        Manager\SmartCollection\SmartCollectionManager::class,
-        Manager\Theme\ThemeManager::class,
-        Manager\Transaction\TransactionManager::class,
-        Manager\Webhook\WebhookManager::class,
-    ];
-
-    protected $metaDirs = [
-        'Slince\Shopify' => __DIR__.'/../config/serializer'
+        Service\ArticleManager::class,
+        Service\AssetManager::class,
+        Service\BlogManager::class,
+        Service\CarrierServiceManager::class,
+        Service\CollectManager::class,
+        Service\CommentManager::class,
+        Service\CountryManager::class,
+        Service\CustomCollectionManager::class,
+        Service\CustomerManager::class,
+        Service\AddressManager::class,
+        Service\CustomerSavedSearchManager::class,
+        Service\DiscountCodeManager::class,
+        Service\DraftOrderManager::class,
+        Service\FulfillmentManager::class,
+        Service\FulfillmentServiceManager::class,
+        Service\InventoryItemManager::class,
+        Service\InventoryLevelManager::class,
+        Service\LocationManager::class,
+        Service\OrderManager::class,
+        Service\RiskManager::class,
+        Service\PageManager::class,
+        Service\PolicyManager::class,
+        Service\PriceRuleManager::class,
+        Service\ProductManager::class,
+        Service\ImageManager::class,
+        Service\VariantManager::class,
+        Service\ProvinceManager::class,
+        Service\RecurringApplicationChargeManager::class,
+        Service\RedirectManager::class,
+        Service\RefundManager::class,
+        Service\ScriptTagManager::class,
+        Service\ShippingZoneManager::class,
+        Service\ShopManager::class,
+        Service\SmartCollectionManager::class,
+        Service\ThemeManager::class,
+        Service\TransactionManager::class,
+        Service\WebhookManager::class,
     ];
 
     /**
@@ -421,7 +417,7 @@ class Client
      */
     public function addServiceClass($serviceClass)
     {
-        if (!is_subclass_of($serviceClass, ManagerInterface::class)) {
+        if (!is_subclass_of($serviceClass, Contracts\ManagerInterface::class)) {
             throw new InvalidArgumentException(sprintf('The service class "%s" should implement "ManagerInterface"', $serviceClass));
         }
         $this->serviceClass[] = $serviceClass;
