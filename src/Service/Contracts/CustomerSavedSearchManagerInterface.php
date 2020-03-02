@@ -9,10 +9,11 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\CustomerSavedSearch;
+namespace Slince\Shopify\Service\Contracts;
 
 use Slince\Shopify\Common\Manager\ManagerInterface;
-use Slince\Shopify\Manager\Customer\Customer;
+use Slince\Shopify\Model\Customer;
+use Slince\Shopify\Model\CustomerSavedSearch;
 
 interface CustomerSavedSearchManagerInterface extends ManagerInterface
 {

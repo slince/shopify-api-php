@@ -9,7 +9,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\Article;
+namespace Slince\Shopify\Service\Contracts;
+
+use Slince\Shopify\Model\Article;
 
 interface ArticleManagerInterface
 {

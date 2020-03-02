@@ -9,9 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\Webhook;
+namespace Slince\Shopify\Service\Contracts;
 
 use Psr\Http\Message\RequestInterface;
+use Slince\Shopify\Model\Webhook;
 
 interface WebhookManagerInterface
 {

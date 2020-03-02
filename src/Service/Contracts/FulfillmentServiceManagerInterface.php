@@ -9,9 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\FulfillmentService;
+namespace Slince\Shopify\Service\Contracts;
 
 use Slince\Shopify\Common\Manager\ManagerInterface;
+use Slince\Shopify\Model\FulfillmentService;
 
 interface FulfillmentServiceManagerInterface extends ManagerInterface
 {

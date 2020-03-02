@@ -9,10 +9,11 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\Location;
+namespace Slince\Shopify\Service\Contracts;
 
 use Slince\Shopify\Common\Manager\ManagerInterface;
-use Slince\Shopify\Manager\InventoryLevel\InventoryLevel;
+use Slince\Shopify\Model\InventoryLevel;
+use Slince\Shopify\Model\Location;
 
 interface LocationManagerInterface extends ManagerInterface
 {

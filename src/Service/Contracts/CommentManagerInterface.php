@@ -9,7 +9,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\Comment;
+namespace Slince\Shopify\Service\Contracts;
+
+use Slince\Shopify\Model\Comment;
 
 interface CommentManagerInterface
 {

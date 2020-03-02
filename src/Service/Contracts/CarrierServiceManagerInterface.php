@@ -9,9 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\CarrierService;
+namespace Slince\Shopify\Service\Contracts;
 
 use Slince\Shopify\Common\Manager\ManagerInterface;
+use Slince\Shopify\Model\CarrierService;
 
 interface CarrierServiceManagerInterface extends ManagerInterface
 {
