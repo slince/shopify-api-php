@@ -9,9 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\FulfillmentService;
-
-use Slince\Shopify\Common\Model\Model;
+namespace Slince\Shopify\Model;
 
 class FulfillmentService extends Model
 {

@@ -9,9 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\RecurringApplicationCharge;
-
-use Slince\Shopify\Common\Model\Model;
+namespace Slince\Shopify\Model;
 
 class RecurringApplicationCharge extends Model
 {

@@ -3,10 +3,14 @@ include __DIR__ . '/vendor/autoload.php';
 
 $finder = new \Symfony\Component\Finder\Finder();
 
-$files = $finder->in('./src/Manager')->files()
-    ->notName('*Manager*');
+$files = $finder->in('./src/Model')->files();
 foreach ($files as $file) {
-//    var_dump($file->getBasename());
-//    exit;
-    copy($file->getPathname(), __DIR__ . '/src/Model/'. $file->getBasename());
+    $content = file_get_contents($file->getPathname());
+
+    $content = preg_replace_callback('#^namespace.*;$#', function (){
+        return 'namespace Slince\Shopify\Model;';
+    }, $content);
+
+    print $content;
+    exit;
 }

@@ -9,11 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\Customer;
-
-use Slince\Shopify\Common\Model\Model;
-use Slince\Shopify\Common\Model\AdminGraphqlApiId;
-use Slince\Shopify\Manager\CustomerAddress\Address;
+namespace Slince\Shopify\Model;
 
 class Customer extends Model
 {

@@ -9,11 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\Refund;
-
-use Slince\Shopify\Common\Model\Model;
-use Slince\Shopify\Common\Model\AdminGraphqlApiId;
-use Slince\Shopify\Manager\Transaction\Transaction;
+namespace Slince\Shopify\Model;
 
 class Refund extends Model
 {

@@ -9,10 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\Refund;
-
-use Slince\Shopify\Common\Model\Model;
-use Slince\Shopify\Manager\Order\LineItem;
+namespace Slince\Shopify\Model;
 
 class RefundLineItem extends Model
 {

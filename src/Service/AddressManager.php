@@ -9,9 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\CustomerAddress;
-
-use Slince\Shopify\Common\Manager\NestCrudable;
+namespace Slince\Shopify\Service;
 
 class AddressManager extends NestCrudable implements AddressManagerInterface
 {

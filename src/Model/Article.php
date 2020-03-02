@@ -9,10 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\Article;
-
-use Slince\Shopify\Common\Model\Model;
-use Slince\Shopify\Common\Model\AdminGraphqlApiId;
+namespace Slince\Shopify\Model;
 
 class Article extends Model
 {

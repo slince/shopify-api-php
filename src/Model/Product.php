@@ -9,12 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\Product;
-
-use Slince\Shopify\Common\Model\Model;
-use Slince\Shopify\Common\Model\AdminGraphqlApiId;
-use Slince\Shopify\Manager\ProductImage\Image;
-use Slince\Shopify\Manager\ProductVariant\Variant;
+namespace Slince\Shopify\Model;
 
 class Product extends Model
 {

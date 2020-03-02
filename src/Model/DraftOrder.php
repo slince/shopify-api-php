@@ -1,13 +1,15 @@
 <?php
 
-namespace Slince\Shopify\Manager\DraftOrder;
+/*
+ * This file is part of the slince/shopify-api-php
+ *
+ * (c) Slince <taosikai@yeah.net>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
+ */
 
-use Slince\Shopify\Common\Model\AdminGraphqlApiId;
-use Slince\Shopify\Common\Model\Model;
-use Slince\Shopify\Manager\Customer\Customer;
-use Slince\Shopify\Manager\Order\Address;
-use Slince\Shopify\Manager\Order\LineItem;
-use Slince\Shopify\Manager\Order\TaxLine;
+namespace Slince\Shopify\Model;
 
 class DraftOrder extends Model
 {

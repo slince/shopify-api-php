@@ -9,11 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\Fulfillment;
-
-use Slince\Shopify\Common\Model\Model;
-use Slince\Shopify\Common\Model\AdminGraphqlApiId;
-use Slince\Shopify\Manager\Order\LineItem;
+namespace Slince\Shopify\Model;
 
 class Fulfillment extends Model
 {

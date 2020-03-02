@@ -9,9 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\OrderRisk;
-
-use Slince\Shopify\Common\Model\Model;
+namespace Slince\Shopify\Model;
 
 class Risk extends Model
 {

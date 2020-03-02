@@ -9,10 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\Country;
-
-use Slince\Shopify\Common\Model\Model;
-use Slince\Shopify\Manager\Province\Province;
+namespace Slince\Shopify\Model;
 
 class Country extends Model
 {

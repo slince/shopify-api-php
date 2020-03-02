@@ -9,14 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\Order;
-
-use Slince\Shopify\Common\Model\Model;
-use Slince\Shopify\Common\Model\AdminGraphqlApiId;
-use Slince\Shopify\Manager\Customer\Customer;
-use Slince\Shopify\Manager\Fulfillment\Fulfillment;
-use Slince\Shopify\Manager\Refund\Refund;
-use Slince\Shopify\Manager\Transaction\Transaction;
+namespace Slince\Shopify\Model;
 
 class Order extends Model
 {

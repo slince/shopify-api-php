@@ -9,10 +9,8 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\InventoryItem;
+namespace Slince\Shopify\Model;
 
-use Slince\Shopify\Common\Model\Model;
-use Slince\Shopify\Common\Model\AdminGraphqlApiId;
 
 class InventoryItem extends Model
 {

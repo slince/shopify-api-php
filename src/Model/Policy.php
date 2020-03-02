@@ -9,9 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\Policy;
-
-use Slince\Shopify\Common\Model\Model;
+namespace Slince\Shopify\Model;
 
 class Policy extends Model
 {

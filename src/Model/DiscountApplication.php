@@ -9,9 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\Order;
-
-use Slince\Shopify\Common\Model\Model;
+namespace Slince\Shopify\Model;
 
 class DiscountApplication extends Model
 {
