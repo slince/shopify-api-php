@@ -21,7 +21,7 @@ class VariantManager extends AbstractManager implements VariantManagerInterface
      */
     public static function getServiceName()
     {
-        return 'product_variants';
+        return 'variants';
     }
 
     /**

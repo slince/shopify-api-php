@@ -21,7 +21,7 @@ class AddressManager extends NestCrudable implements AddressManagerInterface
      */
     public static function getServiceName()
     {
-        return 'customer_addresses';
+        return 'addresses';
     }
 
     /**

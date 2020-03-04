@@ -53,14 +53,10 @@ class ClientDetails
 
     /**
      * @param string $browserIp
-     *
-     * @return ClientDetails
      */
     public function setBrowserIp($browserIp)
     {
         $this->browserIp = $browserIp;
-
-        return $this;
     }
 
     /**
@@ -73,14 +69,10 @@ class ClientDetails
 
     /**
      * @param string $acceptLanguage
-     *
-     * @return ClientDetails
      */
     public function setAcceptLanguage($acceptLanguage)
     {
         $this->acceptLanguage = $acceptLanguage;
-
-        return $this;
     }
 
     /**
@@ -93,14 +85,10 @@ class ClientDetails
 
     /**
      * @param string $userAgent
-     *
-     * @return ClientDetails
      */
     public function setUserAgent($userAgent)
     {
         $this->userAgent = $userAgent;
-
-        return $this;
     }
 
     /**
@@ -113,14 +101,10 @@ class ClientDetails
 
     /**
      * @param string $sessionHash
-     *
-     * @return ClientDetails
      */
     public function setSessionHash($sessionHash)
     {
         $this->sessionHash = $sessionHash;
-
-        return $this;
     }
 
     /**
@@ -133,14 +117,10 @@ class ClientDetails
 
     /**
      * @param int $browserWidth
-     *
-     * @return ClientDetails
      */
     public function setBrowserWidth($browserWidth)
     {
         $this->browserWidth = $browserWidth;
-
-        return $this;
     }
 
     /**
@@ -153,13 +133,9 @@ class ClientDetails
 
     /**
      * @param int $browserHeight
-     *
-     * @return ClientDetails
      */
     public function setBrowserHeight($browserHeight)
     {
         $this->browserHeight = $browserHeight;
-
-        return $this;
     }
 }

@@ -21,7 +21,7 @@ class RiskManager extends NestCrudable implements RiskManagerInterface
      */
     public static function getServiceName()
     {
-        return 'order_risks';
+        return 'risks';
     }
 
     /**

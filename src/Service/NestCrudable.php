@@ -12,7 +12,7 @@
 namespace Slince\Shopify\Service;
 
 use Doctrine\Common\Inflector\Inflector;
-use Slince\Shopify\Common\CursorBasedPagination;
+use Slince\Shopify\CursorBasedPagination;
 use Slince\Shopify\Model\ModelInterface;
 
 abstract class NestCrudable extends AbstractManager

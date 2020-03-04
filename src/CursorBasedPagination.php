@@ -1,13 +1,12 @@
 <?php
 
-namespace Slince\Shopify\Common;
+namespace Slince\Shopify;
 
 use GuzzleHttp\Psr7\Request;
 use Psr\Http\Message\ResponseInterface;
-use Slince\Shopify\Client;
-use Slince\Shopify\Common\Manager\ManagerInterface;
-use Slince\Shopify\Common\Model\ModelInterface;
 use Slince\Shopify\Exception\RuntimeException;
+use Slince\Shopify\Model\ModelInterface;
+use Slince\Shopify\Service\Contracts\ManagerInterface;
 
 class CursorBasedPagination
 {

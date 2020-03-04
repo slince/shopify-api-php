@@ -21,7 +21,7 @@ class ImageManager extends NestCrudable implements ImageManagerInterface
      */
     public static function getServiceName()
     {
-        return 'product_images';
+        return 'images';
     }
 
     /**

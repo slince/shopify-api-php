@@ -35,7 +35,7 @@ use Slince\Shopify\Hydrator\Hydrator;
  * @method Contracts\CountryManagerInterface getCountryManager
  * @method Contracts\CustomCollectionManagerInterface getCustomCollectionManager
  * @method Contracts\CustomerManagerInterface getCustomerManager
- * @method Contracts\AddressManagerInterface getCustomerAddressManager
+ * @method Contracts\AddressManagerInterface getAddressManager
  * @method Contracts\CustomerSavedSearchManagerInterface getCustomerSavedSearchManager
  * @method Contracts\DiscountCodeManagerInterface getDiscountCodeManager
  * @method Contracts\DraftOrderManagerInterface getDraftOrderManager
@@ -45,13 +45,13 @@ use Slince\Shopify\Hydrator\Hydrator;
  * @method Contracts\InventoryLevelManagerInterface getInventoryLevelManager
  * @method Contracts\LocationManagerInterface getLocationManager
  * @method Contracts\OrderManagerInterface getOrderManager
- * @method Contracts\RiskManagerInterface getOrderRiskManager
+ * @method Contracts\RiskManagerInterface getRiskManager
  * @method Contracts\PageManagerInterface getPageManager
  * @method Contracts\PolicyManagerInterface getPolicyManager
  * @method Contracts\PriceRuleManagerInterface getPriceRuleManager
  * @method Contracts\ProductManagerInterface getProductManager
- * @method Contracts\ImageManagerInterface getProductImageManager
- * @method Contracts\VariantManagerInterface getProductVariantManager
+ * @method Contracts\ImageManagerInterface getImageManager
+ * @method Contracts\VariantManagerInterface getVariantManager
  * @method Contracts\ProvinceManagerInterface getProvinceManager
  * @method Contracts\RecurringApplicationChargeManagerInterface getRecurringApplicationChargeManager
  * @method Contracts\RedirectManagerInterface getRedirectManager
@@ -176,7 +176,6 @@ class Client
     {
         if ('Manager' === substr($name, -7)) {
             $serviceName = substr($name, 3, -7);
-
             return $this->container->get(Inflector::tableize(Inflector::pluralize($serviceName)));
         }
         throw new \InvalidArgumentException(sprintf('The method "%s" is not exists', $name));

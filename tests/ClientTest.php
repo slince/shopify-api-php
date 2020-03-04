@@ -3,11 +3,10 @@
 namespace Slince\Shopify\Tests;
 
 use Slince\Shopify\Client;
-use Slince\Shopify\Common\Manager\AbstractManager;
-use Slince\Shopify\Common\Manager\ManagerInterface;
 use Slince\Shopify\Exception\RuntimeException;
 use Slince\Shopify\PublicAppCredential;
 use Slince\Shopify\Exception\InvalidArgumentException;
+use Slince\Shopify\Service\Contracts\ManagerInterface;
 
 include_once __DIR__.'/Hydrator/test_classes.php';
 
@@ -118,7 +117,7 @@ class ClientTest extends TestCase
 
         foreach ($client->serviceClass as $serviceClass) {
             $partials = explode('\\', $serviceClass);
-            $manager = call_user_func([$client, 'get'.$partials[3].'Manager']);
+            $manager = call_user_func([$client, 'get'.$partials[3]]);
 
             $this->assertInstanceOf($serviceClass, $manager);
         }
