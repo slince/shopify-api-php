@@ -1,9 +1,9 @@
 <?php
 
-namespace Slince\Shopify\Tests\SmartCollection;
+namespace Slince\Shopify\Tests\Model;
 
-use Slince\Shopify\Manager\SmartCollection\SmartCollection;
-use Slince\Shopify\Tests\Base\ModelTestCase;
+use Slince\Shopify\Model\SmartCollection;
+
 
 class SmartCollectionTest extends ModelTestCase
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Slince\Shopify\Tests\Transaction;
+namespace Slince\Shopify\Tests\Model;
 
-use Slince\Shopify\Manager\Transaction\Transaction;
-use Slince\Shopify\Tests\Base\ModelTestCase;
+use Slince\Shopify\Model\Transaction;
+
 
 class TransactionTest extends ModelTestCase
 {

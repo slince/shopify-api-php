@@ -1,9 +1,9 @@
 <?php
 
-namespace Slince\Shopify\Tests\Country;
+namespace Slince\Shopify\Tests\Model;
 
-use Slince\Shopify\Manager\Country\Country;
-use Slince\Shopify\Tests\Base\ModelTestCase;
+use Slince\Shopify\Model\Country;
+
 
 class CountryTest extends ModelTestCase
 {

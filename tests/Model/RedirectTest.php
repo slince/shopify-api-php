@@ -1,9 +1,9 @@
 <?php
 
-namespace Slince\Shopify\Tests\Redirect;
+namespace Slince\Shopify\Tests\Model;
 
-use Slince\Shopify\Manager\Redirect\Redirect;
-use Slince\Shopify\Tests\Base\ModelTestCase;
+use Slince\Shopify\Model\Redirect;
+
 
 class RedirectTest extends ModelTestCase
 {

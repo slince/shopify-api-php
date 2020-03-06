@@ -1,9 +1,9 @@
 <?php
 
-namespace Slince\Shopify\Tests\Location;
+namespace Slince\Shopify\Tests\Model;
 
-use Slince\Shopify\Manager\Location\Location;
-use Slince\Shopify\Tests\Base\ModelTestCase;
+use Slince\Shopify\Model\Location;
+
 
 class LocationTest extends ModelTestCase
 {

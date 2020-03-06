@@ -1,9 +1,9 @@
 <?php
 
-namespace Slince\Shopify\Tests\Order;
+namespace Slince\Shopify\Tests\Model;
 
-use Slince\Shopify\Manager\Refund\RefundLineItem;
-use Slince\Shopify\Tests\Base\ModelTestCase;
+use Slince\Shopify\Model\RefundLineItem;
+
 
 class RefundLineItemTest extends ModelTestCase
 {

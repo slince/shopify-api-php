@@ -1,9 +1,9 @@
 <?php
 
-namespace Slince\Shopify\Tests\PriceRule;
+namespace Slince\Shopify\Tests\Model;
 
-use Slince\Shopify\Manager\PriceRule\PriceRule;
-use Slince\Shopify\Tests\Base\ModelTestCase;
+use Slince\Shopify\Model\PriceRule;
+
 
 class PriceRuleTest extends ModelTestCase
 {

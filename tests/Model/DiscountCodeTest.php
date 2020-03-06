@@ -1,9 +1,9 @@
 <?php
 
-namespace Slince\Shopify\Tests\DiscountCode;
+namespace Slince\Shopify\Tests\Model;
 
-use Slince\Shopify\Manager\DiscountCode\DiscountCode;
-use Slince\Shopify\Tests\Base\ModelTestCase;
+use Slince\Shopify\Model\DiscountCode;
+
 
 class DiscountCodeTest extends ModelTestCase
 {

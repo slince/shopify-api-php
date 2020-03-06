@@ -1,9 +1,9 @@
 <?php
 
-namespace Slince\Shopify\Tests\RecurringApplicationCharge;
+namespace Slince\Shopify\Tests\Model;
 
-use Slince\Shopify\Manager\RecurringApplicationCharge\RecurringApplicationCharge;
-use Slince\Shopify\Tests\Base\ModelTestCase;
+use Slince\Shopify\Model\RecurringApplicationCharge;
+
 
 class RecurringApplicationChargeTest extends ModelTestCase
 {

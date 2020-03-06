@@ -1,9 +1,9 @@
 <?php
 
-namespace Slince\Shopify\Tests\Product;
+namespace Slince\Shopify\Tests\Model;
 
-use Slince\Shopify\Manager\ProductImage\Image;
-use Slince\Shopify\Tests\Base\ModelTestCase;
+use Slince\Shopify\Model\Image;
+
 
 class ImageTest extends ModelTestCase
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Slince\Shopify\Tests\Webhook;
+namespace Slince\Shopify\Tests\Model;
 
-use Slince\Shopify\Manager\Webhook\Webhook;
-use Slince\Shopify\Tests\Base\ModelTestCase;
+use Slince\Shopify\Model\Webhook;
+
 
 class WebhookTest extends ModelTestCase
 {

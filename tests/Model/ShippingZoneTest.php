@@ -1,9 +1,8 @@
 <?php
 
-namespace Slince\Shopify\Tests\ShippingZone;
+namespace Slince\Shopify\Tests\Model;
 
-use Slince\Shopify\Manager\ShippingZone\ShippingZone;
-use Slince\Shopify\Tests\Base\ModelTestCase;
+use Slince\Shopify\Model\ShippingZone;
 
 class ShippingZoneTest extends ModelTestCase
 {

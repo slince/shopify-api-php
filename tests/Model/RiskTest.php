@@ -1,9 +1,9 @@
 <?php
 
-namespace Slince\Shopify\Tests\Order;
+namespace Slince\Shopify\Tests\Model;
 
-use Slince\Shopify\Manager\OrderRisk\Risk;
-use Slince\Shopify\Tests\Base\ModelTestCase;
+use Slince\Shopify\Model\Risk;
+
 
 class RiskTest extends ModelTestCase
 {

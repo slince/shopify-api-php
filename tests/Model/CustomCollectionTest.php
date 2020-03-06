@@ -1,9 +1,9 @@
 <?php
 
-namespace Slince\Shopify\Tests\Collect;
+namespace Slince\Shopify\Tests\Model;
 
-use Slince\Shopify\Manager\CustomCollection\CustomCollection;
-use Slince\Shopify\Tests\Base\ModelTestCase;
+use Slince\Shopify\Model\CustomCollection;
+
 
 class CustomCollectionTest extends ModelTestCase
 {

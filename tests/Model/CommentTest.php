@@ -1,9 +1,9 @@
 <?php
 
-namespace Slince\Shopify\Tests\Article;
+namespace Slince\Shopify\Tests\Model;
 
-use Slince\Shopify\Manager\Comment\Comment;
-use Slince\Shopify\Tests\Base\ModelTestCase;
+use Slince\Shopify\Model\Comment;
+
 
 class CommentTest extends ModelTestCase
 {

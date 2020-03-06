@@ -1,9 +1,9 @@
 <?php
 
-namespace Slince\Shopify\Tests\Order;
+namespace Slince\Shopify\Tests\Model;
 
-use Slince\Shopify\Manager\Order\LineItem;
-use Slince\Shopify\Tests\Base\ModelTestCase;
+use Slince\Shopify\Model\LineItem;
+
 
 class LineItemTest extends ModelTestCase
 {

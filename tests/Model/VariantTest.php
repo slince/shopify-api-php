@@ -1,9 +1,9 @@
 <?php
 
-namespace Slince\Shopify\Tests\Variant;
+namespace Slince\Shopify\Tests\Model;
 
-use Slince\Shopify\Manager\ProductVariant\Variant;
-use Slince\Shopify\Tests\Base\ModelTestCase;
+use Slince\Shopify\Model\Variant;
+
 
 class VariantTest extends ModelTestCase
 {

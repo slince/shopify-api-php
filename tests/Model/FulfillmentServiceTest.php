@@ -1,9 +1,9 @@
 <?php
 
-namespace Slince\Shopify\Tests\FulfillmentService;
+namespace Slince\Shopify\Tests\Model;
 
-use Slince\Shopify\Manager\FulfillmentService\FulfillmentService;
-use Slince\Shopify\Tests\Base\ModelTestCase;
+use Slince\Shopify\Model\FulfillmentService;
+
 
 class FulfillmentServiceTest extends ModelTestCase
 {

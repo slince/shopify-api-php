@@ -1,9 +1,9 @@
 <?php
 
-namespace Slince\Shopify\Tests\Order;
+namespace Slince\Shopify\Tests\Model;
 
-use Slince\Shopify\Manager\Order\ShippingLine;
-use Slince\Shopify\Tests\Base\ModelTestCase;
+use Slince\Shopify\Model\ShippingLine;
+
 
 class ShippingLineTest extends ModelTestCase
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Slince\Shopify\Tests\Collect;
+namespace Slince\Shopify\Tests\Model;
 
-use Slince\Shopify\Manager\Collect\Collect;
-use Slince\Shopify\Tests\Base\ModelTestCase;
+use Slince\Shopify\Model\Collect;
+
 
 class CollectTest extends ModelTestCase
 {
