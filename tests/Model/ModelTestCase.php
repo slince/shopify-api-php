@@ -54,7 +54,6 @@ abstract class ModelTestCase extends TestCase
     public function testProperty()
     {
         list($obj, $data) = $this->createModel();
-//        var_dump($data['email']);exit;
         $modelClass = $this->getModelClass();
         foreach ($this->propertyInfo->getProperties($modelClass) as $property) {
             $snake = Inflector::tableize($property);

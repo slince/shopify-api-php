@@ -1,9 +1,8 @@
 <?php
 
-namespace Slince\Shopify\Tests\Article;
+namespace Slince\Shopify\Tests\Model;
 
-use Slince\Shopify\Manager\Article\Article;
-use Slince\Shopify\Tests\Base\ModelTestCase;
+use Slince\Shopify\Model\Article;
 
 class ArticleTest extends ModelTestCase
 {

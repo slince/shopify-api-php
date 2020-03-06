@@ -1,12 +1,13 @@
 <?php
 
-namespace Slince\Shopify\Tests\Model;
+namespace Slince\Shopify\Tests\Order;
 
-use Slince\Shopify\Model\Order;
+use Slince\Shopify\Manager\Order\Order;
+use Slince\Shopify\Tests\Base\ModelTestCase;
 
 class OrderTest extends ModelTestCase
 {
-    protected function getModelClass()
+    public function getModelClass()
     {
         return Order::class;
     }

@@ -1,11 +1,11 @@
 <?php
 
-namespace Slince\Shopify\Tests\Base;
+namespace Slince\Shopify\Tests\Service;
 
-use Slince\Shopify\Common\Manager\NestCrudable;
+use Slince\Shopify\Service\GeneralCurdable;
 use Slince\Shopify\Tests\TestCase;
 
-abstract class NestCurdableTestCase extends TestCase
+abstract class GeneralCurdableTestCase extends TestCase
 {
     abstract protected function getServiceClass();
 
@@ -14,7 +14,7 @@ abstract class NestCurdableTestCase extends TestCase
     /**
      * @param string $fixture
      *
-     * @return NestCrudable
+     * @return GeneralCurdable
      */
     public function getService($fixture)
     {
@@ -25,18 +25,20 @@ abstract class NestCurdableTestCase extends TestCase
 
     public function testFindAll()
     {
-        $fixture = $this->getFixturesDir().'/'.'all.json';
+        $fixture = $this->getFixturesDir() . '/all.json';
         $service = $this->getService($fixture);
-        $articles = $service->findAll(1);
-        $this->assertInstanceOf($service->getModelClass(), $articles[0]);
+        $entities = $service->findAll([]);
+        $this->assertInstanceOf($service->getModelClass(), $entities[0]);
+
+        $rawArray = $this->readFixture($fixture);
     }
 
     public function testFind()
     {
         $fixture = $this->getFixturesDir().'/'.'view.json';
         $service = $this->getService($fixture);
-        $article = $service->find(1, 2);
-        $this->assertInstanceOf($service->getModelClass(), $article);
+        $entity = $service->find(1);
+        $this->assertInstanceOf($service->getModelClass(), $entity);
     }
 
     public function testCreate()
@@ -45,8 +47,8 @@ abstract class NestCurdableTestCase extends TestCase
         $service = $this->getService($fixture);
         $json = json_decode(file_get_contents(static::FIXTURES_DIR.'/'.$fixture), true);
         $json = reset($json);
-        $article = $service->create(1, $json);
-        $this->assertInstanceOf($service->getModelClass(), $article);
+        $entity = $service->create($json);
+        $this->assertInstanceOf($service->getModelClass(), $entity);
     }
 
     public function testUpdate()
@@ -54,7 +56,7 @@ abstract class NestCurdableTestCase extends TestCase
         $fixture = $this->getFixturesDir().'/'.'view.json';
         $service = $this->getService($fixture);
         $json = $this->readFixture($fixture);
-        $entity = $service->update(1, 2, reset($json));
+        $entity = $service->update(12, reset($json));
         $this->assertInstanceOf($service->getModelClass(), $entity);
     }
 
@@ -62,7 +64,7 @@ abstract class NestCurdableTestCase extends TestCase
     {
         $fixture = $this->getFixturesDir().'/'.'count.json';
         $service = $this->getService($fixture);
-        $count = $service->count(1);
+        $count = $service->count([]);
         $json = json_decode(file_get_contents(static::FIXTURES_DIR.'/'.$fixture), true);
         $this->assertEquals($json['count'], $count);
     }
@@ -74,6 +76,6 @@ abstract class NestCurdableTestCase extends TestCase
     {
         $fixture = $this->getFixturesDir().'/'.'delete.json';
         $service = $this->getService($fixture);
-        $service->remove(1, 2);
+        $service->remove(123);
     }
 }

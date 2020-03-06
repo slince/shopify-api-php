@@ -11,7 +11,7 @@
 
 namespace Slince\Shopify\Model;
 
-class DiscountApplication extends Model
+class DiscountApplication
 {
     /**
      * @var string
@@ -59,13 +59,12 @@ class DiscountApplication extends Model
     /**
      * @param string $type
      *                                                                
-     * @return DiscountApplication
      */
     public function setType($type)
     {
         $this->type = $type;
 
-        return $this;
+        
     }
 
     /**
@@ -79,13 +78,13 @@ class DiscountApplication extends Model
     /**
      * @param string $value
      *                                                                
-     * @return DiscountApplication
+     * 
      */
     public function setValue($value)
     {
         $this->value = $value;
 
-        return $this;
+        
     }
 
     /**
@@ -99,13 +98,13 @@ class DiscountApplication extends Model
     /**
      * @param string $valueType
      *                                                                
-     * @return DiscountApplication
+     * 
      */
     public function setValueType($valueType)
     {
         $this->valueType = $valueType;
 
-        return $this;
+        
     }
 
     /**
@@ -119,13 +118,13 @@ class DiscountApplication extends Model
     /**
      * @param string $allocationMethod
      *                                                                
-     * @return DiscountApplication
+     * 
      */
     public function setAllocationMethod($allocationMethod)
     {
         $this->allocationMethod = $allocationMethod;
 
-        return $this;
+        
     }
 
     /**
@@ -139,13 +138,13 @@ class DiscountApplication extends Model
     /**
      * @param string $targetSelection
      *                                                                
-     * @return DiscountApplication
+     * 
      */
     public function setTargetSelection($targetSelection)
     {
         $this->targetSelection = $targetSelection;
 
-        return $this;
+        
     }
 
     /**
@@ -159,13 +158,13 @@ class DiscountApplication extends Model
     /**
      * @param string $targetType
      *                                                                
-     * @return DiscountApplication
+     * 
      */
     public function setTargetType($targetType)
     {
         $this->targetType = $targetType;
 
-        return $this;
+        
     }
 
     /**
@@ -179,12 +178,12 @@ class DiscountApplication extends Model
     /**
      * @param string $code
      *                                                                
-     * @return DiscountApplication
+     * 
      */
     public function setCode($code)
     {
         $this->code = $code;
 
-        return $this;
+        
     }
 }

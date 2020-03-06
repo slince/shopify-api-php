@@ -1,9 +1,8 @@
 <?php
 
-namespace Slince\Shopify\Tests\Asset;
+namespace Slince\Shopify\Tests\Model;
 
-use Slince\Shopify\Manager\Asset\Asset;
-use Slince\Shopify\Tests\Base\ModelTestCase;
+use Slince\Shopify\Model\Asset;
 
 class AssetTest extends ModelTestCase
 {

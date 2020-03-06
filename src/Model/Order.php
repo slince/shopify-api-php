@@ -296,11 +296,6 @@ class Order extends Model
     protected $refunds;
 
     /**
-     * @var Transaction[]
-     */
-    protected $transactions;
-
-    /**
      * @var array
      */
     protected $paymentDetails;
@@ -1443,25 +1438,6 @@ class Order extends Model
     public function setPaymentDetails($paymentDetails)
     {
         $this->paymentDetails = $paymentDetails;
-
-
-    }
-
-    /**
-     * @return Transaction[]
-     */
-    public function getTransactions()
-    {
-        return $this->transactions;
-    }
-
-    /**
-     * @param Transaction[] $transactions
-     *
-     */
-    public function setTransactions($transactions)
-    {
-        $this->transactions = $transactions;
 
 
     }
