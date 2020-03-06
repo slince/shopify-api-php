@@ -11,7 +11,7 @@
 
 namespace Slince\Shopify\Model;
 
-class Policy extends Model
+class Policy
 {
     /**
      * @var string
