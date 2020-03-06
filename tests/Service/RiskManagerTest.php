@@ -1,9 +1,9 @@
 <?php
 
-namespace Slince\Shopify\Tests\Order;
+namespace Slince\Shopify\Tests\Service;
 
-use Slince\Shopify\Manager\OrderRisk\RiskManager;
-use Slince\Shopify\Tests\Base\NestCurdableTestCase;
+use Slince\Shopify\Service\RiskManager;
+
 
 class RiskManagerTest extends NestCurdableTestCase
 {

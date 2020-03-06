@@ -1,9 +1,9 @@
 <?php
 
-namespace Slince\Shopify\Tests\Customer;
+namespace Slince\Shopify\Tests\Service;
 
-use Slince\Shopify\Manager\CustomerAddress\AddressManager;
-use Slince\Shopify\Tests\Base\NestCurdableTestCase;
+use Slince\Shopify\Service\AddressManager;
+
 
 class AddressManagerTest extends NestCurdableTestCase
 {

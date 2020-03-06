@@ -1,9 +1,9 @@
 <?php
 
-namespace Slince\Shopify\Tests\InventoryItem;
+namespace Slince\Shopify\Tests\Service;
 
-use Slince\Shopify\Manager\InventoryItem\InventoryItemManager;
-use Slince\Shopify\Tests\Base\GeneralCurdableTestCase;
+use Slince\Shopify\Service\InventoryItemManager;
+
 
 class InventoryItemManagerTest extends GeneralCurdableTestCase
 {

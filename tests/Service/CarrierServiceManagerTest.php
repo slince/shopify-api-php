@@ -1,9 +1,9 @@
 <?php
 
-namespace Slince\Shopify\Tests\CarrierService;
+namespace Slince\Shopify\Tests\Service;
 
-use Slince\Shopify\Manager\CarrierService\CarrierServiceManager;
-use Slince\Shopify\Tests\Base\GeneralCurdableTestCase;
+use Slince\Shopify\Service\CarrierServiceManager;
+
 
 class CarrierServiceManagerTest extends GeneralCurdableTestCase
 {

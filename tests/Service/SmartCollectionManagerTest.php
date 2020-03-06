@@ -1,9 +1,9 @@
 <?php
 
-namespace Slince\Shopify\Tests\Collect;
+namespace Slince\Shopify\Tests\Service;
 
-use Slince\Shopify\Manager\SmartCollection\SmartCollectionManager;
-use Slince\Shopify\Tests\Base\GeneralCurdableTestCase;
+use Slince\Shopify\Service\SmartCollectionManager;
+
 
 class SmartCollectionManagerTest extends GeneralCurdableTestCase
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Slince\Shopify\Tests\InventoryLevel;
+namespace Slince\Shopify\Tests\Service;
 
-use Slince\Shopify\Manager\InventoryLevel\InventoryLevelManager;
+use Slince\Shopify\Service\InventoryLevelManager;
 use Slince\Shopify\Tests\TestCase;
 
 class InventoryLevelManagerTest extends TestCase

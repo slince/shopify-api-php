@@ -1,10 +1,9 @@
 <?php
 
-namespace Slince\Shopify\Tests\Order;
+namespace Slince\Shopify\Tests\Service;
 
-use Slince\Shopify\Manager\Refund\Refund;
-use Slince\Shopify\Manager\Refund\RefundManager;
-use Slince\Shopify\Tests\Base\NestCurdableTestCase;
+use Slince\Shopify\Service\RefundManager;
+
 
 class RefundManagerTest extends NestCurdableTestCase
 {

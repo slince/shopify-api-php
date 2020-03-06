@@ -1,9 +1,9 @@
 <?php
 
-namespace Slince\Shopify\Tests\Country;
+namespace Slince\Shopify\Tests\Service;
 
-use Slince\Shopify\Manager\Province\ProvinceManager;
-use Slince\Shopify\Tests\Base\NestCurdableTestCase;
+use Slince\Shopify\Service\ProvinceManager;
+
 
 class ProvinceManagerTest extends NestCurdableTestCase
 {

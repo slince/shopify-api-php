@@ -1,9 +1,9 @@
 <?php
 
-namespace Slince\Shopify\Tests\Asset;
+namespace Slince\Shopify\Tests\Service;
 
-use Slince\Shopify\Manager\Asset\AssetManager;
-use Slince\Shopify\Tests\Base\NestCurdableTestCase;
+use Slince\Shopify\Service\AssetManager;
+
 
 class AssetManagerTest extends NestCurdableTestCase
 {

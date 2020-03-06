@@ -1,11 +1,8 @@
 <?php
 
-namespace Slince\Shopify\Tests\Order;
+namespace Slince\Shopify\Tests\Service;
 
-use Slince\Shopify\Manager\Customer\Customer;
-use Slince\Shopify\Manager\Order\Order;
-use Slince\Shopify\Manager\Order\OrderManager;
-use Slince\Shopify\Tests\Base\GeneralCurdableTestCase;
+use Slince\Shopify\Service\OrderManager;
 
 class OrderManagerTest extends GeneralCurdableTestCase
 {

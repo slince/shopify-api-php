@@ -1,10 +1,8 @@
 <?php
 
-namespace Slince\Shopify\Tests\Location;
+namespace Slince\Shopify\Tests\Service;
 
-use Slince\Shopify\Manager\InventoryLevel\InventoryLevel;
-use Slince\Shopify\Manager\Location\LocationManager;
-use Slince\Shopify\Tests\Base\GeneralCurdableTestCase;
+use Slince\Shopify\Service\LocationManager;
 
 class LocationManagerTest extends GeneralCurdableTestCase
 {

@@ -1,10 +1,8 @@
 <?php
 
-namespace Slince\Shopify\Tests\Order;
+namespace Slince\Shopify\Tests\Service;
 
-use Slince\Shopify\Manager\DraftOrder\DraftOrder;
-use Slince\Shopify\Manager\DraftOrder\DraftOrderManager;
-use Slince\Shopify\Tests\Base\GeneralCurdableTestCase;
+use Slince\Shopify\Service\DraftOrderManager;
 
 class DraftOrderManagerTest extends GeneralCurdableTestCase
 {

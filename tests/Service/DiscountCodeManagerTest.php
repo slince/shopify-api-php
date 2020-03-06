@@ -1,9 +1,9 @@
 <?php
 
-namespace Slince\Shopify\Tests\DiscountCode;
+namespace Slince\Shopify\Tests\Service;
 
-use Slince\Shopify\Manager\DiscountCode\DiscountCodeManager;
-use Slince\Shopify\Tests\Base\NestCurdableTestCase;
+use Slince\Shopify\Service\DiscountCodeManager;
+
 
 class DiscountCodeManagerTest extends NestCurdableTestCase
 {

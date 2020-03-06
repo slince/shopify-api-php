@@ -1,9 +1,9 @@
 <?php
 
-namespace Slince\Shopify\Tests\FulfillmentService;
+namespace Slince\Shopify\Tests\Service;
 
-use Slince\Shopify\Manager\FulfillmentService\FulfillmentServiceManager;
-use Slince\Shopify\Tests\Base\GeneralCurdableTestCase;
+use Slince\Shopify\Service\FulfillmentServiceManager;
+
 
 class FulfillmentServiceManagerTest extends GeneralCurdableTestCase
 {

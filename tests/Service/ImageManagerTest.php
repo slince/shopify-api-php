@@ -1,9 +1,9 @@
 <?php
 
-namespace Slince\Shopify\Tests\Product;
+namespace Slince\Shopify\Tests\Service;
 
-use Slince\Shopify\Manager\ProductImage\ImageManager;
-use Slince\Shopify\Tests\Base\NestCurdableTestCase;
+use Slince\Shopify\Service\ImageManager;
+
 
 class ImageManagerTest extends NestCurdableTestCase
 {

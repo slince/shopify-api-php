@@ -1,9 +1,9 @@
 <?php
 
-namespace Slince\Shopify\Tests\Collect;
+namespace Slince\Shopify\Tests\Service;
 
-use Slince\Shopify\Manager\Collect\CollectManager;
-use Slince\Shopify\Tests\Base\GeneralCurdableTestCase;
+use Slince\Shopify\Service\CollectManager;
+
 
 class CollectManagerTest extends GeneralCurdableTestCase
 {

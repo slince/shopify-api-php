@@ -1,9 +1,9 @@
 <?php
 
-namespace Slince\Shopify\Tests\ShippingZone;
+namespace Slince\Shopify\Tests\Service;
 
-use Slince\Shopify\Manager\ShippingZone\ShippingZoneManager;
-use Slince\Shopify\Tests\Base\GeneralCurdableTestCase;
+use Slince\Shopify\Service\ShippingZoneManager;
+
 
 class ShippingZoneManagerTest extends GeneralCurdableTestCase
 {

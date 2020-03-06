@@ -1,9 +1,9 @@
 <?php
 
-namespace Slince\Shopify\Tests\ScriptTag;
+namespace Slince\Shopify\Tests\Service;
 
-use Slince\Shopify\Manager\ScriptTag\ScriptTagManager;
-use Slince\Shopify\Tests\Base\GeneralCurdableTestCase;
+use Slince\Shopify\Service\ScriptTagManager;
+
 
 class ScriptTagManagerTest extends GeneralCurdableTestCase
 {

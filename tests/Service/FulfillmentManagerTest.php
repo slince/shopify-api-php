@@ -1,9 +1,9 @@
 <?php
 
-namespace Slince\Shopify\Tests\Order;
+namespace Slince\Shopify\Tests\Service;
 
-use Slince\Shopify\Manager\Fulfillment\FulfillmentManager;
-use Slince\Shopify\Tests\Base\NestCurdableTestCase;
+use Slince\Shopify\Service\FulfillmentManager;
+
 
 class FulfillmentManagerTest extends NestCurdableTestCase
 {

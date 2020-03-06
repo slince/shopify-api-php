@@ -1,9 +1,9 @@
 <?php
 
-namespace Slince\Shopify\Tests\Theme;
+namespace Slince\Shopify\Tests\Service;
 
-use Slince\Shopify\Manager\Theme\ThemeManager;
-use Slince\Shopify\Tests\Base\GeneralCurdableTestCase;
+use Slince\Shopify\Service\ThemeManager;
+
 
 class ThemeManagerTest extends GeneralCurdableTestCase
 {

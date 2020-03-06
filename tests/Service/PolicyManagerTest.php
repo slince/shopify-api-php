@@ -1,9 +1,9 @@
 <?php
 
-namespace Slince\Shopify\Tests\Policy;
+namespace Slince\Shopify\Tests\Service;
 
-use Slince\Shopify\Manager\Policy\PolicyManager;
-use Slince\Shopify\Tests\Base\GeneralCurdableTestCase;
+use Slince\Shopify\Service\PolicyManager;
+
 
 class PolicyManagerTest extends GeneralCurdableTestCase
 {

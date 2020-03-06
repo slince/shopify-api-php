@@ -1,9 +1,9 @@
 <?php
 
-namespace Slince\Shopify\Tests\Comment;
+namespace Slince\Shopify\Tests\Service;
 
-use Slince\Shopify\Manager\Comment\CommentManager;
-use Slince\Shopify\Tests\Base\GeneralCurdableTestCase;
+use Slince\Shopify\Service\CommentManager;
+
 
 class CommentManagerTest extends GeneralCurdableTestCase
 {

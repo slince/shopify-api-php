@@ -1,9 +1,9 @@
 <?php
 
-namespace Slince\Shopify\Tests\Product;
+namespace Slince\Shopify\Tests\Service;
 
-use Slince\Shopify\Manager\Product\ProductManager;
-use Slince\Shopify\Tests\Base\GeneralCurdableTestCase;
+use Slince\Shopify\Service\ProductManager;
+
 
 class ProductManagerTest extends GeneralCurdableTestCase
 {

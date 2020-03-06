@@ -1,9 +1,9 @@
 <?php
 
-namespace Slince\Shopify\Tests\Product;
+namespace Slince\Shopify\Tests\Service;
 
-use Slince\Shopify\Manager\ProductVariant\VariantManager;
-use Slince\Shopify\Tests\Base\NestCurdableTestCase;
+use Slince\Shopify\Service\VariantManager;
+
 
 class VariantManagerTest extends NestCurdableTestCase
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Slince\Shopify\Tests\Article;
+namespace Slince\Shopify\Tests\Service;
 
-use Slince\Shopify\Manager\Article\ArticleManager;
-use Slince\Shopify\Tests\Base\NestCurdableTestCase;
+use Slince\Shopify\Service\ArticleManager;
+
 
 class ArticleManagerTest extends NestCurdableTestCase
 {
