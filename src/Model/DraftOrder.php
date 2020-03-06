@@ -113,7 +113,7 @@ class DraftOrder extends Model
     /**
      * @var string
      */
-    protected $tag;
+    protected $tags;
 
     /**
      * @var string
@@ -447,17 +447,17 @@ class DraftOrder extends Model
     /**
      * @return string
      */
-    public function getTag()
+    public function getTags()
     {
-        return $this->tag;
+        return $this->tags;
     }
 
     /**
-     * @param string $tag
+     * @param string $tags
      */
-    public function setTag($tag)
+    public function setTags($tags)
     {
-        $this->tag = $tag;
+        $this->tags = $tags;
     }
 
     /**

@@ -14,6 +14,7 @@
     "updated_at": "2017-01-05T15:36:16-05:00",
     "country_code": "US",
     "country_name": "United States",
-    "province_code": null
+    "province_code": null,
+    "admin_graphql_api_id": "gid://shopify/OnlineStoreArticle/134645308"
   }
 }

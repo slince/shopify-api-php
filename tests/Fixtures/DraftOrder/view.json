@@ -89,6 +89,7 @@
         "total_price": "4.52",
         "subtotal_price": "4.52",
         "total_tax": "0.00",
-        "customer": null
+        "customer": null,
+        "admin_graphql_api_id": "gid://shopify/OnlineStoreArticle/134645308"
     }
 }

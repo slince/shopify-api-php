@@ -1,14 +1,17 @@
 {
-  "fulfillment_service": {
+  "fulfillment_service":  {
     "id": 755357713,
-    "name": "Shipwire App",
-    "handle": "shipwire-app",
+    "name": "Mars Fulfillment",
     "email": null,
+    "service_name": "Mars Fulfillment",
+    "handle": "mars-fulfillment",
+    "fulfillment_orders_opt_in": true,
     "include_pending_stock": false,
-    "requires_shipping_method": false,
-    "service_name": "Shipwire App",
-    "inventory_management": true,
+    "provider_id": null,
+    "location_id": 48752903,
+    "callback_url": "http://google.com/",
     "tracking_support": true,
-    "provider_id": null
+    "inventory_management": true,
+    "requires_shipping_method": true
   }
 }

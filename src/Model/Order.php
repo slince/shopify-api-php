@@ -271,12 +271,12 @@ class Order extends Model
     protected $shippingLines;
 
     /**
-     * @var Address
+     * @var OrderAddress
      */
     protected $billingAddress;
 
     /**
-     * @var Address
+     * @var OrderAddress
      */
     protected $shippingAddress;
 
@@ -1331,7 +1331,7 @@ class Order extends Model
     }
 
     /**
-     * @return Address
+     * @return OrderAddress
      */
     public function getBillingAddress()
     {
@@ -1339,11 +1339,11 @@ class Order extends Model
     }
 
     /**
-     * @param Address $billingAddress
+     * @param OrderAddress $billingAddress
      *
 
      */
-    public function setBillingAddress(Address $billingAddress)
+    public function setBillingAddress(OrderAddress $billingAddress)
     {
         $this->billingAddress = $billingAddress;
 
@@ -1351,7 +1351,7 @@ class Order extends Model
     }
 
     /**
-     * @return Address
+     * @return OrderAddress
      */
     public function getShippingAddress()
     {
@@ -1359,11 +1359,11 @@ class Order extends Model
     }
 
     /**
-     * @param Address $shippingAddress
+     * @param OrderAddress $shippingAddress
      *
 
      */
-    public function setShippingAddress(Address $shippingAddress)
+    public function setShippingAddress(OrderAddress $shippingAddress)
     {
         $this->shippingAddress = $shippingAddress;
 

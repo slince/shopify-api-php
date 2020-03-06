@@ -55,6 +55,7 @@
       "country_code": "US",
       "country_name": "United States",
       "default": true
-    }
+    },
+    "admin_graphql_api_id": "gid://shopify/OnlineStoreArticle/134645308"
   }
 }
