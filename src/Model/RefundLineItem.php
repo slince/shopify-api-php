@@ -49,13 +49,13 @@ class RefundLineItem extends Model
     /**
      * @param int $quantity
      *
-     * @return RefundLineItem
+
      */
     public function setQuantity($quantity)
     {
         $this->quantity = $quantity;
 
-        return $this;
+
     }
 
     /**
@@ -69,13 +69,13 @@ class RefundLineItem extends Model
     /**
      * @param int $lineItemId
      *
-     * @return RefundLineItem
+
      */
     public function setLineItemId($lineItemId)
     {
         $this->lineItemId = $lineItemId;
 
-        return $this;
+
     }
 
     /**
@@ -89,13 +89,13 @@ class RefundLineItem extends Model
     /**
      * @param float $subtotal
      *
-     * @return RefundLineItem
+
      */
     public function setSubtotal($subtotal)
     {
         $this->subtotal = $subtotal;
 
-        return $this;
+
     }
 
     /**
@@ -109,13 +109,13 @@ class RefundLineItem extends Model
     /**
      * @param float $totalTax
      *
-     * @return RefundLineItem
+
      */
     public function setTotalTax($totalTax)
     {
         $this->totalTax = $totalTax;
 
-        return $this;
+
     }
 
     /**
@@ -129,12 +129,12 @@ class RefundLineItem extends Model
     /**
      * @param LineItem $lineItem
      *
-     * @return RefundLineItem
+
      */
     public function setLineItem($lineItem)
     {
         $this->lineItem = $lineItem;
 
-        return $this;
+
     }
 }

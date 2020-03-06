@@ -58,6 +58,9 @@ abstract class ModelTestCase extends TestCase
         foreach ($this->propertyInfo->getProperties($modelClass) as $property) {
             $snake = Inflector::tableize($property);
             $value = $this->propertyAccessor->getValue($obj, $property);
+            if (!isset($data[$snake])) {
+                continue;
+            }
             if (is_scalar($value) || is_null($value)) {
                 $this->assertEquals($value, $data[$snake]);
             } else {

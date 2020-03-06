@@ -26,7 +26,7 @@ class RecurringApplicationCharge extends Model
     /**
      * @var string
      */
-    protected $canceledOn;
+    protected $cancelledOn;
 
     /**
      * @var int
@@ -136,19 +136,19 @@ class RecurringApplicationCharge extends Model
     /**
      * @return string
      */
-    public function getCanceledOn()
+    public function getCancelledOn()
     {
-        return $this->canceledOn;
+        return $this->cancelledOn;
     }
 
     /**
-     * @param string $canceledOn
+     * @param string $cancelledOn
      *                                                                
      * @return RecurringApplicationCharge
      */
-    public function setCanceledOn($canceledOn)
+    public function setCancelledOn($cancelledOn)
     {
-        $this->canceledOn = $canceledOn;
+        $this->cancelledOn = $cancelledOn;
 
         return $this;
     }

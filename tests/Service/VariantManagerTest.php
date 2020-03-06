@@ -9,7 +9,7 @@ class VariantManagerTest extends NestCurdableTestCase
 {
     public function getFixturesDir()
     {
-        return 'ProductVariant';
+        return 'Variant';
     }
 
     public function getServiceClass()
