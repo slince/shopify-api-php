@@ -351,9 +351,6 @@ class Order extends Model
         $this->closedAt = $closedAt;
     }
 
-    /**
-     * @param DateTime $deletedAt
-     */
     public function setDeletedAt(DateTime $deletedAt)
     {
         $this->deletedAt = $deletedAt;
@@ -700,9 +697,6 @@ class Order extends Model
         return $this->cancelledAt;
     }
 
-    /**
-     * @param DateTime $cancelledAt
-     */
     public function setCancelledAt(DateTime $cancelledAt)
     {
         $this->cancelledAt = $cancelledAt;
@@ -844,9 +838,6 @@ class Order extends Model
         return $this->processedAt;
     }
 
-    /**
-     * @param DateTime $processedAt
-     */
     public function setProcessedAt(DateTime $processedAt)
     {
         $this->processedAt = $processedAt;
@@ -1231,9 +1222,6 @@ class Order extends Model
         $this->refunds = $refunds;
     }
 
-    /**
-     * @param Refund $refund
-     */
     public function addRefund(Refund $refund)
     {
         $this->refunds[] = $refund;
@@ -1255,9 +1243,6 @@ class Order extends Model
         $this->transactions = $transactions;
     }
 
-    /**
-     * @param Transaction $transaction
-     */
     public function addTransaction(Transaction $transaction)
     {
         $this->transactions[] = $transaction;
@@ -1271,9 +1256,6 @@ class Order extends Model
         return $this->paymentDetails;
     }
 
-    /**
-     * @param PaymentDetails $paymentDetails
-     */
     public function setPaymentDetails(PaymentDetails $paymentDetails)
     {
         $this->paymentDetails = $paymentDetails;
@@ -1295,9 +1277,6 @@ class Order extends Model
         $this->discountApplications = $discountApplications;
     }
 
-    /**
-     * @param DiscountApplication $discountApplication
-     */
     public function addDiscountApplication(DiscountApplication $discountApplication)
     {
         $this->discountApplications[] = $discountApplication;

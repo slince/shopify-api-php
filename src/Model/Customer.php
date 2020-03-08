@@ -394,9 +394,6 @@ class Customer extends Model
         $this->addresses = $addresses;
     }
 
-    /**
-     * @param Address $address
-     */
     public function addAddress(Address $address)
     {
         $this->addresses[] = $address;

@@ -214,9 +214,6 @@ class DraftOrder extends Model
         return $this->invoiceSentAt;
     }
 
-    /**
-     * @param DateTime $invoiceSentAt
-     */
     public function setInvoiceSentAt(DateTime $invoiceSentAt)
     {
         $this->invoiceSentAt = $invoiceSentAt;
@@ -256,9 +253,6 @@ class DraftOrder extends Model
         return $this->taxExempt;
     }
 
-    /**
-     * @param bool $taxExempt
-     */
     public function setTaxExempt(bool $taxExempt)
     {
         $this->taxExempt = $taxExempt;
@@ -272,9 +266,6 @@ class DraftOrder extends Model
         return $this->completedAt;
     }
 
-    /**
-     * @param DateTime $completedAt
-     */
     public function setCompletedAt(DateTime $completedAt)
     {
         $this->completedAt = $completedAt;
@@ -341,9 +332,6 @@ class DraftOrder extends Model
         return $this->shippingAddress;
     }
 
-    /**
-     * @param OrderAddress $shippingAddress
-     */
     public function setShippingAddress(OrderAddress $shippingAddress)
     {
         $this->shippingAddress = $shippingAddress;
@@ -357,9 +345,6 @@ class DraftOrder extends Model
         return $this->billingAddress;
     }
 
-    /**
-     * @param OrderAddress $billingAddress
-     */
     public function setBillingAddress(OrderAddress $billingAddress)
     {
         $this->billingAddress = $billingAddress;
@@ -445,9 +430,6 @@ class DraftOrder extends Model
         $this->taxLines = $taxLines;
     }
 
-    /**
-     * @param TaxLine $taxLine
-     */
     public function addTaxLine(TaxLine $taxLine)
     {
         $this->taxLines[] = $taxLine;

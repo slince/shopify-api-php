@@ -123,8 +123,6 @@ class LineItem extends Model
 
     /**
      * @param int $fulfillableQuantity
-     *
-
      */
     public function setFulfillableQuantity($fulfillableQuantity)
     {
@@ -141,8 +139,6 @@ class LineItem extends Model
 
     /**
      * @param string $fulfillmentService
-     *
-
      */
     public function setFulfillmentService($fulfillmentService)
     {
@@ -159,8 +155,6 @@ class LineItem extends Model
 
     /**
      * @param string $fulfillmentStatus
-     *
-
      */
     public function setFulfillmentStatus($fulfillmentStatus)
     {
@@ -177,8 +171,6 @@ class LineItem extends Model
 
     /**
      * @param int $grams
-     *
-
      */
     public function setGrams($grams)
     {
@@ -195,8 +187,6 @@ class LineItem extends Model
 
     /**
      * @param string $price
-     *
-
      */
     public function setPrice($price)
     {
@@ -213,8 +203,6 @@ class LineItem extends Model
 
     /**
      * @param int $productId
-     *
-
      */
     public function setProductId($productId)
     {
@@ -231,8 +219,6 @@ class LineItem extends Model
 
     /**
      * @param int $quantity
-     *
-
      */
     public function setQuantity($quantity)
     {
@@ -249,8 +235,6 @@ class LineItem extends Model
 
     /**
      * @param bool $requiresShipping
-     *
-
      */
     public function setRequiresShipping($requiresShipping)
     {
@@ -267,8 +251,6 @@ class LineItem extends Model
 
     /**
      * @param string $sku
-     *
-
      */
     public function setSku($sku)
     {
@@ -285,8 +267,6 @@ class LineItem extends Model
 
     /**
      * @param string $title
-     *
-
      */
     public function setTitle($title)
     {
@@ -303,8 +283,6 @@ class LineItem extends Model
 
     /**
      * @param int $variantId
-     *
-
      */
     public function setVariantId($variantId)
     {
@@ -321,8 +299,6 @@ class LineItem extends Model
 
     /**
      * @param string $variantTitle
-     *
-
      */
     public function setVariantTitle($variantTitle)
     {
@@ -339,8 +315,6 @@ class LineItem extends Model
 
     /**
      * @param string $vendor
-     *
-
      */
     public function setVendor($vendor)
     {
@@ -357,8 +331,6 @@ class LineItem extends Model
 
     /**
      * @param string $name
-     *
-
      */
     public function setName($name)
     {
@@ -375,8 +347,6 @@ class LineItem extends Model
 
     /**
      * @param bool $giftCard
-     *
-
      */
     public function setGiftCard($giftCard)
     {
@@ -393,8 +363,6 @@ class LineItem extends Model
 
     /**
      * @param array $properties
-     *
-
      */
     public function setProperties($properties)
     {
@@ -411,8 +379,6 @@ class LineItem extends Model
 
     /**
      * @param bool $taxable
-     *
-
      */
     public function setTaxable($taxable)
     {
@@ -429,8 +395,6 @@ class LineItem extends Model
 
     /**
      * @param TaxLine[] $taxLines
-     *
-
      */
     public function setTaxLines($taxLines)
     {
@@ -447,8 +411,6 @@ class LineItem extends Model
 
     /**
      * @param float $totalDiscount
-     *
-
      */
     public function setTotalDiscount($totalDiscount)
     {
@@ -465,16 +427,12 @@ class LineItem extends Model
 
     /**
      * @param DiscountAllocation[] $discountAllocations
-     *
      */
     public function setDiscountAllocations($discountAllocations)
     {
         $this->discountAllocations = $discountAllocations;
     }
 
-    /**
-     * @param DiscountAllocation $discountAllocation
-     */
     public function addDiscountAllocation(DiscountAllocation $discountAllocation)
     {
         $this->discountAllocations[] = $discountAllocation;

@@ -118,9 +118,6 @@ class Country extends Model
         $this->provinces = $provinces;
     }
 
-    /**
-     * @param Province $province
-     */
     public function addProvince(Province $province)
     {
         $this->provinces[] = $province;

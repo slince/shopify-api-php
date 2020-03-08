@@ -196,9 +196,6 @@ class Refund extends Model
         $this->transactions = $transactions;
     }
 
-    /**
-     * @param Transaction $transaction
-     */
     public function addTransaction(Transaction $transaction)
     {
         $this->transactions[] = $transaction;

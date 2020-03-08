@@ -58,8 +58,6 @@ class ShippingLine extends Model
 
     /**
      * @param string $code
-     *
-
      */
     public function setCode($code)
     {
@@ -76,8 +74,6 @@ class ShippingLine extends Model
 
     /**
      * @param float $price
-     *
-
      */
     public function setPrice($price)
     {
@@ -94,8 +90,6 @@ class ShippingLine extends Model
 
     /**
      * @param string $source
-     *
-
      */
     public function setSource($source)
     {
@@ -112,8 +106,6 @@ class ShippingLine extends Model
 
     /**
      * @param string $title
-     *
-
      */
     public function setTitle($title)
     {
@@ -130,7 +122,6 @@ class ShippingLine extends Model
 
     /**
      * @param array $taxLines
-     *
      */
     public function setTaxLines($taxLines)
     {
@@ -139,7 +130,6 @@ class ShippingLine extends Model
 
     /**
      * @param array $taxLines
-     *
      */
     public function addTaxLines($taxLines)
     {
@@ -161,8 +151,6 @@ class ShippingLine extends Model
 
     /**
      * @param string $carrierIdentifier
-     *
-
      */
     public function setCarrierIdentifier($carrierIdentifier)
     {
@@ -179,8 +167,6 @@ class ShippingLine extends Model
 
     /**
      * @param string $requestedFulfillmentServiceId
-     *
-
      */
     public function setRequestedFulfillmentServiceId($requestedFulfillmentServiceId)
     {

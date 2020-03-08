@@ -97,8 +97,6 @@ class Fulfillment extends Model
 
     /**
      * @param int $locationId
-     *
-
      */
     public function setLocationId($locationId)
     {
@@ -115,8 +113,6 @@ class Fulfillment extends Model
 
     /**
      * @param string $service
-     *
-
      */
     public function setService($service)
     {
@@ -133,8 +129,6 @@ class Fulfillment extends Model
 
     /**
      * @param string $shipmentStatus
-     *
-
      */
     public function setShipmentStatus($shipmentStatus)
     {
@@ -151,8 +145,6 @@ class Fulfillment extends Model
 
     /**
      * @param string $trackingUrl
-     *
-
      */
     public function setTrackingUrl($trackingUrl)
     {
@@ -169,8 +161,6 @@ class Fulfillment extends Model
 
     /**
      * @param array $trackingUrls
-     *
-
      */
     public function setTrackingUrls($trackingUrls)
     {
@@ -187,8 +177,6 @@ class Fulfillment extends Model
 
     /**
      * @param array $receipt
-     *
-
      */
     public function setReceipt($receipt)
     {
@@ -203,9 +191,6 @@ class Fulfillment extends Model
         return $this->createdAt;
     }
 
-    /**
-
-     */
     public function setCreatedAt(DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
@@ -219,9 +204,6 @@ class Fulfillment extends Model
         return $this->updatedAt;
     }
 
-    /**
-
-     */
     public function setUpdatedAt(DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
@@ -237,8 +219,6 @@ class Fulfillment extends Model
 
     /**
      * @param int $orderId
-     *
-
      */
     public function setOrderId($orderId)
     {
@@ -255,8 +235,6 @@ class Fulfillment extends Model
 
     /**
      * @param string $status
-     *
-
      */
     public function setStatus($status)
     {
@@ -273,8 +251,6 @@ class Fulfillment extends Model
 
     /**
      * @param string $trackingCompany
-     *
-
      */
     public function setTrackingCompany($trackingCompany)
     {
@@ -291,8 +267,6 @@ class Fulfillment extends Model
 
     /**
      * @param string $trackingNumber
-     *
-
      */
     public function setTrackingNumber($trackingNumber)
     {
@@ -309,8 +283,6 @@ class Fulfillment extends Model
 
     /**
      * @param LineItem[] $lineItems
-     *
-
      */
     public function setLineItems($lineItems)
     {
@@ -332,8 +304,6 @@ class Fulfillment extends Model
 
     /**
      * @param array $trackingNumbers
-     *
-
      */
     public function setTrackingNumbers($trackingNumbers)
     {

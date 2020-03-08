@@ -97,8 +97,6 @@ class Location extends Model
 
     /**
      * @param string $name
-     *
-
      */
     public function setName($name)
     {
@@ -113,11 +111,6 @@ class Location extends Model
         return $this->deletedAt;
     }
 
-    /**
-     * @param DateTime $deletedAt
-     *
-
-     */
     public function setDeletedAt(DateTime $deletedAt)
     {
         $this->deletedAt = $deletedAt;
@@ -133,8 +126,6 @@ class Location extends Model
 
     /**
      * @param string $address1
-     *
-
      */
     public function setAddress1($address1)
     {
@@ -151,8 +142,6 @@ class Location extends Model
 
     /**
      * @param string $address2
-     *
-
      */
     public function setAddress2($address2)
     {
@@ -169,8 +158,6 @@ class Location extends Model
 
     /**
      * @param string $city
-     *
-
      */
     public function setCity($city)
     {
@@ -187,8 +174,6 @@ class Location extends Model
 
     /**
      * @param string $zip
-     *
-
      */
     public function setZip($zip)
     {
@@ -205,8 +190,6 @@ class Location extends Model
 
     /**
      * @param string $province
-     *
-
      */
     public function setProvince($province)
     {
@@ -223,8 +206,6 @@ class Location extends Model
 
     /**
      * @param string $country
-     *
-
      */
     public function setCountry($country)
     {
@@ -241,8 +222,6 @@ class Location extends Model
 
     /**
      * @param int $phone
-     *
-
      */
     public function setPhone($phone)
     {
@@ -257,9 +236,6 @@ class Location extends Model
         return $this->createdAt;
     }
 
-    /**
-
-     */
     public function setCreatedAt(DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
@@ -273,9 +249,6 @@ class Location extends Model
         return $this->updatedAt;
     }
 
-    /**
-
-     */
     public function setUpdatedAt(DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
@@ -291,8 +264,6 @@ class Location extends Model
 
     /**
      * @param string $countryCode
-     *
-
      */
     public function setCountryCode($countryCode)
     {
@@ -309,8 +280,6 @@ class Location extends Model
 
     /**
      * @param string $countryName
-     *
-
      */
     public function setCountryName($countryName)
     {
@@ -327,8 +296,6 @@ class Location extends Model
 
     /**
      * @param string $provinceCode
-     *
-
      */
     public function setProvinceCode($provinceCode)
     {

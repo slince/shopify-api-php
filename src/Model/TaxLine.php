@@ -38,8 +38,6 @@ class TaxLine
 
     /**
      * @param string $title
-     *
-
      */
     public function setTitle($title)
     {
@@ -56,8 +54,6 @@ class TaxLine
 
     /**
      * @param float $price
-     *
-
      */
     public function setPrice($price)
     {
@@ -74,8 +70,6 @@ class TaxLine
 
     /**
      * @param float $rate
-     *
-
      */
     public function setRate($rate)
     {

@@ -195,9 +195,6 @@ class PriceRule extends Model
         return $this->endsAt;
     }
 
-    /**
-     * @param DateTime $endsAt
-     */
     public function setEndsAt(DateTime $endsAt)
     {
         $this->endsAt = $endsAt;
@@ -371,9 +368,6 @@ class PriceRule extends Model
         return $this->startsAt;
     }
 
-    /**
-     * @param DateTime $startsAt
-     */
     public function setStartsAt(DateTime $startsAt)
     {
         $this->startsAt = $startsAt;

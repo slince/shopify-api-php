@@ -16,7 +16,7 @@ class Address
     use AddressTrait;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $default;
 
@@ -28,9 +28,6 @@ class Address
         return $this->default;
     }
 
-    /**
-     * @param bool $default
-     */
     public function setDefault(bool $default): void
     {
         $this->default = $default;

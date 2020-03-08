@@ -53,8 +53,6 @@ class ShippingZone extends Model
 
     /**
      * @param string $name
-     *
-
      */
     public function setName($name)
     {
@@ -71,8 +69,6 @@ class ShippingZone extends Model
 
     /**
      * @param Country[] $countries
-     *
-
      */
     public function setCountries($countries)
     {
@@ -81,8 +77,6 @@ class ShippingZone extends Model
 
     /**
      * @param Country $country
-     *
-
      */
     public function addCountry($country)
     {
@@ -99,8 +93,6 @@ class ShippingZone extends Model
 
     /**
      * @param Province[] $provinces
-     *
-
      */
     public function setProvinces($provinces)
     {
@@ -109,10 +101,8 @@ class ShippingZone extends Model
 
     /**
      * @param Province $province
-     *
-
      */
-    public function addProvinces($province)
+    public function addProvince($province)
     {
         $this->provinces[] = $province;
     }
@@ -127,8 +117,6 @@ class ShippingZone extends Model
 
     /**
      * @param array $carrierShippingRateProviders
-     *
-
      */
     public function setCarrierShippingRateProviders($carrierShippingRateProviders)
     {
@@ -145,8 +133,6 @@ class ShippingZone extends Model
 
     /**
      * @param array $priceBasedShippingRates
-     *
-
      */
     public function setPriceBasedShippingRates($priceBasedShippingRates)
     {
@@ -163,8 +149,6 @@ class ShippingZone extends Model
 
     /**
      * @param array $weightBasedShippingRates
-     *
-
      */
     public function setWeightBasedShippingRates($weightBasedShippingRates)
     {
