@@ -108,8 +108,6 @@ class Product extends Model
     public function setTitle($title)
     {
         $this->title = $title;
-
-
     }
 
     /**
@@ -128,8 +126,6 @@ class Product extends Model
     public function setBodyHtml($bodyHtml)
     {
         $this->bodyHtml = $bodyHtml;
-
-
     }
 
     /**
@@ -148,8 +144,6 @@ class Product extends Model
     public function setVendor($vendor)
     {
         $this->vendor = $vendor;
-
-
     }
 
     /**
@@ -168,8 +162,6 @@ class Product extends Model
     public function setProductType($productType)
     {
         $this->productType = $productType;
-
-
     }
 
     /**
@@ -181,15 +173,11 @@ class Product extends Model
     }
 
     /**
-     * @param DateTime $createdAt
-     *
      * @return Product
      */
     public function setCreatedAt(DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
-
-
     }
 
     /**
@@ -208,8 +196,6 @@ class Product extends Model
     public function setHandle($handle)
     {
         $this->handle = $handle;
-
-
     }
 
     /**
@@ -221,15 +207,11 @@ class Product extends Model
     }
 
     /**
-     * @param DateTime $updatedAt
-     *
      * @return Product
      */
     public function setUpdatedAt(DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
-
-
     }
 
     /**
@@ -241,15 +223,11 @@ class Product extends Model
     }
 
     /**
-     * @param DateTime $publishedAt
-     *
      * @return Product
      */
     public function setPublishedAt(DateTime $publishedAt)
     {
         $this->publishedAt = $publishedAt;
-
-
     }
 
     /**
@@ -268,8 +246,6 @@ class Product extends Model
     public function setTemplateSuffix($templateSuffix)
     {
         $this->templateSuffix = $templateSuffix;
-
-
     }
 
     /**
@@ -288,8 +264,6 @@ class Product extends Model
     public function setPublishedScope($publishedScope)
     {
         $this->publishedScope = $publishedScope;
-
-
     }
 
     /**
@@ -308,8 +282,6 @@ class Product extends Model
     public function setTags($tags)
     {
         $this->tags = $tags;
-
-
     }
 
     /**
@@ -328,8 +300,6 @@ class Product extends Model
     public function setVariants($variants)
     {
         $this->variants = $variants;
-
-
     }
 
     /**
@@ -348,8 +318,6 @@ class Product extends Model
     public function setImages($images)
     {
         $this->images = $images;
-
-
     }
 
     /**
@@ -368,8 +336,6 @@ class Product extends Model
     public function setImage($image)
     {
         $this->image = $image;
-
-
     }
 
     /**
@@ -388,7 +354,5 @@ class Product extends Model
     public function setOptions($options)
     {
         $this->options = $options;
-
-
     }
 }

@@ -87,14 +87,10 @@ class Article extends Model
 
     /**
      * @param string $title
-     *
-
      */
     public function setTitle($title)
     {
         $this->title = $title;
-
-
     }
 
     /**
@@ -105,16 +101,9 @@ class Article extends Model
         return $this->createdAt;
     }
 
-    /**
-     * @param DateTime $createdAt
-     *
-
-     */
     public function setCreatedAt(DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
-
-
     }
 
     /**
@@ -127,14 +116,10 @@ class Article extends Model
 
     /**
      * @param string $bodyHtml
-     *
-
      */
     public function setBodyHtml($bodyHtml)
     {
         $this->bodyHtml = $bodyHtml;
-
-
     }
 
     /**
@@ -147,14 +132,10 @@ class Article extends Model
 
     /**
      * @param int $blogId
-     *
-
      */
     public function setBlogId($blogId)
     {
         $this->blogId = $blogId;
-
-
     }
 
     /**
@@ -167,14 +148,10 @@ class Article extends Model
 
     /**
      * @param string $author
-     *
-
      */
     public function setAuthor($author)
     {
         $this->author = $author;
-
-
     }
 
     /**
@@ -187,14 +164,10 @@ class Article extends Model
 
     /**
      * @param int $userId
-     *
-
      */
     public function setUserId($userId)
     {
         $this->userId = $userId;
-
-
     }
 
     /**
@@ -205,16 +178,9 @@ class Article extends Model
         return $this->publishedAt;
     }
 
-    /**
-     * @param DateTime $publishedAt
-     *
-
-     */
     public function setPublishedAt(DateTime $publishedAt)
     {
         $this->publishedAt = $publishedAt;
-
-
     }
 
     /**
@@ -225,16 +191,9 @@ class Article extends Model
         return $this->updatedAt;
     }
 
-    /**
-     * @param DateTime $updatedAt
-     *
-
-     */
     public function setUpdatedAt(DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
-
-
     }
 
     /**
@@ -247,14 +206,10 @@ class Article extends Model
 
     /**
      * @param string $summaryHtml
-     *
-
      */
     public function setSummaryHtml($summaryHtml)
     {
         $this->summaryHtml = $summaryHtml;
-
-
     }
 
     /**
@@ -267,14 +222,10 @@ class Article extends Model
 
     /**
      * @param string $templateSuffix
-     *
-
      */
     public function setTemplateSuffix($templateSuffix)
     {
         $this->templateSuffix = $templateSuffix;
-
-
     }
 
     /**
@@ -287,14 +238,10 @@ class Article extends Model
 
     /**
      * @param string $handle
-     *
-
      */
     public function setHandle($handle)
     {
         $this->handle = $handle;
-
-
     }
 
     /**
@@ -307,13 +254,9 @@ class Article extends Model
 
     /**
      * @param string $tags
-     *
-
      */
     public function setTags($tags)
     {
         $this->tags = $tags;
-
-
     }
 }

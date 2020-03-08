@@ -54,7 +54,7 @@ class AddressManager extends NestCrudable implements AddressManagerInterface
      */
     public function bulkSet($customerId, array $ids, $operation)
     {
-        $resource = 'customers/' . $customerId . '/addresses/set';
+        $resource = 'customers/'.$customerId.'/addresses/set';
         $query = [
             'address_ids' => $ids,
             'operation' => $operation,
@@ -67,7 +67,7 @@ class AddressManager extends NestCrudable implements AddressManagerInterface
      */
     public function setDefault($customerId, $id)
     {
-        $data = $this->client->put('customers/' . $customerId . '/addresses/' . $id . '/default', []);
+        $data = $this->client->put('customers/'.$customerId.'/addresses/'.$id.'/default', []);
 
         return $this->fromArray($data['customer_address']);
     }

@@ -68,8 +68,6 @@ class Theme extends Model
     public function setName($name)
     {
         $this->name = $name;
-
-
     }
 
     /**
@@ -81,15 +79,11 @@ class Theme extends Model
     }
 
     /**
-     * @param DateTime $createdAt
-     *
      * @return Theme
      */
     public function setCreatedAt(DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
-
-
     }
 
     /**
@@ -101,15 +95,11 @@ class Theme extends Model
     }
 
     /**
-     * @param DateTime $updatedAt
-     *
      * @return Theme
      */
     public function setUpdatedAt(DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
-
-
     }
 
     /**
@@ -128,8 +118,6 @@ class Theme extends Model
     public function setRole($role)
     {
         $this->role = $role;
-
-
     }
 
     /**
@@ -148,8 +136,6 @@ class Theme extends Model
     public function setThemeStoreId($themeStoreId)
     {
         $this->themeStoreId = $themeStoreId;
-
-
     }
 
     /**
@@ -168,8 +154,6 @@ class Theme extends Model
     public function setPreviewable($previewable)
     {
         $this->previewable = $previewable;
-
-
     }
 
     /**
@@ -188,7 +172,5 @@ class Theme extends Model
     public function setProcessing($processing)
     {
         $this->processing = $processing;
-
-
     }
 }

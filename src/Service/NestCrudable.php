@@ -21,7 +21,6 @@ abstract class NestCrudable extends AbstractManager
      * Finds the resources by given query condition.
      *
      * @param int $parentId
-     * @param array $query
      *
      * @return ModelInterface[]
      */
@@ -36,8 +35,8 @@ abstract class NestCrudable extends AbstractManager
     protected function createPartialResourceUrlForList($parentId)
     {
         return Inflector::pluralize($this->getParentResourceName())
-            . '/' . $parentId
-            . '/' . Inflector::pluralize($this->getResourceName());
+            .'/'.$parentId
+            .'/'.Inflector::pluralize($this->getResourceName());
     }
 
     /**
@@ -51,7 +50,6 @@ abstract class NestCrudable extends AbstractManager
      * Create a paging query.
      *
      * @param int $parentId
-     * @param array $query
      *
      * @return CursorBasedPagination
      * @codeCoverageIgnore
@@ -82,7 +80,7 @@ abstract class NestCrudable extends AbstractManager
     protected function createPartialResourceUrlForView($parentId, $id)
     {
         return $this->createPartialResourceUrlForList($parentId)
-            . '/' . $id;
+            .'/'.$id;
     }
 
     /**
@@ -102,7 +100,6 @@ abstract class NestCrudable extends AbstractManager
      *
      * @param int $parentId
      * @param int $id
-     * @param array $data
      *
      * @return ModelInterface
      */
@@ -118,7 +115,6 @@ abstract class NestCrudable extends AbstractManager
      * Creates a resource.
      *
      * @param int $parentId
-     * @param array $data
      *
      * @return ModelInterface
      */
@@ -134,13 +130,12 @@ abstract class NestCrudable extends AbstractManager
      * Gets the number of resource with given query.
      *
      * @param int $parentId
-     * @param array $query
      *
      * @return int
      */
     public function count($parentId, array $query = [])
     {
-        $resource = $this->createPartialResourceUrlForList($parentId) . '/count';
+        $resource = $this->createPartialResourceUrlForList($parentId).'/count';
 
         return $this->client->get($resource, $query)['count'];
     }

@@ -44,8 +44,6 @@ class TaxLine
     public function setTitle($title)
     {
         $this->title = $title;
-
-
     }
 
     /**
@@ -64,8 +62,6 @@ class TaxLine
     public function setPrice($price)
     {
         $this->price = $price;
-
-
     }
 
     /**
@@ -84,7 +80,5 @@ class TaxLine
     public function setRate($rate)
     {
         $this->rate = $rate;
-
-
     }
 }

@@ -45,7 +45,7 @@ class CustomerSavedSearchManager extends GeneralCurdable implements CustomerSave
      */
     public function getCustomers($id)
     {
-        $data = $this->client->get('customer_saved_searches/' . $id . '/customers');
+        $data = $this->client->get('customer_saved_searches/'.$id.'/customers');
 
         return $this->createMany($data['customers']);
     }

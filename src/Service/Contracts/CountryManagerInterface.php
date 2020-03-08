@@ -18,8 +18,6 @@ interface CountryManagerInterface extends ManagerInterface
     /**
      * Gets all countries.
      *
-     * @param array $query
-     *
      * @return Country[]
      */
     public function findAll(array $query = []);
@@ -36,8 +34,6 @@ interface CountryManagerInterface extends ManagerInterface
     /**
      * Gets the count.
      *
-     * @param array $query
-     *
      * @return int
      */
     public function count(array $query = []);
@@ -46,7 +42,6 @@ interface CountryManagerInterface extends ManagerInterface
      * Updates the country.
      *
      * @param int $id
-     * @param array $data
      *
      * @return bool
      */
@@ -63,8 +58,6 @@ interface CountryManagerInterface extends ManagerInterface
 
     /**
      * Creates a country.
-     *
-     * @param array $data
      *
      * @return Country
      */

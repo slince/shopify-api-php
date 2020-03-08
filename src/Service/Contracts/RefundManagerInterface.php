@@ -19,7 +19,6 @@ interface RefundManagerInterface
      * Finds articles.
      *
      * @param int $orderId
-     * @param array $query
      *
      * @return Refund[]
      */
@@ -39,7 +38,6 @@ interface RefundManagerInterface
      * Creates a article.
      *
      * @param int $orderId
-     * @param array $data
      *
      * @return Refund
      */
@@ -49,7 +47,6 @@ interface RefundManagerInterface
      * Calculate a refund.
      *
      * @param int $orderId
-     * @param array $data
      *
      * @return Refund
      */

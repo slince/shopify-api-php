@@ -18,8 +18,6 @@ interface RedirectManagerInterface extends ManagerInterface
     /**
      * Gets all redirects.
      *
-     * @param array $query
-     *
      * @return Redirect[]
      */
     public function findAll(array $query = []);
@@ -36,8 +34,6 @@ interface RedirectManagerInterface extends ManagerInterface
     /**
      * Gets the count.
      *
-     * @param array $query
-     *
      * @return int
      */
     public function count(array $query = []);
@@ -46,7 +42,6 @@ interface RedirectManagerInterface extends ManagerInterface
      * Updates the redirect.
      *
      * @param int $id
-     * @param array $data
      *
      * @return bool
      */
@@ -63,8 +58,6 @@ interface RedirectManagerInterface extends ManagerInterface
 
     /**
      * Creates a redirect.
-     *
-     * @param array $data
      *
      * @return Redirect
      */

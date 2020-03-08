@@ -153,8 +153,6 @@ class Variant extends Model
     public function setProductId($productId)
     {
         $this->productId = $productId;
-
-
     }
 
     /**
@@ -173,8 +171,6 @@ class Variant extends Model
     public function setTitle($title)
     {
         $this->title = $title;
-
-
     }
 
     /**
@@ -193,8 +189,6 @@ class Variant extends Model
     public function setPrice($price)
     {
         $this->price = $price;
-
-
     }
 
     /**
@@ -213,8 +207,6 @@ class Variant extends Model
     public function setSku($sku)
     {
         $this->sku = $sku;
-
-
     }
 
     /**
@@ -233,8 +225,6 @@ class Variant extends Model
     public function setPosition($position)
     {
         $this->position = $position;
-
-
     }
 
     /**
@@ -253,8 +243,6 @@ class Variant extends Model
     public function setGrams($grams)
     {
         $this->grams = $grams;
-
-
     }
 
     /**
@@ -273,8 +261,6 @@ class Variant extends Model
     public function setInventoryPolicy($inventoryPolicy)
     {
         $this->inventoryPolicy = $inventoryPolicy;
-
-
     }
 
     /**
@@ -293,8 +279,6 @@ class Variant extends Model
     public function setCompareAtPrice($compareAtPrice)
     {
         $this->compareAtPrice = $compareAtPrice;
-
-
     }
 
     /**
@@ -313,8 +297,6 @@ class Variant extends Model
     public function setFulfillmentService($fulfillmentService)
     {
         $this->fulfillmentService = $fulfillmentService;
-
-
     }
 
     /**
@@ -333,8 +315,6 @@ class Variant extends Model
     public function setInventoryManagement($inventoryManagement)
     {
         $this->inventoryManagement = $inventoryManagement;
-
-
     }
 
     /**
@@ -353,8 +333,6 @@ class Variant extends Model
     public function setOption1($option1)
     {
         $this->option1 = $option1;
-
-
     }
 
     /**
@@ -373,8 +351,6 @@ class Variant extends Model
     public function setOption2($option2)
     {
         $this->option2 = $option2;
-
-
     }
 
     /**
@@ -393,8 +369,6 @@ class Variant extends Model
     public function setOption3($option3)
     {
         $this->option3 = $option3;
-
-
     }
 
     /**
@@ -406,15 +380,11 @@ class Variant extends Model
     }
 
     /**
-     * @param DateTime $createdAt
-     *
      * @return Variant
      */
     public function setCreatedAt(DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
-
-
     }
 
     /**
@@ -426,15 +396,11 @@ class Variant extends Model
     }
 
     /**
-     * @param DateTime $updatedAt
-     *
      * @return Variant
      */
     public function setUpdatedAt(DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
-
-
     }
 
     /**
@@ -453,8 +419,6 @@ class Variant extends Model
     public function setTaxable($taxable)
     {
         $this->taxable = $taxable;
-
-
     }
 
     /**
@@ -473,8 +437,6 @@ class Variant extends Model
     public function setBarcode($barcode)
     {
         $this->barcode = $barcode;
-
-
     }
 
     /**
@@ -493,8 +455,6 @@ class Variant extends Model
     public function setImageId($imageId)
     {
         $this->imageId = $imageId;
-
-
     }
 
     /**
@@ -513,8 +473,6 @@ class Variant extends Model
     public function setInventoryQuantity($inventoryQuantity)
     {
         $this->inventoryQuantity = $inventoryQuantity;
-
-
     }
 
     /**
@@ -533,8 +491,6 @@ class Variant extends Model
     public function setWeight($weight)
     {
         $this->weight = $weight;
-
-
     }
 
     /**
@@ -553,8 +509,6 @@ class Variant extends Model
     public function setWeightUnit($weightUnit)
     {
         $this->weightUnit = $weightUnit;
-
-
     }
 
     /**
@@ -589,8 +543,6 @@ class Variant extends Model
     public function setOldInventoryQuantity($oldInventoryQuantity)
     {
         $this->oldInventoryQuantity = $oldInventoryQuantity;
-
-
     }
 
     /**
@@ -609,7 +561,5 @@ class Variant extends Model
     public function setRequiresShipping($requiresShipping)
     {
         $this->requiresShipping = $requiresShipping;
-
-
     }
 }

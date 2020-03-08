@@ -39,8 +39,6 @@ class Redirect extends Model
     public function setPath($path)
     {
         $this->path = $path;
-
-
     }
 
     /**
@@ -59,7 +57,5 @@ class Redirect extends Model
     public function setTarget($target)
     {
         $this->target = $target;
-
-
     }
 }

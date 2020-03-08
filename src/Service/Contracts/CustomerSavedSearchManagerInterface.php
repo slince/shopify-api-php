@@ -19,8 +19,6 @@ interface CustomerSavedSearchManagerInterface extends ManagerInterface
     /**
      * Gets all customer saved searches.
      *
-     * @param array $query
-     *
      * @return CustomerSavedSearch[]
      */
     public function findAll(array $query = []);
@@ -37,8 +35,6 @@ interface CustomerSavedSearchManagerInterface extends ManagerInterface
     /**
      * Gets the count.
      *
-     * @param array $query
-     *
      * @return int
      */
     public function count(array $query = []);
@@ -47,7 +43,6 @@ interface CustomerSavedSearchManagerInterface extends ManagerInterface
      * Updates the customer saved search.
      *
      * @param int $id
-     * @param array $data
      *
      * @return bool
      */
@@ -64,8 +59,6 @@ interface CustomerSavedSearchManagerInterface extends ManagerInterface
 
     /**
      * Creates a customer saved search.
-     *
-     * @param array $data
      *
      * @return CustomerSavedSearch
      */

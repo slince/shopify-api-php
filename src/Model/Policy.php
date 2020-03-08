@@ -61,8 +61,6 @@ class Policy
     public function setTitle($title)
     {
         $this->title = $title;
-
-
     }
 
     /**
@@ -81,8 +79,6 @@ class Policy
     public function setBody($body)
     {
         $this->body = $body;
-
-
     }
 
     /**
@@ -101,8 +97,6 @@ class Policy
     public function setHandle($handle)
     {
         $this->handle = $handle;
-
-
     }
 
     /**
@@ -114,15 +108,11 @@ class Policy
     }
 
     /**
-     * @param DateTime $createdAt
-     *
      * @return Policy
      */
     public function setCreatedAt(DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
-
-
     }
 
     /**
@@ -134,15 +124,11 @@ class Policy
     }
 
     /**
-     * @param DateTime $updatedAt
-     *
      * @return Policy
      */
     public function setUpdatedAt(DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
-
-
     }
 
     /**
@@ -161,7 +147,5 @@ class Policy
     public function setUrl($url)
     {
         $this->url = $url;
-
-
     }
 }

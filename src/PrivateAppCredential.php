@@ -103,6 +103,6 @@ class PrivateAppCredential implements CredentialInterface
     public function applyToRequest(RequestInterface $request)
     {
         return $request->withHeader('Authorization', 'Basic '
-            . base64_encode("{$this->apiKey}:{$this->password}"));
+            .base64_encode("{$this->apiKey}:{$this->password}"));
     }
 }

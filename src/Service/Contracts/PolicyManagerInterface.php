@@ -18,8 +18,6 @@ interface PolicyManagerInterface extends ManagerInterface
     /**
      * Gets all policies.
      *
-     * @param array $query
-     *
      * @return Policy[]
      */
     public function findAll(array $query = []);

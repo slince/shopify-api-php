@@ -19,7 +19,6 @@ interface RiskManagerInterface
      * Finds order risks.
      *
      * @param int $orderId
-     * @param array $query
      *
      * @return Risk[]
      */
@@ -40,7 +39,6 @@ interface RiskManagerInterface
      *
      * @param int $orderId
      * @param int $id
-     * @param array $data
      *
      * @return Risk
      */
@@ -58,7 +56,6 @@ interface RiskManagerInterface
      * Creates a order risk.
      *
      * @param int $orderId
-     * @param array $data
      *
      * @return Risk
      */

@@ -85,14 +85,10 @@ class Comment extends Model
 
     /**
      * @param string $body
-     *
-
      */
     public function setBody($body)
     {
         $this->body = $body;
-
-
     }
 
     /**
@@ -105,14 +101,10 @@ class Comment extends Model
 
     /**
      * @param string $bodyHtml
-     *
-
      */
     public function setBodyHtml($bodyHtml)
     {
         $this->bodyHtml = $bodyHtml;
-
-
     }
 
     /**
@@ -125,14 +117,10 @@ class Comment extends Model
 
     /**
      * @param string $author
-     *
-
      */
     public function setAuthor($author)
     {
         $this->author = $author;
-
-
     }
 
     /**
@@ -145,14 +133,10 @@ class Comment extends Model
 
     /**
      * @param string $email
-     *
-
      */
     public function setEmail($email)
     {
         $this->email = $email;
-
-
     }
 
     /**
@@ -165,14 +149,10 @@ class Comment extends Model
 
     /**
      * @param string $status
-     *
-
      */
     public function setStatus($status)
     {
         $this->status = $status;
-
-
     }
 
     /**
@@ -185,14 +165,10 @@ class Comment extends Model
 
     /**
      * @param int $articleId
-     *
-
      */
     public function setArticleId($articleId)
     {
         $this->articleId = $articleId;
-
-
     }
 
     /**
@@ -205,14 +181,10 @@ class Comment extends Model
 
     /**
      * @param int $blogId
-     *
-
      */
     public function setBlogId($blogId)
     {
         $this->blogId = $blogId;
-
-
     }
 
     /**
@@ -223,16 +195,9 @@ class Comment extends Model
         return $this->createdAt;
     }
 
-    /**
-     * @param DateTime $createdAt
-     *
-
-     */
     public function setCreatedAt(DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
-
-
     }
 
     /**
@@ -243,16 +208,9 @@ class Comment extends Model
         return $this->updatedAt;
     }
 
-    /**
-     * @param DateTime $updatedAt
-     *
-
-     */
     public function setUpdatedAt(DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
-
-
     }
 
     /**
@@ -265,14 +223,10 @@ class Comment extends Model
 
     /**
      * @param string $ip
-     *
-
      */
     public function setIp($ip)
     {
         $this->ip = $ip;
-
-
     }
 
     /**
@@ -285,14 +239,10 @@ class Comment extends Model
 
     /**
      * @param string $userAgent
-     *
-
      */
     public function setUserAgent($userAgent)
     {
         $this->userAgent = $userAgent;
-
-
     }
 
     /**
@@ -303,15 +253,8 @@ class Comment extends Model
         return $this->publishedAt;
     }
 
-    /**
-     * @param DateTime $publishedAt
-     *
-
-     */
     public function setPublishedAt(DateTime $publishedAt)
     {
         $this->publishedAt = $publishedAt;
-
-
     }
 }

@@ -19,7 +19,6 @@ interface AddressManagerInterface
      * Finds addresses.
      *
      * @param int $customerId
-     * @param array $query
      *
      * @return Address[]
      */
@@ -40,7 +39,6 @@ interface AddressManagerInterface
      *
      * @param int $customerId
      * @param int $id
-     * @param array $data
      *
      * @return Address
      */
@@ -58,7 +56,6 @@ interface AddressManagerInterface
      * Creates a address.
      *
      * @param int $customerId
-     * @param array $data
      *
      * @return Address
      */
@@ -67,8 +64,7 @@ interface AddressManagerInterface
     /**
      * Perform bulk operations against a number of addresses.
      *
-     * @param int $customerId
-     * @param array $ids
+     * @param int    $customerId
      * @param string $operation
      */
     public function bulkSet($customerId, array $ids, $operation);

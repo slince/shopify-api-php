@@ -18,8 +18,6 @@ interface FulfillmentServiceManagerInterface extends ManagerInterface
     /**
      * Gets all fulfillment services.
      *
-     * @param array $query
-     *
      * @return FulfillmentService[]
      */
     public function findAll(array $query = []);
@@ -37,7 +35,6 @@ interface FulfillmentServiceManagerInterface extends ManagerInterface
      * Updates the fulfillment service.
      *
      * @param int $id
-     * @param array $data
      *
      * @return bool
      */
@@ -54,8 +51,6 @@ interface FulfillmentServiceManagerInterface extends ManagerInterface
 
     /**
      * Creates a fulfillment service.
-     *
-     * @param array $data
      *
      * @return FulfillmentService
      */

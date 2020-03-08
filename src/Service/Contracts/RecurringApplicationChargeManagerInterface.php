@@ -18,8 +18,6 @@ interface RecurringApplicationChargeManagerInterface extends ManagerInterface
     /**
      * Gets all recurring application charges.
      *
-     * @param array $query
-     *
      * @return RecurringApplicationCharge[]
      */
     public function findAll(array $query = []);
@@ -37,7 +35,6 @@ interface RecurringApplicationChargeManagerInterface extends ManagerInterface
      * Updates the recurring application charge.
      *
      * @param int $id
-     * @param array $data
      *
      * @return RecurringApplicationCharge
      */
@@ -47,14 +44,13 @@ interface RecurringApplicationChargeManagerInterface extends ManagerInterface
      * Cancels a recurring application charge.
      *
      * @param int $id
+     *
      * @return void
      */
     public function cancel($id);
 
     /**
      * Creates a recurring application charge.
-     *
-     * @param array $data
      *
      * @return RecurringApplicationCharge
      */

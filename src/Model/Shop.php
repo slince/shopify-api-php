@@ -271,8 +271,6 @@ class Shop extends Model
     public function setName($name)
     {
         $this->name = $name;
-
-
     }
 
     /**
@@ -291,8 +289,6 @@ class Shop extends Model
     public function setEmail($email)
     {
         $this->email = $email;
-
-
     }
 
     /**
@@ -311,8 +307,6 @@ class Shop extends Model
     public function setDomain($domain)
     {
         $this->domain = $domain;
-
-
     }
 
     /**
@@ -324,15 +318,11 @@ class Shop extends Model
     }
 
     /**
-     * @param DateTime $createdAt
-     *
      * @return Shop
      */
     public function setCreatedAt(DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
-
-
     }
 
     /**
@@ -351,8 +341,6 @@ class Shop extends Model
     public function setProvince($province)
     {
         $this->province = $province;
-
-
     }
 
     /**
@@ -371,8 +359,6 @@ class Shop extends Model
     public function setCountry($country)
     {
         $this->country = $country;
-
-
     }
 
     /**
@@ -391,8 +377,6 @@ class Shop extends Model
     public function setAddress1($address1)
     {
         $this->address1 = $address1;
-
-
     }
 
     /**
@@ -411,8 +395,6 @@ class Shop extends Model
     public function setZip($zip)
     {
         $this->zip = $zip;
-
-
     }
 
     /**
@@ -431,8 +413,6 @@ class Shop extends Model
     public function setCity($city)
     {
         $this->city = $city;
-
-
     }
 
     /**
@@ -451,8 +431,6 @@ class Shop extends Model
     public function setSource($source)
     {
         $this->source = $source;
-
-
     }
 
     /**
@@ -471,8 +449,6 @@ class Shop extends Model
     public function setPhone($phone)
     {
         $this->phone = $phone;
-
-
     }
 
     /**
@@ -491,8 +467,6 @@ class Shop extends Model
     public function setUpdatedAt(DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
-
-
     }
 
     /**
@@ -511,8 +485,6 @@ class Shop extends Model
     public function setCustomerEmail($customerEmail)
     {
         $this->customerEmail = $customerEmail;
-
-
     }
 
     /**
@@ -531,8 +503,6 @@ class Shop extends Model
     public function setLatitude($latitude)
     {
         $this->latitude = $latitude;
-
-
     }
 
     /**
@@ -551,12 +521,10 @@ class Shop extends Model
     public function setLongitude($longitude)
     {
         $this->longitude = $longitude;
-
-
     }
 
     /**
-     * @return integer
+     * @return int
      */
     public function getPrimaryLocationId()
     {
@@ -571,8 +539,6 @@ class Shop extends Model
     public function setPrimaryLocationId($primaryLocationId)
     {
         $this->primaryLocationId = $primaryLocationId;
-
-
     }
 
     /**
@@ -591,8 +557,6 @@ class Shop extends Model
     public function setPrimaryLocale($primaryLocale)
     {
         $this->primaryLocale = $primaryLocale;
-
-
     }
 
     /**
@@ -611,8 +575,6 @@ class Shop extends Model
     public function setAddress2($address2)
     {
         $this->address2 = $address2;
-
-
     }
 
     /**
@@ -631,8 +593,6 @@ class Shop extends Model
     public function setCountryCode($countryCode)
     {
         $this->countryCode = $countryCode;
-
-
     }
 
     /**
@@ -651,8 +611,6 @@ class Shop extends Model
     public function setCountryName($countryName)
     {
         $this->countryName = $countryName;
-
-
     }
 
     /**
@@ -671,8 +629,6 @@ class Shop extends Model
     public function setCurrency($currency)
     {
         $this->currency = $currency;
-
-
     }
 
     /**
@@ -691,8 +647,6 @@ class Shop extends Model
     public function setTimezone($timezone)
     {
         $this->timezone = $timezone;
-
-
     }
 
     /**
@@ -711,8 +665,6 @@ class Shop extends Model
     public function setIanaTimezone($ianaTimezone)
     {
         $this->ianaTimezone = $ianaTimezone;
-
-
     }
 
     /**
@@ -731,8 +683,6 @@ class Shop extends Model
     public function setShopOwner($shopOwner)
     {
         $this->shopOwner = $shopOwner;
-
-
     }
 
     /**
@@ -751,8 +701,6 @@ class Shop extends Model
     public function setMoneyFormat($moneyFormat)
     {
         $this->moneyFormat = $moneyFormat;
-
-
     }
 
     /**
@@ -771,8 +719,6 @@ class Shop extends Model
     public function setMoneyWithCurrencyFormat($moneyWithCurrencyFormat)
     {
         $this->moneyWithCurrencyFormat = $moneyWithCurrencyFormat;
-
-
     }
 
     /**
@@ -791,8 +737,6 @@ class Shop extends Model
     public function setWeightUnit($weightUnit)
     {
         $this->weightUnit = $weightUnit;
-
-
     }
 
     /**
@@ -811,8 +755,6 @@ class Shop extends Model
     public function setProvinceCode($provinceCode)
     {
         $this->provinceCode = $provinceCode;
-
-
     }
 
     /**
@@ -831,8 +773,6 @@ class Shop extends Model
     public function setTaxesIncluded($taxesIncluded)
     {
         $this->taxesIncluded = $taxesIncluded;
-
-
     }
 
     /**
@@ -851,8 +791,6 @@ class Shop extends Model
     public function setTaxShipping($taxShipping)
     {
         $this->taxShipping = $taxShipping;
-
-
     }
 
     /**
@@ -871,8 +809,6 @@ class Shop extends Model
     public function setCountyTaxes($countyTaxes)
     {
         $this->countyTaxes = $countyTaxes;
-
-
     }
 
     /**
@@ -891,8 +827,6 @@ class Shop extends Model
     public function setPlanDisplayName($planDisplayName)
     {
         $this->planDisplayName = $planDisplayName;
-
-
     }
 
     /**
@@ -911,8 +845,6 @@ class Shop extends Model
     public function setPlanName($planName)
     {
         $this->planName = $planName;
-
-
     }
 
     /**
@@ -931,8 +863,6 @@ class Shop extends Model
     public function setHasDiscounts($hasDiscounts)
     {
         $this->hasDiscounts = $hasDiscounts;
-
-
     }
 
     /**
@@ -951,8 +881,6 @@ class Shop extends Model
     public function setHasGiftCards($hasGiftCards)
     {
         $this->hasGiftCards = $hasGiftCards;
-
-
     }
 
     /**
@@ -971,8 +899,6 @@ class Shop extends Model
     public function setMyshopifyDomain($myshopifyDomain)
     {
         $this->myshopifyDomain = $myshopifyDomain;
-
-
     }
 
     /**
@@ -991,8 +917,6 @@ class Shop extends Model
     public function setGoogleAppsDomain($googleAppsDomain)
     {
         $this->googleAppsDomain = $googleAppsDomain;
-
-
     }
 
     /**
@@ -1011,8 +935,6 @@ class Shop extends Model
     public function setGoogleAppsLoginEnabled($googleAppsLoginEnabled)
     {
         $this->googleAppsLoginEnabled = $googleAppsLoginEnabled;
-
-
     }
 
     /**
@@ -1031,8 +953,6 @@ class Shop extends Model
     public function setMoneyInEmailsFormat($moneyInEmailsFormat)
     {
         $this->moneyInEmailsFormat = $moneyInEmailsFormat;
-
-
     }
 
     /**
@@ -1051,8 +971,6 @@ class Shop extends Model
     public function setMoneyWithCurrencyInEmailsFormat($moneyWithCurrencyInEmailsFormat)
     {
         $this->moneyWithCurrencyInEmailsFormat = $moneyWithCurrencyInEmailsFormat;
-
-
     }
 
     /**
@@ -1071,8 +989,6 @@ class Shop extends Model
     public function setEligibleForPayments($eligibleForPayments)
     {
         $this->eligibleForPayments = $eligibleForPayments;
-
-
     }
 
     /**
@@ -1091,8 +1007,6 @@ class Shop extends Model
     public function setRequiresExtraPaymentsAgreement($requiresExtraPaymentsAgreement)
     {
         $this->requiresExtraPaymentsAgreement = $requiresExtraPaymentsAgreement;
-
-
     }
 
     /**
@@ -1111,8 +1025,6 @@ class Shop extends Model
     public function setPasswordEnabled($passwordEnabled)
     {
         $this->passwordEnabled = $passwordEnabled;
-
-
     }
 
     /**
@@ -1131,8 +1043,6 @@ class Shop extends Model
     public function setHasStoreFront($hasStoreFront)
     {
         $this->hasStoreFront = $hasStoreFront;
-
-
     }
 
     /**
@@ -1151,8 +1061,6 @@ class Shop extends Model
     public function setEligibleForCardReaderGiveaway($eligibleForCardReaderGiveaway)
     {
         $this->eligibleForCardReaderGiveaway = $eligibleForCardReaderGiveaway;
-
-
     }
 
     /**
@@ -1171,8 +1079,6 @@ class Shop extends Model
     public function setFinances($finances)
     {
         $this->finances = $finances;
-
-
     }
 
     /**
@@ -1191,8 +1097,6 @@ class Shop extends Model
     public function setSetupRequired($setupRequired)
     {
         $this->setupRequired = $setupRequired;
-
-
     }
 
     /**
@@ -1211,7 +1115,5 @@ class Shop extends Model
     public function setForceSsl($forceSsl)
     {
         $this->forceSsl = $forceSsl;
-
-
     }
 }

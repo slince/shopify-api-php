@@ -27,7 +27,7 @@ interface AssetManagerInterface
     /**
      * Finds an asset.
      *
-     * @param int $themeId
+     * @param int    $themeId
      * @param string $key
      *
      * @return Asset
@@ -38,7 +38,7 @@ interface AssetManagerInterface
      * Updates the assets.
      *
      * @param int $themeId
-     * @param array $data
+     *
      * @return Asset
      */
     public function update($themeId, array $data);
@@ -46,7 +46,7 @@ interface AssetManagerInterface
     /**
      * Removes the asset by given key and theme id.
      *
-     * @param int $themeId
+     * @param int    $themeId
      * @param string $key
      */
     public function remove($themeId, $key);

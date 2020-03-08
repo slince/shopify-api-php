@@ -54,8 +54,6 @@ class FulfillmentService extends Model
     public function setName($name)
     {
         $this->name = $name;
-
-
     }
 
     /**
@@ -74,8 +72,6 @@ class FulfillmentService extends Model
     public function setCallbackUrl($callbackUrl)
     {
         $this->callbackUrl = $callbackUrl;
-
-
     }
 
     /**
@@ -94,8 +90,6 @@ class FulfillmentService extends Model
     public function setInventoryManagement($inventoryManagement)
     {
         $this->inventoryManagement = $inventoryManagement;
-
-
     }
 
     /**
@@ -114,8 +108,6 @@ class FulfillmentService extends Model
     public function setTrackingSupport($trackingSupport)
     {
         $this->trackingSupport = $trackingSupport;
-
-
     }
 
     /**
@@ -134,7 +126,5 @@ class FulfillmentService extends Model
     public function setRequiresShippingMethod($requiresShippingMethod)
     {
         $this->requiresShippingMethod = $requiresShippingMethod;
-
-
     }
 }

@@ -73,6 +73,7 @@ class LocationManager extends GeneralCurdable implements LocationManagerInterfac
     {
         $endpoint = sprintf('locations/%s/inventory_levels', $id);
         $data = $this->client->get($endpoint);
+
         return $this->createMany($data['inventory_levels'], InventoryLevel::class);
     }
 }

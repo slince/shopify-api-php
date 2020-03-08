@@ -18,8 +18,6 @@ interface OrderManagerInterface extends ManagerInterface
     /**
      * Gets all orders.
      *
-     * @param array $query
-     *
      * @return Order[]
      */
     public function findAll(array $query = []);
@@ -36,8 +34,6 @@ interface OrderManagerInterface extends ManagerInterface
     /**
      * Gets the count.
      *
-     * @param array $query
-     *
      * @return int
      */
     public function count(array $query = []);
@@ -46,7 +42,6 @@ interface OrderManagerInterface extends ManagerInterface
      * Updates the order.
      *
      * @param int $id
-     * @param array $data
      *
      * @return bool
      */
@@ -63,8 +58,6 @@ interface OrderManagerInterface extends ManagerInterface
 
     /**
      * Creates an order.
-     *
-     * @param array $data
      *
      * @return Order
      */

@@ -34,7 +34,5 @@ trait AdminGraphqlApiId
     public function setAdminGraphqlApiId($adminGraphqlApiId)
     {
         $this->adminGraphqlApiId = $adminGraphqlApiId;
-
-
     }
 }

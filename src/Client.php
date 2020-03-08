@@ -164,8 +164,6 @@ class Client
 
     /**
      * Applies the array of request options to the client.
-     *
-     * @param array $options
      */
     protected function applyOptions(array $options)
     {
@@ -196,6 +194,7 @@ class Client
     {
         if ('Manager' === substr($name, -7)) {
             $serviceName = substr($name, 3, -7);
+
             return $this->container->get(Inflector::tableize(Inflector::pluralize($serviceName)));
         }
         throw new \InvalidArgumentException(sprintf('The method "%s" is not exists', $name));
@@ -229,9 +228,7 @@ class Client
     public function setShop($shop)
     {
         if (!preg_match('/^[a-zA-Z0-9\-]{3,100}\.myshopify\.(?:com|io)$/', $shop)) {
-            throw new InvalidArgumentException(
-                'Shop name should be 3-100 letters, numbers, or hyphens e.g. your-store.myshopify.com'
-            );
+            throw new InvalidArgumentException('Shop name should be 3-100 letters, numbers, or hyphens e.g. your-store.myshopify.com');
         }
         $this->shop = $shop;
     }
@@ -240,7 +237,7 @@ class Client
      * Perform a GET request.
      *
      * @param string $resource
-     * @param array $query
+     * @param array  $query
      *
      * @return array
      */
@@ -252,11 +249,12 @@ class Client
     }
 
     /**
-     * Send an HTTP request
+     * Send an HTTP request.
      *
      * @param string $method
      * @param string $resource
-     * @param array $options
+     * @param array  $options
+     *
      * @return array
      */
     protected function doRequest($method, $resource, $options = [])
@@ -287,10 +285,8 @@ class Client
     /**
      * Send a request.
      *
-     * @param RequestInterface $request
-     * @param array $options
-     *
      * @return ResponseInterface
+     *
      * @throws GuzzleException
      * @codeCoverageIgnore
      */
@@ -299,7 +295,7 @@ class Client
         if (static::$delayNextRequest) {
             usleep(1000000 * rand(3, 10));
         }
-        $request = $request->withHeader('User-Agent', static::NAME . '/' . static::VERSION);
+        $request = $request->withHeader('User-Agent', static::NAME.'/'.static::VERSION);
         $request = $this->credential->applyToRequest($request);
         try {
             $response = $this->getHttpClient()->send($request, $options);
@@ -310,6 +306,7 @@ class Client
         }
         list($callsMade, $callsLimit) = explode('/', $response->getHeaderLine('http_x_shopify_shop_api_call_limit'));
         static::$delayNextRequest = $callsMade / $callsLimit >= 0.8;
+
         return $response;
     }
 
@@ -323,6 +320,7 @@ class Client
         if ($this->httpClient) {
             return $this->httpClient;
         }
+
         return $this->httpClient = new HttpClient([
             'verify' => false,
         ]);
@@ -342,8 +340,8 @@ class Client
      * Perform a POST request.
      *
      * @param string $resource
-     * @param array $data
-     * @param array $query
+     * @param array  $data
+     * @param array  $query
      *
      * @return array
      */
@@ -359,8 +357,8 @@ class Client
      * Perform a PUT request.
      *
      * @param string $resource
-     * @param array $data
-     * @param array $query
+     * @param array  $data
+     * @param array  $query
      *
      * @return array
      */
@@ -376,12 +374,12 @@ class Client
      * Perform a DELETE request.
      *
      * @param string $resource
-     * @param array $query
+     * @param array  $query
      */
     public function delete($resource, $query = [])
     {
         $this->doRequest('DELETE', $resource, [
-            'query' => $query
+            'query' => $query,
         ]);
     }
 
@@ -405,6 +403,7 @@ class Client
         if ($this->hydrator) {
             return $this->hydrator;
         }
+
         return $this->hydrator = new Hydrator();
     }
 
@@ -412,6 +411,7 @@ class Client
      * Add a custom service class.
      *
      * @param string $serviceClass
+     *
      * @throws InvalidArgumentException
      */
     public function addServiceClass($serviceClass)

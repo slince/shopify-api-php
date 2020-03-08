@@ -31,16 +31,19 @@ class Hydrator implements HydratorInterface
 
     public function __construct()
     {
-        $normalizer = new ObjectNormalizer(null,
+        $normalizer = new ObjectNormalizer(
+            null,
             new CamelCaseToSnakeCaseNameConverter(),
             PropertyAccess::createPropertyAccessor(),
-            new ReflectionExtractor(), null, null,
+            new ReflectionExtractor(),
+            null,
+            null,
             [ObjectNormalizer::DISABLE_TYPE_ENFORCEMENT => true]
         );
         $this->serializer = new Serializer([
             new DateTimeNormalizer([DateTimeNormalizer::FORMAT_KEY => DateTimeInterface::ISO8601]),
             new ArrayDenormalizer(),
-            $normalizer
+            $normalizer,
         ]);
     }
 

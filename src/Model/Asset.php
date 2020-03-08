@@ -65,14 +65,10 @@ class Asset
 
     /**
      * @param string $key
-     *
-
      */
     public function setKey($key)
     {
         $this->key = $key;
-
-
     }
 
     /**
@@ -85,14 +81,10 @@ class Asset
 
     /**
      * @param string $publicUrl
-     *
-
      */
     public function setPublicUrl($publicUrl)
     {
         $this->publicUrl = $publicUrl;
-
-
     }
 
     /**
@@ -103,16 +95,9 @@ class Asset
         return $this->createdAt;
     }
 
-    /**
-     * @param DateTime $createdAt
-     *
-
-     */
     public function setCreatedAt(DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
-
-
     }
 
     /**
@@ -123,16 +108,9 @@ class Asset
         return $this->updatedAt;
     }
 
-    /**
-     * @param DateTime $updatedAt
-     *
-
-     */
     public function setUpdatedAt(DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
-
-
     }
 
     /**
@@ -145,14 +123,10 @@ class Asset
 
     /**
      * @param string $contentType
-     *
-
      */
     public function setContentType($contentType)
     {
         $this->contentType = $contentType;
-
-
     }
 
     /**
@@ -165,14 +139,10 @@ class Asset
 
     /**
      * @param number $size
-     *
-
      */
     public function setSize($size)
     {
         $this->size = $size;
-
-
     }
 
     /**
@@ -185,14 +155,10 @@ class Asset
 
     /**
      * @param int $themeId
-     *
-
      */
     public function setThemeId($themeId)
     {
         $this->themeId = $themeId;
-
-
     }
 
     /**
@@ -205,13 +171,9 @@ class Asset
 
     /**
      * @param string $value
-     *
-
      */
     public function setValue($value)
     {
         $this->value = $value;
-
-
     }
 }

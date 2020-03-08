@@ -18,8 +18,6 @@ interface ThemeManagerInterface extends ManagerInterface
     /**
      * Gets all themes.
      *
-     * @param array $query
-     *
      * @return Theme[]
      */
     public function findAll(array $query = []);
@@ -36,8 +34,6 @@ interface ThemeManagerInterface extends ManagerInterface
     /**
      * Gets the count.
      *
-     * @param array $query
-     *
      * @return int
      */
     public function count(array $query = []);
@@ -46,7 +42,6 @@ interface ThemeManagerInterface extends ManagerInterface
      * Updates the theme.
      *
      * @param int $id
-     * @param array $data
      *
      * @return bool
      */
@@ -63,8 +58,6 @@ interface ThemeManagerInterface extends ManagerInterface
 
     /**
      * Creates a theme.
-     *
-     * @param array $data
      *
      * @return Theme
      */

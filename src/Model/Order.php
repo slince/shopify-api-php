@@ -322,14 +322,10 @@ class Order extends Model
 
     /**
      * @param string $email
-     *
-
      */
     public function setEmail($email)
     {
         $this->email = $email;
-
-
     }
 
     /**
@@ -340,16 +336,9 @@ class Order extends Model
         return $this->closedAt;
     }
 
-    /**
-     * @param DateTime $closedAt
-     *
-
-     */
     public function setClosedAt(DateTime $closedAt)
     {
         $this->closedAt = $closedAt;
-
-
     }
 
     /**
@@ -360,16 +349,9 @@ class Order extends Model
         return $this->updatedAt;
     }
 
-    /**
-     * @param DateTime $updatedAt
-     *
-
-     */
     public function setUpdatedAt(DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
-
-
     }
 
     /**
@@ -382,14 +364,10 @@ class Order extends Model
 
     /**
      * @param int $number
-     *
-
      */
     public function setNumber($number)
     {
         $this->number = $number;
-
-
     }
 
     /**
@@ -402,14 +380,10 @@ class Order extends Model
 
     /**
      * @param string $note
-     *
-
      */
     public function setNote($note)
     {
         $this->note = $note;
-
-
     }
 
     /**
@@ -422,14 +396,10 @@ class Order extends Model
 
     /**
      * @param string $token
-     *
-
      */
     public function setToken($token)
     {
         $this->token = $token;
-
-
     }
 
     /**
@@ -442,14 +412,10 @@ class Order extends Model
 
     /**
      * @param string $gateway
-     *
-
      */
     public function setGateway($gateway)
     {
         $this->gateway = $gateway;
-
-
     }
 
     /**
@@ -462,14 +428,10 @@ class Order extends Model
 
     /**
      * @param bool $test
-     *
-
      */
     public function setTest($test)
     {
         $this->test = $test;
-
-
     }
 
     /**
@@ -482,14 +444,10 @@ class Order extends Model
 
     /**
      * @param float $totalPrice
-     *
-
      */
     public function setTotalPrice($totalPrice)
     {
         $this->totalPrice = $totalPrice;
-
-
     }
 
     /**
@@ -502,14 +460,10 @@ class Order extends Model
 
     /**
      * @param float $subtotalPrice
-     *
-
      */
     public function setSubtotalPrice($subtotalPrice)
     {
         $this->subtotalPrice = $subtotalPrice;
-
-
     }
 
     /**
@@ -522,14 +476,10 @@ class Order extends Model
 
     /**
      * @param float $totalWeight
-     *
-
      */
     public function setTotalWeight($totalWeight)
     {
         $this->totalWeight = $totalWeight;
-
-
     }
 
     /**
@@ -542,14 +492,10 @@ class Order extends Model
 
     /**
      * @param float $totalTax
-     *
-
      */
     public function setTotalTax($totalTax)
     {
         $this->totalTax = $totalTax;
-
-
     }
 
     /**
@@ -562,14 +508,10 @@ class Order extends Model
 
     /**
      * @param bool $taxesIncluded
-     *
-
      */
     public function setTaxesIncluded($taxesIncluded)
     {
         $this->taxesIncluded = $taxesIncluded;
-
-
     }
 
     /**
@@ -582,14 +524,10 @@ class Order extends Model
 
     /**
      * @param string $currency
-     *
-
      */
     public function setCurrency($currency)
     {
         $this->currency = $currency;
-
-
     }
 
     /**
@@ -602,14 +540,10 @@ class Order extends Model
 
     /**
      * @param string $financialStatus
-     *
-
      */
     public function setFinancialStatus($financialStatus)
     {
         $this->financialStatus = $financialStatus;
-
-
     }
 
     /**
@@ -622,14 +556,10 @@ class Order extends Model
 
     /**
      * @param bool $confirmed
-     *
-
      */
     public function setConfirmed($confirmed)
     {
         $this->confirmed = $confirmed;
-
-
     }
 
     /**
@@ -642,14 +572,10 @@ class Order extends Model
 
     /**
      * @param float $totalDiscounts
-     *
-
      */
     public function setTotalDiscounts($totalDiscounts)
     {
         $this->totalDiscounts = $totalDiscounts;
-
-
     }
 
     /**
@@ -662,14 +588,10 @@ class Order extends Model
 
     /**
      * @param float $totalLineItemsPrice
-     *
-
      */
     public function setTotalLineItemsPrice($totalLineItemsPrice)
     {
         $this->totalLineItemsPrice = $totalLineItemsPrice;
-
-
     }
 
     /**
@@ -682,14 +604,10 @@ class Order extends Model
 
     /**
      * @param string $cartToken
-     *
-
      */
     public function setCartToken($cartToken)
     {
         $this->cartToken = $cartToken;
-
-
     }
 
     /**
@@ -702,14 +620,10 @@ class Order extends Model
 
     /**
      * @param bool $buyerAcceptsMarketing
-     *
-
      */
     public function setBuyerAcceptsMarketing($buyerAcceptsMarketing)
     {
         $this->buyerAcceptsMarketing = $buyerAcceptsMarketing;
-
-
     }
 
     /**
@@ -722,14 +636,10 @@ class Order extends Model
 
     /**
      * @param string $name
-     *
-
      */
     public function setName($name)
     {
         $this->name = $name;
-
-
     }
 
     /**
@@ -742,14 +652,10 @@ class Order extends Model
 
     /**
      * @param string $referringSite
-     *
-
      */
     public function setReferringSite($referringSite)
     {
         $this->referringSite = $referringSite;
-
-
     }
 
     /**
@@ -762,14 +668,10 @@ class Order extends Model
 
     /**
      * @param string $landingSite
-     *
-
      */
     public function setLandingSite($landingSite)
     {
         $this->landingSite = $landingSite;
-
-
     }
 
     /**
@@ -782,14 +684,10 @@ class Order extends Model
 
     /**
      * @param string $cancelledAt
-     *
-
      */
     public function setCancelledAt($cancelledAt)
     {
         $this->cancelledAt = $cancelledAt;
-
-
     }
 
     /**
@@ -802,14 +700,10 @@ class Order extends Model
 
     /**
      * @param string $cancelReason
-     *
-
      */
     public function setCancelReason($cancelReason)
     {
         $this->cancelReason = $cancelReason;
-
-
     }
 
     /**
@@ -822,14 +716,10 @@ class Order extends Model
 
     /**
      * @param float $totalPriceUsd
-     *
-
      */
     public function setTotalPriceUsd($totalPriceUsd)
     {
         $this->totalPriceUsd = $totalPriceUsd;
-
-
     }
 
     /**
@@ -842,14 +732,10 @@ class Order extends Model
 
     /**
      * @param string $checkoutToken
-     *
-
      */
     public function setCheckoutToken($checkoutToken)
     {
         $this->checkoutToken = $checkoutToken;
-
-
     }
 
     /**
@@ -862,14 +748,10 @@ class Order extends Model
 
     /**
      * @param string $reference
-     *
-
      */
     public function setReference($reference)
     {
         $this->reference = $reference;
-
-
     }
 
     /**
@@ -882,14 +764,10 @@ class Order extends Model
 
     /**
      * @param int $userId
-     *
-
      */
     public function setUserId($userId)
     {
         $this->userId = $userId;
-
-
     }
 
     /**
@@ -902,14 +780,10 @@ class Order extends Model
 
     /**
      * @param int $locationId
-     *
-
      */
     public function setLocationId($locationId)
     {
         $this->locationId = $locationId;
-
-
     }
 
     /**
@@ -922,14 +796,10 @@ class Order extends Model
 
     /**
      * @param string $sourceIdentifier
-     *
-
      */
     public function setSourceIdentifier($sourceIdentifier)
     {
         $this->sourceIdentifier = $sourceIdentifier;
-
-
     }
 
     /**
@@ -942,14 +812,10 @@ class Order extends Model
 
     /**
      * @param string $sourceUrl
-     *
-
      */
     public function setSourceUrl($sourceUrl)
     {
         $this->sourceUrl = $sourceUrl;
-
-
     }
 
     /**
@@ -962,14 +828,10 @@ class Order extends Model
 
     /**
      * @param string $processedAt
-     *
-
      */
     public function setProcessedAt($processedAt)
     {
         $this->processedAt = $processedAt;
-
-
     }
 
     /**
@@ -982,14 +844,10 @@ class Order extends Model
 
     /**
      * @param string $deviceId
-     *
-
      */
     public function setDeviceId($deviceId)
     {
         $this->deviceId = $deviceId;
-
-
     }
 
     /**
@@ -1002,14 +860,10 @@ class Order extends Model
 
     /**
      * @param string $phone
-     *
-
      */
     public function setPhone($phone)
     {
         $this->phone = $phone;
-
-
     }
 
     /**
@@ -1022,14 +876,10 @@ class Order extends Model
 
     /**
      * @param string $browserIp
-     *
-
      */
     public function setBrowserIp($browserIp)
     {
         $this->browserIp = $browserIp;
-
-
     }
 
     /**
@@ -1042,14 +892,10 @@ class Order extends Model
 
     /**
      * @param string $landingSiteRef
-     *
-
      */
     public function setLandingSiteRef($landingSiteRef)
     {
         $this->landingSiteRef = $landingSiteRef;
-
-
     }
 
     /**
@@ -1062,14 +908,10 @@ class Order extends Model
 
     /**
      * @param string $orderNumber
-     *
-
      */
     public function setOrderNumber($orderNumber)
     {
         $this->orderNumber = $orderNumber;
-
-
     }
 
     /**
@@ -1082,14 +924,10 @@ class Order extends Model
 
     /**
      * @param array $discountCodes
-     *
-
      */
     public function setDiscountCodes($discountCodes)
     {
         $this->discountCodes = $discountCodes;
-
-
     }
 
     /**
@@ -1102,14 +940,10 @@ class Order extends Model
 
     /**
      * @param array $noteAttributes
-     *
-
      */
     public function setNoteAttributes($noteAttributes)
     {
         $this->noteAttributes = $noteAttributes;
-
-
     }
 
     /**
@@ -1122,14 +956,10 @@ class Order extends Model
 
     /**
      * @param array $paymentGatewayNames
-     *
-
      */
     public function setPaymentGatewayNames($paymentGatewayNames)
     {
         $this->paymentGatewayNames = $paymentGatewayNames;
-
-
     }
 
     /**
@@ -1142,14 +972,10 @@ class Order extends Model
 
     /**
      * @param string $processingMethod
-     *
-
      */
     public function setProcessingMethod($processingMethod)
     {
         $this->processingMethod = $processingMethod;
-
-
     }
 
     /**
@@ -1162,14 +988,10 @@ class Order extends Model
 
     /**
      * @param int $checkoutId
-     *
-
      */
     public function setCheckoutId($checkoutId)
     {
         $this->checkoutId = $checkoutId;
-
-
     }
 
     /**
@@ -1182,14 +1004,10 @@ class Order extends Model
 
     /**
      * @param string $sourceName
-     *
-
      */
     public function setSourceName($sourceName)
     {
         $this->sourceName = $sourceName;
-
-
     }
 
     /**
@@ -1202,14 +1020,10 @@ class Order extends Model
 
     /**
      * @param string $fulfillmentStatus
-     *
-
      */
     public function setFulfillmentStatus($fulfillmentStatus)
     {
         $this->fulfillmentStatus = $fulfillmentStatus;
-
-
     }
 
     /**
@@ -1222,14 +1036,10 @@ class Order extends Model
 
     /**
      * @param array $taxLines
-     *
-
      */
     public function setTaxLines($taxLines)
     {
         $this->taxLines = $taxLines;
-
-
     }
 
     /**
@@ -1242,14 +1052,10 @@ class Order extends Model
 
     /**
      * @param array $tags
-     *
-
      */
     public function setTags($tags)
     {
         $this->tags = $tags;
-
-
     }
 
     /**
@@ -1262,14 +1068,10 @@ class Order extends Model
 
     /**
      * @param string $contactEmail
-     *
-
      */
     public function setContactEmail($contactEmail)
     {
         $this->contactEmail = $contactEmail;
-
-
     }
 
     /**
@@ -1282,14 +1084,10 @@ class Order extends Model
 
     /**
      * @param string $orderStatusUrl
-     *
-
      */
     public function setOrderStatusUrl($orderStatusUrl)
     {
         $this->orderStatusUrl = $orderStatusUrl;
-
-
     }
 
     /**
@@ -1302,14 +1100,10 @@ class Order extends Model
 
     /**
      * @param LineItem[] $lineItems
-     *
-
      */
     public function setLineItems($lineItems)
     {
         $this->lineItems = $lineItems;
-
-
     }
 
     /**
@@ -1322,14 +1116,10 @@ class Order extends Model
 
     /**
      * @param ShippingLine[] $shippingLines
-     *
-
      */
     public function setShippingLines($shippingLines)
     {
         $this->shippingLines = $shippingLines;
-
-
     }
 
     /**
@@ -1340,16 +1130,9 @@ class Order extends Model
         return $this->billingAddress;
     }
 
-    /**
-     * @param OrderAddress $billingAddress
-     *
-
-     */
     public function setBillingAddress(OrderAddress $billingAddress)
     {
         $this->billingAddress = $billingAddress;
-
-
     }
 
     /**
@@ -1360,16 +1143,9 @@ class Order extends Model
         return $this->shippingAddress;
     }
 
-    /**
-     * @param OrderAddress $shippingAddress
-     *
-
-     */
     public function setShippingAddress(OrderAddress $shippingAddress)
     {
         $this->shippingAddress = $shippingAddress;
-
-
     }
 
     /**
@@ -1382,14 +1158,10 @@ class Order extends Model
 
     /**
      * @param Fulfillment[] $fulfillments
-     *
-
      */
     public function setFulfillments($fulfillments)
     {
         $this->fulfillments = $fulfillments;
-
-
     }
 
     /**
@@ -1400,9 +1172,6 @@ class Order extends Model
         return $this->clientDetails;
     }
 
-    /**
-     * @param ClientDetails $clientDetails
-     */
     public function setClientDetails(ClientDetails $clientDetails)
     {
         $this->clientDetails = $clientDetails;
@@ -1434,14 +1203,10 @@ class Order extends Model
 
     /**
      * @param array $paymentDetails
-     *
-
      */
     public function setPaymentDetails($paymentDetails)
     {
         $this->paymentDetails = $paymentDetails;
-
-
     }
 
     /**
@@ -1454,14 +1219,10 @@ class Order extends Model
 
     /**
      * @param DiscountApplication[] $discountApplications
-     *
-
      */
     public function setDiscountApplications($discountApplications)
     {
         $this->discountApplications = $discountApplications;
-
-
     }
 
     /**
@@ -1472,9 +1233,6 @@ class Order extends Model
         return $this->customer;
     }
 
-    /**
-     * @param Customer $customer
-     */
     public function setCustomer(Customer $customer)
     {
         $this->customer = $customer;

@@ -66,8 +66,6 @@ class Webhook extends Model
     public function setAddress($address)
     {
         $this->address = $address;
-
-
     }
 
     /**
@@ -86,8 +84,6 @@ class Webhook extends Model
     public function setTopic($topic)
     {
         $this->topic = $topic;
-
-
     }
 
     /**
@@ -99,15 +95,11 @@ class Webhook extends Model
     }
 
     /**
-     * @param DateTime $createdAt
-     *
      * @return Webhook
      */
     public function setCreatedAt(DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
-
-
     }
 
     /**
@@ -119,15 +111,11 @@ class Webhook extends Model
     }
 
     /**
-     * @param DateTime $updatedAt
-     *
      * @return Webhook
      */
     public function setUpdatedAt(DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
-
-
     }
 
     /**
@@ -146,8 +134,6 @@ class Webhook extends Model
     public function setFormat($format)
     {
         $this->format = $format;
-
-
     }
 
     /**
@@ -166,8 +152,6 @@ class Webhook extends Model
     public function setFields($fields)
     {
         $this->fields = $fields;
-
-
     }
 
     /**
@@ -186,7 +170,5 @@ class Webhook extends Model
     public function setMetafieldNamespaces($metafieldNamespaces)
     {
         $this->metafieldNamespaces = $metafieldNamespaces;
-
-
     }
 }

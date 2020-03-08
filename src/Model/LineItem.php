@@ -129,8 +129,6 @@ class LineItem extends Model
     public function setFulfillableQuantity($fulfillableQuantity)
     {
         $this->fulfillableQuantity = $fulfillableQuantity;
-
-
     }
 
     /**
@@ -149,8 +147,6 @@ class LineItem extends Model
     public function setFulfillmentService($fulfillmentService)
     {
         $this->fulfillmentService = $fulfillmentService;
-
-
     }
 
     /**
@@ -169,8 +165,6 @@ class LineItem extends Model
     public function setFulfillmentStatus($fulfillmentStatus)
     {
         $this->fulfillmentStatus = $fulfillmentStatus;
-
-
     }
 
     /**
@@ -189,12 +183,10 @@ class LineItem extends Model
     public function setGrams($grams)
     {
         $this->grams = $grams;
-
-
     }
 
     /**
-     * @return double
+     * @return float
      */
     public function getPrice()
     {
@@ -209,8 +201,6 @@ class LineItem extends Model
     public function setPrice($price)
     {
         $this->price = $price;
-
-
     }
 
     /**
@@ -229,8 +219,6 @@ class LineItem extends Model
     public function setProductId($productId)
     {
         $this->productId = $productId;
-
-
     }
 
     /**
@@ -249,8 +237,6 @@ class LineItem extends Model
     public function setQuantity($quantity)
     {
         $this->quantity = $quantity;
-
-
     }
 
     /**
@@ -269,8 +255,6 @@ class LineItem extends Model
     public function setRequiresShipping($requiresShipping)
     {
         $this->requiresShipping = $requiresShipping;
-
-
     }
 
     /**
@@ -289,8 +273,6 @@ class LineItem extends Model
     public function setSku($sku)
     {
         $this->sku = $sku;
-
-
     }
 
     /**
@@ -309,8 +291,6 @@ class LineItem extends Model
     public function setTitle($title)
     {
         $this->title = $title;
-
-
     }
 
     /**
@@ -329,8 +309,6 @@ class LineItem extends Model
     public function setVariantId($variantId)
     {
         $this->variantId = $variantId;
-
-
     }
 
     /**
@@ -349,8 +327,6 @@ class LineItem extends Model
     public function setVariantTitle($variantTitle)
     {
         $this->variantTitle = $variantTitle;
-
-
     }
 
     /**
@@ -369,8 +345,6 @@ class LineItem extends Model
     public function setVendor($vendor)
     {
         $this->vendor = $vendor;
-
-
     }
 
     /**
@@ -389,8 +363,6 @@ class LineItem extends Model
     public function setName($name)
     {
         $this->name = $name;
-
-
     }
 
     /**
@@ -409,8 +381,6 @@ class LineItem extends Model
     public function setGiftCard($giftCard)
     {
         $this->giftCard = $giftCard;
-
-
     }
 
     /**
@@ -429,8 +399,6 @@ class LineItem extends Model
     public function setProperties($properties)
     {
         $this->properties = $properties;
-
-
     }
 
     /**
@@ -449,8 +417,6 @@ class LineItem extends Model
     public function setTaxable($taxable)
     {
         $this->taxable = $taxable;
-
-
     }
 
     /**
@@ -469,8 +435,6 @@ class LineItem extends Model
     public function setTaxLines($taxLines)
     {
         $this->taxLines = $taxLines;
-
-
     }
 
     /**
@@ -489,8 +453,6 @@ class LineItem extends Model
     public function setTotalDiscount($totalDiscount)
     {
         $this->totalDiscount = $totalDiscount;
-
-
     }
 
     /**
@@ -509,7 +471,5 @@ class LineItem extends Model
     public function setDiscountAllocations($discountAllocations)
     {
         $this->discountAllocations = $discountAllocations;
-
-
     }
 }

@@ -63,7 +63,7 @@ class VariantManager extends AbstractManager implements VariantManagerInterface
      */
     public function find($id)
     {
-        $data = $this->client->get('/variants/' . $id);
+        $data = $this->client->get('/variants/'.$id);
 
         return $this->fromArray($data['variant']);
     }

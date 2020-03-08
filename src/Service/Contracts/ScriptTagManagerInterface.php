@@ -18,8 +18,6 @@ interface ScriptTagManagerInterface
     /**
      * Gets all script tags.
      *
-     * @param array $query
-     *
      * @return ScriptTag[]
      */
     public function findAll(array $query = []);
@@ -36,8 +34,6 @@ interface ScriptTagManagerInterface
     /**
      * Gets the count.
      *
-     * @param array $query
-     *
      * @return int
      */
     public function count(array $query = []);
@@ -46,7 +42,6 @@ interface ScriptTagManagerInterface
      * Updates the script tag.
      *
      * @param int $id
-     * @param array $data
      *
      * @return bool
      */
@@ -63,8 +58,6 @@ interface ScriptTagManagerInterface
 
     /**
      * Creates a script tag.
-     *
-     * @param array $data
      *
      * @return ScriptTag
      */

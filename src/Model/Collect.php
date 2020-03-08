@@ -60,14 +60,10 @@ class Collect extends Model
 
     /**
      * @param int $collectionId
-     *
-
      */
     public function setCollectionId($collectionId)
     {
         $this->collectionId = $collectionId;
-
-
     }
 
     /**
@@ -78,16 +74,9 @@ class Collect extends Model
         return $this->createdAt;
     }
 
-    /**
-     * @param DateTime $createdAt
-     *
-
-     */
     public function setCreatedAt(DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
-
-
     }
 
     /**
@@ -98,16 +87,9 @@ class Collect extends Model
         return $this->updatedAt;
     }
 
-    /**
-     * @param DateTime $updatedAt
-     *
-
-     */
     public function setUpdatedAt(DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
-
-
     }
 
     /**
@@ -120,14 +102,10 @@ class Collect extends Model
 
     /**
      * @param bool $featured
-     *
-
      */
     public function setFeatured($featured)
     {
         $this->featured = $featured;
-
-
     }
 
     /**
@@ -140,14 +118,10 @@ class Collect extends Model
 
     /**
      * @param int $position
-     *
-
      */
     public function setPosition($position)
     {
         $this->position = $position;
-
-
     }
 
     /**
@@ -160,14 +134,10 @@ class Collect extends Model
 
     /**
      * @param int $productId
-     *
-
      */
     public function setProductId($productId)
     {
         $this->productId = $productId;
-
-
     }
 
     /**
@@ -180,13 +150,9 @@ class Collect extends Model
 
     /**
      * @param int $sortValue
-     *
-
      */
     public function setSortValue($sortValue)
     {
         $this->sortValue = $sortValue;
-
-
     }
 }

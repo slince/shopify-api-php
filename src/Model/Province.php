@@ -69,8 +69,6 @@ class Province extends Model
     public function setCountryId($countryId)
     {
         $this->countryId = $countryId;
-
-
     }
 
     /**
@@ -89,8 +87,6 @@ class Province extends Model
     public function setName($name)
     {
         $this->name = $name;
-
-
     }
 
     /**
@@ -109,8 +105,6 @@ class Province extends Model
     public function setCode($code)
     {
         $this->code = $code;
-
-
     }
 
     /**
@@ -129,8 +123,6 @@ class Province extends Model
     public function setTax($tax)
     {
         $this->tax = $tax;
-
-
     }
 
     /**
@@ -149,8 +141,6 @@ class Province extends Model
     public function setTaxName($taxName)
     {
         $this->taxName = $taxName;
-
-
     }
 
     /**
@@ -169,8 +159,6 @@ class Province extends Model
     public function setTaxType($taxType)
     {
         $this->taxType = $taxType;
-
-
     }
 
     /**
@@ -189,8 +177,6 @@ class Province extends Model
     public function setShippingZoneId($shippingZoneId)
     {
         $this->shippingZoneId = $shippingZoneId;
-
-
     }
 
     /**
@@ -209,7 +195,5 @@ class Province extends Model
     public function setTaxPercentage($taxPercentage)
     {
         $this->taxPercentage = $taxPercentage;
-
-
     }
 }

@@ -19,8 +19,6 @@ interface WebhookManagerInterface
     /**
      * Gets all webhooks.
      *
-     * @param array $query
-     *
      * @return Webhook[]
      */
     public function findAll(array $query = []);
@@ -37,8 +35,6 @@ interface WebhookManagerInterface
     /**
      * Gets the count.
      *
-     * @param array $query
-     *
      * @return int
      */
     public function count(array $query = []);
@@ -47,7 +43,6 @@ interface WebhookManagerInterface
      * Updates the webhook.
      *
      * @param int $id
-     * @param array $data
      *
      * @return bool
      */
@@ -64,8 +59,6 @@ interface WebhookManagerInterface
 
     /**
      * Creates a webhook.
-     *
-     * @param array $data
      *
      * @return Webhook
      */

@@ -18,8 +18,6 @@ interface InventoryItemManagerInterface extends ManagerInterface
     /**
      * Gets all inventory items.
      *
-     * @param array $query
-     *
      * @return InventoryItem[]
      */
     public function findAll(array $query = []);
@@ -37,7 +35,6 @@ interface InventoryItemManagerInterface extends ManagerInterface
      * Updates the inventory item.
      *
      * @param int $id
-     * @param array $data
      *
      * @return InventoryItem
      */

@@ -83,7 +83,7 @@ class Fulfillment extends Model
     protected $lineItems;
 
     /**
-     * @var integer
+     * @var int
      */
     protected $locationId;
 
@@ -103,8 +103,6 @@ class Fulfillment extends Model
     public function setLocationId($locationId)
     {
         $this->locationId = $locationId;
-
-
     }
 
     /**
@@ -123,8 +121,6 @@ class Fulfillment extends Model
     public function setService($service)
     {
         $this->service = $service;
-
-
     }
 
     /**
@@ -143,8 +139,6 @@ class Fulfillment extends Model
     public function setShipmentStatus($shipmentStatus)
     {
         $this->shipmentStatus = $shipmentStatus;
-
-
     }
 
     /**
@@ -163,8 +157,6 @@ class Fulfillment extends Model
     public function setTrackingUrl($trackingUrl)
     {
         $this->trackingUrl = $trackingUrl;
-
-
     }
 
     /**
@@ -183,8 +175,6 @@ class Fulfillment extends Model
     public function setTrackingUrls($trackingUrls)
     {
         $this->trackingUrls = $trackingUrls;
-
-
     }
 
     /**
@@ -203,8 +193,6 @@ class Fulfillment extends Model
     public function setReceipt($receipt)
     {
         $this->receipt = $receipt;
-
-
     }
 
     /**
@@ -216,15 +204,11 @@ class Fulfillment extends Model
     }
 
     /**
-     * @param DateTime $createdAt
-     *
      * @return Fulfillment
      */
     public function setCreatedAt(DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
-
-
     }
 
     /**
@@ -236,15 +220,11 @@ class Fulfillment extends Model
     }
 
     /**
-     * @param DateTime $updatedAt
-     *
      * @return Fulfillment
      */
     public function setUpdatedAt(DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
-
-
     }
 
     /**
@@ -263,8 +243,6 @@ class Fulfillment extends Model
     public function setOrderId($orderId)
     {
         $this->orderId = $orderId;
-
-
     }
 
     /**
@@ -283,8 +261,6 @@ class Fulfillment extends Model
     public function setStatus($status)
     {
         $this->status = $status;
-
-
     }
 
     /**
@@ -303,8 +279,6 @@ class Fulfillment extends Model
     public function setTrackingCompany($trackingCompany)
     {
         $this->trackingCompany = $trackingCompany;
-
-
     }
 
     /**
@@ -323,8 +297,6 @@ class Fulfillment extends Model
     public function setTrackingNumber($trackingNumber)
     {
         $this->trackingNumber = $trackingNumber;
-
-
     }
 
     /**
@@ -343,8 +315,6 @@ class Fulfillment extends Model
     public function setLineItems($lineItems)
     {
         $this->lineItems = $lineItems;
-
-
     }
 
     /**
@@ -363,7 +333,5 @@ class Fulfillment extends Model
     public function setTrackingNumbers($trackingNumbers)
     {
         $this->trackingNumbers = $trackingNumbers;
-
-
     }
 }

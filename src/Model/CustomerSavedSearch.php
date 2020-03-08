@@ -45,14 +45,10 @@ class CustomerSavedSearch extends Model
 
     /**
      * @param string $name
-     *
-
      */
     public function setName($name)
     {
         $this->name = $name;
-
-
     }
 
     /**
@@ -63,16 +59,9 @@ class CustomerSavedSearch extends Model
         return $this->createdAt;
     }
 
-    /**
-     * @param DateTime $createdAt
-     *
-
-     */
     public function setCreatedAt(DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
-
-
     }
 
     /**
@@ -83,16 +72,9 @@ class CustomerSavedSearch extends Model
         return $this->updatedAt;
     }
 
-    /**
-     * @param DateTime $updatedAt
-     *
-
-     */
     public function setUpdatedAt(DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
-
-
     }
 
     /**
@@ -105,13 +87,9 @@ class CustomerSavedSearch extends Model
 
     /**
      * @param string $query
-     *
-
      */
     public function setQuery($query)
     {
         $this->query = $query;
-
-
     }
 }

@@ -99,8 +99,6 @@ trait AddressTrait
     public function setFirstName($firstName)
     {
         $this->firstName = $firstName;
-
-
     }
 
     /**
@@ -119,8 +117,6 @@ trait AddressTrait
     public function setLastName($lastName)
     {
         $this->lastName = $lastName;
-
-
     }
 
     /**
@@ -139,8 +135,6 @@ trait AddressTrait
     public function setCompany($company)
     {
         $this->company = $company;
-
-
     }
 
     /**
@@ -159,8 +153,6 @@ trait AddressTrait
     public function setAddress1($address1)
     {
         $this->address1 = $address1;
-
-
     }
 
     /**
@@ -179,8 +171,6 @@ trait AddressTrait
     public function setAddress2($address2)
     {
         $this->address2 = $address2;
-
-
     }
 
     /**
@@ -199,8 +189,6 @@ trait AddressTrait
     public function setCity($city)
     {
         $this->city = $city;
-
-
     }
 
     /**
@@ -219,8 +207,6 @@ trait AddressTrait
     public function setProvince($province)
     {
         $this->province = $province;
-
-
     }
 
     /**
@@ -239,8 +225,6 @@ trait AddressTrait
     public function setCountry($country)
     {
         $this->country = $country;
-
-
     }
 
     /**
@@ -259,8 +243,6 @@ trait AddressTrait
     public function setZip($zip)
     {
         $this->zip = $zip;
-
-
     }
 
     /**
@@ -279,8 +261,6 @@ trait AddressTrait
     public function setPhone($phone)
     {
         $this->phone = $phone;
-
-
     }
 
     /**
@@ -299,8 +279,6 @@ trait AddressTrait
     public function setName($name)
     {
         $this->name = $name;
-
-
     }
 
     /**
@@ -319,8 +297,6 @@ trait AddressTrait
     public function setProvinceCode($provinceCode)
     {
         $this->provinceCode = $provinceCode;
-
-
     }
 
     /**
@@ -339,8 +315,6 @@ trait AddressTrait
     public function setCountryCode($countryCode)
     {
         $this->countryCode = $countryCode;
-
-
     }
 
     /**
@@ -359,7 +333,5 @@ trait AddressTrait
     public function setCountryName($countryName)
     {
         $this->countryName = $countryName;
-
-
     }
 }

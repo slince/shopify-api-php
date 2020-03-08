@@ -53,7 +53,7 @@ class SmartCollection extends Model
     protected $templateSuffix;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $disjunctive;
 
@@ -82,12 +82,12 @@ class SmartCollection extends Model
 
     /**
      * @param string $handle
+     *
      * @return SmartCollection
      */
     public function setHandle($handle)
     {
         $this->handle = $handle;
-
     }
 
     /**
@@ -100,12 +100,12 @@ class SmartCollection extends Model
 
     /**
      * @param string $title
+     *
      * @return SmartCollection
      */
     public function setTitle($title)
     {
         $this->title = $title;
-
     }
 
     /**
@@ -117,13 +117,11 @@ class SmartCollection extends Model
     }
 
     /**
-     * @param DateTime $updatedAt
      * @return SmartCollection
      */
     public function setUpdatedAt(DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
-
     }
 
     /**
@@ -136,12 +134,12 @@ class SmartCollection extends Model
 
     /**
      * @param string $bodyHtml
+     *
      * @return SmartCollection
      */
     public function setBodyHtml($bodyHtml)
     {
         $this->bodyHtml = $bodyHtml;
-
     }
 
     /**
@@ -153,13 +151,11 @@ class SmartCollection extends Model
     }
 
     /**
-     * @param DateTime $publishedAt
      * @return SmartCollection
      */
     public function setPublishedAt(DateTime $publishedAt)
     {
         $this->publishedAt = $publishedAt;
-
     }
 
     /**
@@ -172,12 +168,12 @@ class SmartCollection extends Model
 
     /**
      * @param string $sortOrder
+     *
      * @return SmartCollection
      */
     public function setSortOrder($sortOrder)
     {
         $this->sortOrder = $sortOrder;
-
     }
 
     /**
@@ -190,12 +186,12 @@ class SmartCollection extends Model
 
     /**
      * @param string $templateSuffix
+     *
      * @return SmartCollection
      */
     public function setTemplateSuffix($templateSuffix)
     {
         $this->templateSuffix = $templateSuffix;
-
     }
 
     /**
@@ -208,12 +204,12 @@ class SmartCollection extends Model
 
     /**
      * @param bool $disjunctive
+     *
      * @return SmartCollection
      */
     public function setDisjunctive($disjunctive)
     {
         $this->disjunctive = $disjunctive;
-
     }
 
     /**
@@ -226,12 +222,12 @@ class SmartCollection extends Model
 
     /**
      * @param array $rules
+     *
      * @return SmartCollection
      */
     public function setRules($rules)
     {
         $this->rules = $rules;
-
     }
 
     /**
@@ -244,12 +240,12 @@ class SmartCollection extends Model
 
     /**
      * @param string $publishedScope
+     *
      * @return SmartCollection
      */
     public function setPublishedScope($publishedScope)
     {
         $this->publishedScope = $publishedScope;
-
     }
 
     /**
@@ -262,11 +258,11 @@ class SmartCollection extends Model
 
     /**
      * @param SmartCollectionImage $image
+     *
      * @return SmartCollection
      */
     public function setImage($image)
     {
         $this->image = $image;
-
     }
 }

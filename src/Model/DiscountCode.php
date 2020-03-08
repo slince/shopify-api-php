@@ -51,8 +51,6 @@ class DiscountCode extends Model
     public function setCode($code)
     {
         $this->code = $code;
-
-
     }
 
     /**
@@ -64,15 +62,11 @@ class DiscountCode extends Model
     }
 
     /**
-     * @param DateTime $createdAt
-     *
      * @return DiscountCode
      */
     public function setCreatedAt(DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
-
-
     }
 
     /**
@@ -91,8 +85,6 @@ class DiscountCode extends Model
     public function setPriceRuleId($priceRuleId)
     {
         $this->priceRuleId = $priceRuleId;
-
-
     }
 
     /**
@@ -111,8 +103,5 @@ class DiscountCode extends Model
     public function setUsageCount($usageCount)
     {
         $this->usageCount = $usageCount;
-
-
     }
-
 }

@@ -28,7 +28,7 @@ class DraftOrder extends Model
     protected $email;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $taxesIncluded;
 
@@ -53,7 +53,7 @@ class DraftOrder extends Model
     protected $updatedAt;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $taxExempt;
 
@@ -230,9 +230,6 @@ class DraftOrder extends Model
         return $this->createdAt;
     }
 
-    /**
-     * @param DateTime $createdAt
-     */
     public function setCreatedAt(DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
@@ -246,9 +243,6 @@ class DraftOrder extends Model
         return $this->updatedAt;
     }
 
-    /**
-     * @param DateTime $updatedAt
-     */
     public function setUpdatedAt(DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;

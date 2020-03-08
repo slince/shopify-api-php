@@ -18,8 +18,6 @@ interface PriceRuleManagerInterface extends ManagerInterface
     /**
      * Gets all price rules.
      *
-     * @param array $query
-     *
      * @return PriceRule[]
      */
     public function findAll(array $query = []);
@@ -37,7 +35,6 @@ interface PriceRuleManagerInterface extends ManagerInterface
      * Updates the price rule.
      *
      * @param int $id
-     * @param array $data
      *
      * @return bool
      */
@@ -54,8 +51,6 @@ interface PriceRuleManagerInterface extends ManagerInterface
 
     /**
      * Creates a price rule.
-     *
-     * @param array $data
      *
      * @return PriceRule
      */

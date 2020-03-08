@@ -18,8 +18,6 @@ interface CustomCollectionManagerInterface extends ManagerInterface
     /**
      * Gets all custom collections.
      *
-     * @param array $query
-     *
      * @return CustomCollection[]
      */
     public function findAll(array $query = []);
@@ -36,8 +34,6 @@ interface CustomCollectionManagerInterface extends ManagerInterface
     /**
      * Gets the count.
      *
-     * @param array $query
-     *
      * @return int
      */
     public function count(array $query = []);
@@ -53,8 +49,6 @@ interface CustomCollectionManagerInterface extends ManagerInterface
 
     /**
      * Creates a blog.
-     *
-     * @param array $data
      *
      * @return CustomCollection
      */

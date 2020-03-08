@@ -72,14 +72,10 @@ class CustomCollection extends Model
 
     /**
      * @param string $handle
-     *
-
      */
     public function setHandle($handle)
     {
         $this->handle = $handle;
-
-
     }
 
     /**
@@ -92,14 +88,10 @@ class CustomCollection extends Model
 
     /**
      * @param string $title
-     *
-
      */
     public function setTitle($title)
     {
         $this->title = $title;
-
-
     }
 
     /**
@@ -110,16 +102,9 @@ class CustomCollection extends Model
         return $this->updatedAt;
     }
 
-    /**
-     * @param DateTime $updatedAt
-     *
-
-     */
     public function setUpdatedAt(DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
-
-
     }
 
     /**
@@ -132,14 +117,10 @@ class CustomCollection extends Model
 
     /**
      * @param string $bodyHtml
-     *
-
      */
     public function setBodyHtml($bodyHtml)
     {
         $this->bodyHtml = $bodyHtml;
-
-
     }
 
     /**
@@ -150,16 +131,9 @@ class CustomCollection extends Model
         return $this->publishedAt;
     }
 
-    /**
-     * @param DateTime $publishedAt
-     *
-
-     */
     public function setPublishedAt(DateTime $publishedAt)
     {
         $this->publishedAt = $publishedAt;
-
-
     }
 
     /**
@@ -172,14 +146,10 @@ class CustomCollection extends Model
 
     /**
      * @param string $sortOrder
-     *
-
      */
     public function setSortOrder($sortOrder)
     {
         $this->sortOrder = $sortOrder;
-
-
     }
 
     /**
@@ -192,14 +162,10 @@ class CustomCollection extends Model
 
     /**
      * @param string $templateSuffix
-     *
-
      */
     public function setTemplateSuffix($templateSuffix)
     {
         $this->templateSuffix = $templateSuffix;
-
-
     }
 
     /**
@@ -212,18 +178,14 @@ class CustomCollection extends Model
 
     /**
      * @param string $publishedScope
-     *
-
      */
     public function setPublishedScope($publishedScope)
     {
         $this->publishedScope = $publishedScope;
-
-
     }
 
     /**
-     * Image
+     * Image.
      */
     public function getImage()
     {
@@ -232,13 +194,9 @@ class CustomCollection extends Model
 
     /**
      * @param CustomCollectionImage $image
-     *
-
      */
     public function setImage($image)
     {
         $this->image = $image;
-
-
     }
 }

@@ -18,8 +18,6 @@ interface CustomerManagerInterface extends ManagerInterface
     /**
      * Gets all customers.
      *
-     * @param array $query
-     *
      * @return Customer[]
      */
     public function findAll(array $query = []);
@@ -36,8 +34,6 @@ interface CustomerManagerInterface extends ManagerInterface
     /**
      * Gets the count.
      *
-     * @param array $query
-     *
      * @return int
      */
     public function count(array $query = []);
@@ -46,7 +42,6 @@ interface CustomerManagerInterface extends ManagerInterface
      * Updates the customer.
      *
      * @param int $id
-     * @param array $data
      *
      * @return bool
      */
@@ -64,8 +59,6 @@ interface CustomerManagerInterface extends ManagerInterface
     /**
      * Creates a customer.
      *
-     * @param array $data
-     *
      * @return Customer
      */
     public function create(array $data);
@@ -81,7 +74,6 @@ interface CustomerManagerInterface extends ManagerInterface
 
     /**
      * @param $id
-     * @param array $data
      *
      * @return mixed
      */
@@ -89,8 +81,6 @@ interface CustomerManagerInterface extends ManagerInterface
 
     /**
      * Searches for customers that match a supplied query.
-     *
-     * @param array $query
      *
      * @return Customer[]
      */

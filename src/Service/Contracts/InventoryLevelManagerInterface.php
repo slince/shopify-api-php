@@ -18,16 +18,12 @@ interface InventoryLevelManagerInterface extends ManagerInterface
     /**
      * Retrieves a list of inventory levels.
      *
-     * @param array $query
-     *
      * @return InventoryLevel[]
      */
     public function findAll(array $query = []);
 
     /**
      * Adjusts the inventory level of an inventory item at a location.
-     *
-     * @param array $data
      *
      * @return InventoryLevel
      */
@@ -44,16 +40,12 @@ interface InventoryLevelManagerInterface extends ManagerInterface
     /**
      * Connects an inventory item to a location.
      *
-     * @param array $data
-     *
      * @return InventoryLevel
      */
     public function connect(array $data);
 
     /**
      * Sets the inventory level for an inventory item at a location.
-     *
-     * @param array $data
      *
      * @return InventoryLevel
      */

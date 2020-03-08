@@ -19,7 +19,6 @@ interface TransactionManagerInterface
      * Finds transactions.
      *
      * @param int $orderId
-     * @param array $query
      *
      * @return Transaction[]
      */
@@ -39,7 +38,6 @@ interface TransactionManagerInterface
      * Gets the number of transactions.
      *
      * @param int $orderId
-     * @param array $query
      *
      * @return int
      */
@@ -49,7 +47,6 @@ interface TransactionManagerInterface
      * Creates a transaction.
      *
      * @param int $orderId
-     * @param array $data
      *
      * @return Transaction
      */

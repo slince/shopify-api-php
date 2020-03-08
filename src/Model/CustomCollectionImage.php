@@ -45,14 +45,10 @@ class CustomCollectionImage
 
     /**
      * @param string $src
-     *
-
      */
     public function setSrc($src)
     {
         $this->src = $src;
-
-
     }
 
     /**
@@ -65,14 +61,10 @@ class CustomCollectionImage
 
     /**
      * @param int $width
-     *
-
      */
     public function setWidth($width)
     {
         $this->width = $width;
-
-
     }
 
     /**
@@ -85,14 +77,10 @@ class CustomCollectionImage
 
     /**
      * @param int $height
-     *
-
      */
     public function setHeight($height)
     {
         $this->height = $height;
-
-
     }
 
     /**
@@ -103,15 +91,8 @@ class CustomCollectionImage
         return $this->createdAt;
     }
 
-    /**
-     * @param DateTime $createdAt
-     *
-
-     */
     public function setCreatedAt(DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
-
-
     }
 }

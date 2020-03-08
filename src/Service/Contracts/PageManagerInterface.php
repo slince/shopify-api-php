@@ -18,8 +18,6 @@ interface PageManagerInterface extends ManagerInterface
     /**
      * Gets all pages.
      *
-     * @param array $query
-     *
      * @return Page[]
      */
     public function findAll(array $query = []);
@@ -36,8 +34,6 @@ interface PageManagerInterface extends ManagerInterface
     /**
      * Gets the count.
      *
-     * @param array $query
-     *
      * @return int
      */
     public function count(array $query = []);
@@ -46,7 +42,6 @@ interface PageManagerInterface extends ManagerInterface
      * Updates the page.
      *
      * @param int $id
-     * @param array $data
      *
      * @return bool
      */
@@ -63,8 +58,6 @@ interface PageManagerInterface extends ManagerInterface
 
     /**
      * Creates a page.
-     *
-     * @param array $data
      *
      * @return Page
      */

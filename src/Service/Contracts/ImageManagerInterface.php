@@ -19,7 +19,6 @@ interface ImageManagerInterface
      * Finds articles.
      *
      * @param int $productId
-     * @param array $query
      *
      * @return Image[]
      */
@@ -39,7 +38,6 @@ interface ImageManagerInterface
      * Gets the count.
      *
      * @param int $productId
-     * @param array $query
      *
      * @return int
      */
@@ -50,7 +48,6 @@ interface ImageManagerInterface
      *
      * @param int $productId
      * @param int $id
-     * @param array $data
      *
      * @return Image
      */
@@ -68,7 +65,6 @@ interface ImageManagerInterface
      * Creates a product.
      *
      * @param int $productId
-     * @param array $data
      *
      * @return Image
      */

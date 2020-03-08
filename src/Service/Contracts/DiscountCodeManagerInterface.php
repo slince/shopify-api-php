@@ -19,7 +19,6 @@ interface DiscountCodeManagerInterface
      * Finds discount codes.
      *
      * @param int $priceRuleId
-     * @param array $query
      *
      * @return DiscountCode[]
      */
@@ -40,7 +39,6 @@ interface DiscountCodeManagerInterface
      *
      * @param int $priceRuleId
      * @param int $id
-     * @param array $data
      *
      * @return DiscountCode
      */
@@ -58,7 +56,6 @@ interface DiscountCodeManagerInterface
      * Creates a discount code.
      *
      * @param int $priceRuleId
-     * @param array $data
      *
      * @return DiscountCode
      */

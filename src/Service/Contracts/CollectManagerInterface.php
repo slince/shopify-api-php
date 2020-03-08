@@ -18,8 +18,6 @@ interface CollectManagerInterface
     /**
      * Gets all collects.
      *
-     * @param array $query
-     *
      * @return Collect[]
      */
     public function findAll(array $query = []);
@@ -36,8 +34,6 @@ interface CollectManagerInterface
     /**
      * Gets the count.
      *
-     * @param array $query
-     *
      * @return int
      */
     public function count(array $query = []);
@@ -53,8 +49,6 @@ interface CollectManagerInterface
 
     /**
      * Creates a blog.
-     *
-     * @param array $data
      *
      * @return Collect
      */

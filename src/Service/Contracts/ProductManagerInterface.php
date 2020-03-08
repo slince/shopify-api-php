@@ -18,8 +18,6 @@ interface ProductManagerInterface extends ManagerInterface
     /**
      * Gets all products.
      *
-     * @param array $query
-     *
      * @return Product[]
      */
     public function findAll(array $query = []);
@@ -36,8 +34,6 @@ interface ProductManagerInterface extends ManagerInterface
     /**
      * Gets the count.
      *
-     * @param array $query
-     *
      * @return int
      */
     public function count(array $query = []);
@@ -46,7 +42,6 @@ interface ProductManagerInterface extends ManagerInterface
      * Updates the product.
      *
      * @param int $id
-     * @param array $data
      *
      * @return bool
      */
@@ -63,8 +58,6 @@ interface ProductManagerInterface extends ManagerInterface
 
     /**
      * Creates a product.
-     *
-     * @param array $data
      *
      * @return Product
      */

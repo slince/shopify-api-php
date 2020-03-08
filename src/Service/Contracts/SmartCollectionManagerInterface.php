@@ -18,8 +18,6 @@ interface SmartCollectionManagerInterface extends ManagerInterface
     /**
      * Gets all custom collections.
      *
-     * @param array $query
-     *
      * @return SmartCollection[]
      */
     public function findAll(array $query = []);
@@ -36,8 +34,6 @@ interface SmartCollectionManagerInterface extends ManagerInterface
     /**
      * Gets the count.
      *
-     * @param array $query
-     *
      * @return int
      */
     public function count(array $query = []);
@@ -53,8 +49,6 @@ interface SmartCollectionManagerInterface extends ManagerInterface
 
     /**
      * Creates a smart collection.
-     *
-     * @param array $data
      *
      * @return SmartCollection
      */

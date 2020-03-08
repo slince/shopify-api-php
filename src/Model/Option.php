@@ -49,8 +49,6 @@ class Option extends Model
     public function setProductId($productId)
     {
         $this->productId = $productId;
-
-
     }
 
     /**
@@ -69,8 +67,6 @@ class Option extends Model
     public function setName($name)
     {
         $this->name = $name;
-
-
     }
 
     /**
@@ -89,8 +85,6 @@ class Option extends Model
     public function setPosition($position)
     {
         $this->position = $position;
-
-
     }
 
     /**
@@ -109,7 +103,5 @@ class Option extends Model
     public function setValues($values)
     {
         $this->values = $values;
-
-
     }
 }

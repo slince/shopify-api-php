@@ -108,8 +108,6 @@ class Transaction extends Model
     public function setAmount($amount)
     {
         $this->amount = $amount;
-
-
     }
 
     /**
@@ -128,8 +126,6 @@ class Transaction extends Model
     public function setAuthorization($authorization)
     {
         $this->authorization = $authorization;
-
-
     }
 
     /**
@@ -141,15 +137,11 @@ class Transaction extends Model
     }
 
     /**
-     * @param DateTime $createdAt
-     *
      * @return Transaction
      */
     public function setCreatedAt(DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
-
-
     }
 
     /**
@@ -168,8 +160,6 @@ class Transaction extends Model
     public function setDeviceId($deviceId)
     {
         $this->deviceId = $deviceId;
-
-
     }
 
     /**
@@ -188,8 +178,6 @@ class Transaction extends Model
     public function setGateway($gateway)
     {
         $this->gateway = $gateway;
-
-
     }
 
     /**
@@ -208,8 +196,6 @@ class Transaction extends Model
     public function setSourceName($sourceName)
     {
         $this->sourceName = $sourceName;
-
-
     }
 
     /**
@@ -228,8 +214,6 @@ class Transaction extends Model
     public function setPaymentDetails($paymentDetails)
     {
         $this->paymentDetails = $paymentDetails;
-
-
     }
 
     /**
@@ -248,8 +232,6 @@ class Transaction extends Model
     public function setKind($kind)
     {
         $this->kind = $kind;
-
-
     }
 
     /**
@@ -268,8 +250,6 @@ class Transaction extends Model
     public function setOrderId($orderId)
     {
         $this->orderId = $orderId;
-
-
     }
 
     /**
@@ -288,8 +268,6 @@ class Transaction extends Model
     public function setReceipt($receipt)
     {
         $this->receipt = $receipt;
-
-
     }
 
     /**
@@ -308,8 +286,6 @@ class Transaction extends Model
     public function setErrorCode($errorCode)
     {
         $this->errorCode = $errorCode;
-
-
     }
 
     /**
@@ -328,8 +304,6 @@ class Transaction extends Model
     public function setStatus($status)
     {
         $this->status = $status;
-
-
     }
 
     /**
@@ -348,8 +322,6 @@ class Transaction extends Model
     public function setTest($test)
     {
         $this->test = $test;
-
-
     }
 
     /**
@@ -368,8 +340,6 @@ class Transaction extends Model
     public function setUserId($userId)
     {
         $this->userId = $userId;
-
-
     }
 
     /**
@@ -388,7 +358,5 @@ class Transaction extends Model
     public function setCurrency($currency)
     {
         $this->currency = $currency;
-
-
     }
 }

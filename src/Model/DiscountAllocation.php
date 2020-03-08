@@ -39,8 +39,6 @@ class DiscountAllocation extends Model
     public function setAmount($amount)
     {
         $this->amount = $amount;
-
-
     }
 
     /**
@@ -59,7 +57,5 @@ class DiscountAllocation extends Model
     public function setDiscountApplicationIndex($discountApplicationIndex)
     {
         $this->discountApplicationIndex = $discountApplicationIndex;
-
-
     }
 }

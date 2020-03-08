@@ -19,7 +19,6 @@ interface ProvinceManagerInterface extends ManagerInterface
      * Finds provinces.
      *
      * @param int $countryId
-     * @param array $query
      *
      * @return Province[]
      */
@@ -39,7 +38,6 @@ interface ProvinceManagerInterface extends ManagerInterface
      * Gets the count.
      *
      * @param int $countryId
-     * @param array $query
      *
      * @return int
      */
@@ -50,7 +48,6 @@ interface ProvinceManagerInterface extends ManagerInterface
      *
      * @param int $countryId
      * @param int $id
-     * @param array $data
      *
      * @return Province
      */

@@ -19,8 +19,6 @@ interface LocationManagerInterface extends ManagerInterface
     /**
      * Gets all locations.
      *
-     * @param array $query
-     *
      * @return Location[]
      */
     public function findAll(array $query = []);
@@ -37,15 +35,15 @@ interface LocationManagerInterface extends ManagerInterface
     /**
      * Gets the count.
      *
-     * @param array $query
-     *
      * @return int
      */
     public function count(array $query = []);
 
     /**
-     * Gets the inventory levels of the location
+     * Gets the inventory levels of the location.
+     *
      * @param int $id
+     *
      * @return InventoryLevel[]
      */
     public function getInventoryLevels($id);

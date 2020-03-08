@@ -64,8 +64,6 @@ class ShippingLine extends Model
     public function setCode($code)
     {
         $this->code = $code;
-
-
     }
 
     /**
@@ -84,8 +82,6 @@ class ShippingLine extends Model
     public function setPrice($price)
     {
         $this->price = $price;
-
-
     }
 
     /**
@@ -104,8 +100,6 @@ class ShippingLine extends Model
     public function setSource($source)
     {
         $this->source = $source;
-
-
     }
 
     /**
@@ -124,8 +118,6 @@ class ShippingLine extends Model
     public function setTitle($title)
     {
         $this->title = $title;
-
-
     }
 
     /**
@@ -144,8 +136,6 @@ class ShippingLine extends Model
     public function setTaxLines($taxLines)
     {
         $this->taxLines = $taxLines;
-
-
     }
 
     /**
@@ -164,8 +154,6 @@ class ShippingLine extends Model
     public function setCarrierIdentifier($carrierIdentifier)
     {
         $this->carrierIdentifier = $carrierIdentifier;
-
-
     }
 
     /**
@@ -184,7 +172,5 @@ class ShippingLine extends Model
     public function setRequestedFulfillmentServiceId($requestedFulfillmentServiceId)
     {
         $this->requestedFulfillmentServiceId = $requestedFulfillmentServiceId;
-
-
     }
 }

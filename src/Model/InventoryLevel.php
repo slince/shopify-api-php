@@ -56,8 +56,6 @@ class InventoryLevel
     public function setInventoryItemId($inventoryItemId)
     {
         $this->inventoryItemId = $inventoryItemId;
-
-
     }
 
     /**
@@ -76,8 +74,6 @@ class InventoryLevel
     public function setLocationId($locationId)
     {
         $this->locationId = $locationId;
-
-
     }
 
     /**
@@ -96,8 +92,6 @@ class InventoryLevel
     public function setAvailable($available)
     {
         $this->available = $available;
-
-
     }
 
     /**
@@ -109,15 +103,11 @@ class InventoryLevel
     }
 
     /**
-     * @param DateTime $updatedAt
-     *
      * @return InventoryLevel
      */
     public function setUpdatedAt(DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
-
-
     }
 
     /**
@@ -136,7 +126,5 @@ class InventoryLevel
     public function setAdminGraphqlApiId($adminGraphqlApiId)
     {
         $this->adminGraphqlApiId = $adminGraphqlApiId;
-
-
     }
 }

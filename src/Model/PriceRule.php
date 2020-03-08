@@ -158,8 +158,6 @@ class PriceRule extends Model
     public function setAllocationMethod($allocationMethod)
     {
         $this->allocationMethod = $allocationMethod;
-
-
     }
 
     /**
@@ -171,15 +169,11 @@ class PriceRule extends Model
     }
 
     /**
-     * @param DateTime $createdAt
-     *
      * @return PriceRule
      */
     public function setCreatedAt(DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
-
-
     }
 
     /**
@@ -198,8 +192,6 @@ class PriceRule extends Model
     public function setCustomerSelection($customerSelection)
     {
         $this->customerSelection = $customerSelection;
-
-
     }
 
     /**
@@ -218,8 +210,6 @@ class PriceRule extends Model
     public function setEndsAt($endsAt)
     {
         $this->endsAt = $endsAt;
-
-
     }
 
     /**
@@ -238,8 +228,6 @@ class PriceRule extends Model
     public function setEntitledCollectionIds($entitledCollectionIds)
     {
         $this->entitledCollectionIds = $entitledCollectionIds;
-
-
     }
 
     /**
@@ -258,8 +246,6 @@ class PriceRule extends Model
     public function setEntitledCountryIds($entitledCountryIds)
     {
         $this->entitledCountryIds = $entitledCountryIds;
-
-
     }
 
     /**
@@ -278,8 +264,6 @@ class PriceRule extends Model
     public function setEntitledProductIds($entitledProductIds)
     {
         $this->entitledProductIds = $entitledProductIds;
-
-
     }
 
     /**
@@ -298,8 +282,6 @@ class PriceRule extends Model
     public function setEntitledVariantIds($entitledVariantIds)
     {
         $this->entitledVariantIds = $entitledVariantIds;
-
-
     }
 
     /**
@@ -311,15 +293,13 @@ class PriceRule extends Model
     }
 
     /**
-     * @param boolean $oncePerCustomer
+     * @param bool $oncePerCustomer
      *
      * @return PriceRule
      */
     public function setOncePerCustomer($oncePerCustomer)
     {
         $this->oncePerCustomer = $oncePerCustomer;
-
-
     }
 
     /**
@@ -338,8 +318,6 @@ class PriceRule extends Model
     public function setPrerequisiteCustomerIds($prerequisiteCustomerIds)
     {
         $this->prerequisiteCustomerIds = $prerequisiteCustomerIds;
-
-
     }
 
     /**
@@ -358,8 +336,6 @@ class PriceRule extends Model
     public function setPrerequisiteQuantityRange($prerequisiteQuantityRange)
     {
         $this->prerequisiteQuantityRange = $prerequisiteQuantityRange;
-
-
     }
 
     /**
@@ -378,8 +354,6 @@ class PriceRule extends Model
     public function setPrerequisiteSavedSearchIds($prerequisiteSavedSearchIds)
     {
         $this->prerequisiteSavedSearchIds = $prerequisiteSavedSearchIds;
-
-
     }
 
     /**
@@ -398,8 +372,6 @@ class PriceRule extends Model
     public function setPrerequisiteShippingPriceRange($prerequisiteShippingPriceRange)
     {
         $this->prerequisiteShippingPriceRange = $prerequisiteShippingPriceRange;
-
-
     }
 
     /**
@@ -418,8 +390,6 @@ class PriceRule extends Model
     public function setPrerequisiteSubtotalRange($prerequisiteSubtotalRange)
     {
         $this->prerequisiteSubtotalRange = $prerequisiteSubtotalRange;
-
-
     }
 
     /**
@@ -438,8 +408,6 @@ class PriceRule extends Model
     public function setStartsAt($startsAt)
     {
         $this->startsAt = $startsAt;
-
-
     }
 
     /**
@@ -458,8 +426,6 @@ class PriceRule extends Model
     public function setTargetSelection($targetSelection)
     {
         $this->targetSelection = $targetSelection;
-
-
     }
 
     /**
@@ -478,8 +444,6 @@ class PriceRule extends Model
     public function setTargetType($targetType)
     {
         $this->targetType = $targetType;
-
-
     }
 
     /**
@@ -498,8 +462,6 @@ class PriceRule extends Model
     public function setTitle($title)
     {
         $this->title = $title;
-
-
     }
 
     /**
@@ -518,8 +480,6 @@ class PriceRule extends Model
     public function setUsageLimit($usageLimit)
     {
         $this->usageLimit = $usageLimit;
-
-
     }
 
     /**
@@ -538,8 +498,6 @@ class PriceRule extends Model
     public function setPrerequisiteProductIds($prerequisiteProductIds)
     {
         $this->prerequisiteProductIds = $prerequisiteProductIds;
-
-
     }
 
     /**
@@ -558,8 +516,6 @@ class PriceRule extends Model
     public function setPrerequisiteVariantIds($prerequisiteVariantIds)
     {
         $this->prerequisiteVariantIds = $prerequisiteVariantIds;
-
-
     }
 
     /**
@@ -578,8 +534,6 @@ class PriceRule extends Model
     public function setPrerequisiteCollectionIds($prerequisiteCollectionIds)
     {
         $this->prerequisiteCollectionIds = $prerequisiteCollectionIds;
-
-
     }
 
     /**
@@ -598,8 +552,6 @@ class PriceRule extends Model
     public function setValue($value)
     {
         $this->value = $value;
-
-
     }
 
     /**
@@ -618,8 +570,6 @@ class PriceRule extends Model
     public function setValueType($valueType)
     {
         $this->valueType = $valueType;
-
-
     }
 
     /**
@@ -638,7 +588,5 @@ class PriceRule extends Model
     public function setPrerequisiteToEntitlementQuantityRatio($prerequisiteToEntitlementQuantityRatio)
     {
         $this->prerequisiteToEntitlementQuantityRatio = $prerequisiteToEntitlementQuantityRatio;
-
-
     }
 }

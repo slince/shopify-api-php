@@ -11,7 +11,6 @@
 
 namespace Slince\Shopify\Model;
 
-
 use DateTime;
 
 class Image extends Model
@@ -74,8 +73,6 @@ class Image extends Model
     public function setProductId($productId)
     {
         $this->productId = $productId;
-
-
     }
 
     /**
@@ -94,8 +91,6 @@ class Image extends Model
     public function setPosition($position)
     {
         $this->position = $position;
-
-
     }
 
     /**
@@ -107,15 +102,11 @@ class Image extends Model
     }
 
     /**
-     * @param DateTime $createdAt
-     *
      * @return Image
      */
     public function setCreatedAt(DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
-
-
     }
 
     /**
@@ -127,15 +118,11 @@ class Image extends Model
     }
 
     /**
-     * @param DateTime $updatedAt
-     *
      * @return Image
      */
     public function setUpdatedAt(DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
-
-
     }
 
     /**
@@ -154,8 +141,6 @@ class Image extends Model
     public function setSrc($src)
     {
         $this->src = $src;
-
-
     }
 
     /**
@@ -174,8 +159,6 @@ class Image extends Model
     public function setWidth($width)
     {
         $this->width = $width;
-
-
     }
 
     /**
@@ -194,8 +177,6 @@ class Image extends Model
     public function setHeight($height)
     {
         $this->height = $height;
-
-
     }
 
     /**
@@ -214,7 +195,5 @@ class Image extends Model
     public function setVariantIds($variantIds)
     {
         $this->variantIds = $variantIds;
-
-
     }
 }

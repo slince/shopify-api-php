@@ -18,8 +18,6 @@ interface BlogManagerInterface
     /**
      * Gets all blogs.
      *
-     * @param array $query
-     *
      * @return Blog[]
      */
     public function findAll(array $query = []);
@@ -36,8 +34,6 @@ interface BlogManagerInterface
     /**
      * Gets the count.
      *
-     * @param array $query
-     *
      * @return int
      */
     public function count(array $query = []);
@@ -46,7 +42,6 @@ interface BlogManagerInterface
      * Updates the blog.
      *
      * @param int $id
-     * @param array $data
      *
      * @return bool
      */
@@ -63,8 +58,6 @@ interface BlogManagerInterface
 
     /**
      * Creates a blog.
-     *
-     * @param array $data
      *
      * @return Blog
      */

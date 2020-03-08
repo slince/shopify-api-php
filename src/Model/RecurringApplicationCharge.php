@@ -111,8 +111,6 @@ class RecurringApplicationCharge extends Model
     public function setActivatedOn($activatedOn)
     {
         $this->activatedOn = $activatedOn;
-
-
     }
 
     /**
@@ -131,8 +129,6 @@ class RecurringApplicationCharge extends Model
     public function setBillingOn($billingOn)
     {
         $this->billingOn = $billingOn;
-
-
     }
 
     /**
@@ -151,8 +147,6 @@ class RecurringApplicationCharge extends Model
     public function setCancelledOn($cancelledOn)
     {
         $this->cancelledOn = $cancelledOn;
-
-
     }
 
     /**
@@ -171,8 +165,6 @@ class RecurringApplicationCharge extends Model
     public function setCappedAmount($cappedAmount)
     {
         $this->cappedAmount = $cappedAmount;
-
-
     }
 
     /**
@@ -191,8 +183,6 @@ class RecurringApplicationCharge extends Model
     public function setConfirmationUrl($confirmationUrl)
     {
         $this->confirmationUrl = $confirmationUrl;
-
-
     }
 
     /**
@@ -204,15 +194,11 @@ class RecurringApplicationCharge extends Model
     }
 
     /**
-     * @param DateTime $createdAt
-     *
      * @return RecurringApplicationCharge
      */
     public function setCreatedAt(DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
-
-
     }
 
     /**
@@ -231,8 +217,6 @@ class RecurringApplicationCharge extends Model
     public function setDecoratedReturnUrl($decoratedReturnUrl)
     {
         $this->decoratedReturnUrl = $decoratedReturnUrl;
-
-
     }
 
     /**
@@ -251,8 +235,6 @@ class RecurringApplicationCharge extends Model
     public function setName($name)
     {
         $this->name = $name;
-
-
     }
 
     /**
@@ -271,8 +253,6 @@ class RecurringApplicationCharge extends Model
     public function setPrice($price)
     {
         $this->price = $price;
-
-
     }
 
     /**
@@ -291,8 +271,6 @@ class RecurringApplicationCharge extends Model
     public function setReturnUrl($returnUrl)
     {
         $this->returnUrl = $returnUrl;
-
-
     }
 
     /**
@@ -311,8 +289,6 @@ class RecurringApplicationCharge extends Model
     public function setStatus($status)
     {
         $this->status = $status;
-
-
     }
 
     /**
@@ -331,8 +307,6 @@ class RecurringApplicationCharge extends Model
     public function setTerms($terms)
     {
         $this->terms = $terms;
-
-
     }
 
     /**
@@ -351,8 +325,6 @@ class RecurringApplicationCharge extends Model
     public function setTest($test)
     {
         $this->test = $test;
-
-
     }
 
     /**
@@ -371,8 +343,6 @@ class RecurringApplicationCharge extends Model
     public function setTrialDays($trialDays)
     {
         $this->trialDays = $trialDays;
-
-
     }
 
     /**
@@ -391,8 +361,6 @@ class RecurringApplicationCharge extends Model
     public function setTrialEndsOn($trialEndsOn)
     {
         $this->trialEndsOn = $trialEndsOn;
-
-
     }
 
     /**
@@ -404,15 +372,10 @@ class RecurringApplicationCharge extends Model
     }
 
     /**
-     * @param DateTime $updatedAt
-     *
      * @return RecurringApplicationCharge
      */
     public function setUpdatedAt(DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
-
-
     }
-
 }

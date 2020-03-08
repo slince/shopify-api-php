@@ -122,14 +122,10 @@ class Customer extends Model
 
     /**
      * @param string $email
-     *
-
      */
     public function setEmail($email)
     {
         $this->email = $email;
-
-
     }
 
     /**
@@ -142,14 +138,10 @@ class Customer extends Model
 
     /**
      * @param bool $acceptsMarketing
-     *
-
      */
     public function setAcceptsMarketing($acceptsMarketing)
     {
         $this->acceptsMarketing = $acceptsMarketing;
-
-
     }
 
     /**
@@ -160,16 +152,9 @@ class Customer extends Model
         return $this->createdAt;
     }
 
-    /**
-     * @param DateTime $createdAt
-     *
-
-     */
     public function setCreatedAt(DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
-
-
     }
 
     /**
@@ -180,16 +165,9 @@ class Customer extends Model
         return $this->updatedAt;
     }
 
-    /**
-     * @param DateTime $updatedAt
-     *
-
-     */
     public function setUpdatedAt(DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
-
-
     }
 
     /**
@@ -202,14 +180,10 @@ class Customer extends Model
 
     /**
      * @param string $firstName
-     *
-
      */
     public function setFirstName($firstName)
     {
         $this->firstName = $firstName;
-
-
     }
 
     /**
@@ -222,14 +196,10 @@ class Customer extends Model
 
     /**
      * @param string $lastName
-     *
-
      */
     public function setLastName($lastName)
     {
         $this->lastName = $lastName;
-
-
     }
 
     /**
@@ -242,14 +212,10 @@ class Customer extends Model
 
     /**
      * @param int $ordersCount
-     *
-
      */
     public function setOrdersCount($ordersCount)
     {
         $this->ordersCount = $ordersCount;
-
-
     }
 
     /**
@@ -262,14 +228,10 @@ class Customer extends Model
 
     /**
      * @param string $state
-     *
-
      */
     public function setState($state)
     {
         $this->state = $state;
-
-
     }
 
     /**
@@ -282,14 +244,10 @@ class Customer extends Model
 
     /**
      * @param float $totalSpent
-     *
-
      */
     public function setTotalSpent($totalSpent)
     {
         $this->totalSpent = $totalSpent;
-
-
     }
 
     /**
@@ -302,14 +260,10 @@ class Customer extends Model
 
     /**
      * @param int $lastOrderId
-     *
-
      */
     public function setLastOrderId($lastOrderId)
     {
         $this->lastOrderId = $lastOrderId;
-
-
     }
 
     /**
@@ -322,14 +276,10 @@ class Customer extends Model
 
     /**
      * @param string $note
-     *
-
      */
     public function setNote($note)
     {
         $this->note = $note;
-
-
     }
 
     /**
@@ -342,14 +292,10 @@ class Customer extends Model
 
     /**
      * @param bool $verifiedEmail
-     *
-
      */
     public function setVerifiedEmail($verifiedEmail)
     {
         $this->verifiedEmail = $verifiedEmail;
-
-
     }
 
     /**
@@ -362,14 +308,10 @@ class Customer extends Model
 
     /**
      * @param string $multipassIdentifier
-     *
-
      */
     public function setMultipassIdentifier($multipassIdentifier)
     {
         $this->multipassIdentifier = $multipassIdentifier;
-
-
     }
 
     /**
@@ -382,14 +324,10 @@ class Customer extends Model
 
     /**
      * @param bool $taxExempt
-     *
-
      */
     public function setTaxExempt($taxExempt)
     {
         $this->taxExempt = $taxExempt;
-
-
     }
 
     /**
@@ -402,14 +340,10 @@ class Customer extends Model
 
     /**
      * @param string $phone
-     *
-
      */
     public function setPhone($phone)
     {
         $this->phone = $phone;
-
-
     }
 
     /**
@@ -422,14 +356,10 @@ class Customer extends Model
 
     /**
      * @param string $tags
-     *
-
      */
     public function setTags($tags)
     {
         $this->tags = $tags;
-
-
     }
 
     /**
@@ -442,14 +372,10 @@ class Customer extends Model
 
     /**
      * @param string $lastOrderName
-     *
-
      */
     public function setLastOrderName($lastOrderName)
     {
         $this->lastOrderName = $lastOrderName;
-
-
     }
 
     /**
@@ -462,14 +388,10 @@ class Customer extends Model
 
     /**
      * @param Address[] $addresses
-     *
-
      */
     public function setAddresses($addresses)
     {
         $this->addresses = $addresses;
-
-
     }
 
     /**
@@ -482,13 +404,9 @@ class Customer extends Model
 
     /**
      * @param Address $defaultAddress
-     *
-
      */
     public function setDefaultAddress($defaultAddress)
     {
         $this->defaultAddress = $defaultAddress;
-
-
     }
 }

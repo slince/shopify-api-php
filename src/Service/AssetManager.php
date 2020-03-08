@@ -44,7 +44,7 @@ class AssetManager extends AbstractManager implements AssetManagerInterface
     }
 
     /**
-     * @param integer $themeId
+     * @param int $themeId
      *
      * @return string
      */
@@ -61,8 +61,8 @@ class AssetManager extends AbstractManager implements AssetManagerInterface
         $resource = $this->createPartialResourceUrlForList($themeId);
         $data = $this->client->get($resource, [
             'asset' => [
-                'key' => $key
-            ]
+                'key' => $key,
+            ],
         ]);
 
         return $this->fromArray(reset($data));
@@ -95,8 +95,8 @@ class AssetManager extends AbstractManager implements AssetManagerInterface
         $resource = $this->createPartialResourceUrlForList($themeId);
         $this->client->delete($resource, [
             'asset' => [
-                'key' => $key
-            ]
+                'key' => $key,
+            ],
         ]);
     }
 }

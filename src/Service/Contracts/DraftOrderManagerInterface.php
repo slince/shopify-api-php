@@ -18,8 +18,6 @@ interface DraftOrderManagerInterface extends ManagerInterface
     /**
      * Gets all orders.
      *
-     * @param array $query
-     *
      * @return DraftOrder[]
      */
     public function findAll(array $query = []);
@@ -36,8 +34,6 @@ interface DraftOrderManagerInterface extends ManagerInterface
     /**
      * Gets the count.
      *
-     * @param array $query
-     *
      * @return int
      */
     public function count(array $query = []);
@@ -46,12 +42,10 @@ interface DraftOrderManagerInterface extends ManagerInterface
      * Updates the order.
      *
      * @param int $id
-     * @param array $data
      *
      * @return bool
      */
     public function update($id, array $data);
-
 
     /**
      * Removes the order.
@@ -65,8 +59,6 @@ interface DraftOrderManagerInterface extends ManagerInterface
     /**
      * Creates an order.
      *
-     * @param array $data
-     *
      * @return DraftOrder
      */
     public function create(array $data);
@@ -75,16 +67,17 @@ interface DraftOrderManagerInterface extends ManagerInterface
      * Send invoices to customers.
      *
      * @param int $id
-     * @param array $data
+     *
      * @return array
      */
     public function sendInvoice($id, array $data);
 
     /**
-     * Complete a draft order
+     * Complete a draft order.
      *
-     * @param int $id
-     * @param boolean $paymentPending
+     * @param int  $id
+     * @param bool $paymentPending
+     *
      * @return DraftOrder
      */
     public function complete($id, $paymentPending = null);

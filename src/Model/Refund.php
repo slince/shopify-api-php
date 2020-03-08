@@ -73,8 +73,6 @@ class Refund extends Model
     public function setOrderId($orderId)
     {
         $this->orderId = $orderId;
-
-
     }
 
     /**
@@ -86,15 +84,11 @@ class Refund extends Model
     }
 
     /**
-     * @param DateTime $createdAt
-     *
      * @return Refund
      */
     public function setCreatedAt(DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
-
-
     }
 
     /**
@@ -113,8 +107,6 @@ class Refund extends Model
     public function setNote($note)
     {
         $this->note = $note;
-
-
     }
 
     /**
@@ -133,8 +125,6 @@ class Refund extends Model
     public function setRestock($restock)
     {
         $this->restock = $restock;
-
-
     }
 
     /**
@@ -153,8 +143,6 @@ class Refund extends Model
     public function setUserId($userId)
     {
         $this->userId = $userId;
-
-
     }
 
     /**
@@ -173,8 +161,6 @@ class Refund extends Model
     public function setProcessedAt($processedAt)
     {
         $this->processedAt = $processedAt;
-
-
     }
 
     /**
@@ -193,8 +179,6 @@ class Refund extends Model
     public function setRefundLineItems($refundLineItems)
     {
         $this->refundLineItems = $refundLineItems;
-
-
     }
 
     /**
@@ -213,7 +197,5 @@ class Refund extends Model
     public function setTransactions($transactions)
     {
         $this->transactions = $transactions;
-
-
     }
 }

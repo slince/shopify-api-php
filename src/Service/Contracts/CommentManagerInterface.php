@@ -18,8 +18,6 @@ interface CommentManagerInterface
     /**
      * Gets all comments.
      *
-     * @param array $query
-     *
      * @return Comment[]
      */
     public function findAll(array $query = []);
@@ -36,8 +34,6 @@ interface CommentManagerInterface
     /**
      * Gets the count.
      *
-     * @param array $query
-     *
      * @return int
      */
     public function count(array $query = []);
@@ -46,7 +42,6 @@ interface CommentManagerInterface
      * Updates the comment.
      *
      * @param int $id
-     * @param array $data
      *
      * @return bool
      */

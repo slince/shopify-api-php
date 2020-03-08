@@ -54,8 +54,6 @@ class PaymentDetails
     public function setCreditCardBin($creditCardBin)
     {
         $this->creditCardBin = $creditCardBin;
-
-
     }
 
     /**
@@ -74,8 +72,6 @@ class PaymentDetails
     public function setAvsResultCode($avsResultCode)
     {
         $this->avsResultCode = $avsResultCode;
-
-
     }
 
     /**
@@ -94,8 +90,6 @@ class PaymentDetails
     public function setCvvResultCode($cvvResultCode)
     {
         $this->cvvResultCode = $cvvResultCode;
-
-
     }
 
     /**
@@ -114,8 +108,6 @@ class PaymentDetails
     public function setCreditCardNumber($creditCardNumber)
     {
         $this->creditCardNumber = $creditCardNumber;
-
-
     }
 
     /**
@@ -134,7 +126,5 @@ class PaymentDetails
     public function setCreditCardCompany($creditCardCompany)
     {
         $this->creditCardCompany = $creditCardCompany;
-
-
     }
 }

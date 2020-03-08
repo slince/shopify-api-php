@@ -18,8 +18,6 @@ interface CarrierServiceManagerInterface extends ManagerInterface
     /**
      * Gets all carrier services.
      *
-     * @param array $query
-     *
      * @return CarrierService[]
      */
     public function findAll(array $query = []);
@@ -37,7 +35,6 @@ interface CarrierServiceManagerInterface extends ManagerInterface
      * Updates the carrier service.
      *
      * @param int $id
-     * @param array $data
      *
      * @return bool
      */
@@ -54,8 +51,6 @@ interface CarrierServiceManagerInterface extends ManagerInterface
 
     /**
      * Creates a carrier service.
-     *
-     * @param array $data
      *
      * @return CarrierService
      */

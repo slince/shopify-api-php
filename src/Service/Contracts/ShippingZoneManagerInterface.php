@@ -18,8 +18,6 @@ interface ShippingZoneManagerInterface extends ManagerInterface
     /**
      * Gets all policies.
      *
-     * @param array $query
-     *
      * @return ShippingZone[]
      */
     public function findAll(array $query = []);

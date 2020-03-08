@@ -62,7 +62,7 @@ class RecurringApplicationChargeManager extends GeneralCurdable implements Recur
      */
     public function activate($id)
     {
-        $data = $this->client->post('recurring_application_charges/' . $id . '/activate', []);
+        $data = $this->client->post('recurring_application_charges/'.$id.'/activate', []);
 
         return $this->fromArray(reset($data));
     }
@@ -72,10 +72,10 @@ class RecurringApplicationChargeManager extends GeneralCurdable implements Recur
      */
     public function customize($id, $cappedAmount)
     {
-        $data = $this->client->post('recurring_application_charges/' . $id . '/customize', [], [
+        $data = $this->client->post('recurring_application_charges/'.$id.'/customize', [], [
             $this->getResourceName() => [
-                'capped_amount' => $cappedAmount
-            ]
+                'capped_amount' => $cappedAmount,
+            ],
         ]);
 
         return $this->fromArray(reset($data));

@@ -47,6 +47,7 @@ class DraftOrderManager extends GeneralCurdable implements DraftOrderManagerInte
     {
         $resource = "draft_orders/{$id}/send_invoice";
         $data = $this->client->post($resource, ['draft_order_invoice' => $data]);
+
         return reset($data);
     }
 
@@ -56,8 +57,9 @@ class DraftOrderManager extends GeneralCurdable implements DraftOrderManagerInte
     public function complete($id, $paymentPending = null)
     {
         $resource = "draft_orders/{$id}/complete";
-        $query = $paymentPending === true ? ['payment_pending' => 'true'] : [];
+        $query = true === $paymentPending ? ['payment_pending' => 'true'] : [];
         $data = $this->client->put($resource, [], $query);
+
         return $this->create($data['draft_order']);
     }
 }

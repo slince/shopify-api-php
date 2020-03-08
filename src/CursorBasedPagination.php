@@ -54,6 +54,7 @@ class CursorBasedPagination
     {
         $data = $this->client->get($this->resource, $this->query);
         $this->links = $this->extractHeaderLink($this->client->getLastResponse());
+
         return $this->manager->createMany(reset($data));
     }
 
@@ -76,6 +77,7 @@ class CursorBasedPagination
                 $links[$type] = $matches[1];
             }
         }
+
         return $links;
     }
 
@@ -109,8 +111,9 @@ class CursorBasedPagination
             'Content-Type' => 'application/json',
         ]);
         $response = $this->client->sendRequest($request);
-        $data = \GuzzleHttp\json_decode((string)$response->getBody(), true);
+        $data = \GuzzleHttp\json_decode((string) $response->getBody(), true);
         $this->links = $this->extractHeaderLink($this->client->getLastResponse());
+
         return $this->manager->createMany(reset($data));
     }
 
@@ -124,6 +127,7 @@ class CursorBasedPagination
         if (!$this->hasPrev()) {
             throw new RuntimeException("There's no previous page");
         }
+
         return $this->fetchResource($this->links['previous']);
     }
 

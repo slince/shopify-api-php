@@ -74,8 +74,6 @@ class Risk extends Model
     public function setOrderId($orderId)
     {
         $this->orderId = $orderId;
-
-
     }
 
     /**
@@ -94,8 +92,6 @@ class Risk extends Model
     public function setCheckoutId($checkoutId)
     {
         $this->checkoutId = $checkoutId;
-
-
     }
 
     /**
@@ -114,8 +110,6 @@ class Risk extends Model
     public function setSource($source)
     {
         $this->source = $source;
-
-
     }
 
     /**
@@ -134,8 +128,6 @@ class Risk extends Model
     public function setScore($score)
     {
         $this->score = $score;
-
-
     }
 
     /**
@@ -154,8 +146,6 @@ class Risk extends Model
     public function setRecommendation($recommendation)
     {
         $this->recommendation = $recommendation;
-
-
     }
 
     /**
@@ -174,8 +164,6 @@ class Risk extends Model
     public function setDisplay($display)
     {
         $this->display = $display;
-
-
     }
 
     /**
@@ -194,8 +182,6 @@ class Risk extends Model
     public function setCauseCancel($causeCancel)
     {
         $this->causeCancel = $causeCancel;
-
-
     }
 
     /**
@@ -214,8 +200,6 @@ class Risk extends Model
     public function setMessage($message)
     {
         $this->message = $message;
-
-
     }
 
     /**
@@ -234,7 +218,5 @@ class Risk extends Model
     public function setMerchantMessage($merchantMessage)
     {
         $this->merchantMessage = $merchantMessage;
-
-
     }
 }
