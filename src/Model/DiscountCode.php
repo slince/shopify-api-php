@@ -19,7 +19,7 @@ class DiscountCode extends Model
     protected $code;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $createdAt;
 
@@ -50,11 +50,11 @@ class DiscountCode extends Model
     {
         $this->code = $code;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -62,15 +62,15 @@ class DiscountCode extends Model
     }
 
     /**
-     * @param \DateTimeInterface $createdAt
+     * @param \DateTime $createdAt
      *
      * @return DiscountCode
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt(\DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
 
-        return $this;
+
     }
 
     /**
@@ -90,7 +90,7 @@ class DiscountCode extends Model
     {
         $this->priceRuleId = $priceRuleId;
 
-        return $this;
+
     }
 
     /**
@@ -110,7 +110,7 @@ class DiscountCode extends Model
     {
         $this->usageCount = $usageCount;
 
-        return $this;
+
     }
 
 }

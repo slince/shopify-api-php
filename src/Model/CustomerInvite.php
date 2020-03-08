@@ -49,13 +49,13 @@ class CustomerInvite extends Model
     /**
      * @param string $to
      *
-     * @return CustomerInvite
+
      */
     public function setTo($to)
     {
         $this->to = $to;
 
-        return $this;
+
     }
 
     /**
@@ -69,13 +69,13 @@ class CustomerInvite extends Model
     /**
      * @param string $from
      *
-     * @return CustomerInvite
+
      */
     public function setFrom($from)
     {
         $this->from = $from;
 
-        return $this;
+
     }
 
     /**
@@ -89,13 +89,13 @@ class CustomerInvite extends Model
     /**
      * @param string $subject
      *
-     * @return CustomerInvite
+
      */
     public function setSubject($subject)
     {
         $this->subject = $subject;
 
-        return $this;
+
     }
 
     /**
@@ -109,13 +109,13 @@ class CustomerInvite extends Model
     /**
      * @param array $bcc
      *
-     * @return CustomerInvite
+
      */
     public function setBcc($bcc)
     {
         $this->bcc = $bcc;
 
-        return $this;
+
     }
 
     /**
@@ -129,12 +129,12 @@ class CustomerInvite extends Model
     /**
      * @param string $customMessage
      *
-     * @return CustomerInvite
+
      */
     public function setCustomMessage($customMessage)
     {
         $this->customMessage = $customMessage;
 
-        return $this;
+
     }
 }

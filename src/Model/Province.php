@@ -70,7 +70,7 @@ class Province extends Model
     {
         $this->countryId = $countryId;
 
-        return $this;
+
     }
 
     /**
@@ -90,7 +90,7 @@ class Province extends Model
     {
         $this->name = $name;
 
-        return $this;
+
     }
 
     /**
@@ -110,7 +110,7 @@ class Province extends Model
     {
         $this->code = $code;
 
-        return $this;
+
     }
 
     /**
@@ -130,7 +130,7 @@ class Province extends Model
     {
         $this->tax = $tax;
 
-        return $this;
+
     }
 
     /**
@@ -150,7 +150,7 @@ class Province extends Model
     {
         $this->taxName = $taxName;
 
-        return $this;
+
     }
 
     /**
@@ -170,7 +170,7 @@ class Province extends Model
     {
         $this->taxType = $taxType;
 
-        return $this;
+
     }
 
     /**
@@ -190,7 +190,7 @@ class Province extends Model
     {
         $this->shippingZoneId = $shippingZoneId;
 
-        return $this;
+
     }
 
     /**
@@ -210,6 +210,6 @@ class Province extends Model
     {
         $this->taxPercentage = $taxPercentage;
 
-        return $this;
+
     }
 }

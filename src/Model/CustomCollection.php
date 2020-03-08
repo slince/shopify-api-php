@@ -26,7 +26,7 @@ class CustomCollection extends Model
     protected $title;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $updatedAt;
 
@@ -36,7 +36,7 @@ class CustomCollection extends Model
     protected $bodyHtml;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $publishedAt;
 
@@ -71,13 +71,13 @@ class CustomCollection extends Model
     /**
      * @param string $handle
      *
-     * @return CustomCollection
+
      */
     public function setHandle($handle)
     {
         $this->handle = $handle;
 
-        return $this;
+
     }
 
     /**
@@ -91,17 +91,17 @@ class CustomCollection extends Model
     /**
      * @param string $title
      *
-     * @return CustomCollection
+
      */
     public function setTitle($title)
     {
         $this->title = $title;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getUpdatedAt()
     {
@@ -109,15 +109,15 @@ class CustomCollection extends Model
     }
 
     /**
-     * @param \DateTimeInterface $updatedAt
+     * @param \DateTime $updatedAt
      *
-     * @return CustomCollection
+
      */
-    public function setUpdatedAt($updatedAt)
+    public function setUpdatedAt(\DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
 
-        return $this;
+
     }
 
     /**
@@ -131,17 +131,17 @@ class CustomCollection extends Model
     /**
      * @param string $bodyHtml
      *
-     * @return CustomCollection
+
      */
     public function setBodyHtml($bodyHtml)
     {
         $this->bodyHtml = $bodyHtml;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getPublishedAt()
     {
@@ -149,15 +149,15 @@ class CustomCollection extends Model
     }
 
     /**
-     * @param \DateTimeInterface $publishedAt
+     * @param \DateTime $publishedAt
      *
-     * @return CustomCollection
+
      */
-    public function setPublishedAt($publishedAt)
+    public function setPublishedAt(\DateTime $publishedAt)
     {
         $this->publishedAt = $publishedAt;
 
-        return $this;
+
     }
 
     /**
@@ -171,13 +171,13 @@ class CustomCollection extends Model
     /**
      * @param string $sortOrder
      *
-     * @return CustomCollection
+
      */
     public function setSortOrder($sortOrder)
     {
         $this->sortOrder = $sortOrder;
 
-        return $this;
+
     }
 
     /**
@@ -191,13 +191,13 @@ class CustomCollection extends Model
     /**
      * @param string $templateSuffix
      *
-     * @return CustomCollection
+
      */
     public function setTemplateSuffix($templateSuffix)
     {
         $this->templateSuffix = $templateSuffix;
 
-        return $this;
+
     }
 
     /**
@@ -211,17 +211,17 @@ class CustomCollection extends Model
     /**
      * @param string $publishedScope
      *
-     * @return CustomCollection
+
      */
     public function setPublishedScope($publishedScope)
     {
         $this->publishedScope = $publishedScope;
 
-        return $this;
+
     }
 
     /**
-     * @return CustomCollectionImage
+Image
      */
     public function getImage()
     {
@@ -231,12 +231,12 @@ class CustomCollection extends Model
     /**
      * @param CustomCollectionImage $image
      *
-     * @return CustomCollection
+
      */
     public function setImage($image)
     {
         $this->image = $image;
 
-        return $this;
+
     }
 }

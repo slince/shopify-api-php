@@ -19,12 +19,12 @@ class CustomerSavedSearch extends Model
     protected $name;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $createdAt;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $updatedAt;
 
@@ -44,17 +44,17 @@ class CustomerSavedSearch extends Model
     /**
      * @param string $name
      *
-     * @return CustomerSavedSearch
+
      */
     public function setName($name)
     {
         $this->name = $name;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -62,19 +62,19 @@ class CustomerSavedSearch extends Model
     }
 
     /**
-     * @param \DateTimeInterface $createdAt
+     * @param \DateTime $createdAt
      *
-     * @return CustomerSavedSearch
+
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt(\DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getUpdatedAt()
     {
@@ -82,15 +82,15 @@ class CustomerSavedSearch extends Model
     }
 
     /**
-     * @param \DateTimeInterface $updatedAt
+     * @param \DateTime $updatedAt
      *
-     * @return CustomerSavedSearch
+
      */
-    public function setUpdatedAt($updatedAt)
+    public function setUpdatedAt(\DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
 
-        return $this;
+
     }
 
     /**
@@ -104,12 +104,12 @@ class CustomerSavedSearch extends Model
     /**
      * @param string $query
      *
-     * @return CustomerSavedSearch
+
      */
     public function setQuery($query)
     {
         $this->query = $query;
 
-        return $this;
+
     }
 }

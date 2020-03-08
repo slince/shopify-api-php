@@ -36,17 +36,17 @@ class DraftOrder extends Model
     protected $currency;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $invoiceSentAt;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $createdAt;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $updatedAt;
 
@@ -56,7 +56,7 @@ class DraftOrder extends Model
     protected $taxExempt;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $completedAt;
 
@@ -205,7 +205,7 @@ class DraftOrder extends Model
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getInvoiceSentAt()
     {
@@ -213,7 +213,7 @@ class DraftOrder extends Model
     }
 
     /**
-     * @param \DateTimeInterface $invoiceSentAt
+     * @param \DateTime $invoiceSentAt
      */
     public function setInvoiceSentAt($invoiceSentAt)
     {
@@ -221,7 +221,7 @@ class DraftOrder extends Model
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -229,15 +229,15 @@ class DraftOrder extends Model
     }
 
     /**
-     * @param \DateTimeInterface $createdAt
+     * @param \DateTime $createdAt
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt(\DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getUpdatedAt()
     {
@@ -245,9 +245,9 @@ class DraftOrder extends Model
     }
 
     /**
-     * @param \DateTimeInterface $updatedAt
+     * @param \DateTime $updatedAt
      */
-    public function setUpdatedAt($updatedAt)
+    public function setUpdatedAt(\DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }
@@ -269,7 +269,7 @@ class DraftOrder extends Model
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getCompletedAt()
     {
@@ -277,7 +277,7 @@ class DraftOrder extends Model
     }
 
     /**
-     * @param \DateTimeInterface $completedAt
+     * @param \DateTime $completedAt
      */
     public function setCompletedAt($completedAt)
     {

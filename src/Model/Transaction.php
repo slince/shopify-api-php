@@ -26,7 +26,7 @@ class Transaction extends Model
     protected $authorization;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $createdAt;
 
@@ -107,7 +107,7 @@ class Transaction extends Model
     {
         $this->amount = $amount;
 
-        return $this;
+
     }
 
     /**
@@ -127,11 +127,11 @@ class Transaction extends Model
     {
         $this->authorization = $authorization;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -139,15 +139,15 @@ class Transaction extends Model
     }
 
     /**
-     * @param \DateTimeInterface $createdAt
+     * @param \DateTime $createdAt
      *
      * @return Transaction
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt(\DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
 
-        return $this;
+
     }
 
     /**
@@ -167,7 +167,7 @@ class Transaction extends Model
     {
         $this->deviceId = $deviceId;
 
-        return $this;
+
     }
 
     /**
@@ -187,7 +187,7 @@ class Transaction extends Model
     {
         $this->gateway = $gateway;
 
-        return $this;
+
     }
 
     /**
@@ -207,7 +207,7 @@ class Transaction extends Model
     {
         $this->sourceName = $sourceName;
 
-        return $this;
+
     }
 
     /**
@@ -227,7 +227,7 @@ class Transaction extends Model
     {
         $this->paymentDetails = $paymentDetails;
 
-        return $this;
+
     }
 
     /**
@@ -247,7 +247,7 @@ class Transaction extends Model
     {
         $this->kind = $kind;
 
-        return $this;
+
     }
 
     /**
@@ -267,7 +267,7 @@ class Transaction extends Model
     {
         $this->orderId = $orderId;
 
-        return $this;
+
     }
 
     /**
@@ -287,7 +287,7 @@ class Transaction extends Model
     {
         $this->receipt = $receipt;
 
-        return $this;
+
     }
 
     /**
@@ -307,7 +307,7 @@ class Transaction extends Model
     {
         $this->errorCode = $errorCode;
 
-        return $this;
+
     }
 
     /**
@@ -327,7 +327,7 @@ class Transaction extends Model
     {
         $this->status = $status;
 
-        return $this;
+
     }
 
     /**
@@ -347,7 +347,7 @@ class Transaction extends Model
     {
         $this->test = $test;
 
-        return $this;
+
     }
 
     /**
@@ -367,7 +367,7 @@ class Transaction extends Model
     {
         $this->userId = $userId;
 
-        return $this;
+
     }
 
     /**
@@ -387,6 +387,6 @@ class Transaction extends Model
     {
         $this->currency = $currency;
 
-        return $this;
+
     }
 }

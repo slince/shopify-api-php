@@ -32,12 +32,12 @@ class InventoryItem extends Model
     protected $tracked;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $createdAt;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $updatedAt;
 
@@ -58,7 +58,7 @@ class InventoryItem extends Model
     {
         $this->sku = $sku;
 
-        return $this;
+
     }
 
     /**
@@ -78,7 +78,7 @@ class InventoryItem extends Model
     {
         $this->cost = $cost;
 
-        return $this;
+
     }
 
     /**
@@ -98,7 +98,7 @@ class InventoryItem extends Model
     {
         $this->tracked = $tracked;
 
-        return $this;
+
     }
 
     /**
@@ -118,11 +118,11 @@ class InventoryItem extends Model
     {
         $this->adminGraphqlApiId = $adminGraphqlApiId;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -130,19 +130,19 @@ class InventoryItem extends Model
     }
 
     /**
-     * @param \DateTimeInterface $createdAt
+     * @param \DateTime $createdAt
      *                                                                
      * @return InventoryItem
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt(\DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getUpdatedAt()
     {
@@ -150,14 +150,14 @@ class InventoryItem extends Model
     }
 
     /**
-     * @param \DateTimeInterface $updatedAt
+     * @param \DateTime $updatedAt
      *                                                                
      * @return InventoryItem
      */
-    public function setUpdatedAt($updatedAt)
+    public function setUpdatedAt(\DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
 
-        return $this;
+
     }
 }

@@ -35,6 +35,6 @@ trait AdminGraphqlApiId
     {
         $this->adminGraphqlApiId = $adminGraphqlApiId;
 
-        return $this;
+
     }
 }

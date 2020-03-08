@@ -29,7 +29,7 @@ class InventoryLevel
     protected $available;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $updatedAt;
 
@@ -55,7 +55,7 @@ class InventoryLevel
     {
         $this->inventoryItemId = $inventoryItemId;
 
-        return $this;
+
     }
 
     /**
@@ -75,7 +75,7 @@ class InventoryLevel
     {
         $this->locationId = $locationId;
 
-        return $this;
+
     }
 
     /**
@@ -95,11 +95,11 @@ class InventoryLevel
     {
         $this->available = $available;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getUpdatedAt()
     {
@@ -107,15 +107,15 @@ class InventoryLevel
     }
 
     /**
-     * @param \DateTimeInterface $updatedAt
+     * @param \DateTime $updatedAt
      *                                                                
      * @return InventoryLevel
      */
-    public function setUpdatedAt($updatedAt)
+    public function setUpdatedAt(\DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
 
-        return $this;
+
     }
 
     /**
@@ -135,6 +135,6 @@ class InventoryLevel
     {
         $this->adminGraphqlApiId = $adminGraphqlApiId;
 
-        return $this;
+
     }
 }

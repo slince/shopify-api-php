@@ -29,7 +29,7 @@ class SmartCollectionImage
     protected $height;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $createdAt;
 
@@ -50,7 +50,7 @@ class SmartCollectionImage
     {
         $this->src = $src;
 
-        return $this;
+
     }
 
     /**
@@ -70,7 +70,7 @@ class SmartCollectionImage
     {
         $this->width = $width;
 
-        return $this;
+
     }
 
     /**
@@ -90,11 +90,11 @@ class SmartCollectionImage
     {
         $this->height = $height;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -102,14 +102,14 @@ class SmartCollectionImage
     }
 
     /**
-     * @param \DateTimeInterface $createdAt
+     * @param \DateTime $createdAt
      *
      * @return CustomCollectionImage
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt(\DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
 
-        return $this;
+
     }
 }

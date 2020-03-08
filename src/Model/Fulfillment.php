@@ -26,12 +26,12 @@ class Fulfillment extends Model
     protected $status;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $createdAt;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $updatedAt;
 
@@ -102,7 +102,7 @@ class Fulfillment extends Model
     {
         $this->locationId = $locationId;
 
-        return $this;
+
     }
 
     /**
@@ -122,7 +122,7 @@ class Fulfillment extends Model
     {
         $this->service = $service;
 
-        return $this;
+
     }
 
     /**
@@ -142,7 +142,7 @@ class Fulfillment extends Model
     {
         $this->shipmentStatus = $shipmentStatus;
 
-        return $this;
+
     }
 
     /**
@@ -162,7 +162,7 @@ class Fulfillment extends Model
     {
         $this->trackingUrl = $trackingUrl;
 
-        return $this;
+
     }
 
     /**
@@ -182,7 +182,7 @@ class Fulfillment extends Model
     {
         $this->trackingUrls = $trackingUrls;
 
-        return $this;
+
     }
 
     /**
@@ -202,11 +202,11 @@ class Fulfillment extends Model
     {
         $this->receipt = $receipt;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -214,19 +214,19 @@ class Fulfillment extends Model
     }
 
     /**
-     * @param \DateTimeInterface $createdAt
+     * @param \DateTime $createdAt
      *
      * @return Fulfillment
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt(\DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getUpdatedAt()
     {
@@ -234,15 +234,15 @@ class Fulfillment extends Model
     }
 
     /**
-     * @param \DateTimeInterface $updatedAt
+     * @param \DateTime $updatedAt
      *
      * @return Fulfillment
      */
-    public function setUpdatedAt($updatedAt)
+    public function setUpdatedAt(\DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
 
-        return $this;
+
     }
 
     /**
@@ -262,7 +262,7 @@ class Fulfillment extends Model
     {
         $this->orderId = $orderId;
 
-        return $this;
+
     }
 
     /**
@@ -282,7 +282,7 @@ class Fulfillment extends Model
     {
         $this->status = $status;
 
-        return $this;
+
     }
 
     /**
@@ -302,7 +302,7 @@ class Fulfillment extends Model
     {
         $this->trackingCompany = $trackingCompany;
 
-        return $this;
+
     }
 
     /**
@@ -322,7 +322,7 @@ class Fulfillment extends Model
     {
         $this->trackingNumber = $trackingNumber;
 
-        return $this;
+
     }
 
     /**
@@ -342,7 +342,7 @@ class Fulfillment extends Model
     {
         $this->lineItems = $lineItems;
 
-        return $this;
+
     }
 
     /**
@@ -362,6 +362,6 @@ class Fulfillment extends Model
     {
         $this->trackingNumbers = $trackingNumbers;
 
-        return $this;
+
     }
 }

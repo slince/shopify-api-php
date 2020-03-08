@@ -21,7 +21,7 @@ class PriceRule extends Model
     protected $allocationMethod;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $createdAt;
 
@@ -31,7 +31,7 @@ class PriceRule extends Model
     protected $customerSelection;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $endsAt;
 
@@ -157,11 +157,11 @@ class PriceRule extends Model
     {
         $this->allocationMethod = $allocationMethod;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -169,15 +169,15 @@ class PriceRule extends Model
     }
 
     /**
-     * @param \DateTimeInterface $createdAt
+     * @param \DateTime $createdAt
      *
      * @return PriceRule
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt(\DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
 
-        return $this;
+
     }
 
     /**
@@ -197,11 +197,11 @@ class PriceRule extends Model
     {
         $this->customerSelection = $customerSelection;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getEndsAt()
     {
@@ -209,7 +209,7 @@ class PriceRule extends Model
     }
 
     /**
-     * @param \DateTimeInterface $endsAt
+     * @param \DateTime $endsAt
      *
      * @return PriceRule
      */
@@ -217,7 +217,7 @@ class PriceRule extends Model
     {
         $this->endsAt = $endsAt;
 
-        return $this;
+
     }
 
     /**
@@ -237,7 +237,7 @@ class PriceRule extends Model
     {
         $this->entitledCollectionIds = $entitledCollectionIds;
 
-        return $this;
+
     }
 
     /**
@@ -257,7 +257,7 @@ class PriceRule extends Model
     {
         $this->entitledCountryIds = $entitledCountryIds;
 
-        return $this;
+
     }
 
     /**
@@ -277,7 +277,7 @@ class PriceRule extends Model
     {
         $this->entitledProductIds = $entitledProductIds;
 
-        return $this;
+
     }
 
     /**
@@ -297,7 +297,7 @@ class PriceRule extends Model
     {
         $this->entitledVariantIds = $entitledVariantIds;
 
-        return $this;
+
     }
 
     /**
@@ -317,7 +317,7 @@ class PriceRule extends Model
     {
         $this->oncePerCustomer = $oncePerCustomer;
 
-        return $this;
+
     }
 
     /**
@@ -337,7 +337,7 @@ class PriceRule extends Model
     {
         $this->prerequisiteCustomerIds = $prerequisiteCustomerIds;
 
-        return $this;
+
     }
 
     /**
@@ -357,7 +357,7 @@ class PriceRule extends Model
     {
         $this->prerequisiteQuantityRange = $prerequisiteQuantityRange;
 
-        return $this;
+
     }
 
     /**
@@ -377,7 +377,7 @@ class PriceRule extends Model
     {
         $this->prerequisiteSavedSearchIds = $prerequisiteSavedSearchIds;
 
-        return $this;
+
     }
 
     /**
@@ -397,7 +397,7 @@ class PriceRule extends Model
     {
         $this->prerequisiteShippingPriceRange = $prerequisiteShippingPriceRange;
 
-        return $this;
+
     }
 
     /**
@@ -417,7 +417,7 @@ class PriceRule extends Model
     {
         $this->prerequisiteSubtotalRange = $prerequisiteSubtotalRange;
 
-        return $this;
+
     }
 
     /**
@@ -437,7 +437,7 @@ class PriceRule extends Model
     {
         $this->startsAt = $startsAt;
 
-        return $this;
+
     }
 
     /**
@@ -457,7 +457,7 @@ class PriceRule extends Model
     {
         $this->targetSelection = $targetSelection;
 
-        return $this;
+
     }
 
     /**
@@ -477,7 +477,7 @@ class PriceRule extends Model
     {
         $this->targetType = $targetType;
 
-        return $this;
+
     }
 
     /**
@@ -497,7 +497,7 @@ class PriceRule extends Model
     {
         $this->title = $title;
 
-        return $this;
+
     }
 
     /**
@@ -517,7 +517,7 @@ class PriceRule extends Model
     {
         $this->usageLimit = $usageLimit;
 
-        return $this;
+
     }
 
     /**
@@ -537,7 +537,7 @@ class PriceRule extends Model
     {
         $this->prerequisiteProductIds = $prerequisiteProductIds;
 
-        return $this;
+
     }
 
     /**
@@ -557,7 +557,7 @@ class PriceRule extends Model
     {
         $this->prerequisiteVariantIds = $prerequisiteVariantIds;
 
-        return $this;
+
     }
 
     /**
@@ -577,7 +577,7 @@ class PriceRule extends Model
     {
         $this->prerequisiteCollectionIds = $prerequisiteCollectionIds;
 
-        return $this;
+
     }
 
     /**
@@ -597,7 +597,7 @@ class PriceRule extends Model
     {
         $this->value = $value;
 
-        return $this;
+
     }
 
     /**
@@ -617,7 +617,7 @@ class PriceRule extends Model
     {
         $this->valueType = $valueType;
 
-        return $this;
+
     }
 
     /**
@@ -637,6 +637,6 @@ class PriceRule extends Model
     {
         $this->prerequisiteToEntitlementQuantityRatio = $prerequisiteToEntitlementQuantityRatio;
 
-        return $this;
+
     }
 }

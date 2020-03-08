@@ -29,12 +29,12 @@ class Policy
     protected $handle;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $createdAt;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $updatedAt;
 
@@ -60,7 +60,7 @@ class Policy
     {
         $this->title = $title;
 
-        return $this;
+
     }
 
     /**
@@ -80,7 +80,7 @@ class Policy
     {
         $this->body = $body;
 
-        return $this;
+
     }
 
     /**
@@ -100,11 +100,11 @@ class Policy
     {
         $this->handle = $handle;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -112,19 +112,19 @@ class Policy
     }
 
     /**
-     * @param \DateTimeInterface $createdAt
+     * @param \DateTime $createdAt
      *
      * @return Policy
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt(\DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getUpdatedAt()
     {
@@ -132,15 +132,15 @@ class Policy
     }
 
     /**
-     * @param \DateTimeInterface $updatedAt
+     * @param \DateTime $updatedAt
      *
      * @return Policy
      */
-    public function setUpdatedAt($updatedAt)
+    public function setUpdatedAt(\DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
 
-        return $this;
+
     }
 
     /**
@@ -160,6 +160,6 @@ class Policy
     {
         $this->url = $url;
 
-        return $this;
+
     }
 }

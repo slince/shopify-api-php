@@ -36,7 +36,7 @@ class Product extends Model
     protected $productType;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $createdAt;
 
@@ -46,12 +46,12 @@ class Product extends Model
     protected $handle;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $updatedAt;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $publishedAt;
 
@@ -107,7 +107,7 @@ class Product extends Model
     {
         $this->title = $title;
 
-        return $this;
+
     }
 
     /**
@@ -127,7 +127,7 @@ class Product extends Model
     {
         $this->bodyHtml = $bodyHtml;
 
-        return $this;
+
     }
 
     /**
@@ -147,7 +147,7 @@ class Product extends Model
     {
         $this->vendor = $vendor;
 
-        return $this;
+
     }
 
     /**
@@ -167,11 +167,11 @@ class Product extends Model
     {
         $this->productType = $productType;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -179,15 +179,15 @@ class Product extends Model
     }
 
     /**
-     * @param \DateTimeInterface $createdAt
+     * @param \DateTime $createdAt
      *
      * @return Product
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt(\DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
 
-        return $this;
+
     }
 
     /**
@@ -207,11 +207,11 @@ class Product extends Model
     {
         $this->handle = $handle;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getUpdatedAt()
     {
@@ -219,19 +219,19 @@ class Product extends Model
     }
 
     /**
-     * @param \DateTimeInterface $updatedAt
+     * @param \DateTime $updatedAt
      *
      * @return Product
      */
-    public function setUpdatedAt($updatedAt)
+    public function setUpdatedAt(\DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getPublishedAt()
     {
@@ -239,15 +239,15 @@ class Product extends Model
     }
 
     /**
-     * @param \DateTimeInterface $publishedAt
+     * @param \DateTime $publishedAt
      *
      * @return Product
      */
-    public function setPublishedAt($publishedAt)
+    public function setPublishedAt(\DateTime $publishedAt)
     {
         $this->publishedAt = $publishedAt;
 
-        return $this;
+
     }
 
     /**
@@ -267,7 +267,7 @@ class Product extends Model
     {
         $this->templateSuffix = $templateSuffix;
 
-        return $this;
+
     }
 
     /**
@@ -287,7 +287,7 @@ class Product extends Model
     {
         $this->publishedScope = $publishedScope;
 
-        return $this;
+
     }
 
     /**
@@ -307,7 +307,7 @@ class Product extends Model
     {
         $this->tags = $tags;
 
-        return $this;
+
     }
 
     /**
@@ -327,7 +327,7 @@ class Product extends Model
     {
         $this->variants = $variants;
 
-        return $this;
+
     }
 
     /**
@@ -347,7 +347,7 @@ class Product extends Model
     {
         $this->images = $images;
 
-        return $this;
+
     }
 
     /**
@@ -367,7 +367,7 @@ class Product extends Model
     {
         $this->image = $image;
 
-        return $this;
+
     }
 
     /**
@@ -387,6 +387,6 @@ class Product extends Model
     {
         $this->options = $options;
 
-        return $this;
+
     }
 }

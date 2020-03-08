@@ -40,7 +40,7 @@ class Redirect extends Model
     {
         $this->path = $path;
 
-        return $this;
+
     }
 
     /**
@@ -60,6 +60,6 @@ class Redirect extends Model
     {
         $this->target = $target;
 
-        return $this;
+
     }
 }

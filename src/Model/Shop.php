@@ -29,7 +29,7 @@ class Shop extends Model
     protected $domain;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $createdAt;
 
@@ -270,7 +270,7 @@ class Shop extends Model
     {
         $this->name = $name;
 
-        return $this;
+
     }
 
     /**
@@ -290,7 +290,7 @@ class Shop extends Model
     {
         $this->email = $email;
 
-        return $this;
+
     }
 
     /**
@@ -310,11 +310,11 @@ class Shop extends Model
     {
         $this->domain = $domain;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -322,15 +322,15 @@ class Shop extends Model
     }
 
     /**
-     * @param \DateTimeInterface $createdAt
+     * @param \DateTime $createdAt
      *
      * @return Shop
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt(\DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
 
-        return $this;
+
     }
 
     /**
@@ -350,7 +350,7 @@ class Shop extends Model
     {
         $this->province = $province;
 
-        return $this;
+
     }
 
     /**
@@ -370,7 +370,7 @@ class Shop extends Model
     {
         $this->country = $country;
 
-        return $this;
+
     }
 
     /**
@@ -390,7 +390,7 @@ class Shop extends Model
     {
         $this->address1 = $address1;
 
-        return $this;
+
     }
 
     /**
@@ -410,7 +410,7 @@ class Shop extends Model
     {
         $this->zip = $zip;
 
-        return $this;
+
     }
 
     /**
@@ -430,7 +430,7 @@ class Shop extends Model
     {
         $this->city = $city;
 
-        return $this;
+
     }
 
     /**
@@ -450,7 +450,7 @@ class Shop extends Model
     {
         $this->source = $source;
 
-        return $this;
+
     }
 
     /**
@@ -470,7 +470,7 @@ class Shop extends Model
     {
         $this->phone = $phone;
 
-        return $this;
+
     }
 
     /**
@@ -486,11 +486,11 @@ class Shop extends Model
      *
      * @return Shop
      */
-    public function setUpdatedAt($updatedAt)
+    public function setUpdatedAt(\DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
 
-        return $this;
+
     }
 
     /**
@@ -510,7 +510,7 @@ class Shop extends Model
     {
         $this->customerEmail = $customerEmail;
 
-        return $this;
+
     }
 
     /**
@@ -530,7 +530,7 @@ class Shop extends Model
     {
         $this->latitude = $latitude;
 
-        return $this;
+
     }
 
     /**
@@ -550,7 +550,7 @@ class Shop extends Model
     {
         $this->longitude = $longitude;
 
-        return $this;
+
     }
 
     /**
@@ -570,7 +570,7 @@ class Shop extends Model
     {
         $this->primaryLocationId = $primaryLocationId;
 
-        return $this;
+
     }
 
     /**
@@ -590,7 +590,7 @@ class Shop extends Model
     {
         $this->primaryLocale = $primaryLocale;
 
-        return $this;
+
     }
 
     /**
@@ -610,7 +610,7 @@ class Shop extends Model
     {
         $this->address2 = $address2;
 
-        return $this;
+
     }
 
     /**
@@ -630,7 +630,7 @@ class Shop extends Model
     {
         $this->countryCode = $countryCode;
 
-        return $this;
+
     }
 
     /**
@@ -650,7 +650,7 @@ class Shop extends Model
     {
         $this->countryName = $countryName;
 
-        return $this;
+
     }
 
     /**
@@ -670,7 +670,7 @@ class Shop extends Model
     {
         $this->currency = $currency;
 
-        return $this;
+
     }
 
     /**
@@ -690,7 +690,7 @@ class Shop extends Model
     {
         $this->timezone = $timezone;
 
-        return $this;
+
     }
 
     /**
@@ -710,7 +710,7 @@ class Shop extends Model
     {
         $this->ianaTimezone = $ianaTimezone;
 
-        return $this;
+
     }
 
     /**
@@ -730,7 +730,7 @@ class Shop extends Model
     {
         $this->shopOwner = $shopOwner;
 
-        return $this;
+
     }
 
     /**
@@ -750,7 +750,7 @@ class Shop extends Model
     {
         $this->moneyFormat = $moneyFormat;
 
-        return $this;
+
     }
 
     /**
@@ -770,7 +770,7 @@ class Shop extends Model
     {
         $this->moneyWithCurrencyFormat = $moneyWithCurrencyFormat;
 
-        return $this;
+
     }
 
     /**
@@ -790,7 +790,7 @@ class Shop extends Model
     {
         $this->weightUnit = $weightUnit;
 
-        return $this;
+
     }
 
     /**
@@ -810,7 +810,7 @@ class Shop extends Model
     {
         $this->provinceCode = $provinceCode;
 
-        return $this;
+
     }
 
     /**
@@ -830,7 +830,7 @@ class Shop extends Model
     {
         $this->taxesIncluded = $taxesIncluded;
 
-        return $this;
+
     }
 
     /**
@@ -850,7 +850,7 @@ class Shop extends Model
     {
         $this->taxShipping = $taxShipping;
 
-        return $this;
+
     }
 
     /**
@@ -870,7 +870,7 @@ class Shop extends Model
     {
         $this->countyTaxes = $countyTaxes;
 
-        return $this;
+
     }
 
     /**
@@ -890,7 +890,7 @@ class Shop extends Model
     {
         $this->planDisplayName = $planDisplayName;
 
-        return $this;
+
     }
 
     /**
@@ -910,7 +910,7 @@ class Shop extends Model
     {
         $this->planName = $planName;
 
-        return $this;
+
     }
 
     /**
@@ -930,7 +930,7 @@ class Shop extends Model
     {
         $this->hasDiscounts = $hasDiscounts;
 
-        return $this;
+
     }
 
     /**
@@ -950,7 +950,7 @@ class Shop extends Model
     {
         $this->hasGiftCards = $hasGiftCards;
 
-        return $this;
+
     }
 
     /**
@@ -970,7 +970,7 @@ class Shop extends Model
     {
         $this->myshopifyDomain = $myshopifyDomain;
 
-        return $this;
+
     }
 
     /**
@@ -990,7 +990,7 @@ class Shop extends Model
     {
         $this->googleAppsDomain = $googleAppsDomain;
 
-        return $this;
+
     }
 
     /**
@@ -1010,7 +1010,7 @@ class Shop extends Model
     {
         $this->googleAppsLoginEnabled = $googleAppsLoginEnabled;
 
-        return $this;
+
     }
 
     /**
@@ -1030,7 +1030,7 @@ class Shop extends Model
     {
         $this->moneyInEmailsFormat = $moneyInEmailsFormat;
 
-        return $this;
+
     }
 
     /**
@@ -1050,7 +1050,7 @@ class Shop extends Model
     {
         $this->moneyWithCurrencyInEmailsFormat = $moneyWithCurrencyInEmailsFormat;
 
-        return $this;
+
     }
 
     /**
@@ -1070,7 +1070,7 @@ class Shop extends Model
     {
         $this->eligibleForPayments = $eligibleForPayments;
 
-        return $this;
+
     }
 
     /**
@@ -1090,7 +1090,7 @@ class Shop extends Model
     {
         $this->requiresExtraPaymentsAgreement = $requiresExtraPaymentsAgreement;
 
-        return $this;
+
     }
 
     /**
@@ -1110,7 +1110,7 @@ class Shop extends Model
     {
         $this->passwordEnabled = $passwordEnabled;
 
-        return $this;
+
     }
 
     /**
@@ -1130,7 +1130,7 @@ class Shop extends Model
     {
         $this->hasStoreFront = $hasStoreFront;
 
-        return $this;
+
     }
 
     /**
@@ -1150,7 +1150,7 @@ class Shop extends Model
     {
         $this->eligibleForCardReaderGiveaway = $eligibleForCardReaderGiveaway;
 
-        return $this;
+
     }
 
     /**
@@ -1170,7 +1170,7 @@ class Shop extends Model
     {
         $this->finances = $finances;
 
-        return $this;
+
     }
 
     /**
@@ -1190,7 +1190,7 @@ class Shop extends Model
     {
         $this->setupRequired = $setupRequired;
 
-        return $this;
+
     }
 
     /**
@@ -1210,6 +1210,6 @@ class Shop extends Model
     {
         $this->forceSsl = $forceSsl;
 
-        return $this;
+
     }
 }

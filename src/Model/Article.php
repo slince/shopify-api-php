@@ -41,17 +41,17 @@ class Article extends Model
     protected $userId;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $createdAt;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $publishedAt;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $updatedAt;
 
@@ -86,17 +86,17 @@ class Article extends Model
     /**
      * @param string $title
      *
-     * @return Article
+
      */
     public function setTitle($title)
     {
         $this->title = $title;
 
-        return $this;
+  
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -104,15 +104,15 @@ class Article extends Model
     }
 
     /**
-     * @param \DateTimeInterface $createdAt
+     * @param \DateTime $createdAt
      *
-     * @return Article
+
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt(\DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
 
-        return $this;
+  
     }
 
     /**
@@ -126,13 +126,13 @@ class Article extends Model
     /**
      * @param string $bodyHtml
      *
-     * @return Article
+
      */
     public function setBodyHtml($bodyHtml)
     {
         $this->bodyHtml = $bodyHtml;
 
-        return $this;
+  
     }
 
     /**
@@ -146,13 +146,13 @@ class Article extends Model
     /**
      * @param int $blogId
      *
-     * @return Article
+
      */
     public function setBlogId($blogId)
     {
         $this->blogId = $blogId;
 
-        return $this;
+  
     }
 
     /**
@@ -166,13 +166,13 @@ class Article extends Model
     /**
      * @param string $author
      *
-     * @return Article
+
      */
     public function setAuthor($author)
     {
         $this->author = $author;
 
-        return $this;
+  
     }
 
     /**
@@ -186,17 +186,17 @@ class Article extends Model
     /**
      * @param int $userId
      *
-     * @return Article
+
      */
     public function setUserId($userId)
     {
         $this->userId = $userId;
 
-        return $this;
+  
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getPublishedAt()
     {
@@ -204,19 +204,19 @@ class Article extends Model
     }
 
     /**
-     * @param \DateTimeInterface $publishedAt
+     * @param \DateTime $publishedAt
      *
-     * @return Article
+
      */
-    public function setPublishedAt($publishedAt)
+    public function setPublishedAt(\DateTime $publishedAt)
     {
         $this->publishedAt = $publishedAt;
 
-        return $this;
+  
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getUpdatedAt()
     {
@@ -224,15 +224,15 @@ class Article extends Model
     }
 
     /**
-     * @param \DateTimeInterface $updatedAt
+     * @param \DateTime $updatedAt
      *
-     * @return Article
+
      */
-    public function setUpdatedAt($updatedAt)
+    public function setUpdatedAt(\DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
 
-        return $this;
+  
     }
 
     /**
@@ -246,13 +246,13 @@ class Article extends Model
     /**
      * @param string $summaryHtml
      *
-     * @return Article
+
      */
     public function setSummaryHtml($summaryHtml)
     {
         $this->summaryHtml = $summaryHtml;
 
-        return $this;
+  
     }
 
     /**
@@ -266,13 +266,13 @@ class Article extends Model
     /**
      * @param string $templateSuffix
      *
-     * @return Article
+
      */
     public function setTemplateSuffix($templateSuffix)
     {
         $this->templateSuffix = $templateSuffix;
 
-        return $this;
+  
     }
 
     /**
@@ -286,13 +286,13 @@ class Article extends Model
     /**
      * @param string $handle
      *
-     * @return Article
+
      */
     public function setHandle($handle)
     {
         $this->handle = $handle;
 
-        return $this;
+  
     }
 
     /**
@@ -306,12 +306,12 @@ class Article extends Model
     /**
      * @param string $tags
      *
-     * @return Article
+
      */
     public function setTags($tags)
     {
         $this->tags = $tags;
 
-        return $this;
+  
     }
 }

@@ -2,6 +2,7 @@
 
 namespace Slince\Shopify\Tests\Service;
 
+use Slince\Shopify\Model\DraftOrder;
 use Slince\Shopify\Service\DraftOrderManager;
 
 class DraftOrderManagerTest extends GeneralCurdableTestCase

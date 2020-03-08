@@ -27,12 +27,12 @@ class Image extends Model
     protected $position;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $createdAt;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $updatedAt;
 
@@ -73,7 +73,7 @@ class Image extends Model
     {
         $this->productId = $productId;
 
-        return $this;
+
     }
 
     /**
@@ -93,11 +93,11 @@ class Image extends Model
     {
         $this->position = $position;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -105,19 +105,19 @@ class Image extends Model
     }
 
     /**
-     * @param \DateTimeInterface $createdAt
+     * @param \DateTime $createdAt
      *
      * @return Image
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt(\DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getUpdatedAt()
     {
@@ -125,15 +125,15 @@ class Image extends Model
     }
 
     /**
-     * @param \DateTimeInterface $updatedAt
+     * @param \DateTime $updatedAt
      *
      * @return Image
      */
-    public function setUpdatedAt($updatedAt)
+    public function setUpdatedAt(\DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
 
-        return $this;
+
     }
 
     /**
@@ -153,7 +153,7 @@ class Image extends Model
     {
         $this->src = $src;
 
-        return $this;
+
     }
 
     /**
@@ -173,7 +173,7 @@ class Image extends Model
     {
         $this->width = $width;
 
-        return $this;
+
     }
 
     /**
@@ -193,7 +193,7 @@ class Image extends Model
     {
         $this->height = $height;
 
-        return $this;
+
     }
 
     /**
@@ -213,6 +213,6 @@ class Image extends Model
     {
         $this->variantIds = $variantIds;
 
-        return $this;
+
     }
 }

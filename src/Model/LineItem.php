@@ -130,7 +130,7 @@ class LineItem extends Model
     {
         $this->fulfillableQuantity = $fulfillableQuantity;
 
-        return $this;
+
     }
 
     /**
@@ -150,7 +150,7 @@ class LineItem extends Model
     {
         $this->fulfillmentService = $fulfillmentService;
 
-        return $this;
+
     }
 
     /**
@@ -170,7 +170,7 @@ class LineItem extends Model
     {
         $this->fulfillmentStatus = $fulfillmentStatus;
 
-        return $this;
+
     }
 
     /**
@@ -190,7 +190,7 @@ class LineItem extends Model
     {
         $this->grams = $grams;
 
-        return $this;
+
     }
 
     /**
@@ -210,7 +210,7 @@ class LineItem extends Model
     {
         $this->price = $price;
 
-        return $this;
+
     }
 
     /**
@@ -230,7 +230,7 @@ class LineItem extends Model
     {
         $this->productId = $productId;
 
-        return $this;
+
     }
 
     /**
@@ -250,7 +250,7 @@ class LineItem extends Model
     {
         $this->quantity = $quantity;
 
-        return $this;
+
     }
 
     /**
@@ -270,7 +270,7 @@ class LineItem extends Model
     {
         $this->requiresShipping = $requiresShipping;
 
-        return $this;
+
     }
 
     /**
@@ -290,7 +290,7 @@ class LineItem extends Model
     {
         $this->sku = $sku;
 
-        return $this;
+
     }
 
     /**
@@ -310,7 +310,7 @@ class LineItem extends Model
     {
         $this->title = $title;
 
-        return $this;
+
     }
 
     /**
@@ -330,7 +330,7 @@ class LineItem extends Model
     {
         $this->variantId = $variantId;
 
-        return $this;
+
     }
 
     /**
@@ -350,7 +350,7 @@ class LineItem extends Model
     {
         $this->variantTitle = $variantTitle;
 
-        return $this;
+
     }
 
     /**
@@ -370,7 +370,7 @@ class LineItem extends Model
     {
         $this->vendor = $vendor;
 
-        return $this;
+
     }
 
     /**
@@ -390,7 +390,7 @@ class LineItem extends Model
     {
         $this->name = $name;
 
-        return $this;
+
     }
 
     /**
@@ -410,7 +410,7 @@ class LineItem extends Model
     {
         $this->giftCard = $giftCard;
 
-        return $this;
+
     }
 
     /**
@@ -430,7 +430,7 @@ class LineItem extends Model
     {
         $this->properties = $properties;
 
-        return $this;
+
     }
 
     /**
@@ -450,7 +450,7 @@ class LineItem extends Model
     {
         $this->taxable = $taxable;
 
-        return $this;
+
     }
 
     /**
@@ -470,7 +470,7 @@ class LineItem extends Model
     {
         $this->taxLines = $taxLines;
 
-        return $this;
+
     }
 
     /**
@@ -490,7 +490,7 @@ class LineItem extends Model
     {
         $this->totalDiscount = $totalDiscount;
 
-        return $this;
+
     }
 
     /**
@@ -510,6 +510,6 @@ class LineItem extends Model
     {
         $this->discountAllocations = $discountAllocations;
 
-        return $this;
+
     }
 }

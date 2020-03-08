@@ -24,12 +24,12 @@ class Asset
     protected $publicUrl;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $createdAt;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $updatedAt;
 
@@ -64,13 +64,13 @@ class Asset
     /**
      * @param string $key
      *
-     * @return Asset
+
      */
     public function setKey($key)
     {
         $this->key = $key;
 
-        return $this;
+
     }
 
     /**
@@ -84,17 +84,17 @@ class Asset
     /**
      * @param string $publicUrl
      *
-     * @return Asset
+
      */
     public function setPublicUrl($publicUrl)
     {
         $this->publicUrl = $publicUrl;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -102,19 +102,19 @@ class Asset
     }
 
     /**
-     * @param \DateTimeInterface $createdAt
+     * @param \DateTime $createdAt
      *
-     * @return Asset
+
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt(\DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getUpdatedAt()
     {
@@ -122,15 +122,15 @@ class Asset
     }
 
     /**
-     * @param \DateTimeInterface $updatedAt
+     * @param \DateTime $updatedAt
      *
-     * @return Asset
+
      */
-    public function setUpdatedAt($updatedAt)
+    public function setUpdatedAt(\DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
 
-        return $this;
+
     }
 
     /**
@@ -144,13 +144,13 @@ class Asset
     /**
      * @param string $contentType
      *
-     * @return Asset
+
      */
     public function setContentType($contentType)
     {
         $this->contentType = $contentType;
 
-        return $this;
+
     }
 
     /**
@@ -164,13 +164,13 @@ class Asset
     /**
      * @param number $size
      *
-     * @return Asset
+
      */
     public function setSize($size)
     {
         $this->size = $size;
 
-        return $this;
+
     }
 
     /**
@@ -184,13 +184,13 @@ class Asset
     /**
      * @param int $themeId
      *
-     * @return Asset
+
      */
     public function setThemeId($themeId)
     {
         $this->themeId = $themeId;
 
-        return $this;
+
     }
 
     /**
@@ -204,12 +204,12 @@ class Asset
     /**
      * @param string $value
      *
-     * @return Asset
+
      */
     public function setValue($value)
     {
         $this->value = $value;
 
-        return $this;
+
     }
 }

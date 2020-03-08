@@ -100,7 +100,7 @@ trait AddressTrait
     {
         $this->firstName = $firstName;
 
-        return $this;
+
     }
 
     /**
@@ -120,7 +120,7 @@ trait AddressTrait
     {
         $this->lastName = $lastName;
 
-        return $this;
+
     }
 
     /**
@@ -140,7 +140,7 @@ trait AddressTrait
     {
         $this->company = $company;
 
-        return $this;
+
     }
 
     /**
@@ -160,7 +160,7 @@ trait AddressTrait
     {
         $this->address1 = $address1;
 
-        return $this;
+
     }
 
     /**
@@ -180,7 +180,7 @@ trait AddressTrait
     {
         $this->address2 = $address2;
 
-        return $this;
+
     }
 
     /**
@@ -200,7 +200,7 @@ trait AddressTrait
     {
         $this->city = $city;
 
-        return $this;
+
     }
 
     /**
@@ -220,7 +220,7 @@ trait AddressTrait
     {
         $this->province = $province;
 
-        return $this;
+
     }
 
     /**
@@ -240,7 +240,7 @@ trait AddressTrait
     {
         $this->country = $country;
 
-        return $this;
+
     }
 
     /**
@@ -260,7 +260,7 @@ trait AddressTrait
     {
         $this->zip = $zip;
 
-        return $this;
+
     }
 
     /**
@@ -280,7 +280,7 @@ trait AddressTrait
     {
         $this->phone = $phone;
 
-        return $this;
+
     }
 
     /**
@@ -300,7 +300,7 @@ trait AddressTrait
     {
         $this->name = $name;
 
-        return $this;
+
     }
 
     /**
@@ -320,7 +320,7 @@ trait AddressTrait
     {
         $this->provinceCode = $provinceCode;
 
-        return $this;
+
     }
 
     /**
@@ -340,7 +340,7 @@ trait AddressTrait
     {
         $this->countryCode = $countryCode;
 
-        return $this;
+
     }
 
     /**
@@ -360,6 +360,6 @@ trait AddressTrait
     {
         $this->countryName = $countryName;
 
-        return $this;
+
     }
 }

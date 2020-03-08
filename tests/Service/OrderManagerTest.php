@@ -2,6 +2,8 @@
 
 namespace Slince\Shopify\Tests\Service;
 
+use Slince\Shopify\Model\Customer;
+use Slince\Shopify\Model\Order;
 use Slince\Shopify\Service\OrderManager;
 
 class OrderManagerTest extends GeneralCurdableTestCase

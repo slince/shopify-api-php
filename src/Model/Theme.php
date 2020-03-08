@@ -21,12 +21,12 @@ class Theme extends Model
     protected $name;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $createdAt;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $updatedAt;
 
@@ -67,11 +67,11 @@ class Theme extends Model
     {
         $this->name = $name;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -79,19 +79,19 @@ class Theme extends Model
     }
 
     /**
-     * @param \DateTimeInterface $createdAt
+     * @param \DateTime $createdAt
      *
      * @return Theme
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt(\DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getUpdatedAt()
     {
@@ -99,15 +99,15 @@ class Theme extends Model
     }
 
     /**
-     * @param \DateTimeInterface $updatedAt
+     * @param \DateTime $updatedAt
      *
      * @return Theme
      */
-    public function setUpdatedAt($updatedAt)
+    public function setUpdatedAt(\DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
 
-        return $this;
+
     }
 
     /**
@@ -127,7 +127,7 @@ class Theme extends Model
     {
         $this->role = $role;
 
-        return $this;
+
     }
 
     /**
@@ -147,7 +147,7 @@ class Theme extends Model
     {
         $this->themeStoreId = $themeStoreId;
 
-        return $this;
+
     }
 
     /**
@@ -167,7 +167,7 @@ class Theme extends Model
     {
         $this->previewable = $previewable;
 
-        return $this;
+
     }
 
     /**
@@ -187,6 +187,6 @@ class Theme extends Model
     {
         $this->processing = $processing;
 
-        return $this;
+
     }
 }

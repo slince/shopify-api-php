@@ -41,17 +41,17 @@ class Page extends Model
     protected $author;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $createdAt;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $updatedAt;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $publishedAt;
 
@@ -77,7 +77,7 @@ class Page extends Model
     {
         $this->title = $title;
 
-        return $this;
+
     }
 
     /**
@@ -97,7 +97,7 @@ class Page extends Model
     {
         $this->shopId = $shopId;
 
-        return $this;
+
     }
 
     /**
@@ -117,7 +117,7 @@ class Page extends Model
     {
         $this->handle = $handle;
 
-        return $this;
+
     }
 
     /**
@@ -137,7 +137,7 @@ class Page extends Model
     {
         $this->bodyHtml = $bodyHtml;
 
-        return $this;
+
     }
 
     /**
@@ -157,11 +157,11 @@ class Page extends Model
     {
         $this->author = $author;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -169,19 +169,19 @@ class Page extends Model
     }
 
     /**
-     * @param \DateTimeInterface $createdAt
+     * @param \DateTime $createdAt
      *
      * @return Page
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt(\DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getUpdatedAt()
     {
@@ -189,19 +189,19 @@ class Page extends Model
     }
 
     /**
-     * @param \DateTimeInterface $updatedAt
+     * @param \DateTime $updatedAt
      *
      * @return Page
      */
-    public function setUpdatedAt($updatedAt)
+    public function setUpdatedAt(\DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getPublishedAt()
     {
@@ -209,15 +209,15 @@ class Page extends Model
     }
 
     /**
-     * @param \DateTimeInterface $publishedAt
+     * @param \DateTime $publishedAt
      *
      * @return Page
      */
-    public function setPublishedAt($publishedAt)
+    public function setPublishedAt(\DateTime $publishedAt)
     {
         $this->publishedAt = $publishedAt;
 
-        return $this;
+
     }
 
     /**
@@ -237,6 +237,6 @@ class Page extends Model
     {
         $this->templateSuffix = $templateSuffix;
 
-        return $this;
+
     }
 }

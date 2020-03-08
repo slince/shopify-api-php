@@ -19,12 +19,12 @@ class Collect extends Model
     protected $collectionId;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $createdAt;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $updatedAt;
 
@@ -59,17 +59,17 @@ class Collect extends Model
     /**
      * @param int $collectionId
      *
-     * @return Collect
+
      */
     public function setCollectionId($collectionId)
     {
         $this->collectionId = $collectionId;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -77,19 +77,19 @@ class Collect extends Model
     }
 
     /**
-     * @param \DateTimeInterface $createdAt
+     * @param \DateTime $createdAt
      *
-     * @return Collect
+
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt(\DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getUpdatedAt()
     {
@@ -97,15 +97,15 @@ class Collect extends Model
     }
 
     /**
-     * @param \DateTimeInterface $updatedAt
+     * @param \DateTime $updatedAt
      *
-     * @return Collect
+
      */
-    public function setUpdatedAt($updatedAt)
+    public function setUpdatedAt(\DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
 
-        return $this;
+
     }
 
     /**
@@ -119,13 +119,13 @@ class Collect extends Model
     /**
      * @param bool $featured
      *
-     * @return Collect
+
      */
     public function setFeatured($featured)
     {
         $this->featured = $featured;
 
-        return $this;
+
     }
 
     /**
@@ -139,13 +139,13 @@ class Collect extends Model
     /**
      * @param int $position
      *
-     * @return Collect
+
      */
     public function setPosition($position)
     {
         $this->position = $position;
 
-        return $this;
+
     }
 
     /**
@@ -159,13 +159,13 @@ class Collect extends Model
     /**
      * @param int $productId
      *
-     * @return Collect
+
      */
     public function setProductId($productId)
     {
         $this->productId = $productId;
 
-        return $this;
+
     }
 
     /**
@@ -179,12 +179,12 @@ class Collect extends Model
     /**
      * @param int $sortValue
      *
-     * @return Collect
+
      */
     public function setSortValue($sortValue)
     {
         $this->sortValue = $sortValue;
 
-        return $this;
+
     }
 }

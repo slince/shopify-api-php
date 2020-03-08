@@ -26,7 +26,7 @@ class SmartCollection extends Model
     protected $title;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $updatedAt;
 
@@ -36,7 +36,7 @@ class SmartCollection extends Model
     protected $bodyHtml;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $publishedAt;
 
@@ -85,7 +85,7 @@ class SmartCollection extends Model
     public function setHandle($handle)
     {
         $this->handle = $handle;
-        return $this;
+
     }
 
     /**
@@ -103,11 +103,11 @@ class SmartCollection extends Model
     public function setTitle($title)
     {
         $this->title = $title;
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getUpdatedAt()
     {
@@ -115,13 +115,13 @@ class SmartCollection extends Model
     }
 
     /**
-     * @param \DateTimeInterface $updatedAt
+     * @param \DateTime $updatedAt
      * @return SmartCollection
      */
-    public function setUpdatedAt($updatedAt)
+    public function setUpdatedAt(\DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
-        return $this;
+
     }
 
     /**
@@ -139,11 +139,11 @@ class SmartCollection extends Model
     public function setBodyHtml($bodyHtml)
     {
         $this->bodyHtml = $bodyHtml;
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getPublishedAt()
     {
@@ -151,13 +151,13 @@ class SmartCollection extends Model
     }
 
     /**
-     * @param \DateTimeInterface $publishedAt
+     * @param \DateTime $publishedAt
      * @return SmartCollection
      */
-    public function setPublishedAt($publishedAt)
+    public function setPublishedAt(\DateTime $publishedAt)
     {
         $this->publishedAt = $publishedAt;
-        return $this;
+
     }
 
     /**
@@ -175,7 +175,7 @@ class SmartCollection extends Model
     public function setSortOrder($sortOrder)
     {
         $this->sortOrder = $sortOrder;
-        return $this;
+
     }
 
     /**
@@ -193,7 +193,7 @@ class SmartCollection extends Model
     public function setTemplateSuffix($templateSuffix)
     {
         $this->templateSuffix = $templateSuffix;
-        return $this;
+
     }
 
     /**
@@ -211,7 +211,7 @@ class SmartCollection extends Model
     public function setDisjunctive($disjunctive)
     {
         $this->disjunctive = $disjunctive;
-        return $this;
+
     }
 
     /**
@@ -229,7 +229,7 @@ class SmartCollection extends Model
     public function setRules($rules)
     {
         $this->rules = $rules;
-        return $this;
+
     }
 
     /**
@@ -247,7 +247,7 @@ class SmartCollection extends Model
     public function setPublishedScope($publishedScope)
     {
         $this->publishedScope = $publishedScope;
-        return $this;
+
     }
 
     /**
@@ -265,6 +265,6 @@ class SmartCollection extends Model
     public function setImage($image)
     {
         $this->image = $image;
-        return $this;
+
     }
 }

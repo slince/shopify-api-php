@@ -61,12 +61,12 @@ class Location extends Model
     protected $phone;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $createdAt;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $updatedAt;
 
@@ -102,7 +102,7 @@ class Location extends Model
     {
         $this->name = $name;
 
-        return $this;
+
     }
 
     /**
@@ -122,7 +122,7 @@ class Location extends Model
     {
         $this->deletedAt = $deletedAt;
 
-        return $this;
+
     }
 
     /**
@@ -142,7 +142,7 @@ class Location extends Model
     {
         $this->address1 = $address1;
 
-        return $this;
+
     }
 
     /**
@@ -162,7 +162,7 @@ class Location extends Model
     {
         $this->address2 = $address2;
 
-        return $this;
+
     }
 
     /**
@@ -182,7 +182,7 @@ class Location extends Model
     {
         $this->city = $city;
 
-        return $this;
+
     }
 
     /**
@@ -202,7 +202,7 @@ class Location extends Model
     {
         $this->zip = $zip;
 
-        return $this;
+
     }
 
     /**
@@ -222,7 +222,7 @@ class Location extends Model
     {
         $this->province = $province;
 
-        return $this;
+
     }
 
     /**
@@ -242,7 +242,7 @@ class Location extends Model
     {
         $this->country = $country;
 
-        return $this;
+
     }
 
     /**
@@ -262,11 +262,11 @@ class Location extends Model
     {
         $this->phone = $phone;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -274,19 +274,19 @@ class Location extends Model
     }
 
     /**
-     * @param \DateTimeInterface $createdAt
+     * @param \DateTime $createdAt
      *
      * @return Location
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt(\DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getUpdatedAt()
     {
@@ -294,15 +294,15 @@ class Location extends Model
     }
 
     /**
-     * @param \DateTimeInterface $updatedAt
+     * @param \DateTime $updatedAt
      *
      * @return Location
      */
-    public function setUpdatedAt($updatedAt)
+    public function setUpdatedAt(\DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
 
-        return $this;
+
     }
 
     /**
@@ -322,7 +322,7 @@ class Location extends Model
     {
         $this->countryCode = $countryCode;
 
-        return $this;
+
     }
 
     /**
@@ -342,7 +342,7 @@ class Location extends Model
     {
         $this->countryName = $countryName;
 
-        return $this;
+
     }
 
     /**
@@ -362,6 +362,6 @@ class Location extends Model
     {
         $this->provinceCode = $provinceCode;
 
-        return $this;
+
     }
 }

@@ -21,12 +21,12 @@ class Order extends Model
     protected $email;
 
     /**
-     * @var string
+     * @var \DateTime
      */
     protected $closedAt;
 
     /**
-     * @var string
+     * @var \DateTime
      */
     protected $updatedAt;
 
@@ -331,7 +331,7 @@ class Order extends Model
     }
 
     /**
-     * @return string
+     * @return \DateTime
      */
     public function getClosedAt()
     {
@@ -339,11 +339,11 @@ class Order extends Model
     }
 
     /**
-     * @param string $closedAt
+     * @param \DateTime $closedAt
      *
 
      */
-    public function setClosedAt($closedAt)
+    public function setClosedAt(\DateTime $closedAt)
     {
         $this->closedAt = $closedAt;
 
@@ -359,11 +359,11 @@ class Order extends Model
     }
 
     /**
-     * @param string $updatedAt
+     * @param \DateTime $updatedAt
      *
 
      */
-    public function setUpdatedAt($updatedAt)
+    public function setUpdatedAt(\DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
 

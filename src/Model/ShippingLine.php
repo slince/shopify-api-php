@@ -65,7 +65,7 @@ class ShippingLine extends Model
     {
         $this->code = $code;
 
-        return $this;
+
     }
 
     /**
@@ -85,7 +85,7 @@ class ShippingLine extends Model
     {
         $this->price = $price;
 
-        return $this;
+
     }
 
     /**
@@ -105,7 +105,7 @@ class ShippingLine extends Model
     {
         $this->source = $source;
 
-        return $this;
+
     }
 
     /**
@@ -125,7 +125,7 @@ class ShippingLine extends Model
     {
         $this->title = $title;
 
-        return $this;
+
     }
 
     /**
@@ -145,7 +145,7 @@ class ShippingLine extends Model
     {
         $this->taxLines = $taxLines;
 
-        return $this;
+
     }
 
     /**
@@ -165,7 +165,7 @@ class ShippingLine extends Model
     {
         $this->carrierIdentifier = $carrierIdentifier;
 
-        return $this;
+
     }
 
     /**
@@ -185,6 +185,6 @@ class ShippingLine extends Model
     {
         $this->requestedFulfillmentServiceId = $requestedFulfillmentServiceId;
 
-        return $this;
+
     }
 }

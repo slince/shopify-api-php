@@ -49,13 +49,13 @@ class Country extends Model
     /**
      * @param string $name
      *
-     * @return Country
+
      */
     public function setName($name)
     {
         $this->name = $name;
 
-        return $this;
+
     }
 
     /**
@@ -69,13 +69,13 @@ class Country extends Model
     /**
      * @param float $tax
      *
-     * @return Country
+
      */
     public function setTax($tax)
     {
         $this->tax = $tax;
 
-        return $this;
+
     }
 
     /**
@@ -89,13 +89,13 @@ class Country extends Model
     /**
      * @param string $code
      *
-     * @return Country
+
      */
     public function setCode($code)
     {
         $this->code = $code;
 
-        return $this;
+
     }
 
     /**
@@ -109,13 +109,13 @@ class Country extends Model
     /**
      * @param string $taxName
      *
-     * @return Country
+
      */
     public function setTaxName($taxName)
     {
         $this->taxName = $taxName;
 
-        return $this;
+
     }
 
     /**
@@ -129,12 +129,17 @@ class Country extends Model
     /**
      * @param Province[] $provinces
      *
-     * @return Country
+
      */
     public function setProvinces($provinces)
     {
         $this->provinces = $provinces;
 
-        return $this;
+
+    }
+
+    public function addProvince(Province $province)
+    {
+        $this->provinces[] = $province;
     }
 }

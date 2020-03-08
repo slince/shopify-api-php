@@ -60,7 +60,7 @@ class ShippingZone extends Model
     {
         $this->name = $name;
 
-        return $this;
+
     }
 
     /**
@@ -80,7 +80,7 @@ class ShippingZone extends Model
     {
         $this->countries = $countries;
 
-        return $this;
+
     }
 
     /**
@@ -100,7 +100,7 @@ class ShippingZone extends Model
     {
         $this->provinces = $provinces;
 
-        return $this;
+
     }
 
     /**
@@ -120,7 +120,7 @@ class ShippingZone extends Model
     {
         $this->carrierShippingRateProviders = $carrierShippingRateProviders;
 
-        return $this;
+
     }
 
     /**
@@ -140,7 +140,7 @@ class ShippingZone extends Model
     {
         $this->priceBasedShippingRates = $priceBasedShippingRates;
 
-        return $this;
+
     }
 
     /**
@@ -160,6 +160,6 @@ class ShippingZone extends Model
     {
         $this->weightBasedShippingRates = $weightBasedShippingRates;
 
-        return $this;
+
     }
 }

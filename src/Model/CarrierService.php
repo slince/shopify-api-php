@@ -54,13 +54,13 @@ class CarrierService extends Model
     /**
      * @param string $name
      *
-     * @return CarrierService
+
      */
     public function setName($name)
     {
         $this->name = $name;
 
-        return $this;
+
     }
 
     /**
@@ -74,13 +74,13 @@ class CarrierService extends Model
     /**
      * @param bool $active
      *
-     * @return CarrierService
+
      */
     public function setActive($active)
     {
         $this->active = $active;
 
-        return $this;
+
     }
 
     /**
@@ -94,13 +94,13 @@ class CarrierService extends Model
     /**
      * @param bool $serviceDiscovery
      *
-     * @return CarrierService
+
      */
     public function setServiceDiscovery($serviceDiscovery)
     {
         $this->serviceDiscovery = $serviceDiscovery;
 
-        return $this;
+
     }
 
     /**
@@ -114,13 +114,13 @@ class CarrierService extends Model
     /**
      * @param string $carrierServiceType
      *
-     * @return CarrierService
+
      */
     public function setCarrierServiceType($carrierServiceType)
     {
         $this->carrierServiceType = $carrierServiceType;
 
-        return $this;
+
     }
 
     /**
@@ -134,13 +134,13 @@ class CarrierService extends Model
     /**
      * @param string $format
      *
-     * @return CarrierService
+
      */
     public function setFormat($format)
     {
         $this->format = $format;
 
-        return $this;
+
     }
 
     /**
@@ -154,12 +154,12 @@ class CarrierService extends Model
     /**
      * @param string $callbackUrl
      *
-     * @return CarrierService
+
      */
     public function setCallbackUrl($callbackUrl)
     {
         $this->callbackUrl = $callbackUrl;
 
-        return $this;
+
     }
 }

@@ -45,7 +45,7 @@ class TaxLine
     {
         $this->title = $title;
 
-        return $this;
+
     }
 
     /**
@@ -65,7 +65,7 @@ class TaxLine
     {
         $this->price = $price;
 
-        return $this;
+
     }
 
     /**
@@ -85,6 +85,6 @@ class TaxLine
     {
         $this->rate = $rate;
 
-        return $this;
+
     }
 }

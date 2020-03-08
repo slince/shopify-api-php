@@ -2,6 +2,7 @@
 
 namespace Slince\Shopify\Tests\Service;
 
+use Slince\Shopify\Model\InventoryLevel;
 use Slince\Shopify\Service\LocationManager;
 
 class LocationManagerTest extends GeneralCurdableTestCase

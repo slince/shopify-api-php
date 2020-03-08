@@ -21,7 +21,7 @@ class Refund extends Model
     protected $orderId;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $createdAt;
 
@@ -72,11 +72,11 @@ class Refund extends Model
     {
         $this->orderId = $orderId;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -84,15 +84,15 @@ class Refund extends Model
     }
 
     /**
-     * @param \DateTimeInterface $createdAt
+     * @param \DateTime $createdAt
      *
      * @return Refund
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt(\DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
 
-        return $this;
+
     }
 
     /**
@@ -112,7 +112,7 @@ class Refund extends Model
     {
         $this->note = $note;
 
-        return $this;
+
     }
 
     /**
@@ -132,7 +132,7 @@ class Refund extends Model
     {
         $this->restock = $restock;
 
-        return $this;
+
     }
 
     /**
@@ -152,7 +152,7 @@ class Refund extends Model
     {
         $this->userId = $userId;
 
-        return $this;
+
     }
 
     /**
@@ -172,7 +172,7 @@ class Refund extends Model
     {
         $this->processedAt = $processedAt;
 
-        return $this;
+
     }
 
     /**
@@ -192,7 +192,7 @@ class Refund extends Model
     {
         $this->refundLineItems = $refundLineItems;
 
-        return $this;
+
     }
 
     /**
@@ -212,6 +212,6 @@ class Refund extends Model
     {
         $this->transactions = $transactions;
 
-        return $this;
+
     }
 }

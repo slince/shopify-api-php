@@ -40,7 +40,7 @@ class DiscountAllocation extends Model
     {
         $this->amount = $amount;
 
-        return $this;
+
     }
 
     /**
@@ -60,6 +60,6 @@ class DiscountAllocation extends Model
     {
         $this->discountApplicationIndex = $discountApplicationIndex;
 
-        return $this;
+
     }
 }

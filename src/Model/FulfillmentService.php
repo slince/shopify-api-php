@@ -55,7 +55,7 @@ class FulfillmentService extends Model
     {
         $this->name = $name;
 
-        return $this;
+
     }
 
     /**
@@ -75,7 +75,7 @@ class FulfillmentService extends Model
     {
         $this->callbackUrl = $callbackUrl;
 
-        return $this;
+
     }
 
     /**
@@ -95,7 +95,7 @@ class FulfillmentService extends Model
     {
         $this->inventoryManagement = $inventoryManagement;
 
-        return $this;
+
     }
 
     /**
@@ -115,7 +115,7 @@ class FulfillmentService extends Model
     {
         $this->trackingSupport = $trackingSupport;
 
-        return $this;
+
     }
 
     /**
@@ -135,6 +135,6 @@ class FulfillmentService extends Model
     {
         $this->requiresShippingMethod = $requiresShippingMethod;
 
-        return $this;
+
     }
 }

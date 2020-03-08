@@ -55,7 +55,7 @@ class PaymentDetails
     {
         $this->creditCardBin = $creditCardBin;
 
-        return $this;
+
     }
 
     /**
@@ -75,7 +75,7 @@ class PaymentDetails
     {
         $this->avsResultCode = $avsResultCode;
 
-        return $this;
+
     }
 
     /**
@@ -95,7 +95,7 @@ class PaymentDetails
     {
         $this->cvvResultCode = $cvvResultCode;
 
-        return $this;
+
     }
 
     /**
@@ -115,7 +115,7 @@ class PaymentDetails
     {
         $this->creditCardNumber = $creditCardNumber;
 
-        return $this;
+
     }
 
     /**
@@ -135,6 +135,6 @@ class PaymentDetails
     {
         $this->creditCardCompany = $creditCardCompany;
 
-        return $this;
+
     }
 }

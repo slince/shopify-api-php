@@ -75,7 +75,7 @@ class Risk extends Model
     {
         $this->orderId = $orderId;
 
-        return $this;
+
     }
 
     /**
@@ -95,7 +95,7 @@ class Risk extends Model
     {
         $this->checkoutId = $checkoutId;
 
-        return $this;
+
     }
 
     /**
@@ -115,7 +115,7 @@ class Risk extends Model
     {
         $this->source = $source;
 
-        return $this;
+
     }
 
     /**
@@ -135,7 +135,7 @@ class Risk extends Model
     {
         $this->score = $score;
 
-        return $this;
+
     }
 
     /**
@@ -155,7 +155,7 @@ class Risk extends Model
     {
         $this->recommendation = $recommendation;
 
-        return $this;
+
     }
 
     /**
@@ -175,7 +175,7 @@ class Risk extends Model
     {
         $this->display = $display;
 
-        return $this;
+
     }
 
     /**
@@ -195,7 +195,7 @@ class Risk extends Model
     {
         $this->causeCancel = $causeCancel;
 
-        return $this;
+
     }
 
     /**
@@ -215,7 +215,7 @@ class Risk extends Model
     {
         $this->message = $message;
 
-        return $this;
+
     }
 
     /**
@@ -235,6 +235,6 @@ class Risk extends Model
     {
         $this->merchantMessage = $merchantMessage;
 
-        return $this;
+
     }
 }

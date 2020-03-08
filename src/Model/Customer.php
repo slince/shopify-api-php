@@ -26,12 +26,12 @@ class Customer extends Model
     protected $acceptsMarketing;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $createdAt;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $updatedAt;
 
@@ -121,13 +121,13 @@ class Customer extends Model
     /**
      * @param string $email
      *
-     * @return Customer
+
      */
     public function setEmail($email)
     {
         $this->email = $email;
 
-        return $this;
+
     }
 
     /**
@@ -141,17 +141,17 @@ class Customer extends Model
     /**
      * @param bool $acceptsMarketing
      *
-     * @return Customer
+
      */
     public function setAcceptsMarketing($acceptsMarketing)
     {
         $this->acceptsMarketing = $acceptsMarketing;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -159,19 +159,19 @@ class Customer extends Model
     }
 
     /**
-     * @param \DateTimeInterface $createdAt
+     * @param \DateTime $createdAt
      *
-     * @return Customer
+
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt(\DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getUpdatedAt()
     {
@@ -179,15 +179,15 @@ class Customer extends Model
     }
 
     /**
-     * @param \DateTimeInterface $updatedAt
+     * @param \DateTime $updatedAt
      *
-     * @return Customer
+
      */
-    public function setUpdatedAt($updatedAt)
+    public function setUpdatedAt(\DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
 
-        return $this;
+
     }
 
     /**
@@ -201,13 +201,13 @@ class Customer extends Model
     /**
      * @param string $firstName
      *
-     * @return Customer
+
      */
     public function setFirstName($firstName)
     {
         $this->firstName = $firstName;
 
-        return $this;
+
     }
 
     /**
@@ -221,13 +221,13 @@ class Customer extends Model
     /**
      * @param string $lastName
      *
-     * @return Customer
+
      */
     public function setLastName($lastName)
     {
         $this->lastName = $lastName;
 
-        return $this;
+
     }
 
     /**
@@ -241,13 +241,13 @@ class Customer extends Model
     /**
      * @param int $ordersCount
      *
-     * @return Customer
+
      */
     public function setOrdersCount($ordersCount)
     {
         $this->ordersCount = $ordersCount;
 
-        return $this;
+
     }
 
     /**
@@ -261,13 +261,13 @@ class Customer extends Model
     /**
      * @param string $state
      *
-     * @return Customer
+
      */
     public function setState($state)
     {
         $this->state = $state;
 
-        return $this;
+
     }
 
     /**
@@ -281,13 +281,13 @@ class Customer extends Model
     /**
      * @param float $totalSpent
      *
-     * @return Customer
+
      */
     public function setTotalSpent($totalSpent)
     {
         $this->totalSpent = $totalSpent;
 
-        return $this;
+
     }
 
     /**
@@ -301,13 +301,13 @@ class Customer extends Model
     /**
      * @param int $lastOrderId
      *
-     * @return Customer
+
      */
     public function setLastOrderId($lastOrderId)
     {
         $this->lastOrderId = $lastOrderId;
 
-        return $this;
+
     }
 
     /**
@@ -321,13 +321,13 @@ class Customer extends Model
     /**
      * @param string $note
      *
-     * @return Customer
+
      */
     public function setNote($note)
     {
         $this->note = $note;
 
-        return $this;
+
     }
 
     /**
@@ -341,13 +341,13 @@ class Customer extends Model
     /**
      * @param bool $verifiedEmail
      *
-     * @return Customer
+
      */
     public function setVerifiedEmail($verifiedEmail)
     {
         $this->verifiedEmail = $verifiedEmail;
 
-        return $this;
+
     }
 
     /**
@@ -361,13 +361,13 @@ class Customer extends Model
     /**
      * @param string $multipassIdentifier
      *
-     * @return Customer
+
      */
     public function setMultipassIdentifier($multipassIdentifier)
     {
         $this->multipassIdentifier = $multipassIdentifier;
 
-        return $this;
+
     }
 
     /**
@@ -381,13 +381,13 @@ class Customer extends Model
     /**
      * @param bool $taxExempt
      *
-     * @return Customer
+
      */
     public function setTaxExempt($taxExempt)
     {
         $this->taxExempt = $taxExempt;
 
-        return $this;
+
     }
 
     /**
@@ -401,13 +401,13 @@ class Customer extends Model
     /**
      * @param string $phone
      *
-     * @return Customer
+
      */
     public function setPhone($phone)
     {
         $this->phone = $phone;
 
-        return $this;
+
     }
 
     /**
@@ -421,13 +421,13 @@ class Customer extends Model
     /**
      * @param string $tags
      *
-     * @return Customer
+
      */
     public function setTags($tags)
     {
         $this->tags = $tags;
 
-        return $this;
+
     }
 
     /**
@@ -441,13 +441,13 @@ class Customer extends Model
     /**
      * @param string $lastOrderName
      *
-     * @return Customer
+
      */
     public function setLastOrderName($lastOrderName)
     {
         $this->lastOrderName = $lastOrderName;
 
-        return $this;
+
     }
 
     /**
@@ -461,13 +461,13 @@ class Customer extends Model
     /**
      * @param Address[] $addresses
      *
-     * @return Customer
+
      */
     public function setAddresses($addresses)
     {
         $this->addresses = $addresses;
 
-        return $this;
+
     }
 
     /**
@@ -481,12 +481,12 @@ class Customer extends Model
     /**
      * @param Address $defaultAddress
      *
-     * @return Customer
+
      */
     public function setDefaultAddress($defaultAddress)
     {
         $this->defaultAddress = $defaultAddress;
 
-        return $this;
+
     }
 }

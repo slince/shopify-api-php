@@ -2,6 +2,7 @@
 
 namespace Slince\Shopify\Tests\Service;
 
+use Slince\Shopify\Model\Refund;
 use Slince\Shopify\Service\RefundManager;
 
 

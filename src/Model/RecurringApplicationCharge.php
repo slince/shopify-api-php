@@ -39,7 +39,7 @@ class RecurringApplicationCharge extends Model
     protected $confirmationUrl;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $createdAt;
 
@@ -89,7 +89,7 @@ class RecurringApplicationCharge extends Model
     protected $trialEndsOn;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $updatedAt;
 
@@ -110,7 +110,7 @@ class RecurringApplicationCharge extends Model
     {
         $this->activatedOn = $activatedOn;
 
-        return $this;
+
     }
 
     /**
@@ -130,7 +130,7 @@ class RecurringApplicationCharge extends Model
     {
         $this->billingOn = $billingOn;
 
-        return $this;
+
     }
 
     /**
@@ -150,7 +150,7 @@ class RecurringApplicationCharge extends Model
     {
         $this->cancelledOn = $cancelledOn;
 
-        return $this;
+
     }
 
     /**
@@ -170,7 +170,7 @@ class RecurringApplicationCharge extends Model
     {
         $this->cappedAmount = $cappedAmount;
 
-        return $this;
+
     }
 
     /**
@@ -190,11 +190,11 @@ class RecurringApplicationCharge extends Model
     {
         $this->confirmationUrl = $confirmationUrl;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -202,15 +202,15 @@ class RecurringApplicationCharge extends Model
     }
 
     /**
-     * @param \DateTimeInterface $createdAt
+     * @param \DateTime $createdAt
      *                                                                
      * @return RecurringApplicationCharge
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt(\DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
 
-        return $this;
+
     }
 
     /**
@@ -230,7 +230,7 @@ class RecurringApplicationCharge extends Model
     {
         $this->decoratedReturnUrl = $decoratedReturnUrl;
 
-        return $this;
+
     }
 
     /**
@@ -250,7 +250,7 @@ class RecurringApplicationCharge extends Model
     {
         $this->name = $name;
 
-        return $this;
+
     }
 
     /**
@@ -270,7 +270,7 @@ class RecurringApplicationCharge extends Model
     {
         $this->price = $price;
 
-        return $this;
+
     }
 
     /**
@@ -290,7 +290,7 @@ class RecurringApplicationCharge extends Model
     {
         $this->returnUrl = $returnUrl;
 
-        return $this;
+
     }
 
     /**
@@ -310,7 +310,7 @@ class RecurringApplicationCharge extends Model
     {
         $this->status = $status;
 
-        return $this;
+
     }
 
     /**
@@ -330,7 +330,7 @@ class RecurringApplicationCharge extends Model
     {
         $this->terms = $terms;
 
-        return $this;
+
     }
 
     /**
@@ -350,7 +350,7 @@ class RecurringApplicationCharge extends Model
     {
         $this->test = $test;
 
-        return $this;
+
     }
 
     /**
@@ -370,7 +370,7 @@ class RecurringApplicationCharge extends Model
     {
         $this->trialDays = $trialDays;
 
-        return $this;
+
     }
 
     /**
@@ -390,11 +390,11 @@ class RecurringApplicationCharge extends Model
     {
         $this->trialEndsOn = $trialEndsOn;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getUpdatedAt()
     {
@@ -402,15 +402,15 @@ class RecurringApplicationCharge extends Model
     }
 
     /**
-     * @param \DateTimeInterface $updatedAt
+     * @param \DateTime $updatedAt
      *                                                                
      * @return RecurringApplicationCharge
      */
-    public function setUpdatedAt($updatedAt)
+    public function setUpdatedAt(\DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
 
-        return $this;
+
     }
     
 }

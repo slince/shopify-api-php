@@ -81,12 +81,12 @@ class Variant extends Model
     protected $option3;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $createdAt;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $updatedAt;
 
@@ -152,7 +152,7 @@ class Variant extends Model
     {
         $this->productId = $productId;
 
-        return $this;
+
     }
 
     /**
@@ -172,7 +172,7 @@ class Variant extends Model
     {
         $this->title = $title;
 
-        return $this;
+
     }
 
     /**
@@ -192,7 +192,7 @@ class Variant extends Model
     {
         $this->price = $price;
 
-        return $this;
+
     }
 
     /**
@@ -212,7 +212,7 @@ class Variant extends Model
     {
         $this->sku = $sku;
 
-        return $this;
+
     }
 
     /**
@@ -232,7 +232,7 @@ class Variant extends Model
     {
         $this->position = $position;
 
-        return $this;
+
     }
 
     /**
@@ -252,7 +252,7 @@ class Variant extends Model
     {
         $this->grams = $grams;
 
-        return $this;
+
     }
 
     /**
@@ -272,7 +272,7 @@ class Variant extends Model
     {
         $this->inventoryPolicy = $inventoryPolicy;
 
-        return $this;
+
     }
 
     /**
@@ -292,7 +292,7 @@ class Variant extends Model
     {
         $this->compareAtPrice = $compareAtPrice;
 
-        return $this;
+
     }
 
     /**
@@ -312,7 +312,7 @@ class Variant extends Model
     {
         $this->fulfillmentService = $fulfillmentService;
 
-        return $this;
+
     }
 
     /**
@@ -332,7 +332,7 @@ class Variant extends Model
     {
         $this->inventoryManagement = $inventoryManagement;
 
-        return $this;
+
     }
 
     /**
@@ -352,7 +352,7 @@ class Variant extends Model
     {
         $this->option1 = $option1;
 
-        return $this;
+
     }
 
     /**
@@ -372,7 +372,7 @@ class Variant extends Model
     {
         $this->option2 = $option2;
 
-        return $this;
+
     }
 
     /**
@@ -392,11 +392,11 @@ class Variant extends Model
     {
         $this->option3 = $option3;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -404,19 +404,19 @@ class Variant extends Model
     }
 
     /**
-     * @param \DateTimeInterface $createdAt
+     * @param \DateTime $createdAt
      *
      * @return Variant
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt(\DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getUpdatedAt()
     {
@@ -424,15 +424,15 @@ class Variant extends Model
     }
 
     /**
-     * @param \DateTimeInterface $updatedAt
+     * @param \DateTime $updatedAt
      *
      * @return Variant
      */
-    public function setUpdatedAt($updatedAt)
+    public function setUpdatedAt(\DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
 
-        return $this;
+
     }
 
     /**
@@ -452,7 +452,7 @@ class Variant extends Model
     {
         $this->taxable = $taxable;
 
-        return $this;
+
     }
 
     /**
@@ -472,7 +472,7 @@ class Variant extends Model
     {
         $this->barcode = $barcode;
 
-        return $this;
+
     }
 
     /**
@@ -492,7 +492,7 @@ class Variant extends Model
     {
         $this->imageId = $imageId;
 
-        return $this;
+
     }
 
     /**
@@ -512,7 +512,7 @@ class Variant extends Model
     {
         $this->inventoryQuantity = $inventoryQuantity;
 
-        return $this;
+
     }
 
     /**
@@ -532,7 +532,7 @@ class Variant extends Model
     {
         $this->weight = $weight;
 
-        return $this;
+
     }
 
     /**
@@ -552,7 +552,7 @@ class Variant extends Model
     {
         $this->weightUnit = $weightUnit;
 
-        return $this;
+
     }
 
     /**
@@ -588,7 +588,7 @@ class Variant extends Model
     {
         $this->oldInventoryQuantity = $oldInventoryQuantity;
 
-        return $this;
+
     }
 
     /**
@@ -608,6 +608,6 @@ class Variant extends Model
     {
         $this->requiresShipping = $requiresShipping;
 
-        return $this;
+
     }
 }

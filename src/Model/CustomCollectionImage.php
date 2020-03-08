@@ -29,7 +29,7 @@ class CustomCollectionImage
     protected $height;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $createdAt;
 
@@ -44,13 +44,13 @@ class CustomCollectionImage
     /**
      * @param string $src
      *
-     * @return CustomCollectionImage
+
      */
     public function setSrc($src)
     {
         $this->src = $src;
 
-        return $this;
+
     }
 
     /**
@@ -64,13 +64,13 @@ class CustomCollectionImage
     /**
      * @param int $width
      *
-     * @return CustomCollectionImage
+
      */
     public function setWidth($width)
     {
         $this->width = $width;
 
-        return $this;
+
     }
 
     /**
@@ -84,17 +84,17 @@ class CustomCollectionImage
     /**
      * @param int $height
      *
-     * @return CustomCollectionImage
+
      */
     public function setHeight($height)
     {
         $this->height = $height;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -102,14 +102,14 @@ class CustomCollectionImage
     }
 
     /**
-     * @param \DateTimeInterface $createdAt
+     * @param \DateTime $createdAt
      *
-     * @return CustomCollectionImage
+
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt(\DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
 
-        return $this;
+
     }
 }

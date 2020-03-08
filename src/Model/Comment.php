@@ -49,12 +49,12 @@ class Comment extends Model
     protected $blogId;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $createdAt;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $updatedAt;
 
@@ -69,7 +69,7 @@ class Comment extends Model
     protected $userAgent;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $publishedAt;
 
@@ -84,13 +84,13 @@ class Comment extends Model
     /**
      * @param string $body
      *
-     * @return Comment
+
      */
     public function setBody($body)
     {
         $this->body = $body;
 
-        return $this;
+
     }
 
     /**
@@ -104,13 +104,13 @@ class Comment extends Model
     /**
      * @param string $bodyHtml
      *
-     * @return Comment
+
      */
     public function setBodyHtml($bodyHtml)
     {
         $this->bodyHtml = $bodyHtml;
 
-        return $this;
+
     }
 
     /**
@@ -124,13 +124,13 @@ class Comment extends Model
     /**
      * @param string $author
      *
-     * @return Comment
+
      */
     public function setAuthor($author)
     {
         $this->author = $author;
 
-        return $this;
+
     }
 
     /**
@@ -144,13 +144,13 @@ class Comment extends Model
     /**
      * @param string $email
      *
-     * @return Comment
+
      */
     public function setEmail($email)
     {
         $this->email = $email;
 
-        return $this;
+
     }
 
     /**
@@ -164,13 +164,13 @@ class Comment extends Model
     /**
      * @param string $status
      *
-     * @return Comment
+
      */
     public function setStatus($status)
     {
         $this->status = $status;
 
-        return $this;
+
     }
 
     /**
@@ -184,13 +184,13 @@ class Comment extends Model
     /**
      * @param int $articleId
      *
-     * @return Comment
+
      */
     public function setArticleId($articleId)
     {
         $this->articleId = $articleId;
 
-        return $this;
+
     }
 
     /**
@@ -204,17 +204,17 @@ class Comment extends Model
     /**
      * @param int $blogId
      *
-     * @return Comment
+
      */
     public function setBlogId($blogId)
     {
         $this->blogId = $blogId;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -222,15 +222,15 @@ class Comment extends Model
     }
 
     /**
-     * @param \DateTimeInterface $createdAt
+     * @param \DateTime $createdAt
      *
-     * @return Comment
+
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt(\DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
 
-        return $this;
+
     }
 
     /**
@@ -242,15 +242,15 @@ class Comment extends Model
     }
 
     /**
-     * @param \DateTimeInterface $updatedAt
+     * @param \DateTime $updatedAt
      *
-     * @return Comment
+
      */
-    public function setUpdatedAt($updatedAt)
+    public function setUpdatedAt(\DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
 
-        return $this;
+
     }
 
     /**
@@ -264,13 +264,13 @@ class Comment extends Model
     /**
      * @param string $ip
      *
-     * @return Comment
+
      */
     public function setIp($ip)
     {
         $this->ip = $ip;
 
-        return $this;
+
     }
 
     /**
@@ -284,13 +284,13 @@ class Comment extends Model
     /**
      * @param string $userAgent
      *
-     * @return Comment
+
      */
     public function setUserAgent($userAgent)
     {
         $this->userAgent = $userAgent;
 
-        return $this;
+
     }
 
     /**
@@ -302,14 +302,14 @@ class Comment extends Model
     }
 
     /**
-     * @param \DateTimeInterface $publishedAt
+     * @param \DateTime $publishedAt
      *
-     * @return Comment
+
      */
-    public function setPublishedAt($publishedAt)
+    public function setPublishedAt(\DateTime $publishedAt)
     {
         $this->publishedAt = $publishedAt;
 
-        return $this;
+
     }
 }

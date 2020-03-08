@@ -50,7 +50,7 @@ class Option extends Model
     {
         $this->productId = $productId;
 
-        return $this;
+
     }
 
     /**
@@ -70,7 +70,7 @@ class Option extends Model
     {
         $this->name = $name;
 
-        return $this;
+
     }
 
     /**
@@ -90,7 +90,7 @@ class Option extends Model
     {
         $this->position = $position;
 
-        return $this;
+
     }
 
     /**
@@ -110,6 +110,6 @@ class Option extends Model
     {
         $this->values = $values;
 
-        return $this;
+
     }
 }

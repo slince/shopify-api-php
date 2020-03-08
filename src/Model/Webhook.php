@@ -24,12 +24,12 @@ class Webhook extends Model
     protected $topic;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $createdAt;
 
     /**
-     * @var \DateTimeInterface
+     * @var \DateTime
      */
     protected $updatedAt;
 
@@ -65,7 +65,7 @@ class Webhook extends Model
     {
         $this->address = $address;
 
-        return $this;
+
     }
 
     /**
@@ -85,11 +85,11 @@ class Webhook extends Model
     {
         $this->topic = $topic;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -97,19 +97,19 @@ class Webhook extends Model
     }
 
     /**
-     * @param \DateTimeInterface $createdAt
+     * @param \DateTime $createdAt
      *
      * @return Webhook
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt(\DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
 
-        return $this;
+
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return \DateTime
      */
     public function getUpdatedAt()
     {
@@ -117,15 +117,15 @@ class Webhook extends Model
     }
 
     /**
-     * @param \DateTimeInterface $updatedAt
+     * @param \DateTime $updatedAt
      *
      * @return Webhook
      */
-    public function setUpdatedAt($updatedAt)
+    public function setUpdatedAt(\DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
 
-        return $this;
+
     }
 
     /**
@@ -145,7 +145,7 @@ class Webhook extends Model
     {
         $this->format = $format;
 
-        return $this;
+
     }
 
     /**
@@ -165,7 +165,7 @@ class Webhook extends Model
     {
         $this->fields = $fields;
 
-        return $this;
+
     }
 
     /**
@@ -185,6 +185,6 @@ class Webhook extends Model
     {
         $this->metafieldNamespaces = $metafieldNamespaces;
 
-        return $this;
+
     }
 }
