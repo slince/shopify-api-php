@@ -57,6 +57,28 @@ class CursorBasedPagination
         return $this->manager->createMany(reset($data));
     }
 
+    protected function extractHeaderLink(ResponseInterface $response)
+    {
+        if (!$response->hasHeader('Link')) {
+            return [];
+        }
+        $links = [
+            'next' => null,
+            'previous' => null,
+        ];
+        foreach (array_keys($links) as $type) {
+            $matched = preg_match(
+                str_replace('{type}', $type, static::LINK_REGEX),
+                $response->getHeader('Link')[0],
+                $matches
+            );
+            if ($matched) {
+                $links[$type] = $matches[1];
+            }
+        }
+        return $links;
+    }
+
     /**
      * Get the next page of data.
      *
@@ -81,6 +103,17 @@ class CursorBasedPagination
         return !empty($this->links['next']);
     }
 
+    protected function fetchResource($url)
+    {
+        $request = new Request('GET', $url, [
+            'Content-Type' => 'application/json',
+        ]);
+        $response = $this->client->sendRequest($request);
+        $data = \GuzzleHttp\json_decode((string)$response->getBody(), true);
+        $this->links = $this->extractHeaderLink($this->client->getLastResponse());
+        return $this->manager->createMany(reset($data));
+    }
+
     /**
      * Get the previous page of data.
      *
@@ -102,38 +135,5 @@ class CursorBasedPagination
     public function hasPrev()
     {
         return !empty($this->links['previous']);
-    }
-
-    protected function fetchResource($url)
-    {
-        $request = new Request('GET', $url, [
-            'Content-Type' => 'application/json',
-        ]);
-        $response = $this->client->sendRequest($request);
-        $data = \GuzzleHttp\json_decode((string)$response->getBody(), true);
-        $this->links = $this->extractHeaderLink($this->client->getLastResponse());
-        return $this->manager->createMany(reset($data));
-    }
-
-    protected function extractHeaderLink(ResponseInterface $response)
-    {
-        if (!$response->hasHeader('Link')) {
-            return [];
-        }
-        $links = [
-            'next'     => null,
-            'previous' => null,
-        ];
-        foreach (array_keys($links) as $type) {
-            $matched = preg_match(
-                str_replace('{type}', $type, static::LINK_REGEX),
-                $response->getHeader('Link')[0],
-                $matches
-            );
-            if ($matched) {
-                $links[$type] = $matches[1];
-            }
-        }
-        return $links;
     }
 }

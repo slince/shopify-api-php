@@ -11,6 +11,7 @@
 
 namespace Slince\Shopify\Service;
 
+use Exception;
 use Slince\Shopify\Model\Province;
 use Slince\Shopify\Service\Contracts\ProvinceManagerInterface;
 
@@ -53,7 +54,7 @@ class ProvinceManager extends NestCrudable implements ProvinceManagerInterface
      */
     public function remove($countryId, $id)
     {
-        return new \Exception('The method is not supported');
+        return new Exception('The method is not supported');
     }
 
     /**
@@ -61,6 +62,6 @@ class ProvinceManager extends NestCrudable implements ProvinceManagerInterface
      */
     public function create($countryId, array $data)
     {
-        return new \Exception('The method is not supported');
+        return new Exception('The method is not supported');
     }
 }

@@ -10,6 +10,7 @@
  */
 
 namespace Slince\Shopify\Service\Contracts;
+
 use Slince\Shopify\Model\Customer;
 
 interface CustomerManagerInterface extends ManagerInterface
@@ -44,7 +45,7 @@ interface CustomerManagerInterface extends ManagerInterface
     /**
      * Updates the customer.
      *
-     * @param int   $id
+     * @param int $id
      * @param array $data
      *
      * @return bool

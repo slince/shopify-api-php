@@ -11,6 +11,8 @@
 
 namespace Slince\Shopify\Model;
 
+use DateTime;
+
 class Page extends Model
 {
     use AdminGraphqlApiId;
@@ -41,17 +43,17 @@ class Page extends Model
     protected $author;
 
     /**
-     * @var \DateTime
+     * @var DateTime
      */
     protected $createdAt;
 
     /**
-     * @var \DateTime
+     * @var DateTime
      */
     protected $updatedAt;
 
     /**
-     * @var \DateTime
+     * @var DateTime
      */
     protected $publishedAt;
 
@@ -161,7 +163,7 @@ class Page extends Model
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
     public function getCreatedAt()
     {
@@ -169,11 +171,11 @@ class Page extends Model
     }
 
     /**
-     * @param \DateTime $createdAt
+     * @param DateTime $createdAt
      *
      * @return Page
      */
-    public function setCreatedAt(\DateTime $createdAt)
+    public function setCreatedAt(DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
 
@@ -181,7 +183,7 @@ class Page extends Model
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
     public function getUpdatedAt()
     {
@@ -189,11 +191,11 @@ class Page extends Model
     }
 
     /**
-     * @param \DateTime $updatedAt
+     * @param DateTime $updatedAt
      *
      * @return Page
      */
-    public function setUpdatedAt(\DateTime $updatedAt)
+    public function setUpdatedAt(DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
 
@@ -201,7 +203,7 @@ class Page extends Model
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
     public function getPublishedAt()
     {
@@ -209,11 +211,11 @@ class Page extends Model
     }
 
     /**
-     * @param \DateTime $publishedAt
+     * @param DateTime $publishedAt
      *
      * @return Page
      */
-    public function setPublishedAt(\DateTime $publishedAt)
+    public function setPublishedAt(DateTime $publishedAt)
     {
         $this->publishedAt = $publishedAt;
 

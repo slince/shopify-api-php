@@ -11,6 +11,8 @@
 
 namespace Slince\Shopify\Model;
 
+use DateTime;
+
 class Article extends Model
 {
     use AdminGraphqlApiId;
@@ -41,17 +43,17 @@ class Article extends Model
     protected $userId;
 
     /**
-     * @var \DateTime
+     * @var DateTime
      */
     protected $createdAt;
 
     /**
-     * @var \DateTime
+     * @var DateTime
      */
     protected $publishedAt;
 
     /**
-     * @var \DateTime
+     * @var DateTime
      */
     protected $updatedAt;
 
@@ -92,11 +94,11 @@ class Article extends Model
     {
         $this->title = $title;
 
-  
+
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
     public function getCreatedAt()
     {
@@ -104,15 +106,15 @@ class Article extends Model
     }
 
     /**
-     * @param \DateTime $createdAt
+     * @param DateTime $createdAt
      *
 
      */
-    public function setCreatedAt(\DateTime $createdAt)
+    public function setCreatedAt(DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
 
-  
+
     }
 
     /**
@@ -132,7 +134,7 @@ class Article extends Model
     {
         $this->bodyHtml = $bodyHtml;
 
-  
+
     }
 
     /**
@@ -152,7 +154,7 @@ class Article extends Model
     {
         $this->blogId = $blogId;
 
-  
+
     }
 
     /**
@@ -172,7 +174,7 @@ class Article extends Model
     {
         $this->author = $author;
 
-  
+
     }
 
     /**
@@ -192,11 +194,11 @@ class Article extends Model
     {
         $this->userId = $userId;
 
-  
+
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
     public function getPublishedAt()
     {
@@ -204,19 +206,19 @@ class Article extends Model
     }
 
     /**
-     * @param \DateTime $publishedAt
+     * @param DateTime $publishedAt
      *
 
      */
-    public function setPublishedAt(\DateTime $publishedAt)
+    public function setPublishedAt(DateTime $publishedAt)
     {
         $this->publishedAt = $publishedAt;
 
-  
+
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
     public function getUpdatedAt()
     {
@@ -224,15 +226,15 @@ class Article extends Model
     }
 
     /**
-     * @param \DateTime $updatedAt
+     * @param DateTime $updatedAt
      *
 
      */
-    public function setUpdatedAt(\DateTime $updatedAt)
+    public function setUpdatedAt(DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
 
-  
+
     }
 
     /**
@@ -252,7 +254,7 @@ class Article extends Model
     {
         $this->summaryHtml = $summaryHtml;
 
-  
+
     }
 
     /**
@@ -272,7 +274,7 @@ class Article extends Model
     {
         $this->templateSuffix = $templateSuffix;
 
-  
+
     }
 
     /**
@@ -292,7 +294,7 @@ class Article extends Model
     {
         $this->handle = $handle;
 
-  
+
     }
 
     /**
@@ -312,6 +314,6 @@ class Article extends Model
     {
         $this->tags = $tags;
 
-  
+
     }
 }

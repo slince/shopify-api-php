@@ -12,18 +12,17 @@
 namespace Slince\Shopify;
 
 use Doctrine\Common\Inflector\Inflector;
-use GuzzleHttp\Exception\GuzzleException;
-use GuzzleHttp\Psr7\Request;
-use Slince\Di\Container;
 use GuzzleHttp\Client as HttpClient;
+use GuzzleHttp\Exception\GuzzleException;
+use GuzzleHttp\Exception\RequestException;
+use GuzzleHttp\Psr7\Request;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use Slince\Shopify\Service\Contracts;
-use Slince\Shopify\Exception\InvalidArgumentException;
-use GuzzleHttp\Exception\RequestException;
+use Slince\Di\Container;
 use Slince\Shopify\Exception\ClientException;
-use Slince\Shopify\Exception\RuntimeException;
+use Slince\Shopify\Exception\InvalidArgumentException;
 use Slince\Shopify\Hydrator\Hydrator;
+use Slince\Shopify\Service\Contracts;
 
 /**
  * @method Contracts\ArticleManagerInterface getArticleManager
@@ -67,39 +66,12 @@ class Client
 {
     const NAME = 'SlinceShopifyClient';
     const VERSION = '2.4.0';
-
     /**
-     * @var HttpClient
-     */
-    protected $httpClient;
-
-    /**
-     * @var Container
-     */
-    protected $container;
-
-    /**
-     * @var CredentialInterface
-     */
-    protected $credential;
-
-    /**
-     * The shop.
+     * Whether delay the next request.
      *
-     * @var string
+     * @var bool
      */
-    protected $shop;
-
-    /**
-     * @var string
-     */
-    protected $apiVersion = '2019-10';
-
-    /**
-     * @var ResponseInterface
-     */
-    protected $lastResponse;
-
+    protected static $delayNextRequest = false;
     /**
      * Array of services classes.
      *
@@ -144,14 +116,32 @@ class Client
         Service\TransactionManager::class,
         Service\WebhookManager::class,
     ];
-
     /**
-     * Whether delay the next request.
-     *
-     * @var bool
+     * @var HttpClient
      */
-    protected static $delayNextRequest = false;
-
+    protected $httpClient;
+    /**
+     * @var Container
+     */
+    protected $container;
+    /**
+     * @var CredentialInterface
+     */
+    protected $credential;
+    /**
+     * The shop.
+     *
+     * @var string
+     */
+    protected $shop;
+    /**
+     * @var string
+     */
+    protected $apiVersion = '2019-10';
+    /**
+     * @var ResponseInterface
+     */
+    protected $lastResponse;
     /**
      * @var string
      */
@@ -170,6 +160,36 @@ class Client
         $this->setShop($shop);
         $this->applyOptions($options);
         $this->initializeBaseServices();
+    }
+
+    /**
+     * Applies the array of request options to the client.
+     *
+     * @param array $options
+     */
+    protected function applyOptions(array $options)
+    {
+        isset($options['httpClient']) && $this->httpClient = $options['httpClient'];
+        if (!isset($options['metaCacheDir'])) {
+            throw new InvalidArgumentException('You must provide option "metaCacheDir"');
+        }
+        $this->metaCacheDir = $options['metaCacheDir'];
+        if (isset($options['apiVersion'])) {
+            if (!preg_match('/^[0-9]{4}-[0-9]{2}$|^unstable$/', $options['apiVersion'])) {
+                throw new InvalidArgumentException('Version string must be of YYYY-MM or unstable');
+            }
+            $this->apiVersion = $options['apiVersion'];
+        }
+    }
+
+    /**
+     * Initialize base services.
+     */
+    protected function initializeBaseServices()
+    {
+        foreach ($this->serviceClass as $serviceClass) {
+            $this->container->register($serviceClass::getServiceName(), $serviceClass);
+        }
     }
 
     public function __call($name, $arguments)
@@ -192,6 +212,16 @@ class Client
     }
 
     /**
+     * Gets the shop.
+     *
+     * @return string
+     */
+    public function getShop()
+    {
+        return $this->shop;
+    }
+
+    /**
      * sets the shop name for the client.
      *
      * @param string $shop
@@ -207,45 +237,10 @@ class Client
     }
 
     /**
-     * Gets the shop.
-     *
-     * @return string
-     */
-    public function getShop()
-    {
-        return $this->shop;
-    }
-
-    /**
-     * Sets the http client for the client.
-     *
-     * @param HttpClient $httpClient
-     */
-    public function setHttpClient($httpClient)
-    {
-        $this->httpClient = $httpClient;
-    }
-
-    /**
-     * Gets the http client.
-     *
-     * @return HttpClient
-     */
-    public function getHttpClient()
-    {
-        if ($this->httpClient) {
-            return $this->httpClient;
-        }
-        return $this->httpClient = new HttpClient([
-            'verify' => false,
-        ]);
-    }
-
-    /**
      * Perform a GET request.
      *
      * @param string $resource
-     * @param array  $query
+     * @param array $query
      *
      * @return array
      */
@@ -253,53 +248,6 @@ class Client
     {
         return $this->doRequest('GET', $resource, [
             'query' => $query,
-        ]);
-    }
-
-    /**
-     * Perform a POST request.
-     *
-     * @param string $resource
-     * @param array  $data
-     * @param array  $query
-     *
-     * @return array
-     */
-    public function post($resource, $data, $query = [])
-    {
-        return $this->doRequest('POST', $resource, [
-            'query' => $query,
-            'json' => $data,
-        ]);
-    }
-
-    /**
-     * Perform a PUT request.
-     *
-     * @param string $resource
-     * @param array  $data
-     * @param array  $query
-     *
-     * @return array
-     */
-    public function put($resource, $data, $query = [])
-    {
-        return $this->doRequest('PUT', $resource, [
-            'query' => $query,
-            'json' => $data,
-        ]);
-    }
-
-    /**
-     * Perform a DELETE request.
-     *
-     * @param string $resource
-     * @param array  $query
-     */
-    public function delete($resource, $query = [])
-    {
-        $this->doRequest('DELETE', $resource, [
-            'query' => $query
         ]);
     }
 
@@ -322,6 +270,18 @@ class Client
         return $body->getSize()
             ? \GuzzleHttp\json_decode($body, true)
             : [];
+    }
+
+    /**
+     * Builds an url by given resource name.
+     *
+     * @param string $resource
+     *
+     * @return string
+     */
+    protected function buildUrl($resource)
+    {
+        return sprintf('https://%s/admin/api/%s/%s.json', $this->shop, $this->apiVersion, $resource);
     }
 
     /**
@@ -354,6 +314,78 @@ class Client
     }
 
     /**
+     * Gets the http client.
+     *
+     * @return HttpClient
+     */
+    public function getHttpClient()
+    {
+        if ($this->httpClient) {
+            return $this->httpClient;
+        }
+        return $this->httpClient = new HttpClient([
+            'verify' => false,
+        ]);
+    }
+
+    /**
+     * Sets the http client for the client.
+     *
+     * @param HttpClient $httpClient
+     */
+    public function setHttpClient($httpClient)
+    {
+        $this->httpClient = $httpClient;
+    }
+
+    /**
+     * Perform a POST request.
+     *
+     * @param string $resource
+     * @param array $data
+     * @param array $query
+     *
+     * @return array
+     */
+    public function post($resource, $data, $query = [])
+    {
+        return $this->doRequest('POST', $resource, [
+            'query' => $query,
+            'json' => $data,
+        ]);
+    }
+
+    /**
+     * Perform a PUT request.
+     *
+     * @param string $resource
+     * @param array $data
+     * @param array $query
+     *
+     * @return array
+     */
+    public function put($resource, $data, $query = [])
+    {
+        return $this->doRequest('PUT', $resource, [
+            'query' => $query,
+            'json' => $data,
+        ]);
+    }
+
+    /**
+     * Perform a DELETE request.
+     *
+     * @param string $resource
+     * @param array $query
+     */
+    public function delete($resource, $query = [])
+    {
+        $this->doRequest('DELETE', $resource, [
+            'query' => $query
+        ]);
+    }
+
+    /**
      * Gets the latest http response.
      *
      * @return ResponseInterface
@@ -361,38 +393,6 @@ class Client
     public function getLastResponse()
     {
         return $this->lastResponse;
-    }
-
-    /**
-     * Builds an url by given resource name.
-     *
-     * @param string $resource
-     *
-     * @return string
-     */
-    protected function buildUrl($resource)
-    {
-        return sprintf('https://%s/admin/api/%s/%s.json', $this->shop, $this->apiVersion, $resource);
-    }
-
-    /**
-     * Applies the array of request options to the client.
-     *
-     * @param array $options
-     */
-    protected function applyOptions(array $options)
-    {
-        isset($options['httpClient']) && $this->httpClient = $options['httpClient'];
-        if (!isset($options['metaCacheDir'])) {
-            throw new InvalidArgumentException('You must provide option "metaCacheDir"');
-        }
-        $this->metaCacheDir = $options['metaCacheDir'];
-        if (isset($options['apiVersion'])) {
-            if (!preg_match('/^[0-9]{4}-[0-9]{2}$|^unstable$/', $options['apiVersion'])) {
-                throw new InvalidArgumentException('Version string must be of YYYY-MM or unstable');
-            }
-            $this->apiVersion = $options['apiVersion'];
-        }
     }
 
     /**
@@ -421,15 +421,5 @@ class Client
         }
         $this->serviceClass[] = $serviceClass;
         $this->container->register($serviceClass::getServiceName(), $serviceClass);
-    }
-
-    /**
-     * Initialize base services.
-     */
-    protected function initializeBaseServices()
-    {
-        foreach ($this->serviceClass as $serviceClass) {
-            $this->container->register($serviceClass::getServiceName(), $serviceClass);
-        }
     }
 }

@@ -11,6 +11,8 @@
 
 namespace Slince\Shopify\Model;
 
+use DateTime;
+
 class CustomerSavedSearch extends Model
 {
     /**
@@ -19,12 +21,12 @@ class CustomerSavedSearch extends Model
     protected $name;
 
     /**
-     * @var \DateTime
+     * @var DateTime
      */
     protected $createdAt;
 
     /**
-     * @var \DateTime
+     * @var DateTime
      */
     protected $updatedAt;
 
@@ -54,7 +56,7 @@ class CustomerSavedSearch extends Model
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
     public function getCreatedAt()
     {
@@ -62,11 +64,11 @@ class CustomerSavedSearch extends Model
     }
 
     /**
-     * @param \DateTime $createdAt
+     * @param DateTime $createdAt
      *
 
      */
-    public function setCreatedAt(\DateTime $createdAt)
+    public function setCreatedAt(DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
 
@@ -74,7 +76,7 @@ class CustomerSavedSearch extends Model
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
     public function getUpdatedAt()
     {
@@ -82,11 +84,11 @@ class CustomerSavedSearch extends Model
     }
 
     /**
-     * @param \DateTime $updatedAt
+     * @param DateTime $updatedAt
      *
 
      */
-    public function setUpdatedAt(\DateTime $updatedAt)
+    public function setUpdatedAt(DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
 

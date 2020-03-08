@@ -11,6 +11,8 @@
 
 namespace Slince\Shopify\Model;
 
+use DateTime;
+
 class Product extends Model
 {
     use AdminGraphqlApiId;
@@ -36,7 +38,7 @@ class Product extends Model
     protected $productType;
 
     /**
-     * @var \DateTime
+     * @var DateTime
      */
     protected $createdAt;
 
@@ -46,12 +48,12 @@ class Product extends Model
     protected $handle;
 
     /**
-     * @var \DateTime
+     * @var DateTime
      */
     protected $updatedAt;
 
     /**
-     * @var \DateTime
+     * @var DateTime
      */
     protected $publishedAt;
 
@@ -171,7 +173,7 @@ class Product extends Model
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
     public function getCreatedAt()
     {
@@ -179,11 +181,11 @@ class Product extends Model
     }
 
     /**
-     * @param \DateTime $createdAt
+     * @param DateTime $createdAt
      *
      * @return Product
      */
-    public function setCreatedAt(\DateTime $createdAt)
+    public function setCreatedAt(DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
 
@@ -211,7 +213,7 @@ class Product extends Model
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
     public function getUpdatedAt()
     {
@@ -219,11 +221,11 @@ class Product extends Model
     }
 
     /**
-     * @param \DateTime $updatedAt
+     * @param DateTime $updatedAt
      *
      * @return Product
      */
-    public function setUpdatedAt(\DateTime $updatedAt)
+    public function setUpdatedAt(DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
 
@@ -231,7 +233,7 @@ class Product extends Model
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
     public function getPublishedAt()
     {
@@ -239,11 +241,11 @@ class Product extends Model
     }
 
     /**
-     * @param \DateTime $publishedAt
+     * @param DateTime $publishedAt
      *
      * @return Product
      */
-    public function setPublishedAt(\DateTime $publishedAt)
+    public function setPublishedAt(DateTime $publishedAt)
     {
         $this->publishedAt = $publishedAt;
 

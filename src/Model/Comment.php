@@ -11,6 +11,8 @@
 
 namespace Slince\Shopify\Model;
 
+use DateTime;
+
 class Comment extends Model
 {
     /**
@@ -49,12 +51,12 @@ class Comment extends Model
     protected $blogId;
 
     /**
-     * @var \DateTime
+     * @var DateTime
      */
     protected $createdAt;
 
     /**
-     * @var \DateTime
+     * @var DateTime
      */
     protected $updatedAt;
 
@@ -69,7 +71,7 @@ class Comment extends Model
     protected $userAgent;
 
     /**
-     * @var \DateTime
+     * @var DateTime
      */
     protected $publishedAt;
 
@@ -214,7 +216,7 @@ class Comment extends Model
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
     public function getCreatedAt()
     {
@@ -222,11 +224,11 @@ class Comment extends Model
     }
 
     /**
-     * @param \DateTime $createdAt
+     * @param DateTime $createdAt
      *
 
      */
-    public function setCreatedAt(\DateTime $createdAt)
+    public function setCreatedAt(DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
 
@@ -242,11 +244,11 @@ class Comment extends Model
     }
 
     /**
-     * @param \DateTime $updatedAt
+     * @param DateTime $updatedAt
      *
 
      */
-    public function setUpdatedAt(\DateTime $updatedAt)
+    public function setUpdatedAt(DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
 
@@ -302,11 +304,11 @@ class Comment extends Model
     }
 
     /**
-     * @param \DateTime $publishedAt
+     * @param DateTime $publishedAt
      *
 
      */
-    public function setPublishedAt(\DateTime $publishedAt)
+    public function setPublishedAt(DateTime $publishedAt)
     {
         $this->publishedAt = $publishedAt;
 

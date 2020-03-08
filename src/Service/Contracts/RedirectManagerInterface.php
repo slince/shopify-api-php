@@ -10,6 +10,7 @@
  */
 
 namespace Slince\Shopify\Service\Contracts;
+
 use Slince\Shopify\Model\Redirect;
 
 interface RedirectManagerInterface extends ManagerInterface
@@ -44,7 +45,7 @@ interface RedirectManagerInterface extends ManagerInterface
     /**
      * Updates the redirect.
      *
-     * @param int   $id
+     * @param int $id
      * @param array $data
      *
      * @return bool

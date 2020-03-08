@@ -12,6 +12,8 @@
 namespace Slince\Shopify\Model;
 
 
+use DateTime;
+
 class InventoryItem extends Model
 {
     use AdminGraphqlApiId;
@@ -32,12 +34,12 @@ class InventoryItem extends Model
     protected $tracked;
 
     /**
-     * @var \DateTime
+     * @var DateTime
      */
     protected $createdAt;
 
     /**
-     * @var \DateTime
+     * @var DateTime
      */
     protected $updatedAt;
 
@@ -51,7 +53,7 @@ class InventoryItem extends Model
 
     /**
      * @param string $sku
-     *                                                                
+     *
      * @return InventoryItem
      */
     public function setSku($sku)
@@ -71,7 +73,7 @@ class InventoryItem extends Model
 
     /**
      * @param float $cost
-     *                                                                
+     *
      * @return InventoryItem
      */
     public function setCost($cost)
@@ -91,7 +93,7 @@ class InventoryItem extends Model
 
     /**
      * @param bool $tracked
-     *                                                                
+     *
      * @return InventoryItem
      */
     public function setTracked($tracked)
@@ -111,7 +113,7 @@ class InventoryItem extends Model
 
     /**
      * @param string $adminGraphqlApiId
-     *                                                                
+     *
      * @return InventoryItem
      */
     public function setAdminGraphqlApiId($adminGraphqlApiId)
@@ -122,7 +124,7 @@ class InventoryItem extends Model
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
     public function getCreatedAt()
     {
@@ -130,11 +132,11 @@ class InventoryItem extends Model
     }
 
     /**
-     * @param \DateTime $createdAt
-     *                                                                
+     * @param DateTime $createdAt
+     *
      * @return InventoryItem
      */
-    public function setCreatedAt(\DateTime $createdAt)
+    public function setCreatedAt(DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
 
@@ -142,7 +144,7 @@ class InventoryItem extends Model
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
     public function getUpdatedAt()
     {
@@ -150,11 +152,11 @@ class InventoryItem extends Model
     }
 
     /**
-     * @param \DateTime $updatedAt
-     *                                                                
+     * @param DateTime $updatedAt
+     *
      * @return InventoryItem
      */
-    public function setUpdatedAt(\DateTime $updatedAt)
+    public function setUpdatedAt(DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
 

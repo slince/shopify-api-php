@@ -11,6 +11,7 @@
 
 namespace Slince\Shopify\Service;
 
+use Exception;
 use Slince\Shopify\Model\Refund;
 use Slince\Shopify\Service\Contracts\RefundManagerInterface;
 
@@ -53,7 +54,7 @@ class RefundManager extends NestCrudable implements RefundManagerInterface
      */
     public function count($orderId, array $query = [])
     {
-        throw new \Exception('The action is not supported');
+        throw new Exception('The action is not supported');
     }
 
     /**
@@ -61,7 +62,7 @@ class RefundManager extends NestCrudable implements RefundManagerInterface
      */
     public function update($orderId, $id, array $data)
     {
-        throw new \Exception('The action is not supported');
+        throw new Exception('The action is not supported');
     }
 
     /**
@@ -69,7 +70,7 @@ class RefundManager extends NestCrudable implements RefundManagerInterface
      */
     public function remove($orderId, $id)
     {
-        throw new \Exception('The action is not supported');
+        throw new Exception('The action is not supported');
     }
 
     /**

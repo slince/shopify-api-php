@@ -10,6 +10,7 @@
  */
 
 namespace Slince\Shopify\Service\Contracts;
+
 use Slince\Shopify\Model\InventoryItem;
 
 interface InventoryItemManagerInterface extends ManagerInterface
@@ -34,10 +35,10 @@ interface InventoryItemManagerInterface extends ManagerInterface
 
     /**
      * Updates the inventory item.
-     *                                                                
+     *
      * @param int $id
      * @param array $data
-     *                                                                
+     *
      * @return InventoryItem
      */
     public function update($id, array $data);

@@ -10,6 +10,7 @@
  */
 
 namespace Slince\Shopify\Service\Contracts;
+
 use Slince\Shopify\Model\Variant;
 
 interface VariantManagerInterface extends ManagerInterface
@@ -17,7 +18,7 @@ interface VariantManagerInterface extends ManagerInterface
     /**
      * Gets all variants of the product.
      *
-     * @param int   $productId
+     * @param int $productId
      * @param array $query
      *
      * @return Variant[]
@@ -36,7 +37,7 @@ interface VariantManagerInterface extends ManagerInterface
     /**
      * Gets the variant counts of the product.
      *
-     * @param int   $productId
+     * @param int $productId
      * @param array $query
      *
      * @return int
@@ -46,7 +47,7 @@ interface VariantManagerInterface extends ManagerInterface
     /**
      * Updates the product.
      *
-     * @param int   $id
+     * @param int $id
      * @param array $data
      *
      * @return Variant
@@ -64,7 +65,7 @@ interface VariantManagerInterface extends ManagerInterface
     /**
      * Creates a variant for the product.
      *
-     * @param int   $productId
+     * @param int $productId
      * @param array $data
      *
      * @return Variant

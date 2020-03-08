@@ -10,6 +10,7 @@
  */
 
 namespace Slince\Shopify\Service\Contracts;
+
 use Slince\Shopify\Model\FulfillmentService;
 
 interface FulfillmentServiceManagerInterface extends ManagerInterface
@@ -35,7 +36,7 @@ interface FulfillmentServiceManagerInterface extends ManagerInterface
     /**
      * Updates the fulfillment service.
      *
-     * @param int   $id
+     * @param int $id
      * @param array $data
      *
      * @return bool

@@ -11,6 +11,7 @@
 
 namespace Slince\Shopify\Service;
 
+use Exception;
 use Slince\Shopify\Model\Comment;
 use Slince\Shopify\Service\Contracts\CommentManagerInterface;
 
@@ -45,6 +46,6 @@ class CommentManager extends GeneralCurdable implements CommentManagerInterface
      */
     public function remove($id)
     {
-        throw new \Exception('The action is not supported');
+        throw new Exception('The action is not supported');
     }
 }

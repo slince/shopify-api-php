@@ -11,6 +11,7 @@
 
 namespace Slince\Shopify\Service;
 
+use Exception;
 use Slince\Shopify\Model\Collect;
 use Slince\Shopify\Service\Contracts\CollectManagerInterface;
 
@@ -45,6 +46,6 @@ class CollectManager extends GeneralCurdable implements CollectManagerInterface
      */
     public function update($id, array $data)
     {
-        return new \Exception('The method is not supported');
+        return new Exception('The method is not supported');
     }
 }

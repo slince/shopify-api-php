@@ -11,6 +11,7 @@
 
 namespace Slince\Shopify\Service;
 
+use Exception;
 use Slince\Shopify\Model\Address;
 use Slince\Shopify\Service\Contracts\AddressManagerInterface;
 
@@ -53,7 +54,7 @@ class AddressManager extends NestCrudable implements AddressManagerInterface
      */
     public function bulkSet($customerId, array $ids, $operation)
     {
-        $resource = 'customers/'.$customerId.'/addresses/set';
+        $resource = 'customers/' . $customerId . '/addresses/set';
         $query = [
             'address_ids' => $ids,
             'operation' => $operation,
@@ -66,7 +67,7 @@ class AddressManager extends NestCrudable implements AddressManagerInterface
      */
     public function setDefault($customerId, $id)
     {
-        $data = $this->client->put('customers/'.$customerId.'/addresses/'.$id.'/default', []);
+        $data = $this->client->put('customers/' . $customerId . '/addresses/' . $id . '/default', []);
 
         return $this->fromArray($data['customer_address']);
     }
@@ -76,6 +77,6 @@ class AddressManager extends NestCrudable implements AddressManagerInterface
      */
     public function count($customerId, array $query = [])
     {
-        throw new \Exception('The action is not supported');
+        throw new Exception('The action is not supported');
     }
 }

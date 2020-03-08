@@ -11,6 +11,7 @@
 
 namespace Slince\Shopify\Service;
 
+use Exception;
 use Slince\Shopify\Model\Webhook;
 use Slince\Shopify\Service\Contracts\WebhookManagerInterface;
 
@@ -45,6 +46,6 @@ class WebhookManager extends GeneralCurdable implements WebhookManagerInterface
      */
     public function checkIncomingWebhookIsValid($request)
     {
-        throw new \Exception('The method is not supported');
+        throw new Exception('The method is not supported');
     }
 }

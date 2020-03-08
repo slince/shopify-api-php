@@ -11,6 +11,7 @@
 
 namespace Slince\Shopify\Service;
 
+use Exception;
 use Slince\Shopify\Model\PriceRule;
 use Slince\Shopify\Service\Contracts\PriceRuleManagerInterface;
 
@@ -45,6 +46,6 @@ class PriceRuleManager extends GeneralCurdable implements PriceRuleManagerInterf
      */
     public function count(array $query = [])
     {
-        return new \Exception('The method is not supported');
+        return new Exception('The method is not supported');
     }
 }

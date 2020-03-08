@@ -46,7 +46,7 @@ interface CustomerSavedSearchManagerInterface extends ManagerInterface
     /**
      * Updates the customer saved search.
      *
-     * @param int   $id
+     * @param int $id
      * @param array $data
      *
      * @return bool

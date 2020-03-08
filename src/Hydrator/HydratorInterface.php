@@ -17,7 +17,7 @@ interface HydratorInterface
      * Hydrate object from array.
      *
      * @param string $target
-     * @param array  $data
+     * @param array $data
      *
      * @return object
      */

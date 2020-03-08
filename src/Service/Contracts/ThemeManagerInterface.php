@@ -10,6 +10,7 @@
  */
 
 namespace Slince\Shopify\Service\Contracts;
+
 use Slince\Shopify\Model\Theme;
 
 interface ThemeManagerInterface extends ManagerInterface
@@ -44,7 +45,7 @@ interface ThemeManagerInterface extends ManagerInterface
     /**
      * Updates the theme.
      *
-     * @param int   $id
+     * @param int $id
      * @param array $data
      *
      * @return bool

@@ -11,6 +11,8 @@
 
 namespace Slince\Shopify\Model;
 
+use DateTime;
+
 class CustomCollection extends Model
 {
     use AdminGraphqlApiId;
@@ -26,7 +28,7 @@ class CustomCollection extends Model
     protected $title;
 
     /**
-     * @var \DateTime
+     * @var DateTime
      */
     protected $updatedAt;
 
@@ -36,7 +38,7 @@ class CustomCollection extends Model
     protected $bodyHtml;
 
     /**
-     * @var \DateTime
+     * @var DateTime
      */
     protected $publishedAt;
 
@@ -101,7 +103,7 @@ class CustomCollection extends Model
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
     public function getUpdatedAt()
     {
@@ -109,11 +111,11 @@ class CustomCollection extends Model
     }
 
     /**
-     * @param \DateTime $updatedAt
+     * @param DateTime $updatedAt
      *
 
      */
-    public function setUpdatedAt(\DateTime $updatedAt)
+    public function setUpdatedAt(DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
 
@@ -141,7 +143,7 @@ class CustomCollection extends Model
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
     public function getPublishedAt()
     {
@@ -149,11 +151,11 @@ class CustomCollection extends Model
     }
 
     /**
-     * @param \DateTime $publishedAt
+     * @param DateTime $publishedAt
      *
 
      */
-    public function setPublishedAt(\DateTime $publishedAt)
+    public function setPublishedAt(DateTime $publishedAt)
     {
         $this->publishedAt = $publishedAt;
 
@@ -221,7 +223,7 @@ class CustomCollection extends Model
     }
 
     /**
-Image
+     * Image
      */
     public function getImage()
     {

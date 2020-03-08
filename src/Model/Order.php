@@ -11,6 +11,8 @@
 
 namespace Slince\Shopify\Model;
 
+use DateTime;
+
 class Order extends Model
 {
     use AdminGraphqlApiId;
@@ -21,12 +23,12 @@ class Order extends Model
     protected $email;
 
     /**
-     * @var \DateTime
+     * @var DateTime
      */
     protected $closedAt;
 
     /**
-     * @var \DateTime
+     * @var DateTime
      */
     protected $updatedAt;
 
@@ -331,7 +333,7 @@ class Order extends Model
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
     public function getClosedAt()
     {
@@ -339,11 +341,11 @@ class Order extends Model
     }
 
     /**
-     * @param \DateTime $closedAt
+     * @param DateTime $closedAt
      *
 
      */
-    public function setClosedAt(\DateTime $closedAt)
+    public function setClosedAt(DateTime $closedAt)
     {
         $this->closedAt = $closedAt;
 
@@ -359,11 +361,11 @@ class Order extends Model
     }
 
     /**
-     * @param \DateTime $updatedAt
+     * @param DateTime $updatedAt
      *
 
      */
-    public function setUpdatedAt(\DateTime $updatedAt)
+    public function setUpdatedAt(DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
 

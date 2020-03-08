@@ -11,6 +11,7 @@
 
 namespace Slince\Shopify\Service;
 
+use Exception;
 use Slince\Shopify\Model\FulfillmentService;
 use Slince\Shopify\Service\Contracts\FulfillmentServiceManagerInterface;
 
@@ -45,6 +46,6 @@ class FulfillmentServiceManager extends GeneralCurdable implements FulfillmentSe
      */
     public function count(array $query = [])
     {
-        return new \Exception('The method is not supported');
+        return new Exception('The method is not supported');
     }
 }

@@ -33,7 +33,7 @@ interface ManagerInterface
     /**
      * Create the model from an array.
      *
-     * @param array  $data
+     * @param array $data
      * @param string $modelClass
      *
      * @return ModelInterface

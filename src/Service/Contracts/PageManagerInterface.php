@@ -10,6 +10,7 @@
  */
 
 namespace Slince\Shopify\Service\Contracts;
+
 use Slince\Shopify\Model\Page;
 
 interface PageManagerInterface extends ManagerInterface
@@ -44,7 +45,7 @@ interface PageManagerInterface extends ManagerInterface
     /**
      * Updates the page.
      *
-     * @param int   $id
+     * @param int $id
      * @param array $data
      *
      * @return bool

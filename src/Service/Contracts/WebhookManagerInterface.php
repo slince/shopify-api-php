@@ -46,7 +46,7 @@ interface WebhookManagerInterface
     /**
      * Updates the webhook.
      *
-     * @param int   $id
+     * @param int $id
      * @param array $data
      *
      * @return bool

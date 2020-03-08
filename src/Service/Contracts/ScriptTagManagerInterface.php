@@ -45,7 +45,7 @@ interface ScriptTagManagerInterface
     /**
      * Updates the script tag.
      *
-     * @param int   $id
+     * @param int $id
      * @param array $data
      *
      * @return bool

@@ -10,6 +10,7 @@
  */
 
 namespace Slince\Shopify\Service\Contracts;
+
 use Slince\Shopify\Model\Country;
 
 interface CountryManagerInterface extends ManagerInterface
@@ -44,7 +45,7 @@ interface CountryManagerInterface extends ManagerInterface
     /**
      * Updates the country.
      *
-     * @param int   $id
+     * @param int $id
      * @param array $data
      *
      * @return bool

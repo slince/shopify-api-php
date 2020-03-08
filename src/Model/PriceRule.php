@@ -11,6 +11,8 @@
 
 namespace Slince\Shopify\Model;
 
+use DateTime;
+
 class PriceRule extends Model
 {
     use AdminGraphqlApiId;
@@ -21,7 +23,7 @@ class PriceRule extends Model
     protected $allocationMethod;
 
     /**
-     * @var \DateTime
+     * @var DateTime
      */
     protected $createdAt;
 
@@ -31,7 +33,7 @@ class PriceRule extends Model
     protected $customerSelection;
 
     /**
-     * @var \DateTime
+     * @var DateTime
      */
     protected $endsAt;
 
@@ -161,7 +163,7 @@ class PriceRule extends Model
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
     public function getCreatedAt()
     {
@@ -169,11 +171,11 @@ class PriceRule extends Model
     }
 
     /**
-     * @param \DateTime $createdAt
+     * @param DateTime $createdAt
      *
      * @return PriceRule
      */
-    public function setCreatedAt(\DateTime $createdAt)
+    public function setCreatedAt(DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
 
@@ -201,7 +203,7 @@ class PriceRule extends Model
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
     public function getEndsAt()
     {
@@ -209,7 +211,7 @@ class PriceRule extends Model
     }
 
     /**
-     * @param \DateTime $endsAt
+     * @param DateTime $endsAt
      *
      * @return PriceRule
      */

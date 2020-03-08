@@ -27,13 +27,6 @@ abstract class AbstractManager implements ManagerInterface
     }
 
     /**
-     * Gets the model class.
-     *
-     * @return string
-     */
-    abstract public function getModelClass();
-
-    /**
      * Gets the resource name.
      *
      * @return string
@@ -51,6 +44,19 @@ abstract class AbstractManager implements ManagerInterface
     /**
      * {@inheritdoc}
      */
+    public function createMany(array $data, $modelClass = null)
+    {
+        $models = [];
+        foreach ($data as $item) {
+            $models[] = $this->fromArray($item, $modelClass);
+        }
+
+        return $models;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function fromArray(array $data, $modelClass = null)
     {
         if (null === $modelClass) {
@@ -61,17 +67,11 @@ abstract class AbstractManager implements ManagerInterface
     }
 
     /**
-     * {@inheritdoc}
+     * Gets the model class.
+     *
+     * @return string
      */
-    public function createMany(array $data, $modelClass = null)
-    {
-        $models = [];
-        foreach ($data as $item) {
-            $models[] = $this->fromArray($item, $modelClass);
-        }
-
-        return $models;
-    }
+    abstract public function getModelClass();
 
     /**
      * {@inheritdoc}

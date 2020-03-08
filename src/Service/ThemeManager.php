@@ -11,6 +11,7 @@
 
 namespace Slince\Shopify\Service;
 
+use Exception;
 use Slince\Shopify\Model\Theme;
 use Slince\Shopify\Service\Contracts\ThemeManagerInterface;
 
@@ -45,6 +46,6 @@ class ThemeManager extends GeneralCurdable implements ThemeManagerInterface
      */
     public function count(array $query = [])
     {
-        throw new \Exception('The action is not supported');
+        throw new Exception('The action is not supported');
     }
 }

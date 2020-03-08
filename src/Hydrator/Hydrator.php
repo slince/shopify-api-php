@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Hydrator;
 
+use DateTimeInterface;
 use Symfony\Component\PropertyAccess\PropertyAccess;
 use Symfony\Component\PropertyInfo\Extractor\ReflectionExtractor;
 use Symfony\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter;
@@ -37,7 +38,7 @@ class Hydrator implements HydratorInterface
             [ObjectNormalizer::DISABLE_TYPE_ENFORCEMENT => true]
         );
         $this->serializer = new Serializer([
-            new DateTimeNormalizer([DateTimeNormalizer::FORMAT_KEY => \DateTimeInterface::ISO8601]),
+            new DateTimeNormalizer([DateTimeNormalizer::FORMAT_KEY => DateTimeInterface::ISO8601]),
             new ArrayDenormalizer(),
             $normalizer
         ]);

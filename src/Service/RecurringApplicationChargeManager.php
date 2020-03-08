@@ -11,6 +11,7 @@
 
 namespace Slince\Shopify\Service;
 
+use Exception;
 use Slince\Shopify\Model\RecurringApplicationCharge;
 use Slince\Shopify\Service\Contracts\RecurringApplicationChargeManagerInterface;
 
@@ -27,14 +28,6 @@ class RecurringApplicationChargeManager extends GeneralCurdable implements Recur
     /**
      * {@inheritdoc}
      */
-    public function getResourceName()
-    {
-        return 'recurring_application_charge';
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function getModelClass()
     {
         return RecurringApplicationCharge::class;
@@ -45,7 +38,7 @@ class RecurringApplicationChargeManager extends GeneralCurdable implements Recur
      */
     public function count(array $query = [])
     {
-        throw new \Exception('The action is not supported');
+        throw new Exception('The action is not supported');
     }
 
     /**
@@ -53,7 +46,7 @@ class RecurringApplicationChargeManager extends GeneralCurdable implements Recur
      */
     public function remove($id)
     {
-        throw new \Exception('The action is not supported');
+        throw new Exception('The action is not supported');
     }
 
     /**
@@ -69,7 +62,7 @@ class RecurringApplicationChargeManager extends GeneralCurdable implements Recur
      */
     public function activate($id)
     {
-        $data = $this->client->post('recurring_application_charges/'.$id.'/activate', []);
+        $data = $this->client->post('recurring_application_charges/' . $id . '/activate', []);
 
         return $this->fromArray(reset($data));
     }
@@ -79,12 +72,20 @@ class RecurringApplicationChargeManager extends GeneralCurdable implements Recur
      */
     public function customize($id, $cappedAmount)
     {
-        $data = $this->client->post('recurring_application_charges/'.$id.'/customize', [], [
+        $data = $this->client->post('recurring_application_charges/' . $id . '/customize', [], [
             $this->getResourceName() => [
                 'capped_amount' => $cappedAmount
             ]
         ]);
 
         return $this->fromArray(reset($data));
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getResourceName()
+    {
+        return 'recurring_application_charge';
     }
 }

@@ -10,6 +10,7 @@
  */
 
 namespace Slince\Shopify\Service\Contracts;
+
 use Slince\Shopify\Model\DraftOrder;
 
 interface DraftOrderManagerInterface extends ManagerInterface

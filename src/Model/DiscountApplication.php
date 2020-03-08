@@ -58,13 +58,13 @@ class DiscountApplication
 
     /**
      * @param string $type
-     *                                                                
+     *
      */
     public function setType($type)
     {
         $this->type = $type;
 
-        
+
     }
 
     /**
@@ -77,14 +77,14 @@ class DiscountApplication
 
     /**
      * @param string $value
-     *                                                                
-     * 
+     *
+     *
      */
     public function setValue($value)
     {
         $this->value = $value;
 
-        
+
     }
 
     /**
@@ -97,14 +97,14 @@ class DiscountApplication
 
     /**
      * @param string $valueType
-     *                                                                
-     * 
+     *
+     *
      */
     public function setValueType($valueType)
     {
         $this->valueType = $valueType;
 
-        
+
     }
 
     /**
@@ -117,14 +117,14 @@ class DiscountApplication
 
     /**
      * @param string $allocationMethod
-     *                                                                
-     * 
+     *
+     *
      */
     public function setAllocationMethod($allocationMethod)
     {
         $this->allocationMethod = $allocationMethod;
 
-        
+
     }
 
     /**
@@ -137,14 +137,14 @@ class DiscountApplication
 
     /**
      * @param string $targetSelection
-     *                                                                
-     * 
+     *
+     *
      */
     public function setTargetSelection($targetSelection)
     {
         $this->targetSelection = $targetSelection;
 
-        
+
     }
 
     /**
@@ -157,14 +157,14 @@ class DiscountApplication
 
     /**
      * @param string $targetType
-     *                                                                
-     * 
+     *
+     *
      */
     public function setTargetType($targetType)
     {
         $this->targetType = $targetType;
 
-        
+
     }
 
     /**
@@ -177,13 +177,13 @@ class DiscountApplication
 
     /**
      * @param string $code
-     *                                                                
-     * 
+     *
+     *
      */
     public function setCode($code)
     {
         $this->code = $code;
 
-        
+
     }
 }

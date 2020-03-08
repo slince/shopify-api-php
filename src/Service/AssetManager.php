@@ -27,19 +27,11 @@ class AssetManager extends AbstractManager implements AssetManagerInterface
     /**
      * {@inheritdoc}
      */
-    public function getResourceName()
-    {
-        return 'asset';
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function getModelClass()
     {
         return Asset::class;
     }
-    
+
     /**
      * {@inheritdoc}
      */
@@ -49,6 +41,16 @@ class AssetManager extends AbstractManager implements AssetManagerInterface
         $data = $this->client->get($resource);
 
         return $this->createMany(reset($data));
+    }
+
+    /**
+     * @param integer $themeId
+     *
+     * @return string
+     */
+    protected function createPartialResourceUrlForList($themeId)
+    {
+        return "themes/{$themeId}/assets";
     }
 
     /**
@@ -80,6 +82,14 @@ class AssetManager extends AbstractManager implements AssetManagerInterface
     /**
      * {@inheritdoc}
      */
+    public function getResourceName()
+    {
+        return 'asset';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function remove($themeId, $key)
     {
         $resource = $this->createPartialResourceUrlForList($themeId);
@@ -88,15 +98,5 @@ class AssetManager extends AbstractManager implements AssetManagerInterface
                 'key' => $key
             ]
         ]);
-    }
-
-    /**
-     * @param integer $themeId
-     *
-     * @return string
-     */
-    protected function createPartialResourceUrlForList($themeId)
-    {
-        return "themes/{$themeId}/assets";
     }
 }

@@ -11,6 +11,8 @@
 
 namespace Slince\Shopify\Model;
 
+use DateTime;
+
 class DraftOrder extends Model
 {
     use AdminGraphqlApiId;
@@ -36,17 +38,17 @@ class DraftOrder extends Model
     protected $currency;
 
     /**
-     * @var \DateTime
+     * @var DateTime
      */
     protected $invoiceSentAt;
 
     /**
-     * @var \DateTime
+     * @var DateTime
      */
     protected $createdAt;
 
     /**
-     * @var \DateTime
+     * @var DateTime
      */
     protected $updatedAt;
 
@@ -56,7 +58,7 @@ class DraftOrder extends Model
     protected $taxExempt;
 
     /**
-     * @var \DateTime
+     * @var DateTime
      */
     protected $completedAt;
 
@@ -205,7 +207,7 @@ class DraftOrder extends Model
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
     public function getInvoiceSentAt()
     {
@@ -213,7 +215,7 @@ class DraftOrder extends Model
     }
 
     /**
-     * @param \DateTime $invoiceSentAt
+     * @param DateTime $invoiceSentAt
      */
     public function setInvoiceSentAt($invoiceSentAt)
     {
@@ -221,7 +223,7 @@ class DraftOrder extends Model
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
     public function getCreatedAt()
     {
@@ -229,15 +231,15 @@ class DraftOrder extends Model
     }
 
     /**
-     * @param \DateTime $createdAt
+     * @param DateTime $createdAt
      */
-    public function setCreatedAt(\DateTime $createdAt)
+    public function setCreatedAt(DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
     public function getUpdatedAt()
     {
@@ -245,9 +247,9 @@ class DraftOrder extends Model
     }
 
     /**
-     * @param \DateTime $updatedAt
+     * @param DateTime $updatedAt
      */
-    public function setUpdatedAt(\DateTime $updatedAt)
+    public function setUpdatedAt(DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }
@@ -269,7 +271,7 @@ class DraftOrder extends Model
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
     public function getCompletedAt()
     {
@@ -277,7 +279,7 @@ class DraftOrder extends Model
     }
 
     /**
-     * @param \DateTime $completedAt
+     * @param DateTime $completedAt
      */
     public function setCompletedAt($completedAt)
     {

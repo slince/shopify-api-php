@@ -11,6 +11,7 @@
 
 namespace Slince\Shopify\Service;
 
+use Exception;
 use Slince\Shopify\Model\Fulfillment;
 use Slince\Shopify\Service\Contracts\FulfillmentManagerInterface;
 
@@ -53,7 +54,7 @@ class FulfillmentManager extends NestCrudable implements FulfillmentManagerInter
      */
     public function remove($orderId, $id)
     {
-        throw new \Exception('The action is not supported');
+        throw new Exception('The action is not supported');
     }
 
     /**
@@ -61,7 +62,7 @@ class FulfillmentManager extends NestCrudable implements FulfillmentManagerInter
      */
     public function open($orderId, $id)
     {
-        $data = $this->client->post('orders/'.$orderId.'/fulfillments/'.$id.'/open', []);
+        $data = $this->client->post('orders/' . $orderId . '/fulfillments/' . $id . '/open', []);
 
         return $this->fromArray($data['fulfillment']);
     }
@@ -71,7 +72,7 @@ class FulfillmentManager extends NestCrudable implements FulfillmentManagerInter
      */
     public function cancel($orderId, $id)
     {
-        $data = $this->client->post('orders/'.$orderId.'/fulfillments/'.$id.'/cancel', []);
+        $data = $this->client->post('orders/' . $orderId . '/fulfillments/' . $id . '/cancel', []);
 
         return $this->fromArray($data['fulfillment']);
     }
@@ -81,7 +82,7 @@ class FulfillmentManager extends NestCrudable implements FulfillmentManagerInter
      */
     public function complete($orderId, $id)
     {
-        $data = $this->client->post('orders/'.$orderId.'/fulfillments/'.$id.'/complete', []);
+        $data = $this->client->post('orders/' . $orderId . '/fulfillments/' . $id . '/complete', []);
 
         return $this->fromArray($data['fulfillment']);
     }

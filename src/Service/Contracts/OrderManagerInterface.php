@@ -10,6 +10,7 @@
  */
 
 namespace Slince\Shopify\Service\Contracts;
+
 use Slince\Shopify\Model\Order;
 
 interface OrderManagerInterface extends ManagerInterface
@@ -44,7 +45,7 @@ interface OrderManagerInterface extends ManagerInterface
     /**
      * Updates the order.
      *
-     * @param int   $id
+     * @param int $id
      * @param array $data
      *
      * @return bool

@@ -10,6 +10,7 @@
  */
 
 namespace Slince\Shopify\Service\Contracts;
+
 use Slince\Shopify\Model\PriceRule;
 
 interface PriceRuleManagerInterface extends ManagerInterface
@@ -35,7 +36,7 @@ interface PriceRuleManagerInterface extends ManagerInterface
     /**
      * Updates the price rule.
      *
-     * @param int   $id
+     * @param int $id
      * @param array $data
      *
      * @return bool

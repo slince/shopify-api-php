@@ -36,7 +36,7 @@ interface CarrierServiceManagerInterface extends ManagerInterface
     /**
      * Updates the carrier service.
      *
-     * @param int   $id
+     * @param int $id
      * @param array $data
      *
      * @return bool

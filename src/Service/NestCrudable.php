@@ -18,16 +18,9 @@ use Slince\Shopify\Model\ModelInterface;
 abstract class NestCrudable extends AbstractManager
 {
     /**
-     * Gets the parent resource name.
-     *
-     * @return string
-     */
-    abstract public function getParentResourceName();
-
-    /**
      * Finds the resources by given query condition.
      *
-     * @param int   $parentId
+     * @param int $parentId
      * @param array $query
      *
      * @return ModelInterface[]
@@ -40,10 +33,24 @@ abstract class NestCrudable extends AbstractManager
         return $this->createMany(reset($data));
     }
 
+    protected function createPartialResourceUrlForList($parentId)
+    {
+        return Inflector::pluralize($this->getParentResourceName())
+            . '/' . $parentId
+            . '/' . Inflector::pluralize($this->getResourceName());
+    }
+
+    /**
+     * Gets the parent resource name.
+     *
+     * @return string
+     */
+    abstract public function getParentResourceName();
+
     /**
      * Create a paging query.
      *
-     * @param int   $parentId
+     * @param int $parentId
      * @param array $query
      *
      * @return CursorBasedPagination
@@ -72,6 +79,12 @@ abstract class NestCrudable extends AbstractManager
         return $this->fromArray(reset($data));
     }
 
+    protected function createPartialResourceUrlForView($parentId, $id)
+    {
+        return $this->createPartialResourceUrlForList($parentId)
+            . '/' . $id;
+    }
+
     /**
      * Delete a resource.
      *
@@ -87,8 +100,8 @@ abstract class NestCrudable extends AbstractManager
     /**
      * Updates a resource.
      *
-     * @param int   $parentId
-     * @param int   $id
+     * @param int $parentId
+     * @param int $id
      * @param array $data
      *
      * @return ModelInterface
@@ -104,7 +117,7 @@ abstract class NestCrudable extends AbstractManager
     /**
      * Creates a resource.
      *
-     * @param int   $parentId
+     * @param int $parentId
      * @param array $data
      *
      * @return ModelInterface
@@ -120,28 +133,15 @@ abstract class NestCrudable extends AbstractManager
     /**
      * Gets the number of resource with given query.
      *
-     * @param int   $parentId
+     * @param int $parentId
      * @param array $query
      *
      * @return int
      */
     public function count($parentId, array $query = [])
     {
-        $resource = $this->createPartialResourceUrlForList($parentId).'/count';
+        $resource = $this->createPartialResourceUrlForList($parentId) . '/count';
 
         return $this->client->get($resource, $query)['count'];
-    }
-
-    protected function createPartialResourceUrlForList($parentId)
-    {
-        return Inflector::pluralize($this->getParentResourceName())
-            .'/'.$parentId
-            .'/'.Inflector::pluralize($this->getResourceName());
-    }
-
-    protected function createPartialResourceUrlForView($parentId, $id)
-    {
-        return  $this->createPartialResourceUrlForList($parentId)
-            .'/'.$id;
     }
 }

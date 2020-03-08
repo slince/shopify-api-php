@@ -11,10 +11,12 @@
 
 namespace Slince\Shopify\Model;
 
+use DateTime;
+
 class ScriptTag extends Model
 {
     /**
-     * @var \DateTime
+     * @var DateTime
      */
     protected $createdAt;
 
@@ -39,7 +41,7 @@ class ScriptTag extends Model
     protected $updatedAt;
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
     public function getCreatedAt()
     {
@@ -47,11 +49,11 @@ class ScriptTag extends Model
     }
 
     /**
-     * @param \DateTime $createdAt
+     * @param DateTime $createdAt
      *
      * @return ScriptTag
      */
-    public function setCreatedAt(\DateTime $createdAt)
+    public function setCreatedAt(DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
 
@@ -131,7 +133,7 @@ class ScriptTag extends Model
      *
      * @return ScriptTag
      */
-    public function setUpdatedAt(\DateTime $updatedAt)
+    public function setUpdatedAt(DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
 

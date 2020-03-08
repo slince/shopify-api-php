@@ -18,7 +18,7 @@ interface ArticleManagerInterface
     /**
      * Finds articles.
      *
-     * @param int   $blogId
+     * @param int $blogId
      * @param array $query
      *
      * @return Article[]
@@ -38,7 +38,7 @@ interface ArticleManagerInterface
     /**
      * Gets the count.
      *
-     * @param int   $blogId
+     * @param int $blogId
      * @param array $query
      *
      * @return int
@@ -48,8 +48,8 @@ interface ArticleManagerInterface
     /**
      * Updates the article.
      *
-     * @param int   $blogId
-     * @param int   $id
+     * @param int $blogId
+     * @param int $id
      * @param array $data
      *
      * @return Article
@@ -67,7 +67,7 @@ interface ArticleManagerInterface
     /**
      * Creates a article.
      *
-     * @param int   $blogId
+     * @param int $blogId
      * @param array $data
      *
      * @return Article

@@ -45,7 +45,7 @@ interface BlogManagerInterface
     /**
      * Updates the blog.
      *
-     * @param int   $id
+     * @param int $id
      * @param array $data
      *
      * @return bool

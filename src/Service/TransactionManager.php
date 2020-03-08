@@ -11,6 +11,7 @@
 
 namespace Slince\Shopify\Service;
 
+use Exception;
 use Slince\Shopify\Model\Transaction;
 use Slince\Shopify\Service\Contracts\TransactionManagerInterface;
 
@@ -53,7 +54,7 @@ class TransactionManager extends NestCrudable implements TransactionManagerInter
      */
     public function remove($orderId, $id)
     {
-        throw new \Exception('The action is not supported');
+        throw new Exception('The action is not supported');
     }
 
     /**
@@ -61,6 +62,6 @@ class TransactionManager extends NestCrudable implements TransactionManagerInter
      */
     public function update($orderId, $id, array $data)
     {
-        throw new \Exception('The action is not supported');
+        throw new Exception('The action is not supported');
     }
 }

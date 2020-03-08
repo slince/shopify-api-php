@@ -55,7 +55,7 @@ abstract class GeneralCurdable extends AbstractManager
      */
     public function find($id)
     {
-        $data = $this->client->get(Inflector::pluralize($this->getResourceName()).'/'.$id);
+        $data = $this->client->get(Inflector::pluralize($this->getResourceName()) . '/' . $id);
 
         return $this->fromArray(reset($data));
     }
@@ -67,20 +67,20 @@ abstract class GeneralCurdable extends AbstractManager
      */
     public function remove($id)
     {
-        $this->client->delete(Inflector::pluralize($this->getResourceName()).'/'.$id);
+        $this->client->delete(Inflector::pluralize($this->getResourceName()) . '/' . $id);
     }
 
     /**
      * Updates a resource.
      *
-     * @param int   $id
+     * @param int $id
      * @param array $data
      *
      * @return ModelInterface
      */
     public function update($id, array $data)
     {
-        $data = $this->client->put(Inflector::pluralize($this->getResourceName()).'/'.$id, [$this->getResourceName() => $data]);
+        $data = $this->client->put(Inflector::pluralize($this->getResourceName()) . '/' . $id, [$this->getResourceName() => $data]);
 
         return $this->fromArray(reset($data));
     }
@@ -108,7 +108,7 @@ abstract class GeneralCurdable extends AbstractManager
      */
     public function count(array $query = [])
     {
-        $partial = Inflector::pluralize($this->getResourceName()).'/count';
+        $partial = Inflector::pluralize($this->getResourceName()) . '/count';
 
         return $this->client->get($partial, $query)['count'];
     }

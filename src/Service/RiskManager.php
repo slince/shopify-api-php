@@ -11,6 +11,7 @@
 
 namespace Slince\Shopify\Service;
 
+use Exception;
 use Slince\Shopify\Model\Risk;
 use Slince\Shopify\Service\Contracts\RiskManagerInterface;
 
@@ -53,6 +54,6 @@ class RiskManager extends NestCrudable implements RiskManagerInterface
      */
     public function count($orderId, array $query = [])
     {
-        throw new \Exception('The action is not supported');
+        throw new Exception('The action is not supported');
     }
 }

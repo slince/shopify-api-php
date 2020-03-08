@@ -10,6 +10,7 @@
  */
 
 namespace Slince\Shopify\Service\Contracts;
+
 use Slince\Shopify\Model\ShippingZone;
 
 interface ShippingZoneManagerInterface extends ManagerInterface

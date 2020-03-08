@@ -11,6 +11,8 @@
 
 namespace Slince\Shopify\Model;
 
+use DateTime;
+
 class Variant extends Model
 {
     use AdminGraphqlApiId;
@@ -81,12 +83,12 @@ class Variant extends Model
     protected $option3;
 
     /**
-     * @var \DateTime
+     * @var DateTime
      */
     protected $createdAt;
 
     /**
-     * @var \DateTime
+     * @var DateTime
      */
     protected $updatedAt;
 
@@ -396,7 +398,7 @@ class Variant extends Model
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
     public function getCreatedAt()
     {
@@ -404,11 +406,11 @@ class Variant extends Model
     }
 
     /**
-     * @param \DateTime $createdAt
+     * @param DateTime $createdAt
      *
      * @return Variant
      */
-    public function setCreatedAt(\DateTime $createdAt)
+    public function setCreatedAt(DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
 
@@ -416,7 +418,7 @@ class Variant extends Model
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
     public function getUpdatedAt()
     {
@@ -424,11 +426,11 @@ class Variant extends Model
     }
 
     /**
-     * @param \DateTime $updatedAt
+     * @param DateTime $updatedAt
      *
      * @return Variant
      */
-    public function setUpdatedAt(\DateTime $updatedAt)
+    public function setUpdatedAt(DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
 
@@ -556,19 +558,19 @@ class Variant extends Model
     }
 
     /**
-     * @param int $inventoryItemId
-     */
-    public function setInventoryItemId($inventoryItemId)
-    {
-        $this->inventoryItemId = $inventoryItemId;
-    }
-
-    /**
      * @return int
      */
     public function getInventoryItemId()
     {
         return $this->inventoryItemId;
+    }
+
+    /**
+     * @param int $inventoryItemId
+     */
+    public function setInventoryItemId($inventoryItemId)
+    {
+        $this->inventoryItemId = $inventoryItemId;
     }
 
     /**

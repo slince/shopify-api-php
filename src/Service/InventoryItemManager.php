@@ -11,6 +11,7 @@
 
 namespace Slince\Shopify\Service;
 
+use Exception;
 use Slince\Shopify\Model\InventoryItem;
 use Slince\Shopify\Service\Contracts\InventoryItemManagerInterface;
 
@@ -45,7 +46,7 @@ class InventoryItemManager extends GeneralCurdable implements InventoryItemManag
      */
     public function remove($id)
     {
-        throw new \Exception('The action is not supported');
+        throw new Exception('The action is not supported');
     }
 
     /**
@@ -53,7 +54,7 @@ class InventoryItemManager extends GeneralCurdable implements InventoryItemManag
      */
     public function create(array $data)
     {
-        throw new \Exception('The action is not supported');
+        throw new Exception('The action is not supported');
     }
 
     /**
@@ -61,6 +62,6 @@ class InventoryItemManager extends GeneralCurdable implements InventoryItemManag
      */
     public function count(array $query = [])
     {
-        throw new \Exception('The action is not supported');
+        throw new Exception('The action is not supported');
     }
 }

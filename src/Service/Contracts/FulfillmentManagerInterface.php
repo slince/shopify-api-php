@@ -18,7 +18,7 @@ interface FulfillmentManagerInterface
     /**
      * Finds fulfillments.
      *
-     * @param int   $orderId
+     * @param int $orderId
      * @param array $query
      *
      * @return Fulfillment[]
@@ -38,7 +38,7 @@ interface FulfillmentManagerInterface
     /**
      * Gets the count.
      *
-     * @param int   $orderId
+     * @param int $orderId
      * @param array $query
      *
      * @return int
@@ -48,8 +48,8 @@ interface FulfillmentManagerInterface
     /**
      * Updates the fulfillment.
      *
-     * @param int   $orderId
-     * @param int   $id
+     * @param int $orderId
+     * @param int $id
      * @param array $data
      *
      * @return Fulfillment
@@ -59,7 +59,7 @@ interface FulfillmentManagerInterface
     /**
      * Creates a fulfillment.
      *
-     * @param int   $orderId
+     * @param int $orderId
      * @param array $data
      *
      * @return Fulfillment

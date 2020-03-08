@@ -11,6 +11,7 @@
 
 namespace Slince\Shopify\Service;
 
+use Exception;
 use Slince\Shopify\Model\CarrierService;
 use Slince\Shopify\Service\Contracts\CarrierServiceManagerInterface;
 
@@ -45,6 +46,6 @@ class CarrierServiceManager extends GeneralCurdable implements CarrierServiceMan
      */
     public function count(array $query = [])
     {
-        return new \Exception('The method is not supported');
+        return new Exception('The method is not supported');
     }
 }

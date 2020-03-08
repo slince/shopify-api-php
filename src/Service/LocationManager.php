@@ -11,6 +11,7 @@
 
 namespace Slince\Shopify\Service;
 
+use Exception;
 use Slince\Shopify\Model\InventoryLevel;
 use Slince\Shopify\Model\Location;
 use Slince\Shopify\Service\Contracts\LocationManagerInterface;
@@ -46,7 +47,7 @@ class LocationManager extends GeneralCurdable implements LocationManagerInterfac
      */
     public function create(array $data)
     {
-        return new \Exception('The method is not supported');
+        return new Exception('The method is not supported');
     }
 
     /**
@@ -54,7 +55,7 @@ class LocationManager extends GeneralCurdable implements LocationManagerInterfac
      */
     public function update($id, array $data)
     {
-        return new \Exception('The method is not supported');
+        return new Exception('The method is not supported');
     }
 
     /**
@@ -62,7 +63,7 @@ class LocationManager extends GeneralCurdable implements LocationManagerInterfac
      */
     public function remove($id)
     {
-        return new \Exception('The method is not supported');
+        return new Exception('The method is not supported');
     }
 
     /**

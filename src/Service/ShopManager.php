@@ -19,17 +19,17 @@ class ShopManager extends AbstractManager implements ShopManagerInterface
     /**
      * {@inheritdoc}
      */
-    public function getModelClass()
+    public static function getServiceName()
     {
-        return Shop::class;
+        return 'shops';
     }
 
     /**
      * {@inheritdoc}
      */
-    public static function getServiceName()
+    public function getModelClass()
     {
-        return 'shops';
+        return Shop::class;
     }
 
     /**

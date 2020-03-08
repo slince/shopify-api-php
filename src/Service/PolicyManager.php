@@ -11,6 +11,7 @@
 
 namespace Slince\Shopify\Service;
 
+use Exception;
 use Slince\Shopify\Model\Policy;
 use Slince\Shopify\Service\Contracts\PolicyManagerInterface;
 
@@ -45,7 +46,7 @@ class PolicyManager extends GeneralCurdable implements PolicyManagerInterface
      */
     public function update($id, array $data)
     {
-        throw new \Exception('The action is not supported');
+        throw new Exception('The action is not supported');
     }
 
     /**
@@ -53,7 +54,7 @@ class PolicyManager extends GeneralCurdable implements PolicyManagerInterface
      */
     public function create(array $data)
     {
-        throw new \Exception('The action is not supported');
+        throw new Exception('The action is not supported');
     }
 
     /**
@@ -61,7 +62,7 @@ class PolicyManager extends GeneralCurdable implements PolicyManagerInterface
      */
     public function remove($id)
     {
-        throw new \Exception('The action is not supported');
+        throw new Exception('The action is not supported');
     }
 
     /**
@@ -69,7 +70,7 @@ class PolicyManager extends GeneralCurdable implements PolicyManagerInterface
      */
     public function find($id)
     {
-        throw new \Exception('The action is not supported');
+        throw new Exception('The action is not supported');
     }
 
     /**
@@ -77,6 +78,6 @@ class PolicyManager extends GeneralCurdable implements PolicyManagerInterface
      */
     public function count(array $query = [])
     {
-        throw new \Exception('The action is not supported');
+        throw new Exception('The action is not supported');
     }
 }

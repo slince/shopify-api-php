@@ -45,7 +45,7 @@ class CustomerManager extends GeneralCurdable implements CustomerManagerInterfac
      */
     public function createAccountActivationUrl($id)
     {
-        $data = $this->client->post('customers/'.$id.'/account_activation_url', []);
+        $data = $this->client->post('customers/' . $id . '/account_activation_url', []);
 
         return $data['account_activation_url'];
     }
@@ -55,7 +55,7 @@ class CustomerManager extends GeneralCurdable implements CustomerManagerInterfac
      */
     public function sendInvite($id, array $data)
     {
-        $data = $this->client->post('customers/'.$id.'/send_invite', [
+        $data = $this->client->post('customers/' . $id . '/send_invite', [
             'customer_invite' => $data,
         ]);
 

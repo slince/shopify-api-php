@@ -11,6 +11,8 @@
 
 namespace Slince\Shopify\Model;
 
+use DateTime;
+
 class InventoryLevel
 {
     /**
@@ -29,7 +31,7 @@ class InventoryLevel
     protected $available;
 
     /**
-     * @var \DateTime
+     * @var DateTime
      */
     protected $updatedAt;
 
@@ -48,7 +50,7 @@ class InventoryLevel
 
     /**
      * @param int $inventoryItemId
-     *                                                                
+     *
      * @return InventoryLevel
      */
     public function setInventoryItemId($inventoryItemId)
@@ -68,7 +70,7 @@ class InventoryLevel
 
     /**
      * @param int $locationId
-     *                                                                
+     *
      * @return InventoryLevel
      */
     public function setLocationId($locationId)
@@ -88,7 +90,7 @@ class InventoryLevel
 
     /**
      * @param int $available
-     *                                                                
+     *
      * @return InventoryLevel
      */
     public function setAvailable($available)
@@ -99,7 +101,7 @@ class InventoryLevel
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
     public function getUpdatedAt()
     {
@@ -107,11 +109,11 @@ class InventoryLevel
     }
 
     /**
-     * @param \DateTime $updatedAt
-     *                                                                
+     * @param DateTime $updatedAt
+     *
      * @return InventoryLevel
      */
-    public function setUpdatedAt(\DateTime $updatedAt)
+    public function setUpdatedAt(DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
 
@@ -128,7 +130,7 @@ class InventoryLevel
 
     /**
      * @param string $adminGraphqlApiId
-     *                                                                
+     *
      * @return InventoryLevel
      */
     public function setAdminGraphqlApiId($adminGraphqlApiId)

@@ -45,7 +45,7 @@ interface CommentManagerInterface
     /**
      * Updates the comment.
      *
-     * @param int   $id
+     * @param int $id
      * @param array $data
      *
      * @return bool

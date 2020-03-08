@@ -26,6 +26,14 @@ class PublicAppCredential implements CredentialInterface
     }
 
     /**
+     * {@inheritdoc}
+     */
+    public function applyToRequest(RequestInterface $request)
+    {
+        return $request->withHeader('X-Shopify-Access-Token', (string)$this->getAccessToken());
+    }
+
+    /**
      * Gets the access token.
      *
      * @return AccessToken
@@ -33,13 +41,5 @@ class PublicAppCredential implements CredentialInterface
     public function getAccessToken()
     {
         return $this->accessToken;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function applyToRequest(RequestInterface $request)
-    {
-        return $request->withHeader('X-Shopify-Access-Token', (string)$this->getAccessToken());
     }
 }

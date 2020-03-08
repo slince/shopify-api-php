@@ -10,6 +10,7 @@
  */
 
 namespace Slince\Shopify\Service\Contracts;
+
 use Slince\Shopify\Model\Province;
 
 interface ProvinceManagerInterface extends ManagerInterface
@@ -17,7 +18,7 @@ interface ProvinceManagerInterface extends ManagerInterface
     /**
      * Finds provinces.
      *
-     * @param int   $countryId
+     * @param int $countryId
      * @param array $query
      *
      * @return Province[]
@@ -37,7 +38,7 @@ interface ProvinceManagerInterface extends ManagerInterface
     /**
      * Gets the count.
      *
-     * @param int   $countryId
+     * @param int $countryId
      * @param array $query
      *
      * @return int
@@ -47,8 +48,8 @@ interface ProvinceManagerInterface extends ManagerInterface
     /**
      * Updates the province.
      *
-     * @param int   $countryId
-     * @param int   $id
+     * @param int $countryId
+     * @param int $id
      * @param array $data
      *
      * @return Province

@@ -11,6 +11,7 @@
 
 namespace Slince\Shopify\Service;
 
+use Exception;
 use Slince\Shopify\Model\DiscountCode;
 use Slince\Shopify\Service\Contracts\DiscountCodeManagerInterface;
 
@@ -53,6 +54,6 @@ class DiscountCodeManager extends NestCrudable implements DiscountCodeManagerInt
      */
     public function count($priceRuleId, array $query = [])
     {
-        throw new \Exception('The action is not supported');
+        throw new Exception('The action is not supported');
     }
 }
