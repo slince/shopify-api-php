@@ -72,8 +72,6 @@ class Page extends Model
 
     /**
      * @param string $title
-     *
-     * @return Page
      */
     public function setTitle($title)
     {
@@ -90,8 +88,6 @@ class Page extends Model
 
     /**
      * @param int $shopId
-     *
-     * @return Page
      */
     public function setShopId($shopId)
     {
@@ -108,8 +104,6 @@ class Page extends Model
 
     /**
      * @param string $handle
-     *
-     * @return Page
      */
     public function setHandle($handle)
     {
@@ -126,8 +120,6 @@ class Page extends Model
 
     /**
      * @param string $bodyHtml
-     *
-     * @return Page
      */
     public function setBodyHtml($bodyHtml)
     {
@@ -144,8 +136,6 @@ class Page extends Model
 
     /**
      * @param string $author
-     *
-     * @return Page
      */
     public function setAuthor($author)
     {
@@ -160,10 +150,7 @@ class Page extends Model
         return $this->createdAt;
     }
 
-    /**
-     * @return Page
-     */
-    public function setCreatedAt(DateTime $createdAt)
+    public function setCreatedAt(?DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
     }
@@ -176,10 +163,7 @@ class Page extends Model
         return $this->updatedAt;
     }
 
-    /**
-     * @return Page
-     */
-    public function setUpdatedAt(DateTime $updatedAt)
+    public function setUpdatedAt(?DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }
@@ -192,10 +176,7 @@ class Page extends Model
         return $this->publishedAt;
     }
 
-    /**
-     * @return Page
-     */
-    public function setPublishedAt(DateTime $publishedAt)
+    public function setPublishedAt(?DateTime $publishedAt)
     {
         $this->publishedAt = $publishedAt;
     }
@@ -210,8 +191,6 @@ class Page extends Model
 
     /**
      * @param string $templateSuffix
-     *
-     * @return Page
      */
     public function setTemplateSuffix($templateSuffix)
     {

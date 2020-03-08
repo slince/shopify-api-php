@@ -48,7 +48,7 @@ class ScriptTag extends Model
         return $this->createdAt;
     }
 
-    public function setCreatedAt(DateTime $createdAt)
+    public function setCreatedAt(?DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
     }
@@ -112,7 +112,7 @@ class ScriptTag extends Model
     /**
      * @param string $updatedAt
      */
-    public function setUpdatedAt(DateTime $updatedAt)
+    public function setUpdatedAt(?DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }

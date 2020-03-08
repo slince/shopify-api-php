@@ -105,7 +105,7 @@ class InventoryLevel
     /**
      * @return InventoryLevel
      */
-    public function setUpdatedAt(DateTime $updatedAt)
+    public function setUpdatedAt(?DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }

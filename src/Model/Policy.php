@@ -110,7 +110,7 @@ class Policy
     /**
      * @return Policy
      */
-    public function setCreatedAt(DateTime $createdAt)
+    public function setCreatedAt(?DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
     }
@@ -126,7 +126,7 @@ class Policy
     /**
      * @return Policy
      */
-    public function setUpdatedAt(DateTime $updatedAt)
+    public function setUpdatedAt(?DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }

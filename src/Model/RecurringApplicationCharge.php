@@ -103,7 +103,7 @@ class RecurringApplicationCharge extends Model
         return $this->activatedOn;
     }
 
-    public function setActivatedOn(DateTime $activatedOn)
+    public function setActivatedOn(?DateTime $activatedOn)
     {
         $this->activatedOn = $activatedOn;
     }
@@ -116,7 +116,7 @@ class RecurringApplicationCharge extends Model
         return $this->billingOn;
     }
 
-    public function setBillingOn(DateTime $billingOn)
+    public function setBillingOn(?DateTime $billingOn)
     {
         $this->billingOn = $billingOn;
     }
@@ -129,7 +129,7 @@ class RecurringApplicationCharge extends Model
         return $this->cancelledOn;
     }
 
-    public function setCancelledOn(DateTime $cancelledOn)
+    public function setCancelledOn(?DateTime $cancelledOn)
     {
         $this->cancelledOn = $cancelledOn;
     }
@@ -174,7 +174,7 @@ class RecurringApplicationCharge extends Model
         return $this->createdAt;
     }
 
-    public function setCreatedAt(DateTime $createdAt)
+    public function setCreatedAt(?DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
     }
@@ -315,7 +315,7 @@ class RecurringApplicationCharge extends Model
         return $this->trialEndsOn;
     }
 
-    public function setTrialEndsOn(DateTime $trialEndsOn)
+    public function setTrialEndsOn(?DateTime $trialEndsOn)
     {
         $this->trialEndsOn = $trialEndsOn;
     }
@@ -328,7 +328,7 @@ class RecurringApplicationCharge extends Model
         return $this->updatedAt;
     }
 
-    public function setUpdatedAt(DateTime $updatedAt)
+    public function setUpdatedAt(?DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }

@@ -78,8 +78,6 @@ class Webhook extends Model
 
     /**
      * @param string $topic
-     *
-     * @return Webhook
      */
     public function setTopic($topic)
     {
@@ -94,10 +92,7 @@ class Webhook extends Model
         return $this->createdAt;
     }
 
-    /**
-     * @return Webhook
-     */
-    public function setCreatedAt(DateTime $createdAt)
+    public function setCreatedAt(?DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
     }
@@ -110,10 +105,7 @@ class Webhook extends Model
         return $this->updatedAt;
     }
 
-    /**
-     * @return Webhook
-     */
-    public function setUpdatedAt(DateTime $updatedAt)
+    public function setUpdatedAt(?DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }

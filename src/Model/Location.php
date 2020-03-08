@@ -111,7 +111,7 @@ class Location extends Model
         return $this->deletedAt;
     }
 
-    public function setDeletedAt(DateTime $deletedAt)
+    public function setDeletedAt(?DateTime $deletedAt)
     {
         $this->deletedAt = $deletedAt;
     }
@@ -236,7 +236,7 @@ class Location extends Model
         return $this->createdAt;
     }
 
-    public function setCreatedAt(DateTime $createdAt)
+    public function setCreatedAt(?DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
     }
@@ -249,7 +249,7 @@ class Location extends Model
         return $this->updatedAt;
     }
 
-    public function setUpdatedAt(DateTime $updatedAt)
+    public function setUpdatedAt(?DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }

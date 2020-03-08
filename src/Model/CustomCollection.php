@@ -102,7 +102,7 @@ class CustomCollection extends Model
         return $this->updatedAt;
     }
 
-    public function setUpdatedAt(DateTime $updatedAt)
+    public function setUpdatedAt(?DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }
@@ -131,7 +131,7 @@ class CustomCollection extends Model
         return $this->publishedAt;
     }
 
-    public function setPublishedAt(DateTime $publishedAt)
+    public function setPublishedAt(?DateTime $publishedAt)
     {
         $this->publishedAt = $publishedAt;
     }

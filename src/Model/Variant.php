@@ -382,7 +382,7 @@ class Variant extends Model
     /**
      * @return Variant
      */
-    public function setCreatedAt(DateTime $createdAt)
+    public function setCreatedAt(?DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
     }
@@ -398,7 +398,7 @@ class Variant extends Model
     /**
      * @return Variant
      */
-    public function setUpdatedAt(DateTime $updatedAt)
+    public function setUpdatedAt(?DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }

@@ -84,7 +84,7 @@ class Refund extends Model
     /**
      * @return Refund
      */
-    public function setCreatedAt(DateTime $createdAt)
+    public function setCreatedAt(?DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
     }

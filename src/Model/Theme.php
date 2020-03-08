@@ -81,7 +81,7 @@ class Theme extends Model
     /**
      * @return Theme
      */
-    public function setCreatedAt(DateTime $createdAt)
+    public function setCreatedAt(?DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
     }
@@ -97,7 +97,7 @@ class Theme extends Model
     /**
      * @return Theme
      */
-    public function setUpdatedAt(DateTime $updatedAt)
+    public function setUpdatedAt(?DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }

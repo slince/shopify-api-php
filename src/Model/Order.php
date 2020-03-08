@@ -30,11 +30,6 @@ class Order extends Model
     /**
      * @var DateTime
      */
-    protected $deletedAt;
-
-    /**
-     * @var DateTime
-     */
     protected $updatedAt;
 
     /**
@@ -303,11 +298,6 @@ class Order extends Model
     protected $refunds;
 
     /**
-     * @var Transaction[]
-     */
-    protected $transactions;
-
-    /**
      * @var PaymentDetails
      */
     protected $paymentDetails;
@@ -346,14 +336,9 @@ class Order extends Model
         return $this->closedAt;
     }
 
-    public function setClosedAt(DateTime $closedAt)
+    public function setClosedAt(?DateTime $closedAt)
     {
         $this->closedAt = $closedAt;
-    }
-
-    public function setDeletedAt(DateTime $deletedAt)
-    {
-        $this->deletedAt = $deletedAt;
     }
 
     /**
@@ -364,7 +349,7 @@ class Order extends Model
         return $this->updatedAt;
     }
 
-    public function setUpdatedAt(DateTime $updatedAt)
+    public function setUpdatedAt(?DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }
@@ -697,7 +682,7 @@ class Order extends Model
         return $this->cancelledAt;
     }
 
-    public function setCancelledAt(DateTime $cancelledAt)
+    public function setCancelledAt(?DateTime $cancelledAt)
     {
         $this->cancelledAt = $cancelledAt;
     }
@@ -838,7 +823,7 @@ class Order extends Model
         return $this->processedAt;
     }
 
-    public function setProcessedAt(DateTime $processedAt)
+    public function setProcessedAt(?DateTime $processedAt)
     {
         $this->processedAt = $processedAt;
     }
@@ -1225,27 +1210,6 @@ class Order extends Model
     public function addRefund(Refund $refund)
     {
         $this->refunds[] = $refund;
-    }
-
-    /**
-     * @return Transaction[]
-     */
-    public function getTransactions(): array
-    {
-        return $this->transactions;
-    }
-
-    /**
-     * @param Transaction[] $transactions
-     */
-    public function setTransactions(array $transactions): void
-    {
-        $this->transactions = $transactions;
-    }
-
-    public function addTransaction(Transaction $transaction)
-    {
-        $this->transactions[] = $transaction;
     }
 
     /**

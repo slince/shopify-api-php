@@ -214,7 +214,7 @@ class DraftOrder extends Model
         return $this->invoiceSentAt;
     }
 
-    public function setInvoiceSentAt(DateTime $invoiceSentAt)
+    public function setInvoiceSentAt(?DateTime $invoiceSentAt)
     {
         $this->invoiceSentAt = $invoiceSentAt;
     }
@@ -227,7 +227,7 @@ class DraftOrder extends Model
         return $this->createdAt;
     }
 
-    public function setCreatedAt(DateTime $createdAt)
+    public function setCreatedAt(?DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
     }
@@ -240,7 +240,7 @@ class DraftOrder extends Model
         return $this->updatedAt;
     }
 
-    public function setUpdatedAt(DateTime $updatedAt)
+    public function setUpdatedAt(?DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }
@@ -266,7 +266,7 @@ class DraftOrder extends Model
         return $this->completedAt;
     }
 
-    public function setCompletedAt(DateTime $completedAt)
+    public function setCompletedAt(?DateTime $completedAt)
     {
         $this->completedAt = $completedAt;
     }
