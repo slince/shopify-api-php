@@ -68,8 +68,6 @@ class Risk extends Model
 
     /**
      * @param int $orderId
-     *
-     * @return Risk
      */
     public function setOrderId($orderId)
     {
@@ -86,8 +84,6 @@ class Risk extends Model
 
     /**
      * @param int $checkoutId
-     *
-     * @return Risk
      */
     public function setCheckoutId($checkoutId)
     {
@@ -104,8 +100,6 @@ class Risk extends Model
 
     /**
      * @param string $source
-     *
-     * @return Risk
      */
     public function setSource($source)
     {
@@ -122,8 +116,6 @@ class Risk extends Model
 
     /**
      * @param float $score
-     *
-     * @return Risk
      */
     public function setScore($score)
     {
@@ -140,8 +132,6 @@ class Risk extends Model
 
     /**
      * @param string $recommendation
-     *
-     * @return Risk
      */
     public function setRecommendation($recommendation)
     {
@@ -158,8 +148,6 @@ class Risk extends Model
 
     /**
      * @param bool $display
-     *
-     * @return Risk
      */
     public function setDisplay($display)
     {
@@ -176,8 +164,6 @@ class Risk extends Model
 
     /**
      * @param bool $causeCancel
-     *
-     * @return Risk
      */
     public function setCauseCancel($causeCancel)
     {
@@ -194,8 +180,6 @@ class Risk extends Model
 
     /**
      * @param string $message
-     *
-     * @return Risk
      */
     public function setMessage($message)
     {
@@ -212,8 +196,6 @@ class Risk extends Model
 
     /**
      * @param string $merchantMessage
-     *
-     * @return Risk
      */
     public function setMerchantMessage($merchantMessage)
     {

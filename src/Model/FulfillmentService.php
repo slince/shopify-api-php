@@ -48,8 +48,6 @@ class FulfillmentService extends Model
 
     /**
      * @param string $name
-     *
-     * @return FulfillmentService
      */
     public function setName($name)
     {
@@ -66,8 +64,6 @@ class FulfillmentService extends Model
 
     /**
      * @param string $callbackUrl
-     *
-     * @return FulfillmentService
      */
     public function setCallbackUrl($callbackUrl)
     {
@@ -84,8 +80,6 @@ class FulfillmentService extends Model
 
     /**
      * @param bool $inventoryManagement
-     *
-     * @return FulfillmentService
      */
     public function setInventoryManagement($inventoryManagement)
     {
@@ -102,8 +96,6 @@ class FulfillmentService extends Model
 
     /**
      * @param bool $trackingSupport
-     *
-     * @return FulfillmentService
      */
     public function setTrackingSupport($trackingSupport)
     {
@@ -120,8 +112,6 @@ class FulfillmentService extends Model
 
     /**
      * @param bool $requiresShippingMethod
-     *
-     * @return FulfillmentService
      */
     public function setRequiresShippingMethod($requiresShippingMethod)
     {

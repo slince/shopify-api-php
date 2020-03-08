@@ -389,7 +389,7 @@ class Customer extends Model
     /**
      * @param Address[] $addresses
      */
-    public function setAddresses($addresses)
+    public function setAddresses(array $addresses)
     {
         $this->addresses = $addresses;
     }
@@ -402,10 +402,7 @@ class Customer extends Model
         return $this->defaultAddress;
     }
 
-    /**
-     * @param Address $defaultAddress
-     */
-    public function setDefaultAddress($defaultAddress)
+    public function setDefaultAddress(Address $defaultAddress)
     {
         $this->defaultAddress = $defaultAddress;
     }

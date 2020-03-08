@@ -63,8 +63,6 @@ class Province extends Model
 
     /**
      * @param int $countryId
-     *
-     * @return Province
      */
     public function setCountryId($countryId)
     {
@@ -81,8 +79,6 @@ class Province extends Model
 
     /**
      * @param string $name
-     *
-     * @return Province
      */
     public function setName($name)
     {
@@ -99,8 +95,6 @@ class Province extends Model
 
     /**
      * @param string $code
-     *
-     * @return Province
      */
     public function setCode($code)
     {
@@ -117,8 +111,6 @@ class Province extends Model
 
     /**
      * @param float $tax
-     *
-     * @return Province
      */
     public function setTax($tax)
     {
@@ -135,8 +127,6 @@ class Province extends Model
 
     /**
      * @param string $taxName
-     *
-     * @return Province
      */
     public function setTaxName($taxName)
     {
@@ -153,8 +143,6 @@ class Province extends Model
 
     /**
      * @param string $taxType
-     *
-     * @return Province
      */
     public function setTaxType($taxType)
     {
@@ -171,8 +159,6 @@ class Province extends Model
 
     /**
      * @param int $shippingZoneId
-     *
-     * @return Province
      */
     public function setShippingZoneId($shippingZoneId)
     {
@@ -189,8 +175,6 @@ class Province extends Model
 
     /**
      * @param float $taxPercentage
-     *
-     * @return Province
      */
     public function setTaxPercentage($taxPercentage)
     {

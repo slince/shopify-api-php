@@ -28,8 +28,6 @@ trait AdminGraphqlApiId
 
     /**
      * @param string $adminGraphqlApiId
-     *
-     * @return self
      */
     public function setAdminGraphqlApiId($adminGraphqlApiId)
     {

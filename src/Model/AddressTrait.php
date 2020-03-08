@@ -93,8 +93,6 @@ trait AddressTrait
 
     /**
      * @param string $firstName
-     *
-     * @return self
      */
     public function setFirstName($firstName)
     {
@@ -111,8 +109,6 @@ trait AddressTrait
 
     /**
      * @param string $lastName
-     *
-     * @return self
      */
     public function setLastName($lastName)
     {
@@ -129,8 +125,6 @@ trait AddressTrait
 
     /**
      * @param string $company
-     *
-     * @return self
      */
     public function setCompany($company)
     {
@@ -147,8 +141,6 @@ trait AddressTrait
 
     /**
      * @param string $address1
-     *
-     * @return self
      */
     public function setAddress1($address1)
     {
@@ -165,8 +157,6 @@ trait AddressTrait
 
     /**
      * @param string $address2
-     *
-     * @return self
      */
     public function setAddress2($address2)
     {
@@ -183,8 +173,6 @@ trait AddressTrait
 
     /**
      * @param string $city
-     *
-     * @return self
      */
     public function setCity($city)
     {
@@ -201,8 +189,6 @@ trait AddressTrait
 
     /**
      * @param string $province
-     *
-     * @return self
      */
     public function setProvince($province)
     {
@@ -219,8 +205,6 @@ trait AddressTrait
 
     /**
      * @param string $country
-     *
-     * @return self
      */
     public function setCountry($country)
     {
@@ -237,8 +221,6 @@ trait AddressTrait
 
     /**
      * @param string $zip
-     *
-     * @return self
      */
     public function setZip($zip)
     {
@@ -255,8 +237,6 @@ trait AddressTrait
 
     /**
      * @param string $phone
-     *
-     * @return self
      */
     public function setPhone($phone)
     {
@@ -273,8 +253,6 @@ trait AddressTrait
 
     /**
      * @param string $name
-     *
-     * @return self
      */
     public function setName($name)
     {
@@ -291,8 +269,6 @@ trait AddressTrait
 
     /**
      * @param string $provinceCode
-     *
-     * @return self
      */
     public function setProvinceCode($provinceCode)
     {
@@ -309,8 +285,6 @@ trait AddressTrait
 
     /**
      * @param string $countryCode
-     *
-     * @return self
      */
     public function setCountryCode($countryCode)
     {
@@ -327,8 +301,6 @@ trait AddressTrait
 
     /**
      * @param string $countryName
-     *
-     * @return self
      */
     public function setCountryName($countryName)
     {

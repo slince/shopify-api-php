@@ -82,8 +82,6 @@ class SmartCollection extends Model
 
     /**
      * @param string $handle
-     *
-     * @return SmartCollection
      */
     public function setHandle($handle)
     {
@@ -100,8 +98,6 @@ class SmartCollection extends Model
 
     /**
      * @param string $title
-     *
-     * @return SmartCollection
      */
     public function setTitle($title)
     {
@@ -116,9 +112,6 @@ class SmartCollection extends Model
         return $this->updatedAt;
     }
 
-    /**
-     * @return SmartCollection
-     */
     public function setUpdatedAt(DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
@@ -134,8 +127,6 @@ class SmartCollection extends Model
 
     /**
      * @param string $bodyHtml
-     *
-     * @return SmartCollection
      */
     public function setBodyHtml($bodyHtml)
     {
@@ -150,9 +141,6 @@ class SmartCollection extends Model
         return $this->publishedAt;
     }
 
-    /**
-     * @return SmartCollection
-     */
     public function setPublishedAt(DateTime $publishedAt)
     {
         $this->publishedAt = $publishedAt;
@@ -168,8 +156,6 @@ class SmartCollection extends Model
 
     /**
      * @param string $sortOrder
-     *
-     * @return SmartCollection
      */
     public function setSortOrder($sortOrder)
     {
@@ -186,8 +172,6 @@ class SmartCollection extends Model
 
     /**
      * @param string $templateSuffix
-     *
-     * @return SmartCollection
      */
     public function setTemplateSuffix($templateSuffix)
     {
@@ -204,8 +188,6 @@ class SmartCollection extends Model
 
     /**
      * @param bool $disjunctive
-     *
-     * @return SmartCollection
      */
     public function setDisjunctive($disjunctive)
     {
@@ -222,8 +204,6 @@ class SmartCollection extends Model
 
     /**
      * @param array $rules
-     *
-     * @return SmartCollection
      */
     public function setRules($rules)
     {
@@ -240,8 +220,6 @@ class SmartCollection extends Model
 
     /**
      * @param string $publishedScope
-     *
-     * @return SmartCollection
      */
     public function setPublishedScope($publishedScope)
     {
@@ -249,7 +227,7 @@ class SmartCollection extends Model
     }
 
     /**
-     * @return SmartCollectionImage
+Image
      */
     public function getImage()
     {
@@ -258,8 +236,6 @@ class SmartCollection extends Model
 
     /**
      * @param SmartCollectionImage $image
-     *
-     * @return SmartCollection
      */
     public function setImage($image)
     {

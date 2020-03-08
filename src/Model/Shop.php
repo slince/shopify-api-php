@@ -265,8 +265,6 @@ class Shop extends Model
 
     /**
      * @param string $name
-     *
-     * @return Shop
      */
     public function setName($name)
     {
@@ -283,8 +281,6 @@ class Shop extends Model
 
     /**
      * @param string $email
-     *
-     * @return Shop
      */
     public function setEmail($email)
     {
@@ -301,8 +297,6 @@ class Shop extends Model
 
     /**
      * @param string $domain
-     *
-     * @return Shop
      */
     public function setDomain($domain)
     {
@@ -317,9 +311,6 @@ class Shop extends Model
         return $this->createdAt;
     }
 
-    /**
-     * @return Shop
-     */
     public function setCreatedAt(DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
@@ -335,8 +326,6 @@ class Shop extends Model
 
     /**
      * @param string $province
-     *
-     * @return Shop
      */
     public function setProvince($province)
     {
@@ -353,8 +342,6 @@ class Shop extends Model
 
     /**
      * @param string $country
-     *
-     * @return Shop
      */
     public function setCountry($country)
     {
@@ -371,8 +358,6 @@ class Shop extends Model
 
     /**
      * @param string $address1
-     *
-     * @return Shop
      */
     public function setAddress1($address1)
     {
@@ -389,8 +374,6 @@ class Shop extends Model
 
     /**
      * @param string $zip
-     *
-     * @return Shop
      */
     public function setZip($zip)
     {
@@ -407,8 +390,6 @@ class Shop extends Model
 
     /**
      * @param string $city
-     *
-     * @return Shop
      */
     public function setCity($city)
     {
@@ -425,8 +406,6 @@ class Shop extends Model
 
     /**
      * @param string $source
-     *
-     * @return Shop
      */
     public function setSource($source)
     {
@@ -443,8 +422,6 @@ class Shop extends Model
 
     /**
      * @param string $phone
-     *
-     * @return Shop
      */
     public function setPhone($phone)
     {
@@ -461,8 +438,6 @@ class Shop extends Model
 
     /**
      * @param string $updatedAt
-     *
-     * @return Shop
      */
     public function setUpdatedAt(DateTime $updatedAt)
     {
@@ -479,8 +454,6 @@ class Shop extends Model
 
     /**
      * @param string $customerEmail
-     *
-     * @return Shop
      */
     public function setCustomerEmail($customerEmail)
     {
@@ -497,8 +470,6 @@ class Shop extends Model
 
     /**
      * @param float $latitude
-     *
-     * @return Shop
      */
     public function setLatitude($latitude)
     {
@@ -515,8 +486,6 @@ class Shop extends Model
 
     /**
      * @param float $longitude
-     *
-     * @return Shop
      */
     public function setLongitude($longitude)
     {
@@ -533,8 +502,6 @@ class Shop extends Model
 
     /**
      * @param string $primaryLocationId
-     *
-     * @return Shop
      */
     public function setPrimaryLocationId($primaryLocationId)
     {
@@ -551,8 +518,6 @@ class Shop extends Model
 
     /**
      * @param string $primaryLocale
-     *
-     * @return Shop
      */
     public function setPrimaryLocale($primaryLocale)
     {
@@ -569,8 +534,6 @@ class Shop extends Model
 
     /**
      * @param string $address2
-     *
-     * @return Shop
      */
     public function setAddress2($address2)
     {
@@ -587,8 +550,6 @@ class Shop extends Model
 
     /**
      * @param string $countryCode
-     *
-     * @return Shop
      */
     public function setCountryCode($countryCode)
     {
@@ -605,8 +566,6 @@ class Shop extends Model
 
     /**
      * @param string $countryName
-     *
-     * @return Shop
      */
     public function setCountryName($countryName)
     {
@@ -623,8 +582,6 @@ class Shop extends Model
 
     /**
      * @param string $currency
-     *
-     * @return Shop
      */
     public function setCurrency($currency)
     {
@@ -641,8 +598,6 @@ class Shop extends Model
 
     /**
      * @param string $timezone
-     *
-     * @return Shop
      */
     public function setTimezone($timezone)
     {
@@ -659,8 +614,6 @@ class Shop extends Model
 
     /**
      * @param string $ianaTimezone
-     *
-     * @return Shop
      */
     public function setIanaTimezone($ianaTimezone)
     {
@@ -677,8 +630,6 @@ class Shop extends Model
 
     /**
      * @param string $shopOwner
-     *
-     * @return Shop
      */
     public function setShopOwner($shopOwner)
     {
@@ -695,8 +646,6 @@ class Shop extends Model
 
     /**
      * @param string $moneyFormat
-     *
-     * @return Shop
      */
     public function setMoneyFormat($moneyFormat)
     {
@@ -713,8 +662,6 @@ class Shop extends Model
 
     /**
      * @param string $moneyWithCurrencyFormat
-     *
-     * @return Shop
      */
     public function setMoneyWithCurrencyFormat($moneyWithCurrencyFormat)
     {
@@ -731,8 +678,6 @@ class Shop extends Model
 
     /**
      * @param string $weightUnit
-     *
-     * @return Shop
      */
     public function setWeightUnit($weightUnit)
     {
@@ -749,8 +694,6 @@ class Shop extends Model
 
     /**
      * @param string $provinceCode
-     *
-     * @return Shop
      */
     public function setProvinceCode($provinceCode)
     {
@@ -767,8 +710,6 @@ class Shop extends Model
 
     /**
      * @param bool $taxesIncluded
-     *
-     * @return Shop
      */
     public function setTaxesIncluded($taxesIncluded)
     {
@@ -785,8 +726,6 @@ class Shop extends Model
 
     /**
      * @param string $taxShipping
-     *
-     * @return Shop
      */
     public function setTaxShipping($taxShipping)
     {
@@ -803,8 +742,6 @@ class Shop extends Model
 
     /**
      * @param string $countyTaxes
-     *
-     * @return Shop
      */
     public function setCountyTaxes($countyTaxes)
     {
@@ -821,8 +758,6 @@ class Shop extends Model
 
     /**
      * @param string $planDisplayName
-     *
-     * @return Shop
      */
     public function setPlanDisplayName($planDisplayName)
     {
@@ -839,8 +774,6 @@ class Shop extends Model
 
     /**
      * @param string $planName
-     *
-     * @return Shop
      */
     public function setPlanName($planName)
     {
@@ -857,8 +790,6 @@ class Shop extends Model
 
     /**
      * @param bool $hasDiscounts
-     *
-     * @return Shop
      */
     public function setHasDiscounts($hasDiscounts)
     {
@@ -875,8 +806,6 @@ class Shop extends Model
 
     /**
      * @param bool $hasGiftCards
-     *
-     * @return Shop
      */
     public function setHasGiftCards($hasGiftCards)
     {
@@ -893,8 +822,6 @@ class Shop extends Model
 
     /**
      * @param string $myshopifyDomain
-     *
-     * @return Shop
      */
     public function setMyshopifyDomain($myshopifyDomain)
     {
@@ -911,8 +838,6 @@ class Shop extends Model
 
     /**
      * @param string $googleAppsDomain
-     *
-     * @return Shop
      */
     public function setGoogleAppsDomain($googleAppsDomain)
     {
@@ -929,8 +854,6 @@ class Shop extends Model
 
     /**
      * @param string $googleAppsLoginEnabled
-     *
-     * @return Shop
      */
     public function setGoogleAppsLoginEnabled($googleAppsLoginEnabled)
     {
@@ -947,8 +870,6 @@ class Shop extends Model
 
     /**
      * @param string $moneyInEmailsFormat
-     *
-     * @return Shop
      */
     public function setMoneyInEmailsFormat($moneyInEmailsFormat)
     {
@@ -965,8 +886,6 @@ class Shop extends Model
 
     /**
      * @param string $moneyWithCurrencyInEmailsFormat
-     *
-     * @return Shop
      */
     public function setMoneyWithCurrencyInEmailsFormat($moneyWithCurrencyInEmailsFormat)
     {
@@ -983,8 +902,6 @@ class Shop extends Model
 
     /**
      * @param bool $eligibleForPayments
-     *
-     * @return Shop
      */
     public function setEligibleForPayments($eligibleForPayments)
     {
@@ -1001,8 +918,6 @@ class Shop extends Model
 
     /**
      * @param bool $requiresExtraPaymentsAgreement
-     *
-     * @return Shop
      */
     public function setRequiresExtraPaymentsAgreement($requiresExtraPaymentsAgreement)
     {
@@ -1019,8 +934,6 @@ class Shop extends Model
 
     /**
      * @param bool $passwordEnabled
-     *
-     * @return Shop
      */
     public function setPasswordEnabled($passwordEnabled)
     {
@@ -1037,8 +950,6 @@ class Shop extends Model
 
     /**
      * @param bool $hasStoreFront
-     *
-     * @return Shop
      */
     public function setHasStoreFront($hasStoreFront)
     {
@@ -1055,8 +966,6 @@ class Shop extends Model
 
     /**
      * @param bool $eligibleForCardReaderGiveaway
-     *
-     * @return Shop
      */
     public function setEligibleForCardReaderGiveaway($eligibleForCardReaderGiveaway)
     {
@@ -1073,8 +982,6 @@ class Shop extends Model
 
     /**
      * @param bool $finances
-     *
-     * @return Shop
      */
     public function setFinances($finances)
     {
@@ -1091,8 +998,6 @@ class Shop extends Model
 
     /**
      * @param bool $setupRequired
-     *
-     * @return Shop
      */
     public function setSetupRequired($setupRequired)
     {
@@ -1109,8 +1014,6 @@ class Shop extends Model
 
     /**
      * @param bool $forceSsl
-     *
-     * @return Shop
      */
     public function setForceSsl($forceSsl)
     {

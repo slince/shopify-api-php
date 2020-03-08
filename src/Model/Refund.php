@@ -43,7 +43,7 @@ class Refund extends Model
     protected $userId;
 
     /**
-     * @var string
+     * @var DateTime
      */
     protected $processedAt;
 
@@ -67,8 +67,6 @@ class Refund extends Model
 
     /**
      * @param int $orderId
-     *
-     * @return Refund
      */
     public function setOrderId($orderId)
     {
@@ -153,12 +151,7 @@ class Refund extends Model
         return $this->processedAt;
     }
 
-    /**
-     * @param string $processedAt
-     *
-     * @return Refund
-     */
-    public function setProcessedAt($processedAt)
+    public function setProcessedAt(DateTime $processedAt)
     {
         $this->processedAt = $processedAt;
     }
@@ -173,8 +166,6 @@ class Refund extends Model
 
     /**
      * @param RefundLineItem[] $refundLineItems
-     *
-     * @return Refund
      */
     public function setRefundLineItems($refundLineItems)
     {
@@ -191,8 +182,6 @@ class Refund extends Model
 
     /**
      * @param Transaction[] $transactions
-     *
-     * @return Refund
      */
     public function setTransactions($transactions)
     {

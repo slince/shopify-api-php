@@ -43,8 +43,6 @@ class Option extends Model
 
     /**
      * @param int $productId
-     *
-     * @return Option
      */
     public function setProductId($productId)
     {
@@ -61,8 +59,6 @@ class Option extends Model
 
     /**
      * @param string $name
-     *
-     * @return Option
      */
     public function setName($name)
     {
@@ -79,8 +75,6 @@ class Option extends Model
 
     /**
      * @param int $position
-     *
-     * @return Option
      */
     public function setPosition($position)
     {
@@ -97,8 +91,6 @@ class Option extends Model
 
     /**
      * @param array $values
-     *
-     * @return Option
      */
     public function setValues($values)
     {

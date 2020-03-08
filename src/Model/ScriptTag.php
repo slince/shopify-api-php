@@ -48,9 +48,6 @@ class ScriptTag extends Model
         return $this->createdAt;
     }
 
-    /**
-     * @return ScriptTag
-     */
     public function setCreatedAt(DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
@@ -66,8 +63,6 @@ class ScriptTag extends Model
 
     /**
      * @param string $event
-     *
-     * @return ScriptTag
      */
     public function setEvent($event)
     {
@@ -84,8 +79,6 @@ class ScriptTag extends Model
 
     /**
      * @param string $src
-     *
-     * @return ScriptTag
      */
     public function setSrc($src)
     {
@@ -102,8 +95,6 @@ class ScriptTag extends Model
 
     /**
      * @param string $displayScope
-     *
-     * @return ScriptTag
      */
     public function setDisplayScope($displayScope)
     {
@@ -120,8 +111,6 @@ class ScriptTag extends Model
 
     /**
      * @param string $updatedAt
-     *
-     * @return ScriptTag
      */
     public function setUpdatedAt(DateTime $updatedAt)
     {

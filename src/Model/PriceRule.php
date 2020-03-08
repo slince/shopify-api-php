@@ -152,8 +152,6 @@ class PriceRule extends Model
 
     /**
      * @param string $allocationMethod
-     *
-     * @return PriceRule
      */
     public function setAllocationMethod($allocationMethod)
     {
@@ -168,9 +166,6 @@ class PriceRule extends Model
         return $this->createdAt;
     }
 
-    /**
-     * @return PriceRule
-     */
     public function setCreatedAt(DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
@@ -186,8 +181,6 @@ class PriceRule extends Model
 
     /**
      * @param string $customerSelection
-     *
-     * @return PriceRule
      */
     public function setCustomerSelection($customerSelection)
     {
@@ -204,8 +197,6 @@ class PriceRule extends Model
 
     /**
      * @param DateTime $endsAt
-     *
-     * @return PriceRule
      */
     public function setEndsAt($endsAt)
     {
@@ -222,8 +213,6 @@ class PriceRule extends Model
 
     /**
      * @param array $entitledCollectionIds
-     *
-     * @return PriceRule
      */
     public function setEntitledCollectionIds($entitledCollectionIds)
     {
@@ -240,8 +229,6 @@ class PriceRule extends Model
 
     /**
      * @param array $entitledCountryIds
-     *
-     * @return PriceRule
      */
     public function setEntitledCountryIds($entitledCountryIds)
     {
@@ -258,8 +245,6 @@ class PriceRule extends Model
 
     /**
      * @param array $entitledProductIds
-     *
-     * @return PriceRule
      */
     public function setEntitledProductIds($entitledProductIds)
     {
@@ -276,8 +261,6 @@ class PriceRule extends Model
 
     /**
      * @param array $entitledVariantIds
-     *
-     * @return PriceRule
      */
     public function setEntitledVariantIds($entitledVariantIds)
     {
@@ -294,8 +277,6 @@ class PriceRule extends Model
 
     /**
      * @param bool $oncePerCustomer
-     *
-     * @return PriceRule
      */
     public function setOncePerCustomer($oncePerCustomer)
     {
@@ -312,8 +293,6 @@ class PriceRule extends Model
 
     /**
      * @param array $prerequisiteCustomerIds
-     *
-     * @return PriceRule
      */
     public function setPrerequisiteCustomerIds($prerequisiteCustomerIds)
     {
@@ -330,8 +309,6 @@ class PriceRule extends Model
 
     /**
      * @param array $prerequisiteQuantityRange
-     *
-     * @return PriceRule
      */
     public function setPrerequisiteQuantityRange($prerequisiteQuantityRange)
     {
@@ -348,8 +325,6 @@ class PriceRule extends Model
 
     /**
      * @param array $prerequisiteSavedSearchIds
-     *
-     * @return PriceRule
      */
     public function setPrerequisiteSavedSearchIds($prerequisiteSavedSearchIds)
     {
@@ -366,8 +341,6 @@ class PriceRule extends Model
 
     /**
      * @param array $prerequisiteShippingPriceRange
-     *
-     * @return PriceRule
      */
     public function setPrerequisiteShippingPriceRange($prerequisiteShippingPriceRange)
     {
@@ -384,8 +357,6 @@ class PriceRule extends Model
 
     /**
      * @param array $prerequisiteSubtotalRange
-     *
-     * @return PriceRule
      */
     public function setPrerequisiteSubtotalRange($prerequisiteSubtotalRange)
     {
@@ -402,8 +373,6 @@ class PriceRule extends Model
 
     /**
      * @param string $startsAt
-     *
-     * @return PriceRule
      */
     public function setStartsAt($startsAt)
     {
@@ -420,8 +389,6 @@ class PriceRule extends Model
 
     /**
      * @param string $targetSelection
-     *
-     * @return PriceRule
      */
     public function setTargetSelection($targetSelection)
     {
@@ -438,8 +405,6 @@ class PriceRule extends Model
 
     /**
      * @param string $targetType
-     *
-     * @return PriceRule
      */
     public function setTargetType($targetType)
     {
@@ -456,8 +421,6 @@ class PriceRule extends Model
 
     /**
      * @param string $title
-     *
-     * @return PriceRule
      */
     public function setTitle($title)
     {
@@ -474,8 +437,6 @@ class PriceRule extends Model
 
     /**
      * @param string $usageLimit
-     *
-     * @return PriceRule
      */
     public function setUsageLimit($usageLimit)
     {
@@ -492,8 +453,6 @@ class PriceRule extends Model
 
     /**
      * @param array $prerequisiteProductIds
-     *
-     * @return PriceRule
      */
     public function setPrerequisiteProductIds($prerequisiteProductIds)
     {
@@ -510,8 +469,6 @@ class PriceRule extends Model
 
     /**
      * @param array $prerequisiteVariantIds
-     *
-     * @return PriceRule
      */
     public function setPrerequisiteVariantIds($prerequisiteVariantIds)
     {
@@ -528,8 +485,6 @@ class PriceRule extends Model
 
     /**
      * @param array $prerequisiteCollectionIds
-     *
-     * @return PriceRule
      */
     public function setPrerequisiteCollectionIds($prerequisiteCollectionIds)
     {
@@ -546,8 +501,6 @@ class PriceRule extends Model
 
     /**
      * @param int $value
-     *
-     * @return PriceRule
      */
     public function setValue($value)
     {
@@ -564,8 +517,6 @@ class PriceRule extends Model
 
     /**
      * @param string $valueType
-     *
-     * @return PriceRule
      */
     public function setValueType($valueType)
     {
@@ -582,8 +533,6 @@ class PriceRule extends Model
 
     /**
      * @param array $prerequisiteToEntitlementQuantityRatio
-     *
-     * @return PriceRule
      */
     public function setPrerequisiteToEntitlementQuantityRatio($prerequisiteToEntitlementQuantityRatio)
     {

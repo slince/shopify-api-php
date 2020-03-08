@@ -24,8 +24,6 @@ interface ModelInterface
      * Sets the id for the model.
      *
      * @param int $id
-     *
-     * @return ModelInterface
      */
     public function setId($id);
 }

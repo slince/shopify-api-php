@@ -67,8 +67,6 @@ class Image extends Model
 
     /**
      * @param int $productId
-     *
-     * @return Image
      */
     public function setProductId($productId)
     {
@@ -85,8 +83,6 @@ class Image extends Model
 
     /**
      * @param int $position
-     *
-     * @return Image
      */
     public function setPosition($position)
     {
@@ -101,9 +97,6 @@ class Image extends Model
         return $this->createdAt;
     }
 
-    /**
-     * @return Image
-     */
     public function setCreatedAt(DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
@@ -117,9 +110,6 @@ class Image extends Model
         return $this->updatedAt;
     }
 
-    /**
-     * @return Image
-     */
     public function setUpdatedAt(DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
@@ -135,8 +125,6 @@ class Image extends Model
 
     /**
      * @param string $src
-     *
-     * @return Image
      */
     public function setSrc($src)
     {
@@ -153,8 +141,6 @@ class Image extends Model
 
     /**
      * @param int $width
-     *
-     * @return Image
      */
     public function setWidth($width)
     {
@@ -171,8 +157,6 @@ class Image extends Model
 
     /**
      * @param int $height
-     *
-     * @return Image
      */
     public function setHeight($height)
     {
@@ -189,8 +173,6 @@ class Image extends Model
 
     /**
      * @param array $variantIds
-     *
-     * @return Image
      */
     public function setVariantIds($variantIds)
     {
