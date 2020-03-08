@@ -103,7 +103,7 @@ class Product extends Model
     /**
      * @param string $title
      *
-     * @return Product
+
      */
     public function setTitle($title)
     {
@@ -121,7 +121,7 @@ class Product extends Model
     /**
      * @param string $bodyHtml
      *
-     * @return Product
+
      */
     public function setBodyHtml($bodyHtml)
     {
@@ -139,7 +139,7 @@ class Product extends Model
     /**
      * @param string $vendor
      *
-     * @return Product
+
      */
     public function setVendor($vendor)
     {
@@ -157,7 +157,7 @@ class Product extends Model
     /**
      * @param string $productType
      *
-     * @return Product
+
      */
     public function setProductType($productType)
     {
@@ -173,7 +173,7 @@ class Product extends Model
     }
 
     /**
-     * @return Product
+
      */
     public function setCreatedAt(DateTime $createdAt)
     {
@@ -191,7 +191,7 @@ class Product extends Model
     /**
      * @param string $handle
      *
-     * @return Product
+
      */
     public function setHandle($handle)
     {
@@ -207,7 +207,7 @@ class Product extends Model
     }
 
     /**
-     * @return Product
+
      */
     public function setUpdatedAt(DateTime $updatedAt)
     {
@@ -223,7 +223,7 @@ class Product extends Model
     }
 
     /**
-     * @return Product
+
      */
     public function setPublishedAt(DateTime $publishedAt)
     {
@@ -241,7 +241,7 @@ class Product extends Model
     /**
      * @param string $templateSuffix
      *
-     * @return Product
+
      */
     public function setTemplateSuffix($templateSuffix)
     {
@@ -259,7 +259,7 @@ class Product extends Model
     /**
      * @param string $publishedScope
      *
-     * @return Product
+
      */
     public function setPublishedScope($publishedScope)
     {
@@ -277,7 +277,7 @@ class Product extends Model
     /**
      * @param string $tags
      *
-     * @return Product
+
      */
     public function setTags($tags)
     {
@@ -295,11 +295,16 @@ class Product extends Model
     /**
      * @param Variant[] $variants
      *
-     * @return Product
+
      */
     public function setVariants($variants)
     {
         $this->variants = $variants;
+    }
+
+    public function addVariant(Variant $variant)
+    {
+        $this->variants[] = $variant;
     }
 
     /**
@@ -313,11 +318,16 @@ class Product extends Model
     /**
      * @param Image[] $images
      *
-     * @return Product
+
      */
     public function setImages($images)
     {
         $this->images = $images;
+    }
+
+    public function addImage(Image $image)
+    {
+        $this->images[] = $image;
     }
 
     /**
@@ -331,9 +341,9 @@ class Product extends Model
     /**
      * @param Image $image
      *
-     * @return Product
+
      */
-    public function setImage($image)
+    public function setImage(Image $image)
     {
         $this->image = $image;
     }
@@ -349,10 +359,19 @@ class Product extends Model
     /**
      * @param Option[] $options
      *
-     * @return Product
      */
     public function setOptions($options)
     {
         $this->options = $options;
     }
+
+    /**
+     * @param Option $option
+     *
+     */
+    public function addOption(Option $option)
+    {
+        $this->options[] = $option;
+    }
+
 }

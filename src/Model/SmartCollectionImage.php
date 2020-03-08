@@ -45,8 +45,6 @@ class SmartCollectionImage
 
     /**
      * @param string $src
-     *
-     * @return CustomCollectionImage
      */
     public function setSrc($src)
     {
@@ -63,8 +61,6 @@ class SmartCollectionImage
 
     /**
      * @param int $width
-     *
-     * @return CustomCollectionImage
      */
     public function setWidth($width)
     {
@@ -81,8 +77,6 @@ class SmartCollectionImage
 
     /**
      * @param int $height
-     *
-     * @return CustomCollectionImage
      */
     public function setHeight($height)
     {
@@ -97,9 +91,6 @@ class SmartCollectionImage
         return $this->createdAt;
     }
 
-    /**
-     * @return CustomCollectionImage
-     */
     public function setCreatedAt(DateTime $createdAt)
     {
         $this->createdAt = $createdAt;

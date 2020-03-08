@@ -14,4 +14,25 @@ namespace Slince\Shopify\Model;
 class Address
 {
     use AddressTrait;
+
+    /**
+     * @var boolean
+     */
+    protected $default;
+
+    /**
+     * @return bool
+     */
+    public function isDefault()
+    {
+        return $this->default;
+    }
+
+    /**
+     * @param bool $default
+     */
+    public function setDefault(bool $default): void
+    {
+        $this->default = $default;
+    }
 }

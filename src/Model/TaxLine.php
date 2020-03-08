@@ -39,7 +39,7 @@ class TaxLine
     /**
      * @param string $title
      *
-     * @return TaxLine
+
      */
     public function setTitle($title)
     {
@@ -57,7 +57,7 @@ class TaxLine
     /**
      * @param float $price
      *
-     * @return TaxLine
+
      */
     public function setPrice($price)
     {
@@ -75,7 +75,7 @@ class TaxLine
     /**
      * @param float $rate
      *
-     * @return TaxLine
+
      */
     public function setRate($rate)
     {

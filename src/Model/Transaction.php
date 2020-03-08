@@ -48,7 +48,7 @@ class Transaction extends Model
     protected $sourceName;
 
     /**
-     * @var array
+     * @var PaymentDetails
      */
     protected $paymentDetails;
 
@@ -103,7 +103,7 @@ class Transaction extends Model
     /**
      * @param float $amount
      *
-     * @return Transaction
+
      */
     public function setAmount($amount)
     {
@@ -121,7 +121,7 @@ class Transaction extends Model
     /**
      * @param string $authorization
      *
-     * @return Transaction
+
      */
     public function setAuthorization($authorization)
     {
@@ -137,7 +137,7 @@ class Transaction extends Model
     }
 
     /**
-     * @return Transaction
+
      */
     public function setCreatedAt(DateTime $createdAt)
     {
@@ -155,7 +155,7 @@ class Transaction extends Model
     /**
      * @param string $deviceId
      *
-     * @return Transaction
+
      */
     public function setDeviceId($deviceId)
     {
@@ -173,7 +173,7 @@ class Transaction extends Model
     /**
      * @param string $gateway
      *
-     * @return Transaction
+
      */
     public function setGateway($gateway)
     {
@@ -191,7 +191,7 @@ class Transaction extends Model
     /**
      * @param string $sourceName
      *
-     * @return Transaction
+
      */
     public function setSourceName($sourceName)
     {
@@ -199,7 +199,7 @@ class Transaction extends Model
     }
 
     /**
-     * @return array
+     * @return PaymentDetails
      */
     public function getPaymentDetails()
     {
@@ -207,11 +207,11 @@ class Transaction extends Model
     }
 
     /**
-     * @param array $paymentDetails
+     * @param PaymentDetails $paymentDetails
      *
-     * @return Transaction
+
      */
-    public function setPaymentDetails($paymentDetails)
+    public function setPaymentDetails(PaymentDetails $paymentDetails)
     {
         $this->paymentDetails = $paymentDetails;
     }
@@ -227,7 +227,7 @@ class Transaction extends Model
     /**
      * @param string $kind
      *
-     * @return Transaction
+
      */
     public function setKind($kind)
     {
@@ -245,7 +245,7 @@ class Transaction extends Model
     /**
      * @param int $orderId
      *
-     * @return Transaction
+
      */
     public function setOrderId($orderId)
     {
@@ -263,7 +263,7 @@ class Transaction extends Model
     /**
      * @param array $receipt
      *
-     * @return Transaction
+
      */
     public function setReceipt($receipt)
     {
@@ -281,7 +281,7 @@ class Transaction extends Model
     /**
      * @param string $errorCode
      *
-     * @return Transaction
+
      */
     public function setErrorCode($errorCode)
     {
@@ -299,7 +299,7 @@ class Transaction extends Model
     /**
      * @param string $status
      *
-     * @return Transaction
+
      */
     public function setStatus($status)
     {
@@ -317,7 +317,7 @@ class Transaction extends Model
     /**
      * @param bool $test
      *
-     * @return Transaction
+
      */
     public function setTest($test)
     {
@@ -335,7 +335,7 @@ class Transaction extends Model
     /**
      * @param int $userId
      *
-     * @return Transaction
+
      */
     public function setUserId($userId)
     {
@@ -353,7 +353,7 @@ class Transaction extends Model
     /**
      * @param string $currency
      *
-     * @return Transaction
+
      */
     public function setCurrency($currency)
     {

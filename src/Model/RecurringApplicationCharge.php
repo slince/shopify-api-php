@@ -16,17 +16,17 @@ use DateTime;
 class RecurringApplicationCharge extends Model
 {
     /**
-     * @var string
+     * @var DateTime
      */
     protected $activatedOn;
 
     /**
-     * @var string
+     * @var DateTime
      */
     protected $billingOn;
 
     /**
-     * @var string
+     * @var DateTime
      */
     protected $cancelledOn;
 
@@ -86,7 +86,7 @@ class RecurringApplicationCharge extends Model
     protected $trialDays;
 
     /**
-     * @var bool
+     * @var DateTime
      */
     protected $trialEndsOn;
 
@@ -96,7 +96,7 @@ class RecurringApplicationCharge extends Model
     protected $updatedAt;
 
     /**
-     * @return string
+     * @return DateTime
      */
     public function getActivatedOn()
     {
@@ -104,15 +104,15 @@ class RecurringApplicationCharge extends Model
     }
 
     /**
-     * @param string $activatedOn
+     * @param DateTime $activatedOn
      */
-    public function setActivatedOn($activatedOn)
+    public function setActivatedOn(DateTime $activatedOn)
     {
         $this->activatedOn = $activatedOn;
     }
 
     /**
-     * @return string
+     * @return DateTime
      */
     public function getBillingOn()
     {
@@ -120,15 +120,15 @@ class RecurringApplicationCharge extends Model
     }
 
     /**
-     * @param string $billingOn
+     * @param DateTime $billingOn
      */
-    public function setBillingOn($billingOn)
+    public function setBillingOn(DateTime $billingOn)
     {
         $this->billingOn = $billingOn;
     }
 
     /**
-     * @return string
+     * @return DateTime
      */
     public function getCancelledOn()
     {
@@ -136,9 +136,9 @@ class RecurringApplicationCharge extends Model
     }
 
     /**
-     * @param string $cancelledOn
+     * @param DateTime $cancelledOn
      */
-    public function setCancelledOn($cancelledOn)
+    public function setCancelledOn(DateTime $cancelledOn)
     {
         $this->cancelledOn = $cancelledOn;
     }
@@ -317,7 +317,7 @@ class RecurringApplicationCharge extends Model
     }
 
     /**
-     * @return bool
+     * @return DateTime
      */
     public function getTrialEndsOn()
     {
@@ -325,9 +325,9 @@ class RecurringApplicationCharge extends Model
     }
 
     /**
-     * @param bool $trialEndsOn
+     * @param DateTime $trialEndsOn
      */
-    public function setTrialEndsOn($trialEndsOn)
+    public function setTrialEndsOn(DateTime $trialEndsOn)
     {
         $this->trialEndsOn = $trialEndsOn;
     }

@@ -113,7 +113,7 @@ class RefundLineItem extends Model
     /**
      * @param LineItem $lineItem
      */
-    public function setLineItem($lineItem)
+    public function setLineItem(LineItem $lineItem)
     {
         $this->lineItem = $lineItem;
     }

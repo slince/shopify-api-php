@@ -185,7 +185,7 @@ class CustomCollection extends Model
     }
 
     /**
-     * Image.
+     * @return CustomCollectionImage
      */
     public function getImage()
     {

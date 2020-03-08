@@ -88,7 +88,7 @@ class PriceRule extends Model
     protected $prerequisiteSubtotalRange;
 
     /**
-     * @var string
+     * @var DateTime
      */
     protected $startsAt;
 
@@ -198,7 +198,7 @@ class PriceRule extends Model
     /**
      * @param DateTime $endsAt
      */
-    public function setEndsAt($endsAt)
+    public function setEndsAt(DateTime $endsAt)
     {
         $this->endsAt = $endsAt;
     }
@@ -364,7 +364,7 @@ class PriceRule extends Model
     }
 
     /**
-     * @return string
+     * @return DateTime
      */
     public function getStartsAt()
     {
@@ -372,9 +372,9 @@ class PriceRule extends Model
     }
 
     /**
-     * @param string $startsAt
+     * @param DateTime $startsAt
      */
-    public function setStartsAt($startsAt)
+    public function setStartsAt(DateTime $startsAt)
     {
         $this->startsAt = $startsAt;
     }

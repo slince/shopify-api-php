@@ -23,7 +23,7 @@ class Location extends Model
     protected $name;
 
     /**
-     * @var string
+     * @var DateTime
      */
     protected $deletedAt;
 
@@ -98,7 +98,7 @@ class Location extends Model
     /**
      * @param string $name
      *
-     * @return Location
+
      */
     public function setName($name)
     {
@@ -106,7 +106,7 @@ class Location extends Model
     }
 
     /**
-     * @return string
+     * @return DateTime
      */
     public function getDeletedAt()
     {
@@ -114,11 +114,11 @@ class Location extends Model
     }
 
     /**
-     * @param string $deletedAt
+     * @param DateTime $deletedAt
      *
-     * @return Location
+
      */
-    public function setDeletedAt($deletedAt)
+    public function setDeletedAt(DateTime $deletedAt)
     {
         $this->deletedAt = $deletedAt;
     }
@@ -134,7 +134,7 @@ class Location extends Model
     /**
      * @param string $address1
      *
-     * @return Location
+
      */
     public function setAddress1($address1)
     {
@@ -152,7 +152,7 @@ class Location extends Model
     /**
      * @param string $address2
      *
-     * @return Location
+
      */
     public function setAddress2($address2)
     {
@@ -170,7 +170,7 @@ class Location extends Model
     /**
      * @param string $city
      *
-     * @return Location
+
      */
     public function setCity($city)
     {
@@ -188,7 +188,7 @@ class Location extends Model
     /**
      * @param string $zip
      *
-     * @return Location
+
      */
     public function setZip($zip)
     {
@@ -206,7 +206,7 @@ class Location extends Model
     /**
      * @param string $province
      *
-     * @return Location
+
      */
     public function setProvince($province)
     {
@@ -224,7 +224,7 @@ class Location extends Model
     /**
      * @param string $country
      *
-     * @return Location
+
      */
     public function setCountry($country)
     {
@@ -242,7 +242,7 @@ class Location extends Model
     /**
      * @param int $phone
      *
-     * @return Location
+
      */
     public function setPhone($phone)
     {
@@ -258,7 +258,7 @@ class Location extends Model
     }
 
     /**
-     * @return Location
+
      */
     public function setCreatedAt(DateTime $createdAt)
     {
@@ -274,7 +274,7 @@ class Location extends Model
     }
 
     /**
-     * @return Location
+
      */
     public function setUpdatedAt(DateTime $updatedAt)
     {
@@ -292,7 +292,7 @@ class Location extends Model
     /**
      * @param string $countryCode
      *
-     * @return Location
+
      */
     public function setCountryCode($countryCode)
     {
@@ -310,7 +310,7 @@ class Location extends Model
     /**
      * @param string $countryName
      *
-     * @return Location
+
      */
     public function setCountryName($countryName)
     {
@@ -328,7 +328,7 @@ class Location extends Model
     /**
      * @param string $provinceCode
      *
-     * @return Location
+
      */
     public function setProvinceCode($provinceCode)
     {

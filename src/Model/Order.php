@@ -30,6 +30,11 @@ class Order extends Model
     /**
      * @var DateTime
      */
+    protected $deletedAt;
+
+    /**
+     * @var DateTime
+     */
     protected $updatedAt;
 
     /**
@@ -133,7 +138,7 @@ class Order extends Model
     protected $landingSite;
 
     /**
-     * @var string
+     * @var DateTime
      */
     protected $cancelledAt;
 
@@ -178,7 +183,7 @@ class Order extends Model
     protected $sourceUrl;
 
     /**
-     * @var string
+     * @var DateTime
      */
     protected $processedAt;
 
@@ -298,7 +303,12 @@ class Order extends Model
     protected $refunds;
 
     /**
-     * @var array
+     * @var Transaction[]
+     */
+    protected $transactions;
+
+    /**
+     * @var PaymentDetails
      */
     protected $paymentDetails;
 
@@ -339,6 +349,14 @@ class Order extends Model
     public function setClosedAt(DateTime $closedAt)
     {
         $this->closedAt = $closedAt;
+    }
+
+    /**
+     * @param DateTime $deletedAt
+     */
+    public function setDeletedAt(DateTime $deletedAt)
+    {
+        $this->deletedAt = $deletedAt;
     }
 
     /**
@@ -675,7 +693,7 @@ class Order extends Model
     }
 
     /**
-     * @return string
+     * @return DateTime
      */
     public function getCancelledAt()
     {
@@ -683,9 +701,9 @@ class Order extends Model
     }
 
     /**
-     * @param string $cancelledAt
+     * @param DateTime $cancelledAt
      */
-    public function setCancelledAt($cancelledAt)
+    public function setCancelledAt(DateTime $cancelledAt)
     {
         $this->cancelledAt = $cancelledAt;
     }
@@ -819,7 +837,7 @@ class Order extends Model
     }
 
     /**
-     * @return string
+     * @return DateTime
      */
     public function getProcessedAt()
     {
@@ -827,9 +845,9 @@ class Order extends Model
     }
 
     /**
-     * @param string $processedAt
+     * @param DateTime $processedAt
      */
-    public function setProcessedAt($processedAt)
+    public function setProcessedAt(DateTime $processedAt)
     {
         $this->processedAt = $processedAt;
     }
@@ -1042,6 +1060,11 @@ class Order extends Model
         $this->taxLines = $taxLines;
     }
 
+    public function addTaxLine(TaxLine $taxLine)
+    {
+        $this->taxLines[] = $taxLine;
+    }
+
     /**
      * @return array
      */
@@ -1106,6 +1129,11 @@ class Order extends Model
         $this->lineItems = $lineItems;
     }
 
+    public function addLineItem(LineItem $lineItem)
+    {
+        $this->lineItems[] = $lineItem;
+    }
+
     /**
      * @return ShippingLine[]
      */
@@ -1120,6 +1148,11 @@ class Order extends Model
     public function setShippingLines($shippingLines)
     {
         $this->shippingLines = $shippingLines;
+    }
+
+    public function addShippingLine($shippingLine)
+    {
+        $this->shippingLines[] = $shippingLine;
     }
 
     /**
@@ -1164,6 +1197,11 @@ class Order extends Model
         $this->fulfillments = $fulfillments;
     }
 
+    public function addFulfillment(Fulfillment $fulfillment)
+    {
+        $this->fulfillments[] = $fulfillment;
+    }
+
     /**
      * @return ClientDetails
      */
@@ -1194,7 +1232,39 @@ class Order extends Model
     }
 
     /**
-     * @return array
+     * @param Refund $refund
+     */
+    public function addRefund(Refund $refund)
+    {
+        $this->refunds[] = $refund;
+    }
+
+    /**
+     * @return Transaction[]
+     */
+    public function getTransactions(): array
+    {
+        return $this->transactions;
+    }
+
+    /**
+     * @param Transaction[] $transactions
+     */
+    public function setTransactions(array $transactions): void
+    {
+        $this->transactions = $transactions;
+    }
+
+    /**
+     * @param Transaction $transaction
+     */
+    public function addTransaction(Transaction $transaction)
+    {
+        $this->transactions[] = $transaction;
+    }
+
+    /**
+     * @return PaymentDetails
      */
     public function getPaymentDetails()
     {
@@ -1202,9 +1272,9 @@ class Order extends Model
     }
 
     /**
-     * @param array $paymentDetails
+     * @param PaymentDetails $paymentDetails
      */
-    public function setPaymentDetails($paymentDetails)
+    public function setPaymentDetails(PaymentDetails $paymentDetails)
     {
         $this->paymentDetails = $paymentDetails;
     }
@@ -1223,6 +1293,14 @@ class Order extends Model
     public function setDiscountApplications($discountApplications)
     {
         $this->discountApplications = $discountApplications;
+    }
+
+    /**
+     * @param DiscountApplication $discountApplication
+     */
+    public function addDiscountApplication(DiscountApplication $discountApplication)
+    {
+        $this->discountApplications[] = $discountApplication;
     }
 
     /**

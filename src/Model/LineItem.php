@@ -124,7 +124,7 @@ class LineItem extends Model
     /**
      * @param int $fulfillableQuantity
      *
-     * @return LineItem
+
      */
     public function setFulfillableQuantity($fulfillableQuantity)
     {
@@ -142,7 +142,7 @@ class LineItem extends Model
     /**
      * @param string $fulfillmentService
      *
-     * @return LineItem
+
      */
     public function setFulfillmentService($fulfillmentService)
     {
@@ -160,7 +160,7 @@ class LineItem extends Model
     /**
      * @param string $fulfillmentStatus
      *
-     * @return LineItem
+
      */
     public function setFulfillmentStatus($fulfillmentStatus)
     {
@@ -178,7 +178,7 @@ class LineItem extends Model
     /**
      * @param int $grams
      *
-     * @return LineItem
+
      */
     public function setGrams($grams)
     {
@@ -196,7 +196,7 @@ class LineItem extends Model
     /**
      * @param string $price
      *
-     * @return LineItem
+
      */
     public function setPrice($price)
     {
@@ -214,7 +214,7 @@ class LineItem extends Model
     /**
      * @param int $productId
      *
-     * @return LineItem
+
      */
     public function setProductId($productId)
     {
@@ -232,7 +232,7 @@ class LineItem extends Model
     /**
      * @param int $quantity
      *
-     * @return LineItem
+
      */
     public function setQuantity($quantity)
     {
@@ -250,7 +250,7 @@ class LineItem extends Model
     /**
      * @param bool $requiresShipping
      *
-     * @return LineItem
+
      */
     public function setRequiresShipping($requiresShipping)
     {
@@ -268,7 +268,7 @@ class LineItem extends Model
     /**
      * @param string $sku
      *
-     * @return LineItem
+
      */
     public function setSku($sku)
     {
@@ -286,7 +286,7 @@ class LineItem extends Model
     /**
      * @param string $title
      *
-     * @return LineItem
+
      */
     public function setTitle($title)
     {
@@ -304,7 +304,7 @@ class LineItem extends Model
     /**
      * @param int $variantId
      *
-     * @return LineItem
+
      */
     public function setVariantId($variantId)
     {
@@ -322,7 +322,7 @@ class LineItem extends Model
     /**
      * @param string $variantTitle
      *
-     * @return LineItem
+
      */
     public function setVariantTitle($variantTitle)
     {
@@ -340,7 +340,7 @@ class LineItem extends Model
     /**
      * @param string $vendor
      *
-     * @return LineItem
+
      */
     public function setVendor($vendor)
     {
@@ -358,7 +358,7 @@ class LineItem extends Model
     /**
      * @param string $name
      *
-     * @return LineItem
+
      */
     public function setName($name)
     {
@@ -376,7 +376,7 @@ class LineItem extends Model
     /**
      * @param bool $giftCard
      *
-     * @return LineItem
+
      */
     public function setGiftCard($giftCard)
     {
@@ -394,7 +394,7 @@ class LineItem extends Model
     /**
      * @param array $properties
      *
-     * @return LineItem
+
      */
     public function setProperties($properties)
     {
@@ -412,7 +412,7 @@ class LineItem extends Model
     /**
      * @param bool $taxable
      *
-     * @return LineItem
+
      */
     public function setTaxable($taxable)
     {
@@ -430,7 +430,7 @@ class LineItem extends Model
     /**
      * @param TaxLine[] $taxLines
      *
-     * @return LineItem
+
      */
     public function setTaxLines($taxLines)
     {
@@ -448,7 +448,7 @@ class LineItem extends Model
     /**
      * @param float $totalDiscount
      *
-     * @return LineItem
+
      */
     public function setTotalDiscount($totalDiscount)
     {
@@ -466,10 +466,17 @@ class LineItem extends Model
     /**
      * @param DiscountAllocation[] $discountAllocations
      *
-     * @return LineItem
      */
     public function setDiscountAllocations($discountAllocations)
     {
         $this->discountAllocations = $discountAllocations;
+    }
+
+    /**
+     * @param DiscountAllocation $discountAllocation
+     */
+    public function addDiscountAllocation(DiscountAllocation $discountAllocation)
+    {
+        $this->discountAllocations[] = $discountAllocation;
     }
 }

@@ -78,12 +78,12 @@ class DraftOrder extends Model
     protected $lineItems = [];
 
     /**
-     * @var Address
+     * @var OrderAddress
      */
     protected $shippingAddress;
 
     /**
-     * @var Address
+     * @var OrderAddress
      */
     protected $billingAddress;
 
@@ -217,7 +217,7 @@ class DraftOrder extends Model
     /**
      * @param DateTime $invoiceSentAt
      */
-    public function setInvoiceSentAt($invoiceSentAt)
+    public function setInvoiceSentAt(DateTime $invoiceSentAt)
     {
         $this->invoiceSentAt = $invoiceSentAt;
     }
@@ -259,7 +259,7 @@ class DraftOrder extends Model
     /**
      * @param bool $taxExempt
      */
-    public function setTaxExempt($taxExempt)
+    public function setTaxExempt(bool $taxExempt)
     {
         $this->taxExempt = $taxExempt;
     }
@@ -275,7 +275,7 @@ class DraftOrder extends Model
     /**
      * @param DateTime $completedAt
      */
-    public function setCompletedAt($completedAt)
+    public function setCompletedAt(DateTime $completedAt)
     {
         $this->completedAt = $completedAt;
     }
@@ -328,8 +328,13 @@ class DraftOrder extends Model
         $this->lineItems = $lineItems;
     }
 
+    public function addLineItem(LineItem $lineItem)
+    {
+        $this->lineItems[] = $lineItem;
+    }
+
     /**
-     * @return Address
+     * @return OrderAddress
      */
     public function getShippingAddress()
     {
@@ -337,15 +342,15 @@ class DraftOrder extends Model
     }
 
     /**
-     * @param Address $shippingAddress
+     * @param OrderAddress $shippingAddress
      */
-    public function setShippingAddress($shippingAddress)
+    public function setShippingAddress(OrderAddress $shippingAddress)
     {
         $this->shippingAddress = $shippingAddress;
     }
 
     /**
-     * @return Address
+     * @return OrderAddress
      */
     public function getBillingAddress()
     {
@@ -353,9 +358,9 @@ class DraftOrder extends Model
     }
 
     /**
-     * @param Address $billingAddress
+     * @param OrderAddress $billingAddress
      */
-    public function setBillingAddress($billingAddress)
+    public function setBillingAddress(OrderAddress $billingAddress)
     {
         $this->billingAddress = $billingAddress;
     }
@@ -438,6 +443,14 @@ class DraftOrder extends Model
     public function setTaxLines($taxLines)
     {
         $this->taxLines = $taxLines;
+    }
+
+    /**
+     * @param TaxLine $taxLine
+     */
+    public function addTaxLine(TaxLine $taxLine)
+    {
+        $this->taxLines[] = $taxLine;
     }
 
     /**

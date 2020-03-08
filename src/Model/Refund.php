@@ -173,6 +173,14 @@ class Refund extends Model
     }
 
     /**
+     * @param RefundLineItem $refundLineItem
+     */
+    public function addRefundLineItem($refundLineItem)
+    {
+        $this->refundLineItems[] = $refundLineItem;
+    }
+
+    /**
      * @return Transaction[]
      */
     public function getTransactions()
@@ -186,5 +194,13 @@ class Refund extends Model
     public function setTransactions($transactions)
     {
         $this->transactions = $transactions;
+    }
+
+    /**
+     * @param Transaction $transaction
+     */
+    public function addTransaction(Transaction $transaction)
+    {
+        $this->transactions[] = $transaction;
     }
 }

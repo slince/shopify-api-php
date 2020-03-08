@@ -227,17 +227,14 @@ class SmartCollection extends Model
     }
 
     /**
-Image
+     * @return SmartCollectionImage
      */
     public function getImage()
     {
         return $this->image;
     }
 
-    /**
-     * @param SmartCollectionImage $image
-     */
-    public function setImage($image)
+    public function setImage(SmartCollectionImage $image)
     {
         $this->image = $image;
     }

@@ -395,6 +395,14 @@ class Customer extends Model
     }
 
     /**
+     * @param Address $address
+     */
+    public function addAddress(Address $address)
+    {
+        $this->addresses[] = $address;
+    }
+
+    /**
      * @return Address
      */
     public function getDefaultAddress()
