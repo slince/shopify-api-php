@@ -78,14 +78,14 @@ class Product extends Model
     protected $variants;
 
     /**
-     * @var Image[]
-     */
-    protected $images;
-
-    /**
      * @var Image
      */
     protected $image;
+
+    /**
+     * @var Image[]
+     */
+    protected $images;
 
     /**
      * @var Option[]
@@ -281,6 +281,22 @@ class Product extends Model
     }
 
     /**
+     * @return Image
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    /**
+     * @param Image $image
+     */
+    public function setImage(Image $image)
+    {
+        $this->image = $image;
+    }
+
+    /**
      * @return Image[]
      */
     public function getImages()
@@ -291,27 +307,17 @@ class Product extends Model
     /**
      * @param Image[] $images
      */
-    public function setImages($images)
+    public function setImages(array $images)
     {
         $this->images = $images;
     }
 
+    /**
+     * @param Image $image
+     */
     public function addImage(Image $image)
     {
         $this->images[] = $image;
-    }
-
-    /**
-     * @return Image
-     */
-    public function getImage()
-    {
-        return $this->image;
-    }
-
-    public function setImage(Image $image)
-    {
-        $this->image = $image;
     }
 
     /**

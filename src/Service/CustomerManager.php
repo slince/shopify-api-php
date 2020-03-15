@@ -12,6 +12,8 @@
 namespace Slince\Shopify\Service;
 
 use Slince\Shopify\Model\Customer;
+use Slince\Shopify\Model\CustomerInvite;
+use Slince\Shopify\Model\Order;
 use Slince\Shopify\Service\Contracts\CustomerManagerInterface;
 
 class CustomerManager extends GeneralCurdable implements CustomerManagerInterface
@@ -70,5 +72,15 @@ class CustomerManager extends GeneralCurdable implements CustomerManagerInterfac
         $data = $this->client->get('customers/search', $query);
 
         return $this->createMany(reset($data));
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function orders($customerId)
+    {
+        $data = $this->client->get("customers/{$customerId}/orders");
+
+        return $this->createMany(reset($data), Order::class);
     }
 }

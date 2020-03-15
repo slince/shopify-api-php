@@ -38,6 +38,11 @@ class Image extends Model
     protected $updatedAt;
 
     /**
+     * @var string
+     */
+    protected $alt;
+
+    /**
      * @var int
      */
     protected $width;
@@ -114,6 +119,23 @@ class Image extends Model
     {
         $this->updatedAt = $updatedAt;
     }
+
+    /**
+     * @return string
+     */
+    public function getAlt()
+    {
+        return $this->alt;
+    }
+
+    /**
+     * @param string $alt
+     */
+    public function setAlt($alt): void
+    {
+        $this->alt = $alt;
+    }
+
 
     /**
      * @return string

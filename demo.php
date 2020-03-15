@@ -1,4 +1,7 @@
 <?php
+
+use Symfony\Component\PropertyInfo\Extractor\ReflectionExtractor;
+
 include __DIR__ . '/vendor/autoload.php';
 
 $hydrator = new \Slince\Shopify\Hydrator\Hydrator();
@@ -161,7 +164,7 @@ $json = <<<EOT
         ]
       }
     ],
-    "image": {
+     "image": {
       "id": 850703190,
       "product_id": 632910392,
       "position": 1,
@@ -176,5 +179,14 @@ $json = <<<EOT
 }
 EOT;
 
-$image = $hydrator->hydrate(\Slince\Shopify\Model\Product::class, json_decode($json, true)['product']);
-var_dump($image);
+//$image = $hydrator->hydrate(\Slince\Shopify\Model\Product::class, json_decode($json, true)['product']);
+
+//print_r($image->getImage());
+//print_r($image->getImage());
+
+$extractor = new ReflectionExtractor();
+
+$array1 = $extractor->getTypes(\Slince\Shopify\Model\Product::class, 'image');
+$array2 = $extractor->getTypes(\Slince\Shopify\Model\Product::class, 'images');
+print_r($array1);
+print_r($array2);
