@@ -19,11 +19,19 @@ $pagination = $client->getProductManager()->paginate([
     'created_at_min' => '2014-04-25T16:15:47-04:00'
 ]);
 
-// $pagination is instance of `Slince\Shopify\Common\CursorBasedPagination`
+// $pagination is instance of `Slince\Shopify\CursorBasedPagination`
 $products = $pagination->current();
-while ($pagination->hasNext()) {
+
+if ($pagination->hasNext()) {
     $products = $pagination->next();
 }
+
+
+# to persist across requests you can use next_page_info and previous_page_info
+$nextPageInfo = $pagination->getNextPageInfo();
+$prevPageInfo = $pagination->getPrevPageInfo();
+
+$products = $pagination->current($nextPageInfo);
 
 //Get the specified product
 $product = $client->getProductManager()->find(12800);

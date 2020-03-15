@@ -1,67 +1,18 @@
 <?php
 include __DIR__ . '/vendor/autoload.php';
 
-class Image
-{
-    protected $src;
-}
+$credential = new \Slince\Shopify\PublicAppCredential('16cb595223c5af97b2cc5c5f6364a3b8');
 
+$client = new \Slince\Shopify\Client($credential, 'super-popup.myshopify.com', ['metaCacheDir' => './tests/tmp']);
 
-class Product
-{
-    /**
-     * @var Image
-     */
-    protected $image;
+$pagination = $client->getProductManager()->paginate(['limit' => 2]);
 
-    /**
-     * @var Image[]
-     */
-    protected $images;
+$products = $pagination->current();
 
-    /**
-     * @return Image
-     */
-    public function getImage()
-    {
-        return $this->image;
-    }
+print_r($products[1]->getTitle()); echo PHP_EOL;
 
-    /**
-     * @param Image $image
-     */
-    public function setImage(Image $image)
-    {
-        $this->image = $image;
-    }
+$products = $pagination->next();
+print_r($products[1]->getTitle());echo PHP_EOL;
 
-    /**
-     * @return Image[]
-     */
-    public function getImages()
-    {
-        return $this->images;
-    }
-
-    /**
-     * @param Image[] $images
-     */
-    public function setImages($images)
-    {
-        $this->images = $images;
-    }
-
-    /**
-     * @param Image $image
-     */
-    public function addImage(Image $image)
-    {
-        $this->images[] = $image;
-    }
-}
-
-$extractor = new Symfony\Component\PropertyInfo\Extractor\ReflectionExtractor();
-$array1 = $extractor->getTypes(Product::class, 'image');
-$array2 = $extractor->getTypes(Product::class, 'images');
-print_r($array1);
-print_r($array2);
+$products = $pagination->next();
+print_r($products[1]->getTitle());echo PHP_EOL;

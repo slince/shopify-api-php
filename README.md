@@ -54,8 +54,7 @@ $client = new Slince\Shopify\Client($credential, 'your-store.myshopify.com', [
 ```php
 $products = $client->getProductManager()->findAll([
     // Filter your product
-    'collection_id' => 841564295
-    'page' => 2 // deprecated
+    'collection_id' => 841564295,
 ]);
 ```
 
@@ -74,6 +73,12 @@ $currentProducts = $pagination->current(); //current page
 while ($pagination->hasNext()) {
     $nextProducts = $pagination->next();
 }
+
+# to persist across requests you can use next_page_info and previous_page_info
+$nextPageInfo = $pagination->getNextPageInfo();
+$prevPageInfo = $pagination->getPrevPageInfo();
+
+$products = $pagination->current($nextPageInfo);
 ```
 
 * Get the specified product
@@ -115,43 +120,43 @@ print_r($product->getImages());
 
 Available managers:
 
-- [Article](./src/Manager/Article/ArticleManagerInterface.php)
-- [Asset](./src/Manager/Asset/AssetManagerInterface.php)
-- [Blog](./src/Manager/Blog/BlogManagerInterface.php)
-- [CarrierService](./src/Manager/CarrierService/CarrierServiceManagerInterface.php)
-- [Collect](./src/Manager/Collect/CollectManagerInterface.php)
-- [Comment](./src/Manager/Comment/CommentManagerInterface.php)
-- [Country](./src/Manager/Country/CountryManagerInterface.php)
-- [CustomCollection](./src/Manager/CustomCollection/CustomCollectionManagerInterface.php)
-- [Customer](./src/Manager/Customer/CustomerManagerInterface.php)
-- [CustomerAddress](./src/Manager/CustomerAddress/AddressManagerInterface.php)
-- [CustomerSavedSearch](./src/Manager/CustomerSavedSearch/CustomerSavedSearchManagerInterface.php)
-- [DiscountCode](./src/Manager/DiscountCode/DiscountCodeManagerInterface.php)
-- [DraftOrder](./src/Manager/DraftOrder/DraftOrderManagerInterface.php)
-- [Fulfillment](./src/Manager/Fulfillment/FulfillmentManagerInterface.php)
-- [FulfillmentService](./src/Manager/FulfillmentService/FulfillmentServiceManagerInterface.php)
-- [InventoryItem](./src/Manager/InventoryItem/InventoryItemManagerInterface.php)
-- [InventoryLevel](./src/Manager/InventoryLevel/InventoryLevelManagerInterface.php)
-- [Location](./src/Manager/Location/LocationManagerInterface.php)
-- [Order](./src/Manager/Order/OrderManagerInterface.php)
-- [OrderRisk](./src/Manager/OrderRisk/RiskManagerInterface.php)
-- [Page](./src/Manager/Page/PageManagerInterface.php)
-- [Policy](./src/Manager/Policy/PolicyManagerInterface.php)
-- [PriceRule](./src/Manager/PriceRule/PriceRuleManagerInterface.php)
-- [Product](./src/Manager/Product/ProductManagerInterface.php)
-- [ProductImage](./src/Manager/ProductImage/ImageManagerInterface.php)
-- [ProductVariant](./src/Manager/ProductVariant/VariantManagerInterface.php)
-- [Province](./src/Manager/Province/ProvinceManagerInterface.php)
-- [RecurringApplicationCharge](./src/Manager/RecurringApplicationCharge/RecurringApplicationChargeManagerInterface.php)
-- [Redirect](./src/Manager/Redirect/RedirectManagerInterface.php)
-- [Refund](./src/Manager/Refund/RefundManagerInterface.php)
-- [ScriptTag](./src/Manager/ScriptTag/ScriptTagManagerInterface.php)
-- [ShippingZone](./src/Manager/ShippingZone/ShippingZoneManagerInterface.php)
-- [Shop](./src/Manager/Shop/ShopManagerInterface.php)
-- [SmartCollection](./src/Manager/SmartCollection/SmartCollectionManagerInterface.php)
-- [Theme](./src/Manager/Theme/ThemeManagerInterface.php)
-- [Transaction](./src/Manager/Transaction/TransactionManagerInterface.php)
-- [Webhook](./src/Manager/Webhook/WebhookManagerInterface.php)
+- [Article](./src/Service/Contracts/ArticleManagerInterface.php)
+- [Asset](./src/Service/Contracts/AssetManagerInterface.php)
+- [Blog](./src/Service/Contracts/BlogManagerInterface.php)
+- [CarrierService](./src/Service/Contracts/CarrierServiceManagerInterface.php)
+- [Collect](./src/Service/Contracts/CollectManagerInterface.php)
+- [Comment](./src/Service/Contracts/CommentManagerInterface.php)
+- [Country](./src/Service/Contracts/CountryManagerInterface.php)
+- [CustomCollection](./src/Service/Contracts/CustomCollectionManagerInterface.php)
+- [Customer](./src/Service/Contracts/CustomerManagerInterface.php)
+- [CustomerAddress](./src/Service/Contracts/AddressManagerInterface.php)
+- [CustomerSavedSearch](./src/Service/Contracts/CustomerSavedSearchManagerInterface.php)
+- [DiscountCode](./src/Service/Contracts/DiscountCodeManagerInterface.php)
+- [DraftOrder](./src/Service/Contracts/DraftOrderManagerInterface.php)
+- [Fulfillment](./src/Service/Contracts/FulfillmentManagerInterface.php)
+- [FulfillmentService](./src/Service/Contracts/FulfillmentServiceManagerInterface.php)
+- [InventoryItem](./src/Service/Contracts/InventoryItemManagerInterface.php)
+- [InventoryLevel](./src/Service/Contracts/InventoryLevelManagerInterface.php)
+- [Location](./src/Service/Contracts/LocationManagerInterface.php)
+- [Order](./src/Service/Contracts/OrderManagerInterface.php)
+- [OrderRisk](./src/Service/Contracts/RiskManagerInterface.php)
+- [Page](./src/Service/Contracts/PageManagerInterface.php)
+- [Policy](./src/Service/Contracts/PolicyManagerInterface.php)
+- [PriceRule](./src/Service/Contracts/PriceRuleManagerInterface.php)
+- [Product](./src/Service/Contracts/ProductManagerInterface.php)
+- [Image](./src/Service/Contracts/ImageManagerInterface.php)
+- [Variant](./src/Service/Contracts/VariantManagerInterface.php)
+- [Province](./src/Service/Contracts/ProvinceManagerInterface.php)
+- [RecurringApplicationCharge](./src/Service/Contracts/RecurringApplicationChargeManagerInterface.php)
+- [Redirect](./src/Service/Contracts/RedirectManagerInterface.php)
+- [Refund](./src/Service/Contracts/RefundManagerInterface.php)
+- [ScriptTag](./src/Service/Contracts/ScriptTagManagerInterface.php)
+- [ShippingZone](./src/Service/Contracts/ShippingZoneManagerInterface.php)
+- [Shop](./src/Service/Contracts/ShopManagerInterface.php)
+- [SmartCollection](./src/Service/Contracts/SmartCollectionManagerInterface.php)
+- [Theme](./src/Service/Contracts/ThemeManagerInterface.php)
+- [Transaction](./src/Service/Contracts/TransactionManagerInterface.php)
+- [Webhook](./src/Service/Contracts/WebhookManagerInterface.php)
 
 You can access the manager like `$client->getProductManager()`, `$client->getOrderManager()`. 
 

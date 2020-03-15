@@ -20,6 +20,7 @@ abstract class GeneralCurdable extends AbstractManager
     /**
      * Finds the resources by given query condition.
      *
+     * @param array $query
      * @return ModelInterface[]
      */
     public function findAll(array $query = [])
@@ -32,6 +33,7 @@ abstract class GeneralCurdable extends AbstractManager
     /**
      * Create a paging query.
      *
+     * @param array $query
      * @return CursorBasedPagination
      * @codeCoverageIgnore
      */
@@ -70,7 +72,7 @@ abstract class GeneralCurdable extends AbstractManager
      * Updates a resource.
      *
      * @param int $id
-     *
+     * @param array $data
      * @return ModelInterface
      */
     public function update($id, array $data)
@@ -82,7 +84,7 @@ abstract class GeneralCurdable extends AbstractManager
 
     /**
      * Creates a resource.
-     *
+     * @param array $data
      * @return ModelInterface
      */
     public function create(array $data)
@@ -94,7 +96,7 @@ abstract class GeneralCurdable extends AbstractManager
 
     /**
      * Gets the number of resource with given query.
-     *
+     * @param array $query
      * @return int
      */
     public function count(array $query = [])

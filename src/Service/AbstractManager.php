@@ -34,6 +34,13 @@ abstract class AbstractManager implements ManagerInterface
     abstract public function getResourceName();
 
     /**
+     * Gets the model class.
+     *
+     * @return string
+     */
+    abstract public function getModelClass();
+
+    /**
      * {@inheritdoc}
      */
     public function getClient()
@@ -65,13 +72,6 @@ abstract class AbstractManager implements ManagerInterface
 
         return $this->client->getHydrator()->hydrate($modelClass, $data);
     }
-
-    /**
-     * Gets the model class.
-     *
-     * @return string
-     */
-    abstract public function getModelClass();
 
     /**
      * {@inheritdoc}
