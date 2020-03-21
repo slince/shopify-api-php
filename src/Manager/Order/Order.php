@@ -28,14 +28,24 @@ class Order extends Model
     protected $email;
 
     /**
-     * @var string
+     * @var \DateTimeInterface
      */
     protected $closedAt;
 
     /**
-     * @var string
+     * @var \DateTimeInterface
+     */
+    protected $createdAt;
+
+    /**
+     * @var \DateTimeInterface
      */
     protected $updatedAt;
+
+    /**
+     * @var \DateTimeInterface
+     */
+    protected $deletedAt;
 
     /**
      * @var int
@@ -343,7 +353,7 @@ class Order extends Model
     }
 
     /**
-     * @return string
+     * @return \DateTimeInterface
      */
     public function getClosedAt()
     {
@@ -351,7 +361,7 @@ class Order extends Model
     }
 
     /**
-     * @param string $closedAt
+     * @param \DateTimeInterface $closedAt
      *
      * @return Order
      */
@@ -363,7 +373,23 @@ class Order extends Model
     }
 
     /**
-     * @return string
+     * @return \DateTimeInterface
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * @param \DateTimeInterface $createdAt
+     */
+    public function setCreatedAt($createdAt)
+    {
+        $this->createdAt = $createdAt;
+    }
+
+    /**
+     * @return \DateTimeInterface
      */
     public function getUpdatedAt()
     {
@@ -371,7 +397,7 @@ class Order extends Model
     }
 
     /**
-     * @param string $updatedAt
+     * @param \DateTimeInterface $updatedAt
      *
      * @return Order
      */
@@ -381,6 +407,23 @@ class Order extends Model
 
         return $this;
     }
+
+    /**
+     * @return \DateTimeInterface
+     */
+    public function getDeletedAt()
+    {
+        return $this->deletedAt;
+    }
+
+    /**
+     * @param \DateTimeInterface $deletedAt
+     */
+    public function setDeletedAt($deletedAt)
+    {
+        $this->deletedAt = $deletedAt;
+    }
+
 
     /**
      * @return int
