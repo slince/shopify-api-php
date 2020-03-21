@@ -95,4 +95,13 @@ interface CustomerManagerInterface extends ManagerInterface
      * @return Customer[]
      */
     public function search(array $query = []);
+
+    /**
+     * Retrieves all orders belonging to a customer.
+     *
+     * @param string $id
+     *
+     * @return \Slince\Shopify\Manager\Order\Order[]
+     */
+    public function orders($id);
 }
