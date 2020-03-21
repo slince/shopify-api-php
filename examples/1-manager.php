@@ -25,6 +25,12 @@ while ($pagination->hasNext()) {
     $products = $pagination->next();
 }
 
+# to persist across requests you can use next_page_info and previous_page_info
+$nextPageInfo = $pagination->getNextPageInfo();
+$prevPageInfo = $pagination->getPrevPageInfo();
+
+$products = $pagination->current($nextPageInfo);
+
 //Get the specified product
 $product = $client->getProductManager()->find(12800);
 
