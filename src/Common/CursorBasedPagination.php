@@ -114,7 +114,7 @@ class CursorBasedPagination
      */
     public function getNextPageInfo()
     {
-        return $this->links['next'];
+        return isset($this->links['next']) ? $this->links['next'] : null;
     }
 
     /**
@@ -148,6 +148,6 @@ class CursorBasedPagination
      */
     public function getPrevPageInfo()
     {
-        return $this->links['previous'];
+        return isset($this->links['previous']) ? $this->links['previous'] : null;
     }
 }
