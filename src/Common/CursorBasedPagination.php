@@ -51,6 +51,7 @@ class CursorBasedPagination
         $client = $this->manager->getClient();
         $query = $this->query;
         if (null !== $pageInfo) {
+            $query = array_intersect_key($query, ['limit' => true, 'fields' => true]);
             $query['page_info'] = $pageInfo;
         }
         $data = $client->get($this->resource, $query);
