@@ -42,3 +42,7 @@ Slince\Shopify\Manager\Order\LineItem:
             type: float
         discountAllocations:
             type: array<Slince\Shopify\Manager\Order\DiscountAllocation>
+        appliedDiscount:
+            type: array
+        custom:
+            type: boolean
