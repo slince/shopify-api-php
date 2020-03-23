@@ -114,6 +114,52 @@ class LineItem extends Model
      * @var DiscountAllocation[]
      */
     protected $discountAllocations;
+    
+    /**
+     * @var array
+     */
+    protected $appliedDiscount;
+
+    /**
+     * @var bool
+     */
+    protected $custom;
+
+    /**
+     * @return bool
+     */
+    public function isCustom()
+    {
+        return $this->custom;
+    }
+
+    /**
+     * @param bool $custom
+     *
+     * @return LineItem
+     */
+    public function setCustom($custom)
+    {
+        $this->custom = $custom;
+
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getAppliedDiscount()
+    {
+        return $this->appliedDiscount;
+    }
+
+    /**
+     * @param array $appliedDiscount
+     */
+    public function setAppliedDiscount($appliedDiscount)
+    {
+        $this->appliedDiscount = $appliedDiscount;
+    }
 
     /**
      * @return int
