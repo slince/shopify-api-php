@@ -7,31 +7,31 @@ class OrderAddress
     use AddressTrait;
 
     /**
-     * @var float
+     * @var float|null
      */
     protected $latitude;
 
     /**
-     * @var float
+     * @var float|null
      */
     protected $longitude;
 
-    public function getLatitude(): float
+    public function getLatitude(): ?float
     {
         return $this->latitude;
     }
 
-    public function setLatitude(float $latitude): void
+    public function setLatitude(?float $latitude): void
     {
         $this->latitude = $latitude;
     }
 
-    public function getLongitude(): float
+    public function getLongitude(): ?float
     {
         return $this->longitude;
     }
 
-    public function setLongitude(float $longitude): void
+    public function setLongitude(?float $longitude): void
     {
         $this->longitude = $longitude;
     }
