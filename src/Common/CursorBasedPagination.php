@@ -11,7 +11,7 @@ use Slince\Shopify\Exception\RuntimeException;
 
 class CursorBasedPagination
 {
-    const LINK_REGEX = '/<(.*page_info=([a-z0-9\-]+).*)>; rel="?{type}"?/i';
+    const LINK_REGEX = '/<(.*page_info=([a-z0-9\-_]+).*)>; rel="?{type}"?/i';
 
     /**
      * @var string
