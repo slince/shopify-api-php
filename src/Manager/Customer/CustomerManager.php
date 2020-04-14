@@ -12,6 +12,7 @@
 namespace Slince\Shopify\Manager\Customer;
 
 use Slince\Shopify\Common\Manager\GeneralCurdable;
+use Slince\Shopify\Manager\Order\Order;
 
 class CustomerManager extends GeneralCurdable implements CustomerManagerInterface
 {
@@ -78,6 +79,6 @@ class CustomerManager extends GeneralCurdable implements CustomerManagerInterfac
     {
         $data = $this->client->get('customers/'.$id.'/orders');
 
-        return $this->createMany(reset($data));
+        return $this->createMany(reset($data), Order::class);
     }
 }
