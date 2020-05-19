@@ -6,6 +6,8 @@ Slince\Shopify\Manager\Order\ShippingLine:
             type: string
         price:
             type: float
+        discountedPrice:
+            type: float
         source:
             type: string
         title:
