@@ -11,7 +11,7 @@
 
 namespace Slince\Shopify;
 
-use Doctrine\Common\Inflector\Inflector;
+use Slince\Shopify\Inflector;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Psr7\Request;
 use Slince\Di\Container;
