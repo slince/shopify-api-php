@@ -1,6 +1,7 @@
 /vendor/
 .idea/
 composer.lock
+demo.php
 /logs/
 /tests/tmp/*
 *tmp*
