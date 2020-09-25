@@ -11,7 +11,7 @@
 
 namespace Slince\Shopify;
 
-use Slince\Shopify\Inflector;
+use GuzzleHttp\Utils;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Psr7\Request;
 use Slince\Di\Container;
@@ -325,7 +325,7 @@ class Client
         $body = $response->getBody();
 
         return $body->getSize()
-            ? \GuzzleHttp\json_decode($body, true)
+            ? Utils::jsonDecode($body, true)
             : [];
     }
 
