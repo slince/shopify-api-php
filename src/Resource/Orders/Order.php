@@ -2,6 +2,19 @@
 
 namespace Slince\Shopify\Resource\Order;
 
+use Slince\Shopify\Resource\Common\PriceSet;
+use Slince\Shopify\Resource\Customer\Customer;
+use Slince\Shopify\Resource\Orders\Common\ClientDetails;
+use Slince\Shopify\Resource\Orders\Common\DiscountAllocation;
+use Slince\Shopify\Resource\Orders\Common\DiscountCode;
+use Slince\Shopify\Resource\Orders\Common\LineItem;
+use Slince\Shopify\Resource\Orders\Common\NoteAttribute;
+use Slince\Shopify\Resource\Orders\Common\OrderAddress;
+use Slince\Shopify\Resource\Orders\Common\PaymentDetails;
+use Slince\Shopify\Resource\Orders\Common\ShippingLine;
+use Slince\Shopify\Resource\Orders\Common\TaxLine;
+use Slince\Shopify\Resource\Shipping\Fulfillment;
+
 class Order
 {
     /**
@@ -30,11 +43,6 @@ class Order
     protected $updatedAt;
 
     /**
-     * @var \DateTimeInterface
-     */
-    protected $deletedAt;
-
-    /**
      * @var int
      */
     protected $number;
@@ -60,22 +68,22 @@ class Order
     protected $test;
 
     /**
-     * @var float
+     * @var string
      */
     protected $totalPrice;
 
     /**
-     * @var float
+     * @var string
      */
     protected $subtotalPrice;
 
     /**
-     * @var float
+     * @var int
      */
     protected $totalWeight;
 
     /**
-     * @var float
+     * @var string
      */
     protected $totalTax;
 
@@ -100,12 +108,12 @@ class Order
     protected $confirmed;
 
     /**
-     * @var float
+     * @var string
      */
     protected $totalDiscounts;
 
     /**
-     * @var float
+     * @var string
      */
     protected $totalLineItemsPrice;
 
@@ -135,7 +143,7 @@ class Order
     protected $landingSite;
 
     /**
-     * @var string
+     * @var \DateTimeInterface
      */
     protected $cancelledAt;
 
@@ -145,7 +153,7 @@ class Order
     protected $cancelReason;
 
     /**
-     * @var float
+     * @var string
      */
     protected $totalPriceUsd;
 
@@ -180,7 +188,7 @@ class Order
     protected $sourceUrl;
 
     /**
-     * @var string
+     * @var \DateTimeInterface
      */
     protected $processedAt;
 
@@ -197,6 +205,16 @@ class Order
     /**
      * @var string
      */
+    protected $customLocale;
+
+    /**
+     * @var string
+     */
+    protected $appId;
+
+    /**
+     * @var string
+     */
     protected $browserIp;
 
     /**
@@ -205,17 +223,22 @@ class Order
     protected $landingSiteRef;
 
     /**
-     * @var string
+     * @var int
      */
     protected $orderNumber;
 
     /**
-     * @var array
+     * @var DiscountAllocation[]
+     */
+    protected $discountApplications;
+
+    /**
+     * @var DiscountCode[]
      */
     protected $discountCodes;
 
     /**
-     * @var array
+     * @var NoteAttribute[]
      */
     protected $noteAttributes;
 
@@ -245,12 +268,12 @@ class Order
     protected $fulfillmentStatus;
 
     /**
-     * @var array
+     * @var TaxLine[]
      */
     protected $taxLines;
 
     /**
-     * @var array
+     * @var string
      */
     protected $tags;
 
@@ -265,24 +288,44 @@ class Order
     protected $orderStatusUrl;
 
     /**
+     * @var string
+     */
+    protected $presentmentCurrency;
+
+    /**
+     * @var PriceSet
+     */
+    protected $totalLineItemsPriceSet;
+
+    /**
+     * @var PriceSet
+     */
+    protected $totalDiscountsSet;
+
+    /**
+     * @var PriceSet
+     */
+    protected $totalShippingPriceSet;
+
+    /**
+     * @var PriceSet
+     */
+    protected $subtotalPriceSet;
+
+    /**
+     * @var PriceSet
+     */
+    protected $totalPriceSet;
+
+    /**
+     * @var PriceSet
+     */
+    protected $totalTaxSet;
+
+    /**
      * @var LineItem[]
      */
     protected $lineItems;
-
-    /**
-     * @var ShippingLine[]
-     */
-    protected $shippingLines;
-
-    /**
-     * @var Address
-     */
-    protected $billingAddress;
-
-    /**
-     * @var Address
-     */
-    protected $shippingAddress;
 
     /**
      * @var Fulfillment[]
@@ -290,14 +333,54 @@ class Order
     protected $fulfillments;
 
     /**
+     * @var Refund[]
+     */
+    protected $refunds;
+
+    /**
+     * @var string
+     */
+    protected $totalTipReceived;
+
+    /**
+     * @var PriceSet
+     */
+    protected $originalTotalDutiesSet;
+
+    /**
+     * @var PriceSet
+     */
+    protected $currentTotalDutiesSet;
+
+    /**
+     * @var string
+     */
+    protected $adminGraphqlApiId;
+
+    /**
+     * @var ShippingLine[]
+     */
+    protected $shippingLines;
+
+    /**
+     * @var OrderAddress
+     */
+    protected $billingAddress;
+
+    /**
+     * @var OrderAddress
+     */
+    protected $shippingAddress;
+
+    /**
      * @var ClientDetails
      */
     protected $clientDetails;
 
     /**
-     * @var Refund[]
+     * @var PaymentDetails
      */
-    protected $refunds;
+    protected $paymentDetails;
 
     /**
      * @var Transaction[]
@@ -305,64 +388,62 @@ class Order
     protected $transactions;
 
     /**
-     * @var array
-     */
-    protected $paymentDetails;
-
-    /**
-     * @var DiscountApplication[]
-     */
-    protected $discountApplications;
-
-    /**
      * @var Customer
      */
     protected $customer;
 
     /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId(int $id): void
+    {
+        $this->id = $id;
+    }
+
+    /**
      * @return string
      */
-    public function getEmail()
+    public function getEmail(): string
     {
         return $this->email;
     }
 
     /**
      * @param string $email
-     *
-     * @return Order
      */
-    public function setEmail($email)
+    public function setEmail(string $email): void
     {
         $this->email = $email;
-
-        return $this;
     }
 
     /**
      * @return \DateTimeInterface
      */
-    public function getClosedAt()
+    public function getClosedAt(): \DateTimeInterface
     {
         return $this->closedAt;
     }
 
     /**
      * @param \DateTimeInterface $closedAt
-     *
-     * @return Order
      */
-    public function setClosedAt($closedAt)
+    public function setClosedAt(\DateTimeInterface $closedAt): void
     {
         $this->closedAt = $closedAt;
-
-        return $this;
     }
 
     /**
      * @return \DateTimeInterface
      */
-    public function getCreatedAt()
+    public function getCreatedAt(): \DateTimeInterface
     {
         return $this->createdAt;
     }
@@ -370,7 +451,7 @@ class Order
     /**
      * @param \DateTimeInterface $createdAt
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt(\DateTimeInterface $createdAt): void
     {
         $this->createdAt = $createdAt;
     }
@@ -378,1164 +459,1127 @@ class Order
     /**
      * @return \DateTimeInterface
      */
-    public function getUpdatedAt()
+    public function getUpdatedAt(): \DateTimeInterface
     {
         return $this->updatedAt;
     }
 
     /**
      * @param \DateTimeInterface $updatedAt
-     *
-     * @return Order
      */
-    public function setUpdatedAt($updatedAt)
+    public function setUpdatedAt(\DateTimeInterface $updatedAt): void
     {
         $this->updatedAt = $updatedAt;
-
-        return $this;
     }
-
-    /**
-     * @return \DateTimeInterface
-     */
-    public function getDeletedAt()
-    {
-        return $this->deletedAt;
-    }
-
-    /**
-     * @param \DateTimeInterface $deletedAt
-     */
-    public function setDeletedAt($deletedAt)
-    {
-        $this->deletedAt = $deletedAt;
-    }
-
 
     /**
      * @return int
      */
-    public function getNumber()
+    public function getNumber(): int
     {
         return $this->number;
     }
 
     /**
      * @param int $number
-     *
-     * @return Order
      */
-    public function setNumber($number)
+    public function setNumber(int $number): void
     {
         $this->number = $number;
-
-        return $this;
     }
 
     /**
      * @return string
      */
-    public function getNote()
+    public function getNote(): string
     {
         return $this->note;
     }
 
     /**
      * @param string $note
-     *
-     * @return Order
      */
-    public function setNote($note)
+    public function setNote(string $note): void
     {
         $this->note = $note;
-
-        return $this;
     }
 
     /**
      * @return string
      */
-    public function getToken()
+    public function getToken(): string
     {
         return $this->token;
     }
 
     /**
      * @param string $token
-     *
-     * @return Order
      */
-    public function setToken($token)
+    public function setToken(string $token): void
     {
         $this->token = $token;
-
-        return $this;
     }
 
     /**
      * @return string
      */
-    public function getGateway()
+    public function getGateway(): string
     {
         return $this->gateway;
     }
 
     /**
      * @param string $gateway
-     *
-     * @return Order
      */
-    public function setGateway($gateway)
+    public function setGateway(string $gateway): void
     {
         $this->gateway = $gateway;
-
-        return $this;
     }
 
     /**
      * @return bool
      */
-    public function isTest()
+    public function isTest(): bool
     {
         return $this->test;
     }
 
     /**
      * @param bool $test
-     *
-     * @return Order
      */
-    public function setTest($test)
+    public function setTest(bool $test): void
     {
         $this->test = $test;
-
-        return $this;
     }
 
     /**
-     * @return float
+     * @return string
      */
-    public function getTotalPrice()
+    public function getTotalPrice(): string
     {
         return $this->totalPrice;
     }
 
     /**
-     * @param float $totalPrice
-     *
-     * @return Order
+     * @param string $totalPrice
      */
-    public function setTotalPrice($totalPrice)
+    public function setTotalPrice(string $totalPrice): void
     {
         $this->totalPrice = $totalPrice;
-
-        return $this;
     }
 
     /**
-     * @return float
+     * @return string
      */
-    public function getSubtotalPrice()
+    public function getSubtotalPrice(): string
     {
         return $this->subtotalPrice;
     }
 
     /**
-     * @param float $subtotalPrice
-     *
-     * @return Order
+     * @param string $subtotalPrice
      */
-    public function setSubtotalPrice($subtotalPrice)
+    public function setSubtotalPrice(string $subtotalPrice): void
     {
         $this->subtotalPrice = $subtotalPrice;
-
-        return $this;
     }
 
     /**
-     * @return float
+     * @return int
      */
-    public function getTotalWeight()
+    public function getTotalWeight(): int
     {
         return $this->totalWeight;
     }
 
     /**
-     * @param float $totalWeight
-     *
-     * @return Order
+     * @param int $totalWeight
      */
-    public function setTotalWeight($totalWeight)
+    public function setTotalWeight(int $totalWeight): void
     {
         $this->totalWeight = $totalWeight;
-
-        return $this;
     }
 
     /**
-     * @return float
+     * @return string
      */
-    public function getTotalTax()
+    public function getTotalTax(): string
     {
         return $this->totalTax;
     }
 
     /**
-     * @param float $totalTax
-     *
-     * @return Order
+     * @param string $totalTax
      */
-    public function setTotalTax($totalTax)
+    public function setTotalTax(string $totalTax): void
     {
         $this->totalTax = $totalTax;
-
-        return $this;
     }
 
     /**
      * @return bool
      */
-    public function isTaxesIncluded()
+    public function isTaxesIncluded(): bool
     {
         return $this->taxesIncluded;
     }
 
     /**
      * @param bool $taxesIncluded
-     *
-     * @return Order
      */
-    public function setTaxesIncluded($taxesIncluded)
+    public function setTaxesIncluded(bool $taxesIncluded): void
     {
         $this->taxesIncluded = $taxesIncluded;
-
-        return $this;
     }
 
     /**
      * @return string
      */
-    public function getCurrency()
+    public function getCurrency(): string
     {
         return $this->currency;
     }
 
     /**
      * @param string $currency
-     *
-     * @return Order
      */
-    public function setCurrency($currency)
+    public function setCurrency(string $currency): void
     {
         $this->currency = $currency;
-
-        return $this;
     }
 
     /**
      * @return string
      */
-    public function getFinancialStatus()
+    public function getFinancialStatus(): string
     {
         return $this->financialStatus;
     }
 
     /**
      * @param string $financialStatus
-     *
-     * @return Order
      */
-    public function setFinancialStatus($financialStatus)
+    public function setFinancialStatus(string $financialStatus): void
     {
         $this->financialStatus = $financialStatus;
-
-        return $this;
     }
 
     /**
      * @return bool
      */
-    public function isConfirmed()
+    public function isConfirmed(): bool
     {
         return $this->confirmed;
     }
 
     /**
      * @param bool $confirmed
-     *
-     * @return Order
      */
-    public function setConfirmed($confirmed)
+    public function setConfirmed(bool $confirmed): void
     {
         $this->confirmed = $confirmed;
-
-        return $this;
-    }
-
-    /**
-     * @return float
-     */
-    public function getTotalDiscounts()
-    {
-        return $this->totalDiscounts;
-    }
-
-    /**
-     * @param float $totalDiscounts
-     *
-     * @return Order
-     */
-    public function setTotalDiscounts($totalDiscounts)
-    {
-        $this->totalDiscounts = $totalDiscounts;
-
-        return $this;
-    }
-
-    /**
-     * @return float
-     */
-    public function getTotalLineItemsPrice()
-    {
-        return $this->totalLineItemsPrice;
-    }
-
-    /**
-     * @param float $totalLineItemsPrice
-     *
-     * @return Order
-     */
-    public function setTotalLineItemsPrice($totalLineItemsPrice)
-    {
-        $this->totalLineItemsPrice = $totalLineItemsPrice;
-
-        return $this;
     }
 
     /**
      * @return string
      */
-    public function getCartToken()
+    public function getTotalDiscounts(): string
+    {
+        return $this->totalDiscounts;
+    }
+
+    /**
+     * @param string $totalDiscounts
+     */
+    public function setTotalDiscounts(string $totalDiscounts): void
+    {
+        $this->totalDiscounts = $totalDiscounts;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTotalLineItemsPrice(): string
+    {
+        return $this->totalLineItemsPrice;
+    }
+
+    /**
+     * @param string $totalLineItemsPrice
+     */
+    public function setTotalLineItemsPrice(string $totalLineItemsPrice): void
+    {
+        $this->totalLineItemsPrice = $totalLineItemsPrice;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCartToken(): string
     {
         return $this->cartToken;
     }
 
     /**
      * @param string $cartToken
-     *
-     * @return Order
      */
-    public function setCartToken($cartToken)
+    public function setCartToken(string $cartToken): void
     {
         $this->cartToken = $cartToken;
-
-        return $this;
     }
 
     /**
      * @return bool
      */
-    public function isBuyerAcceptsMarketing()
+    public function isBuyerAcceptsMarketing(): bool
     {
         return $this->buyerAcceptsMarketing;
     }
 
     /**
      * @param bool $buyerAcceptsMarketing
-     *
-     * @return Order
      */
-    public function setBuyerAcceptsMarketing($buyerAcceptsMarketing)
+    public function setBuyerAcceptsMarketing(bool $buyerAcceptsMarketing): void
     {
         $this->buyerAcceptsMarketing = $buyerAcceptsMarketing;
-
-        return $this;
     }
 
     /**
      * @return string
      */
-    public function getName()
+    public function getName(): string
     {
         return $this->name;
     }
 
     /**
      * @param string $name
-     *
-     * @return Order
      */
-    public function setName($name)
+    public function setName(string $name): void
     {
         $this->name = $name;
-
-        return $this;
     }
 
     /**
      * @return string
      */
-    public function getReferringSite()
+    public function getReferringSite(): string
     {
         return $this->referringSite;
     }
 
     /**
      * @param string $referringSite
-     *
-     * @return Order
      */
-    public function setReferringSite($referringSite)
+    public function setReferringSite(string $referringSite): void
     {
         $this->referringSite = $referringSite;
-
-        return $this;
     }
 
     /**
      * @return string
      */
-    public function getLandingSite()
+    public function getLandingSite(): string
     {
         return $this->landingSite;
     }
 
     /**
      * @param string $landingSite
-     *
-     * @return Order
      */
-    public function setLandingSite($landingSite)
+    public function setLandingSite(string $landingSite): void
     {
         $this->landingSite = $landingSite;
-
-        return $this;
     }
 
     /**
-     * @return string
+     * @return \DateTimeInterface
      */
-    public function getCancelledAt()
+    public function getCancelledAt(): \DateTimeInterface
     {
         return $this->cancelledAt;
     }
 
     /**
-     * @param string $cancelledAt
-     *
-     * @return Order
+     * @param \DateTimeInterface $cancelledAt
      */
-    public function setCancelledAt($cancelledAt)
+    public function setCancelledAt(\DateTimeInterface $cancelledAt): void
     {
         $this->cancelledAt = $cancelledAt;
-
-        return $this;
     }
 
     /**
      * @return string
      */
-    public function getCancelReason()
+    public function getCancelReason(): string
     {
         return $this->cancelReason;
     }
 
     /**
      * @param string $cancelReason
-     *
-     * @return Order
      */
-    public function setCancelReason($cancelReason)
+    public function setCancelReason(string $cancelReason): void
     {
         $this->cancelReason = $cancelReason;
-
-        return $this;
-    }
-
-    /**
-     * @return float
-     */
-    public function getTotalPriceUsd()
-    {
-        return $this->totalPriceUsd;
-    }
-
-    /**
-     * @param float $totalPriceUsd
-     *
-     * @return Order
-     */
-    public function setTotalPriceUsd($totalPriceUsd)
-    {
-        $this->totalPriceUsd = $totalPriceUsd;
-
-        return $this;
     }
 
     /**
      * @return string
      */
-    public function getCheckoutToken()
+    public function getTotalPriceUsd(): string
+    {
+        return $this->totalPriceUsd;
+    }
+
+    /**
+     * @param string $totalPriceUsd
+     */
+    public function setTotalPriceUsd(string $totalPriceUsd): void
+    {
+        $this->totalPriceUsd = $totalPriceUsd;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCheckoutToken(): string
     {
         return $this->checkoutToken;
     }
 
     /**
      * @param string $checkoutToken
-     *
-     * @return Order
      */
-    public function setCheckoutToken($checkoutToken)
+    public function setCheckoutToken(string $checkoutToken): void
     {
         $this->checkoutToken = $checkoutToken;
-
-        return $this;
     }
 
     /**
      * @return string
      */
-    public function getReference()
+    public function getReference(): string
     {
         return $this->reference;
     }
 
     /**
      * @param string $reference
-     *
-     * @return Order
      */
-    public function setReference($reference)
+    public function setReference(string $reference): void
     {
         $this->reference = $reference;
-
-        return $this;
     }
 
     /**
      * @return int
      */
-    public function getUserId()
+    public function getUserId(): int
     {
         return $this->userId;
     }
 
     /**
      * @param int $userId
-     *
-     * @return Order
      */
-    public function setUserId($userId)
+    public function setUserId(int $userId): void
     {
         $this->userId = $userId;
-
-        return $this;
     }
 
     /**
      * @return int
      */
-    public function getLocationId()
+    public function getLocationId(): int
     {
         return $this->locationId;
     }
 
     /**
      * @param int $locationId
-     *
-     * @return Order
      */
-    public function setLocationId($locationId)
+    public function setLocationId(int $locationId): void
     {
         $this->locationId = $locationId;
-
-        return $this;
     }
 
     /**
      * @return string
      */
-    public function getSourceIdentifier()
+    public function getSourceIdentifier(): string
     {
         return $this->sourceIdentifier;
     }
 
     /**
      * @param string $sourceIdentifier
-     *
-     * @return Order
      */
-    public function setSourceIdentifier($sourceIdentifier)
+    public function setSourceIdentifier(string $sourceIdentifier): void
     {
         $this->sourceIdentifier = $sourceIdentifier;
-
-        return $this;
     }
 
     /**
      * @return string
      */
-    public function getSourceUrl()
+    public function getSourceUrl(): string
     {
         return $this->sourceUrl;
     }
 
     /**
      * @param string $sourceUrl
-     *
-     * @return Order
      */
-    public function setSourceUrl($sourceUrl)
+    public function setSourceUrl(string $sourceUrl): void
     {
         $this->sourceUrl = $sourceUrl;
-
-        return $this;
     }
 
     /**
-     * @return string
+     * @return \DateTimeInterface
      */
-    public function getProcessedAt()
+    public function getProcessedAt(): \DateTimeInterface
     {
         return $this->processedAt;
     }
 
     /**
-     * @param string $processedAt
-     *
-     * @return Order
+     * @param \DateTimeInterface $processedAt
      */
-    public function setProcessedAt($processedAt)
+    public function setProcessedAt(\DateTimeInterface $processedAt): void
     {
         $this->processedAt = $processedAt;
-
-        return $this;
     }
 
     /**
      * @return string
      */
-    public function getDeviceId()
+    public function getDeviceId(): string
     {
         return $this->deviceId;
     }
 
     /**
      * @param string $deviceId
-     *
-     * @return Order
      */
-    public function setDeviceId($deviceId)
+    public function setDeviceId(string $deviceId): void
     {
         $this->deviceId = $deviceId;
-
-        return $this;
     }
 
     /**
      * @return string
      */
-    public function getPhone()
+    public function getPhone(): string
     {
         return $this->phone;
     }
 
     /**
      * @param string $phone
-     *
-     * @return Order
      */
-    public function setPhone($phone)
+    public function setPhone(string $phone): void
     {
         $this->phone = $phone;
-
-        return $this;
     }
 
     /**
      * @return string
      */
-    public function getBrowserIp()
+    public function getCustomLocale(): string
+    {
+        return $this->customLocale;
+    }
+
+    /**
+     * @param string $customLocale
+     */
+    public function setCustomLocale(string $customLocale): void
+    {
+        $this->customLocale = $customLocale;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAppId(): string
+    {
+        return $this->appId;
+    }
+
+    /**
+     * @param string $appId
+     */
+    public function setAppId(string $appId): void
+    {
+        $this->appId = $appId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getBrowserIp(): string
     {
         return $this->browserIp;
     }
 
     /**
      * @param string $browserIp
-     *
-     * @return Order
      */
-    public function setBrowserIp($browserIp)
+    public function setBrowserIp(string $browserIp): void
     {
         $this->browserIp = $browserIp;
-
-        return $this;
     }
 
     /**
      * @return string
      */
-    public function getLandingSiteRef()
+    public function getLandingSiteRef(): string
     {
         return $this->landingSiteRef;
     }
 
     /**
      * @param string $landingSiteRef
-     *
-     * @return Order
      */
-    public function setLandingSiteRef($landingSiteRef)
+    public function setLandingSiteRef(string $landingSiteRef): void
     {
         $this->landingSiteRef = $landingSiteRef;
-
-        return $this;
     }
 
     /**
-     * @return string
+     * @return int
      */
-    public function getOrderNumber()
+    public function getOrderNumber(): int
     {
         return $this->orderNumber;
     }
 
     /**
-     * @param string $orderNumber
-     *
-     * @return Order
+     * @param int $orderNumber
      */
-    public function setOrderNumber($orderNumber)
+    public function setOrderNumber(int $orderNumber): void
     {
         $this->orderNumber = $orderNumber;
-
-        return $this;
     }
 
     /**
-     * @return array
+     * @return DiscountAllocation[]
      */
-    public function getDiscountCodes()
+    public function getDiscountApplications(): array
+    {
+        return $this->discountApplications;
+    }
+
+    /**
+     * @param DiscountAllocation[] $discountApplications
+     */
+    public function setDiscountApplications(array $discountApplications): void
+    {
+        $this->discountApplications = $discountApplications;
+    }
+
+    /**
+     * @return DiscountCode[]
+     */
+    public function getDiscountCodes(): array
     {
         return $this->discountCodes;
     }
 
     /**
-     * @param array $discountCodes
-     *
-     * @return Order
+     * @param DiscountCode[] $discountCodes
      */
-    public function setDiscountCodes($discountCodes)
+    public function setDiscountCodes(array $discountCodes): void
     {
         $this->discountCodes = $discountCodes;
-
-        return $this;
     }
 
     /**
-     * @return array
+     * @return NoteAttribute[]
      */
-    public function getNoteAttributes()
+    public function getNoteAttributes(): array
     {
         return $this->noteAttributes;
     }
 
     /**
-     * @param array $noteAttributes
-     *
-     * @return Order
+     * @param NoteAttribute[] $noteAttributes
      */
-    public function setNoteAttributes($noteAttributes)
+    public function setNoteAttributes(array $noteAttributes): void
     {
         $this->noteAttributes = $noteAttributes;
-
-        return $this;
     }
 
     /**
      * @return array
      */
-    public function getPaymentGatewayNames()
+    public function getPaymentGatewayNames(): array
     {
         return $this->paymentGatewayNames;
     }
 
     /**
      * @param array $paymentGatewayNames
-     *
-     * @return Order
      */
-    public function setPaymentGatewayNames($paymentGatewayNames)
+    public function setPaymentGatewayNames(array $paymentGatewayNames): void
     {
         $this->paymentGatewayNames = $paymentGatewayNames;
-
-        return $this;
     }
 
     /**
      * @return string
      */
-    public function getProcessingMethod()
+    public function getProcessingMethod(): string
     {
         return $this->processingMethod;
     }
 
     /**
      * @param string $processingMethod
-     *
-     * @return Order
      */
-    public function setProcessingMethod($processingMethod)
+    public function setProcessingMethod(string $processingMethod): void
     {
         $this->processingMethod = $processingMethod;
-
-        return $this;
     }
 
     /**
      * @return int
      */
-    public function getCheckoutId()
+    public function getCheckoutId(): int
     {
         return $this->checkoutId;
     }
 
     /**
      * @param int $checkoutId
-     *
-     * @return Order
      */
-    public function setCheckoutId($checkoutId)
+    public function setCheckoutId(int $checkoutId): void
     {
         $this->checkoutId = $checkoutId;
-
-        return $this;
     }
 
     /**
      * @return string
      */
-    public function getSourceName()
+    public function getSourceName(): string
     {
         return $this->sourceName;
     }
 
     /**
      * @param string $sourceName
-     *
-     * @return Order
      */
-    public function setSourceName($sourceName)
+    public function setSourceName(string $sourceName): void
     {
         $this->sourceName = $sourceName;
-
-        return $this;
     }
 
     /**
      * @return string
      */
-    public function getFulfillmentStatus()
+    public function getFulfillmentStatus(): string
     {
         return $this->fulfillmentStatus;
     }
 
     /**
      * @param string $fulfillmentStatus
-     *
-     * @return Order
      */
-    public function setFulfillmentStatus($fulfillmentStatus)
+    public function setFulfillmentStatus(string $fulfillmentStatus): void
     {
         $this->fulfillmentStatus = $fulfillmentStatus;
-
-        return $this;
     }
 
     /**
-     * @return array
+     * @return TaxLine[]
      */
-    public function getTaxLines()
+    public function getTaxLines(): array
     {
         return $this->taxLines;
     }
 
     /**
-     * @param array $taxLines
-     *
-     * @return Order
+     * @param TaxLine[] $taxLines
      */
-    public function setTaxLines($taxLines)
+    public function setTaxLines(array $taxLines): void
     {
         $this->taxLines = $taxLines;
-
-        return $this;
-    }
-
-    /**
-     * @return array
-     */
-    public function getTags()
-    {
-        return $this->tags;
-    }
-
-    /**
-     * @param array $tags
-     *
-     * @return Order
-     */
-    public function setTags($tags)
-    {
-        $this->tags = $tags;
-
-        return $this;
     }
 
     /**
      * @return string
      */
-    public function getContactEmail()
+    public function getTags(): string
+    {
+        return $this->tags;
+    }
+
+    /**
+     * @param string $tags
+     */
+    public function setTags(string $tags): void
+    {
+        $this->tags = $tags;
+    }
+
+    /**
+     * @return string
+     */
+    public function getContactEmail(): string
     {
         return $this->contactEmail;
     }
 
     /**
      * @param string $contactEmail
-     *
-     * @return Order
      */
-    public function setContactEmail($contactEmail)
+    public function setContactEmail(string $contactEmail): void
     {
         $this->contactEmail = $contactEmail;
-
-        return $this;
     }
 
     /**
      * @return string
      */
-    public function getOrderStatusUrl()
+    public function getOrderStatusUrl(): string
     {
         return $this->orderStatusUrl;
     }
 
     /**
      * @param string $orderStatusUrl
-     *
-     * @return Order
      */
-    public function setOrderStatusUrl($orderStatusUrl)
+    public function setOrderStatusUrl(string $orderStatusUrl): void
     {
         $this->orderStatusUrl = $orderStatusUrl;
+    }
 
-        return $this;
+    /**
+     * @return string
+     */
+    public function getPresentmentCurrency(): string
+    {
+        return $this->presentmentCurrency;
+    }
+
+    /**
+     * @param string $presentmentCurrency
+     */
+    public function setPresentmentCurrency(string $presentmentCurrency): void
+    {
+        $this->presentmentCurrency = $presentmentCurrency;
+    }
+
+    /**
+     * @return PriceSet
+     */
+    public function getTotalLineItemsPriceSet(): PriceSet
+    {
+        return $this->totalLineItemsPriceSet;
+    }
+
+    /**
+     * @param PriceSet $totalLineItemsPriceSet
+     */
+    public function setTotalLineItemsPriceSet(PriceSet $totalLineItemsPriceSet): void
+    {
+        $this->totalLineItemsPriceSet = $totalLineItemsPriceSet;
+    }
+
+    /**
+     * @return PriceSet
+     */
+    public function getTotalDiscountsSet(): PriceSet
+    {
+        return $this->totalDiscountsSet;
+    }
+
+    /**
+     * @param PriceSet $totalDiscountsSet
+     */
+    public function setTotalDiscountsSet(PriceSet $totalDiscountsSet): void
+    {
+        $this->totalDiscountsSet = $totalDiscountsSet;
+    }
+
+    /**
+     * @return PriceSet
+     */
+    public function getTotalShippingPriceSet(): PriceSet
+    {
+        return $this->totalShippingPriceSet;
+    }
+
+    /**
+     * @param PriceSet $totalShippingPriceSet
+     */
+    public function setTotalShippingPriceSet(PriceSet $totalShippingPriceSet): void
+    {
+        $this->totalShippingPriceSet = $totalShippingPriceSet;
+    }
+
+    /**
+     * @return PriceSet
+     */
+    public function getSubtotalPriceSet(): PriceSet
+    {
+        return $this->subtotalPriceSet;
+    }
+
+    /**
+     * @param PriceSet $subtotalPriceSet
+     */
+    public function setSubtotalPriceSet(PriceSet $subtotalPriceSet): void
+    {
+        $this->subtotalPriceSet = $subtotalPriceSet;
+    }
+
+    /**
+     * @return PriceSet
+     */
+    public function getTotalPriceSet(): PriceSet
+    {
+        return $this->totalPriceSet;
+    }
+
+    /**
+     * @param PriceSet $totalPriceSet
+     */
+    public function setTotalPriceSet(PriceSet $totalPriceSet): void
+    {
+        $this->totalPriceSet = $totalPriceSet;
+    }
+
+    /**
+     * @return PriceSet
+     */
+    public function getTotalTaxSet(): PriceSet
+    {
+        return $this->totalTaxSet;
+    }
+
+    /**
+     * @param PriceSet $totalTaxSet
+     */
+    public function setTotalTaxSet(PriceSet $totalTaxSet): void
+    {
+        $this->totalTaxSet = $totalTaxSet;
     }
 
     /**
      * @return LineItem[]
      */
-    public function getLineItems()
+    public function getLineItems(): array
     {
         return $this->lineItems;
     }
 
     /**
      * @param LineItem[] $lineItems
-     *
-     * @return Order
      */
-    public function setLineItems($lineItems)
+    public function setLineItems(array $lineItems): void
     {
         $this->lineItems = $lineItems;
-
-        return $this;
-    }
-
-    /**
-     * @return ShippingLine[]
-     */
-    public function getShippingLines()
-    {
-        return $this->shippingLines;
-    }
-
-    /**
-     * @param ShippingLine[] $shippingLines
-     *
-     * @return Order
-     */
-    public function setShippingLines($shippingLines)
-    {
-        $this->shippingLines = $shippingLines;
-
-        return $this;
-    }
-
-    /**
-     * @return Address
-     */
-    public function getBillingAddress()
-    {
-        return $this->billingAddress;
-    }
-
-    /**
-     * @param Address $billingAddress
-     *
-     * @return Order
-     */
-    public function setBillingAddress($billingAddress)
-    {
-        $this->billingAddress = $billingAddress;
-
-        return $this;
-    }
-
-    /**
-     * @return Address
-     */
-    public function getShippingAddress()
-    {
-        return $this->shippingAddress;
-    }
-
-    /**
-     * @param Address $shippingAddress
-     *
-     * @return Order
-     */
-    public function setShippingAddress($shippingAddress)
-    {
-        $this->shippingAddress = $shippingAddress;
-
-        return $this;
     }
 
     /**
      * @return Fulfillment[]
      */
-    public function getFulfillments()
+    public function getFulfillments(): array
     {
         return $this->fulfillments;
     }
 
     /**
      * @param Fulfillment[] $fulfillments
-     *
-     * @return Order
      */
-    public function setFulfillments($fulfillments)
+    public function setFulfillments(array $fulfillments): void
     {
         $this->fulfillments = $fulfillments;
-
-        return $this;
-    }
-
-    /**
-     * @return ClientDetails
-     */
-    public function getClientDetails()
-    {
-        return $this->clientDetails;
-    }
-
-    /**
-     * @param ClientDetails $clientDetails
-     *
-     * @return Order
-     */
-    public function setClientDetails($clientDetails)
-    {
-        $this->clientDetails = $clientDetails;
-
-        return $this;
     }
 
     /**
      * @return Refund[]
      */
-    public function getRefunds()
+    public function getRefunds(): array
     {
         return $this->refunds;
     }
 
     /**
      * @param Refund[] $refunds
-     *
-     * @return Order
      */
-    public function setRefunds($refunds)
+    public function setRefunds(array $refunds): void
     {
         $this->refunds = $refunds;
-
-        return $this;
     }
 
     /**
-     * @return array
+     * @return string
      */
-    public function getPaymentDetails()
+    public function getTotalTipReceived(): string
+    {
+        return $this->totalTipReceived;
+    }
+
+    /**
+     * @param string $totalTipReceived
+     */
+    public function setTotalTipReceived(string $totalTipReceived): void
+    {
+        $this->totalTipReceived = $totalTipReceived;
+    }
+
+    /**
+     * @return PriceSet
+     */
+    public function getOriginalTotalDutiesSet(): PriceSet
+    {
+        return $this->originalTotalDutiesSet;
+    }
+
+    /**
+     * @param PriceSet $originalTotalDutiesSet
+     */
+    public function setOriginalTotalDutiesSet(PriceSet $originalTotalDutiesSet): void
+    {
+        $this->originalTotalDutiesSet = $originalTotalDutiesSet;
+    }
+
+    /**
+     * @return PriceSet
+     */
+    public function getCurrentTotalDutiesSet(): PriceSet
+    {
+        return $this->currentTotalDutiesSet;
+    }
+
+    /**
+     * @param PriceSet $currentTotalDutiesSet
+     */
+    public function setCurrentTotalDutiesSet(PriceSet $currentTotalDutiesSet): void
+    {
+        $this->currentTotalDutiesSet = $currentTotalDutiesSet;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAdminGraphqlApiId(): string
+    {
+        return $this->adminGraphqlApiId;
+    }
+
+    /**
+     * @param string $adminGraphqlApiId
+     */
+    public function setAdminGraphqlApiId(string $adminGraphqlApiId): void
+    {
+        $this->adminGraphqlApiId = $adminGraphqlApiId;
+    }
+
+    /**
+     * @return ShippingLine[]
+     */
+    public function getShippingLines(): array
+    {
+        return $this->shippingLines;
+    }
+
+    /**
+     * @param ShippingLine[] $shippingLines
+     */
+    public function setShippingLines(array $shippingLines): void
+    {
+        $this->shippingLines = $shippingLines;
+    }
+
+    /**
+     * @return OrderAddress
+     */
+    public function getBillingAddress(): OrderAddress
+    {
+        return $this->billingAddress;
+    }
+
+    /**
+     * @param OrderAddress $billingAddress
+     */
+    public function setBillingAddress(OrderAddress $billingAddress): void
+    {
+        $this->billingAddress = $billingAddress;
+    }
+
+    /**
+     * @return OrderAddress
+     */
+    public function getShippingAddress(): OrderAddress
+    {
+        return $this->shippingAddress;
+    }
+
+    /**
+     * @param OrderAddress $shippingAddress
+     */
+    public function setShippingAddress(OrderAddress $shippingAddress): void
+    {
+        $this->shippingAddress = $shippingAddress;
+    }
+
+    /**
+     * @return ClientDetails
+     */
+    public function getClientDetails(): ClientDetails
+    {
+        return $this->clientDetails;
+    }
+
+    /**
+     * @param ClientDetails $clientDetails
+     */
+    public function setClientDetails(ClientDetails $clientDetails): void
+    {
+        $this->clientDetails = $clientDetails;
+    }
+
+    /**
+     * @return PaymentDetails
+     */
+    public function getPaymentDetails(): PaymentDetails
     {
         return $this->paymentDetails;
     }
 
     /**
-     * @param array $paymentDetails
-     *
-     * @return Order
+     * @param PaymentDetails $paymentDetails
      */
-    public function setPaymentDetails($paymentDetails)
+    public function setPaymentDetails(PaymentDetails $paymentDetails): void
     {
         $this->paymentDetails = $paymentDetails;
-
-        return $this;
     }
 
     /**
      * @return Transaction[]
      */
-    public function getTransactions()
+    public function getTransactions(): array
     {
         return $this->transactions;
     }
 
     /**
      * @param Transaction[] $transactions
-     *
-     * @return Order
      */
-    public function setTransactions($transactions)
+    public function setTransactions(array $transactions): void
     {
         $this->transactions = $transactions;
-
-        return $this;
-    }
-
-    /**
-     * @return DiscountApplication[]
-     */
-    public function getDiscountApplications()
-    {
-        return $this->discountApplications;
-    }
-
-    /**
-     * @param DiscountApplication[] $discountApplications
-     *
-     * @return Order
-     */
-    public function setDiscountApplications($discountApplications)
-    {
-        $this->discountApplications = $discountApplications;
-
-        return $this;
     }
 
     /**
      * @return Customer
      */
-    public function getCustomer()
+    public function getCustomer(): Customer
     {
         return $this->customer;
     }
@@ -1543,7 +1587,7 @@ class Order
     /**
      * @param Customer $customer
      */
-    public function setCustomer($customer)
+    public function setCustomer(Customer $customer): void
     {
         $this->customer = $customer;
     }
