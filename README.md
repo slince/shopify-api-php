@@ -44,7 +44,8 @@ $credential = new Slince\Shopify\PublicAppCredential('Access Token');
 $credential = new Slince\Shopify\PrivateAppCredential('API KEY', 'PASSWORD', 'SHARED SECRET');
 
 $client = new Slince\Shopify\Client($credential, 'your-store.myshopify.com', [
-    'metaCacheDir' => './tmp' // Metadata cache dir, required
+    'metaCacheDir' => './tmp', // Metadata cache dir, required
+    'apiVersion' => '2020-01' // API version
 ]);
 ```
 
