@@ -11,35 +11,43 @@
 
 namespace Slince\Shopify;
 
+use Doctrine\Common\Inflector\Inflector as LegacyInflector;
 use Doctrine\Inflector\InflectorFactory;
 
-final class Inflector
-{
-    /**
-     * @var \Doctrine\Inflector\Inflector
-     */
-    protected static $inflector;
-
-    protected static function getInflector()
+if (class_exists(InflectorFactory::class)) {
+    final class Inflector
     {
-        if (null !== static::$inflector) {
-            return static::$inflector;
+        /**
+         * @var \Doctrine\Inflector\Inflector
+         */
+        protected static $inflector;
+
+        protected static function getInflector()
+        {
+            if (null !== static::$inflector) {
+                return static::$inflector;
+            }
+            return static::$inflector = InflectorFactory::create()->build();
         }
-        return static::$inflector = InflectorFactory::create()->build();
-    }
 
-    public static function pluralize(string $word)
-    {
-        return static::getInflector()->pluralize($word);
-    }
+        public static function pluralize(string $word)
+        {
+            return static::getInflector()->pluralize($word);
+        }
 
-    public static function tableize(string $word)
-    {
-        return static::getInflector()->tableize($word);
-    }
+        public static function tableize(string $word)
+        {
+            return static::getInflector()->tableize($word);
+        }
 
-    public static function singularize(string $word)
+        public static function singularize(string $word)
+        {
+            return static::getInflector()->singularize($word);
+        }
+    }
+} else {
+    final class Inflector extends LegacyInflector
     {
-        return static::getInflector()->singularize($word);
+
     }
 }
