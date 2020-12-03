@@ -40,9 +40,10 @@ interface UsageChargeManagerInterface
     /**
      * Creates a usage charge.
      *
+     * @param int $recurringApplicationChargeId
      * @param array $data
      *
      * @return UsageCharge
      */
-    public function create(array $data);
+    public function create($recurringApplicationChargeId, array $data);
 }

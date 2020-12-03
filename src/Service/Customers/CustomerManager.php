@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -9,12 +11,14 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\Customer;
+namespace Slince\Shopify\Service\Customers;
 
-use Slince\Shopify\Common\Manager\GeneralCurdable;
-use Slince\Shopify\Manager\Order\Order;
+use Slince\Shopify\Resource\Customer\Customer;
+use Slince\Shopify\Resource\Customer\CustomerInvite;
+use Slince\Shopify\Resource\Order\Order;
+use Slince\Shopify\Service\Common\GeneralCurdManager;
 
-class CustomerManager extends GeneralCurdable implements CustomerManagerInterface
+class CustomerManager extends GeneralCurdManager implements CustomerManagerInterface
 {
     /**
      * {@inheritdoc}
@@ -45,7 +49,7 @@ class CustomerManager extends GeneralCurdable implements CustomerManagerInterfac
      */
     public function createAccountActivationUrl($id)
     {
-        $data = $this->client->post('customers/'.$id.'/account_activation_url', []);
+        $data = $this->client->post("customers/{$id}/account_activation_url", []);
 
         return $data['account_activation_url'];
     }
@@ -55,11 +59,11 @@ class CustomerManager extends GeneralCurdable implements CustomerManagerInterfac
      */
     public function sendInvite($id, array $data)
     {
-        $data = $this->client->post('customers/'.$id.'/send_invite', [
+        $data = $this->client->post("customers/{$id}/send_invite", [
             'customer_invite' => $data,
         ]);
 
-        return $this->fromArray($data, CustomerInvite::class);
+        return $this->client->getHydrator()->hydrate($data, CustomerInvite::class);
     }
 
     /**
@@ -69,7 +73,7 @@ class CustomerManager extends GeneralCurdable implements CustomerManagerInterfac
     {
         $data = $this->client->get('customers/search', $query);
 
-        return $this->createMany(reset($data));
+        return $this->createMany($data['customers']);
     }
 
     /**
@@ -77,8 +81,8 @@ class CustomerManager extends GeneralCurdable implements CustomerManagerInterfac
      */
     public function orders($id)
     {
-        $data = $this->client->get('customers/'.$id.'/orders');
+        $data = $this->client->get("customers/{$id}/orders");
 
-        return $this->createMany(reset($data), Order::class);
+        return $this->client->getHydrator()->hydrate($data['orders'], Order::class);
     }
 }

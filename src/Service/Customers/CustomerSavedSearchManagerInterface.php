@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -9,12 +11,13 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\CustomerSavedSearch;
+namespace Slince\Shopify\Service\Customers;
 
-use Slince\Shopify\Common\Manager\ManagerInterface;
-use Slince\Shopify\Manager\Customer\Customer;
 
-interface CustomerSavedSearchManagerInterface extends ManagerInterface
+use Slince\Shopify\Resource\Customer\Customer;
+use Slince\Shopify\Resource\Customer\CustomerSavedSearch;
+
+interface CustomerSavedSearchManagerInterface
 {
     /**
      * Gets all customer saved searches.

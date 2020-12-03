@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -9,11 +11,12 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\CustomerSavedSearch;
+namespace Slince\Shopify\Service\Customers;
 
-use Slince\Shopify\Common\Manager\GeneralCurdable;
+use Slince\Shopify\Resource\Customer\CustomerSavedSearch;
+use Slince\Shopify\Service\Common\GeneralCurdManager;
 
-class CustomerSavedSearchManager extends GeneralCurdable implements CustomerSavedSearchManagerInterface
+class CustomerSavedSearchManager extends GeneralCurdManager implements CustomerSavedSearchManagerInterface
 {
     /**
      * {@inheritdoc}
@@ -44,7 +47,7 @@ class CustomerSavedSearchManager extends GeneralCurdable implements CustomerSave
      */
     public function getCustomers($id)
     {
-        $data = $this->client->get('customer_saved_searches/'.$id.'/customers');
+        $data = $this->client->get("customer_saved_searches/{$id}/customers");
 
         return $this->createMany($data['customers']);
     }

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -9,11 +11,12 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\CustomerAddress;
+namespace Slince\Shopify\Service\Customers;
 
-use Slince\Shopify\Common\Manager\NestCrudable;
+use Slince\Shopify\Resource\Customer\Address;
+use Slince\Shopify\Service\Common\NestCrudManager;
 
-class AddressManager extends NestCrudable implements AddressManagerInterface
+class AddressManager extends NestCrudManager implements AddressManagerInterface
 {
     /**
      * {@inheritdoc}
