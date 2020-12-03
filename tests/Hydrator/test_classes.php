@@ -1,163 +1,161 @@
 <?php
 class Post
 {
+    /**
+     * @var string
+     */
     protected $title;
 
+    /**
+     * @var string
+     */
     protected $body;
 
+    /**
+     * @var Comment[]
+     */
     protected $comments;
 
+    /**
+     * @var Category
+     */
     protected $category;
 
+    /**
+     * @var DateTime
+     */
     protected $createdAt;
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getTitle()
+    public function getTitle(): string
     {
         return $this->title;
     }
 
     /**
-     * @param mixed $title
-     *
-     * @return Post
+     * @param string $title
      */
-    public function setTitle($title)
+    public function setTitle(string $title)
     {
         $this->title = $title;
-
-        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getBody()
+    public function getBody(): string
     {
         return $this->body;
     }
 
     /**
-     * @param mixed $body
-     *
-     * @return Post
+     * @param string $body
      */
-    public function setBody($body)
+    public function setBody(string $body)
     {
         $this->body = $body;
-
-        return $this;
     }
 
     /**
-     * @return mixed
+     * @return Comment[]
      */
-    public function getComments()
+    public function getComments(): array
     {
         return $this->comments;
     }
 
     /**
-     * @param mixed $comments
-     *
-     * @return Post
+     * @param Comment[] $comments
      */
-    public function setComments($comments)
+    public function setComments(array $comments)
     {
         $this->comments = $comments;
-
-        return $this;
     }
 
     /**
-     * @return mixed
+     * @return Category
      */
-    public function getCategory()
+    public function getCategory(): ?Category
     {
         return $this->category;
     }
 
     /**
-     * @param mixed $category
-     *
-     * @return Post
+     * @param Category $category
      */
-    public function setCategory($category)
+    public function setCategory(Category $category)
     {
         $this->category = $category;
+    }
 
-        return $this;
+    public function addComment(Comment $comment)
+    {
+        $this->comments[] = $comment;
     }
 
     /**
-     * @return mixed
+     * @return DateTime
      */
-    public function getCreatedAt()
+    public function getCreatedAt(): DateTime
     {
         return $this->createdAt;
     }
 
     /**
-     * @param mixed $createdAt
-     *
-     * @return Post
+     * @param DateTime $createdAt
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt(DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
-
-        return $this;
     }
 }
 
 class Category
 {
+    /**
+     * @var string
+     */
     protected $name;
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getName()
+    public function getName(): string
     {
         return $this->name;
     }
 
     /**
-     * @param mixed $name
-     *
-     * @return Category
+     * @param string $name
      */
-    public function setName($name)
+    public function setName(string $name)
     {
         $this->name = $name;
-
-        return $this;
     }
 }
 
 class Comment
 {
+    /**
+     * @var string
+     */
     protected $body;
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getBody()
+    public function getBody(): string
     {
         return $this->body;
     }
 
     /**
-     * @param mixed $body
-     *
-     * @return Comment
+     * @param string $body
      */
-    public function setBody($body)
+    public function setBody(string $body)
     {
         $this->body = $body;
-
-        return $this;
     }
 }

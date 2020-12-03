@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -11,9 +13,14 @@
 
 namespace Slince\Shopify\Hydrator;
 
-use JMS\Serializer\SerializationContext;
-use JMS\Serializer\Serializer;
-use JMS\Serializer\SerializerBuilder;
+use DateTimeInterface;
+use Symfony\Component\PropertyAccess\PropertyAccess;
+use Symfony\Component\PropertyInfo\Extractor\ReflectionExtractor;
+use Symfony\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter;
+use Symfony\Component\Serializer\Normalizer\ArrayDenormalizer;
+use Symfony\Component\Serializer\Normalizer\DateTimeNormalizer;
+use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+use Symfony\Component\Serializer\Serializer;
 
 class Hydrator implements HydratorInterface
 {
@@ -22,12 +29,22 @@ class Hydrator implements HydratorInterface
      */
     protected $serializer;
 
-    public function __construct($cacheDir, $metaDirs)
+    public function __construct()
     {
-        $this->serializer = SerializerBuilder::create()
-            ->setCacheDir($cacheDir)
-            ->setMetadataDirs($metaDirs)
-            ->build();
+        $normalizer = new ObjectNormalizer(
+            null,
+            new CamelCaseToSnakeCaseNameConverter(),
+            PropertyAccess::createPropertyAccessor(),
+            new ReflectionExtractor(),
+            null,
+            null,
+            [ObjectNormalizer::DISABLE_TYPE_ENFORCEMENT => true]
+        );
+        $this->serializer = new Serializer([
+            new DateTimeNormalizer([DateTimeNormalizer::FORMAT_KEY => DateTimeInterface::ISO8601]),
+            new ArrayDenormalizer(),
+            $normalizer,
+        ]);
     }
 
     /**
@@ -35,24 +52,14 @@ class Hydrator implements HydratorInterface
      */
     public function extract($object)
     {
-        return $this->serializer->toArray($object, $this->createDefaultContext());
+        return $this->serializer->normalize($object);
     }
 
     /**
      * {@inheritdoc}
      */
-    public function hydrate($target, array $data)
+    public function hydrate(string $target, array $data)
     {
-        return $this->serializer->fromArray($data, $target);
-    }
-
-    /**
-     * Creates a default serializer context
-     *
-     * @return SerializationContext
-     */
-    protected function createDefaultContext()
-    {
-        return SerializationContext::create()->setSerializeNull(true);
+        return $this->serializer->denormalize($data, $target, null);
     }
 }

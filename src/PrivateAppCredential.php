@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -47,60 +49,48 @@ class PrivateAppCredential implements CredentialInterface
 
     /**
      * @param string $apiKey
-     *
-     * @return PrivateAppCredential
      */
-    public function setApiKey($apiKey)
+    public function setApiKey(string $apiKey)
     {
         $this->apiKey = $apiKey;
-
-        return $this;
     }
 
     /**
      * @return string
      */
-    public function getPassword()
+    public function getPassword(): string
     {
         return $this->password;
     }
 
     /**
      * @param string $password
-     *
-     * @return PrivateAppCredential
      */
-    public function setPassword($password)
+    public function setPassword(string $password)
     {
         $this->password = $password;
-
-        return $this;
     }
 
     /**
      * @return string
      */
-    public function getSharedSecret()
+    public function getSharedSecret(): string
     {
         return $this->sharedSecret;
     }
 
     /**
      * @param string $sharedSecret
-     *
-     * @return PrivateAppCredential
      */
-    public function setSharedSecret($sharedSecret)
+    public function setSharedSecret(string $sharedSecret)
     {
         $this->sharedSecret = $sharedSecret;
-
-        return $this;
     }
 
     /**
      * {@inheritdoc}
      */
-    public function applyToRequest(RequestInterface $request)
+    public function applyToRequest(RequestInterface $request): RequestInterface
     {
         return $request->withHeader('Authorization', 'Basic '
             .base64_encode("{$this->apiKey}:{$this->password}"));

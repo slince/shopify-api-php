@@ -2,7 +2,6 @@
 
 namespace Slince\Shopify\Tests\Hydrator;
 
-use Carbon\Carbon;
 use Slince\Shopify\Hydrator\Hydrator;
 use Slince\Shopify\Hydrator\HydratorInterface;
 use Slince\Shopify\Tests\TestCase;
@@ -19,7 +18,7 @@ class HydratorTest  extends TestCase
     public function setUp(): void
     {
         parent::setUp();
-        $this->hydrator = new Hydrator(__DIR__ . '/../tmp', ['' => __DIR__ . '/serializer']);
+        $this->hydrator = new Hydrator();
     }
 
     public function testInstance()
@@ -45,7 +44,6 @@ class HydratorTest  extends TestCase
             ],
             'created_at' => '2018-01-30T09:42:13+0000',
         ]);
-
         $this->assertInstanceOf(\Post::class, $post);
         $this->assertInstanceOf(\DateTime::class, $post->getCreatedAt());
         $this->assertEquals('this is a post title', $post->getTitle());

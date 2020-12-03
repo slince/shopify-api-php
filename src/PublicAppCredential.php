@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -26,20 +28,20 @@ class PublicAppCredential implements CredentialInterface
     }
 
     /**
+     * {@inheritdoc}
+     */
+    public function applyToRequest(RequestInterface $request): RequestInterface
+    {
+        return $request->withHeader('X-Shopify-Access-Token', (string) $this->getAccessToken());
+    }
+
+    /**
      * Gets the access token.
      *
      * @return AccessToken
      */
-    public function getAccessToken()
+    public function getAccessToken(): AccessToken
     {
         return $this->accessToken;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function applyToRequest(RequestInterface $request)
-    {
-        return $request->withHeader('X-Shopify-Access-Token', (string)$this->getAccessToken());
     }
 }
