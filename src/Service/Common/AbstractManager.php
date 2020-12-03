@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -9,10 +11,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Common\Manager;
+namespace Slince\Shopify\Service\Common;
 
 use Slince\Shopify\Client;
-use Slince\Shopify\Common\Model\ModelInterface;
 
 abstract class AbstractManager implements ManagerInterface
 {
@@ -31,43 +32,31 @@ abstract class AbstractManager implements ManagerInterface
      *
      * @return string
      */
-    abstract public function getModelClass();
+    abstract protected function getModelClass();
 
     /**
      * Gets the resource name.
      *
      * @return string
      */
-    abstract public function getResourceName();
+    abstract protected function getResourceName();
 
     /**
      * {@inheritdoc}
      */
-    public function getClient()
+    public function fromArray(array $data)
     {
-        return $this->client;
+        return $this->client->getHydrator()->hydrate($data, $this->getModelClass());
     }
 
     /**
      * {@inheritdoc}
      */
-    public function fromArray(array $data, $modelClass = null)
-    {
-        if (null === $modelClass) {
-            $modelClass = $this->getModelClass();
-        }
-
-        return $this->client->getHydrator()->hydrate($modelClass, $data);
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function createMany(array $data, $modelClass = null)
+    public function createMany(array $data)
     {
         $models = [];
         foreach ($data as $item) {
-            $models[] = $this->fromArray($item, $modelClass);
+            $models[] = $this->fromArray($item);
         }
 
         return $models;

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -9,10 +11,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Common\Manager;
-
-use Slince\Shopify\Client;
-use Slince\Shopify\Common\Model\ModelInterface;
+namespace Slince\Shopify\Service\Common;
 
 interface ManagerInterface
 {
@@ -24,36 +23,27 @@ interface ManagerInterface
     public static function getServiceName();
 
     /**
-     * Gets the shopify client.
-     *
-     * @return Client
-     */
-    public function getClient();
-
-    /**
      * Create the model from an array.
      *
      * @param array  $data
-     * @param string $modelClass
      *
-     * @return ModelInterface
+     * @return object
      */
-    public function fromArray(array $data, $modelClass = null);
+    public function fromArray(array $data);
 
     /**
      * Create many models from an array.
      *
      * @param array $data
-     * @param string $modelClass
      *
-     * @return ModelInterface[]
+     * @return object[]
      */
-    public function createMany(array $data, $modelClass = null);
+    public function createMany(array $data);
 
     /**
      * Converts the model to array.
      *
-     * @param ModelInterface $model
+     * @param object $model
      *
      * @return array
      */

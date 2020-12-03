@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -9,13 +11,12 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Common\Manager;
+namespace Slince\Shopify\Service\Common;
 
 use Slince\Shopify\Inflector;
 use Slince\Shopify\Common\CursorBasedPagination;
-use Slince\Shopify\Common\Model\ModelInterface;
 
-abstract class NestCrudable extends AbstractManager
+abstract class NestCrudManager extends AbstractManager
 {
     /**
      * Gets the parent resource name.
@@ -30,7 +31,7 @@ abstract class NestCrudable extends AbstractManager
      * @param int   $parentId
      * @param array $query
      *
-     * @return ModelInterface[]
+     * @return object[]
      */
     public function findAll($parentId, array $query = [])
     {
@@ -62,7 +63,7 @@ abstract class NestCrudable extends AbstractManager
      * @param int $parentId
      * @param int $id
      *
-     * @return ModelInterface
+     * @return object
      */
     public function find($parentId, $id)
     {
@@ -91,7 +92,7 @@ abstract class NestCrudable extends AbstractManager
      * @param int   $id
      * @param array $data
      *
-     * @return ModelInterface
+     * @return object
      */
     public function update($parentId, $id, array $data)
     {
@@ -107,7 +108,7 @@ abstract class NestCrudable extends AbstractManager
      * @param int   $parentId
      * @param array $data
      *
-     * @return ModelInterface
+     * @return object
      */
     public function create($parentId, array $data)
     {

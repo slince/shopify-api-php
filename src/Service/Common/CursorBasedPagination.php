@@ -1,12 +1,20 @@
 <?php
 
-namespace Slince\Shopify\Common;
+declare(strict_types=1);
 
-use GuzzleHttp\Psr7\Request;
+/*
+ * This file is part of the slince/shopify-api-php
+ *
+ * (c) Slince <taosikai@yeah.net>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
+ */
+
+namespace Slince\Shopify\Service\Common;
+
 use Psr\Http\Message\ResponseInterface;
 use Slince\Shopify\Client;
-use Slince\Shopify\Common\Manager\ManagerInterface;
-use Slince\Shopify\Common\Model\ModelInterface;
 use Slince\Shopify\Exception\RuntimeException;
 
 class CursorBasedPagination
@@ -33,8 +41,14 @@ class CursorBasedPagination
      */
     protected $links = [];
 
-    public function __construct(ManagerInterface $manager, $resource, $query = [])
+    /**
+     * @var Client
+     */
+    protected $client;
+
+    public function __construct(Client $client, ManagerInterface $manager, $resource, $query = [])
     {
+        $this->client = $client;
         $this->manager = $manager;
         $this->resource = $resource;
         $this->query = $query;
@@ -44,19 +58,18 @@ class CursorBasedPagination
      * Gets the current page data.
      *
      * @param string $pageInfo
-     * @return ModelInterface[]
+     * @return object[]
      */
     public function current($pageInfo = null)
     {
-        $client = $this->manager->getClient();
         $query = $this->query;
         if (null !== $pageInfo) {
             $query = array_intersect_key($query, ['limit' => true, 'fields' => true]);
             $query['page_info'] = $pageInfo;
         }
-        $data = $client->get($this->resource, $query);
+        $data = $this->client->get($this->resource, $query);
 
-        $this->links = $this->extractHeaderLink($client->getLastResponse());
+        $this->links = $this->extractHeaderLink($this->client->getLastResponse());
         return $this->manager->createMany(reset($data));
     }
 
@@ -86,7 +99,7 @@ class CursorBasedPagination
     /**
      * Get the next page of data.
      *
-     * @return ModelInterface[]
+     * @return object[]
      */
     public function next()
     {
@@ -120,7 +133,7 @@ class CursorBasedPagination
     /**
      * Get the previous page of data.
      *
-     * @return ModelInterface[]
+     * @return object[]
      */
     public function prev()
     {

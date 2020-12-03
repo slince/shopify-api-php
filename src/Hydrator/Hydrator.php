@@ -64,8 +64,8 @@ class Hydrator implements HydratorInterface
     /**
      * {@inheritdoc}
      */
-    public function hydrate(string $target, array $data)
+    public function hydrate(array $data, string $type)
     {
-        return $this->serializer->denormalize($data, $target, null);
+        return $this->serializer->denormalize($data, $type);
     }
 }

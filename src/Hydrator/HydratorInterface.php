@@ -16,9 +16,11 @@ interface HydratorInterface
     /**
      * Hydrate object from array.
      *
+     * @param array $data
+     * @param string $type
      * @return object
      */
-    public function hydrate(string $target, array $data);
+    public function hydrate(array $data, string $type);
 
     /**
      * Extracts data from an object.

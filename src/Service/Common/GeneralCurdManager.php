@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -9,20 +11,18 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Common\Manager;
+namespace Slince\Shopify\Service\Common;
 
 use Slince\Shopify\Inflector;
-use Slince\Shopify\Common\CursorBasedPagination;
-use Slince\Shopify\Common\Model\ModelInterface;
 
-abstract class GeneralCurdable extends AbstractManager
+abstract class GeneralCurdManager extends AbstractManager
 {
     /**
      * Finds the resources by given query condition.
      *
      * @param array $query
      *
-     * @return ModelInterface[]
+     * @return object[]
      */
     public function findAll(array $query = [])
     {
@@ -43,7 +43,7 @@ abstract class GeneralCurdable extends AbstractManager
     {
         $resource = Inflector::pluralize($this->getResourceName());
 
-        return new CursorBasedPagination($this, $resource, $query);
+        return new CursorBasedPagination($this->client, $this, $resource, $query);
     }
 
     /**
@@ -51,7 +51,7 @@ abstract class GeneralCurdable extends AbstractManager
      *
      * @param int $id
      *
-     * @return ModelInterface
+     * @return object
      */
     public function find($id)
     {
@@ -76,7 +76,7 @@ abstract class GeneralCurdable extends AbstractManager
      * @param int   $id
      * @param array $data
      *
-     * @return ModelInterface
+     * @return object
      */
     public function update($id, array $data)
     {
@@ -90,7 +90,7 @@ abstract class GeneralCurdable extends AbstractManager
      *
      * @param array $data
      *
-     * @return ModelInterface
+     * @return object
      */
     public function create(array $data)
     {
