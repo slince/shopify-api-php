@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -9,11 +11,12 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\RecurringApplicationCharge;
+namespace Slince\Shopify\Service\Billing;
 
-use Slince\Shopify\Common\Manager\GeneralCurdable;
+use Slince\Shopify\Resource\Billing\RecurringApplicationCharge;
+use Slince\Shopify\Service\Common\GeneralCurdManager;
 
-class RecurringApplicationChargeManager extends GeneralCurdable implements RecurringApplicationChargeManagerInterface
+class RecurringApplicationChargeManager extends GeneralCurdManager implements RecurringApplicationChargeManagerInterface
 {
     /**
      * {@inheritdoc}
