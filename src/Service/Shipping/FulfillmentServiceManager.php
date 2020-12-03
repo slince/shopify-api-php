@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -9,11 +11,12 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Service\FulfillmentService;
+namespace Slince\Shopify\Service\Shipping;
 
-use Slince\Shopify\Common\Manager\GeneralCurdable;
+use Slince\Shopify\Model\Shipping\FulfillmentService;
+use Slince\Shopify\Service\Common\GeneralCurdManager;
 
-class FulfillmentServiceManager extends GeneralCurdable implements FulfillmentServiceManagerInterface
+class FulfillmentServiceManager extends GeneralCurdManager implements FulfillmentServiceManagerInterface
 {
     /**
      * {@inheritdoc}

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Slince\Shopify\Resource\Events;
+namespace Slince\Shopify\Model\Events;
 
 use Slince\Shopify\Common\Model\Model;
 

@@ -1,14 +1,14 @@
 <?php
 
-namespace Slince\Shopify\Resource\Order;
+namespace Slince\Shopify\Model\Order;
 
-use Slince\Shopify\Resource\Customer\Customer;
-use Slince\Shopify\Resource\Orders\Common\AppliedDiscount;
-use Slince\Shopify\Resource\Orders\Common\DraftOrderShippingLine;
-use Slince\Shopify\Resource\Orders\Common\LineItem;
-use Slince\Shopify\Resource\Orders\Common\NoteAttribute;
-use Slince\Shopify\Resource\Orders\Common\OrderAddress;
-use Slince\Shopify\Resource\Orders\Common\TaxLine;
+use Slince\Shopify\Model\Customer\Customer;
+use Slince\Shopify\Model\Orders\Common\AppliedDiscount;
+use Slince\Shopify\Model\Orders\Common\DraftOrderShippingLine;
+use Slince\Shopify\Model\Orders\Common\LineItem;
+use Slince\Shopify\Model\Orders\Common\NoteAttribute;
+use Slince\Shopify\Model\Orders\Common\OrderAddress;
+use Slince\Shopify\Model\Orders\Common\TaxLine;
 
 class DraftOrder
 {

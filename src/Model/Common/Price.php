@@ -1,6 +1,6 @@
 <?php
 
-namespace Slince\Shopify\Resource\Common;
+namespace Slince\Shopify\Model\Common;
 
 class Price
 {

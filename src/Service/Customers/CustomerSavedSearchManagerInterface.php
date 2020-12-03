@@ -14,8 +14,8 @@ declare(strict_types=1);
 namespace Slince\Shopify\Service\Customers;
 
 
-use Slince\Shopify\Resource\Customer\Customer;
-use Slince\Shopify\Resource\Customer\CustomerSavedSearch;
+use Slince\Shopify\Model\Customer\Customer;
+use Slince\Shopify\Model\Customer\CustomerSavedSearch;
 
 interface CustomerSavedSearchManagerInterface
 {

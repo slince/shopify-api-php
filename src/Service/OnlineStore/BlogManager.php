@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Service\OnlineStore;
 
-use Slince\Shopify\Resource\OnlineStore\Blog;
+use Slince\Shopify\Model\OnlineStore\Blog;
 use Slince\Shopify\Service\Common\GeneralCurdManager;
 
 class BlogManager extends GeneralCurdManager implements BlogManagerInterface

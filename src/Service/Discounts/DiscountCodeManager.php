@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Service\Discounts;
 
-use Slince\Shopify\Resource\Discounts\DiscountCode;
+use Slince\Shopify\Model\Discounts\DiscountCode;
 use Slince\Shopify\Service\Common\NestCrudManager;
 
 class DiscountCodeManager extends NestCrudManager implements DiscountCodeManagerInterface

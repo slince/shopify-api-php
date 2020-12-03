@@ -1,6 +1,6 @@
 <?php
 
-namespace Slince\Shopify\Resource\Order;
+namespace Slince\Shopify\Model\Order;
 
 class Risk
 {

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Slince\Shopify\Resource\Metafield;
+namespace Slince\Shopify\Model\Metafield;
 
 
 class Metafield

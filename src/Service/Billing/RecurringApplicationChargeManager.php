@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Service\Billing;
 
-use Slince\Shopify\Resource\Billing\RecurringApplicationCharge;
+use Slince\Shopify\Model\Billing\RecurringApplicationCharge;
 use Slince\Shopify\Service\Common\GeneralCurdManager;
 
 class RecurringApplicationChargeManager extends GeneralCurdManager implements RecurringApplicationChargeManagerInterface

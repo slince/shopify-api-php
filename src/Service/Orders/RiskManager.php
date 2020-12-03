@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Service\Orders;
 
-use Slince\Shopify\Resource\Order\Risk;
+use Slince\Shopify\Model\Order\Risk;
 use Slince\Shopify\Service\Common\NestCrudManager;
 
 class RiskManager extends NestCrudManager implements RiskManagerInterface

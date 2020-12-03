@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Service\OnlineStore;
 
-use Slince\Shopify\Resource\OnlineStore\Page;
+use Slince\Shopify\Model\OnlineStore\Page;
 use Slince\Shopify\Service\Common\GeneralCurdManager;
 
 class PageManager extends GeneralCurdManager implements PageManagerInterface

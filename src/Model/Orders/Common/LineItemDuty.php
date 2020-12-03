@@ -1,9 +1,9 @@
 <?php
 
 
-namespace Slince\Shopify\Resource\Orders\Common;
+namespace Slince\Shopify\Model\Orders\Common;
 
-use Slince\Shopify\Resource\Common\PriceSet;
+use Slince\Shopify\Model\Common\PriceSet;
 
 class LineItemDuty extends PriceSet
 {

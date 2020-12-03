@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Slince\Shopify\Resource\Inventory;
+namespace Slince\Shopify\Model\Inventory;
 
 class Location
 {

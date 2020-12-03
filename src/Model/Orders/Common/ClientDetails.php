@@ -1,6 +1,6 @@
 <?php
 
-namespace Slince\Shopify\Resource\Orders\Common;
+namespace Slince\Shopify\Model\Orders\Common;
 
 class ClientDetails
 {

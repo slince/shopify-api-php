@@ -13,8 +13,8 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Service\Inventory;
 
-use Slince\Shopify\Resource\Inventory\InventoryLevel;
-use Slince\Shopify\Resource\Inventory\Location;
+use Slince\Shopify\Model\Inventory\InventoryLevel;
+use Slince\Shopify\Model\Inventory\Location;
 
 interface LocationManagerInterface
 {

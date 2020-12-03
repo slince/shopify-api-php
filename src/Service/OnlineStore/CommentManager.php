@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Service\OnlineStore;
 
-use Slince\Shopify\Resource\OnlineStore\Comment;
+use Slince\Shopify\Model\OnlineStore\Comment;
 use Slince\Shopify\Service\Common\GeneralCurdManager;
 
 class CommentManager extends GeneralCurdManager implements CommentManagerInterface

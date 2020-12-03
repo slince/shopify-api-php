@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Slince\Shopify\Resource\MarketingEvent;
+namespace Slince\Shopify\Model\MarketingEvent;
 
 
 class MarketingEvent

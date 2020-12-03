@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Service\Discounts;
 
-use Slince\Shopify\Resource\Discounts\PriceRule;
+use Slince\Shopify\Model\Discounts\PriceRule;
 use Slince\Shopify\Service\Common\GeneralCurdManager;
 
 class PriceRuleManager extends GeneralCurdManager implements PriceRuleManagerInterface

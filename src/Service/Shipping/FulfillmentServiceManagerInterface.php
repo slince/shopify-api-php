@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -9,11 +11,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Service\FulfillmentService;
+namespace Slince\Shopify\Service\Shipping;
 
-use Slince\Shopify\Common\Manager\ManagerInterface;
-
-interface FulfillmentServiceManagerInterface extends ManagerInterface
+interface FulfillmentServiceManagerInterface
 {
     /**
      * Gets all fulfillment services.

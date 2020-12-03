@@ -14,7 +14,7 @@ declare(strict_types=1);
 namespace Slince\Shopify\Service\Events;
 
 use Psr\Http\Message\RequestInterface;
-use Slince\Shopify\Resource\Events\Webhook;
+use Slince\Shopify\Model\Events\Webhook;
 
 interface WebhookManagerInterface
 {

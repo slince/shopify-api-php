@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Service\MarketingEvent;
 
-use Slince\Shopify\Resource\MarketingEvent\MarketingEvent;
+use Slince\Shopify\Model\MarketingEvent\MarketingEvent;
 use Slince\Shopify\Service\Common\GeneralCurdManager;
 
 class MarketingEventManager extends GeneralCurdManager implements MarketingEventManagerInterface

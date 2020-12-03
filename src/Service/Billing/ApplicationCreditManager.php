@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Service\Billing;
 
-use Slince\Shopify\Resource\Billing\ApplicationCharge;
+use Slince\Shopify\Model\Billing\ApplicationCharge;
 use Slince\Shopify\Service\Common\GeneralCurdManager;
 
 class ApplicationCreditManager extends GeneralCurdManager implements ApplicationCreditManagerInterface

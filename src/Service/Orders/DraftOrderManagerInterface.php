@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Service\Orders;
 
-use Slince\Shopify\Resource\Order\DraftOrder;
+use Slince\Shopify\Model\Order\DraftOrder;
 
 interface DraftOrderManagerInterface
 {

@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Service\Report;
 
-use Slince\Shopify\Resource\Analytics\Report;
+use Slince\Shopify\Model\Analytics\Report;
 
 interface ReportManagerInterface
 {

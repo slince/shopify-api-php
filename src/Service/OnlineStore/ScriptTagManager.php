@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Service\OnlineStore;
 
-use Slince\Shopify\Resource\OnlineStore\ScriptTag;
+use Slince\Shopify\Model\OnlineStore\ScriptTag;
 use Slince\Shopify\Service\Common\GeneralCurdManager;
 
 class ScriptTagManager extends GeneralCurdManager implements ScriptTagManagerInterface

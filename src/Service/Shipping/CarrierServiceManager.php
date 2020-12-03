@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -9,11 +11,12 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Service\CarrierService;
+namespace Slince\Shopify\Service\Shipping;
 
-use Slince\Shopify\Common\Manager\GeneralCurdable;
+use Slince\Shopify\Model\Shipping\CarrierService;
+use Slince\Shopify\Service\Common\GeneralCurdManager;
 
-class CarrierServiceManager extends GeneralCurdable implements CarrierServiceManagerInterface
+class CarrierServiceManager extends GeneralCurdManager implements CarrierServiceManagerInterface
 {
     /**
      * {@inheritdoc}

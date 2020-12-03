@@ -1,15 +1,15 @@
 <?php
 
 
-namespace Slince\Shopify\Resource\Orders;
+namespace Slince\Shopify\Model\Orders;
 
-use Slince\Shopify\Resource\Customer\Customer;
-use Slince\Shopify\Resource\Discounts\DiscountCode;
-use Slince\Shopify\Resource\Orders\Common\CheckoutShippingLine;
-use Slince\Shopify\Resource\Orders\Common\LineItem;
-use Slince\Shopify\Resource\Orders\Common\NoteAttribute;
-use Slince\Shopify\Resource\Orders\Common\OrderAddress;
-use Slince\Shopify\Resource\Orders\Common\TaxLine;
+use Slince\Shopify\Model\Customer\Customer;
+use Slince\Shopify\Model\Discounts\DiscountCode;
+use Slince\Shopify\Model\Orders\Common\CheckoutShippingLine;
+use Slince\Shopify\Model\Orders\Common\LineItem;
+use Slince\Shopify\Model\Orders\Common\NoteAttribute;
+use Slince\Shopify\Model\Orders\Common\OrderAddress;
+use Slince\Shopify\Model\Orders\Common\TaxLine;
 
 class Checkout
 {

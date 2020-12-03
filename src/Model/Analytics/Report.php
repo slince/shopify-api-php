@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Slince\Shopify\Resource\Analytics;
+namespace Slince\Shopify\Model\Analytics;
 
 
 class Report

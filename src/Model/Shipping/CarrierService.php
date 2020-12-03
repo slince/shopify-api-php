@@ -1,7 +1,6 @@
 <?php
 
-
-namespace Slince\Shopify\Resource\Shipping;
+namespace Slince\Shopify\Model\Shipping;
 
 
 class CarrierService

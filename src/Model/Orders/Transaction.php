@@ -1,9 +1,9 @@
 <?php
 
-namespace Slince\Shopify\Resource\Order;
+namespace Slince\Shopify\Model\Order;
 
-use Slince\Shopify\Resource\Orders\Common\CurrencyExchangeAdjustment;
-use Slince\Shopify\Resource\Orders\Common\PaymentDetails;
+use Slince\Shopify\Model\Orders\Common\CurrencyExchangeAdjustment;
+use Slince\Shopify\Model\Orders\Common\PaymentDetails;
 
 class Transaction
 {

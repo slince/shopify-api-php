@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Slince\Shopify\Resource\Access;
+namespace Slince\Shopify\Model\Access;
 
 
 class AccessScope

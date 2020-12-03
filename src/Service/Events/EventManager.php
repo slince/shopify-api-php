@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Service\Events;
 
-use Slince\Shopify\Resource\Events\Event;
+use Slince\Shopify\Model\Events\Event;
 use Slince\Shopify\Service\Common\GeneralCurdManager;
 
 class EventManager extends GeneralCurdManager implements EventManagerInterface

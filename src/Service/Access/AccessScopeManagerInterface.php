@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Service\Access;
 
-use Slince\Shopify\Resource\Access\AccessScope;
+use Slince\Shopify\Model\Access\AccessScope;
 
 interface AccessScopeManagerInterface
 {

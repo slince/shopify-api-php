@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Service\MarketingEvent;
 
-use Slince\Shopify\Resource\MarketingEvent\MarketingEvent;
+use Slince\Shopify\Model\MarketingEvent\MarketingEvent;
 
 interface MarketingEventManagerInterface
 {

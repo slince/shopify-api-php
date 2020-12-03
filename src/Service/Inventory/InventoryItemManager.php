@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Service\Inventory;
 
-use Slince\Shopify\Resource\Inventory\InventoryItem;
+use Slince\Shopify\Model\Inventory\InventoryItem;
 use Slince\Shopify\Service\Common\GeneralCurdManager;
 
 class InventoryItemManager extends GeneralCurdManager implements InventoryItemManagerInterface

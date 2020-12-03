@@ -1,19 +1,19 @@
 <?php
 
-namespace Slince\Shopify\Resource\Order;
+namespace Slince\Shopify\Model\Order;
 
-use Slince\Shopify\Resource\Common\PriceSet;
-use Slince\Shopify\Resource\Customer\Customer;
-use Slince\Shopify\Resource\Orders\Common\ClientDetails;
-use Slince\Shopify\Resource\Orders\Common\DiscountAllocation;
-use Slince\Shopify\Resource\Orders\Common\DiscountCode;
-use Slince\Shopify\Resource\Orders\Common\LineItem;
-use Slince\Shopify\Resource\Orders\Common\NoteAttribute;
-use Slince\Shopify\Resource\Orders\Common\OrderAddress;
-use Slince\Shopify\Resource\Orders\Common\PaymentDetails;
-use Slince\Shopify\Resource\Orders\Common\ShippingLine;
-use Slince\Shopify\Resource\Orders\Common\TaxLine;
-use Slince\Shopify\Resource\Shipping\Fulfillment;
+use Slince\Shopify\Model\Common\PriceSet;
+use Slince\Shopify\Model\Customer\Customer;
+use Slince\Shopify\Model\Orders\Common\ClientDetails;
+use Slince\Shopify\Model\Orders\Common\DiscountAllocation;
+use Slince\Shopify\Model\Orders\Common\DiscountCode;
+use Slince\Shopify\Model\Orders\Common\LineItem;
+use Slince\Shopify\Model\Orders\Common\NoteAttribute;
+use Slince\Shopify\Model\Orders\Common\OrderAddress;
+use Slince\Shopify\Model\Orders\Common\PaymentDetails;
+use Slince\Shopify\Model\Orders\Common\ShippingLine;
+use Slince\Shopify\Model\Orders\Common\TaxLine;
+use Slince\Shopify\Model\Shipping\Fulfillment;
 
 class Order
 {

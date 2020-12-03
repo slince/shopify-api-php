@@ -1,8 +1,8 @@
 <?php
 
-namespace Slince\Shopify\Resource\Shipping;
+namespace Slince\Shopify\Model\Shipping;
 
-use Slince\Shopify\Resource\Orders\Common\LineItem;
+use Slince\Shopify\Model\Orders\Common\LineItem;
 
 class Fulfillment
 {

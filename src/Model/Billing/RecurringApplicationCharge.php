@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Slince\Shopify\Resource\Billing;
+namespace Slince\Shopify\Model\Billing;
 
 class RecurringApplicationCharge
 {

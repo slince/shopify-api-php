@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Service\OnlineStore;
 
-use Slince\Shopify\Resource\OnlineStore\Article;
+use Slince\Shopify\Model\OnlineStore\Article;
 use Slince\Shopify\Service\Common\NestCrudManager;
 
 class ArticleManager extends NestCrudManager implements ArticleManagerInterface

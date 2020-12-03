@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -9,11 +11,12 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Service\Fulfillment;
+namespace Slince\Shopify\Service\Shipping;
 
-use Slince\Shopify\Common\Manager\NestCrudable;
+use Slince\Shopify\Model\Shipping\Fulfillment;
+use Slince\Shopify\Service\Common\NestCrudManager;
 
-class FulfillmentManager extends NestCrudable implements FulfillmentManagerInterface
+class FulfillmentManager extends NestCrudManager implements FulfillmentManagerInterface
 {
     /**
      * {@inheritdoc}
@@ -60,7 +63,7 @@ class FulfillmentManager extends NestCrudable implements FulfillmentManagerInter
      */
     public function open($orderId, $id)
     {
-        $data = $this->client->post('orders/'.$orderId.'/fulfillments/'.$id.'/open', []);
+        $data = $this->client->post('orders/{$orderId}/fulfillments/{$id}/open', []);
 
         return $this->fromArray($data['fulfillment']);
     }
@@ -70,7 +73,7 @@ class FulfillmentManager extends NestCrudable implements FulfillmentManagerInter
      */
     public function cancel($orderId, $id)
     {
-        $data = $this->client->post('orders/'.$orderId.'/fulfillments/'.$id.'/cancel', []);
+        $data = $this->client->post('orders/{$orderId}/fulfillments/{$id}/cancel', []);
 
         return $this->fromArray($data['fulfillment']);
     }
@@ -80,7 +83,7 @@ class FulfillmentManager extends NestCrudable implements FulfillmentManagerInter
      */
     public function complete($orderId, $id)
     {
-        $data = $this->client->post('orders/'.$orderId.'/fulfillments/'.$id.'/complete', []);
+        $data = $this->client->post("orders/{$orderId}/fulfillments/{$id}/complete", []);
 
         return $this->fromArray($data['fulfillment']);
     }

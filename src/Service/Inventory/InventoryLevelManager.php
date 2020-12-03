@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Service\Inventory;
 
-use Slince\Shopify\Resource\Inventory\InventoryLevel;
+use Slince\Shopify\Model\Inventory\InventoryLevel;
 use Slince\Shopify\Service\Common\AbstractManager;
 
 class InventoryLevelManager extends AbstractManager implements InventoryLevelManagerInterface

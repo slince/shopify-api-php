@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Service\Billing;
 
-use Slince\Shopify\Resource\Billing\UsageCharge;
+use Slince\Shopify\Model\Billing\UsageCharge;
 use Slince\Shopify\Service\Common\NestCrudManager;
 
 class UsageChargeManager extends NestCrudManager implements UsageChargeManagerInterface

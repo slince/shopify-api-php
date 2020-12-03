@@ -1,6 +1,6 @@
 <?php
 
-namespace Slince\Shopify\Resource\OnlineStore;
+namespace Slince\Shopify\Model\OnlineStore;
 
 class Theme
 {

@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Service\OnlineStore;
 
-use Slince\Shopify\Resource\OnlineStore\Asset;
+use Slince\Shopify\Model\OnlineStore\Asset;
 
 interface AssetManagerInterface
 {

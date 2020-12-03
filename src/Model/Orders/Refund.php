@@ -1,12 +1,12 @@
 <?php
 
-namespace Slince\Shopify\Resource\Order;
+namespace Slince\Shopify\Model\Order;
 
-use Slince\Shopify\Resource\Common\PriceSet;
-use Slince\Shopify\Resource\Orders\Common\Duty;
-use Slince\Shopify\Resource\Orders\Common\OrderAdjustment;
-use Slince\Shopify\Resource\Orders\Common\RefundDuty;
-use Slince\Shopify\Resource\Orders\Common\RefundLineItem;
+use Slince\Shopify\Model\Common\PriceSet;
+use Slince\Shopify\Model\Orders\Common\Duty;
+use Slince\Shopify\Model\Orders\Common\OrderAdjustment;
+use Slince\Shopify\Model\Orders\Common\RefundDuty;
+use Slince\Shopify\Model\Orders\Common\RefundLineItem;
 
 class Refund
 {

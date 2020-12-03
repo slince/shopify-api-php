@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Service\OnlineStore;
 
-use Slince\Shopify\Resource\OnlineStore\Theme;
+use Slince\Shopify\Model\OnlineStore\Theme;
 use Slince\Shopify\Service\Common\GeneralCurdManager;
 
 class ThemeManager extends GeneralCurdManager implements ThemeManagerInterface
