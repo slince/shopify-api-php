@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -9,11 +11,11 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Service\InventoryItem;
+namespace Slince\Shopify\Service\Inventory;
 
-use Slince\Shopify\Common\Manager\ManagerInterface;
+use Slince\Shopify\Resource\Inventory\InventoryItem;
 
-interface InventoryItemManagerInterface extends ManagerInterface
+interface InventoryItemManagerInterface
 {
     /**
      * Gets all inventory items.

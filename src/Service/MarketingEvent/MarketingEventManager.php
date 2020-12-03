@@ -11,27 +11,19 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Service\Events;
+namespace Slince\Shopify\Service\MarketingEvent;
 
-use Slince\Shopify\Resource\Events\Event;
+use Slince\Shopify\Resource\MarketingEvent\MarketingEvent;
 use Slince\Shopify\Service\Common\GeneralCurdManager;
 
-class EventManager extends GeneralCurdManager implements EventManagerInterface
+class MarketingEventManager extends GeneralCurdManager implements MarketingEventManagerInterface
 {
     /**
      * {@inheritdoc}
      */
     public static function getServiceName()
     {
-        return 'events';
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getModelClass()
-    {
-        return Event::class;
+        return 'marketing_events';
     }
 
     /**
@@ -39,6 +31,14 @@ class EventManager extends GeneralCurdManager implements EventManagerInterface
      */
     public function getResourceName()
     {
-        return 'event';
+        return 'marketing_event';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getModelClass()
+    {
+        return MarketingEvent::class;
     }
 }

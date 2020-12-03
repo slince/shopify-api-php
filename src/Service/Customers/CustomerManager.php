@@ -83,6 +83,6 @@ class CustomerManager extends GeneralCurdManager implements CustomerManagerInter
     {
         $data = $this->client->get("customers/{$id}/orders");
 
-        return $this->client->getHydrator()->hydrate($data['orders'], Order::class);
+        return $this->client->getHydrator()->hydrateMany($data['orders'], Order::class);
     }
 }

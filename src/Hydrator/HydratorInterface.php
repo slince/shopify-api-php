@@ -23,6 +23,15 @@ interface HydratorInterface
     public function hydrate(array $data, string $type);
 
     /**
+     * Hydrate many object from array.
+     *
+     * @param array $data
+     * @param string $type
+     * @return object[]
+     */
+    public function hydrateMany(array $data, string $type);
+
+    /**
      * Extracts data from an object.
      *
      * @param object $object

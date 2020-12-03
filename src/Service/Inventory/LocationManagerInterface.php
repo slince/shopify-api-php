@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -9,12 +11,12 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Service\Location;
+namespace Slince\Shopify\Service\Inventory;
 
-use Slince\Shopify\Common\Manager\ManagerInterface;
-use Slince\Shopify\Manager\InventoryLevel\InventoryLevel;
+use Slince\Shopify\Resource\Inventory\InventoryLevel;
+use Slince\Shopify\Resource\Inventory\Location;
 
-interface LocationManagerInterface extends ManagerInterface
+interface LocationManagerInterface
 {
     /**
      * Gets all locations.

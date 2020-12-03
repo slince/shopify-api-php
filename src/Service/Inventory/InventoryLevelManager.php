@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -9,9 +11,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Service\InventoryLevel;
+namespace Slince\Shopify\Service\Inventory;
 
-use Slince\Shopify\Common\Manager\AbstractManager;
+use Slince\Shopify\Resource\Inventory\InventoryLevel;
+use Slince\Shopify\Service\Common\AbstractManager;
 
 class InventoryLevelManager extends AbstractManager implements InventoryLevelManagerInterface
 {

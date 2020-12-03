@@ -68,4 +68,16 @@ class Hydrator implements HydratorInterface
     {
         return $this->serializer->denormalize($data, $type);
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function hydrateMany(array $data, string $type)
+    {
+        $objects = [];
+        foreach ($data as $item) {
+            $objects[] = $this->hydrate($item, $type);
+        }
+        return $objects;
+    }
 }

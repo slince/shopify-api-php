@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -9,12 +11,13 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Service\Location;
+namespace Slince\Shopify\Service\Inventory;
 
-use Slince\Shopify\Common\Manager\GeneralCurdable;
-use Slince\Shopify\Manager\InventoryLevel\InventoryLevel;
+use Slince\Shopify\Resource\Inventory\InventoryLevel;
+use Slince\Shopify\Resource\Inventory\Location;
+use Slince\Shopify\Service\Common\GeneralCurdManager;
 
-class LocationManager extends GeneralCurdable implements LocationManagerInterface
+class LocationManager extends GeneralCurdManager implements LocationManagerInterface
 {
     /**
      * {@inheritdoc}
@@ -71,6 +74,6 @@ class LocationManager extends GeneralCurdable implements LocationManagerInterfac
     {
         $endpoint = sprintf('locations/%s/inventory_levels', $id);
         $data = $this->client->get($endpoint);
-        return $this->createMany($data['inventory_levels'], InventoryLevel::class);
+        return $this->client->getHydrator()->hydrateMany($data['inventory_levels'], InventoryLevel::class);
     }
 }
