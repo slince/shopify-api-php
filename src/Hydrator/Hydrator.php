@@ -29,7 +29,12 @@ class Hydrator implements HydratorInterface
      */
     protected $serializer;
 
-    public function __construct()
+    public function __construct($metaCacheDir)
+    {
+        $this->serializer = new Serializer($this->createNormalizers());
+    }
+
+    protected function createNormalizers()
     {
         $normalizer = new ObjectNormalizer(
             null,
@@ -40,11 +45,12 @@ class Hydrator implements HydratorInterface
             null,
             [ObjectNormalizer::DISABLE_TYPE_ENFORCEMENT => true]
         );
-        $this->serializer = new Serializer([
+
+        return [
             new DateTimeNormalizer([DateTimeNormalizer::FORMAT_KEY => DateTimeInterface::ISO8601]),
             new ArrayDenormalizer(),
             $normalizer,
-        ]);
+        ];
     }
 
     /**

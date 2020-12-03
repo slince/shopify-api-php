@@ -22,7 +22,6 @@ use Slince\Shopify\Common\Manager\ManagerInterface;
 use Slince\Shopify\Exception\InvalidArgumentException;
 use GuzzleHttp\Exception\RequestException;
 use Slince\Shopify\Exception\ClientException;
-use Slince\Shopify\Exception\RuntimeException;
 use Slince\Shopify\Hydrator\Hydrator;
 
 /**
@@ -66,7 +65,7 @@ use Slince\Shopify\Hydrator\Hydrator;
 class Client
 {
     const NAME = 'SlinceShopifyClient';
-    const VERSION = '2.4.0';
+    const VERSION = '3.0.0';
 
     /**
      * @var HttpClient
@@ -93,7 +92,7 @@ class Client
     /**
      * @var string
      */
-    protected $apiVersion = '2019-10';
+    protected $apiVersion = '2020-10';
 
     /**
      * @var ResponseInterface
@@ -410,22 +409,7 @@ class Client
         if ($this->hydrator) {
             return $this->hydrator;
         }
-        return $this->hydrator = new Hydrator($this->metaCacheDir, $this->metaDirs);
-    }
-
-    /**
-     * Add a custom meta dir.
-     *
-     * @param string $namespace
-     * @param string $path
-     * @throws RuntimeException
-     */
-    public function addMetaDir($namespace, $path)
-    {
-        if ($this->hydrator) {
-            throw new RuntimeException(sprintf('The hydrator has been built, you should add meta dir before getting manager.'));
-        }
-        $this->metaDirs[$namespace] = $path;
+        return $this->hydrator = new Hydrator($this->metaCacheDir);
     }
 
     /**

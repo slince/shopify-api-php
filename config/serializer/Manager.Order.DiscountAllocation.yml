@@ -1,6 +1,0 @@
-Slince\Shopify\Manager\Order\DiscountAllocation:
-    properties:
-        amount:
-            type: string
-        discountApplicationIndex:
-            type: integer

@@ -14,10 +14,10 @@
         "php": "^7.2",
         "doctrine/inflector": "^1.2|^2.0",
         "doctrine/cache": "^1.0",
+        "guzzlehttp/guzzle": "^7.0",
         "slince/di": "^3.0",
         "symfony/yaml": "^3.4|^4.2|^5.0",
-        "symfony/serializer": "3.4|^4.2|^5.0",
-        "symfony/http-client": "3.4|^4.2|^5.0"
+        "symfony/serializer": "3.4|^4.2|^5.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^7.5|^8.0|^9.0",
