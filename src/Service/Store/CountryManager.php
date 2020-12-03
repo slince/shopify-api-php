@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -9,11 +11,12 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Service\Country;
+namespace Slince\Shopify\Service\Store;
 
-use Slince\Shopify\Common\Manager\GeneralCurdable;
+use Slince\Shopify\Model\Store\Country;
+use Slince\Shopify\Service\Common\GeneralCurdManager;
 
-class CountryManager extends GeneralCurdable implements CountryManagerInterface
+class CountryManager extends GeneralCurdManager implements CountryManagerInterface
 {
     /**
      * {@inheritdoc}
