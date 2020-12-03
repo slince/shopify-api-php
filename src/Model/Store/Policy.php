@@ -11,6 +11,8 @@
 
 namespace Slince\Shopify\Model\Store;
 
+use DateTimeInterface;
+
 class Policy
 {
     /**
@@ -29,12 +31,12 @@ class Policy
     protected $handle;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     protected $createdAt;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     protected $updatedAt;
 
@@ -95,7 +97,7 @@ class Policy
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
     public function getCreatedAt()
     {
@@ -103,7 +105,7 @@ class Policy
     }
 
     /**
-     * @param \DateTimeInterface $createdAt
+     * @param DateTimeInterface $createdAt
      */
     public function setCreatedAt($createdAt)
     {
@@ -111,7 +113,7 @@ class Policy
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
     public function getUpdatedAt()
     {
@@ -119,7 +121,7 @@ class Policy
     }
 
     /**
-     * @param \DateTimeInterface $updatedAt
+     * @param DateTimeInterface $updatedAt
      */
     public function setUpdatedAt($updatedAt)
     {

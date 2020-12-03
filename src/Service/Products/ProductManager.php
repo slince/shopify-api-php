@@ -13,7 +13,10 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Service\Products;
 
-class ProductManager extends GeneralCurdable implements ProductManagerInterface
+use Slince\Shopify\Resource\Products\Product;
+use Slince\Shopify\Service\Common\GeneralCurdManager;
+
+class ProductManager extends GeneralCurdManager implements ProductManagerInterface
 {
     /**
      * {@inheritdoc}

@@ -9,7 +9,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Service\Product;
+namespace Slince\Shopify\Service\Products;
+
+use Slince\Shopify\Resource\Products\Product;
 
 interface ProductManagerInterface
 {

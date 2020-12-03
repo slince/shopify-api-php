@@ -11,6 +11,8 @@
 
 namespace Slince\Shopify\Resource\Products;
 
+use DateTimeInterface;
+
 class CustomCollection
 {
     /**
@@ -29,7 +31,7 @@ class CustomCollection
     protected $title;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     protected $updatedAt;
 
@@ -39,7 +41,7 @@ class CustomCollection
     protected $bodyHtml;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     protected $publishedAt;
 
@@ -59,7 +61,7 @@ class CustomCollection
     protected $publishedScope;
 
     /**
-     * @var CustomCollectionImage
+     * @var CollectionImage
      */
     protected $image;
 
@@ -67,6 +69,38 @@ class CustomCollection
      * @var string
      */
     protected $adminGraphqlApiId;
+
+    /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId(int $id): void
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAdminGraphqlApiId(): string
+    {
+        return $this->adminGraphqlApiId;
+    }
+
+    /**
+     * @param string $adminGraphqlApiId
+     */
+    public function setAdminGraphqlApiId(string $adminGraphqlApiId): void
+    {
+        $this->adminGraphqlApiId = $adminGraphqlApiId;
+    }
 
     /**
      * @return string
@@ -109,7 +143,7 @@ class CustomCollection
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
     public function getUpdatedAt()
     {
@@ -117,7 +151,7 @@ class CustomCollection
     }
 
     /**
-     * @param \DateTimeInterface $updatedAt
+     * @param DateTimeInterface $updatedAt
      *
 
      */
@@ -149,7 +183,7 @@ class CustomCollection
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
     public function getPublishedAt()
     {
@@ -157,7 +191,7 @@ class CustomCollection
     }
 
     /**
-     * @param \DateTimeInterface $publishedAt
+     * @param DateTimeInterface $publishedAt
      *
 
      */
@@ -229,7 +263,7 @@ class CustomCollection
     }
 
     /**
-Image
+     * Image
      */
     public function getImage()
     {
@@ -237,14 +271,11 @@ Image
     }
 
     /**
-     * @param CustomCollectionImage $image
+     * @param CollectionImage $image
      *
-
      */
     public function setImage($image)
     {
         $this->image = $image;
-
-
     }
 }

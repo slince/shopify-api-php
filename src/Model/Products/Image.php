@@ -9,10 +9,17 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\ProductImage;
+namespace Slince\Shopify\Resource\Products;
+
+use DateTimeInterface;
 
 class Image
 {
+    /**
+     * @var int
+     */
+    protected $id;
+
     /**
      * @var int
      */
@@ -24,12 +31,12 @@ class Image
     protected $position;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     protected $createdAt;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     protected $updatedAt;
 
@@ -63,6 +70,38 @@ class Image
      * @var string
      */
     protected $adminGraphqlApiId;
+
+    /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId(int $id): void
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAdminGraphqlApiId(): string
+    {
+        return $this->adminGraphqlApiId;
+    }
+
+    /**
+     * @param string $adminGraphqlApiId
+     */
+    public function setAdminGraphqlApiId(string $adminGraphqlApiId): void
+    {
+        $this->adminGraphqlApiId = $adminGraphqlApiId;
+    }
 
     /**
      * @return int
@@ -105,7 +144,7 @@ class Image
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
     public function getCreatedAt()
     {
@@ -113,7 +152,7 @@ class Image
     }
 
     /**
-     * @param \DateTimeInterface $createdAt
+     * @param DateTimeInterface $createdAt
      *
 
      */
@@ -125,7 +164,7 @@ class Image
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
     public function getUpdatedAt()
     {
@@ -133,7 +172,7 @@ class Image
     }
 
     /**
-     * @param \DateTimeInterface $updatedAt
+     * @param DateTimeInterface $updatedAt
      *
 
      */

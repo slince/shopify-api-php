@@ -11,11 +11,15 @@
 
 namespace Slince\Shopify\Resource\Products;
 
-use Slince\Shopify\Manager\ProductImage\Image;
-use Slince\Shopify\Manager\ProductVariant\Variant;
+use DateTimeInterface;
 
 class Product
 {
+    /**
+     * @var int
+     */
+    protected $id;
+
     /**
      * @var string
      */
@@ -37,7 +41,7 @@ class Product
     protected $productType;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     protected $createdAt;
 
@@ -47,12 +51,12 @@ class Product
     protected $handle;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     protected $updatedAt;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     protected $publishedAt;
 
@@ -95,6 +99,38 @@ class Product
      * @var string
      */
     protected $adminGraphqlApiId;
+
+    /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId(int $id): void
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAdminGraphqlApiId(): string
+    {
+        return $this->adminGraphqlApiId;
+    }
+
+    /**
+     * @param string $adminGraphqlApiId
+     */
+    public function setAdminGraphqlApiId(string $adminGraphqlApiId): void
+    {
+        $this->adminGraphqlApiId = $adminGraphqlApiId;
+    }
 
     /**
      * @return string
@@ -177,7 +213,7 @@ class Product
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
     public function getCreatedAt()
     {
@@ -185,7 +221,7 @@ class Product
     }
 
     /**
-     * @param \DateTimeInterface $createdAt
+     * @param DateTimeInterface $createdAt
      *
 
      */
@@ -217,7 +253,7 @@ class Product
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
     public function getUpdatedAt()
     {
@@ -225,7 +261,7 @@ class Product
     }
 
     /**
-     * @param \DateTimeInterface $updatedAt
+     * @param DateTimeInterface $updatedAt
      *
 
      */
@@ -237,7 +273,7 @@ class Product
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
     public function getPublishedAt()
     {
@@ -245,7 +281,7 @@ class Product
     }
 
     /**
-     * @param \DateTimeInterface $publishedAt
+     * @param DateTimeInterface $publishedAt
      *
 
      */

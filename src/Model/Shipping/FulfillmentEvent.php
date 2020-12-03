@@ -3,6 +3,8 @@
 
 namespace Slince\Shopify\Model\Shipping;
 
+use DateTimeInterface;
+
 class FulfillmentEvent
 {
     /**
@@ -26,7 +28,7 @@ class FulfillmentEvent
     protected $message;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     protected $happenedAt;
 
@@ -71,17 +73,17 @@ class FulfillmentEvent
     protected $shopId;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     protected $createdAt;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     protected $updatedAt;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     protected $estimatedDeliveryAt;
 
@@ -160,17 +162,17 @@ class FulfillmentEvent
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
-    public function getHappenedAt(): \DateTimeInterface
+    public function getHappenedAt(): DateTimeInterface
     {
         return $this->happenedAt;
     }
 
     /**
-     * @param \DateTimeInterface $happenedAt
+     * @param DateTimeInterface $happenedAt
      */
-    public function setHappenedAt(\DateTimeInterface $happenedAt): void
+    public function setHappenedAt(DateTimeInterface $happenedAt): void
     {
         $this->happenedAt = $happenedAt;
     }
@@ -304,49 +306,49 @@ class FulfillmentEvent
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
-    public function getCreatedAt(): \DateTimeInterface
+    public function getCreatedAt(): DateTimeInterface
     {
         return $this->createdAt;
     }
 
     /**
-     * @param \DateTimeInterface $createdAt
+     * @param DateTimeInterface $createdAt
      */
-    public function setCreatedAt(\DateTimeInterface $createdAt): void
+    public function setCreatedAt(DateTimeInterface $createdAt): void
     {
         $this->createdAt = $createdAt;
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
-    public function getUpdatedAt(): \DateTimeInterface
+    public function getUpdatedAt(): DateTimeInterface
     {
         return $this->updatedAt;
     }
 
     /**
-     * @param \DateTimeInterface $updatedAt
+     * @param DateTimeInterface $updatedAt
      */
-    public function setUpdatedAt(\DateTimeInterface $updatedAt): void
+    public function setUpdatedAt(DateTimeInterface $updatedAt): void
     {
         $this->updatedAt = $updatedAt;
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
-    public function getEstimatedDeliveryAt(): \DateTimeInterface
+    public function getEstimatedDeliveryAt(): DateTimeInterface
     {
         return $this->estimatedDeliveryAt;
     }
 
     /**
-     * @param \DateTimeInterface $estimatedDeliveryAt
+     * @param DateTimeInterface $estimatedDeliveryAt
      */
-    public function setEstimatedDeliveryAt(\DateTimeInterface $estimatedDeliveryAt): void
+    public function setEstimatedDeliveryAt(DateTimeInterface $estimatedDeliveryAt): void
     {
         $this->estimatedDeliveryAt = $estimatedDeliveryAt;
     }

@@ -8,7 +8,10 @@
  * This source file is subject to the MIT license that is bundled
  * with this source code in the file LICENSE.
  */
+
 namespace Slince\Shopify\Model\Discounts;
+
+use DateTimeInterface;
 
 class PriceRule
 {
@@ -63,22 +66,22 @@ class PriceRule
     protected $usageLimit;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     protected $startsAt;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     protected $endsAt;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     protected $createdAt;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     protected $updatedAt;
 
@@ -323,65 +326,65 @@ class PriceRule
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
-    public function getStartsAt(): \DateTimeInterface
+    public function getStartsAt(): DateTimeInterface
     {
         return $this->startsAt;
     }
 
     /**
-     * @param \DateTimeInterface $startsAt
+     * @param DateTimeInterface $startsAt
      */
-    public function setStartsAt(\DateTimeInterface $startsAt): void
+    public function setStartsAt(DateTimeInterface $startsAt): void
     {
         $this->startsAt = $startsAt;
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
-    public function getEndsAt(): \DateTimeInterface
+    public function getEndsAt(): DateTimeInterface
     {
         return $this->endsAt;
     }
 
     /**
-     * @param \DateTimeInterface $endsAt
+     * @param DateTimeInterface $endsAt
      */
-    public function setEndsAt(\DateTimeInterface $endsAt): void
+    public function setEndsAt(DateTimeInterface $endsAt): void
     {
         $this->endsAt = $endsAt;
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
-    public function getCreatedAt(): \DateTimeInterface
+    public function getCreatedAt(): DateTimeInterface
     {
         return $this->createdAt;
     }
 
     /**
-     * @param \DateTimeInterface $createdAt
+     * @param DateTimeInterface $createdAt
      */
-    public function setCreatedAt(\DateTimeInterface $createdAt): void
+    public function setCreatedAt(DateTimeInterface $createdAt): void
     {
         $this->createdAt = $createdAt;
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
-    public function getUpdatedAt(): \DateTimeInterface
+    public function getUpdatedAt(): DateTimeInterface
     {
         return $this->updatedAt;
     }
 
     /**
-     * @param \DateTimeInterface $updatedAt
+     * @param DateTimeInterface $updatedAt
      */
-    public function setUpdatedAt(\DateTimeInterface $updatedAt): void
+    public function setUpdatedAt(DateTimeInterface $updatedAt): void
     {
         $this->updatedAt = $updatedAt;
     }

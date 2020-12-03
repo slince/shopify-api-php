@@ -13,7 +13,9 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Service\Products;
 
-class CollectManager extends GeneralCurdable implements CollectManagerInterface
+use Slince\Shopify\Service\Common\GeneralCurdManager;
+
+class CollectManager extends GeneralCurdManager implements CollectManagerInterface
 {
     /**
      * {@inheritdoc}

@@ -9,10 +9,17 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\ProductVariant;
+namespace Slince\Shopify\Resource\Products;
+
+use DateTimeInterface;
 
 class Variant
 {
+    /**
+     * @var int
+     */
+    protected $id;
+
     /**
      * @var int
      */
@@ -79,12 +86,12 @@ class Variant
     protected $option3;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     protected $createdAt;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     protected $updatedAt;
 
@@ -137,6 +144,38 @@ class Variant
      * @var string
      */
     protected $adminGraphqlApiId;
+
+    /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId(int $id): void
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAdminGraphqlApiId(): string
+    {
+        return $this->adminGraphqlApiId;
+    }
+
+    /**
+     * @param string $adminGraphqlApiId
+     */
+    public function setAdminGraphqlApiId(string $adminGraphqlApiId): void
+    {
+        $this->adminGraphqlApiId = $adminGraphqlApiId;
+    }
 
     /**
      * @return int
@@ -399,7 +438,7 @@ class Variant
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
     public function getCreatedAt()
     {
@@ -407,7 +446,7 @@ class Variant
     }
 
     /**
-     * @param \DateTimeInterface $createdAt
+     * @param DateTimeInterface $createdAt
      *
 
      */
@@ -419,7 +458,7 @@ class Variant
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
     public function getUpdatedAt()
     {
@@ -427,7 +466,7 @@ class Variant
     }
 
     /**
-     * @param \DateTimeInterface $updatedAt
+     * @param DateTimeInterface $updatedAt
      *
 
      */

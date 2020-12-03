@@ -8,7 +8,10 @@
  * This source file is subject to the MIT license that is bundled
  * with this source code in the file LICENSE.
  */
+
 namespace Slince\Shopify\Model\Customer;
+
+use DateTimeInterface;
 
 class Customer
 {
@@ -28,12 +31,12 @@ class Customer
     protected $acceptsMarketing;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     protected $createdAt;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     protected $updatedAt;
 
@@ -113,7 +116,7 @@ class Customer
     protected $addresses;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     protected $acceptsMarketingUpdatedAt;
 
@@ -186,33 +189,33 @@ class Customer
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
-    public function getCreatedAt(): \DateTimeInterface
+    public function getCreatedAt(): DateTimeInterface
     {
         return $this->createdAt;
     }
 
     /**
-     * @param \DateTimeInterface $createdAt
+     * @param DateTimeInterface $createdAt
      */
-    public function setCreatedAt(\DateTimeInterface $createdAt): void
+    public function setCreatedAt(DateTimeInterface $createdAt): void
     {
         $this->createdAt = $createdAt;
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
-    public function getUpdatedAt(): \DateTimeInterface
+    public function getUpdatedAt(): DateTimeInterface
     {
         return $this->updatedAt;
     }
 
     /**
-     * @param \DateTimeInterface $updatedAt
+     * @param DateTimeInterface $updatedAt
      */
-    public function setUpdatedAt(\DateTimeInterface $updatedAt): void
+    public function setUpdatedAt(DateTimeInterface $updatedAt): void
     {
         $this->updatedAt = $updatedAt;
     }
@@ -458,17 +461,17 @@ class Customer
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
-    public function getAcceptsMarketingUpdatedAt(): \DateTimeInterface
+    public function getAcceptsMarketingUpdatedAt(): DateTimeInterface
     {
         return $this->acceptsMarketingUpdatedAt;
     }
 
     /**
-     * @param \DateTimeInterface $acceptsMarketingUpdatedAt
+     * @param DateTimeInterface $acceptsMarketingUpdatedAt
      */
-    public function setAcceptsMarketingUpdatedAt(\DateTimeInterface $acceptsMarketingUpdatedAt): void
+    public function setAcceptsMarketingUpdatedAt(DateTimeInterface $acceptsMarketingUpdatedAt): void
     {
         $this->acceptsMarketingUpdatedAt = $acceptsMarketingUpdatedAt;
     }

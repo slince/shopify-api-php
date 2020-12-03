@@ -3,6 +3,8 @@
 
 namespace Slince\Shopify\Model\OnlineStore;
 
+use DateTimeInterface;
+
 class ScriptTag
 {
     /**
@@ -21,7 +23,7 @@ class ScriptTag
     protected $event;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     protected $createdAt;
 
@@ -84,17 +86,17 @@ class ScriptTag
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
-    public function getCreatedAt(): \DateTimeInterface
+    public function getCreatedAt(): DateTimeInterface
     {
         return $this->createdAt;
     }
 
     /**
-     * @param \DateTimeInterface $createdAt
+     * @param DateTimeInterface $createdAt
      */
-    public function setCreatedAt(\DateTimeInterface $createdAt): void
+    public function setCreatedAt(DateTimeInterface $createdAt): void
     {
         $this->createdAt = $createdAt;
     }

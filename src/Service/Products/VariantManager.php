@@ -13,6 +13,9 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Service\Products;
 
+use Slince\Shopify\Resource\Products\Variant;
+use Slince\Shopify\Service\Common\AbstractManager;
+
 class VariantManager extends AbstractManager implements VariantManagerInterface
 {
     /**

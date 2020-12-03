@@ -2,6 +2,7 @@
 
 namespace Slince\Shopify\Model\Order;
 
+use DateTimeInterface;
 use Slince\Shopify\Model\Common\PriceSet;
 use Slince\Shopify\Model\Orders\Common\Duty;
 use Slince\Shopify\Model\Orders\Common\OrderAdjustment;
@@ -21,7 +22,7 @@ class Refund
     protected $orderId;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     protected $createdAt;
 
@@ -113,17 +114,17 @@ class Refund
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
-    public function getCreatedAt(): \DateTimeInterface
+    public function getCreatedAt(): DateTimeInterface
     {
         return $this->createdAt;
     }
 
     /**
-     * @param \DateTimeInterface $createdAt
+     * @param DateTimeInterface $createdAt
      */
-    public function setCreatedAt(\DateTimeInterface $createdAt): void
+    public function setCreatedAt(DateTimeInterface $createdAt): void
     {
         $this->createdAt = $createdAt;
     }

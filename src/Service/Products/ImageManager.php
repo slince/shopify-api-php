@@ -13,7 +13,10 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Service\Products;
 
-class ImageManager extends NestCrudable implements ImageManagerInterface
+use Slince\Shopify\Resource\Products\Image;
+use Slince\Shopify\Service\Common\NestCrudManager;
+
+class ImageManager extends NestCrudManager implements ImageManagerInterface
 {
     /**
      * {@inheritdoc}

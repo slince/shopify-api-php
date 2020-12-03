@@ -2,6 +2,7 @@
 
 namespace Slince\Shopify\Model\Order;
 
+use DateTimeInterface;
 use Slince\Shopify\Model\Orders\Common\CurrencyExchangeAdjustment;
 use Slince\Shopify\Model\Orders\Common\PaymentDetails;
 
@@ -38,7 +39,7 @@ class Transaction
     protected $message;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     protected $createdAt;
 
@@ -68,7 +69,7 @@ class Transaction
     protected $parentId;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     protected $processedAt;
 
@@ -214,17 +215,17 @@ class Transaction
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
-    public function getCreatedAt(): \DateTimeInterface
+    public function getCreatedAt(): DateTimeInterface
     {
         return $this->createdAt;
     }
 
     /**
-     * @param \DateTimeInterface $createdAt
+     * @param DateTimeInterface $createdAt
      */
-    public function setCreatedAt(\DateTimeInterface $createdAt): void
+    public function setCreatedAt(DateTimeInterface $createdAt): void
     {
         $this->createdAt = $createdAt;
     }
@@ -310,17 +311,17 @@ class Transaction
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
-    public function getProcessedAt(): \DateTimeInterface
+    public function getProcessedAt(): DateTimeInterface
     {
         return $this->processedAt;
     }
 
     /**
-     * @param \DateTimeInterface $processedAt
+     * @param DateTimeInterface $processedAt
      */
-    public function setProcessedAt(\DateTimeInterface $processedAt): void
+    public function setProcessedAt(DateTimeInterface $processedAt): void
     {
         $this->processedAt = $processedAt;
     }

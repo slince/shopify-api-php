@@ -3,6 +3,8 @@
 
 namespace Slince\Shopify\Model\OnlineStore;
 
+use DateTimeInterface;
+
 class Comment
 {
     /**
@@ -46,12 +48,12 @@ class Comment
     protected $blogId;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     protected $createdAt;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     protected $updatedAt;
 
@@ -66,7 +68,7 @@ class Comment
     protected $userAgent;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     protected $publishedAt;
 
@@ -199,33 +201,33 @@ class Comment
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
-    public function getCreatedAt(): \DateTimeInterface
+    public function getCreatedAt(): DateTimeInterface
     {
         return $this->createdAt;
     }
 
     /**
-     * @param \DateTimeInterface $createdAt
+     * @param DateTimeInterface $createdAt
      */
-    public function setCreatedAt(\DateTimeInterface $createdAt): void
+    public function setCreatedAt(DateTimeInterface $createdAt): void
     {
         $this->createdAt = $createdAt;
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
-    public function getUpdatedAt(): \DateTimeInterface
+    public function getUpdatedAt(): DateTimeInterface
     {
         return $this->updatedAt;
     }
 
     /**
-     * @param \DateTimeInterface $updatedAt
+     * @param DateTimeInterface $updatedAt
      */
-    public function setUpdatedAt(\DateTimeInterface $updatedAt): void
+    public function setUpdatedAt(DateTimeInterface $updatedAt): void
     {
         $this->updatedAt = $updatedAt;
     }
@@ -263,17 +265,17 @@ class Comment
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
-    public function getPublishedAt(): \DateTimeInterface
+    public function getPublishedAt(): DateTimeInterface
     {
         return $this->publishedAt;
     }
 
     /**
-     * @param \DateTimeInterface $publishedAt
+     * @param DateTimeInterface $publishedAt
      */
-    public function setPublishedAt(\DateTimeInterface $publishedAt): void
+    public function setPublishedAt(DateTimeInterface $publishedAt): void
     {
         $this->publishedAt = $publishedAt;
     }

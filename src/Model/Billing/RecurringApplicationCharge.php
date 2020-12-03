@@ -3,6 +3,8 @@
 
 namespace Slince\Shopify\Model\Billing;
 
+use DateTimeInterface;
+
 class RecurringApplicationCharge
 {
     /**
@@ -41,17 +43,17 @@ class RecurringApplicationCharge
     protected $returnUrl;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     protected $billingOn;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     protected $createdAt;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     protected $updatedAt;
 
@@ -61,12 +63,12 @@ class RecurringApplicationCharge
     protected $test;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     protected $activatedOn;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     protected $cancelledOn;
 
@@ -81,7 +83,7 @@ class RecurringApplicationCharge
     protected $cappedAmount;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     protected $trialEndsAOn;
 
@@ -223,49 +225,49 @@ class RecurringApplicationCharge
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
-    public function getBillingOn(): \DateTimeInterface
+    public function getBillingOn(): DateTimeInterface
     {
         return $this->billingOn;
     }
 
     /**
-     * @param \DateTimeInterface $billingOn
+     * @param DateTimeInterface $billingOn
      */
-    public function setBillingOn(\DateTimeInterface $billingOn): void
+    public function setBillingOn(DateTimeInterface $billingOn): void
     {
         $this->billingOn = $billingOn;
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
-    public function getCreatedAt(): \DateTimeInterface
+    public function getCreatedAt(): DateTimeInterface
     {
         return $this->createdAt;
     }
 
     /**
-     * @param \DateTimeInterface $createdAt
+     * @param DateTimeInterface $createdAt
      */
-    public function setCreatedAt(\DateTimeInterface $createdAt): void
+    public function setCreatedAt(DateTimeInterface $createdAt): void
     {
         $this->createdAt = $createdAt;
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
-    public function getUpdatedAt(): \DateTimeInterface
+    public function getUpdatedAt(): DateTimeInterface
     {
         return $this->updatedAt;
     }
 
     /**
-     * @param \DateTimeInterface $updatedAt
+     * @param DateTimeInterface $updatedAt
      */
-    public function setUpdatedAt(\DateTimeInterface $updatedAt): void
+    public function setUpdatedAt(DateTimeInterface $updatedAt): void
     {
         $this->updatedAt = $updatedAt;
     }
@@ -287,33 +289,33 @@ class RecurringApplicationCharge
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
-    public function getActivatedOn(): \DateTimeInterface
+    public function getActivatedOn(): DateTimeInterface
     {
         return $this->activatedOn;
     }
 
     /**
-     * @param \DateTimeInterface $activatedOn
+     * @param DateTimeInterface $activatedOn
      */
-    public function setActivatedOn(\DateTimeInterface $activatedOn): void
+    public function setActivatedOn(DateTimeInterface $activatedOn): void
     {
         $this->activatedOn = $activatedOn;
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
-    public function getCancelledOn(): \DateTimeInterface
+    public function getCancelledOn(): DateTimeInterface
     {
         return $this->cancelledOn;
     }
 
     /**
-     * @param \DateTimeInterface $cancelledOn
+     * @param DateTimeInterface $cancelledOn
      */
-    public function setCancelledOn(\DateTimeInterface $cancelledOn): void
+    public function setCancelledOn(DateTimeInterface $cancelledOn): void
     {
         $this->cancelledOn = $cancelledOn;
     }
@@ -351,17 +353,17 @@ class RecurringApplicationCharge
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
-    public function getTrialEndsAOn(): \DateTimeInterface
+    public function getTrialEndsAOn(): DateTimeInterface
     {
         return $this->trialEndsAOn;
     }
 
     /**
-     * @param \DateTimeInterface $trialEndsAOn
+     * @param DateTimeInterface $trialEndsAOn
      */
-    public function setTrialEndsAOn(\DateTimeInterface $trialEndsAOn): void
+    public function setTrialEndsAOn(DateTimeInterface $trialEndsAOn): void
     {
         $this->trialEndsAOn = $trialEndsAOn;
     }

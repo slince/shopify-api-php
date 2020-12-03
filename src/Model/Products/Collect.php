@@ -11,20 +11,27 @@
 
 namespace Slince\Shopify\Resource\Products;
 
+use DateTimeInterface;
+
 class Collect
 {
+    /**
+     * @var int
+     */
+    protected $id;
+
     /**
      * @var int
      */
     protected $collectionId;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     protected $createdAt;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     protected $updatedAt;
 
@@ -51,6 +58,22 @@ class Collect
     /**
      * @return int
      */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId(int $id): void
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return int
+     */
     public function getCollectionId()
     {
         return $this->collectionId;
@@ -69,7 +92,7 @@ class Collect
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
     public function getCreatedAt()
     {
@@ -77,7 +100,7 @@ class Collect
     }
 
     /**
-     * @param \DateTimeInterface $createdAt
+     * @param DateTimeInterface $createdAt
      *
 
      */
@@ -89,7 +112,7 @@ class Collect
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
     public function getUpdatedAt()
     {
@@ -97,7 +120,7 @@ class Collect
     }
 
     /**
-     * @param \DateTimeInterface $updatedAt
+     * @param DateTimeInterface $updatedAt
      *
 
      */

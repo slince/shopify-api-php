@@ -11,7 +11,9 @@
 
 namespace Slince\Shopify\Resource\Products;
 
-class CustomCollectionImage
+use DateTimeInterface;
+
+class CollectionImage
 {
     /**
      * @var string
@@ -29,7 +31,7 @@ class CustomCollectionImage
     protected $height;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     protected $createdAt;
 
@@ -94,7 +96,7 @@ class CustomCollectionImage
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
     public function getCreatedAt()
     {
@@ -102,7 +104,7 @@ class CustomCollectionImage
     }
 
     /**
-     * @param \DateTimeInterface $createdAt
+     * @param DateTimeInterface $createdAt
      *
 
      */

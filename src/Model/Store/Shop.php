@@ -10,6 +10,8 @@
 
 namespace Slince\Shopify\Model\Store;
 
+use DateTimeInterface;
+
 class Shop
 {
     /**
@@ -28,7 +30,7 @@ class Shop
     protected $domain;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     protected $createdAt;
 
@@ -313,7 +315,7 @@ class Shop
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
     public function getCreatedAt()
     {
@@ -321,7 +323,7 @@ class Shop
     }
 
     /**
-     * @param \DateTimeInterface $createdAt
+     * @param DateTimeInterface $createdAt
      *
 
      */

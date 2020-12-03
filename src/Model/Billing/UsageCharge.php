@@ -4,6 +4,8 @@
 namespace Slince\Shopify\Model\Billing;
 
 
+use DateTimeInterface;
+
 class UsageCharge
 {
     /**
@@ -22,12 +24,12 @@ class UsageCharge
     protected $price;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     protected $createdAt;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     protected $billingOn;
 
@@ -95,33 +97,33 @@ class UsageCharge
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
-    public function getCreatedAt(): \DateTimeInterface
+    public function getCreatedAt(): DateTimeInterface
     {
         return $this->createdAt;
     }
 
     /**
-     * @param \DateTimeInterface $createdAt
+     * @param DateTimeInterface $createdAt
      */
-    public function setCreatedAt(\DateTimeInterface $createdAt): void
+    public function setCreatedAt(DateTimeInterface $createdAt): void
     {
         $this->createdAt = $createdAt;
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
-    public function getBillingOn(): \DateTimeInterface
+    public function getBillingOn(): DateTimeInterface
     {
         return $this->billingOn;
     }
 
     /**
-     * @param \DateTimeInterface $billingOn
+     * @param DateTimeInterface $billingOn
      */
-    public function setBillingOn(\DateTimeInterface $billingOn): void
+    public function setBillingOn(DateTimeInterface $billingOn): void
     {
         $this->billingOn = $billingOn;
     }

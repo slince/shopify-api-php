@@ -13,7 +13,10 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Service\Products;
 
-class SmartCollectionManager extends GeneralCurdable implements SmartCollectionManagerInterface
+use Slince\Shopify\Resource\Products\SmartCollection;
+use Slince\Shopify\Service\Common\GeneralCurdManager;
+
+class SmartCollectionManager extends GeneralCurdManager implements SmartCollectionManagerInterface
 {
     /**
      * {@inheritdoc}

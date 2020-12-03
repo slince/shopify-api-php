@@ -11,8 +11,15 @@
 
 namespace Slince\Shopify\Resource\Products;
 
+use DateTimeInterface;
+
 class SmartCollection
 {
+    /**
+     * @var int
+     */
+    protected $id;
+
     /**
      * @var string
      */
@@ -24,7 +31,7 @@ class SmartCollection
     protected $title;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     protected $updatedAt;
 
@@ -34,7 +41,7 @@ class SmartCollection
     protected $bodyHtml;
 
     /**
-     * @var \DateTimeInterface
+     * @var DateTimeInterface
      */
     protected $publishedAt;
 
@@ -64,7 +71,7 @@ class SmartCollection
     protected $publishedScope;
 
     /**
-     * @var SmartCollectionImage
+     * @var CollectionImage
      */
     protected $image;
 
@@ -72,6 +79,38 @@ class SmartCollection
      * @var string
      */
     protected $adminGraphqlApiId;
+
+    /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId(int $id): void
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAdminGraphqlApiId(): string
+    {
+        return $this->adminGraphqlApiId;
+    }
+
+    /**
+     * @param string $adminGraphqlApiId
+     */
+    public function setAdminGraphqlApiId(string $adminGraphqlApiId): void
+    {
+        $this->adminGraphqlApiId = $adminGraphqlApiId;
+    }
 
     /**
      * @return string
@@ -83,7 +122,6 @@ class SmartCollection
 
     /**
      * @param string $handle
-
      */
     public function setHandle($handle)
     {
@@ -101,7 +139,6 @@ class SmartCollection
 
     /**
      * @param string $title
-
      */
     public function setTitle($title)
     {
@@ -110,7 +147,7 @@ class SmartCollection
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
     public function getUpdatedAt()
     {
@@ -118,8 +155,7 @@ class SmartCollection
     }
 
     /**
-     * @param \DateTimeInterface $updatedAt
-
+     * @param DateTimeInterface $updatedAt
      */
     public function setUpdatedAt($updatedAt)
     {
@@ -137,7 +173,6 @@ class SmartCollection
 
     /**
      * @param string $bodyHtml
-
      */
     public function setBodyHtml($bodyHtml)
     {
@@ -146,7 +181,7 @@ class SmartCollection
     }
 
     /**
-     * @return \DateTimeInterface
+     * @return DateTimeInterface
      */
     public function getPublishedAt()
     {
@@ -154,8 +189,7 @@ class SmartCollection
     }
 
     /**
-     * @param \DateTimeInterface $publishedAt
-
+     * @param DateTimeInterface $publishedAt
      */
     public function setPublishedAt($publishedAt)
     {
@@ -173,7 +207,6 @@ class SmartCollection
 
     /**
      * @param string $sortOrder
-
      */
     public function setSortOrder($sortOrder)
     {
@@ -191,7 +224,6 @@ class SmartCollection
 
     /**
      * @param string $templateSuffix
-
      */
     public function setTemplateSuffix($templateSuffix)
     {
@@ -209,7 +241,6 @@ class SmartCollection
 
     /**
      * @param bool $disjunctive
-
      */
     public function setDisjunctive($disjunctive)
     {
@@ -227,7 +258,6 @@ class SmartCollection
 
     /**
      * @param array $rules
-
      */
     public function setRules($rules)
     {
@@ -245,7 +275,6 @@ class SmartCollection
 
     /**
      * @param string $publishedScope
-
      */
     public function setPublishedScope($publishedScope)
     {
@@ -254,7 +283,7 @@ class SmartCollection
     }
 
     /**
-Image
+     * Image
      */
     public function getImage()
     {
@@ -263,7 +292,6 @@ Image
 
     /**
      * @param SmartCollectionImage $image
-
      */
     public function setImage($image)
     {
