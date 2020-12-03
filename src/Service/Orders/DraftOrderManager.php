@@ -1,10 +1,22 @@
 <?php
 
-namespace Slince\Shopify\Service\DraftOrder;
+declare(strict_types=1);
 
-use Slince\Shopify\Common\Manager\GeneralCurdable;
+/*
+ * This file is part of the slince/shopify-api-php
+ *
+ * (c) Slince <taosikai@yeah.net>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
+ */
 
-class DraftOrderManager extends GeneralCurdable implements DraftOrderManagerInterface
+namespace Slince\Shopify\Service\Orders;
+
+use Slince\Shopify\Resource\Order\DraftOrder;
+use Slince\Shopify\Service\Common\GeneralCurdManager;
+
+class DraftOrderManager extends GeneralCurdManager implements DraftOrderManagerInterface
 {
     /**
      * {@inheritdoc}

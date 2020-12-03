@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -9,7 +11,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Service\Refund;
+namespace Slince\Shopify\Service\Orders;
+
+use Slince\Shopify\Resource\Order\Refund;
 
 interface RefundManagerInterface
 {

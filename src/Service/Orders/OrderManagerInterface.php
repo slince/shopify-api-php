@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -9,18 +11,18 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Service\DraftOrder;
+namespace Slince\Shopify\Service\Orders;
 
-use Slince\Shopify\Common\Manager\ManagerInterface;
+use Slince\Shopify\Resource\Order\Order;
 
-interface DraftOrderManagerInterface extends ManagerInterface
+interface OrderManagerInterface
 {
     /**
      * Gets all orders.
      *
      * @param array $query
      *
-     * @return DraftOrder[]
+     * @return Order[]
      */
     public function findAll(array $query = []);
 
@@ -29,7 +31,7 @@ interface DraftOrderManagerInterface extends ManagerInterface
      *
      * @param int $id
      *
-     * @return DraftOrder
+     * @return Order
      */
     public function find($id);
 
@@ -45,13 +47,12 @@ interface DraftOrderManagerInterface extends ManagerInterface
     /**
      * Updates the order.
      *
-     * @param int $id
+     * @param int   $id
      * @param array $data
      *
      * @return bool
      */
     public function update($id, array $data);
-
 
     /**
      * Removes the order.
@@ -67,25 +68,34 @@ interface DraftOrderManagerInterface extends ManagerInterface
      *
      * @param array $data
      *
-     * @return DraftOrder
+     * @return Order
      */
     public function create(array $data);
 
     /**
-     * Send invoices to customers.
+     * Re-open a closed order.
      *
      * @param int $id
-     * @param array $data
-     * @return array
+     *
+     * @return Order
      */
-    public function sendInvoice($id, array $data);
+    public function open($id);
 
     /**
-     * Complete a draft order
+     * Close an order.
      *
      * @param int $id
-     * @param boolean $paymentPending
-     * @return DraftOrder
+     *
+     * @return Order
      */
-    public function complete($id, $paymentPending = null);
+    public function close($id);
+
+    /**
+     * Cancel an order.
+     *
+     * @param int $id
+     *
+     * @return Order
+     */
+    public function cancel($id);
 }

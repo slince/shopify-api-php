@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -9,18 +11,19 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Service\Transaction;
+namespace Slince\Shopify\Service\Orders;
 
-use Slince\Shopify\Common\Manager\NestCrudable;
+use Slince\Shopify\Resource\Order\Risk;
+use Slince\Shopify\Service\Common\NestCrudManager;
 
-class TransactionManager extends NestCrudable implements TransactionManagerInterface
+class RiskManager extends NestCrudManager implements RiskManagerInterface
 {
     /**
      * {@inheritdoc}
      */
     public static function getServiceName()
     {
-        return 'transactions';
+        return 'order_risks';
     }
 
     /**
@@ -28,7 +31,7 @@ class TransactionManager extends NestCrudable implements TransactionManagerInter
      */
     public function getModelClass()
     {
-        return Transaction::class;
+        return Risk::class;
     }
 
     /**
@@ -36,7 +39,7 @@ class TransactionManager extends NestCrudable implements TransactionManagerInter
      */
     public function getResourceName()
     {
-        return 'transaction';
+        return 'risk';
     }
 
     /**
@@ -50,15 +53,7 @@ class TransactionManager extends NestCrudable implements TransactionManagerInter
     /**
      * {@inheritdoc}
      */
-    public function remove($orderId, $id)
-    {
-        throw new \Exception('The action is not supported');
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function update($orderId, $id, array $data)
+    public function count($orderId, array $query = [])
     {
         throw new \Exception('The action is not supported');
     }

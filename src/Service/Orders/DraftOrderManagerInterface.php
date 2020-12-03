@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -9,18 +11,18 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Service\Order;
+namespace Slince\Shopify\Service\Orders;
 
-use Slince\Shopify\Common\Manager\ManagerInterface;
+use Slince\Shopify\Resource\Order\DraftOrder;
 
-interface OrderManagerInterface extends ManagerInterface
+interface DraftOrderManagerInterface
 {
     /**
      * Gets all orders.
      *
      * @param array $query
      *
-     * @return Order[]
+     * @return DraftOrder[]
      */
     public function findAll(array $query = []);
 
@@ -29,7 +31,7 @@ interface OrderManagerInterface extends ManagerInterface
      *
      * @param int $id
      *
-     * @return Order
+     * @return DraftOrder
      */
     public function find($id);
 
@@ -45,12 +47,13 @@ interface OrderManagerInterface extends ManagerInterface
     /**
      * Updates the order.
      *
-     * @param int   $id
+     * @param int $id
      * @param array $data
      *
      * @return bool
      */
     public function update($id, array $data);
+
 
     /**
      * Removes the order.
@@ -66,34 +69,25 @@ interface OrderManagerInterface extends ManagerInterface
      *
      * @param array $data
      *
-     * @return Order
+     * @return DraftOrder
      */
     public function create(array $data);
 
     /**
-     * Re-open a closed order.
+     * Send invoices to customers.
      *
      * @param int $id
-     *
-     * @return Order
+     * @param array $data
+     * @return array
      */
-    public function open($id);
+    public function sendInvoice($id, array $data);
 
     /**
-     * Close an order.
+     * Complete a draft order
      *
      * @param int $id
-     *
-     * @return Order
+     * @param boolean $paymentPending
+     * @return DraftOrder
      */
-    public function close($id);
-
-    /**
-     * Cancel an order.
-     *
-     * @param int $id
-     *
-     * @return Order
-     */
-    public function cancel($id);
+    public function complete($id, $paymentPending = null);
 }
