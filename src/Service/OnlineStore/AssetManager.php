@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -9,9 +11,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Service\Asset;
+namespace Slince\Shopify\Service\OnlineStore;
 
-use Slince\Shopify\Common\Manager\AbstractManager;
+use Slince\Shopify\Resource\OnlineStore\Asset;
+use Slince\Shopify\Service\Common\AbstractManager;
 
 class AssetManager extends AbstractManager implements AssetManagerInterface
 {

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -9,27 +11,27 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Service\Blog;
+namespace Slince\Shopify\Service\OnlineStore;
 
-use Slince\Shopify\Common\Manager\ManagerInterface;
+use Slince\Shopify\Resource\OnlineStore\Comment;
 
-interface BlogManagerInterface extends ManagerInterface
+interface CommentManagerInterface
 {
     /**
-     * Gets all blogs.
+     * Gets all comments.
      *
      * @param array $query
      *
-     * @return Blog[]
+     * @return Comment[]
      */
     public function findAll(array $query = []);
 
     /**
-     * Gets the blog by its id.
+     * Gets the comment by its id.
      *
      * @param int $id
      *
-     * @return Blog
+     * @return Comment
      */
     public function find($id);
 
@@ -43,7 +45,7 @@ interface BlogManagerInterface extends ManagerInterface
     public function count(array $query = []);
 
     /**
-     * Updates the blog.
+     * Updates the comment.
      *
      * @param int   $id
      * @param array $data
@@ -53,20 +55,11 @@ interface BlogManagerInterface extends ManagerInterface
     public function update($id, array $data);
 
     /**
-     * Removes the blog.
+     * Removes the comment.
      *
      * @param int $id
      *
      * @return bool
      */
     public function remove($id);
-
-    /**
-     * Creates a blog.
-     *
-     * @param array $data
-     *
-     * @return Blog
-     */
-    public function create(array $data);
 }

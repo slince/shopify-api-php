@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -9,18 +11,19 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Service\Comment;
+namespace Slince\Shopify\Service\OnlineStore;
 
-use Slince\Shopify\Common\Manager\GeneralCurdable;
+use Slince\Shopify\Resource\OnlineStore\Page;
+use Slince\Shopify\Service\Common\GeneralCurdManager;
 
-class CommentManager extends GeneralCurdable implements CommentManagerInterface
+class PageManager extends GeneralCurdManager implements PageManagerInterface
 {
     /**
      * {@inheritdoc}
      */
     public static function getServiceName()
     {
-        return 'comments';
+        return 'pages';
     }
 
     /**
@@ -28,7 +31,7 @@ class CommentManager extends GeneralCurdable implements CommentManagerInterface
      */
     public function getResourceName()
     {
-        return 'comment';
+        return 'page';
     }
 
     /**
@@ -36,14 +39,6 @@ class CommentManager extends GeneralCurdable implements CommentManagerInterface
      */
     public function getModelClass()
     {
-        return Comment::class;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function remove($id)
-    {
-        throw new \Exception('The action is not supported');
+        return Page::class;
     }
 }

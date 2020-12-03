@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -9,11 +11,12 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Service\Blog;
+namespace Slince\Shopify\Service\OnlineStore;
 
-use Slince\Shopify\Common\Manager\GeneralCurdable;
+use Slince\Shopify\Resource\OnlineStore\Blog;
+use Slince\Shopify\Service\Common\GeneralCurdManager;
 
-class BlogManager extends GeneralCurdable implements BlogManagerInterface
+class BlogManager extends GeneralCurdManager implements BlogManagerInterface
 {
     /**
      * {@inheritdoc}

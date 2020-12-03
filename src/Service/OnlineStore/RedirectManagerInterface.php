@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -9,25 +11,27 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Service\ScriptTag;
+namespace Slince\Shopify\Service\OnlineStore;
 
-interface ScriptTagManagerInterface
+use Slince\Shopify\Resource\OnlineStore\Redirect;
+
+interface RedirectManagerInterface
 {
     /**
-     * Gets all script tags.
+     * Gets all redirects.
      *
      * @param array $query
      *
-     * @return ScriptTag[]
+     * @return Redirect[]
      */
     public function findAll(array $query = []);
 
     /**
-     * Gets the script tag by its id.
+     * Gets the redirect by its id.
      *
      * @param int $id
      *
-     * @return ScriptTag
+     * @return Redirect
      */
     public function find($id);
 
@@ -41,7 +45,7 @@ interface ScriptTagManagerInterface
     public function count(array $query = []);
 
     /**
-     * Updates the script tag.
+     * Updates the redirect.
      *
      * @param int   $id
      * @param array $data
@@ -51,7 +55,7 @@ interface ScriptTagManagerInterface
     public function update($id, array $data);
 
     /**
-     * Removes the script tag.
+     * Removes the redirect.
      *
      * @param int $id
      *
@@ -60,11 +64,11 @@ interface ScriptTagManagerInterface
     public function remove($id);
 
     /**
-     * Creates a script tag.
+     * Creates a redirect.
      *
      * @param array $data
      *
-     * @return ScriptTag
+     * @return Redirect
      */
     public function create(array $data);
 }

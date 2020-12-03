@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -9,11 +11,12 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Service\Redirect;
+namespace Slince\Shopify\Service\OnlineStore;
 
-use Slince\Shopify\Common\Manager\GeneralCurdable;
+use Slince\Shopify\Resource\OnlineStore\Redirect;
+use Slince\Shopify\Service\Common\GeneralCurdManager;
 
-class RedirectManager extends GeneralCurdable
+class RedirectManager extends GeneralCurdManager implements RedirectManagerInterface
 {
     /**
      * {@inheritdoc}

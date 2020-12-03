@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -9,18 +11,19 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Service\Page;
+namespace Slince\Shopify\Service\OnlineStore;
 
-use Slince\Shopify\Common\Manager\GeneralCurdable;
+use Slince\Shopify\Resource\OnlineStore\Theme;
+use Slince\Shopify\Service\Common\GeneralCurdManager;
 
-class PageManager extends GeneralCurdable implements PageManagerInterface
+class ThemeManager extends GeneralCurdManager implements ThemeManagerInterface
 {
     /**
      * {@inheritdoc}
      */
     public static function getServiceName()
     {
-        return 'pages';
+        return 'themes';
     }
 
     /**
@@ -28,7 +31,7 @@ class PageManager extends GeneralCurdable implements PageManagerInterface
      */
     public function getResourceName()
     {
-        return 'page';
+        return 'theme';
     }
 
     /**
@@ -36,6 +39,14 @@ class PageManager extends GeneralCurdable implements PageManagerInterface
      */
     public function getModelClass()
     {
-        return Page::class;
+        return Theme::class;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function count(array $query = [])
+    {
+        throw new \Exception('The action is not supported');
     }
 }

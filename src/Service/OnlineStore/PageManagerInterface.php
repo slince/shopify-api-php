@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -9,27 +11,27 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Service\Theme;
+namespace Slince\Shopify\Service\OnlineStore;
 
 use Slince\Shopify\Common\Manager\ManagerInterface;
 
-interface ThemeManagerInterface extends ManagerInterface
+interface PageManagerInterface extends ManagerInterface
 {
     /**
-     * Gets all themes.
+     * Gets all pages.
      *
      * @param array $query
      *
-     * @return Theme[]
+     * @return Page[]
      */
     public function findAll(array $query = []);
 
     /**
-     * Gets the theme by its id.
+     * Gets the page by its id.
      *
      * @param int $id
      *
-     * @return Theme
+     * @return Page
      */
     public function find($id);
 
@@ -43,7 +45,7 @@ interface ThemeManagerInterface extends ManagerInterface
     public function count(array $query = []);
 
     /**
-     * Updates the theme.
+     * Updates the page.
      *
      * @param int   $id
      * @param array $data
@@ -53,7 +55,7 @@ interface ThemeManagerInterface extends ManagerInterface
     public function update($id, array $data);
 
     /**
-     * Removes the theme.
+     * Removes the page.
      *
      * @param int $id
      *
@@ -62,11 +64,11 @@ interface ThemeManagerInterface extends ManagerInterface
     public function remove($id);
 
     /**
-     * Creates a theme.
+     * Creates a page.
      *
      * @param array $data
      *
-     * @return Theme
+     * @return Page
      */
     public function create(array $data);
 }

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -9,11 +11,12 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Service\Article;
+namespace Slince\Shopify\Service\OnlineStore;
 
-use Slince\Shopify\Common\Manager\NestCrudable;
+use Slince\Shopify\Resource\OnlineStore\Article;
+use Slince\Shopify\Service\Common\NestCrudManager;
 
-class ArticleManager extends NestCrudable implements ArticleManagerInterface
+class ArticleManager extends NestCrudManager implements ArticleManagerInterface
 {
     /**
      * {@inheritdoc}

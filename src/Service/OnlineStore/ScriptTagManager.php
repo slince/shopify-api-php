@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -9,26 +11,19 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Service\Theme;
+namespace Slince\Shopify\Service\OnlineStore;
 
-use Slince\Shopify\Common\Manager\GeneralCurdable;
+use Slince\Shopify\Resource\OnlineStore\ScriptTag;
+use Slince\Shopify\Service\Common\GeneralCurdManager;
 
-class ThemeManager extends GeneralCurdable implements ThemeManagerInterface
+class ScriptTagManager extends GeneralCurdManager implements ScriptTagManagerInterface
 {
     /**
      * {@inheritdoc}
      */
     public static function getServiceName()
     {
-        return 'themes';
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getResourceName()
-    {
-        return 'theme';
+        return 'script_tags';
     }
 
     /**
@@ -36,14 +31,14 @@ class ThemeManager extends GeneralCurdable implements ThemeManagerInterface
      */
     public function getModelClass()
     {
-        return Theme::class;
+        return ScriptTag::class;
     }
 
     /**
      * {@inheritdoc}
      */
-    public function count(array $query = [])
+    public function getResourceName()
     {
-        throw new \Exception('The action is not supported');
+        return 'script_tag';
     }
 }
