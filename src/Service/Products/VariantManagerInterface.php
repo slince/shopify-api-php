@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -9,32 +11,31 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Service\ProductImage;
+namespace Slince\Shopify\Service\Products;
 
-interface ImageManagerInterface
+interface VariantManagerInterface
 {
     /**
-     * Finds articles.
+     * Gets all variants of the product.
      *
      * @param int   $productId
      * @param array $query
      *
-     * @return Image[]
+     * @return Variant[]
      */
     public function findAll($productId, array $query = []);
 
     /**
-     * Finds an product.
+     * Gets the variant by its id.
      *
-     * @param int $productId
      * @param int $id
      *
-     * @return Image
+     * @return Variant
      */
-    public function find($productId, $id);
+    public function find($id);
 
     /**
-     * Gets the count.
+     * Gets the variant counts of the product.
      *
      * @param int   $productId
      * @param array $query
@@ -46,16 +47,15 @@ interface ImageManagerInterface
     /**
      * Updates the product.
      *
-     * @param int   $productId
      * @param int   $id
      * @param array $data
      *
-     * @return Image
+     * @return Variant
      */
-    public function update($productId, $id, array $data);
+    public function update($id, array $data);
 
     /**
-     * Removes the product by given id id and product id.
+     * Removes the variant of the product.
      *
      * @param int $productId
      * @param int $id
@@ -63,12 +63,12 @@ interface ImageManagerInterface
     public function remove($productId, $id);
 
     /**
-     * Creates a product.
+     * Creates a variant for the product.
      *
      * @param int   $productId
      * @param array $data
      *
-     * @return Image
+     * @return Variant
      */
     public function create($productId, array $data);
 }

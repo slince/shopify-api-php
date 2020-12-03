@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -9,33 +11,32 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Service\ProductVariant;
+namespace Slince\Shopify\Service\Products;
 
-use Slince\Shopify\Common\Manager\ManagerInterface;
-
-interface VariantManagerInterface extends ManagerInterface
+interface ImageManagerInterface
 {
     /**
-     * Gets all variants of the product.
+     * Finds articles.
      *
      * @param int   $productId
      * @param array $query
      *
-     * @return Variant[]
+     * @return Image[]
      */
     public function findAll($productId, array $query = []);
 
     /**
-     * Gets the variant by its id.
+     * Finds an product.
      *
+     * @param int $productId
      * @param int $id
      *
-     * @return Variant
+     * @return Image
      */
-    public function find($id);
+    public function find($productId, $id);
 
     /**
-     * Gets the variant counts of the product.
+     * Gets the count.
      *
      * @param int   $productId
      * @param array $query
@@ -47,15 +48,16 @@ interface VariantManagerInterface extends ManagerInterface
     /**
      * Updates the product.
      *
+     * @param int   $productId
      * @param int   $id
      * @param array $data
      *
-     * @return Variant
+     * @return Image
      */
-    public function update($id, array $data);
+    public function update($productId, $id, array $data);
 
     /**
-     * Removes the variant of the product.
+     * Removes the product by given id id and product id.
      *
      * @param int $productId
      * @param int $id
@@ -63,12 +65,12 @@ interface VariantManagerInterface extends ManagerInterface
     public function remove($productId, $id);
 
     /**
-     * Creates a variant for the product.
+     * Creates a product.
      *
      * @param int   $productId
      * @param array $data
      *
-     * @return Variant
+     * @return Image
      */
     public function create($productId, array $data);
 }

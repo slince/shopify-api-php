@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -9,18 +11,16 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Service\ProductImage;
+namespace Slince\Shopify\Service\Products;
 
-use Slince\Shopify\Common\Manager\NestCrudable;
-
-class ImageManager extends NestCrudable implements ImageManagerInterface
+class CustomCollectionManager extends GeneralCurdable implements CustomCollectionManagerInterface
 {
     /**
      * {@inheritdoc}
      */
     public static function getServiceName()
     {
-        return 'product_images';
+        return 'custom_collections';
     }
 
     /**
@@ -28,15 +28,7 @@ class ImageManager extends NestCrudable implements ImageManagerInterface
      */
     public function getResourceName()
     {
-        return 'image';
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getParentResourceName()
-    {
-        return 'product';
+        return 'custom_collection';
     }
 
     /**
@@ -44,6 +36,6 @@ class ImageManager extends NestCrudable implements ImageManagerInterface
      */
     public function getModelClass()
     {
-        return Image::class;
+        return CustomCollection::class;
     }
 }

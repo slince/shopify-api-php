@@ -144,7 +144,7 @@ Available managers:
 - [Page](src/Service/Page/PageManagerInterface.php)
 - [Policy](src/Service/Policy/PolicyManagerInterface.php)
 - [PriceRule](src/Service/PriceRule/PriceRuleManagerInterface.php)
-- [Product](src/Service/Product/ProductManagerInterface.php)
+- [Product](src/Service/Products/ProductManagerInterface.php)
 - [ProductImage](src/Service/ProductImage/ImageManagerInterface.php)
 - [ProductVariant](src/Service/ProductVariant/VariantManagerInterface.php)
 - [Province](src/Service/Province/ProvinceManagerInterface.php)

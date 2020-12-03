@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -9,27 +11,25 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Service\CustomCollection;
+namespace Slince\Shopify\Service\Products;
 
-use Slince\Shopify\Common\Manager\ManagerInterface;
-
-interface CustomCollectionManagerInterface extends ManagerInterface
+interface CollectManagerInterface
 {
     /**
-     * Gets all custom collections.
+     * Gets all collects.
      *
      * @param array $query
      *
-     * @return CustomCollection[]
+     * @return Collect[]
      */
     public function findAll(array $query = []);
 
     /**
-     * Gets the custom collection by its id.
+     * Gets the collect by its id.
      *
      * @param int $id
      *
-     * @return CustomCollection
+     * @return Collect
      */
     public function find($id);
 
@@ -43,7 +43,7 @@ interface CustomCollectionManagerInterface extends ManagerInterface
     public function count(array $query = []);
 
     /**
-     * Removes the custom collection.
+     * Removes the collect.
      *
      * @param int $id
      *
@@ -56,7 +56,7 @@ interface CustomCollectionManagerInterface extends ManagerInterface
      *
      * @param array $data
      *
-     * @return CustomCollection
+     * @return Collect
      */
     public function create(array $data);
 }

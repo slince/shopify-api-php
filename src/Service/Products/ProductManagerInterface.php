@@ -11,9 +11,7 @@
 
 namespace Slince\Shopify\Service\Product;
 
-use Slince\Shopify\Common\Manager\ManagerInterface;
-
-interface ProductManagerInterface extends ManagerInterface
+interface ProductManagerInterface
 {
     /**
      * Gets all products.

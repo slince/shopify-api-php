@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -9,18 +11,16 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Service\Product;
+namespace Slince\Shopify\Service\Products;
 
-use Slince\Shopify\Common\Manager\GeneralCurdable;
-
-class ProductManager extends GeneralCurdable implements ProductManagerInterface
+class CollectManager extends GeneralCurdable implements CollectManagerInterface
 {
     /**
      * {@inheritdoc}
      */
     public static function getServiceName()
     {
-        return 'products';
+        return 'collects';
     }
 
     /**
@@ -28,7 +28,7 @@ class ProductManager extends GeneralCurdable implements ProductManagerInterface
      */
     public function getResourceName()
     {
-        return 'product';
+        return 'collect';
     }
 
     /**
@@ -36,6 +36,14 @@ class ProductManager extends GeneralCurdable implements ProductManagerInterface
      */
     public function getModelClass()
     {
-        return Product::class;
+        return Collect::class;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function update($id, array $data)
+    {
+        return new \Exception('The method is not supported');
     }
 }
