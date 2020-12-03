@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -9,11 +11,12 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\PriceRule;
+namespace Slince\Shopify\Service\Discounts;
 
-use Slince\Shopify\Common\Manager\GeneralCurdable;
+use Slince\Shopify\Resource\Discounts\PriceRule;
+use Slince\Shopify\Service\Common\GeneralCurdManager;
 
-class PriceRuleManager extends GeneralCurdable implements PriceRuleManagerInterface
+class PriceRuleManager extends GeneralCurdManager implements PriceRuleManagerInterface
 {
     /**
      * {@inheritdoc}

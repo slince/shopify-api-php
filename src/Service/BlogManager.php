@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\Blog;
+namespace Slince\Shopify\Service\Blog;
 
 use Slince\Shopify\Common\Manager\GeneralCurdable;
 

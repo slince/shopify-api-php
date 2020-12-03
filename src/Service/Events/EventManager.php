@@ -9,18 +9,19 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\Webhook;
+namespace Slince\Shopify\Service\Events;
 
-use Slince\Shopify\Common\Manager\GeneralCurdable;
+use Slince\Shopify\Resource\Events\Event;
+use Slince\Shopify\Service\Common\GeneralCurdManager;
 
-class WebhookManager extends GeneralCurdable implements WebhookManagerInterface
+class EventManager extends GeneralCurdManager implements EventManagerInterface
 {
     /**
      * {@inheritdoc}
      */
     public static function getServiceName()
     {
-        return 'webhooks';
+        return 'events';
     }
 
     /**
@@ -28,7 +29,7 @@ class WebhookManager extends GeneralCurdable implements WebhookManagerInterface
      */
     public function getModelClass()
     {
-        return Webhook::class;
+        return Event::class;
     }
 
     /**
@@ -36,14 +37,6 @@ class WebhookManager extends GeneralCurdable implements WebhookManagerInterface
      */
     public function getResourceName()
     {
-        return 'webhook';
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function checkIncomingWebhookIsValid($request)
-    {
-        throw new \Exception('The method is not supported');
+        return 'event';
     }
 }

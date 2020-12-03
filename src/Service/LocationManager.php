@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\Location;
+namespace Slince\Shopify\Service\Location;
 
 use Slince\Shopify\Common\Manager\GeneralCurdable;
 use Slince\Shopify\Manager\InventoryLevel\InventoryLevel;

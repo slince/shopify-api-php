@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\Fulfillment;
+namespace Slince\Shopify\Service\Fulfillment;
 
 interface FulfillmentManagerInterface
 {

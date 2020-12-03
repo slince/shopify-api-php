@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\CarrierService;
+namespace Slince\Shopify\Service\CarrierService;
 
 use Slince\Shopify\Common\Manager\GeneralCurdable;
 

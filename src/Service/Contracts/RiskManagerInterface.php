@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\OrderRisk;
+namespace Slince\Shopify\Service\OrderRisk;
 
 interface RiskManagerInterface
 {

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -9,11 +11,12 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\DiscountCode;
+namespace Slince\Shopify\Service\Discounts;
 
-use Slince\Shopify\Common\Manager\NestCrudable;
+use Slince\Shopify\Resource\Discounts\DiscountCode;
+use Slince\Shopify\Service\Common\NestCrudManager;
 
-class DiscountCodeManager extends NestCrudable implements DiscountCodeManagerInterface
+class DiscountCodeManager extends NestCrudManager implements DiscountCodeManagerInterface
 {
     /**
      * {@inheritdoc}

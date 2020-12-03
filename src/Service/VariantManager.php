@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\ProductVariant;
+namespace Slince\Shopify\Service\ProductVariant;
 
 use Slince\Shopify\Common\Manager\AbstractManager;
 

@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\Shop;
+namespace Slince\Shopify\Service\Shop;
 
 interface ShopManagerInterface
 {

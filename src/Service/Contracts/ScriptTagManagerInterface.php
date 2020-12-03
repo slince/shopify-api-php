@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\ScriptTag;
+namespace Slince\Shopify\Service\ScriptTag;
 
 interface ScriptTagManagerInterface
 {

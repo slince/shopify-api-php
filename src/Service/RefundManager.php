@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\Refund;
+namespace Slince\Shopify\Service\Refund;
 
 use Slince\Shopify\Common\Manager\NestCrudable;
 

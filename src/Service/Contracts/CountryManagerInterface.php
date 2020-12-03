@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\Country;
+namespace Slince\Shopify\Service\Country;
 
 use Slince\Shopify\Common\Manager\ManagerInterface;
 

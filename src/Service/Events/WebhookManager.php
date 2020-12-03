@@ -9,18 +9,20 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Service\OrderRisk;
+namespace Slince\Shopify\Service\Events;
 
-use Slince\Shopify\Common\Manager\NestCrudable;
+use Psr\Http\Message\RequestInterface;
+use Slince\Shopify\Resource\Events\Webhook;
+use Slince\Shopify\Service\Common\GeneralCurdManager;
 
-class RiskManager extends NestCrudable implements RiskManagerInterface
+class WebhookManager extends GeneralCurdManager implements WebhookManagerInterface
 {
     /**
      * {@inheritdoc}
      */
     public static function getServiceName()
     {
-        return 'order_risks';
+        return 'webhooks';
     }
 
     /**
@@ -28,7 +30,7 @@ class RiskManager extends NestCrudable implements RiskManagerInterface
      */
     public function getModelClass()
     {
-        return Risk::class;
+        return Webhook::class;
     }
 
     /**
@@ -36,22 +38,14 @@ class RiskManager extends NestCrudable implements RiskManagerInterface
      */
     public function getResourceName()
     {
-        return 'risk';
+        return 'webhook';
     }
 
     /**
      * {@inheritdoc}
      */
-    public function getParentResourceName()
+    public function checkIncomingWebhookIsValid(RequestInterface $request)
     {
-        return 'order';
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function count($orderId, array $query = [])
-    {
-        throw new \Exception('The action is not supported');
+        throw new \Exception('The method is not supported');
     }
 }

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -9,9 +11,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\Webhook;
+namespace Slince\Shopify\Service\Events;
 
 use Psr\Http\Message\RequestInterface;
+use Slince\Shopify\Resource\Events\Webhook;
 
 interface WebhookManagerInterface
 {
@@ -77,5 +80,5 @@ interface WebhookManagerInterface
      *
      * @return bool
      */
-    public function checkIncomingWebhookIsValid($request);
+    public function checkIncomingWebhookIsValid(RequestInterface $request);
 }

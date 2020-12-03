@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -9,27 +11,27 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Service\Blog;
+namespace Slince\Shopify\Service\Events;
 
-use Slince\Shopify\Common\Manager\ManagerInterface;
+use Slince\Shopify\Resource\Events\Event;
 
-interface BlogManagerInterface extends ManagerInterface
+interface EventManagerInterface
 {
     /**
-     * Gets all blogs.
+     * Gets all events.
      *
      * @param array $query
      *
-     * @return Blog[]
+     * @return Event[]
      */
     public function findAll(array $query = []);
 
     /**
-     * Gets the blog by its id.
+     * Gets the event by its id.
      *
      * @param int $id
      *
-     * @return Blog
+     * @return Event
      */
     public function find($id);
 
@@ -43,7 +45,7 @@ interface BlogManagerInterface extends ManagerInterface
     public function count(array $query = []);
 
     /**
-     * Updates the blog.
+     * Updates the event.
      *
      * @param int   $id
      * @param array $data
@@ -53,7 +55,7 @@ interface BlogManagerInterface extends ManagerInterface
     public function update($id, array $data);
 
     /**
-     * Removes the blog.
+     * Removes the event.
      *
      * @param int $id
      *
@@ -62,11 +64,11 @@ interface BlogManagerInterface extends ManagerInterface
     public function remove($id);
 
     /**
-     * Creates a blog.
+     * Creates a event.
      *
      * @param array $data
      *
-     * @return Blog
+     * @return Event
      */
     public function create(array $data);
 }

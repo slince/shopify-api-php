@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\Transaction;
+namespace Slince\Shopify\Service\Transaction;
 
 use Slince\Shopify\Common\Manager\NestCrudable;
 

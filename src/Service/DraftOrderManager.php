@@ -1,6 +1,6 @@
 <?php
 
-namespace Slince\Shopify\Manager\DraftOrder;
+namespace Slince\Shopify\Service\DraftOrder;
 
 use Slince\Shopify\Common\Manager\GeneralCurdable;
 

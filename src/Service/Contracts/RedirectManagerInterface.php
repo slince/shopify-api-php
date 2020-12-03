@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Manager\Redirect;
+namespace Slince\Shopify\Service\Redirect;
 
 use Slince\Shopify\Common\Manager\ManagerInterface;
 
