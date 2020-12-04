@@ -195,8 +195,6 @@ class Variant
     public function setProductId($productId)
     {
         $this->productId = $productId;
-
-
     }
 
     /**
@@ -215,8 +213,6 @@ class Variant
     public function setTitle($title)
     {
         $this->title = $title;
-
-
     }
 
     /**
@@ -235,8 +231,6 @@ class Variant
     public function setPrice($price)
     {
         $this->price = $price;
-
-
     }
 
     /**
@@ -255,8 +249,6 @@ class Variant
     public function setSku($sku)
     {
         $this->sku = $sku;
-
-
     }
 
     /**
@@ -275,8 +267,6 @@ class Variant
     public function setPosition($position)
     {
         $this->position = $position;
-
-
     }
 
     /**
@@ -295,8 +285,6 @@ class Variant
     public function setGrams($grams)
     {
         $this->grams = $grams;
-
-
     }
 
     /**
@@ -315,8 +303,6 @@ class Variant
     public function setInventoryPolicy($inventoryPolicy)
     {
         $this->inventoryPolicy = $inventoryPolicy;
-
-
     }
 
     /**
@@ -335,8 +321,6 @@ class Variant
     public function setCompareAtPrice($compareAtPrice)
     {
         $this->compareAtPrice = $compareAtPrice;
-
-
     }
 
     /**
@@ -355,8 +339,6 @@ class Variant
     public function setFulfillmentService($fulfillmentService)
     {
         $this->fulfillmentService = $fulfillmentService;
-
-
     }
 
     /**
@@ -375,8 +357,6 @@ class Variant
     public function setInventoryManagement($inventoryManagement)
     {
         $this->inventoryManagement = $inventoryManagement;
-
-
     }
 
     /**
@@ -395,8 +375,6 @@ class Variant
     public function setOption1($option1)
     {
         $this->option1 = $option1;
-
-
     }
 
     /**
@@ -415,8 +393,6 @@ class Variant
     public function setOption2($option2)
     {
         $this->option2 = $option2;
-
-
     }
 
     /**
@@ -435,8 +411,6 @@ class Variant
     public function setOption3($option3)
     {
         $this->option3 = $option3;
-
-
     }
 
     /**
@@ -455,8 +429,6 @@ class Variant
     public function setCreatedAt($createdAt)
     {
         $this->createdAt = $createdAt;
-
-
     }
 
     /**
@@ -475,8 +447,6 @@ class Variant
     public function setUpdatedAt($updatedAt)
     {
         $this->updatedAt = $updatedAt;
-
-
     }
 
     /**
@@ -495,8 +465,6 @@ class Variant
     public function setTaxable($taxable)
     {
         $this->taxable = $taxable;
-
-
     }
 
     /**
@@ -515,8 +483,6 @@ class Variant
     public function setBarcode($barcode)
     {
         $this->barcode = $barcode;
-
-
     }
 
     /**
@@ -535,8 +501,6 @@ class Variant
     public function setImageId($imageId)
     {
         $this->imageId = $imageId;
-
-
     }
 
     /**
@@ -555,8 +519,6 @@ class Variant
     public function setInventoryQuantity($inventoryQuantity)
     {
         $this->inventoryQuantity = $inventoryQuantity;
-
-
     }
 
     /**
@@ -575,8 +537,6 @@ class Variant
     public function setWeight($weight)
     {
         $this->weight = $weight;
-
-
     }
 
     /**
@@ -595,8 +555,6 @@ class Variant
     public function setWeightUnit($weightUnit)
     {
         $this->weightUnit = $weightUnit;
-
-
     }
 
     /**
@@ -631,8 +589,6 @@ class Variant
     public function setOldInventoryQuantity($oldInventoryQuantity)
     {
         $this->oldInventoryQuantity = $oldInventoryQuantity;
-
-
     }
 
     /**
@@ -651,7 +607,5 @@ class Variant
     public function setRequiresShipping($requiresShipping)
     {
         $this->requiresShipping = $requiresShipping;
-
-
     }
 }

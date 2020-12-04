@@ -61,8 +61,6 @@ class ShippingZone
     public function setName($name)
     {
         $this->name = $name;
-
-
     }
 
     /**
@@ -81,8 +79,6 @@ class ShippingZone
     public function setCountries($countries)
     {
         $this->countries = $countries;
-
-
     }
 
     /**
@@ -101,8 +97,6 @@ class ShippingZone
     public function setProvinces($provinces)
     {
         $this->provinces = $provinces;
-
-
     }
 
     /**
@@ -121,8 +115,6 @@ class ShippingZone
     public function setCarrierShippingRateProviders($carrierShippingRateProviders)
     {
         $this->carrierShippingRateProviders = $carrierShippingRateProviders;
-
-
     }
 
     /**
@@ -141,8 +133,6 @@ class ShippingZone
     public function setPriceBasedShippingRates($priceBasedShippingRates)
     {
         $this->priceBasedShippingRates = $priceBasedShippingRates;
-
-
     }
 
     /**
@@ -159,6 +149,5 @@ class ShippingZone
     public function setWeightBasedShippingRates($weightBasedShippingRates)
     {
         $this->weightBasedShippingRates = $weightBasedShippingRates;
-
     }
 }

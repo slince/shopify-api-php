@@ -13,7 +13,6 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Model\Metafield;
 
-
 use DateTimeInterface;
 
 class Metafield

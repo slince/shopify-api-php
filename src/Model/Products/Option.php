@@ -72,8 +72,6 @@ class Option
     public function setProductId($productId)
     {
         $this->productId = $productId;
-
-
     }
 
     /**
@@ -92,8 +90,6 @@ class Option
     public function setName($name)
     {
         $this->name = $name;
-
-
     }
 
     /**
@@ -112,8 +108,6 @@ class Option
     public function setPosition($position)
     {
         $this->position = $position;
-
-
     }
 
     /**
@@ -132,7 +126,5 @@ class Option
     public function setValues($values)
     {
         $this->values = $values;
-
-
     }
 }

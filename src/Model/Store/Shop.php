@@ -273,8 +273,6 @@ class Shop
     public function setName($name)
     {
         $this->name = $name;
-
-
     }
 
     /**
@@ -293,8 +291,6 @@ class Shop
     public function setEmail($email)
     {
         $this->email = $email;
-
-
     }
 
     /**
@@ -313,8 +309,6 @@ class Shop
     public function setDomain($domain)
     {
         $this->domain = $domain;
-
-
     }
 
     /**
@@ -333,8 +327,6 @@ class Shop
     public function setCreatedAt($createdAt)
     {
         $this->createdAt = $createdAt;
-
-
     }
 
     /**
@@ -353,8 +345,6 @@ class Shop
     public function setProvince($province)
     {
         $this->province = $province;
-
-
     }
 
     /**
@@ -373,8 +363,6 @@ class Shop
     public function setCountry($country)
     {
         $this->country = $country;
-
-
     }
 
     /**
@@ -393,8 +381,6 @@ class Shop
     public function setAddress1($address1)
     {
         $this->address1 = $address1;
-
-
     }
 
     /**
@@ -413,8 +399,6 @@ class Shop
     public function setZip($zip)
     {
         $this->zip = $zip;
-
-
     }
 
     /**
@@ -433,8 +417,6 @@ class Shop
     public function setCity($city)
     {
         $this->city = $city;
-
-
     }
 
     /**
@@ -453,8 +435,6 @@ class Shop
     public function setSource($source)
     {
         $this->source = $source;
-
-
     }
 
     /**
@@ -473,8 +453,6 @@ class Shop
     public function setPhone($phone)
     {
         $this->phone = $phone;
-
-
     }
 
     /**
@@ -493,8 +471,6 @@ class Shop
     public function setUpdatedAt($updatedAt)
     {
         $this->updatedAt = $updatedAt;
-
-
     }
 
     /**
@@ -513,8 +489,6 @@ class Shop
     public function setCustomerEmail($customerEmail)
     {
         $this->customerEmail = $customerEmail;
-
-
     }
 
     /**
@@ -533,8 +507,6 @@ class Shop
     public function setLatitude($latitude)
     {
         $this->latitude = $latitude;
-
-
     }
 
     /**
@@ -553,8 +525,6 @@ class Shop
     public function setLongitude($longitude)
     {
         $this->longitude = $longitude;
-
-
     }
 
     /**
@@ -573,8 +543,6 @@ class Shop
     public function setPrimaryLocationId($primaryLocationId)
     {
         $this->primaryLocationId = $primaryLocationId;
-
-
     }
 
     /**
@@ -593,8 +561,6 @@ class Shop
     public function setPrimaryLocale($primaryLocale)
     {
         $this->primaryLocale = $primaryLocale;
-
-
     }
 
     /**
@@ -613,8 +579,6 @@ class Shop
     public function setAddress2($address2)
     {
         $this->address2 = $address2;
-
-
     }
 
     /**
@@ -633,8 +597,6 @@ class Shop
     public function setCountryCode($countryCode)
     {
         $this->countryCode = $countryCode;
-
-
     }
 
     /**
@@ -653,8 +615,6 @@ class Shop
     public function setCountryName($countryName)
     {
         $this->countryName = $countryName;
-
-
     }
 
     /**
@@ -673,8 +633,6 @@ class Shop
     public function setCurrency($currency)
     {
         $this->currency = $currency;
-
-
     }
 
     /**
@@ -693,8 +651,6 @@ class Shop
     public function setTimezone($timezone)
     {
         $this->timezone = $timezone;
-
-
     }
 
     /**
@@ -713,8 +669,6 @@ class Shop
     public function setIanaTimezone($ianaTimezone)
     {
         $this->ianaTimezone = $ianaTimezone;
-
-
     }
 
     /**
@@ -733,8 +687,6 @@ class Shop
     public function setShopOwner($shopOwner)
     {
         $this->shopOwner = $shopOwner;
-
-
     }
 
     /**
@@ -753,8 +705,6 @@ class Shop
     public function setMoneyFormat($moneyFormat)
     {
         $this->moneyFormat = $moneyFormat;
-
-
     }
 
     /**
@@ -773,8 +723,6 @@ class Shop
     public function setMoneyWithCurrencyFormat($moneyWithCurrencyFormat)
     {
         $this->moneyWithCurrencyFormat = $moneyWithCurrencyFormat;
-
-
     }
 
     /**
@@ -793,8 +741,6 @@ class Shop
     public function setWeightUnit($weightUnit)
     {
         $this->weightUnit = $weightUnit;
-
-
     }
 
     /**
@@ -813,8 +759,6 @@ class Shop
     public function setProvinceCode($provinceCode)
     {
         $this->provinceCode = $provinceCode;
-
-
     }
 
     /**
@@ -833,8 +777,6 @@ class Shop
     public function setTaxesIncluded($taxesIncluded)
     {
         $this->taxesIncluded = $taxesIncluded;
-
-
     }
 
     /**
@@ -853,8 +795,6 @@ class Shop
     public function setTaxShipping($taxShipping)
     {
         $this->taxShipping = $taxShipping;
-
-
     }
 
     /**
@@ -873,8 +813,6 @@ class Shop
     public function setCountyTaxes($countyTaxes)
     {
         $this->countyTaxes = $countyTaxes;
-
-
     }
 
     /**
@@ -893,8 +831,6 @@ class Shop
     public function setPlanDisplayName($planDisplayName)
     {
         $this->planDisplayName = $planDisplayName;
-
-
     }
 
     /**
@@ -913,8 +849,6 @@ class Shop
     public function setPlanName($planName)
     {
         $this->planName = $planName;
-
-
     }
 
     /**
@@ -933,8 +867,6 @@ class Shop
     public function setHasDiscounts($hasDiscounts)
     {
         $this->hasDiscounts = $hasDiscounts;
-
-
     }
 
     /**
@@ -953,8 +885,6 @@ class Shop
     public function setHasGiftCards($hasGiftCards)
     {
         $this->hasGiftCards = $hasGiftCards;
-
-
     }
 
     /**
@@ -973,8 +903,6 @@ class Shop
     public function setMyshopifyDomain($myshopifyDomain)
     {
         $this->myshopifyDomain = $myshopifyDomain;
-
-
     }
 
     /**
@@ -993,8 +921,6 @@ class Shop
     public function setGoogleAppsDomain($googleAppsDomain)
     {
         $this->googleAppsDomain = $googleAppsDomain;
-
-
     }
 
     /**
@@ -1013,8 +939,6 @@ class Shop
     public function setGoogleAppsLoginEnabled($googleAppsLoginEnabled)
     {
         $this->googleAppsLoginEnabled = $googleAppsLoginEnabled;
-
-
     }
 
     /**
@@ -1033,8 +957,6 @@ class Shop
     public function setMoneyInEmailsFormat($moneyInEmailsFormat)
     {
         $this->moneyInEmailsFormat = $moneyInEmailsFormat;
-
-
     }
 
     /**
@@ -1053,8 +975,6 @@ class Shop
     public function setMoneyWithCurrencyInEmailsFormat($moneyWithCurrencyInEmailsFormat)
     {
         $this->moneyWithCurrencyInEmailsFormat = $moneyWithCurrencyInEmailsFormat;
-
-
     }
 
     /**
@@ -1073,8 +993,6 @@ class Shop
     public function setEligibleForPayments($eligibleForPayments)
     {
         $this->eligibleForPayments = $eligibleForPayments;
-
-
     }
 
     /**
@@ -1093,8 +1011,6 @@ class Shop
     public function setRequiresExtraPaymentsAgreement($requiresExtraPaymentsAgreement)
     {
         $this->requiresExtraPaymentsAgreement = $requiresExtraPaymentsAgreement;
-
-
     }
 
     /**
@@ -1113,8 +1029,6 @@ class Shop
     public function setPasswordEnabled($passwordEnabled)
     {
         $this->passwordEnabled = $passwordEnabled;
-
-
     }
 
     /**
@@ -1133,8 +1047,6 @@ class Shop
     public function setHasStoreFront($hasStoreFront)
     {
         $this->hasStoreFront = $hasStoreFront;
-
-
     }
 
     /**
@@ -1153,8 +1065,6 @@ class Shop
     public function setEligibleForCardReaderGiveaway($eligibleForCardReaderGiveaway)
     {
         $this->eligibleForCardReaderGiveaway = $eligibleForCardReaderGiveaway;
-
-
     }
 
     /**
@@ -1173,8 +1083,6 @@ class Shop
     public function setFinances($finances)
     {
         $this->finances = $finances;
-
-
     }
 
     /**
@@ -1193,8 +1101,6 @@ class Shop
     public function setSetupRequired($setupRequired)
     {
         $this->setupRequired = $setupRequired;
-
-
     }
 
     /**
@@ -1213,7 +1119,5 @@ class Shop
     public function setForceSsl($forceSsl)
     {
         $this->forceSsl = $forceSsl;
-
-
     }
 }

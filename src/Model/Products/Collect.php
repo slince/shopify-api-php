@@ -89,8 +89,6 @@ class Collect
     public function setCollectionId($collectionId)
     {
         $this->collectionId = $collectionId;
-
-
     }
 
     /**
@@ -109,8 +107,6 @@ class Collect
     public function setCreatedAt($createdAt)
     {
         $this->createdAt = $createdAt;
-
-
     }
 
     /**
@@ -129,8 +125,6 @@ class Collect
     public function setUpdatedAt($updatedAt)
     {
         $this->updatedAt = $updatedAt;
-
-
     }
 
     /**
@@ -149,8 +143,6 @@ class Collect
     public function setFeatured($featured)
     {
         $this->featured = $featured;
-
-
     }
 
     /**
@@ -169,8 +161,6 @@ class Collect
     public function setPosition($position)
     {
         $this->position = $position;
-
-
     }
 
     /**
@@ -189,8 +179,6 @@ class Collect
     public function setProductId($productId)
     {
         $this->productId = $productId;
-
-
     }
 
     /**
@@ -209,7 +197,5 @@ class Collect
     public function setSortValue($sortValue)
     {
         $this->sortValue = $sortValue;
-
-
     }
 }

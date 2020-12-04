@@ -28,9 +28,9 @@ interface InventoryLevelManagerInterface
 
     /**
      * Adjusts the inventory level of an inventory item at a location.
-     *                                                                
+     *
      * @param array $data
-     *                                                                
+     *
      * @return InventoryLevel
      */
     public function adjust(array $data);
@@ -54,9 +54,9 @@ interface InventoryLevelManagerInterface
 
     /**
      * Sets the inventory level for an inventory item at a location.
-     *                                                                
+     *
      * @param array $data
-     *                                                                
+     *
      * @return InventoryLevel
      */
     public function set(array $data);

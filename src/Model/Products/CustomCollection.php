@@ -120,8 +120,6 @@ class CustomCollection
     public function setHandle($handle)
     {
         $this->handle = $handle;
-
-
     }
 
     /**
@@ -140,8 +138,6 @@ class CustomCollection
     public function setTitle($title)
     {
         $this->title = $title;
-
-
     }
 
     /**
@@ -160,8 +156,6 @@ class CustomCollection
     public function setUpdatedAt($updatedAt)
     {
         $this->updatedAt = $updatedAt;
-
-
     }
 
     /**
@@ -180,8 +174,6 @@ class CustomCollection
     public function setBodyHtml($bodyHtml)
     {
         $this->bodyHtml = $bodyHtml;
-
-
     }
 
     /**
@@ -200,8 +192,6 @@ class CustomCollection
     public function setPublishedAt($publishedAt)
     {
         $this->publishedAt = $publishedAt;
-
-
     }
 
     /**
@@ -220,8 +210,6 @@ class CustomCollection
     public function setSortOrder($sortOrder)
     {
         $this->sortOrder = $sortOrder;
-
-
     }
 
     /**
@@ -240,8 +228,6 @@ class CustomCollection
     public function setTemplateSuffix($templateSuffix)
     {
         $this->templateSuffix = $templateSuffix;
-
-
     }
 
     /**
@@ -260,8 +246,6 @@ class CustomCollection
     public function setPublishedScope($publishedScope)
     {
         $this->publishedScope = $publishedScope;
-
-
     }
 
     /**

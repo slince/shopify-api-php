@@ -150,8 +150,6 @@ class Product
     public function setTitle($title)
     {
         $this->title = $title;
-
-
     }
 
     /**
@@ -170,8 +168,6 @@ class Product
     public function setBodyHtml($bodyHtml)
     {
         $this->bodyHtml = $bodyHtml;
-
-
     }
 
     /**
@@ -190,8 +186,6 @@ class Product
     public function setVendor($vendor)
     {
         $this->vendor = $vendor;
-
-
     }
 
     /**
@@ -210,8 +204,6 @@ class Product
     public function setProductType($productType)
     {
         $this->productType = $productType;
-
-
     }
 
     /**
@@ -230,8 +222,6 @@ class Product
     public function setCreatedAt($createdAt)
     {
         $this->createdAt = $createdAt;
-
-
     }
 
     /**
@@ -250,8 +240,6 @@ class Product
     public function setHandle($handle)
     {
         $this->handle = $handle;
-
-
     }
 
     /**
@@ -270,8 +258,6 @@ class Product
     public function setUpdatedAt($updatedAt)
     {
         $this->updatedAt = $updatedAt;
-
-
     }
 
     /**
@@ -290,8 +276,6 @@ class Product
     public function setPublishedAt($publishedAt)
     {
         $this->publishedAt = $publishedAt;
-
-
     }
 
     /**
@@ -310,8 +294,6 @@ class Product
     public function setTemplateSuffix($templateSuffix)
     {
         $this->templateSuffix = $templateSuffix;
-
-
     }
 
     /**
@@ -330,8 +312,6 @@ class Product
     public function setPublishedScope($publishedScope)
     {
         $this->publishedScope = $publishedScope;
-
-
     }
 
     /**
@@ -350,8 +330,6 @@ class Product
     public function setTags($tags)
     {
         $this->tags = $tags;
-
-
     }
 
     /**
@@ -370,8 +348,6 @@ class Product
     public function setVariants($variants)
     {
         $this->variants = $variants;
-
-
     }
 
     /**
@@ -390,8 +366,6 @@ class Product
     public function setImages($images)
     {
         $this->images = $images;
-
-
     }
 
     /**
@@ -410,8 +384,6 @@ class Product
     public function setImage($image)
     {
         $this->image = $image;
-
-
     }
 
     /**
@@ -430,7 +402,5 @@ class Product
     public function setOptions($options)
     {
         $this->options = $options;
-
-
     }
 }

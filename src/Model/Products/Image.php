@@ -121,8 +121,6 @@ class Image
     public function setProductId($productId)
     {
         $this->productId = $productId;
-
-
     }
 
     /**
@@ -141,8 +139,6 @@ class Image
     public function setPosition($position)
     {
         $this->position = $position;
-
-
     }
 
     /**
@@ -161,8 +157,6 @@ class Image
     public function setCreatedAt($createdAt)
     {
         $this->createdAt = $createdAt;
-
-
     }
 
     /**
@@ -181,8 +175,6 @@ class Image
     public function setUpdatedAt($updatedAt)
     {
         $this->updatedAt = $updatedAt;
-
-
     }
 
     /**
@@ -201,8 +193,6 @@ class Image
     public function setSrc($src)
     {
         $this->src = $src;
-
-
     }
 
     /**
@@ -221,8 +211,6 @@ class Image
     public function setWidth($width)
     {
         $this->width = $width;
-
-
     }
 
     /**
@@ -241,8 +229,6 @@ class Image
     public function setHeight($height)
     {
         $this->height = $height;
-
-
     }
 
     /**
@@ -261,8 +247,6 @@ class Image
     public function setVariantIds($variantIds)
     {
         $this->variantIds = $variantIds;
-
-
     }
 
     /**
@@ -279,7 +263,5 @@ class Image
     public function setAlt($alt)
     {
         $this->alt = $alt;
-
-
     }
 }

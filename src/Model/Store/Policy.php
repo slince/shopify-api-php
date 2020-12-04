@@ -62,7 +62,6 @@ class Policy
     public function setTitle($title)
     {
         $this->title = $title;
-
     }
 
     /**

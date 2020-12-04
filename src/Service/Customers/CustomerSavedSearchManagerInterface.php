@@ -13,7 +13,6 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Service\Customers;
 
-
 use Slince\Shopify\Model\Customer\Customer;
 use Slince\Shopify\Model\Customer\CustomerSavedSearch;
 

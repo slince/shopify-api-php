@@ -128,7 +128,6 @@ class SmartCollection
     public function setHandle($handle)
     {
         $this->handle = $handle;
-
     }
 
     /**
@@ -145,7 +144,6 @@ class SmartCollection
     public function setTitle($title)
     {
         $this->title = $title;
-
     }
 
     /**
@@ -162,7 +160,6 @@ class SmartCollection
     public function setUpdatedAt($updatedAt)
     {
         $this->updatedAt = $updatedAt;
-
     }
 
     /**
@@ -179,7 +176,6 @@ class SmartCollection
     public function setBodyHtml($bodyHtml)
     {
         $this->bodyHtml = $bodyHtml;
-
     }
 
     /**
@@ -196,7 +192,6 @@ class SmartCollection
     public function setPublishedAt($publishedAt)
     {
         $this->publishedAt = $publishedAt;
-
     }
 
     /**
@@ -213,7 +208,6 @@ class SmartCollection
     public function setSortOrder($sortOrder)
     {
         $this->sortOrder = $sortOrder;
-
     }
 
     /**
@@ -230,7 +224,6 @@ class SmartCollection
     public function setTemplateSuffix($templateSuffix)
     {
         $this->templateSuffix = $templateSuffix;
-
     }
 
     /**
@@ -247,7 +240,6 @@ class SmartCollection
     public function setDisjunctive($disjunctive)
     {
         $this->disjunctive = $disjunctive;
-
     }
 
     /**
@@ -264,7 +256,6 @@ class SmartCollection
     public function setRules($rules)
     {
         $this->rules = $rules;
-
     }
 
     /**
@@ -281,7 +272,6 @@ class SmartCollection
     public function setPublishedScope($publishedScope)
     {
         $this->publishedScope = $publishedScope;
-
     }
 
     /**
@@ -298,6 +288,5 @@ class SmartCollection
     public function setImage($image)
     {
         $this->image = $image;
-
     }
 }

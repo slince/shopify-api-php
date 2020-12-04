@@ -53,8 +53,6 @@ class CollectionImage
     public function setSrc($src)
     {
         $this->src = $src;
-
-
     }
 
     /**
@@ -73,8 +71,6 @@ class CollectionImage
     public function setWidth($width)
     {
         $this->width = $width;
-
-
     }
 
     /**
@@ -93,8 +89,6 @@ class CollectionImage
     public function setHeight($height)
     {
         $this->height = $height;
-
-
     }
 
     /**
@@ -113,7 +107,5 @@ class CollectionImage
     public function setCreatedAt($createdAt)
     {
         $this->createdAt = $createdAt;
-
-
     }
 }
