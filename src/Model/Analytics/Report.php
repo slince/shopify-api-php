@@ -93,7 +93,7 @@ class Report
     /**
      * @return DateTimeInterface
      */
-    public function getUpdatedAt(): DateTimeInterface
+    public function getUpdatedAt(): ?DateTimeInterface
     {
         return $this->updatedAt;
     }
@@ -101,7 +101,7 @@ class Report
     /**
      * @param DateTimeInterface $updatedAt
      */
-    public function setUpdatedAt(DateTimeInterface $updatedAt): void
+    public function setUpdatedAt(?DateTimeInterface $updatedAt): void
     {
         $this->updatedAt = $updatedAt;
     }

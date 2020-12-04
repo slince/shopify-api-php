@@ -314,7 +314,7 @@ class Shop
     /**
      * @return DateTimeInterface
      */
-    public function getCreatedAt()
+    public function getCreatedAt(): ?DateTimeInterface
     {
         return $this->createdAt;
     }
@@ -324,7 +324,7 @@ class Shop
      *
 
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt(\DateTimeInterface $createdAt)
     {
         $this->createdAt = $createdAt;
     }
@@ -458,7 +458,7 @@ class Shop
     /**
      * @return string
      */
-    public function getUpdatedAt()
+    public function getUpdatedAt(): ?DateTimeInterface
     {
         return $this->updatedAt;
     }
@@ -468,7 +468,7 @@ class Shop
      *
 
      */
-    public function setUpdatedAt($updatedAt)
+    public function setUpdatedAt(?DateTimeInterface $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }

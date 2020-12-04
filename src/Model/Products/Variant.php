@@ -416,7 +416,7 @@ class Variant
     /**
      * @return DateTimeInterface
      */
-    public function getCreatedAt()
+    public function getCreatedAt(): ?DateTimeInterface
     {
         return $this->createdAt;
     }
@@ -426,7 +426,7 @@ class Variant
      *
 
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt(\DateTimeInterface $createdAt)
     {
         $this->createdAt = $createdAt;
     }
@@ -434,7 +434,7 @@ class Variant
     /**
      * @return DateTimeInterface
      */
-    public function getUpdatedAt()
+    public function getUpdatedAt(): ?DateTimeInterface
     {
         return $this->updatedAt;
     }
@@ -444,7 +444,7 @@ class Variant
      *
 
      */
-    public function setUpdatedAt($updatedAt)
+    public function setUpdatedAt(?DateTimeInterface $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }

@@ -100,7 +100,7 @@ class Policy
     /**
      * @return DateTimeInterface
      */
-    public function getCreatedAt()
+    public function getCreatedAt(): ?DateTimeInterface
     {
         return $this->createdAt;
     }
@@ -108,7 +108,7 @@ class Policy
     /**
      * @param DateTimeInterface $createdAt
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt(\DateTimeInterface $createdAt)
     {
         $this->createdAt = $createdAt;
     }
@@ -116,7 +116,7 @@ class Policy
     /**
      * @return DateTimeInterface
      */
-    public function getUpdatedAt()
+    public function getUpdatedAt(): ?DateTimeInterface
     {
         return $this->updatedAt;
     }
@@ -124,7 +124,7 @@ class Policy
     /**
      * @param DateTimeInterface $updatedAt
      */
-    public function setUpdatedAt($updatedAt)
+    public function setUpdatedAt(?DateTimeInterface $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }

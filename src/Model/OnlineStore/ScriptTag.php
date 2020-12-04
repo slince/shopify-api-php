@@ -98,7 +98,7 @@ class ScriptTag
     /**
      * @return DateTimeInterface
      */
-    public function getCreatedAt(): DateTimeInterface
+    public function getCreatedAt(): ?DateTimeInterface
     {
         return $this->createdAt;
     }
@@ -106,7 +106,7 @@ class ScriptTag
     /**
      * @param DateTimeInterface $createdAt
      */
-    public function setCreatedAt(DateTimeInterface $createdAt): void
+    public function setCreatedAt(?DateTimeInterface $createdAt): void
     {
         $this->createdAt = $createdAt;
     }
@@ -114,7 +114,7 @@ class ScriptTag
     /**
      * @return string
      */
-    public function getUpdatedAt(): string
+    public function getUpdatedAt(): ?DateTimeInterface: string
     {
         return $this->updatedAt;
     }

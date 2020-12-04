@@ -149,7 +149,7 @@ class SmartCollection
     /**
      * @return DateTimeInterface
      */
-    public function getUpdatedAt()
+    public function getUpdatedAt(): ?DateTimeInterface
     {
         return $this->updatedAt;
     }
@@ -157,7 +157,7 @@ class SmartCollection
     /**
      * @param DateTimeInterface $updatedAt
      */
-    public function setUpdatedAt($updatedAt)
+    public function setUpdatedAt(?DateTimeInterface $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }
@@ -275,17 +275,17 @@ class SmartCollection
     }
 
     /**
-     * Image
+     * @return CollectionImage
      */
-    public function getImage()
+    public function getImage(): ?CollectionImage
     {
         return $this->image;
     }
 
     /**
-     * @param SmartCollectionImage $image
+     * @param CollectionImage $image
      */
-    public function setImage($image)
+    public function setImage(?CollectionImage $image)
     {
         $this->image = $image;
     }

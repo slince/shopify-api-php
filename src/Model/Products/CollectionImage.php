@@ -94,17 +94,15 @@ class CollectionImage
     /**
      * @return DateTimeInterface
      */
-    public function getCreatedAt()
+    public function getCreatedAt(): ?DateTimeInterface
     {
         return $this->createdAt;
     }
 
     /**
      * @param DateTimeInterface $createdAt
-     *
-
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt(\DateTimeInterface $createdAt)
     {
         $this->createdAt = $createdAt;
     }

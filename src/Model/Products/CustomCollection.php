@@ -143,7 +143,7 @@ class CustomCollection
     /**
      * @return DateTimeInterface
      */
-    public function getUpdatedAt()
+    public function getUpdatedAt(): ?DateTimeInterface
     {
         return $this->updatedAt;
     }
@@ -153,7 +153,7 @@ class CustomCollection
      *
 
      */
-    public function setUpdatedAt($updatedAt)
+    public function setUpdatedAt(?DateTimeInterface $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }
@@ -240,8 +240,6 @@ class CustomCollection
 
     /**
      * @param string $publishedScope
-     *
-
      */
     public function setPublishedScope($publishedScope)
     {
@@ -249,18 +247,17 @@ class CustomCollection
     }
 
     /**
-     * Image
+     * @return CollectionImage
      */
-    public function getImage()
+    public function getImage(): ?CollectionImage
     {
         return $this->image;
     }
 
     /**
      * @param CollectionImage $image
-     *
      */
-    public function setImage($image)
+    public function setImage(?CollectionImage $image)
     {
         $this->image = $image;
     }
