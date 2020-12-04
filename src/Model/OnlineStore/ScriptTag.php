@@ -38,7 +38,7 @@ class ScriptTag
     protected $createdAt;
 
     /**
-     * @var string
+     * @var DateTimeInterface
      */
     protected $updatedAt;
 
@@ -112,17 +112,17 @@ class ScriptTag
     }
 
     /**
-     * @return string
+     * @return DateTimeInterface
      */
-    public function getUpdatedAt(): ?DateTimeInterface: string
+    public function getUpdatedAt(): ?DateTimeInterface
     {
         return $this->updatedAt;
     }
 
     /**
-     * @param string $updatedAt
+     * @param DateTimeInterface $updatedAt
      */
-    public function setUpdatedAt(string $updatedAt): void
+    public function setUpdatedAt(DateTimeInterface $updatedAt): void
     {
         $this->updatedAt = $updatedAt;
     }
