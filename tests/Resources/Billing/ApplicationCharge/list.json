@@ -1,0 +1,30 @@
+{
+  "application_charges": [
+    {
+      "id": 675931192,
+      "name": "iPod Cleaning",
+      "api_client_id": 755357713,
+      "price": "5.00",
+      "status": "accepted",
+      "return_url": "http://google.com",
+      "test": null,
+      "created_at": "2020-11-04T16:46:58-05:00",
+      "updated_at": "2020-11-04T16:46:58-05:00",
+      "charge_type": null,
+      "decorated_return_url": "http://google.com?charge_id=675931192"
+    },
+    {
+      "id": 1017262346,
+      "name": "Create me a logo",
+      "api_client_id": 755357713,
+      "price": "123.00",
+      "status": "accepted",
+      "return_url": "http://google.com",
+      "test": null,
+      "created_at": "2020-11-04T16:46:58-05:00",
+      "updated_at": "2020-11-04T16:46:58-05:00",
+      "charge_type": "brokered_service",
+      "decorated_return_url": "http://google.com?charge_id=1017262346"
+    }
+  ]
+}

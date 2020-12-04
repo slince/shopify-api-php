@@ -1,9 +1,8 @@
 <?php
 
-namespace Slince\Shopify\Tests\Base;
+namespace Slince\Shopify\Tests\Model;
 
 use PHPUnit\Framework\TestCase;
-use Slince\Shopify\Common\Model\ModelInterface;
 use Symfony\Component\PropertyAccess\PropertyAccess;
 use Symfony\Component\PropertyAccess\PropertyAccessor;
 
@@ -47,7 +46,7 @@ abstract class ModelTestCase extends TestCase
     /**
      * @param boolean $fulfillment
      *
-     * @return ModelInterface
+     * @return object
      */
     protected function mockModel($fulfillment = true)
     {

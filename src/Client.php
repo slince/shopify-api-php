@@ -18,7 +18,7 @@ use Slince\Di\Container;
 use GuzzleHttp\Client as HttpClient;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use Slince\Shopify\Common\Manager\ManagerInterface;
+use Slince\Shopify\Service\Common\ManagerInterface;
 use Slince\Shopify\Exception\InvalidArgumentException;
 use GuzzleHttp\Exception\RequestException;
 use Slince\Shopify\Exception\ClientException;
