@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -26,7 +28,7 @@ class ClientException extends RuntimeException
      */
     protected $response;
 
-    public function __construct(RequestInterface $request, ResponseInterface $response = null, $message = '', $code = 0)
+    public function __construct(RequestInterface $request, ResponseInterface $response = null, string $message = '', int $code = 0)
     {
         $this->request = $request;
         $this->response = $response;
@@ -38,7 +40,7 @@ class ClientException extends RuntimeException
      *
      * @return RequestInterface
      */
-    public function getRequest()
+    public function getRequest(): RequestInterface
     {
         return $this->request;
     }
@@ -48,7 +50,7 @@ class ClientException extends RuntimeException
      *
      * @return ResponseInterface
      */
-    public function getResponse()
+    public function getResponse(): ?ResponseInterface
     {
         return $this->response;
     }

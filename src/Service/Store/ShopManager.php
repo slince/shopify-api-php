@@ -13,7 +13,8 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Service\Store;
 
-use Slince\Shopify\Common\Manager\AbstractManager;
+use Slince\Shopify\Model\Store\Shop;
+use Slince\Shopify\Service\Common\AbstractManager;
 
 class ShopManager extends AbstractManager implements ShopManagerInterface
 {

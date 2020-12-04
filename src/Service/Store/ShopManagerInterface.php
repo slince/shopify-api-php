@@ -13,6 +13,8 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Service\Store;
 
+use Slince\Shopify\Model\Store\Shop;
+
 interface ShopManagerInterface
 {
     /**

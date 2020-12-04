@@ -29,7 +29,7 @@ class Hydrator implements HydratorInterface
      */
     protected $serializer;
 
-    public function __construct($metaCacheDir)
+    public function __construct(string $metaCacheDir)
     {
         $this->serializer = new Serializer($this->createNormalizers());
     }
@@ -56,7 +56,7 @@ class Hydrator implements HydratorInterface
     /**
      * {@inheritdoc}
      */
-    public function extract($object)
+    public function extract($object): array
     {
         return $this->serializer->normalize($object);
     }
@@ -64,7 +64,7 @@ class Hydrator implements HydratorInterface
     /**
      * {@inheritdoc}
      */
-    public function hydrate(array $data, string $type)
+    public function hydrate(array $data, string $type): object
     {
         return $this->serializer->denormalize($data, $type);
     }
@@ -72,7 +72,7 @@ class Hydrator implements HydratorInterface
     /**
      * {@inheritdoc}
      */
-    public function hydrateMany(array $data, string $type)
+    public function hydrateMany(array $data, string $type): array
     {
         $objects = [];
         foreach ($data as $item) {

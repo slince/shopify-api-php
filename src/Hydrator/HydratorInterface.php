@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -20,7 +22,7 @@ interface HydratorInterface
      * @param string $type
      * @return object
      */
-    public function hydrate(array $data, string $type);
+    public function hydrate(array $data, string $type): object;
 
     /**
      * Hydrate many object from array.
@@ -29,7 +31,7 @@ interface HydratorInterface
      * @param string $type
      * @return object[]
      */
-    public function hydrateMany(array $data, string $type);
+    public function hydrateMany(array $data, string $type): array;
 
     /**
      * Extracts data from an object.
@@ -38,5 +40,5 @@ interface HydratorInterface
      *
      * @return array
      */
-    public function extract($object);
+    public function extract($object): array;
 }
