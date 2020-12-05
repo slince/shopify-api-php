@@ -12,16 +12,15 @@
 namespace Slince\Shopify;
 
 use GuzzleHttp\Utils;
-use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Psr7\Request;
 use Slince\Di\Container;
-use GuzzleHttp\Client as HttpClient;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
+use Slince\Shopify\Middleware\DelayMiddleware;
+use Slince\Shopify\Middleware\MiddlewareChain;
+use Slince\Shopify\Middleware\RequestMiddleware;
 use Slince\Shopify\Service\Common\ManagerInterface;
 use Slince\Shopify\Exception\InvalidArgumentException;
-use GuzzleHttp\Exception\RequestException;
-use Slince\Shopify\Exception\ClientException;
 use Slince\Shopify\Hydrator\Hydrator;
 
 /**
@@ -68,11 +67,6 @@ class Client
     const VERSION = '3.0.0';
 
     /**
-     * @var HttpClient
-     */
-    protected $httpClient;
-
-    /**
      * @var Container
      */
     protected $container;
@@ -98,6 +92,11 @@ class Client
      * @var ResponseInterface
      */
     protected $lastResponse;
+
+    /**
+     * @var MiddlewareChain
+     */
+    protected $middlewares;
 
     /**
      * Array of services classes.
@@ -144,17 +143,6 @@ class Client
         Manager\Webhook\WebhookManager::class,
     ];
 
-    protected $metaDirs = [
-        'Slince\Shopify' => __DIR__.'/../config/serializer'
-    ];
-
-    /**
-     * Whether delay the next request.
-     *
-     * @var bool
-     */
-    protected static $delayNextRequest = false;
-
     /**
      * @var string
      */
@@ -165,12 +153,12 @@ class Client
      */
     protected $hydrator;
 
-    public function __construct(CredentialInterface $credential, $shop, array $options = [])
+    public function __construct($shop, CredentialInterface $credential, array $options = [])
     {
         $this->container = new Container();
         $this->container->register($this);
-        $this->credential = $credential;
         $this->setShop($shop);
+        $this->credential = $credential;
         $this->applyOptions($options);
         $this->initializeBaseServices();
     }
@@ -218,31 +206,6 @@ class Client
     public function getShop()
     {
         return $this->shop;
-    }
-
-    /**
-     * Sets the http client for the client.
-     *
-     * @param HttpClient $httpClient
-     */
-    public function setHttpClient($httpClient)
-    {
-        $this->httpClient = $httpClient;
-    }
-
-    /**
-     * Gets the http client.
-     *
-     * @return HttpClient
-     */
-    public function getHttpClient()
-    {
-        if ($this->httpClient) {
-            return $this->httpClient;
-        }
-        return $this->httpClient = new HttpClient([
-            'verify' => false,
-        ]);
     }
 
     /**
@@ -335,25 +298,14 @@ class Client
      * @param array $options
      *
      * @return ResponseInterface
-     * @throws GuzzleException
      * @codeCoverageIgnore
      */
     public function sendRequest(RequestInterface $request, array $options = [])
     {
-        if (static::$delayNextRequest) {
-            usleep(1000000 * rand(3, 10));
-        }
         $request = $request->withHeader('User-Agent', static::NAME . '/' . static::VERSION);
         $request = $this->credential->applyToRequest($request);
-        try {
-            $response = $this->getHttpClient()->send($request, $options);
-            $this->lastResponse = $response;
-        } catch (RequestException $exception) {
-            $exception = new ClientException($request, $exception->getResponse(), $exception->getMessage(), $exception->getCode());
-            throw $exception;
-        }
-        list($callsMade, $callsLimit) = explode('/', $response->getHeaderLine('http_x_shopify_shop_api_call_limit'));
-        static::$delayNextRequest = $callsMade / $callsLimit >= 0.8;
+        $response = $this->middlewares->execute($request);
+        $this->lastResponse = $response;
         return $response;
     }
 
@@ -386,7 +338,6 @@ class Client
      */
     protected function applyOptions(array $options)
     {
-        isset($options['httpClient']) && $this->httpClient = $options['httpClient'];
         if (!isset($options['metaCacheDir'])) {
             throw new InvalidArgumentException('You must provide option "metaCacheDir"');
         }
@@ -397,6 +348,13 @@ class Client
             }
             $this->apiVersion = $options['apiVersion'];
         }
+        if (!isset($options['middlewares'])) {
+            $options['middlewares'] = new MiddlewareChain([
+                new DelayMiddleware(),
+                new RequestMiddleware()
+            ]);
+        }
+        $this->middlewares = $options['middlewares'];
     }
 
     /**
