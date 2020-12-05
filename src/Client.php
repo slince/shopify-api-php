@@ -103,44 +103,69 @@ class Client
      *
      * @var array
      */
-    public $serviceClass = [
-        Manager\Article\ArticleManager::class,
-        Manager\Asset\AssetManager::class,
-        Manager\Blog\BlogManager::class,
-        Manager\CarrierService\CarrierServiceManager::class,
-        Manager\Collect\CollectManager::class,
-        Manager\Comment\CommentManager::class,
-        Manager\Country\CountryManager::class,
-        Manager\CustomCollection\CustomCollectionManager::class,
-        Manager\Customer\CustomerManager::class,
-        Manager\CustomerAddress\AddressManager::class,
-        Manager\CustomerSavedSearch\CustomerSavedSearchManager::class,
-        Manager\DiscountCode\DiscountCodeManager::class,
-        Manager\DraftOrder\DraftOrderManager::class,
-        Manager\Fulfillment\FulfillmentManager::class,
-        Manager\FulfillmentService\FulfillmentServiceManager::class,
-        Manager\InventoryItem\InventoryItemManager::class,
-        Manager\InventoryLevel\InventoryLevelManager::class,
-        Manager\Location\LocationManager::class,
-        Manager\Order\OrderManager::class,
-        Manager\OrderRisk\RiskManager::class,
-        Manager\Page\PageManager::class,
-        Manager\Policy\PolicyManager::class,
-        Manager\PriceRule\PriceRuleManager::class,
-        Manager\Product\ProductManager::class,
-        Manager\ProductImage\ImageManager::class,
-        Manager\ProductVariant\VariantManager::class,
-        Manager\Province\ProvinceManager::class,
-        Manager\RecurringApplicationCharge\RecurringApplicationChargeManager::class,
-        Manager\Redirect\RedirectManager::class,
-        Manager\Refund\RefundManager::class,
-        Manager\ScriptTag\ScriptTagManager::class,
-        Manager\ShippingZone\ShippingZoneManager::class,
-        Manager\Shop\ShopManager::class,
-        Manager\SmartCollection\SmartCollectionManager::class,
-        Manager\Theme\ThemeManager::class,
-        Manager\Transaction\TransactionManager::class,
-        Manager\Webhook\WebhookManager::class,
+    public $serviceClass =[
+        // Access
+        Service\Access\AccessScopeManager::class,
+        Service\Access\StorefrontAccessTokenManager::class,
+        // Analytics
+        Service\Report\ReportManager::class,
+        // Billing
+        Service\Billing\ApplicationChargeManager::class,
+        Service\Billing\ApplicationCreditManager::class,
+        Service\Billing\RecurringApplicationChargeManager::class,
+        Service\Billing\UsageChargeManager::class,
+        // Customers
+        Service\Customers\AddressManager::class,
+        Service\Customers\CustomerManager::class,
+        Service\Customers\CustomerSavedSearchManager::class,
+        // Discounts
+        Service\Discounts\DiscountCodeManager::class,
+        Service\Discounts\PriceRuleManager::class,
+        // Events
+        Service\Events\EventManager::class,
+        Service\Events\WebhookManager::class,
+        // Inventory
+        Service\Inventory\InventoryItemManager::class,
+        Service\Inventory\InventoryLevelManager::class,
+        Service\Inventory\LocationManager::class,
+        // MarketingEvent
+        Service\MarketingEvent\MarketingEventManager::class,
+        // OnlineStore
+        Service\OnlineStore\ArticleManager::class,
+        Service\OnlineStore\AssetManager::class,
+        Service\OnlineStore\BlogManager::class,
+        Service\OnlineStore\CommentManager::class,
+        Service\OnlineStore\PageManager::class,
+        Service\OnlineStore\RedirectManager::class,
+        Service\OnlineStore\RedirectManager::class,
+        Service\OnlineStore\ScriptTagManager::class,
+        Service\OnlineStore\ThemeManager::class,
+        // Orders
+        Service\Orders\DraftOrderManager::class,
+        Service\Orders\OrderManager::class,
+        Service\Orders\RefundManager::class,
+        Service\Orders\RiskManager::class,
+        Service\Orders\TransactionManager::class,
+        // Products
+        Service\Products\CollectManager::class,
+        Service\Products\CustomCollectionManager::class,
+        Service\Products\ImageManager::class,
+        Service\Products\ProductManager::class,
+        Service\Products\SmartCollectionManager::class,
+        Service\Products\VariantManager::class,
+        // Shipping
+        Service\Shipping\AssignedFulfillmentOrderManager::class,
+        Service\Shipping\CarrierServiceManager::class,
+        Service\Shipping\FulfillmentManager::class,
+        Service\Shipping\FulfillmentOrderManager::class,
+        Service\Shipping\FulfillmentServiceManager::class,
+        // Store
+        Service\Store\CountryManager::class,
+        Service\Store\CurrencyManager::class,
+        Service\Store\PolicyManager::class,
+        Service\Store\ProvinceManager::class,
+        Service\Store\ShippingZoneManager::class,
+        Service\Store\ShopManager::class,
     ];
 
     /**

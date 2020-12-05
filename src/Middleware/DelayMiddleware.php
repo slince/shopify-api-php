@@ -19,12 +19,21 @@ class DelayMiddleware implements MiddlewareInterface
      */
     protected $sleepMicroSeconds = 0;
 
-    public function __construct(?int $sleepMicroSeconds = null)
+    /**
+     * @var float
+     */
+    protected $callsPercent = 0;
+
+    public function __construct(?int $sleepMicroSeconds = null, ?float $callsPercent = null)
     {
         if (null == $sleepMicroSeconds) {
             $sleepMicroSeconds = 1000000 * rand(3, 10);
         }
+        if (null === $callsPercent) {
+            $callsPercent = 0.8;
+        }
         $this->sleepMicroSeconds = $sleepMicroSeconds;
+        $this->callsPercent = $callsPercent;
     }
 
     /**
@@ -37,7 +46,7 @@ class DelayMiddleware implements MiddlewareInterface
         }
         $response = $next($request);
         list($callsMade, $callsLimit) = explode('/', $response->getHeaderLine('http_x_shopify_shop_api_call_limit'));
-        static::$delayNextRequest = $callsMade / $callsLimit >= 0.8;
+        static::$delayNextRequest = $callsMade / $callsLimit >= $this->callsPercent;
         return $response;
     }
 }

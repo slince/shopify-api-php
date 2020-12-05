@@ -16,6 +16,8 @@ class MiddlewareChain implements MiddlewareInterface
 
     protected $index = 0;
 
+    protected $isFirstExecute = false;
+
     public function __construct(array $middlewares = [])
     {
         $this->middlewares = $middlewares;
@@ -42,8 +44,13 @@ class MiddlewareChain implements MiddlewareInterface
      */
     public function execute(RequestInterface $request): ResponseInterface
     {
-        $this->middlewares[] = $this;
-        return $this->getNext()($request);
+        if ($this->isFirstExecute) {
+            $this->middlewares[] = $this;
+            $this->isFirstExecute = false;
+        }
+        $response = $this->getNext()($request);
+        $this->index = 0;
+        return $response;
     }
 
     protected function getNext(): callable
