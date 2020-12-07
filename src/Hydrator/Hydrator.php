@@ -13,14 +13,9 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Hydrator;
 
-use DateTimeInterface;
-use Symfony\Component\PropertyAccess\PropertyAccess;
-use Symfony\Component\PropertyInfo\Extractor\ReflectionExtractor;
-use Symfony\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter;
-use Symfony\Component\Serializer\Normalizer\ArrayDenormalizer;
-use Symfony\Component\Serializer\Normalizer\DateTimeNormalizer;
-use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
-use Symfony\Component\Serializer\Serializer;
+use JMS\Serializer\SerializationContext;
+use JMS\Serializer\Serializer;
+use JMS\Serializer\SerializerBuilder;
 
 class Hydrator implements HydratorInterface
 {
@@ -29,28 +24,12 @@ class Hydrator implements HydratorInterface
      */
     protected $serializer;
 
-    public function __construct(string $metaCacheDir)
+    public function __construct($metaDirs, $cacheDir)
     {
-        $this->serializer = new Serializer($this->createNormalizers());
-    }
-
-    protected function createNormalizers()
-    {
-        $normalizer = new ObjectNormalizer(
-            null,
-            new CamelCaseToSnakeCaseNameConverter(),
-            PropertyAccess::createPropertyAccessor(),
-            new ReflectionExtractor(),
-            null,
-            null,
-            [ObjectNormalizer::DISABLE_TYPE_ENFORCEMENT => true]
-        );
-
-        return [
-            new DateTimeNormalizer([DateTimeNormalizer::FORMAT_KEY => DateTimeInterface::ISO8601]),
-            new ArrayDenormalizer(),
-            $normalizer,
-        ];
+        $this->serializer = SerializerBuilder::create()
+            ->setCacheDir($cacheDir)
+            ->setMetadataDirs($metaDirs)
+            ->build();
     }
 
     /**
@@ -58,7 +37,7 @@ class Hydrator implements HydratorInterface
      */
     public function extract($object): array
     {
-        return $this->serializer->normalize($object);
+        return $this->serializer->toArray($object, $this->createDefaultContext());
     }
 
     /**
@@ -66,7 +45,7 @@ class Hydrator implements HydratorInterface
      */
     public function hydrate(array $data, string $type): object
     {
-        return $this->serializer->denormalize($data, $type);
+        return $this->serializer->fromArray($data, $type);
     }
 
     /**
@@ -79,5 +58,15 @@ class Hydrator implements HydratorInterface
             $objects[] = $this->hydrate($item, $type);
         }
         return $objects;
+    }
+
+    /**
+     * Creates a default serializer context
+     *
+     * @return SerializationContext
+     */
+    protected function createDefaultContext()
+    {
+        return SerializationContext::create()->setSerializeNull(true);
     }
 }

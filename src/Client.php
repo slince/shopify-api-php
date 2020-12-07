@@ -16,6 +16,7 @@ use GuzzleHttp\Psr7\Request;
 use Slince\Di\Container;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
+use Slince\Shopify\Exception\RuntimeException;
 use Slince\Shopify\Middleware\DelayMiddleware;
 use Slince\Shopify\Middleware\MiddlewareChain;
 use Slince\Shopify\Middleware\RequestMiddleware;
@@ -167,6 +168,17 @@ class Client
         Service\Store\ShippingZoneManager::class,
         Service\Store\ShopManager::class,
     ];
+
+    protected $metaDirs = [
+        'Slince\Shopify' => __DIR__.'/../config/serializer'
+    ];
+
+    /**
+     * Whether delay the next request.
+     *
+     * @var bool
+     */
+    protected static $delayNextRequest = false;
 
     /**
      * @var string
@@ -327,8 +339,8 @@ class Client
      */
     public function sendRequest(RequestInterface $request, array $options = [])
     {
-        $request = $request->withHeader('User-Agent', static::NAME . '/' . static::VERSION);
         $request = $this->credential->applyToRequest($request);
+        $request = $request->withHeader('User-Agent', static::NAME . '/' . static::VERSION);
         $response = $this->middlewares->execute($request);
         $this->lastResponse = $response;
         return $response;
@@ -392,7 +404,22 @@ class Client
         if ($this->hydrator) {
             return $this->hydrator;
         }
-        return $this->hydrator = new Hydrator($this->metaCacheDir);
+        return $this->hydrator = new Hydrator($this->metaDirs, $this->metaCacheDir);
+    }
+
+    /**
+     * Add a custom meta dir.
+     *
+     * @param string $namespace
+     * @param string $path
+     * @throws RuntimeException
+     */
+    public function addMetaDir($namespace, $path)
+    {
+        if ($this->hydrator) {
+            throw new RuntimeException(sprintf('The hydrator has been built, you should add meta dir before getting manager.'));
+        }
+        $this->metaDirs[$namespace] = $path;
     }
 
     /**
