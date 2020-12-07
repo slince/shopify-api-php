@@ -21,7 +21,7 @@ class UsageChargeManager extends NestCrudManager implements UsageChargeManagerIn
     /**
      * @inheritDoc
      */
-    protected function getModelClass()
+    public function getModelClass()
     {
         return UsageCharge::class;
     }

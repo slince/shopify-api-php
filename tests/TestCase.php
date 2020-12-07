@@ -11,7 +11,7 @@ use Symfony\Component\Filesystem\Filesystem;
 
 class TestCase extends BaseTestCase
 {
-    const FIXTURES_DIR = __DIR__.'/Fixtures';
+    const FIXTURES_DIR = __DIR__.'/Resources';
 
     const ACCESS_TOKEN = 'asdasdadasdadasda';
 

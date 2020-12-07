@@ -21,7 +21,7 @@ class AccessScopeManager extends GeneralCurdManager implements AccessScopeManage
     /**
      * @inheritDoc
      */
-    protected function getModelClass()
+    public function getModelClass()
     {
         return AccessScope::class;
     }

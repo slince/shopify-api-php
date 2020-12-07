@@ -11,7 +11,7 @@ class FulfillmentOrderManager extends AbstractManager implements FulfillmentOrde
     /**
      * @inheritDoc
      */
-    protected function getModelClass()
+    public function getModelClass()
     {
         return FulfillmentOrder::class;
     }

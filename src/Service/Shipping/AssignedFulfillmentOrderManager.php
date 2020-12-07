@@ -21,7 +21,7 @@ class AssignedFulfillmentOrderManager extends GeneralCurdManager implements Assi
     /**
      * @inheritDoc
      */
-    protected function getModelClass()
+    public function getModelClass()
     {
         return AssignedFulfillmentOrder::class;
     }

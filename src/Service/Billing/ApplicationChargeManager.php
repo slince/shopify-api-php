@@ -21,7 +21,7 @@ class ApplicationChargeManager extends GeneralCurdManager implements Application
     /**
      * @inheritDoc
      */
-    protected function getModelClass()
+    public function getModelClass()
     {
         return ApplicationCharge::class;
     }

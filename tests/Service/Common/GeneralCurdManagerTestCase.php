@@ -1,20 +1,27 @@
 <?php
 
-namespace Slince\Shopify\Tests\Base;
+namespace Slince\Shopify\Tests\Service\Common;
 
-use Slince\Shopify\Common\Manager\GeneralCurdable;
+use GuzzleHttp\Utils;
+use Slince\Shopify\Service\Common\GeneralCurdManager;
 use Slince\Shopify\Tests\TestCase;
 
-abstract class GeneralCurdableTestCase extends TestCase
+abstract class GeneralCurdManagerTestCase extends TestCase
 {
-    abstract protected function getServiceClass();
+    protected function getServiceClass()
+    {
+        return str_ireplace(['Tests', 'Test'], ['', ''], get_called_class());
+    }
 
-    abstract protected function getFixturesDir();
+    protected function getFixturesDir()
+    {
+        return str_ireplace(['Slince\Shopify\Tests\Service'], [''], $this->getServiceClass());
+    }
 
     /**
      * @param string $fixture
      *
-     * @return GeneralCurdable
+     * @return GeneralCurdManager
      */
     public function getService($fixture)
     {
@@ -25,7 +32,7 @@ abstract class GeneralCurdableTestCase extends TestCase
 
     public function testFindAll()
     {
-        $fixture = $this->getFixturesDir().'/'.'all.json';
+        $fixture = $this->getFixturesDir().'/all.json';
         $service = $this->getService($fixture);
         $entities = $service->findAll([]);
         $this->assertInstanceOf($service->getModelClass(), $entities[0]);
@@ -35,7 +42,7 @@ abstract class GeneralCurdableTestCase extends TestCase
 
     public function testFind()
     {
-        $fixture = $this->getFixturesDir().'/'.'view.json';
+        $fixture = $this->getFixturesDir().'/view.json';
         $service = $this->getService($fixture);
         $entity = $service->find(1);
         $this->assertInstanceOf($service->getModelClass(), $entity);
@@ -43,9 +50,9 @@ abstract class GeneralCurdableTestCase extends TestCase
 
     public function testCreate()
     {
-        $fixture = $this->getFixturesDir().'/'.'view.json';
+        $fixture = $this->getFixturesDir().'/view.json';
         $service = $this->getService($fixture);
-        $json = json_decode(file_get_contents(static::FIXTURES_DIR.'/'.$fixture), true);
+        $json = Utils::jsonDecode(file_get_contents(static::FIXTURES_DIR.'/'.$fixture), true);
         $json = reset($json);
         $entity = $service->create($json);
         $this->assertInstanceOf($service->getModelClass(), $entity);
@@ -53,7 +60,7 @@ abstract class GeneralCurdableTestCase extends TestCase
 
     public function testUpdate()
     {
-        $fixture = $this->getFixturesDir().'/'.'view.json';
+        $fixture = $this->getFixturesDir().'/view.json';
         $service = $this->getService($fixture);
         $json = $this->readFixture($fixture);
         $entity = $service->update(12, reset($json));
@@ -62,10 +69,10 @@ abstract class GeneralCurdableTestCase extends TestCase
 
     public function testCount()
     {
-        $fixture = $this->getFixturesDir().'/'.'count.json';
+        $fixture = $this->getFixturesDir().'/count.json';
         $service = $this->getService($fixture);
         $count = $service->count([]);
-        $json = json_decode(file_get_contents(static::FIXTURES_DIR.'/'.$fixture), true);
+        $json = Utils::jsonDecode(file_get_contents(static::FIXTURES_DIR.'/'.$fixture), true);
         $this->assertEquals($json['count'], $count);
     }
 
@@ -74,7 +81,7 @@ abstract class GeneralCurdableTestCase extends TestCase
      */
     public function testRemove()
     {
-        $fixture = $this->getFixturesDir().'/'.'delete.json';
+        $fixture = $this->getFixturesDir().'/delete.json';
         $service = $this->getService($fixture);
         $service->remove(123);
     }

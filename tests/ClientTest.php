@@ -2,13 +2,13 @@
 
 namespace Slince\Shopify\Tests;
 
+use GuzzleHttp\Utils;
 use Slince\Shopify\Client;
-use Slince\Shopify\Common\Manager\AbstractManager;
-use Slince\Shopify\Common\Manager\ManagerInterface;
 use Slince\Shopify\Exception\RuntimeException;
 use Slince\Shopify\Exception\ClientException;
 use Slince\Shopify\PublicAppCredential;
 use Slince\Shopify\Exception\InvalidArgumentException;
+use Slince\Shopify\Service\Common\ManagerInterface;
 
 include_once __DIR__.'/Hydrator/test_classes.php';
 
@@ -36,27 +36,6 @@ class ClientTest extends TestCase
         }
     }
 
-    public function testHttpClient()
-    {
-        $client = new Client(new PublicAppCredential('foobarbazfoobarbaz'), 'bar.myshopify.com', [
-            'metaCacheDir' => __DIR__ . '/tmp'
-        ]);
-        $this->assertInstanceOf(\GuzzleHttp\Client::class, $client->getHttpClient());
-
-        $httpClient = new \GuzzleHttp\Client([
-            'verify' => true,
-        ]);
-        $client->setHttpClient($httpClient);
-        $this->assertEquals($httpClient, $client->getHttpClient());
-        $this->assertTrue($client->getHttpClient()->getConfig('verify'));
-
-        $client = new Client(new PublicAppCredential('foobarbazfoobarbaz'), 'bar.myshopify.com', [
-            'httpClient' => $httpClient,
-            'metaCacheDir' => __DIR__ . '/tmp'
-        ]);
-        $this->assertEquals($httpClient, $client->getHttpClient());
-    }
-
     public function testGet()
     {
         $client = $this->getClientMock('Product/view.json');
@@ -67,7 +46,7 @@ class ClientTest extends TestCase
 
     public function testPost()
     {
-        $data = \GuzzleHttp\json_decode(file_get_contents(static::FIXTURES_DIR.'/Product/view.json'), true);
+        $data = Utils::jsonDecode(file_get_contents(static::FIXTURES_DIR.'/Product/view.json'), true);
         $client = $this->getClientMock('Product/view.json');
         $json = $client->post('products', $data);
         $this->assertNotEmpty($json);
@@ -77,7 +56,7 @@ class ClientTest extends TestCase
 
     public function testPut()
     {
-        $data = \GuzzleHttp\json_decode(file_get_contents(static::FIXTURES_DIR.'/Product/view.json'), true);
+        $data = Utils::jsonDecode(file_get_contents(static::FIXTURES_DIR.'/Product/view.json'), true);
         $client = $this->getClientMock('Product/view.json');
         $json = $client->put('products', $data);
         $this->assertNotEmpty($json);

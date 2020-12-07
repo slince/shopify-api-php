@@ -21,7 +21,7 @@ class StorefrontAccessTokenManager extends GeneralCurdManager implements AccessS
     /**
      * @inheritDoc
      */
-    protected function getModelClass()
+    public function getModelClass()
     {
         return StorefrontAccessToken::class;
     }

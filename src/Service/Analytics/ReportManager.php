@@ -21,7 +21,7 @@ class ReportManager extends GeneralCurdManager implements ReportManagerInterface
     /**
      * @inheritDoc
      */
-    protected function getModelClass()
+    public function getModelClass()
     {
         return Report::class;
     }

@@ -32,7 +32,7 @@ abstract class AbstractManager implements ManagerInterface
      *
      * @return string
      */
-    abstract protected function getModelClass();
+    abstract public function getModelClass();
 
     /**
      * Gets the resource name.
