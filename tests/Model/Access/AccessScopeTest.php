@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Slince\Shopify\Tests\Model\Access;
 
 use Slince\Shopify\Model\Access\AccessScope;

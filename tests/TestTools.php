@@ -19,33 +19,69 @@ class TestTools
                 continue;
             }
             $targetPath = strstr($file->getPathname(), 'src');
+            $baseClass = str_replace('.php', '', basename($targetPath));
             $filename = str_replace('.php', 'Test.php', $targetPath);
             $filename = ltrim($filename, 'src/');
 //            print_r($filename);
             $namespace = dirname($filename);
-            $class = str_replace('.php','', $filename);
-            $baseClass = basename($filename);
+            $class = str_replace('Test.php','', $filename);
             $content = <<<EOT
 <?php
 
-namespace Slince\Shopify\Tests\{$namespace};
+namespace Slince\Shopify\Tests\\{$namespace};
 
-use Slince\Shopify\{$class};
+use Slince\Shopify\\{$class};
 use Slince\Shopify\Tests\Model\ModelTestCase;
 
-class AccessScopeTest extends ModelTestCase
+class {$baseClass}Test extends ModelTestCase
 {
     /**
      * @inheritDoc
      */
     public function getModelClass()
     {
-        return {$baseClass}}::class;
+        return {$baseClass}::class;
     }
 }
 EOT;
-            echo PHP_EOL;
-            mkdir(dirname(__DIR__ . '/' . $filename), 0777, true);
+            @mkdir(dirname(__DIR__ . '/' . $filename), 0777, true);
+            file_put_contents(__DIR__ . '/' . $filename, $content);
+        }
+    }
+
+    public function generateServicesTests()
+    {
+        foreach ($this->getClasses(__DIR__ . '/../src/Service') as $file) {
+            if ($file->isDir()) {
+                continue;
+            }
+            $targetPath = strstr($file->getPathname(), 'src');
+            $baseClass = str_replace('.php', '', basename($targetPath));
+            $filename = str_replace('.php', 'Test.php', $targetPath);
+            $filename = ltrim($filename, 'src/');
+//            print_r($filename);
+            $namespace = dirname($filename);
+            $class = str_replace('Test.php','', $filename);
+            $content = <<<EOT
+<?php
+
+namespace Slince\Shopify\Tests\\{$namespace};
+
+use Slince\Shopify\\{$class};
+use Slince\Shopify\Tests\Model\ModelTestCase;
+
+class {$baseClass}Test extends ModelTestCase
+{
+    /**
+     * @inheritDoc
+     */
+    public function getModelClass()
+    {
+        return {$baseClass}::class;
+    }
+}
+EOT;
+            @mkdir(dirname(__DIR__ . '/' . $filename), 0777, true);
             file_put_contents(__DIR__ . '/' . $filename, $content);
         }
     }
