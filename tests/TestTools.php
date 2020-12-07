@@ -2,8 +2,7 @@
 
 namespace Slince\Shopify\Tests;
 
-use Slince\Shopify\Model\Access\AccessScope;
-use Slince\Shopify\Tests\Model\ModelTestCase;
+use Slince\Shopify\Service\Common\NestCrudManager;
 
 class TestTools
 {
@@ -62,30 +61,43 @@ EOT;
 //            print_r($filename);
             $namespace = dirname($filename);
             $class = str_replace('Test.php','', $filename);
+            $fullClass = "Slince\\Shopify\\{$class}";
+
+            if (
+                class_implements($fullClass, NestCrudManager::class)
+            ) {
+                $extendClass = "NestCurdManagerTestCase";
+            } else {
+                $extendClass = "GeneralCurdManagerTestCase";
+            }
+            $fullpathname = __DIR__ . '/' . $filename;
+//            var_dump($fullpathname, strpos($fullpathname, 'Interface') !== false);
+            if (
+                strpos($fullpathname, 'Interface') !== false
+                || (new \ReflectionClass($fullClass))->isAbstract()
+                || strpos($fullpathname, 'Manager') === false
+            ) {
+                @unlink($fullpathname);
+                continue;
+            }
             $content = <<<EOT
 <?php
 
 namespace Slince\Shopify\Tests\\{$namespace};
 
-use Slince\Shopify\\{$class};
-use Slince\Shopify\Tests\Model\ModelTestCase;
+use Slince\Shopify\Tests\Service\Common\\{$extendClass};
 
-class {$baseClass}Test extends ModelTestCase
+class {$baseClass}Test extends {$extendClass}
 {
-    /**
-     * @inheritDoc
-     */
-    public function getModelClass()
-    {
-        return {$baseClass}::class;
-    }
 }
 EOT;
-            @mkdir(dirname(__DIR__ . '/' . $filename), 0777, true);
-            file_put_contents(__DIR__ . '/' . $filename, $content);
+            @mkdir(dirname($fullpathname), 0777, true);
+            file_put_contents($fullpathname, $content);
         }
     }
 }
 
+include __DIR__ . '/../vendor/autoload.php';
+
 $tools = new TestTools();
-$tools->generateModelTests();
+$tools->generateServicesTests();
