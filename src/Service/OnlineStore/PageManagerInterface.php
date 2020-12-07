@@ -13,9 +13,9 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Service\OnlineStore;
 
-use Slince\Shopify\Common\Manager\ManagerInterface;
+use Slince\Shopify\Model\OnlineStore\Page;
 
-interface PageManagerInterface extends ManagerInterface
+interface PageManagerInterface
 {
     /**
      * Gets all pages.

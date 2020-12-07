@@ -286,7 +286,7 @@ class RecurringApplicationCharge
     /**
      * @return true|null
      */
-    public function getTest(): ?true
+    public function getTest(): ?bool
     {
         return $this->test;
     }
@@ -294,7 +294,7 @@ class RecurringApplicationCharge
     /**
      * @param true|null $test
      */
-    public function setTest(?true $test): void
+    public function setTest(?bool $test): void
     {
         $this->test = $test;
     }

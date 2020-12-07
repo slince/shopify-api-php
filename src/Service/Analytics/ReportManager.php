@@ -11,7 +11,7 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Service\Report;
+namespace Slince\Shopify\Service\Analytics;
 
 use Slince\Shopify\Model\Analytics\Report;
 use Slince\Shopify\Service\Common\GeneralCurdManager;
