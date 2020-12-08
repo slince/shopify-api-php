@@ -16,7 +16,7 @@ namespace Slince\Shopify\Service\Access;
 use Slince\Shopify\Model\Access\StorefrontAccessToken;
 use Slince\Shopify\Service\Common\GeneralCurdManager;
 
-class StorefrontAccessTokenManager extends GeneralCurdManager implements AccessScopeManagerInterface
+class StorefrontAccessTokenManager extends GeneralCurdManager implements StorefrontAccessTokenManagerInterface
 {
     /**
      * @inheritDoc

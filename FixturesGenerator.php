@@ -1,10 +1,11 @@
 <?php
 
-namespace Slince\Shopify\Tests;
+include_once __DIR__ . '/vendor/autoload.php';
 
-use Slince\Shopify\Service\Common\NestCrudManager;
+$tools = new FixturesGenerator();
+$tools->generateClientFakeMethods();
 
-class TestTools
+final class FixturesGenerator
 {
     public function getClasses($path)
     {
@@ -13,7 +14,7 @@ class TestTools
 
     public function generateModelTests()
     {
-        foreach ($this->getClasses(__DIR__ . '/../src/Model') as $file) {
+        foreach ($this->getClasses(__DIR__ . '/src/Model') as $file) {
             if ($file->isDir()) {
                 continue;
             }
@@ -43,14 +44,14 @@ class {$baseClass}Test extends ModelTestCase
     }
 }
 EOT;
-            @mkdir(dirname(__DIR__ . '/' . $filename), 0777, true);
+            @mkdir(dirname(__DIR__ . '/tests' . $filename), 0777, true);
             file_put_contents(__DIR__ . '/' . $filename, $content);
         }
     }
 
     public function generateServicesTests()
     {
-        foreach ($this->getClasses(__DIR__ . '/../src/Service') as $file) {
+        foreach ($this->getClasses(__DIR__ . '/src/Service') as $file) {
             if ($file->isDir()) {
                 continue;
             }
@@ -64,13 +65,13 @@ EOT;
             $fullClass = "Slince\\Shopify\\{$class}";
 
             if (
-                class_implements($fullClass, NestCrudManager::class)
+            class_implements($fullClass, NestCrudManager::class)
             ) {
                 $extendClass = "NestCurdManagerTestCase";
             } else {
                 $extendClass = "GeneralCurdManagerTestCase";
             }
-            $fullpathname = __DIR__ . '/' . $filename;
+            $fullpathname = __DIR__ . '/tests/' . $filename;
 //            var_dump($fullpathname, strpos($fullpathname, 'Interface') !== false);
             if (
                 strpos($fullpathname, 'Interface') !== false
@@ -95,9 +96,31 @@ EOT;
             file_put_contents($fullpathname, $content);
         }
     }
+
+    public function generateClientFakeMethods()
+    {
+        $msg = '';
+        foreach ($this->getClasses(__DIR__ . '/src/Service') as $file) {
+            if ($file->isDir()) {
+                continue;
+            }
+            $targetPath = strstr($file->getPathname(), 'src');
+            $baseClass = str_replace('.php', '', basename($targetPath));
+            $class = ltrim(str_replace('.php','', $targetPath), 'src/');
+
+            $fullClass = "Slince\\Shopify\\{$class}";
+
+            $ref= new \ReflectionClass($fullClass);
+            if ($ref->isInterface() || false !== strpos($fullClass, 'Common')) {
+                continue;
+            }
+            $id = $fullClass::getServiceName();
+            $upperId = Slince\Shopify\Inflector::pluralize(Slince\Shopify\Inflector::classify($id));
+
+            $interfaces = $ref->getInterfaces();
+            $interfaceClass = strstr(end($interfaces)->getName(), 'Service');
+            $msg .= "* @method Service\\{$interfaceClass} get{$upperId}Manager" . PHP_EOL;
+        }
+        file_put_contents(__DIR__ . '/magic_methods.txt', $msg);
+    }
 }
-
-include __DIR__ . '/../vendor/autoload.php';
-
-$tools = new TestTools();
-$tools->generateServicesTests();

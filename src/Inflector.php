@@ -42,6 +42,12 @@ if (class_exists(InflectorFactory::class)) {
             return static::getInflector()->tableize($word);
         }
 
+        public static function classify(string $word)
+        {
+            return static::getInflector()->classify($word);
+        }
+
+
         public static function singularize(string $word)
         {
             return static::getInflector()->singularize($word);

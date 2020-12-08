@@ -109,7 +109,7 @@ class Client
         Service\Access\AccessScopeManager::class,
         Service\Access\StorefrontAccessTokenManager::class,
         // Analytics
-        Service\Report\ReportManager::class,
+        Service\Analytics\ReportManager::class,
         // Billing
         Service\Billing\ApplicationChargeManager::class,
         Service\Billing\ApplicationCreditManager::class,
