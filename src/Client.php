@@ -13,6 +13,7 @@ namespace Slince\Shopify;
 
 use GuzzleHttp\Utils;
 use GuzzleHttp\Psr7\Request;
+use GuzzleHttp\Client as HttpClient;
 use Slince\Di\Container;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
@@ -185,12 +186,6 @@ class Client
         'Slince\Shopify' => __DIR__.'/../config/serializer'
     ];
 
-    /**
-     * Whether delay the next request.
-     *
-     * @var bool
-     */
-    protected static $delayNextRequest = false;
 
     /**
      * @var string
@@ -201,6 +196,11 @@ class Client
      * @var Hydrator
      */
     protected $hydrator;
+
+    /**
+     * @var HttpClient
+     */
+    protected $httpClient;
 
     public function __construct($shop, CredentialInterface $credential, array $options = [])
     {
@@ -409,6 +409,12 @@ class Client
      */
     protected function applyOptions(array $options)
     {
+        if (!isset($options['httpClient'])) {
+            $options['httpClient'] = new HttpClient([
+                'verify' => false
+            ]);
+        }
+        $this->httpClient = $options['httpClient'];
         if (!isset($options['metaCacheDir'])) {
             throw new InvalidArgumentException('You must provide option "metaCacheDir"');
         }
@@ -421,8 +427,7 @@ class Client
         }
         if (!isset($options['middlewares'])) {
             $options['middlewares'] = new MiddlewareChain([
-                new DelayMiddleware(),
-                new RequestMiddleware()
+                new DelayMiddleware()
             ]);
         }
         $this->middlewares = $options['middlewares'];
