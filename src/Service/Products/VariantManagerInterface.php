@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Service\Products;
 
-use Slince\Shopify\Resource\Products\Variant;
+use Slince\Shopify\Model\Products\Variant;
 
 interface VariantManagerInterface
 {

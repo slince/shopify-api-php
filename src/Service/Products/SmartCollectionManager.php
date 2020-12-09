@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Service\Products;
 
-use Slince\Shopify\Resource\Products\SmartCollection;
+use Slince\Shopify\Model\Products\SmartCollection;
 use Slince\Shopify\Service\Common\GeneralCurdManager;
 
 class SmartCollectionManager extends GeneralCurdManager implements SmartCollectionManagerInterface

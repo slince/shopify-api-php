@@ -11,6 +11,11 @@ $products = $client->getProductManager()->findAll([
     'limit' => 3,
     'created_at_min' => '2014-04-25T16:15:47-04:00'
 ]);
+//$products = $client->getArticleManager()->findAll([
+//    // filter your product
+//    'limit' => 2,
+//    'created_at_min' => '2014-04-25T16:15:47-04:00'
+//]);
 print_r($products);exit;
 // Paginate
 $pagination = $client->getProductManager()->paginate([

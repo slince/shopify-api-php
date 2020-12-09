@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Exception;
 
+use GuzzleHttp\Utils;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
@@ -32,7 +33,15 @@ class ClientException extends RuntimeException
     {
         $this->request = $request;
         $this->response = $response;
+        $message = $message ?: ($response ? static::extractErrorMessages($response) : 'Blank error message');
         parent::__construct($message, $code);
+    }
+
+    protected static function extractErrorMessages(ResponseInterface $response)
+    {
+        $rawBody = (string)$response->getBody();
+        $data = Utils::jsonDecode($rawBody, true);
+        return $data['errors'] ?? $rawBody;
     }
 
     /**

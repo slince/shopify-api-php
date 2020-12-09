@@ -11,7 +11,7 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-namespace Slince\Shopify\Resource\Products;
+namespace Slince\Shopify\Model\Products;
 
 use DateTimeInterface;
 

@@ -11,16 +11,18 @@
 
 namespace Slince\Shopify;
 
+use GuzzleHttp\Exception\RequestException;
+use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\Utils;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Client as HttpClient;
 use Slince\Di\Container;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
+use Slince\Shopify\Exception\ClientException;
 use Slince\Shopify\Exception\RuntimeException;
 use Slince\Shopify\Middleware\DelayMiddleware;
 use Slince\Shopify\Middleware\MiddlewareChain;
-use Slince\Shopify\Middleware\RequestMiddleware;
 use Slince\Shopify\Service\Common\ManagerInterface;
 use Slince\Shopify\Exception\InvalidArgumentException;
 use Slince\Shopify\Hydrator\Hydrator;
@@ -117,7 +119,7 @@ class Client
      *
      * @var array
      */
-    public $serviceClass =[
+    protected $serviceClass =[
         // Access
         Service\Access\AccessScopeManager::class,
         Service\Access\StorefrontAccessTokenManager::class,
@@ -353,7 +355,17 @@ class Client
     {
         $request = $this->credential->applyToRequest($request);
         $request = $request->withHeader('User-Agent', static::NAME . '/' . static::VERSION);
-        $response = $this->middlewares->execute($request);
+        $response = $this->middlewares->handle($request, function(RequestInterface $request) use ($options){
+            try {
+                return $this->httpClient->send($request, $options);
+            } catch (RequestException $exception) {
+                $response = $exception->getResponse();
+                if (!$response) {
+                    throw new ClientException($request, null, $exception->getMessage(), $exception->getCode());
+                }
+                return $response;
+            }
+        });
         $this->raiseException($request, $response);
         $this->lastResponse = $response;
         return $response;
@@ -366,17 +378,17 @@ class Client
         }
         switch ($response->getStatusCode()) {
             case 400:
-                throw new Exception\BadRequestException($request, $response, (string)$response->getBody());
+                throw new Exception\BadRequestException($request, $response);
             case 401:
-                throw new Exception\UnauthorizedException($request, $response, (string)$response->getBody());
+                throw new Exception\UnauthorizedException($request, $response);
             case 404:
-                throw new Exception\NotFoundException($request, $response, (string)$response->getBody());
+                throw new Exception\NotFoundException($request, $response);
             case 406:
-                throw new Exception\NotAcceptableException($request, $response, (string)$response->getBody());
+                throw new Exception\NotAcceptableException($request, $response);
             case 422:
-                throw new Exception\UnprocessableEntityException($request, $response, (string)$response->getBody());
+                throw new Exception\UnprocessableEntityException($request, $response);
             case 429:
-                throw new Exception\TooManyRequestsException($request, $response, (string)$response->getBody());
+                throw new Exception\TooManyRequestsException($request, $response);
         }
     }
 

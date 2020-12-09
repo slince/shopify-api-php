@@ -1,8 +1,18 @@
 <?php
 
+declare(strict_types=1);
+
+/*
+ * This file is part of the slince/shopify-api-php
+ *
+ * (c) Slince <taosikai@yeah.net>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
+ */
+
 
 namespace Slince\Shopify\Middleware;
-
 
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
@@ -45,8 +55,13 @@ class DelayMiddleware implements MiddlewareInterface
             usleep($this->sleepMicroSeconds);
         }
         $response = $next($request);
-        list($callsMade, $callsLimit) = explode('/', $response->getHeaderLine('http_x_shopify_shop_api_call_limit'));
-        static::$delayNextRequest = $callsMade / $callsLimit >= $this->callsPercent;
+        if ($response->hasHeader('http_x_shopify_shop_api_call_limit')) {
+            list($callsMade, $callsLimit) = explode(
+                '/',
+                $response->getHeaderLine('http_x_shopify_shop_api_call_limit')
+            );
+            static::$delayNextRequest = $callsMade / $callsLimit >= $this->callsPercent;
+        }
         return $response;
     }
 }

@@ -11,7 +11,7 @@
 
 namespace Slince\Shopify\Service\Products;
 
-use Slince\Shopify\Resource\Products\Product;
+use Slince\Shopify\Model\Products\Product;
 
 interface ProductManagerInterface
 {

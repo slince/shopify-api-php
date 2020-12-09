@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Service\Products;
 
-use Slince\Shopify\Resource\Products\CustomCollection;
+use Slince\Shopify\Model\Products\CustomCollection;
 use Slince\Shopify\Service\Common\GeneralCurdManager;
 
 class CustomCollectionManager extends GeneralCurdManager implements CustomCollectionManagerInterface

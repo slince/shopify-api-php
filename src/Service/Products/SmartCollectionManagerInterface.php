@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Service\Products;
 
-use Slince\Shopify\Resource\Products\SmartCollection;
+use Slince\Shopify\Model\Products\SmartCollection;
 
 interface SmartCollectionManagerInterface
 {

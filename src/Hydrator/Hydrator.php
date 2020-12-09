@@ -27,8 +27,8 @@ class Hydrator implements HydratorInterface
     public function __construct($metaDirs, $cacheDir)
     {
         $this->serializer = SerializerBuilder::create()
-            ->setCacheDir($cacheDir)
-            ->setMetadataDirs($metaDirs)
+//            ->setCacheDir($cacheDir)
+//            ->setMetadataDirs($metaDirs)
             ->build();
     }
 
