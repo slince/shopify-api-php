@@ -354,8 +354,30 @@ class Client
         $request = $this->credential->applyToRequest($request);
         $request = $request->withHeader('User-Agent', static::NAME . '/' . static::VERSION);
         $response = $this->middlewares->execute($request);
+        $this->raiseException($request, $response);
         $this->lastResponse = $response;
         return $response;
+    }
+
+    protected function raiseException(RequestInterface $request, ResponseInterface $response)
+    {
+        if ($response->getStatusCode() < 300) {
+            return;
+        }
+        switch ($response->getStatusCode()) {
+            case 400:
+                throw new Exception\BadRequestException($request, $response, (string)$response->getBody());
+            case 401:
+                throw new Exception\UnauthorizedException($request, $response, (string)$response->getBody());
+            case 404:
+                throw new Exception\NotFoundException($request, $response, (string)$response->getBody());
+            case 406:
+                throw new Exception\NotAcceptableException($request, $response, (string)$response->getBody());
+            case 422:
+                throw new Exception\UnprocessableEntityException($request, $response, (string)$response->getBody());
+            case 429:
+                throw new Exception\TooManyRequestsException($request, $response, (string)$response->getBody());
+        }
     }
 
     /**

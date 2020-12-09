@@ -2,12 +2,12 @@
 
 include __DIR__ . '/../vendor/autoload.php';
 
-$shopName = 'your-store.myshopify.com';
+$shopName = 'super-popup.myshopify.com';
 
 //Public App, link
 //https://help.shopify.com/api/getting-started/authentication/oauth
 $credential = new Slince\Shopify\PublicAppCredential(
-    'ab77c713e4db50220b9ba0e17b10bc29'
+    'e2ea49ec1155317f61d68ec26a0f99b6'
 );
 
 //Or Private App, link:

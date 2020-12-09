@@ -36,7 +36,7 @@ class RequestMiddleware implements MiddlewareInterface
         } catch (RequestException $exception) {
             $response = $exception->getResponse();
             if (!$response) {
-                throw new ClientException($request, $response, $exception->getMessage(), $exception->getCode());
+                throw new ClientException($request, null, $exception->getMessage(), $exception->getCode());
             }
             return $response;
         }

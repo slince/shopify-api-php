@@ -55,10 +55,10 @@ class MiddlewareChain implements MiddlewareInterface
 
     protected function getNext(): callable
     {
-        return function(RequestInterface $request) :ResponseInterface {
-            $response = $this->middlewares[$this->index]->handle($request, $this->getNext());
-            $this->index ++;
-            return $response;
+        $next = function(RequestInterface $request) :ResponseInterface {
+            return $this->middlewares[$this->index]->handle($request, $this->getNext());
         };
+        $this->index ++;
+        return $next;
     }
 }
