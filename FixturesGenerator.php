@@ -115,11 +115,11 @@ EOT;
                 continue;
             }
             $id = $fullClass::getServiceName();
-            $upperId = Slince\Shopify\Inflector::pluralize(Slince\Shopify\Inflector::classify($id));
+            $upperId = Slince\Shopify\Inflector::singularize(Slince\Shopify\Inflector::classify($id));
 
             $interfaces = $ref->getInterfaces();
             $interfaceClass = strstr(end($interfaces)->getName(), 'Service');
-            $msg .= "* @method Service\\{$interfaceClass} get{$upperId}Manager" . PHP_EOL;
+            $msg .= "* @method {$interfaceClass} get{$upperId}Manager" . PHP_EOL;
         }
         file_put_contents(__DIR__ . '/magic_methods.txt', $msg);
     }

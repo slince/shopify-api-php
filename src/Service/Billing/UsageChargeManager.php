@@ -31,9 +31,8 @@ class UsageChargeManager extends NestCrudManager implements UsageChargeManagerIn
      */
     protected function getResourceName()
     {
-        return 'application_credit';
+        return 'usage_charge';
     }
-
 
     /**
      * @inheritDoc
@@ -48,6 +47,6 @@ class UsageChargeManager extends NestCrudManager implements UsageChargeManagerIn
      */
     public static function getServiceName()
     {
-        return 'recurring_application_charges';
+        return 'usage_charges';
     }
 }
