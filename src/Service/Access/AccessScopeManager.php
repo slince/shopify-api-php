@@ -14,9 +14,9 @@ declare(strict_types=1);
 namespace Slince\Shopify\Service\Access;
 
 use Slince\Shopify\Model\Access\AccessScope;
-use Slince\Shopify\Service\Common\GeneralCurdManager;
+use Slince\Shopify\Service\Common\AbstractManager;
 
-class AccessScopeManager extends GeneralCurdManager implements AccessScopeManagerInterface
+class AccessScopeManager extends AbstractManager implements AccessScopeManagerInterface
 {
     /**
      * @inheritDoc
@@ -40,5 +40,17 @@ class AccessScopeManager extends GeneralCurdManager implements AccessScopeManage
     public static function getServiceName()
     {
         return 'access_scopes';
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function findAll(array $query = [])
+    {
+        $data = $this->client->createRequest('GET',
+            $this->client->buildUrl('oauth/access_scopes', false), [
+            'query' => $query
+        ]);
+        return $this->createMany($data['access_scopes']);
     }
 }

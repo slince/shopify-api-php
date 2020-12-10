@@ -14,7 +14,7 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Model\Billing;
 
-use DateTimeInterface;
+use \DateTimeInterface;
 
 class RecurringApplicationCharge
 {

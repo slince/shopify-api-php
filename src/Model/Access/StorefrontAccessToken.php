@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Model\Access;
 
-use DateTimeInterface;
+use \DateTimeInterface;
 
 class StorefrontAccessToken
 {

@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Model\Products;
 
-use DateTimeInterface;
+use \DateTimeInterface;
 
 class Image
 {
@@ -58,7 +58,7 @@ class Image
     protected $src;
 
     /**
-     * @var array
+     * @var array<int>
      */
     protected $variantIds;
 

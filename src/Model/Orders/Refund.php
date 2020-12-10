@@ -12,7 +12,7 @@ declare(strict_types=1);
  */
 namespace Slince\Shopify\Model\Orders;
 
-use DateTimeInterface;
+use \DateTimeInterface;
 use Slince\Shopify\Model\Common\PriceSet;
 use Slince\Shopify\Model\Orders\Common\Duty;
 use Slince\Shopify\Model\Orders\Common\OrderAdjustment;

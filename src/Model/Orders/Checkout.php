@@ -12,7 +12,7 @@ declare(strict_types=1);
  */
 namespace Slince\Shopify\Model\Orders;
 
-use DateTimeInterface;
+use \DateTimeInterface;
 use Slince\Shopify\Model\Customers\Customer;
 use Slince\Shopify\Model\Discounts\DiscountCode;
 use Slince\Shopify\Model\Orders\Common\CheckoutShippingLine;

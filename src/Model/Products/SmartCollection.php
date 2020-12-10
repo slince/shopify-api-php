@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Model\Products;
 
-use DateTimeInterface;
+use \DateTimeInterface;
 
 class SmartCollection
 {

@@ -54,12 +54,7 @@ abstract class AbstractManager implements ManagerInterface
      */
     public function createMany(array $data)
     {
-        $models = [];
-        foreach ($data as $item) {
-            $models[] = $this->fromArray($item);
-        }
-
-        return $models;
+         return $this->client->getHydrator()->hydrateMany($data, $this->getModelClass());
     }
 
     /**

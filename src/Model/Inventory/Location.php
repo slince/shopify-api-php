@@ -14,7 +14,7 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Model\Inventory;
 
-use DateTimeInterface;
+use \DateTimeInterface;
 
 class Location
 {

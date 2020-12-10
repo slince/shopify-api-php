@@ -14,7 +14,6 @@ declare(strict_types=1);
 namespace Slince\Shopify\Service\Common;
 
 use Slince\Shopify\Inflector;
-use Slince\Shopify\Common\CursorBasedPagination;
 
 abstract class NestCrudManager extends AbstractManager
 {
@@ -37,7 +36,6 @@ abstract class NestCrudManager extends AbstractManager
     {
         $resource = $this->createPartialResourceUrlForList($parentId);
         $data = $this->client->get($resource, $query);
-
         return $this->createMany(reset($data));
     }
 
@@ -54,7 +52,7 @@ abstract class NestCrudManager extends AbstractManager
     {
         $resource = $this->createPartialResourceUrlForList($parentId);
 
-        return new CursorBasedPagination($this, $resource, $query);
+        return new CursorBasedPagination($this->client, $this, $resource, $query);
     }
 
     /**

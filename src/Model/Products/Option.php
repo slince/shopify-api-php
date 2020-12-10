@@ -36,7 +36,7 @@ class Option
     protected $position;
 
     /**
-     * @var array
+     * @var array<string>
      */
     protected $values;
 

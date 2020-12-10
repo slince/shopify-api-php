@@ -26,6 +26,7 @@ use Slince\Shopify\Middleware\MiddlewareChain;
 use Slince\Shopify\Service\Common\ManagerInterface;
 use Slince\Shopify\Exception\InvalidArgumentException;
 use Slince\Shopify\Hydrator\Hydrator;
+use function GuzzleHttp\Psr7\str;
 
 /**
  * @method Service\Access\AccessScopeManagerInterface getAccessScopeManager
@@ -119,7 +120,7 @@ class Client
      *
      * @var array
      */
-    protected $serviceClass =[
+    public $serviceClass =[
         // Access
         Service\Access\AccessScopeManager::class,
         Service\Access\StorefrontAccessTokenManager::class,
@@ -184,10 +185,10 @@ class Client
         Service\Store\ShopManager::class,
     ];
 
-    protected $metaDirs = [
-        'Slince\Shopify' => __DIR__.'/../config/serializer'
-    ];
-
+    /**
+     * @var array
+     */
+    protected $metaDirs = [];
 
     /**
      * @var string
@@ -269,7 +270,7 @@ class Client
      */
     public function get($resource, $query = [])
     {
-        return $this->doRequest('GET', $resource, [
+        return $this->createRequest('GET', $this->buildUrl($resource), [
             'query' => $query,
         ]);
     }
@@ -285,7 +286,7 @@ class Client
      */
     public function post($resource, $data, $query = [])
     {
-        return $this->doRequest('POST', $resource, [
+        return $this->createRequest('POST', $this->buildUrl($resource), [
             'query' => $query,
             'json' => $data,
         ]);
@@ -302,7 +303,7 @@ class Client
      */
     public function put($resource, $data, $query = [])
     {
-        return $this->doRequest('PUT', $resource, [
+        return $this->createRequest('PUT', $this->buildUrl($resource), [
             'query' => $query,
             'json' => $data,
         ]);
@@ -316,22 +317,22 @@ class Client
      */
     public function delete($resource, $query = [])
     {
-        $this->doRequest('DELETE', $resource, [
+        $this->createRequest('DELETE', $this->buildUrl($resource), [
             'query' => $query
         ]);
     }
 
     /**
-     * Send an HTTP request
+     * Create a HTTP request
      *
      * @param string $method
-     * @param string $resource
+     * @param string $uri
      * @param array $options
      * @return array
      */
-    protected function doRequest($method, $resource, $options = [])
+    public function createRequest($method, $uri, $options = [])
     {
-        $request = new Request($method, $this->buildUrl($resource), [
+        $request = new Request($method, $uri, [
             'Content-Type' => 'application/json',
         ]);
         $response = $this->sendRequest($request, $options);
@@ -351,7 +352,7 @@ class Client
      * @return ResponseInterface
      * @codeCoverageIgnore
      */
-    public function sendRequest(RequestInterface $request, array $options = [])
+    protected function sendRequest(RequestInterface $request, array $options = [])
     {
         $request = $this->credential->applyToRequest($request);
         $request = $request->withHeader('User-Agent', static::NAME . '/' . static::VERSION);
@@ -381,6 +382,8 @@ class Client
                 throw new Exception\BadRequestException($request, $response);
             case 401:
                 throw new Exception\UnauthorizedException($request, $response);
+            case 403:
+                throw new Exception\ForbiddenException($request, $response);
             case 404:
                 throw new Exception\NotFoundException($request, $response);
             case 406:
@@ -406,12 +409,13 @@ class Client
      * Builds an url by given resource name.
      *
      * @param string $resource
-     *
+     * @param string $versioning
      * @return string
      */
-    protected function buildUrl($resource)
+    public function buildUrl($resource, $versioning = true)
     {
-        return sprintf('https://%s/admin/api/%s/%s.json', $this->shop, $this->apiVersion, $resource);
+        return $versioning ? sprintf('https://%s/admin/api/%s/%s.json', $this->shop, $this->apiVersion, $resource)
+            : sprintf('https://%s/admin/%s.json', $this->shop, $resource);
     }
 
     /**
@@ -455,7 +459,7 @@ class Client
         if ($this->hydrator) {
             return $this->hydrator;
         }
-        return $this->hydrator = new Hydrator($this->metaDirs, $this->metaCacheDir);
+        return $this->hydrator = new Hydrator($this->metaCacheDir, $this->metaDirs);
     }
 
     /**

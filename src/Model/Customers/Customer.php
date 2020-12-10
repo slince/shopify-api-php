@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Model\Customers;
 
-use DateTimeInterface;
+use \DateTimeInterface;
 
 class Customer
 {

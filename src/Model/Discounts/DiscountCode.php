@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Model\Discounts;
 
-use DateTimeInterface;
+use \DateTimeInterface;
 
 class DiscountCode
 {

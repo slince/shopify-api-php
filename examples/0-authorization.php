@@ -23,7 +23,7 @@ $credential = new Slince\Shopify\PublicAppCredential(
 $client = new Slince\Shopify\Client($shopName, $credential, [
     'metaCacheDir' => './tmp', //Metadata cache dir, required
     'httpClient' => new \GuzzleHttp\Client([
-//        'proxy' => '127.0.0.1:1080'
+        'proxy' => '127.0.0.1:1080'
     ])
 ]);
 
