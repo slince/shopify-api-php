@@ -65,6 +65,10 @@ abstract class ModelTestCase extends TestCase
 
     public function testId()
     {
+        $modelClass = $this->getModelClass();
+        if (!property_exists($modelClass, 'id')) {
+            $this->markTestSkipped(sprintf('The model "%s" dont have id', $modelClass));
+        }
         $model = $this->mockModel(false);
         $this->assertNull($model->getId());
         $model->setId(10);
