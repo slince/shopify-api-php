@@ -2,8 +2,8 @@
 
 namespace Slince\Shopify\Tests\Service\Discounts;
 
-use Slince\Shopify\Tests\Service\Common\NestCurdManagerTestCase;
+use Slince\Shopify\Tests\Service\Common\GeneralCurdManagerTestCase;
 
-class PriceRuleManagerTest extends NestCurdManagerTestCase
+class PriceRuleManagerTest extends GeneralCurdManagerTestCase
 {
 }

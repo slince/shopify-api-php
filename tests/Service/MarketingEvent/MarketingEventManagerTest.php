@@ -2,8 +2,8 @@
 
 namespace Slince\Shopify\Tests\Service\MarketingEvent;
 
-use Slince\Shopify\Tests\Service\Common\NestCurdManagerTestCase;
+use Slince\Shopify\Tests\Service\Common\GeneralCurdManagerTestCase;
 
-class MarketingEventManagerTest extends NestCurdManagerTestCase
+class MarketingEventManagerTest extends GeneralCurdManagerTestCase
 {
 }

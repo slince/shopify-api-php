@@ -3,7 +3,7 @@
 include_once __DIR__ . '/vendor/autoload.php';
 
 $tools = new FixturesGenerator();
-$tools->generateModelMapping();
+$tools->generateServicesTests();
 
 final class FixturesGenerator
 {
@@ -65,7 +65,7 @@ EOT;
             $fullClass = "Slince\\Shopify\\{$class}";
 
             if (
-            class_implements($fullClass, NestCrudManager::class)
+                is_subclass_of($fullClass, Slince\Shopify\Service\Common\NestCrudManager::class)
             ) {
                 $extendClass = "NestCurdManagerTestCase";
             } else {

@@ -2,8 +2,8 @@
 
 namespace Slince\Shopify\Tests\Service\Customers;
 
-use Slince\Shopify\Tests\Service\Common\NestCurdManagerTestCase;
+use Slince\Shopify\Tests\Service\Common\GeneralCurdManagerTestCase;
 
-class CustomerSavedSearchManagerTest extends NestCurdManagerTestCase
+class CustomerSavedSearchManagerTest extends GeneralCurdManagerTestCase
 {
 }

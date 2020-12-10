@@ -2,8 +2,8 @@
 
 namespace Slince\Shopify\Tests\Service\Products;
 
-use Slince\Shopify\Tests\Service\Common\NestCurdManagerTestCase;
+use Slince\Shopify\Tests\Service\Common\GeneralCurdManagerTestCase;
 
-class SmartCollectionManagerTest extends NestCurdManagerTestCase
+class SmartCollectionManagerTest extends GeneralCurdManagerTestCase
 {
 }
