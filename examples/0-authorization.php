@@ -2,12 +2,12 @@
 
 include __DIR__ . '/../vendor/autoload.php';
 
-$shopName = 'your-shop.myshopify.com';
+$shopName = 'qimify.myshopify.com';
 
 //Public App, link
 //https://help.shopify.com/api/getting-started/authentication/oauth
 $credential = new Slince\Shopify\PublicAppCredential(
-    '12sf9a7793a8466c34193a3933aebf7d73a'
+    'f9a7793a8466c34193a3933aebf7d73a'
 );
 
 ////Or Private App, link:
@@ -23,7 +23,7 @@ $credential = new Slince\Shopify\PublicAppCredential(
 $client = new Slince\Shopify\Client($shopName, $credential, [
     'metaCacheDir' => './tmp', //Metadata cache dir, required
     'httpClient' => new \GuzzleHttp\Client([
-        'proxy' => '127.0.0.1:1080'
+//        'proxy' => '127.0.0.1:1080'
     ])
 ]);
 

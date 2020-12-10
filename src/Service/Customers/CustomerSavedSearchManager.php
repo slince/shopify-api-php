@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Service\Customers;
 
-use Slince\Shopify\Model\Customer\CustomerSavedSearch;
+use Slince\Shopify\Model\Customers\CustomerSavedSearch;
 use Slince\Shopify\Service\Common\GeneralCurdManager;
 
 class CustomerSavedSearchManager extends GeneralCurdManager implements CustomerSavedSearchManagerInterface

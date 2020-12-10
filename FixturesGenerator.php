@@ -3,7 +3,7 @@
 include_once __DIR__ . '/vendor/autoload.php';
 
 $tools = new FixturesGenerator();
-$tools->generateClientFakeMethods();
+$tools->generateModelMapping();
 
 final class FixturesGenerator
 {
@@ -122,5 +122,35 @@ EOT;
             $msg .= "* @method {$interfaceClass} get{$upperId}Manager" . PHP_EOL;
         }
         file_put_contents(__DIR__ . '/magic_methods.txt', $msg);
+    }
+
+
+    public function generateModelMapping()
+    {
+        foreach ($this->getClasses(__DIR__ . '/src/Model') as $file) {
+            if ($file->isDir()) {
+                continue;
+            }
+            $targetPath = strstr($file->getPathname(), 'src');
+            $baseClass = str_replace('.php', '', basename($targetPath));
+            $filename = str_replace('.php', 'Test.php', $targetPath);
+            $filename = ltrim($filename, 'src/');
+//            print_r($filename);
+            $namespace = dirname($filename);
+            $class = str_replace('Test.php','', $filename);
+            $fullClass = "Slince\Shopify\\{$class}";
+            $this->getClassMetadata($fullClass);
+//            exit;
+        }
+    }
+
+    protected function getClassMetadata($class)
+    {
+        $ref = new \ReflectionClass($class);
+        $metadata = [];
+        foreach ($ref->getProperties() as $reflectionProperty) {
+            $doc = $reflectionProperty->getDocComment();
+            echo($doc);
+        }
     }
 }

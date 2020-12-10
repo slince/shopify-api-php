@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Service\Orders;
 
-use Slince\Shopify\Model\Order\Refund;
+use Slince\Shopify\Model\Orders\Refund;
 
 interface RefundManagerInterface
 {

@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Service\Customers;
 
-use Slince\Shopify\Model\Customer\Address;
+use Slince\Shopify\Model\Customers\Address;
 
 interface AddressManagerInterface
 {

@@ -13,9 +13,9 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Service\Customers;
 
-use Slince\Shopify\Model\Customer\Customer;
-use Slince\Shopify\Model\Customer\CustomerInvite;
-use Slince\Shopify\Model\Order\Order;
+use Slince\Shopify\Model\Customers\Customer;
+use Slince\Shopify\Model\Customers\CustomerInvite;
+use Slince\Shopify\Model\Orders\Order;
 use Slince\Shopify\Service\Common\GeneralCurdManager;
 
 class CustomerManager extends GeneralCurdManager implements CustomerManagerInterface
