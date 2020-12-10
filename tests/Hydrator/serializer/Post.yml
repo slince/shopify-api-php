@@ -1,0 +1,12 @@
+Post:
+  properties:
+    title:
+      type: string
+    body:
+      type: string
+    comments:
+      type: array<Comment>
+    category:
+      type: Category
+    createdAt:
+      type: DateTime<'Y-m-d\TH:i:sO'>

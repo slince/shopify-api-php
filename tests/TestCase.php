@@ -2,6 +2,7 @@
 
 namespace Slince\Shopify\Tests;
 
+use GuzzleHttp\Utils;
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\Psr7\Stream;
 use PHPUnit\Framework\TestCase as BaseTestCase;
@@ -45,13 +46,13 @@ class TestCase extends BaseTestCase
         $fixture = static::FIXTURES_DIR.'/'.$fixture;
         $mock = $this->getMockBuilder(Client::class)
             ->setConstructorArgs([
-                new PublicAppCredential(static::ACCESS_TOKEN),
                 static::SHOP_NAME,
+                new PublicAppCredential(static::ACCESS_TOKEN),
                 [
                     'metaCacheDir' => __DIR__ . '/tmp'
                 ]
             ])
-            ->setMethods(['sendRequest'])
+            ->onlyMethods(['sendRequest'])
             ->getMock();
 
         $mock->method('sendRequest')
@@ -63,6 +64,6 @@ class TestCase extends BaseTestCase
     protected function readFixture($fixture)
     {
         $fixture = static::FIXTURES_DIR.'/'.$fixture;
-        return \GuzzleHttp\json_decode(file_get_contents($fixture), true);
+        return Utils::jsonDecode(file_get_contents($fixture), true);
     }
 }

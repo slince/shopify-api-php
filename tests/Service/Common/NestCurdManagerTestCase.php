@@ -4,19 +4,9 @@ namespace Slince\Shopify\Tests\Service\Common;
 
 use GuzzleHttp\Utils;
 use Slince\Shopify\Service\Common\NestCrudManager;
-use Slince\Shopify\Tests\TestCase;
 
-abstract class NestCurdManagerTestCase extends TestCase
+abstract class NestCurdManagerTestCase extends AbstractManagerTestCase
 {
-    protected function getServiceClass()
-    {
-        return str_ireplace(['Tests', 'Test'], ['', ''], get_called_class());
-    }
-
-    protected function getFixturesDir()
-    {
-        return str_ireplace(['Slince\Shopify\Tests\Service'], [''], $this->getServiceClass());
-    }
 
     /**
      * @param string $fixture

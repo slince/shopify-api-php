@@ -16,19 +16,19 @@ class ClientTest extends TestCase
 {
     public function testShop()
     {
-        $client = new Client(new PublicAppCredential('foobarbazfoobarbaz'), 'bar.myshopify.com', [
+        $client = new Client('bar.myshopify.com', new PublicAppCredential('foobarbazfoobarbaz'), [
             'metaCacheDir' => __DIR__ . '/tmp'
         ]);
         $this->assertEquals('bar.myshopify.com', $client->getShop());
         try{
-            new Client(new PublicAppCredential('foobarbazfoobarbaz'),  'ab');
+            new Client('ab', new PublicAppCredential('foobarbazfoobarbaz'));
             $this->fail();
         } catch (\Exception $exception) {
             $this->assertInstanceOf(InvalidArgumentException::class, $exception);
         }
 
         try{
-            $client = new Client(new PublicAppCredential('foobarbazfoobarbaz'),  'bar');
+            $client = new Client('bar', new PublicAppCredential('foobarbazfoobarbaz'));
             $client->setShop(str_repeat('abc', 100).'.myshopify.com');
             $this->fail();
         } catch (\Exception $exception) {
@@ -38,7 +38,7 @@ class ClientTest extends TestCase
 
     public function testGet()
     {
-        $client = $this->getClientMock('Product/view.json');
+        $client = $this->getClientMock('Products/Product/view.json');
         $json = $client->get('products/1');
         $this->assertNotEmpty($json);
         $this->assertNotEmpty($json['product']);
@@ -46,8 +46,8 @@ class ClientTest extends TestCase
 
     public function testPost()
     {
-        $data = Utils::jsonDecode(file_get_contents(static::FIXTURES_DIR.'/Product/view.json'), true);
-        $client = $this->getClientMock('Product/view.json');
+        $data = $this->readFixture('Products/Product/view.json');
+        $client = $this->getClientMock('Products/Product/view.json');
         $json = $client->post('products', $data);
         $this->assertNotEmpty($json);
         $this->assertNotEmpty($json['product']);
@@ -56,8 +56,8 @@ class ClientTest extends TestCase
 
     public function testPut()
     {
-        $data = Utils::jsonDecode(file_get_contents(static::FIXTURES_DIR.'/Product/view.json'), true);
-        $client = $this->getClientMock('Product/view.json');
+        $data = $this->readFixture('Products/Product/view.json');
+        $client = $this->getClientMock('Products/Product/view.json');
         $json = $client->put('products', $data);
         $this->assertNotEmpty($json);
     }
@@ -67,7 +67,7 @@ class ClientTest extends TestCase
      */
     public function testDelete()
     {
-        $client = $this->getClientMock('Product/delete.json');
+        $client = $this->getClientMock('Products/Product/delete.json');
         $client->delete('products/1');
     }
 
@@ -76,14 +76,14 @@ class ClientTest extends TestCase
      */
     public function testDeleteNoContent()
     {
-        $client = $this->getClientMock('PriceRule/delete.json');
+        $client = $this->getClientMock('Discounts/PriceRule/delete.json');
         $client->delete('price_rules/1');
     }
 
     public function testCredential()
     {
         $credential = new PublicAppCredential('foobarbazfoobarbaz');
-        $client = new Client($credential, 'bar.myshopify.com', [
+        $client = new Client('bar.myshopify.com', $credential, [
             'metaCacheDir' => __DIR__ . '/tmp'
         ]);
         $this->assertEquals($credential, $client->getCredential());
@@ -92,7 +92,7 @@ class ClientTest extends TestCase
     public function testGetManager()
     {
         $credential = new PublicAppCredential('foobarbazfoobarbaz');
-        $client = new Client($credential, 'bar.myshopify.com', [
+        $client = new Client('bar.myshopify.com', $credential, [
             'metaCacheDir' => __DIR__ . '/tmp'
         ]);
 
@@ -107,12 +107,12 @@ class ClientTest extends TestCase
     public function testAddMetaDir()
     {
         $credential = new PublicAppCredential('foobarbazfoobarbaz');
-        $client = new Client($credential, 'bar.myshopify.com', [
+        $client = new Client('bar.myshopify.com', $credential, [
             'metaCacheDir' => __DIR__ . '/tmp'
         ]);
         $client->addMetaDir('', __DIR__ . '/Hydrator/serializer');
         $hydrator = $client->getHydrator();
-        $post = $hydrator->hydrate(\Post::class, [
+        $post = $hydrator->hydrate([
             'title' => 'this is a post title',
             'body' => 'this is a post body',
             'category' => [
@@ -127,7 +127,7 @@ class ClientTest extends TestCase
                 ],
             ],
             'created_at' => '2018-01-30T09:42:13+0000',
-        ]);
+        ], \Post::class);
         $this->assertInstanceOf(\Post::class, $post);
 
         $this->expectException(RuntimeException::class);
@@ -137,7 +137,7 @@ class ClientTest extends TestCase
     public function testCustomService()
     {
         $credential = new PublicAppCredential('foobarbazfoobarbaz');
-        $client = new Client($credential, 'bar.myshopify.com', [
+        $client = new Client('bar.myshopify.com', $credential, [
             'metaCacheDir' => __DIR__ . '/tmp'
         ]);
         $client->addServiceClass(FooPostManager::class);
@@ -150,30 +150,30 @@ class ClientTest extends TestCase
     {
         $credential = new PublicAppCredential('foobarbazfoobarbaz');
         try {
-            new Client($credential, 'bar.myshopify.com', [
+            new Client('bar.myshopify.com', $credential, [
                 'metaCacheDir' => __DIR__ . '/tmp',
                 'apiVersion' => '201809'
             ]);
-            new Client($credential, 'bar.myshopify.com', [
+            new Client('bar.myshopify.com', $credential, [
                 'metaCacheDir' => __DIR__ . '/tmp',
                 'apiVersion' => '2018-092'
             ]);
-            new Client($credential, 'bar.myshopify.com', [
+            new Client('bar.myshopify.com', $credential, [
                 'metaCacheDir' => __DIR__ . '/tmp',
                 'apiVersion' => 'unstableas'
             ]);
-            new Client($credential, 'bar.myshopify.com', [
+            new Client('bar.myshopify.com', $credential, [
                 'metaCacheDir' => __DIR__ . '/tmp',
                 'apiVersion' => 'prefixunstable'
             ]);
             $this->fail('fail to check version');
         } catch (InvalidArgumentException $exception) {
         }
-        new Client($credential, 'bar.myshopify.com', [
+        new Client('bar.myshopify.com', $credential, [
             'metaCacheDir' => __DIR__ . '/tmp',
             'apiVersion' => 'unstable'
         ]);
-        new Client($credential, 'bar.myshopify.com', [
+        new Client('bar.myshopify.com', $credential, [
             'metaCacheDir' => __DIR__ . '/tmp',
             'apiVersion' => '2019-10'
         ]);
@@ -185,7 +185,7 @@ class ClientTest extends TestCase
             ->setConstructorArgs([
                 ['verify' => true]
             ])
-            ->setMethods(['send'])
+            ->onlyMethods(['send'])
             ->getMock();
 
         $httpClientMock->method('send')
@@ -198,7 +198,7 @@ class ClientTest extends TestCase
             );
 
         $credential = new PublicAppCredential('foobarbazfoobarbaz');
-        $client = new Client($credential, 'bar.myshopify.com', [
+        $client = new Client('bar.myshopify.com', $credential, [
             'metaCacheDir' => __DIR__ . '/tmp',
             'httpClient' => $httpClientMock,
         ]);

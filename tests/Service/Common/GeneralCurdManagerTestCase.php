@@ -6,17 +6,8 @@ use GuzzleHttp\Utils;
 use Slince\Shopify\Service\Common\GeneralCurdManager;
 use Slince\Shopify\Tests\TestCase;
 
-abstract class GeneralCurdManagerTestCase extends TestCase
+class GeneralCurdManagerTestCase extends AbstractManagerTestCase
 {
-    protected function getServiceClass()
-    {
-        return str_ireplace(['Tests', 'Test'], ['', ''], get_called_class());
-    }
-
-    protected function getFixturesDir()
-    {
-        return str_ireplace(['Slince\Shopify\Tests\Service'], [''], $this->getServiceClass());
-    }
 
     /**
      * @param string $fixture
@@ -26,7 +17,6 @@ abstract class GeneralCurdManagerTestCase extends TestCase
     public function getService($fixture)
     {
         $class = $this->getServiceClass();
-
         return new $class($this->getClientMock($fixture));
     }
 
