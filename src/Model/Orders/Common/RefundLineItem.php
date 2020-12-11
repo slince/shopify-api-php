@@ -69,7 +69,7 @@ class RefundLineItem
     /**
      * @return int
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -85,7 +85,7 @@ class RefundLineItem
     /**
      * @return int
      */
-    public function getQuantity(): int
+    public function getQuantity(): ?int
     {
         return $this->quantity;
     }
@@ -101,7 +101,7 @@ class RefundLineItem
     /**
      * @return int
      */
-    public function getLineItemId(): int
+    public function getLineItemId(): ?int
     {
         return $this->lineItemId;
     }
@@ -117,7 +117,7 @@ class RefundLineItem
     /**
      * @return int
      */
-    public function getLocationId(): int
+    public function getLocationId(): ?int
     {
         return $this->locationId;
     }

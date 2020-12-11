@@ -74,7 +74,7 @@ class Page
     /**
      * @return int
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -106,7 +106,7 @@ class Page
     /**
      * @return int
      */
-    public function getShopId(): int
+    public function getShopId(): ?int
     {
         return $this->shopId;
     }

@@ -75,7 +75,7 @@ class Metafield
     /**
      * @return int
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -171,7 +171,7 @@ class Metafield
     /**
      * @return int
      */
-    public function getOwnerId(): int
+    public function getOwnerId(): ?int
     {
         return $this->ownerId;
     }

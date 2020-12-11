@@ -85,7 +85,7 @@ class Comment
     /**
      * @return int
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -181,7 +181,7 @@ class Comment
     /**
      * @return int
      */
-    public function getArticleId(): int
+    public function getArticleId(): ?int
     {
         return $this->articleId;
     }
@@ -197,7 +197,7 @@ class Comment
     /**
      * @return int
      */
-    public function getBlogId(): int
+    public function getBlogId(): ?int
     {
         return $this->blogId;
     }

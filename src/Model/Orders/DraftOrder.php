@@ -161,7 +161,7 @@ class DraftOrder
     /**
      * @return int
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -433,7 +433,7 @@ class DraftOrder
     /**
      * @return int
      */
-    public function getOrderId(): int
+    public function getOrderId(): ?int
     {
         return $this->orderId;
     }

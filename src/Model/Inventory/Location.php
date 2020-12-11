@@ -116,7 +116,7 @@ class Location
     /**
      * @return int
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -244,7 +244,7 @@ class Location
     /**
      * @return int
      */
-    public function getPhone(): int
+    public function getPhone(): ?int
     {
         return $this->phone;
     }

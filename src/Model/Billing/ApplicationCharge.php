@@ -48,7 +48,7 @@ class ApplicationCharge
     protected $returnUrl;
 
     /**
-     * @var true|null
+     * @var bool
      */
     protected $test;
 
@@ -80,7 +80,7 @@ class ApplicationCharge
     /**
      * @return int
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -112,7 +112,7 @@ class ApplicationCharge
     /**
      * @return int
      */
-    public function getApiClientId(): int
+    public function getApiClientId(): ?int
     {
         return $this->apiClientId;
     }
@@ -174,7 +174,7 @@ class ApplicationCharge
     }
 
     /**
-     * @return true|null
+     * @return boolean
      */
     public function getTest(): ?bool
     {
@@ -182,9 +182,9 @@ class ApplicationCharge
     }
 
     /**
-     * @param true|null $test
+     * @param bool $test
      */
-    public function setTest(?bool $test): void
+    public function setTest(bool $test): void
     {
         $this->test = $test;
     }

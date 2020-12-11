@@ -83,7 +83,7 @@ class FulfillmentOrder
     /**
      * @return int
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -99,7 +99,7 @@ class FulfillmentOrder
     /**
      * @return int
      */
-    public function getShopId(): int
+    public function getShopId(): ?int
     {
         return $this->shopId;
     }
@@ -115,7 +115,7 @@ class FulfillmentOrder
     /**
      * @return int
      */
-    public function getOrderId(): int
+    public function getOrderId(): ?int
     {
         return $this->orderId;
     }
@@ -131,7 +131,7 @@ class FulfillmentOrder
     /**
      * @return int
      */
-    public function getAssignedLocationId(): int
+    public function getAssignedLocationId(): ?int
     {
         return $this->assignedLocationId;
     }

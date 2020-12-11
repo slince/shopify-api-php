@@ -90,7 +90,7 @@ class Article
     /**
      * @return int
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -154,7 +154,7 @@ class Article
     /**
      * @return int
      */
-    public function getBlogId(): int
+    public function getBlogId(): ?int
     {
         return $this->blogId;
     }
@@ -186,7 +186,7 @@ class Article
     /**
      * @return int
      */
-    public function getUserId(): int
+    public function getUserId(): ?int
     {
         return $this->userId;
     }

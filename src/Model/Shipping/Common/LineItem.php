@@ -54,7 +54,7 @@ class LineItem
     /**
      * @return int
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -70,7 +70,7 @@ class LineItem
     /**
      * @return int
      */
-    public function getShopId(): int
+    public function getShopId(): ?int
     {
         return $this->shopId;
     }
@@ -86,7 +86,7 @@ class LineItem
     /**
      * @return int
      */
-    public function getFulfillmentOrderId(): int
+    public function getFulfillmentOrderId(): ?int
     {
         return $this->fulfillmentOrderId;
     }
@@ -102,7 +102,7 @@ class LineItem
     /**
      * @return int
      */
-    public function getQuantity(): int
+    public function getQuantity(): ?int
     {
         return $this->quantity;
     }
@@ -118,7 +118,7 @@ class LineItem
     /**
      * @return int
      */
-    public function getLineItemId(): int
+    public function getLineItemId(): ?int
     {
         return $this->lineItemId;
     }
@@ -134,7 +134,7 @@ class LineItem
     /**
      * @return int
      */
-    public function getFulfillableQuantity(): int
+    public function getFulfillableQuantity(): ?int
     {
         return $this->fulfillableQuantity;
     }
@@ -150,7 +150,7 @@ class LineItem
     /**
      * @return int
      */
-    public function getVariantId(): int
+    public function getVariantId(): ?int
     {
         return $this->variantId;
     }

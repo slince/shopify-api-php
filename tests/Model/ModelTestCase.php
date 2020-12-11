@@ -23,64 +23,16 @@ abstract class ModelTestCase extends TestCase
      */
     abstract public function getModelClass();
 
-    protected function getModelMetadata()
-    {
-        $reflection = new \ReflectionClass($this->getModelClass());
-        $properties = $reflection->getProperties(\ReflectionProperty::IS_PUBLIC | \ReflectionProperty::IS_PROTECTED);
-        $properties = array_map(function(\ReflectionProperty $property){
-            return $property->getName();
-        }, $properties);
-        $methods = $reflection->getMethods(\ReflectionProperty::IS_PUBLIC);
-        $setter = $getter = [];
-        foreach ($methods as $method) {
-            if (0 === strpos($method, 'set')) {
-                $setter[] = $method;
-            } elseif (0 === strpos($method, 'get')) {
-                $getter[] = $method;
-            }
-        }
-
-        return [$properties, $setter, $getter];
-    }
-
-    /**
-     * @param boolean $fulfillment
-     *
-     * @return object
-     */
-    protected function mockModel($fulfillment = true)
-    {
-        $model = $this->getMockBuilder($this->getModelClass())
-            ->getMockForAbstractClass();
-
-        if ($fulfillment) {
-            list($properties, $setter, $getter) = $this->getModelMetadata();
-            foreach ($properties as $property) {
-                $this->accessor->setValue($model, $property, 'test'.$property);
-            }
-        }
-
-        return $model;
-    }
-
     public function testId()
     {
         $modelClass = $this->getModelClass();
         if (!property_exists($modelClass, 'id')) {
             $this->markTestSkipped(sprintf('The model "%s" dont have id', $modelClass));
         }
-        $model = $this->mockModel(false);
+        $model = $this->getMockBuilder($this->getModelClass())
+            ->getMockForAbstractClass();
         $this->assertNull($model->getId());
         $model->setId(10);
         $this->assertEquals(10, $model->getId());
-    }
-
-    public function testPropertyAccess()
-    {
-        $model = $this->mockModel();
-        list($properties) = $this->getModelMetadata();
-        foreach ($properties as $property) {
-            $this->assertEquals('test'.$property, $this->accessor->getValue($model, $property));
-        }
     }
 }

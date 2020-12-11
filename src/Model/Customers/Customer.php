@@ -145,7 +145,7 @@ class Customer
     /**
      * @return int
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -257,7 +257,7 @@ class Customer
     /**
      * @return int
      */
-    public function getOrdersCount(): int
+    public function getOrdersCount(): ?int
     {
         return $this->ordersCount;
     }
@@ -305,7 +305,7 @@ class Customer
     /**
      * @return int
      */
-    public function getLastOrderId(): int
+    public function getLastOrderId(): ?int
     {
         return $this->lastOrderId;
     }

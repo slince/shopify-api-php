@@ -17,7 +17,7 @@ namespace Slince\Shopify\Model\Shipping\Common;
 class Destination
 {
     /**
-     * @var string
+     * @var int
      */
     protected $id;
 
@@ -85,9 +85,9 @@ class Destination
     }
 
     /**
-     * @param string $id
+     * @param int $id
      */
-    public function setId(string $id): void
+    public function setId(int $id): void
     {
         $this->id = $id;
     }

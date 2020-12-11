@@ -74,7 +74,7 @@ class Event
     /**
      * @return int
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -90,7 +90,7 @@ class Event
     /**
      * @return int
      */
-    public function getSubjectId(): int
+    public function getSubjectId(): ?int
     {
         return $this->subjectId;
     }

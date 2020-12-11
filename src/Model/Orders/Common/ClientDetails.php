@@ -111,7 +111,7 @@ class ClientDetails
     /**
      * @return int
      */
-    public function getBrowserWidth(): int
+    public function getBrowserWidth(): ?int
     {
         return $this->browserWidth;
     }
@@ -127,7 +127,7 @@ class ClientDetails
     /**
      * @return int
      */
-    public function getBrowserHeight(): int
+    public function getBrowserHeight(): ?int
     {
         return $this->browserHeight;
     }

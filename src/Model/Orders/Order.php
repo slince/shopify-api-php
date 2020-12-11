@@ -406,7 +406,7 @@ class Order
     /**
      * @return int
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -486,7 +486,7 @@ class Order
     /**
      * @return int
      */
-    public function getNumber(): int
+    public function getNumber(): ?int
     {
         return $this->number;
     }
@@ -598,7 +598,7 @@ class Order
     /**
      * @return int
      */
-    public function getTotalWeight(): int
+    public function getTotalWeight(): ?int
     {
         return $this->totalWeight;
     }
@@ -886,7 +886,7 @@ class Order
     /**
      * @return int
      */
-    public function getUserId(): int
+    public function getUserId(): ?int
     {
         return $this->userId;
     }
@@ -902,7 +902,7 @@ class Order
     /**
      * @return int
      */
-    public function getLocationId(): int
+    public function getLocationId(): ?int
     {
         return $this->locationId;
     }
@@ -1062,7 +1062,7 @@ class Order
     /**
      * @return int
      */
-    public function getOrderNumber(): int
+    public function getOrderNumber(): ?int
     {
         return $this->orderNumber;
     }
@@ -1158,7 +1158,7 @@ class Order
     /**
      * @return int
      */
-    public function getCheckoutId(): int
+    public function getCheckoutId(): ?int
     {
         return $this->checkoutId;
     }

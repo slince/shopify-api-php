@@ -67,7 +67,7 @@ class Risk
     /**
      * @return int
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -83,7 +83,7 @@ class Risk
     /**
      * @return int
      */
-    public function getOrderId(): int
+    public function getOrderId(): ?int
     {
         return $this->orderId;
     }
@@ -99,7 +99,7 @@ class Risk
     /**
      * @return int
      */
-    public function getCheckoutId(): int
+    public function getCheckoutId(): ?int
     {
         return $this->checkoutId;
     }

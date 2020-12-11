@@ -28,7 +28,7 @@ class RefundDuty
     /**
      * @return int
      */
-    public function getDutyId(): int
+    public function getDutyId(): ?int
     {
         return $this->dutyId;
     }

@@ -170,7 +170,7 @@ class PriceRule
     /**
      * @return int
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -282,7 +282,7 @@ class PriceRule
     /**
      * @return int
      */
-    public function getAllocationLimit(): int
+    public function getAllocationLimit(): ?int
     {
         return $this->allocationLimit;
     }
@@ -314,7 +314,7 @@ class PriceRule
     /**
      * @return int
      */
-    public function getUsageLimit(): int
+    public function getUsageLimit(): ?int
     {
         return $this->usageLimit;
     }

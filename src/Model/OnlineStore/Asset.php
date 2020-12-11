@@ -160,7 +160,7 @@ class Asset
     /**
      * @return int
      */
-    public function getSize(): int
+    public function getSize(): ?int
     {
         return $this->size;
     }
@@ -192,7 +192,7 @@ class Asset
     /**
      * @return int
      */
-    public function getThemeId(): int
+    public function getThemeId(): ?int
     {
         return $this->themeId;
     }

@@ -57,7 +57,7 @@ class OrderAdjustment
     /**
      * @return int
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -73,7 +73,7 @@ class OrderAdjustment
     /**
      * @return int
      */
-    public function getOrderId(): int
+    public function getOrderId(): ?int
     {
         return $this->orderId;
     }
@@ -89,7 +89,7 @@ class OrderAdjustment
     /**
      * @return int
      */
-    public function getRefundId(): int
+    public function getRefundId(): ?int
     {
         return $this->refundId;
     }

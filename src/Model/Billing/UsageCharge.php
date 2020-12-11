@@ -60,7 +60,7 @@ class UsageCharge
     /**
      * @return int
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -172,7 +172,7 @@ class UsageCharge
     /**
      * @return int
      */
-    public function getRiskLevel(): int
+    public function getRiskLevel(): ?int
     {
         return $this->riskLevel;
     }

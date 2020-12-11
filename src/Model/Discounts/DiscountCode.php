@@ -50,7 +50,7 @@ class DiscountCode
     /**
      * @return int
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -66,7 +66,7 @@ class DiscountCode
     /**
      * @return int
      */
-    public function getPriceRuleId(): int
+    public function getPriceRuleId(): ?int
     {
         return $this->priceRuleId;
     }
@@ -98,7 +98,7 @@ class DiscountCode
     /**
      * @return int
      */
-    public function getUsageCount(): int
+    public function getUsageCount(): ?int
     {
         return $this->usageCount;
     }

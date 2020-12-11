@@ -80,7 +80,7 @@ class InventoryItem
     /**
      * @return int
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -208,7 +208,7 @@ class InventoryItem
     /**
      * @return int
      */
-    public function getHarmonizedSystemCode(): int
+    public function getHarmonizedSystemCode(): ?int
     {
         return $this->harmonizedSystemCode;
     }

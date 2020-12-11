@@ -236,7 +236,7 @@ class Checkout
     /**
      * @return int
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -460,7 +460,7 @@ class Checkout
     /**
      * @return int
      */
-    public function getTotalWeight(): int
+    public function getTotalWeight(): ?int
     {
         return $this->totalWeight;
     }
@@ -524,7 +524,7 @@ class Checkout
     /**
      * @return int
      */
-    public function getUserId(): int
+    public function getUserId(): ?int
     {
         return $this->userId;
     }
@@ -540,7 +540,7 @@ class Checkout
     /**
      * @return int
      */
-    public function getLocationId(): int
+    public function getLocationId(): ?int
     {
         return $this->locationId;
     }

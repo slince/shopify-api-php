@@ -110,7 +110,7 @@ class FulfillmentEvent
     /**
      * @return int
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -126,7 +126,7 @@ class FulfillmentEvent
     /**
      * @return int
      */
-    public function getFulfillmentId(): int
+    public function getFulfillmentId(): ?int
     {
         return $this->fulfillmentId;
     }
@@ -302,7 +302,7 @@ class FulfillmentEvent
     /**
      * @return int
      */
-    public function getShopId(): int
+    public function getShopId(): ?int
     {
         return $this->shopId;
     }
@@ -366,7 +366,7 @@ class FulfillmentEvent
     /**
      * @return int
      */
-    public function getOrderId(): int
+    public function getOrderId(): ?int
     {
         return $this->orderId;
     }

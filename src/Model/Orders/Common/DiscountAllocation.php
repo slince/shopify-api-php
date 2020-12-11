@@ -51,7 +51,7 @@ class DiscountAllocation
     /**
      * @return int
      */
-    public function getDiscountApplicationIndex(): int
+    public function getDiscountApplicationIndex(): ?int
     {
         return $this->discountApplicationIndex;
     }

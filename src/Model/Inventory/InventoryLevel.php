@@ -45,7 +45,7 @@ class InventoryLevel
     /**
      * @return int
      */
-    public function getInventoryItemId(): int
+    public function getInventoryItemId(): ?int
     {
         return $this->inventoryItemId;
     }
@@ -61,7 +61,7 @@ class InventoryLevel
     /**
      * @return int
      */
-    public function getLocationId(): int
+    public function getLocationId(): ?int
     {
         return $this->locationId;
     }
@@ -77,7 +77,7 @@ class InventoryLevel
     /**
      * @return int
      */
-    public function getAvailable(): int
+    public function getAvailable(): ?int
     {
         return $this->available;
     }

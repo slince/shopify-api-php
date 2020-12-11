@@ -18,7 +18,7 @@ use \DateTimeInterface;
 class Theme
 {
     /**
-     * @var string
+     * @var int
      */
     protected $id;
 
@@ -71,9 +71,9 @@ class Theme
     }
 
     /**
-     * @param string $id
+     * @param int $id
      */
-    public function setId(string $id): void
+    public function setId(int $id): void
     {
         $this->id = $id;
     }
@@ -145,7 +145,7 @@ class Theme
     /**
      * @return int
      */
-    public function getThemeStoreId(): int
+    public function getThemeStoreId(): ?int
     {
         return $this->themeStoreId;
     }

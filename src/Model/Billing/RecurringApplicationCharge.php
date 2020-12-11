@@ -126,7 +126,7 @@ class RecurringApplicationCharge
     /**
      * @return int
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -158,7 +158,7 @@ class RecurringApplicationCharge
     /**
      * @return int
      */
-    public function getApiClientId(): int
+    public function getApiClientId(): ?int
     {
         return $this->apiClientId;
     }
@@ -334,7 +334,7 @@ class RecurringApplicationCharge
     /**
      * @return int
      */
-    public function getTrialDays(): int
+    public function getTrialDays(): ?int
     {
         return $this->trialDays;
     }
@@ -350,7 +350,7 @@ class RecurringApplicationCharge
     /**
      * @return int
      */
-    public function getCappedAmount(): int
+    public function getCappedAmount(): ?int
     {
         return $this->cappedAmount;
     }
@@ -414,7 +414,7 @@ class RecurringApplicationCharge
     /**
      * @return int
      */
-    public function getRiskLevel(): int
+    public function getRiskLevel(): ?int
     {
         return $this->riskLevel;
     }
