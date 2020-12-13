@@ -98,12 +98,9 @@ class ClientTest extends TestCase
         ]);
 
         foreach ($client->serviceClass as $serviceClass) {
-            $partials = explode('\\', $serviceClass);
             $id = $serviceClass::getServiceName();
-
-
-            $manager = call_user_func([$client, 'get' .  Inflector::classify(Inflector::singularize($id)) . 'Manager']);
-
+            $method = 'get' .  Inflector::classify(Inflector::singularize($id)) . 'Manager';
+            $manager = $client->$method();
             $this->assertInstanceOf($serviceClass, $manager);
         }
     }

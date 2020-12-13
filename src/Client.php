@@ -186,7 +186,9 @@ class Client
     /**
      * @var array
      */
-    protected $metaDirs = [];
+    protected $metaDirs = [
+        'Slince\\Shopify\\Model\\' => __DIR__.'/../config/serializer'
+    ];
 
     /**
      * @var string
@@ -216,9 +218,9 @@ class Client
     public function __call($name, $arguments)
     {
         if ('Manager' === substr($name, -7)) {
-            $serviceName = substr($name, 3, -7);
-
-            return $this->container->get(Inflector::tableize(Inflector::pluralize($serviceName)));
+            $serviceId = substr($name, 3, -7);
+            $serviceId = Inflector::tableize(Inflector::pluralize($serviceId));
+            return $this->container->get($serviceId);
         }
         throw new \InvalidArgumentException(sprintf('The method "%s" is not exists', $name));
     }
