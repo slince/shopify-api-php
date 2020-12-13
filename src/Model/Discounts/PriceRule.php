@@ -88,47 +88,47 @@ class PriceRule
     protected $updatedAt;
 
     /**
-     * @var array<>
+     * @var array<int>
      */
     protected $entitledProductIds;
 
     /**
-     * @var array<>
+     * @var array<int>
      */
     protected $entitledVariantIds;
 
     /**
-     * @var array<>
+     * @var array<int>
      */
     protected $entitledCollectionIds;
 
     /**
-     * @var array<>
+     * @var array<int>
      */
     protected $entitledCountryIds;
 
     /**
-     * @var array<>
+     * @var array<int>
      */
     protected $prerequisiteProductIds;
 
     /**
-     * @var array<>
+     * @var array<int>
      */
     protected $prerequisiteVariantIds;
 
     /**
-     * @var array<>
+     * @var array<int>
      */
     protected $prerequisiteCollectionIds;
 
     /**
-     * @var array<>
+     * @var array<int>
      */
     protected $prerequisiteSavedSearchIds;
 
     /**
-     * @var array<>
+     * @var array<int>
      */
     protected $prerequisiteCustomerIds;
 
