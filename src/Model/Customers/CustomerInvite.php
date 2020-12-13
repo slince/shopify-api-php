@@ -37,7 +37,7 @@ class CustomerInvite
     protected $subject;
 
     /**
-     * @var array<>
+     * @var array<string>
      */
     protected $bcc;
 

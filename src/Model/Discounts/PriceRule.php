@@ -133,27 +133,27 @@ class PriceRule
     protected $prerequisiteCustomerIds;
 
     /**
-     * @var array<>
+     * @var array
      */
     protected $prerequisiteSubtotalRange;
 
     /**
-     * @var array<>
+     * @var array
      */
     protected $prerequisiteQuantityRange;
 
     /**
-     * @var array<>
+     * @var array
      */
     protected $prerequisiteShippingPriceRange;
 
     /**
-     * @var array<>
+     * @var array
      */
     protected $prerequisiteToEntitlementQuantityRatio;
 
     /**
-     * @var array<>
+     * @var array
      */
     protected $prerequisiteToEntitlementPurchase;
 

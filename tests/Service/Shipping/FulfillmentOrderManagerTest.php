@@ -10,4 +10,14 @@ class FulfillmentOrderManagerTest extends GeneralCurdManagerTestCase
     {
         $this->markTestSkipped('Yet not support.');
     }
+
+    public function testCreate()
+    {
+        $this->markTestSkipped('Yet not support.');
+    }
+
+    public function testUpdate()
+    {
+        $this->markTestSkipped('Yet not support.');
+    }
 }

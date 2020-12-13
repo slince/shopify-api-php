@@ -254,7 +254,7 @@ class Order
     protected $noteAttributes;
 
     /**
-     * @var array<>
+     * @var array<string>
      */
     protected $paymentGatewayNames;
 

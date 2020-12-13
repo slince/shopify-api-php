@@ -13,6 +13,10 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Model\Store;
 
+use Slince\Shopify\Model\Store\Common\CarrierShippingRateProvider;
+use Slince\Shopify\Model\Store\Common\PriceBasedShippingRate;
+use Slince\Shopify\Model\Store\Common\WeightBasedShippingRate;
+
 class ShippingZone
 {
     /**
@@ -31,17 +35,17 @@ class ShippingZone
     protected $provinces;
 
     /**
-     * @var array<>
+     * @var CarrierShippingRateProvider[]
      */
     protected $carrierShippingRateProviders;
 
     /**
-     * @var array<>
+     * @var PriceBasedShippingRate
      */
     protected $priceBasedShippingRates;
 
     /**
-     * @var array<>
+     * @var WeightBasedShippingRate
      */
     protected $weightBasedShippingRates;
 
@@ -56,7 +60,6 @@ class ShippingZone
     /**
      * @param string $name
      *
-
      */
     public function setName($name)
     {

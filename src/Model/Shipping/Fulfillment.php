@@ -74,7 +74,7 @@ class Fulfillment
     protected $trackingNumber;
 
     /**
-     * @var array<>
+     * @var array<string>
      */
     protected $trackingNumbers;
 
@@ -84,12 +84,12 @@ class Fulfillment
     protected $trackingUrl;
 
     /**
-     * @var array<>
+     * @var array<string>
      */
     protected $trackingUrls;
 
     /**
-     * @var array<>
+     * @var array
      */
     protected $receipt;
 
