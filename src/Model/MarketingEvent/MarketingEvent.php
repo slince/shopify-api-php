@@ -14,6 +14,7 @@ declare(strict_types=1);
 namespace Slince\Shopify\Model\MarketingEvent;
 
 use \DateTimeInterface;
+use Slince\Shopify\Model\MarketingEvent\Common\MarketedResource;
 
 class MarketingEvent
 {
@@ -123,7 +124,7 @@ class MarketingEvent
     protected $adminGraphqlApiId;
 
     /**
-     * @var array<>
+     * @var MarketedResource[]
      */
     protected $marketedResources;
 

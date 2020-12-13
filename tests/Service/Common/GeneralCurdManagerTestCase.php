@@ -26,8 +26,6 @@ class GeneralCurdManagerTestCase extends AbstractManagerTestCase
         $service = $this->getService($fixture);
         $entities = $service->findAll([]);
         $this->assertInstanceOf($service->getModelClass(), $entities[0]);
-
-        $rawArray = $this->readFixture($fixture);
     }
 
     public function testFind()

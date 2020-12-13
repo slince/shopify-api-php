@@ -48,12 +48,12 @@ class Webhook
     protected $format;
 
     /**
-     * @var array<>
+     * @var array<string>
      */
     protected $fields;
 
     /**
-     * @var array<>
+     * @var array<string>
      */
     protected $metafieldNamespaces;
 
@@ -63,7 +63,7 @@ class Webhook
     protected $apiVersion;
 
     /**
-     * @var array<>
+     * @var array<string>
      */
     protected $privateMetafieldNamespaces;
 

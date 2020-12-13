@@ -14,6 +14,7 @@ declare(strict_types=1);
 namespace Slince\Shopify\Model\Inventory;
 
 use \DateTimeInterface;
+use Slince\Shopify\Model\Inventory\Common\CountryHarmonizedSystemCode;
 
 class InventoryItem
 {
@@ -68,7 +69,7 @@ class InventoryItem
     protected $tracked;
 
     /**
-     * @var array<>
+     * @var CountryHarmonizedSystemCode[]
      */
     protected $countryHarmonizedSystemCodes;
 
