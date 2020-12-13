@@ -14,6 +14,7 @@ declare(strict_types=1);
 namespace Slince\Shopify\Model\Products;
 
 use \DateTimeInterface;
+use Slince\Shopify\Model\Products\Common\Rule;
 
 class SmartCollection
 {
@@ -63,7 +64,7 @@ class SmartCollection
     protected $disjunctive;
 
     /**
-     * @var array<>
+     * @var Rule[]
      */
     protected $rules;
 
@@ -243,7 +244,7 @@ class SmartCollection
     }
 
     /**
-     * @return array
+     * @return Rule[]
      */
     public function getRules()
     {
@@ -251,9 +252,9 @@ class SmartCollection
     }
 
     /**
-     * @param array $rules
+     * @param Rule[] $rules
      */
-    public function setRules($rules)
+    public function setRules(array $rules)
     {
         $this->rules = $rules;
     }

@@ -2,25 +2,57 @@
   "refund": {
     "id": 509562969,
     "order_id": 450789469,
-    "created_at": "2017-01-05T15:40:07-05:00",
+    "created_at": "2020-11-04T16:46:58-05:00",
     "note": "it broke during shipping",
-    "restock": true,
     "user_id": 799407056,
-    "processed_at": "2017-01-05T15:40:07-05:00",
+    "processed_at": "2020-11-04T16:46:58-05:00",
+    "restock": true,
+    "duties": [],
+    "total_duties_set": {
+      "shop_money": {
+        "amount": "0.00",
+        "currency_code": "USD"
+      },
+      "presentment_money": {
+        "amount": "0.00",
+        "currency_code": "USD"
+      }
+    },
+    "admin_graphql_api_id": "gid://shopify/Refund/509562969",
     "refund_line_items": [
       {
         "id": 104689539,
         "quantity": 1,
         "line_item_id": 703073504,
+        "location_id": 487838322,
+        "restock_type": "legacy_restock",
         "subtotal": 195.67,
         "total_tax": 3.98,
+        "subtotal_set": {
+          "shop_money": {
+            "amount": "195.67",
+            "currency_code": "USD"
+          },
+          "presentment_money": {
+            "amount": "195.67",
+            "currency_code": "USD"
+          }
+        },
+        "total_tax_set": {
+          "shop_money": {
+            "amount": "3.98",
+            "currency_code": "USD"
+          },
+          "presentment_money": {
+            "amount": "3.98",
+            "currency_code": "USD"
+          }
+        },
         "line_item": {
           "id": 703073504,
           "variant_id": 457924702,
           "title": "IPod Nano - 8gb",
           "quantity": 1,
-          "price": "199.00",
-          "grams": 200,
           "sku": "IPOD2008BLACK",
           "variant_title": "black",
           "vendor": null,
@@ -31,17 +63,66 @@
           "gift_card": false,
           "name": "IPod Nano - 8gb - black",
           "variant_inventory_management": "shopify",
-          "properties": [
-          ],
+          "properties": [],
           "product_exists": true,
           "fulfillable_quantity": 1,
+          "grams": 200,
+          "price": "199.00",
           "total_discount": "0.00",
           "fulfillment_status": null,
+          "price_set": {
+            "shop_money": {
+              "amount": "199.00",
+              "currency_code": "USD"
+            },
+            "presentment_money": {
+              "amount": "199.00",
+              "currency_code": "USD"
+            }
+          },
+          "total_discount_set": {
+            "shop_money": {
+              "amount": "0.00",
+              "currency_code": "USD"
+            },
+            "presentment_money": {
+              "amount": "0.00",
+              "currency_code": "USD"
+            }
+          },
+          "discount_allocations": [
+            {
+              "amount": "3.33",
+              "discount_application_index": 0,
+              "amount_set": {
+                "shop_money": {
+                  "amount": "3.33",
+                  "currency_code": "USD"
+                },
+                "presentment_money": {
+                  "amount": "3.33",
+                  "currency_code": "USD"
+                }
+              }
+            }
+          ],
+          "duties": [],
+          "admin_graphql_api_id": "gid://shopify/LineItem/703073504",
           "tax_lines": [
             {
               "title": "State Tax",
               "price": "3.98",
-              "rate": 0.06
+              "rate": 0.06,
+              "price_set": {
+                "shop_money": {
+                  "amount": "3.98",
+                  "currency_code": "USD"
+                },
+                "presentment_money": {
+                  "amount": "3.98",
+                  "currency_code": "USD"
+                }
+              }
             }
           ]
         }
@@ -50,15 +131,35 @@
         "id": 709875399,
         "quantity": 1,
         "line_item_id": 466157049,
+        "location_id": 487838322,
+        "restock_type": "legacy_restock",
         "subtotal": 195.66,
         "total_tax": 3.98,
+        "subtotal_set": {
+          "shop_money": {
+            "amount": "195.66",
+            "currency_code": "USD"
+          },
+          "presentment_money": {
+            "amount": "195.66",
+            "currency_code": "USD"
+          }
+        },
+        "total_tax_set": {
+          "shop_money": {
+            "amount": "3.98",
+            "currency_code": "USD"
+          },
+          "presentment_money": {
+            "amount": "3.98",
+            "currency_code": "USD"
+          }
+        },
         "line_item": {
           "id": 466157049,
           "variant_id": 39072856,
           "title": "IPod Nano - 8gb",
           "quantity": 1,
-          "price": "199.00",
-          "grams": 200,
           "sku": "IPOD2008GREEN",
           "variant_title": "green",
           "vendor": null,
@@ -81,13 +182,63 @@
           ],
           "product_exists": true,
           "fulfillable_quantity": 1,
+          "grams": 200,
+          "price": "199.00",
           "total_discount": "0.00",
           "fulfillment_status": null,
+          "price_set": {
+            "shop_money": {
+              "amount": "199.00",
+              "currency_code": "USD"
+            },
+            "presentment_money": {
+              "amount": "199.00",
+              "currency_code": "USD"
+            }
+          },
+          "total_discount_set": {
+            "shop_money": {
+              "amount": "0.00",
+              "currency_code": "USD"
+            },
+            "presentment_money": {
+              "amount": "0.00",
+              "currency_code": "USD"
+            }
+          },
+          "discount_allocations": [
+            {
+              "amount": "3.34",
+              "discount_application_index": 0,
+              "amount_set": {
+                "shop_money": {
+                  "amount": "3.34",
+                  "currency_code": "USD"
+                },
+                "presentment_money": {
+                  "amount": "3.34",
+                  "currency_code": "USD"
+                }
+              }
+            }
+          ],
+          "duties": [],
+          "admin_graphql_api_id": "gid://shopify/LineItem/466157049",
           "tax_lines": [
             {
               "title": "State Tax",
               "price": "3.98",
-              "rate": 0.06
+              "rate": 0.06,
+              "price_set": {
+                "shop_money": {
+                  "amount": "3.98",
+                  "currency_code": "USD"
+                },
+                "presentment_money": {
+                  "amount": "3.98",
+                  "currency_code": "USD"
+                }
+              }
             }
           ]
         }
@@ -97,7 +248,6 @@
       {
         "id": 179259969,
         "order_id": 450789469,
-        "amount": "209.00",
         "kind": "refund",
         "gateway": "bogus",
         "status": "success",
@@ -105,17 +255,19 @@
         "created_at": "2005-08-05T12:59:12-04:00",
         "test": false,
         "authorization": "authorization-key",
-        "currency": "USD",
         "location_id": null,
         "user_id": null,
-        "parent_id": null,
+        "parent_id": 801038806,
+        "processed_at": "2005-08-05T12:59:12-04:00",
         "device_id": null,
         "receipt": {},
         "error_code": null,
-        "source_name": "web"
+        "source_name": "web",
+        "amount": "209.00",
+        "currency": "USD",
+        "admin_graphql_api_id": "gid://shopify/OrderTransaction/179259969"
       }
     ],
-    "order_adjustments": [
-    ]
+    "order_adjustments": []
   }
 }

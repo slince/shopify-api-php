@@ -187,7 +187,7 @@ class Client
      * @var array
      */
     protected $metaDirs = [
-        'Slince\\Shopify\\Model\\' => __DIR__.'/../config/serializer'
+        'Slince\\Shopify\\Model' => __DIR__.'/../config/serializer'
     ];
 
     /**
