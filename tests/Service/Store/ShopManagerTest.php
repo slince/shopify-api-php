@@ -2,32 +2,15 @@
 
 namespace Slince\Shopify\Tests\Service\Store;
 
-use Slince\Shopify\Tests\Service\Common\GeneralCurdManagerTestCase;
+use Slince\Shopify\Tests\Service\Common\AbstractManagerTestCase;
 
-class ShopManagerTest extends GeneralCurdManagerTestCase
+class ShopManagerTest extends AbstractManagerTestCase
 {
-    public function testCount()
+    public function testFind()
     {
-        $this->markTestSkipped('Yet not support.');
-    }
-
-    public function testRemove()
-    {
-        $this->markTestSkipped('Yet not support.');
-    }
-
-    public function testUpdate()
-    {
-        $this->markTestSkipped('Yet not support.');
-    }
-
-    public function testCreate()
-    {
-        $this->markTestSkipped('Yet not support.');
-    }
-
-    public function testFindAll()
-    {
-        $this->markTestSkipped('Yet not support.');
+        $fixture = $this->getFixturesDir().'/view.json';
+        $service = $this->getService($fixture);
+        $entity = $service->get();
+        $this->assertInstanceOf($service->getModelClass(), $entity);
     }
 }

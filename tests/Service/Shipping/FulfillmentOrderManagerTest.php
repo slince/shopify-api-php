@@ -3,8 +3,9 @@
 namespace Slince\Shopify\Tests\Service\Shipping;
 
 use Slince\Shopify\Tests\Service\Common\GeneralCurdManagerTestCase;
+use Slince\Shopify\Tests\Service\Common\NestCurdManagerTestCase;
 
-class FulfillmentOrderManagerTest extends GeneralCurdManagerTestCase
+class FulfillmentOrderManagerTest extends NestCurdManagerTestCase
 {
     public function testRemove()
     {

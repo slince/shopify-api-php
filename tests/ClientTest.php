@@ -207,6 +207,7 @@ class ClientTest extends TestCase
         try {
             $client->getShopManager()->get();
         } catch (\Exception $exception) {
+            var_dump(get_class($exception), $exception->getMessage());
             $this->assertInstanceOf(ClientException::class, $exception);
             $this->assertEquals($exception->getMessage(), 'Client error message.');
             $this->assertEquals($exception->getCode(), 401);

@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Service\Products;
 
+use Slince\Shopify\Model\Products\Collect;
 use Slince\Shopify\Service\Common\GeneralCurdManager;
 
 class CollectManager extends GeneralCurdManager implements CollectManagerInterface
