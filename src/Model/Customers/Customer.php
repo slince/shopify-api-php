@@ -128,7 +128,7 @@ class Customer
     protected $marketingOptInLevel;
 
     /**
-     * @var array
+     * @var array<>
      */
     protected $taxExemptions;
 

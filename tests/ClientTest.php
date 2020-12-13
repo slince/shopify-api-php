@@ -6,6 +6,7 @@ use GuzzleHttp\Utils;
 use Slince\Shopify\Client;
 use Slince\Shopify\Exception\RuntimeException;
 use Slince\Shopify\Exception\ClientException;
+use Slince\Shopify\Inflector;
 use Slince\Shopify\PublicAppCredential;
 use Slince\Shopify\Exception\InvalidArgumentException;
 use Slince\Shopify\Service\Common\ManagerInterface;
@@ -98,7 +99,10 @@ class ClientTest extends TestCase
 
         foreach ($client->serviceClass as $serviceClass) {
             $partials = explode('\\', $serviceClass);
-            $manager = call_user_func([$client, 'get'.$partials[4]]);
+            $id = $serviceClass::getServiceName();
+
+
+            $manager = call_user_func([$client, 'get' .  Inflector::classify(Inflector::singularize($id)) . 'Manager']);
 
             $this->assertInstanceOf($serviceClass, $manager);
         }

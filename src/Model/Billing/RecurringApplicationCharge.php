@@ -54,7 +54,7 @@ class RecurringApplicationCharge
     protected $returnUrl;
 
     /**
-     * @var DateTimeInterface
+     * @var DateTimeInterface<'Y-m-d'>
      */
     protected $billingOn;
 
@@ -74,12 +74,12 @@ class RecurringApplicationCharge
     protected $test;
 
     /**
-     * @var DateTimeInterface
+     * @var DateTimeInterface<'Y-m-d'>
      */
     protected $activatedOn;
 
     /**
-     * @var DateTimeInterface
+     * @var DateTimeInterface<'Y-m-d'>
      */
     protected $cancelledOn;
 
@@ -94,7 +94,7 @@ class RecurringApplicationCharge
     protected $cappedAmount;
 
     /**
-     * @var DateTimeInterface
+     * @var DateTimeInterface<'Y-m-d'>
      */
     protected $trialEndsAOn;
 

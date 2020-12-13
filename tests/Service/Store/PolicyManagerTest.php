@@ -25,4 +25,9 @@ class PolicyManagerTest extends GeneralCurdManagerTestCase
     {
         $this->markTestSkipped('Yet not support.');
     }
+
+    public function testCount()
+    {
+        $this->markTestSkipped('Yet not support.');
+    }
 }

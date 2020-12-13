@@ -89,7 +89,7 @@ class Transaction
     protected $deviceId;
 
     /**
-     * @var array
+     * @var array<>
      */
     protected $receipt;
 

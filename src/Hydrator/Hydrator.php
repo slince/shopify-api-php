@@ -13,6 +13,11 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Hydrator;
 
+use JMS\Serializer\Handler\ArrayCollectionHandler;
+use JMS\Serializer\Handler\DateHandler;
+use JMS\Serializer\Handler\HandlerRegistryInterface;
+use JMS\Serializer\Handler\IteratorHandler;
+use JMS\Serializer\Handler\StdClassHandler;
 use JMS\Serializer\SerializationContext;
 use JMS\Serializer\Serializer;
 use JMS\Serializer\SerializerBuilder;
@@ -28,6 +33,12 @@ class Hydrator implements HydratorInterface
     {
         $builder = SerializerBuilder::create()
             ->setDocBlockTypeResolver(true)
+            ->configureHandlers(function(HandlerRegistryInterface $handlerRegistry){
+                $handlerRegistry->registerSubscribingHandler(new DateHandler(\DateTime::ISO8601));
+                $handlerRegistry->registerSubscribingHandler(new StdClassHandler());
+                $handlerRegistry->registerSubscribingHandler(new ArrayCollectionHandler());
+                $handlerRegistry->registerSubscribingHandler(new IteratorHandler());
+            })
             ->setCacheDir($cacheDir);
         $metaDirs && $builder->setMetadataDirs($metaDirs);
         $this->serializer = $builder->build();

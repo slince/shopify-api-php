@@ -31,17 +31,17 @@ class ShippingZone
     protected $provinces;
 
     /**
-     * @var array
+     * @var array<>
      */
     protected $carrierShippingRateProviders;
 
     /**
-     * @var array
+     * @var array<>
      */
     protected $priceBasedShippingRates;
 
     /**
-     * @var array
+     * @var array<>
      */
     protected $weightBasedShippingRates;
 

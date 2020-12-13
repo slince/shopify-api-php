@@ -56,7 +56,7 @@ class FulfillmentOrder
     protected $status;
 
     /**
-     * @var array
+     * @var array<>
      */
     protected $supportedActions;
 

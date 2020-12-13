@@ -42,7 +42,7 @@ class Event
     protected $verb;
 
     /**
-     * @var array
+     * @var array<>
      */
     protected $arguments;
 

@@ -39,7 +39,7 @@ class DraftOrder
     protected $email;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $taxesIncluded;
 
@@ -64,7 +64,7 @@ class DraftOrder
     protected $updatedAt;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $taxExempt;
 

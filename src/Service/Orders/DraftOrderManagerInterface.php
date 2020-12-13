@@ -86,7 +86,7 @@ interface DraftOrderManagerInterface
      * Complete a draft order
      *
      * @param int $id
-     * @param boolean $paymentPending
+     * @param bool $paymentPending
      * @return DraftOrder
      */
     public function complete($id, $paymentPending = null);

@@ -58,12 +58,12 @@ class SmartCollection
     protected $templateSuffix;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $disjunctive;
 
     /**
-     * @var array
+     * @var array<>
      */
     protected $rules;
 

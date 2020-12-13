@@ -123,7 +123,7 @@ class MarketingEvent
     protected $adminGraphqlApiId;
 
     /**
-     * @var array
+     * @var array<>
      */
     protected $marketedResources;
 

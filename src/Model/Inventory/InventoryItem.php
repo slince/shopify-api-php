@@ -63,12 +63,12 @@ class InventoryItem
     protected $harmonizedSystemCode;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $tracked;
 
     /**
-     * @var array
+     * @var array<>
      */
     protected $countryHarmonizedSystemCodes;
 

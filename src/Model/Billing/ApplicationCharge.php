@@ -174,7 +174,7 @@ class ApplicationCharge
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getTest(): ?bool
     {

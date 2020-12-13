@@ -42,12 +42,12 @@ class FulfillmentService
     protected $handle;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $fulfillmentOrdersOptIn;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $includePendingStock;
 
@@ -67,12 +67,12 @@ class FulfillmentService
     protected $callbackUrl;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $trackingSupport;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $inventoryManagement;
 
