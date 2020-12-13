@@ -98,7 +98,7 @@ class ClientTest extends TestCase
 
         foreach ($client->serviceClass as $serviceClass) {
             $partials = explode('\\', $serviceClass);
-            $manager = call_user_func([$client, 'get'.$partials[4].'Manager']);
+            $manager = call_user_func([$client, 'get'.$partials[4]]);
 
             $this->assertInstanceOf($serviceClass, $manager);
         }

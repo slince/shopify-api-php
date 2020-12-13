@@ -28,7 +28,7 @@ class Currency
     protected $rateUpdatedAt;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $enabled;
 

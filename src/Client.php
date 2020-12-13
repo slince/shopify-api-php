@@ -12,7 +12,6 @@
 namespace Slince\Shopify;
 
 use GuzzleHttp\Exception\RequestException;
-use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\Utils;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Client as HttpClient;
@@ -26,7 +25,6 @@ use Slince\Shopify\Middleware\MiddlewareChain;
 use Slince\Shopify\Service\Common\ManagerInterface;
 use Slince\Shopify\Exception\InvalidArgumentException;
 use Slince\Shopify\Hydrator\Hydrator;
-use function GuzzleHttp\Psr7\str;
 
 /**
  * @method Service\Access\AccessScopeManagerInterface getAccessScopeManager
