@@ -1,10 +1,4 @@
-Slince\Shopify\Model\Billing\RecurringApplicationCharge:
+Slince\Shopify\Model\Billing\UsageCharge:
   properties:
-      activatedOn:
-        type: DateTime<'Y-m-d'>
       billingOn:
-        type: DateTime<'Y-m-d'>
-      cancelledOn:
-        type: DateTime<'Y-m-d'>
-      trialEndsOn:
         type: DateTime<'Y-m-d'>

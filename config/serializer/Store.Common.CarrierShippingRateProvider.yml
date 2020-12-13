@@ -1,4 +1,4 @@
-Slince\Shopify\Model\Shipping\Fufillment:
+Slince\Shopify\Model\Store\Common\CarrierShippingRateProvider:
     properties:
-        receipt:
+        serviceFilter:
             type: array

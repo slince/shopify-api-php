@@ -1,0 +1,12 @@
+Slince\Shopify\Model\Discounts\PriceRule:
+    properties:
+        prerequisiteQuantityRange:
+            type: array
+        prerequisiteShippingPriceRange:
+            type: array
+        prerequisiteSubtotalRange:
+            type: array
+        prerequisiteToEntitlementQuantityRatio:
+           type: array
+        prerequisiteToEntitlementPurchase:
+           type: array
