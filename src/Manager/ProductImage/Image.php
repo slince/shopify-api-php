@@ -234,7 +234,7 @@ class Image extends Model
     /**
      * @param string $alt
      *
-     * @return string
+     * @return Image
      */
     public function setAlt($alt)
     {
