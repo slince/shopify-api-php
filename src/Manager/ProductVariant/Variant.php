@@ -560,10 +560,14 @@ class Variant extends Model
 
     /**
      * @param int $inventoryItemId
+     *
+     * @return Variant
      */
     public function setInventoryItemId($inventoryItemId)
     {
         $this->inventoryItemId = $inventoryItemId;
+
+        return $this;
     }
 
     /**
