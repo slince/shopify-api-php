@@ -73,10 +73,14 @@ class Blog extends Model
 
     /**
      * @param string $handle
+     *
+     * @return Blog
      */
     public function setHandle($handle)
     {
         $this->handle = $handle;
+
+        return $this;
     }
 
     /**
@@ -89,10 +93,14 @@ class Blog extends Model
 
     /**
      * @param string $title
+     *
+     * @return Blog
      */
     public function setTitle($title)
     {
         $this->title = $title;
+
+        return $this;
     }
 
     /**
@@ -105,10 +113,14 @@ class Blog extends Model
 
     /**
      * @param \DateTimeInterface $updatedAt
+     *
+     * @return Blog
      */
     public function setUpdatedAt($updatedAt)
     {
         $this->updatedAt = $updatedAt;
+
+        return $this;
     }
 
     /**
@@ -121,10 +133,14 @@ class Blog extends Model
 
     /**
      * @param string $commentable
+     *
+     * @return Blog
      */
     public function setCommentable($commentable)
     {
         $this->commentable = $commentable;
+
+        return $this;
     }
 
     /**
@@ -137,10 +153,14 @@ class Blog extends Model
 
     /**
      * @param string $feedburner
+     *
+     * @return Blog
      */
     public function setFeedburner($feedburner)
     {
         $this->feedburner = $feedburner;
+
+        return $this;
     }
 
     /**
@@ -153,10 +173,14 @@ class Blog extends Model
 
     /**
      * @param string $feedburnerLocation
+     *
+     * @return Blog
      */
     public function setFeedburnerLocation($feedburnerLocation)
     {
         $this->feedburnerLocation = $feedburnerLocation;
+
+        return $this;
     }
 
     /**
@@ -169,10 +193,14 @@ class Blog extends Model
 
     /**
      * @param \DateTimeInterface $createdAt
+     *
+     * @return Blog
      */
     public function setCreatedAt($createdAt)
     {
         $this->createdAt = $createdAt;
+
+        return $this;
     }
 
     /**
@@ -185,10 +213,14 @@ class Blog extends Model
 
     /**
      * @param string $templateSuffix
+     *
+     * @return Blog
      */
     public function setTemplateSuffix($templateSuffix)
     {
         $this->templateSuffix = $templateSuffix;
+
+        return $this;
     }
 
     /**
@@ -201,9 +233,13 @@ class Blog extends Model
 
     /**
      * @param string $tags
+     *
+     * @return Blog
      */
     public function setTags($tags)
     {
         $this->tags = $tags;
+
+        return $this;
     }
 }
