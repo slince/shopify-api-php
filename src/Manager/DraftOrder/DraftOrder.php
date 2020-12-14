@@ -148,10 +148,14 @@ class DraftOrder extends Model
 
     /**
      * @param string $note
+     *
+     * @return DraftOrder
      */
     public function setNote($note)
     {
         $this->note = $note;
+
+        return $this;
     }
 
     /**
@@ -164,10 +168,14 @@ class DraftOrder extends Model
 
     /**
      * @param string $email
+     *
+     * @return DraftOrder
      */
     public function setEmail($email)
     {
         $this->email = $email;
+
+        return $this;
     }
 
     /**
@@ -180,10 +188,14 @@ class DraftOrder extends Model
 
     /**
      * @param bool $taxesIncluded
+     *
+     * @return DraftOrder
      */
     public function setTaxesIncluded($taxesIncluded)
     {
         $this->taxesIncluded = $taxesIncluded;
+
+        return $this;
     }
 
     /**
@@ -196,10 +208,14 @@ class DraftOrder extends Model
 
     /**
      * @param string $currency
+     *
+     * @return DraftOrder
      */
     public function setCurrency($currency)
     {
         $this->currency = $currency;
+
+        return $this;
     }
 
     /**
@@ -212,10 +228,14 @@ class DraftOrder extends Model
 
     /**
      * @param \DateTimeInterface $invoiceSentAt
+     *
+     * @return DraftOrder
      */
     public function setInvoiceSentAt($invoiceSentAt)
     {
         $this->invoiceSentAt = $invoiceSentAt;
+
+        return $this;
     }
 
     /**
@@ -228,10 +248,14 @@ class DraftOrder extends Model
 
     /**
      * @param \DateTimeInterface $createdAt
+     *
+     * @return DraftOrder
      */
     public function setCreatedAt($createdAt)
     {
         $this->createdAt = $createdAt;
+
+        return $this;
     }
 
     /**
@@ -244,10 +268,14 @@ class DraftOrder extends Model
 
     /**
      * @param \DateTimeInterface $updatedAt
+     *
+     * @return DraftOrder
      */
     public function setUpdatedAt($updatedAt)
     {
         $this->updatedAt = $updatedAt;
+
+        return $this;
     }
 
     /**
@@ -260,10 +288,14 @@ class DraftOrder extends Model
 
     /**
      * @param bool $taxExempt
+     *
+     * @return DraftOrder
      */
     public function setTaxExempt($taxExempt)
     {
         $this->taxExempt = $taxExempt;
+
+        return $this;
     }
 
     /**
@@ -276,10 +308,14 @@ class DraftOrder extends Model
 
     /**
      * @param \DateTimeInterface $completedAt
+     *
+     * @return DraftOrder
      */
     public function setCompletedAt($completedAt)
     {
         $this->completedAt = $completedAt;
+
+        return $this;
     }
 
     /**
@@ -292,10 +328,14 @@ class DraftOrder extends Model
 
     /**
      * @param string $name
+     *
+     * @return DraftOrder
      */
     public function setName($name)
     {
         $this->name = $name;
+
+        return $this;
     }
 
     /**
@@ -308,10 +348,14 @@ class DraftOrder extends Model
 
     /**
      * @param string $status
+     *
+     * @return DraftOrder
      */
     public function setStatus($status)
     {
         $this->status = $status;
+
+        return $this;
     }
 
     /**
@@ -324,10 +368,14 @@ class DraftOrder extends Model
 
     /**
      * @param LineItem[] $lineItems
+     *
+     * @return DraftOrder
      */
     public function setLineItems($lineItems)
     {
         $this->lineItems = $lineItems;
+
+        return $this;
     }
 
     /**
@@ -340,10 +388,14 @@ class DraftOrder extends Model
 
     /**
      * @param Address $shippingAddress
+     *
+     * @return DraftOrder
      */
     public function setShippingAddress($shippingAddress)
     {
         $this->shippingAddress = $shippingAddress;
+
+        return $this;
     }
 
     /**
@@ -356,10 +408,14 @@ class DraftOrder extends Model
 
     /**
      * @param Address $billingAddress
+     *
+     * @return DraftOrder
      */
     public function setBillingAddress($billingAddress)
     {
         $this->billingAddress = $billingAddress;
+
+        return $this;
     }
 
     /**
@@ -372,10 +428,14 @@ class DraftOrder extends Model
 
     /**
      * @param string $invoiceUrl
+     *
+     * @return DraftOrder
      */
     public function setInvoiceUrl($invoiceUrl)
     {
         $this->invoiceUrl = $invoiceUrl;
+
+        return $this;
     }
 
     /**
@@ -388,10 +448,14 @@ class DraftOrder extends Model
 
     /**
      * @param array $appliedDiscount
+     *
+     * @return DraftOrder
      */
     public function setAppliedDiscount($appliedDiscount)
     {
         $this->appliedDiscount = $appliedDiscount;
+
+        return $this;
     }
 
     /**
@@ -404,6 +468,8 @@ class DraftOrder extends Model
 
     /**
      * @param int $orderId
+     *
+     * @return DraftOrder
      */
     public function setOrderId($orderId)
     {
@@ -420,6 +486,8 @@ class DraftOrder extends Model
 
     /**
      * @param array $shippingLine
+     *
+     * @return DraftOrder
      */
     public function setShippingLine($shippingLine)
     {
@@ -436,6 +504,8 @@ class DraftOrder extends Model
 
     /**
      * @param array $taxLines
+     *
+     * @return DraftOrder
      */
     public function setTaxLines($taxLines)
     {
@@ -452,6 +522,8 @@ class DraftOrder extends Model
 
     /**
      * @param string $tag
+     *
+     * @return DraftOrder
      */
     public function setTag($tag)
     {
@@ -468,6 +540,8 @@ class DraftOrder extends Model
 
     /**
      * @param string $noteAttributes
+     *
+     * @return DraftOrder
      */
     public function setNoteAttributes($noteAttributes)
     {
@@ -484,6 +558,8 @@ class DraftOrder extends Model
 
     /**
      * @param float $totalPrice
+     *
+     * @return DraftOrder
      */
     public function setTotalPrice($totalPrice)
     {
@@ -500,10 +576,14 @@ class DraftOrder extends Model
 
     /**
      * @param float $subtotalPrice
+     *
+     * @return DraftOrder
      */
     public function setSubtotalPrice($subtotalPrice)
     {
         $this->subtotalPrice = $subtotalPrice;
+
+        return $this;
     }
 
     /**
@@ -516,10 +596,14 @@ class DraftOrder extends Model
 
     /**
      * @param float $totalTax
+     *
+     * @return DraftOrder
      */
     public function setTotalTax($totalTax)
     {
         $this->totalTax = $totalTax;
+
+        return $this;
     }
 
     /**
@@ -532,9 +616,13 @@ class DraftOrder extends Model
 
     /**
      * @param Customer $customer
+     *
+     * @return DraftOrder
      */
     public function setCustomer($customer)
     {
         $this->customer = $customer;
+
+        return $this;
     }
 }
