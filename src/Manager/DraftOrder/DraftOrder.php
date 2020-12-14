@@ -474,6 +474,8 @@ class DraftOrder extends Model
     public function setOrderId($orderId)
     {
         $this->orderId = $orderId;
+
+        return $this;
     }
 
     /**
@@ -492,6 +494,8 @@ class DraftOrder extends Model
     public function setShippingLine($shippingLine)
     {
         $this->shippingLine = $shippingLine;
+
+        return $this;
     }
 
     /**
@@ -510,6 +514,8 @@ class DraftOrder extends Model
     public function setTaxLines($taxLines)
     {
         $this->taxLines = $taxLines;
+
+        return $this;
     }
 
     /**
@@ -528,6 +534,8 @@ class DraftOrder extends Model
     public function setTag($tag)
     {
         $this->tag = $tag;
+
+        return $this;
     }
 
     /**
@@ -546,6 +554,8 @@ class DraftOrder extends Model
     public function setNoteAttributes($noteAttributes)
     {
         $this->noteAttributes = $noteAttributes;
+
+        return $this;
     }
 
     /**
@@ -564,6 +574,8 @@ class DraftOrder extends Model
     public function setTotalPrice($totalPrice)
     {
         $this->totalPrice = $totalPrice;
+
+        return $this;
     }
 
     /**
