@@ -13,8 +13,6 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Model\Store;
 
-use \DateTimeInterface;
-
 class Currency
 {
     /**
@@ -23,7 +21,7 @@ class Currency
     protected $currency;
 
     /**
-     * @var DateTimeInterface
+     * @var \DateTimeInterface
      */
     protected $rateUpdatedAt;
 
@@ -49,17 +47,17 @@ class Currency
     }
 
     /**
-     * @return DateTimeInterface
+     * @return \DateTimeInterface
      */
-    public function getRateUpdatedAt(): DateTimeInterface
+    public function getRateUpdatedAt(): \DateTimeInterface
     {
         return $this->rateUpdatedAt;
     }
 
     /**
-     * @param DateTimeInterface $rateUpdatedAt
+     * @param \DateTimeInterface $rateUpdatedAt
      */
-    public function setRateUpdatedAt(DateTimeInterface $rateUpdatedAt): void
+    public function setRateUpdatedAt(\DateTimeInterface $rateUpdatedAt): void
     {
         $this->rateUpdatedAt = $rateUpdatedAt;
     }

@@ -66,9 +66,7 @@ class Option
 
     /**
      * @param int $productId
-     *
-
-     */
+      */
     public function setProductId($productId)
     {
         $this->productId = $productId;
@@ -84,9 +82,7 @@ class Option
 
     /**
      * @param string $name
-     *
-
-     */
+      */
     public function setName($name)
     {
         $this->name = $name;
@@ -102,9 +98,7 @@ class Option
 
     /**
      * @param int $position
-     *
-
-     */
+      */
     public function setPosition($position)
     {
         $this->position = $position;
@@ -120,9 +114,7 @@ class Option
 
     /**
      * @param array $values
-     *
-
-     */
+      */
     public function setValues($values)
     {
         $this->values = $values;

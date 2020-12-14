@@ -13,8 +13,6 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Model\Inventory;
 
-use \DateTimeInterface;
-
 class InventoryLevel
 {
     /**
@@ -33,7 +31,7 @@ class InventoryLevel
     protected $available;
 
     /**
-     * @var DateTimeInterface
+     * @var \DateTimeInterface
      */
     protected $updatedAt;
 
@@ -91,17 +89,17 @@ class InventoryLevel
     }
 
     /**
-     * @return DateTimeInterface
+     * @return \DateTimeInterface
      */
-    public function getUpdatedAt(): ?DateTimeInterface
+    public function getUpdatedAt(): ?\DateTimeInterface
     {
         return $this->updatedAt;
     }
 
     /**
-     * @param DateTimeInterface $updatedAt
+     * @param \DateTimeInterface $updatedAt
      */
-    public function setUpdatedAt(?DateTimeInterface $updatedAt): void
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt): void
     {
         $this->updatedAt = $updatedAt;
     }

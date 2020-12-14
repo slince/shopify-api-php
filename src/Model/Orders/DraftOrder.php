@@ -12,7 +12,6 @@ declare(strict_types=1);
  */
 namespace Slince\Shopify\Model\Orders;
 
-use \DateTimeInterface;
 use Slince\Shopify\Model\Customers\Customer;
 use Slince\Shopify\Model\Orders\Common\AppliedDiscount;
 use Slince\Shopify\Model\Orders\Common\DraftOrderShippingLine;
@@ -49,17 +48,17 @@ class DraftOrder
     protected $currency;
 
     /**
-     * @var DateTimeInterface
+     * @var \DateTimeInterface
      */
     protected $invoiceSentAt;
 
     /**
-     * @var DateTimeInterface
+     * @var \DateTimeInterface
      */
     protected $createdAt;
 
     /**
-     * @var DateTimeInterface
+     * @var \DateTimeInterface
      */
     protected $updatedAt;
 
@@ -69,7 +68,7 @@ class DraftOrder
     protected $taxExempt;
 
     /**
-     * @var DateTimeInterface
+     * @var \DateTimeInterface
      */
     protected $completedAt;
 
@@ -239,49 +238,49 @@ class DraftOrder
     }
 
     /**
-     * @return DateTimeInterface
+     * @return \DateTimeInterface
      */
-    public function getInvoiceSentAt(): DateTimeInterface
+    public function getInvoiceSentAt(): \DateTimeInterface
     {
         return $this->invoiceSentAt;
     }
 
     /**
-     * @param DateTimeInterface $invoiceSentAt
+     * @param \DateTimeInterface $invoiceSentAt
      */
-    public function setInvoiceSentAt(DateTimeInterface $invoiceSentAt): void
+    public function setInvoiceSentAt(\DateTimeInterface $invoiceSentAt): void
     {
         $this->invoiceSentAt = $invoiceSentAt;
     }
 
     /**
-     * @return DateTimeInterface
+     * @return \DateTimeInterface
      */
-    public function getCreatedAt(): ?DateTimeInterface
+    public function getCreatedAt(): ?\DateTimeInterface
     {
         return $this->createdAt;
     }
 
     /**
-     * @param DateTimeInterface $createdAt
+     * @param \DateTimeInterface $createdAt
      */
-    public function setCreatedAt(?DateTimeInterface $createdAt): void
+    public function setCreatedAt(?\DateTimeInterface $createdAt): void
     {
         $this->createdAt = $createdAt;
     }
 
     /**
-     * @return DateTimeInterface
+     * @return \DateTimeInterface
      */
-    public function getUpdatedAt(): ?DateTimeInterface
+    public function getUpdatedAt(): ?\DateTimeInterface
     {
         return $this->updatedAt;
     }
 
     /**
-     * @param DateTimeInterface $updatedAt
+     * @param \DateTimeInterface $updatedAt
      */
-    public function setUpdatedAt(?DateTimeInterface $updatedAt): void
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt): void
     {
         $this->updatedAt = $updatedAt;
     }
@@ -303,17 +302,17 @@ class DraftOrder
     }
 
     /**
-     * @return DateTimeInterface
+     * @return \DateTimeInterface
      */
-    public function getCompletedAt(): DateTimeInterface
+    public function getCompletedAt(): \DateTimeInterface
     {
         return $this->completedAt;
     }
 
     /**
-     * @param DateTimeInterface $completedAt
+     * @param \DateTimeInterface $completedAt
      */
-    public function setCompletedAt(DateTimeInterface $completedAt): void
+    public function setCompletedAt(\DateTimeInterface $completedAt): void
     {
         $this->completedAt = $completedAt;
     }

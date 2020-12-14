@@ -13,8 +13,6 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Model\Products;
 
-use \DateTimeInterface;
-
 class Image
 {
     /**
@@ -33,12 +31,12 @@ class Image
     protected $position;
 
     /**
-     * @var DateTimeInterface
+     * @var \DateTimeInterface
      */
     protected $createdAt;
 
     /**
-     * @var DateTimeInterface
+     * @var \DateTimeInterface
      */
     protected $updatedAt;
 
@@ -115,9 +113,7 @@ class Image
 
     /**
      * @param int $productId
-     *
-
-     */
+      */
     public function setProductId($productId)
     {
         $this->productId = $productId;
@@ -133,46 +129,40 @@ class Image
 
     /**
      * @param int $position
-     *
-
-     */
+      */
     public function setPosition($position)
     {
         $this->position = $position;
     }
 
     /**
-     * @return DateTimeInterface
+     * @return \DateTimeInterface
      */
-    public function getCreatedAt(): ?DateTimeInterface
+    public function getCreatedAt(): ?\DateTimeInterface
     {
         return $this->createdAt;
     }
 
     /**
-     * @param DateTimeInterface $createdAt
-     *
-
-     */
+     * @param \DateTimeInterface $createdAt
+      */
     public function setCreatedAt(\DateTimeInterface $createdAt)
     {
         $this->createdAt = $createdAt;
     }
 
     /**
-     * @return DateTimeInterface
+     * @return \DateTimeInterface
      */
-    public function getUpdatedAt(): ?DateTimeInterface
+    public function getUpdatedAt(): ?\DateTimeInterface
     {
         return $this->updatedAt;
     }
 
     /**
-     * @param DateTimeInterface $updatedAt
-     *
-
-     */
-    public function setUpdatedAt(?DateTimeInterface $updatedAt)
+     * @param \DateTimeInterface $updatedAt
+      */
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }
@@ -187,9 +177,7 @@ class Image
 
     /**
      * @param string $src
-     *
-
-     */
+      */
     public function setSrc($src)
     {
         $this->src = $src;
@@ -205,9 +193,7 @@ class Image
 
     /**
      * @param int $width
-     *
-
-     */
+      */
     public function setWidth($width)
     {
         $this->width = $width;
@@ -223,9 +209,7 @@ class Image
 
     /**
      * @param int $height
-     *
-
-     */
+      */
     public function setHeight($height)
     {
         $this->height = $height;
@@ -241,9 +225,7 @@ class Image
 
     /**
      * @param array $variantIds
-     *
-
-     */
+      */
     public function setVariantIds($variantIds)
     {
         $this->variantIds = $variantIds;

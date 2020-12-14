@@ -12,7 +12,6 @@ declare(strict_types=1);
  */
 namespace Slince\Shopify\Model\Orders;
 
-use \DateTimeInterface;
 use Slince\Shopify\Model\Common\PriceSet;
 use Slince\Shopify\Model\Customers\Customer;
 use Slince\Shopify\Model\Orders\Common\ClientDetails;
@@ -39,17 +38,17 @@ class Order
     protected $email;
 
     /**
-     * @var DateTimeInterface
+     * @var \DateTimeInterface
      */
     protected $closedAt;
 
     /**
-     * @var DateTimeInterface
+     * @var \DateTimeInterface
      */
     protected $createdAt;
 
     /**
-     * @var DateTimeInterface
+     * @var \DateTimeInterface
      */
     protected $updatedAt;
 
@@ -154,7 +153,7 @@ class Order
     protected $landingSite;
 
     /**
-     * @var DateTimeInterface
+     * @var \DateTimeInterface
      */
     protected $cancelledAt;
 
@@ -199,7 +198,7 @@ class Order
     protected $sourceUrl;
 
     /**
-     * @var DateTimeInterface
+     * @var \DateTimeInterface
      */
     protected $processedAt;
 
@@ -436,49 +435,49 @@ class Order
     }
 
     /**
-     * @return DateTimeInterface
+     * @return \DateTimeInterface
      */
-    public function getClosedAt(): DateTimeInterface
+    public function getClosedAt(): \DateTimeInterface
     {
         return $this->closedAt;
     }
 
     /**
-     * @param DateTimeInterface $closedAt
+     * @param \DateTimeInterface $closedAt
      */
-    public function setClosedAt(DateTimeInterface $closedAt): void
+    public function setClosedAt(\DateTimeInterface $closedAt): void
     {
         $this->closedAt = $closedAt;
     }
 
     /**
-     * @return DateTimeInterface
+     * @return \DateTimeInterface
      */
-    public function getCreatedAt(): ?DateTimeInterface
+    public function getCreatedAt(): ?\DateTimeInterface
     {
         return $this->createdAt;
     }
 
     /**
-     * @param DateTimeInterface $createdAt
+     * @param \DateTimeInterface $createdAt
      */
-    public function setCreatedAt(?DateTimeInterface $createdAt): void
+    public function setCreatedAt(?\DateTimeInterface $createdAt): void
     {
         $this->createdAt = $createdAt;
     }
 
     /**
-     * @return DateTimeInterface
+     * @return \DateTimeInterface
      */
-    public function getUpdatedAt(): ?DateTimeInterface
+    public function getUpdatedAt(): ?\DateTimeInterface
     {
         return $this->updatedAt;
     }
 
     /**
-     * @param DateTimeInterface $updatedAt
+     * @param \DateTimeInterface $updatedAt
      */
-    public function setUpdatedAt(?DateTimeInterface $updatedAt): void
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt): void
     {
         $this->updatedAt = $updatedAt;
     }
@@ -804,17 +803,17 @@ class Order
     }
 
     /**
-     * @return DateTimeInterface
+     * @return \DateTimeInterface
      */
-    public function getCancelledAt(): DateTimeInterface
+    public function getCancelledAt(): \DateTimeInterface
     {
         return $this->cancelledAt;
     }
 
     /**
-     * @param DateTimeInterface $cancelledAt
+     * @param \DateTimeInterface $cancelledAt
      */
-    public function setCancelledAt(DateTimeInterface $cancelledAt): void
+    public function setCancelledAt(\DateTimeInterface $cancelledAt): void
     {
         $this->cancelledAt = $cancelledAt;
     }
@@ -948,17 +947,17 @@ class Order
     }
 
     /**
-     * @return DateTimeInterface
+     * @return \DateTimeInterface
      */
-    public function getProcessedAt(): DateTimeInterface
+    public function getProcessedAt(): \DateTimeInterface
     {
         return $this->processedAt;
     }
 
     /**
-     * @param DateTimeInterface $processedAt
+     * @param \DateTimeInterface $processedAt
      */
-    public function setProcessedAt(DateTimeInterface $processedAt): void
+    public function setProcessedAt(\DateTimeInterface $processedAt): void
     {
         $this->processedAt = $processedAt;
     }

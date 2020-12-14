@@ -13,8 +13,6 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Model\Shipping\Common;
 
-use \DateTimeInterface;
-
 class RequestOption
 {
     /**
@@ -28,7 +26,7 @@ class RequestOption
     protected $note;
 
     /**
-     * @var DateTimeInterface
+     * @var \DateTimeInterface
      */
     protected $date;
 
@@ -65,17 +63,17 @@ class RequestOption
     }
 
     /**
-     * @return DateTimeInterface
+     * @return \DateTimeInterface
      */
-    public function getDate(): DateTimeInterface
+    public function getDate(): \DateTimeInterface
     {
         return $this->date;
     }
 
     /**
-     * @param DateTimeInterface $date
+     * @param \DateTimeInterface $date
      */
-    public function setDate(DateTimeInterface $date): void
+    public function setDate(\DateTimeInterface $date): void
     {
         $this->date = $date;
     }

@@ -13,8 +13,6 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Model\Products;
 
-use \DateTimeInterface;
-
 class CustomCollection
 {
     /**
@@ -33,7 +31,7 @@ class CustomCollection
     protected $title;
 
     /**
-     * @var DateTimeInterface
+     * @var \DateTimeInterface
      */
     protected $updatedAt;
 
@@ -43,7 +41,7 @@ class CustomCollection
     protected $bodyHtml;
 
     /**
-     * @var DateTimeInterface
+     * @var \DateTimeInterface
      */
     protected $publishedAt;
 
@@ -114,9 +112,7 @@ class CustomCollection
 
     /**
      * @param string $handle
-     *
-
-     */
+      */
     public function setHandle($handle)
     {
         $this->handle = $handle;
@@ -132,28 +128,24 @@ class CustomCollection
 
     /**
      * @param string $title
-     *
-
-     */
+      */
     public function setTitle($title)
     {
         $this->title = $title;
     }
 
     /**
-     * @return DateTimeInterface
+     * @return \DateTimeInterface
      */
-    public function getUpdatedAt(): ?DateTimeInterface
+    public function getUpdatedAt(): ?\DateTimeInterface
     {
         return $this->updatedAt;
     }
 
     /**
-     * @param DateTimeInterface $updatedAt
-     *
-
-     */
-    public function setUpdatedAt(?DateTimeInterface $updatedAt)
+     * @param \DateTimeInterface $updatedAt
+      */
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }
@@ -168,16 +160,14 @@ class CustomCollection
 
     /**
      * @param string $bodyHtml
-     *
-
-     */
+      */
     public function setBodyHtml($bodyHtml)
     {
         $this->bodyHtml = $bodyHtml;
     }
 
     /**
-     * @return DateTimeInterface
+     * @return \DateTimeInterface
      */
     public function getPublishedAt()
     {
@@ -185,10 +175,8 @@ class CustomCollection
     }
 
     /**
-     * @param DateTimeInterface $publishedAt
-     *
-
-     */
+     * @param \DateTimeInterface $publishedAt
+      */
     public function setPublishedAt($publishedAt)
     {
         $this->publishedAt = $publishedAt;
@@ -204,9 +192,7 @@ class CustomCollection
 
     /**
      * @param string $sortOrder
-     *
-
-     */
+      */
     public function setSortOrder($sortOrder)
     {
         $this->sortOrder = $sortOrder;
@@ -222,9 +208,7 @@ class CustomCollection
 
     /**
      * @param string $templateSuffix
-     *
-
-     */
+      */
     public function setTemplateSuffix($templateSuffix)
     {
         $this->templateSuffix = $templateSuffix;

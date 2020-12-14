@@ -13,8 +13,6 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Model\Access;
 
-use \DateTimeInterface;
-
 class StorefrontAccessToken
 {
     /**
@@ -43,7 +41,7 @@ class StorefrontAccessToken
     protected $adminGraphqlApiId;
 
     /**
-     * @var DateTimeInterface
+     * @var \DateTimeInterface
      */
     protected $createdAt;
 
@@ -128,17 +126,17 @@ class StorefrontAccessToken
     }
 
     /**
-     * @return DateTimeInterface
+     * @return \DateTimeInterface
      */
-    public function getCreatedAt(): ?DateTimeInterface
+    public function getCreatedAt(): ?\DateTimeInterface
     {
         return $this->createdAt;
     }
 
     /**
-     * @param DateTimeInterface $createdAt
+     * @param \DateTimeInterface $createdAt
      */
-    public function setCreatedAt(?DateTimeInterface $createdAt): void
+    public function setCreatedAt(?\DateTimeInterface $createdAt): void
     {
         $this->createdAt = $createdAt;
     }

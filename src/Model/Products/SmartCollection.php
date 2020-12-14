@@ -13,7 +13,6 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Model\Products;
 
-use \DateTimeInterface;
 use Slince\Shopify\Model\Products\Common\Rule;
 
 class SmartCollection
@@ -34,7 +33,7 @@ class SmartCollection
     protected $title;
 
     /**
-     * @var DateTimeInterface
+     * @var \DateTimeInterface
      */
     protected $updatedAt;
 
@@ -44,7 +43,7 @@ class SmartCollection
     protected $bodyHtml;
 
     /**
-     * @var DateTimeInterface
+     * @var \DateTimeInterface
      */
     protected $publishedAt;
 
@@ -148,17 +147,17 @@ class SmartCollection
     }
 
     /**
-     * @return DateTimeInterface
+     * @return \DateTimeInterface
      */
-    public function getUpdatedAt(): ?DateTimeInterface
+    public function getUpdatedAt(): ?\DateTimeInterface
     {
         return $this->updatedAt;
     }
 
     /**
-     * @param DateTimeInterface $updatedAt
+     * @param \DateTimeInterface $updatedAt
      */
-    public function setUpdatedAt(?DateTimeInterface $updatedAt)
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }
@@ -180,7 +179,7 @@ class SmartCollection
     }
 
     /**
-     * @return DateTimeInterface
+     * @return \DateTimeInterface
      */
     public function getPublishedAt()
     {
@@ -188,7 +187,7 @@ class SmartCollection
     }
 
     /**
-     * @param DateTimeInterface $publishedAt
+     * @param \DateTimeInterface $publishedAt
      */
     public function setPublishedAt($publishedAt)
     {

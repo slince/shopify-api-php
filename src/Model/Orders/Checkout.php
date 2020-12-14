@@ -12,7 +12,6 @@ declare(strict_types=1);
  */
 namespace Slince\Shopify\Model\Orders;
 
-use \DateTimeInterface;
 use Slince\Shopify\Model\Customers\Customer;
 use Slince\Shopify\Model\Discounts\DiscountCode;
 use Slince\Shopify\Model\Orders\Common\CheckoutShippingLine;
@@ -54,12 +53,12 @@ class Checkout
     protected $buyerAcceptsMarketing;
 
     /**
-     * @var DateTimeInterface
+     * @var \DateTimeInterface
      */
     protected $createdAt;
 
     /**
-     * @var DateTimeInterface
+     * @var \DateTimeInterface
      */
     protected $updatedAt;
 
@@ -104,12 +103,12 @@ class Checkout
     protected $currency;
 
     /**
-     * @var DateTimeInterface
+     * @var \DateTimeInterface
      */
     protected $completedAt;
 
     /**
-     * @var DateTimeInterface
+     * @var \DateTimeInterface
      */
     protected $closedAt;
 
@@ -330,33 +329,33 @@ class Checkout
     }
 
     /**
-     * @return DateTimeInterface
+     * @return \DateTimeInterface
      */
-    public function getCreatedAt(): ?DateTimeInterface
+    public function getCreatedAt(): ?\DateTimeInterface
     {
         return $this->createdAt;
     }
 
     /**
-     * @param DateTimeInterface $createdAt
+     * @param \DateTimeInterface $createdAt
      */
-    public function setCreatedAt(?DateTimeInterface $createdAt): void
+    public function setCreatedAt(?\DateTimeInterface $createdAt): void
     {
         $this->createdAt = $createdAt;
     }
 
     /**
-     * @return DateTimeInterface
+     * @return \DateTimeInterface
      */
-    public function getUpdatedAt(): ?DateTimeInterface
+    public function getUpdatedAt(): ?\DateTimeInterface
     {
         return $this->updatedAt;
     }
 
     /**
-     * @param DateTimeInterface $updatedAt
+     * @param \DateTimeInterface $updatedAt
      */
-    public function setUpdatedAt(?DateTimeInterface $updatedAt): void
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt): void
     {
         $this->updatedAt = $updatedAt;
     }
@@ -490,33 +489,33 @@ class Checkout
     }
 
     /**
-     * @return DateTimeInterface
+     * @return \DateTimeInterface
      */
-    public function getCompletedAt(): DateTimeInterface
+    public function getCompletedAt(): \DateTimeInterface
     {
         return $this->completedAt;
     }
 
     /**
-     * @param DateTimeInterface $completedAt
+     * @param \DateTimeInterface $completedAt
      */
-    public function setCompletedAt(DateTimeInterface $completedAt): void
+    public function setCompletedAt(\DateTimeInterface $completedAt): void
     {
         $this->completedAt = $completedAt;
     }
 
     /**
-     * @return DateTimeInterface
+     * @return \DateTimeInterface
      */
-    public function getClosedAt(): DateTimeInterface
+    public function getClosedAt(): \DateTimeInterface
     {
         return $this->closedAt;
     }
 
     /**
-     * @param DateTimeInterface $closedAt
+     * @param \DateTimeInterface $closedAt
      */
-    public function setClosedAt(DateTimeInterface $closedAt): void
+    public function setClosedAt(\DateTimeInterface $closedAt): void
     {
         $this->closedAt = $closedAt;
     }

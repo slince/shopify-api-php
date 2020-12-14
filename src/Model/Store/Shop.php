@@ -13,8 +13,6 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Model\Store;
 
-use \DateTimeInterface;
-
 class Shop
 {
     /**
@@ -33,7 +31,7 @@ class Shop
     protected $domain;
 
     /**
-     * @var DateTimeInterface
+     * @var \DateTimeInterface
      */
     protected $createdAt;
 
@@ -267,9 +265,7 @@ class Shop
 
     /**
      * @param string $name
-     *
-
-     */
+      */
     public function setName($name)
     {
         $this->name = $name;
@@ -285,9 +281,7 @@ class Shop
 
     /**
      * @param string $email
-     *
-
-     */
+      */
     public function setEmail($email)
     {
         $this->email = $email;
@@ -303,27 +297,23 @@ class Shop
 
     /**
      * @param string $domain
-     *
-
-     */
+      */
     public function setDomain($domain)
     {
         $this->domain = $domain;
     }
 
     /**
-     * @return DateTimeInterface
+     * @return \DateTimeInterface
      */
-    public function getCreatedAt(): ?DateTimeInterface
+    public function getCreatedAt(): ?\DateTimeInterface
     {
         return $this->createdAt;
     }
 
     /**
-     * @param DateTimeInterface $createdAt
-     *
-
-     */
+     * @param \DateTimeInterface $createdAt
+      */
     public function setCreatedAt(\DateTimeInterface $createdAt)
     {
         $this->createdAt = $createdAt;
@@ -339,9 +329,7 @@ class Shop
 
     /**
      * @param string $province
-     *
-
-     */
+      */
     public function setProvince($province)
     {
         $this->province = $province;
@@ -357,9 +345,7 @@ class Shop
 
     /**
      * @param string $country
-     *
-
-     */
+      */
     public function setCountry($country)
     {
         $this->country = $country;
@@ -375,9 +361,7 @@ class Shop
 
     /**
      * @param string $address1
-     *
-
-     */
+      */
     public function setAddress1($address1)
     {
         $this->address1 = $address1;
@@ -393,9 +377,7 @@ class Shop
 
     /**
      * @param string $zip
-     *
-
-     */
+      */
     public function setZip($zip)
     {
         $this->zip = $zip;
@@ -411,9 +393,7 @@ class Shop
 
     /**
      * @param string $city
-     *
-
-     */
+      */
     public function setCity($city)
     {
         $this->city = $city;
@@ -429,9 +409,7 @@ class Shop
 
     /**
      * @param string $source
-     *
-
-     */
+      */
     public function setSource($source)
     {
         $this->source = $source;
@@ -447,9 +425,7 @@ class Shop
 
     /**
      * @param string $phone
-     *
-
-     */
+      */
     public function setPhone($phone)
     {
         $this->phone = $phone;
@@ -458,17 +434,15 @@ class Shop
     /**
      * @return string
      */
-    public function getUpdatedAt(): ?DateTimeInterface
+    public function getUpdatedAt(): ?\DateTimeInterface
     {
         return $this->updatedAt;
     }
 
     /**
      * @param string $updatedAt
-     *
-
-     */
-    public function setUpdatedAt(?DateTimeInterface $updatedAt)
+      */
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }
@@ -483,9 +457,7 @@ class Shop
 
     /**
      * @param string $customerEmail
-     *
-
-     */
+      */
     public function setCustomerEmail($customerEmail)
     {
         $this->customerEmail = $customerEmail;
@@ -501,9 +473,7 @@ class Shop
 
     /**
      * @param float $latitude
-     *
-
-     */
+      */
     public function setLatitude($latitude)
     {
         $this->latitude = $latitude;
@@ -519,9 +489,7 @@ class Shop
 
     /**
      * @param float $longitude
-     *
-
-     */
+      */
     public function setLongitude($longitude)
     {
         $this->longitude = $longitude;
@@ -537,9 +505,7 @@ class Shop
 
     /**
      * @param string $primaryLocationId
-     *
-
-     */
+      */
     public function setPrimaryLocationId($primaryLocationId)
     {
         $this->primaryLocationId = $primaryLocationId;
@@ -555,9 +521,7 @@ class Shop
 
     /**
      * @param string $primaryLocale
-     *
-
-     */
+      */
     public function setPrimaryLocale($primaryLocale)
     {
         $this->primaryLocale = $primaryLocale;
@@ -573,9 +537,7 @@ class Shop
 
     /**
      * @param string $address2
-     *
-
-     */
+      */
     public function setAddress2($address2)
     {
         $this->address2 = $address2;
@@ -591,9 +553,7 @@ class Shop
 
     /**
      * @param string $countryCode
-     *
-
-     */
+      */
     public function setCountryCode($countryCode)
     {
         $this->countryCode = $countryCode;
@@ -609,9 +569,7 @@ class Shop
 
     /**
      * @param string $countryName
-     *
-
-     */
+      */
     public function setCountryName($countryName)
     {
         $this->countryName = $countryName;
@@ -627,9 +585,7 @@ class Shop
 
     /**
      * @param string $currency
-     *
-
-     */
+      */
     public function setCurrency($currency)
     {
         $this->currency = $currency;
@@ -645,9 +601,7 @@ class Shop
 
     /**
      * @param string $timezone
-     *
-
-     */
+      */
     public function setTimezone($timezone)
     {
         $this->timezone = $timezone;
@@ -663,9 +617,7 @@ class Shop
 
     /**
      * @param string $ianaTimezone
-     *
-
-     */
+      */
     public function setIanaTimezone($ianaTimezone)
     {
         $this->ianaTimezone = $ianaTimezone;
@@ -681,9 +633,7 @@ class Shop
 
     /**
      * @param string $shopOwner
-     *
-
-     */
+      */
     public function setShopOwner($shopOwner)
     {
         $this->shopOwner = $shopOwner;
@@ -699,9 +649,7 @@ class Shop
 
     /**
      * @param string $moneyFormat
-     *
-
-     */
+      */
     public function setMoneyFormat($moneyFormat)
     {
         $this->moneyFormat = $moneyFormat;
@@ -717,9 +665,7 @@ class Shop
 
     /**
      * @param string $moneyWithCurrencyFormat
-     *
-
-     */
+      */
     public function setMoneyWithCurrencyFormat($moneyWithCurrencyFormat)
     {
         $this->moneyWithCurrencyFormat = $moneyWithCurrencyFormat;
@@ -735,9 +681,7 @@ class Shop
 
     /**
      * @param string $weightUnit
-     *
-
-     */
+      */
     public function setWeightUnit($weightUnit)
     {
         $this->weightUnit = $weightUnit;
@@ -753,9 +697,7 @@ class Shop
 
     /**
      * @param string $provinceCode
-     *
-
-     */
+      */
     public function setProvinceCode($provinceCode)
     {
         $this->provinceCode = $provinceCode;
@@ -771,9 +713,7 @@ class Shop
 
     /**
      * @param bool $taxesIncluded
-     *
-
-     */
+      */
     public function setTaxesIncluded($taxesIncluded)
     {
         $this->taxesIncluded = $taxesIncluded;
@@ -789,9 +729,7 @@ class Shop
 
     /**
      * @param string $taxShipping
-     *
-
-     */
+      */
     public function setTaxShipping($taxShipping)
     {
         $this->taxShipping = $taxShipping;
@@ -807,9 +745,7 @@ class Shop
 
     /**
      * @param string $countyTaxes
-     *
-
-     */
+      */
     public function setCountyTaxes($countyTaxes)
     {
         $this->countyTaxes = $countyTaxes;
@@ -825,9 +761,7 @@ class Shop
 
     /**
      * @param string $planDisplayName
-     *
-
-     */
+      */
     public function setPlanDisplayName($planDisplayName)
     {
         $this->planDisplayName = $planDisplayName;
@@ -843,9 +777,7 @@ class Shop
 
     /**
      * @param string $planName
-     *
-
-     */
+      */
     public function setPlanName($planName)
     {
         $this->planName = $planName;
@@ -861,9 +793,7 @@ class Shop
 
     /**
      * @param bool $hasDiscounts
-     *
-
-     */
+      */
     public function setHasDiscounts($hasDiscounts)
     {
         $this->hasDiscounts = $hasDiscounts;
@@ -879,9 +809,7 @@ class Shop
 
     /**
      * @param bool $hasGiftCards
-     *
-
-     */
+      */
     public function setHasGiftCards($hasGiftCards)
     {
         $this->hasGiftCards = $hasGiftCards;
@@ -897,9 +825,7 @@ class Shop
 
     /**
      * @param string $myshopifyDomain
-     *
-
-     */
+      */
     public function setMyshopifyDomain($myshopifyDomain)
     {
         $this->myshopifyDomain = $myshopifyDomain;
@@ -915,9 +841,7 @@ class Shop
 
     /**
      * @param string $googleAppsDomain
-     *
-
-     */
+      */
     public function setGoogleAppsDomain($googleAppsDomain)
     {
         $this->googleAppsDomain = $googleAppsDomain;
@@ -933,9 +857,7 @@ class Shop
 
     /**
      * @param string $googleAppsLoginEnabled
-     *
-
-     */
+      */
     public function setGoogleAppsLoginEnabled($googleAppsLoginEnabled)
     {
         $this->googleAppsLoginEnabled = $googleAppsLoginEnabled;
@@ -951,9 +873,7 @@ class Shop
 
     /**
      * @param string $moneyInEmailsFormat
-     *
-
-     */
+      */
     public function setMoneyInEmailsFormat($moneyInEmailsFormat)
     {
         $this->moneyInEmailsFormat = $moneyInEmailsFormat;
@@ -969,9 +889,7 @@ class Shop
 
     /**
      * @param string $moneyWithCurrencyInEmailsFormat
-     *
-
-     */
+      */
     public function setMoneyWithCurrencyInEmailsFormat($moneyWithCurrencyInEmailsFormat)
     {
         $this->moneyWithCurrencyInEmailsFormat = $moneyWithCurrencyInEmailsFormat;
@@ -987,9 +905,7 @@ class Shop
 
     /**
      * @param bool $eligibleForPayments
-     *
-
-     */
+      */
     public function setEligibleForPayments($eligibleForPayments)
     {
         $this->eligibleForPayments = $eligibleForPayments;
@@ -1005,9 +921,7 @@ class Shop
 
     /**
      * @param bool $requiresExtraPaymentsAgreement
-     *
-
-     */
+      */
     public function setRequiresExtraPaymentsAgreement($requiresExtraPaymentsAgreement)
     {
         $this->requiresExtraPaymentsAgreement = $requiresExtraPaymentsAgreement;
@@ -1023,9 +937,7 @@ class Shop
 
     /**
      * @param bool $passwordEnabled
-     *
-
-     */
+      */
     public function setPasswordEnabled($passwordEnabled)
     {
         $this->passwordEnabled = $passwordEnabled;
@@ -1041,9 +953,7 @@ class Shop
 
     /**
      * @param bool $hasStoreFront
-     *
-
-     */
+      */
     public function setHasStoreFront($hasStoreFront)
     {
         $this->hasStoreFront = $hasStoreFront;
@@ -1059,9 +969,7 @@ class Shop
 
     /**
      * @param bool $eligibleForCardReaderGiveaway
-     *
-
-     */
+      */
     public function setEligibleForCardReaderGiveaway($eligibleForCardReaderGiveaway)
     {
         $this->eligibleForCardReaderGiveaway = $eligibleForCardReaderGiveaway;
@@ -1077,9 +985,7 @@ class Shop
 
     /**
      * @param bool $finances
-     *
-
-     */
+      */
     public function setFinances($finances)
     {
         $this->finances = $finances;
@@ -1095,9 +1001,7 @@ class Shop
 
     /**
      * @param bool $setupRequired
-     *
-
-     */
+      */
     public function setSetupRequired($setupRequired)
     {
         $this->setupRequired = $setupRequired;
@@ -1113,9 +1017,7 @@ class Shop
 
     /**
      * @param bool $forceSsl
-     *
-
-     */
+      */
     public function setForceSsl($forceSsl)
     {
         $this->forceSsl = $forceSsl;

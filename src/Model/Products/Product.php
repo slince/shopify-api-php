@@ -13,8 +13,6 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Model\Products;
 
-use \DateTimeInterface;
-
 class Product
 {
     /**
@@ -43,7 +41,7 @@ class Product
     protected $productType;
 
     /**
-     * @var DateTimeInterface
+     * @var \DateTimeInterface
      */
     protected $createdAt;
 
@@ -53,12 +51,12 @@ class Product
     protected $handle;
 
     /**
-     * @var DateTimeInterface
+     * @var \DateTimeInterface
      */
     protected $updatedAt;
 
     /**
-     * @var DateTimeInterface
+     * @var \DateTimeInterface
      */
     protected $publishedAt;
 
@@ -144,9 +142,7 @@ class Product
 
     /**
      * @param string $title
-     *
-
-     */
+      */
     public function setTitle($title)
     {
         $this->title = $title;
@@ -162,9 +158,7 @@ class Product
 
     /**
      * @param string $bodyHtml
-     *
-
-     */
+      */
     public function setBodyHtml($bodyHtml)
     {
         $this->bodyHtml = $bodyHtml;
@@ -180,9 +174,7 @@ class Product
 
     /**
      * @param string $vendor
-     *
-
-     */
+      */
     public function setVendor($vendor)
     {
         $this->vendor = $vendor;
@@ -198,27 +190,23 @@ class Product
 
     /**
      * @param string $productType
-     *
-
-     */
+      */
     public function setProductType($productType)
     {
         $this->productType = $productType;
     }
 
     /**
-     * @return DateTimeInterface
+     * @return \DateTimeInterface
      */
-    public function getCreatedAt(): ?DateTimeInterface
+    public function getCreatedAt(): ?\DateTimeInterface
     {
         return $this->createdAt;
     }
 
     /**
-     * @param DateTimeInterface $createdAt
-     *
-
-     */
+     * @param \DateTimeInterface $createdAt
+      */
     public function setCreatedAt(\DateTimeInterface $createdAt)
     {
         $this->createdAt = $createdAt;
@@ -234,8 +222,6 @@ class Product
 
     /**
      * @param string $handle
-     *
-
      */
     public function setHandle($handle)
     {
@@ -243,25 +229,23 @@ class Product
     }
 
     /**
-     * @return DateTimeInterface
+     * @return \DateTimeInterface
      */
-    public function getUpdatedAt(): ?DateTimeInterface
+    public function getUpdatedAt(): ?\DateTimeInterface
     {
         return $this->updatedAt;
     }
 
     /**
-     * @param DateTimeInterface $updatedAt
-     *
-
+     * @param \DateTimeInterface $updatedAt
      */
-    public function setUpdatedAt(?DateTimeInterface $updatedAt)
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }
 
     /**
-     * @return DateTimeInterface
+     * @return \DateTimeInterface
      */
     public function getPublishedAt()
     {
@@ -269,10 +253,8 @@ class Product
     }
 
     /**
-     * @param DateTimeInterface $publishedAt
-     *
-
-     */
+     * @param \DateTimeInterface $publishedAt
+      */
     public function setPublishedAt($publishedAt)
     {
         $this->publishedAt = $publishedAt;
@@ -288,9 +270,7 @@ class Product
 
     /**
      * @param string $templateSuffix
-     *
-
-     */
+      */
     public function setTemplateSuffix($templateSuffix)
     {
         $this->templateSuffix = $templateSuffix;
@@ -306,9 +286,7 @@ class Product
 
     /**
      * @param string $publishedScope
-     *
-
-     */
+      */
     public function setPublishedScope($publishedScope)
     {
         $this->publishedScope = $publishedScope;
@@ -324,9 +302,7 @@ class Product
 
     /**
      * @param string $tags
-     *
-
-     */
+      */
     public function setTags($tags)
     {
         $this->tags = $tags;
@@ -342,9 +318,7 @@ class Product
 
     /**
      * @param Variant[] $variants
-     *
-
-     */
+      */
     public function setVariants($variants)
     {
         $this->variants = $variants;
@@ -360,9 +334,7 @@ class Product
 
     /**
      * @param Image[] $images
-     *
-
-     */
+      */
     public function setImages($images)
     {
         $this->images = $images;
@@ -378,9 +350,7 @@ class Product
 
     /**
      * @param Image $image
-     *
-
-     */
+      */
     public function setImage($image)
     {
         $this->image = $image;
@@ -396,9 +366,7 @@ class Product
 
     /**
      * @param Option[] $options
-     *
-
-     */
+      */
     public function setOptions($options)
     {
         $this->options = $options;

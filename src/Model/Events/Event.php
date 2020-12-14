@@ -12,8 +12,6 @@ declare(strict_types=1);
  */
 namespace Slince\Shopify\Model\Events;
 
-use \DateTimeInterface;
-
 class Event
 {
     /**
@@ -27,7 +25,7 @@ class Event
     protected $subjectId;
 
     /**
-     * @var DateTimeInterface
+     * @var \DateTimeInterface
      */
     protected $createdAt;
 
@@ -104,17 +102,17 @@ class Event
     }
 
     /**
-     * @return DateTimeInterface
+     * @return \DateTimeInterface
      */
-    public function getCreatedAt(): ?DateTimeInterface
+    public function getCreatedAt(): ?\DateTimeInterface
     {
         return $this->createdAt;
     }
 
     /**
-     * @param DateTimeInterface $createdAt
+     * @param \DateTimeInterface $createdAt
      */
-    public function setCreatedAt(?DateTimeInterface $createdAt): void
+    public function setCreatedAt(?\DateTimeInterface $createdAt): void
     {
         $this->createdAt = $createdAt;
     }

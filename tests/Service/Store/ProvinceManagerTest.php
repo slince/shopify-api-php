@@ -19,7 +19,7 @@ class ProvinceManagerTest extends NestCurdManagerTestCase
         $json = Utils::jsonDecode(file_get_contents(static::FIXTURES_DIR.'/'.$fixture), true);
         $json = reset($json);
         $article = $service->create(1, $json);
-        var_dump($article);
+        var_dump(get_class($article));
         $this->assertInstanceOf($service->getModelClass(), $article);
     }
 }

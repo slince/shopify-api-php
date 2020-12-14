@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the slince/shopify-api-php
  *
@@ -339,7 +341,7 @@ class Client
         $body = $response->getBody();
 
         return $body->getSize()
-            ? Utils::jsonDecode($body, true)
+            ? Utils::jsonDecode((string)$body, true)
             : [];
     }
 

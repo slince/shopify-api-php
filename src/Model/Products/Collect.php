@@ -13,8 +13,6 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Model\Products;
 
-use \DateTimeInterface;
-
 class Collect
 {
     /**
@@ -28,12 +26,12 @@ class Collect
     protected $collectionId;
 
     /**
-     * @var DateTimeInterface
+     * @var \DateTimeInterface
      */
     protected $createdAt;
 
     /**
-     * @var DateTimeInterface
+     * @var \DateTimeInterface
      */
     protected $updatedAt;
 
@@ -83,46 +81,40 @@ class Collect
 
     /**
      * @param int $collectionId
-     *
-
-     */
+      */
     public function setCollectionId($collectionId)
     {
         $this->collectionId = $collectionId;
     }
 
     /**
-     * @return DateTimeInterface
+     * @return \DateTimeInterface
      */
-    public function getCreatedAt(): ?DateTimeInterface
+    public function getCreatedAt(): ?\DateTimeInterface
     {
         return $this->createdAt;
     }
 
     /**
-     * @param DateTimeInterface $createdAt
-     *
-
-     */
+     * @param \DateTimeInterface $createdAt
+      */
     public function setCreatedAt(\DateTimeInterface $createdAt)
     {
         $this->createdAt = $createdAt;
     }
 
     /**
-     * @return DateTimeInterface
+     * @return \DateTimeInterface
      */
-    public function getUpdatedAt(): ?DateTimeInterface
+    public function getUpdatedAt(): ?\DateTimeInterface
     {
         return $this->updatedAt;
     }
 
     /**
-     * @param DateTimeInterface $updatedAt
-     *
-
-     */
-    public function setUpdatedAt(?DateTimeInterface $updatedAt)
+     * @param \DateTimeInterface $updatedAt
+      */
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }
@@ -137,9 +129,7 @@ class Collect
 
     /**
      * @param bool $featured
-     *
-
-     */
+      */
     public function setFeatured($featured)
     {
         $this->featured = $featured;
@@ -155,9 +145,7 @@ class Collect
 
     /**
      * @param int $position
-     *
-
-     */
+      */
     public function setPosition($position)
     {
         $this->position = $position;
@@ -173,9 +161,7 @@ class Collect
 
     /**
      * @param int $productId
-     *
-
-     */
+      */
     public function setProductId($productId)
     {
         $this->productId = $productId;
@@ -191,9 +177,7 @@ class Collect
 
     /**
      * @param int $sortValue
-     *
-
-     */
+      */
     public function setSortValue($sortValue)
     {
         $this->sortValue = $sortValue;

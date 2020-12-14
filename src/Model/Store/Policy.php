@@ -13,8 +13,6 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Model\Store;
 
-use \DateTimeInterface;
-
 class Policy
 {
     /**
@@ -33,12 +31,12 @@ class Policy
     protected $handle;
 
     /**
-     * @var DateTimeInterface
+     * @var \DateTimeInterface
      */
     protected $createdAt;
 
     /**
-     * @var DateTimeInterface
+     * @var \DateTimeInterface
      */
     protected $updatedAt;
 
@@ -57,8 +55,7 @@ class Policy
 
     /**
      * @param string $title
-     *
-     */
+      */
     public function setTitle($title)
     {
         $this->title = $title;
@@ -74,8 +71,7 @@ class Policy
 
     /**
      * @param string $body
-     *
-     */
+      */
     public function setBody($body)
     {
         $this->body = $body;
@@ -98,15 +94,15 @@ class Policy
     }
 
     /**
-     * @return DateTimeInterface
+     * @return \DateTimeInterface
      */
-    public function getCreatedAt(): ?DateTimeInterface
+    public function getCreatedAt(): ?\DateTimeInterface
     {
         return $this->createdAt;
     }
 
     /**
-     * @param DateTimeInterface $createdAt
+     * @param \DateTimeInterface $createdAt
      */
     public function setCreatedAt(\DateTimeInterface $createdAt)
     {
@@ -114,17 +110,17 @@ class Policy
     }
 
     /**
-     * @return DateTimeInterface
+     * @return \DateTimeInterface
      */
-    public function getUpdatedAt(): ?DateTimeInterface
+    public function getUpdatedAt(): ?\DateTimeInterface
     {
         return $this->updatedAt;
     }
 
     /**
-     * @param DateTimeInterface $updatedAt
+     * @param \DateTimeInterface $updatedAt
      */
-    public function setUpdatedAt(?DateTimeInterface $updatedAt)
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }

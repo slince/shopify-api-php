@@ -13,8 +13,6 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Model\Products;
 
-use \DateTimeInterface;
-
 class CollectionImage
 {
     /**
@@ -33,7 +31,7 @@ class CollectionImage
     protected $height;
 
     /**
-     * @var DateTimeInterface
+     * @var \DateTimeInterface
      */
     protected $createdAt;
 
@@ -47,9 +45,7 @@ class CollectionImage
 
     /**
      * @param string $src
-     *
-
-     */
+      */
     public function setSrc($src)
     {
         $this->src = $src;
@@ -65,9 +61,7 @@ class CollectionImage
 
     /**
      * @param int $width
-     *
-
-     */
+      */
     public function setWidth($width)
     {
         $this->width = $width;
@@ -83,24 +77,22 @@ class CollectionImage
 
     /**
      * @param int $height
-     *
-
-     */
+      */
     public function setHeight($height)
     {
         $this->height = $height;
     }
 
     /**
-     * @return DateTimeInterface
+     * @return \DateTimeInterface
      */
-    public function getCreatedAt(): ?DateTimeInterface
+    public function getCreatedAt(): ?\DateTimeInterface
     {
         return $this->createdAt;
     }
 
     /**
-     * @param DateTimeInterface $createdAt
+     * @param \DateTimeInterface $createdAt
      */
     public function setCreatedAt(\DateTimeInterface $createdAt)
     {

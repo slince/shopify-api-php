@@ -23,4 +23,9 @@ class AssetManagerTest extends GeneralCurdManagerTestCase
     {
         $this->markTestSkipped('Yet not support.');
     }
+
+    public function testRemove()
+    {
+        $this->markTestSkipped('Yet not support.');
+    }
 }

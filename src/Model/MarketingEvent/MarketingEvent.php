@@ -13,7 +13,6 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Model\MarketingEvent;
 
-use \DateTimeInterface;
 use Slince\Shopify\Model\MarketingEvent\Common\MarketedResource;
 
 class MarketingEvent
@@ -34,17 +33,17 @@ class MarketingEvent
     protected $remoteId;
 
     /**
-     * @var DateTimeInterface
+     * @var \DateTimeInterface
      */
     protected $startedAt;
 
     /**
-     * @var DateTimeInterface
+     * @var \DateTimeInterface
      */
     protected $endedAt;
 
     /**
-     * @var DateTimeInterface
+     * @var \DateTimeInterface
      */
     protected $scheduledToEndAt;
 
@@ -177,49 +176,49 @@ class MarketingEvent
     }
 
     /**
-     * @return DateTimeInterface
+     * @return \DateTimeInterface
      */
-    public function getStartedAt(): DateTimeInterface
+    public function getStartedAt(): \DateTimeInterface
     {
         return $this->startedAt;
     }
 
     /**
-     * @param DateTimeInterface $startedAt
+     * @param \DateTimeInterface $startedAt
      */
-    public function setStartedAt(DateTimeInterface $startedAt): void
+    public function setStartedAt(\DateTimeInterface $startedAt): void
     {
         $this->startedAt = $startedAt;
     }
 
     /**
-     * @return DateTimeInterface
+     * @return \DateTimeInterface
      */
-    public function getEndedAt(): DateTimeInterface
+    public function getEndedAt(): \DateTimeInterface
     {
         return $this->endedAt;
     }
 
     /**
-     * @param DateTimeInterface $endedAt
+     * @param \DateTimeInterface $endedAt
      */
-    public function setEndedAt(DateTimeInterface $endedAt): void
+    public function setEndedAt(\DateTimeInterface $endedAt): void
     {
         $this->endedAt = $endedAt;
     }
 
     /**
-     * @return DateTimeInterface
+     * @return \DateTimeInterface
      */
-    public function getScheduledToEndAt(): DateTimeInterface
+    public function getScheduledToEndAt(): \DateTimeInterface
     {
         return $this->scheduledToEndAt;
     }
 
     /**
-     * @param DateTimeInterface $scheduledToEndAt
+     * @param \DateTimeInterface $scheduledToEndAt
      */
-    public function setScheduledToEndAt(DateTimeInterface $scheduledToEndAt): void
+    public function setScheduledToEndAt(\DateTimeInterface $scheduledToEndAt): void
     {
         $this->scheduledToEndAt = $scheduledToEndAt;
     }

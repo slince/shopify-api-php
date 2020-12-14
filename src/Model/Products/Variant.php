@@ -13,8 +13,6 @@ declare(strict_types=1);
 
 namespace Slince\Shopify\Model\Products;
 
-use \DateTimeInterface;
-
 class Variant
 {
     /**
@@ -88,12 +86,12 @@ class Variant
     protected $option3;
 
     /**
-     * @var DateTimeInterface
+     * @var \DateTimeInterface
      */
     protected $createdAt;
 
     /**
-     * @var DateTimeInterface
+     * @var \DateTimeInterface
      */
     protected $updatedAt;
 
@@ -189,9 +187,7 @@ class Variant
 
     /**
      * @param int $productId
-     *
-
-     */
+      */
     public function setProductId($productId)
     {
         $this->productId = $productId;
@@ -207,9 +203,7 @@ class Variant
 
     /**
      * @param string $title
-     *
-
-     */
+      */
     public function setTitle($title)
     {
         $this->title = $title;
@@ -225,9 +219,7 @@ class Variant
 
     /**
      * @param float $price
-     *
-
-     */
+      */
     public function setPrice($price)
     {
         $this->price = $price;
@@ -243,9 +235,7 @@ class Variant
 
     /**
      * @param string $sku
-     *
-
-     */
+      */
     public function setSku($sku)
     {
         $this->sku = $sku;
@@ -261,9 +251,7 @@ class Variant
 
     /**
      * @param int $position
-     *
-
-     */
+      */
     public function setPosition($position)
     {
         $this->position = $position;
@@ -279,9 +267,7 @@ class Variant
 
     /**
      * @param int $grams
-     *
-
-     */
+      */
     public function setGrams($grams)
     {
         $this->grams = $grams;
@@ -297,9 +283,7 @@ class Variant
 
     /**
      * @param string $inventoryPolicy
-     *
-
-     */
+      */
     public function setInventoryPolicy($inventoryPolicy)
     {
         $this->inventoryPolicy = $inventoryPolicy;
@@ -315,9 +299,7 @@ class Variant
 
     /**
      * @param string $compareAtPrice
-     *
-
-     */
+      */
     public function setCompareAtPrice($compareAtPrice)
     {
         $this->compareAtPrice = $compareAtPrice;
@@ -333,9 +315,7 @@ class Variant
 
     /**
      * @param string $fulfillmentService
-     *
-
-     */
+      */
     public function setFulfillmentService($fulfillmentService)
     {
         $this->fulfillmentService = $fulfillmentService;
@@ -351,9 +331,7 @@ class Variant
 
     /**
      * @param string $inventoryManagement
-     *
-
-     */
+      */
     public function setInventoryManagement($inventoryManagement)
     {
         $this->inventoryManagement = $inventoryManagement;
@@ -369,9 +347,7 @@ class Variant
 
     /**
      * @param string $option1
-     *
-
-     */
+      */
     public function setOption1($option1)
     {
         $this->option1 = $option1;
@@ -387,9 +363,7 @@ class Variant
 
     /**
      * @param string $option2
-     *
-
-     */
+      */
     public function setOption2($option2)
     {
         $this->option2 = $option2;
@@ -405,46 +379,40 @@ class Variant
 
     /**
      * @param string $option3
-     *
-
-     */
+      */
     public function setOption3($option3)
     {
         $this->option3 = $option3;
     }
 
     /**
-     * @return DateTimeInterface
+     * @return \DateTimeInterface
      */
-    public function getCreatedAt(): ?DateTimeInterface
+    public function getCreatedAt(): ?\DateTimeInterface
     {
         return $this->createdAt;
     }
 
     /**
-     * @param DateTimeInterface $createdAt
-     *
-
-     */
+     * @param \DateTimeInterface $createdAt
+      */
     public function setCreatedAt(\DateTimeInterface $createdAt)
     {
         $this->createdAt = $createdAt;
     }
 
     /**
-     * @return DateTimeInterface
+     * @return \DateTimeInterface
      */
-    public function getUpdatedAt(): ?DateTimeInterface
+    public function getUpdatedAt(): ?\DateTimeInterface
     {
         return $this->updatedAt;
     }
 
     /**
-     * @param DateTimeInterface $updatedAt
-     *
-
-     */
-    public function setUpdatedAt(?DateTimeInterface $updatedAt)
+     * @param \DateTimeInterface $updatedAt
+      */
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }
@@ -459,9 +427,7 @@ class Variant
 
     /**
      * @param bool $taxable
-     *
-
-     */
+      */
     public function setTaxable($taxable)
     {
         $this->taxable = $taxable;
@@ -477,9 +443,7 @@ class Variant
 
     /**
      * @param string $barcode
-     *
-
-     */
+      */
     public function setBarcode($barcode)
     {
         $this->barcode = $barcode;
@@ -495,9 +459,7 @@ class Variant
 
     /**
      * @param int $imageId
-     *
-
-     */
+      */
     public function setImageId($imageId)
     {
         $this->imageId = $imageId;
@@ -513,9 +475,7 @@ class Variant
 
     /**
      * @param int $inventoryQuantity
-     *
-
-     */
+      */
     public function setInventoryQuantity($inventoryQuantity)
     {
         $this->inventoryQuantity = $inventoryQuantity;
@@ -531,9 +491,7 @@ class Variant
 
     /**
      * @param float $weight
-     *
-
-     */
+      */
     public function setWeight($weight)
     {
         $this->weight = $weight;
@@ -549,9 +507,7 @@ class Variant
 
     /**
      * @param string $weightUnit
-     *
-
-     */
+      */
     public function setWeightUnit($weightUnit)
     {
         $this->weightUnit = $weightUnit;
@@ -583,9 +539,7 @@ class Variant
 
     /**
      * @param int $oldInventoryQuantity
-     *
-
-     */
+      */
     public function setOldInventoryQuantity($oldInventoryQuantity)
     {
         $this->oldInventoryQuantity = $oldInventoryQuantity;
@@ -601,9 +555,7 @@ class Variant
 
     /**
      * @param bool $requiresShipping
-     *
-
-     */
+      */
     public function setRequiresShipping($requiresShipping)
     {
         $this->requiresShipping = $requiresShipping;
