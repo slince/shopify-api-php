@@ -155,10 +155,14 @@ class LineItem extends Model
 
     /**
      * @param array $appliedDiscount
+     *
+     * @return LineItem
      */
     public function setAppliedDiscount($appliedDiscount)
     {
         $this->appliedDiscount = $appliedDiscount;
+
+        return $this;
     }
 
     /**
