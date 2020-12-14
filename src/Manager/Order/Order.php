@@ -382,6 +382,8 @@ class Order extends Model
 
     /**
      * @param \DateTimeInterface $createdAt
+     *
+     * @return Order
      */
     public function setCreatedAt($createdAt)
     {
@@ -418,10 +420,14 @@ class Order extends Model
 
     /**
      * @param \DateTimeInterface $deletedAt
+     *
+     * @return Order
      */
     public function setDeletedAt($deletedAt)
     {
         $this->deletedAt = $deletedAt;
+
+        return $this;
     }
 
 
@@ -1555,9 +1561,13 @@ class Order extends Model
 
     /**
      * @param Customer $customer
+     *
+     * @return Order
      */
     public function setCustomer($customer)
     {
         $this->customer = $customer;
+
+        return $this;
     }
 }
