@@ -48,7 +48,7 @@ class InventoryLevel
 
     /**
      * @param int $inventoryItemId
-     *                                                                
+     *
      * @return InventoryLevel
      */
     public function setInventoryItemId($inventoryItemId)
@@ -68,7 +68,7 @@ class InventoryLevel
 
     /**
      * @param int $locationId
-     *                                                                
+     *
      * @return InventoryLevel
      */
     public function setLocationId($locationId)
@@ -88,7 +88,7 @@ class InventoryLevel
 
     /**
      * @param int $available
-     *                                                                
+     *
      * @return InventoryLevel
      */
     public function setAvailable($available)
@@ -108,7 +108,7 @@ class InventoryLevel
 
     /**
      * @param \DateTimeInterface $updatedAt
-     *                                                                
+     *
      * @return InventoryLevel
      */
     public function setUpdatedAt($updatedAt)
@@ -128,7 +128,7 @@ class InventoryLevel
 
     /**
      * @param string $adminGraphqlApiId
-     *                                                                
+     *
      * @return InventoryLevel
      */
     public function setAdminGraphqlApiId($adminGraphqlApiId)

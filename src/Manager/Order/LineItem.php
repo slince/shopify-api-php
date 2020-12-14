@@ -555,7 +555,7 @@ class LineItem extends Model
 
     /**
      * @param DiscountAllocation[] $discountAllocations
-     *                                                                
+     *
      * @return LineItem
      */
     public function setDiscountAllocations($discountAllocations)

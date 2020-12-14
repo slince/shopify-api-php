@@ -35,7 +35,7 @@ class DiscountAllocation extends Model
 
     /**
      * @param string $amount
-     *                                                                
+     *
      * @return DiscountAllocation
      */
     public function setAmount($amount)
@@ -55,7 +55,7 @@ class DiscountAllocation extends Model
 
     /**
      * @param string $discountApplicationIndex
-     *                                                                
+     *
      * @return DiscountAllocation
      */
     public function setDiscountApplicationIndex($discountApplicationIndex)
