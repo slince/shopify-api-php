@@ -44,8 +44,19 @@ $credential = new Slince\Shopify\PublicAppCredential('Access Token');
 $credential = new Slince\Shopify\PrivateAppCredential('API KEY', 'PASSWORD', 'SHARED SECRET');
 
 $client = new Slince\Shopify\Client($credential, 'your-store.myshopify.com', [
-    'metaCacheDir' => './tmp' // Metadata cache dir, required
+    'meta_cache_dir' => './tmp' // Metadata cache dir, required
 ]);
+```
+
+### Middleware
+
+
+```php
+$client->getMiddlewares()->push(function(\Psr\Http\Message\ServerRequestInterface $request, callable $next){
+    $response = $next($request);
+    $this->logger->log($request, $response);
+    return $response;
+});
 ```
 
 ### Use Manager to manipulate your data;
@@ -121,43 +132,54 @@ print_r($product->getImages());
 
 Available managers:
 
-- [Article](src/Service/Article/ArticleManagerInterface.php)
-- [Asset](src/Service/Asset/AssetManagerInterface.php)
-- [Blog](src/Service/Blog/BlogManagerInterface.php)
-- [CarrierService](src/Service/CarrierService/CarrierServiceManagerInterface.php)
-- [Collect](src/Service/Collect/CollectManagerInterface.php)
-- [Comment](src/Service/Comment/CommentManagerInterface.php)
-- [Country](src/Service/Country/CountryManagerInterface.php)
-- [CustomCollection](src/Service/CustomCollection/CustomCollectionManagerInterface.php)
-- [Customer](src/Service/Customer/CustomerManagerInterface.php)
-- [CustomerAddress](src/Service/CustomerAddress/AddressManagerInterface.php)
-- [CustomerSavedSearch](src/Service/CustomerSavedSearch/CustomerSavedSearchManagerInterface.php)
-- [DiscountCode](src/Service/DiscountCode/DiscountCodeManagerInterface.php)
-- [DraftOrder](src/Service/DraftOrder/DraftOrderManagerInterface.php)
-- [Fulfillment](src/Service/Fulfillment/FulfillmentManagerInterface.php)
-- [FulfillmentService](src/Service/FulfillmentService/FulfillmentServiceManagerInterface.php)
-- [InventoryItem](src/Service/InventoryItem/InventoryItemManagerInterface.php)
-- [InventoryLevel](src/Service/InventoryLevel/InventoryLevelManagerInterface.php)
-- [Location](src/Service/Location/LocationManagerInterface.php)
-- [Order](src/Service/Order/OrderManagerInterface.php)
-- [OrderRisk](src/Service/OrderRisk/RiskManagerInterface.php)
-- [Page](src/Service/Page/PageManagerInterface.php)
-- [Policy](src/Service/Policy/PolicyManagerInterface.php)
-- [PriceRule](src/Service/PriceRule/PriceRuleManagerInterface.php)
-- [Product](src/Service/Products/ProductManagerInterface.php)
-- [ProductImage](src/Service/ProductImage/ImageManagerInterface.php)
-- [ProductVariant](src/Service/ProductVariant/VariantManagerInterface.php)
-- [Province](src/Service/Province/ProvinceManagerInterface.php)
-- [RecurringApplicationCharge](src/Service/RecurringApplicationCharge/RecurringApplicationChargeManagerInterface.php)
-- [Redirect](src/Service/Redirect/RedirectManagerInterface.php)
-- [Refund](src/Service/Refund/RefundManagerInterface.php)
-- [ScriptTag](src/Service/ScriptTag/ScriptTagManagerInterface.php)
-- [ShippingZone](src/Service/ShippingZone/ShippingZoneManagerInterface.php)
-- [Shop](src/Service/Shop/ShopManagerInterface.php)
-- [SmartCollection](src/Service/SmartCollection/SmartCollectionManagerInterface.php)
-- [Theme](src/Service/Theme/ThemeManagerInterface.php)
-- [Transaction](src/Service/Transaction/TransactionManagerInterface.php)
-- [Webhook](src/Service/Webhook/WebhookManagerInterface.php)
+- [Access\AccessScope](src/Service/Access/AccessScopeManagerInterface.php)
+- [Access\StorefrontAccessToken](src/Service/Access/StorefrontAccessTokenManagerInterface.php)
+- [Analytics\Report](src/Service/Analytics/ReportManagerInterface.php)
+- [Billing\ApplicationCharge](src/Service/Billing/ApplicationChargeManagerInterface.php)
+- [Billing\ApplicationCredit](src/Service/Billing/ApplicationCreditManagerInterface.php)
+- [Billing\RecurringApplicationCharge](src/Service/Billing/RecurringApplicationChargeManagerInterface.php)
+- [Billing\UsageCharge](src/Service/Billing/UsageChargeManagerInterface.php)
+- [Customers\Address](src/Service/Customers/AddressManagerInterface.php)
+- [Customers\Customer](src/Service/Customers/CustomerManagerInterface.php)
+- [Customers\CustomerSavedSearch](src/Service/Customers/CustomerSavedSearchManagerInterface.php)
+- [Discounts\DiscountCode](src/Service/Discounts/DiscountCodeManagerInterface.php)
+- [Discounts\PriceRule](src/Service/Discounts/PriceRuleManagerInterface.php)
+- [Events\Event](src/Service/Events/EventManagerInterface.php)
+- [Events\Webhook](src/Service/Events/WebhookManagerInterface.php)
+- [Inventory\InventoryItem](src/Service/Inventory/InventoryItemManagerInterface.php)
+- [Inventory\InventoryLevel](src/Service/Inventory/InventoryLevelManagerInterface.php)
+- [Inventory\Location](src/Service/Inventory/LocationManagerInterface.php)
+- [MarketingEvent\MarketingEvent](src/Service/MarketingEvent/MarketingEventManagerInterface.php)
+- [OnlineStore\Article](src/Service/OnlineStore/ArticleManagerInterface.php)
+- [OnlineStore\Asset](src/Service/OnlineStore/AssetManagerInterface.php)
+- [OnlineStore\Blog](src/Service/OnlineStore/BlogManagerInterface.php)
+- [OnlineStore\Comment](src/Service/OnlineStore/CommentManagerInterface.php)
+- [OnlineStore\Page](src/Service/OnlineStore/PageManagerInterface.php)
+- [OnlineStore\Redirect](src/Service/OnlineStore/RedirectManagerInterface.php)
+- [OnlineStore\ScriptTag](src/Service/OnlineStore/ScriptTagManagerInterface.php)
+- [OnlineStore\Theme](src/Service/OnlineStore/ThemeManagerInterface.php)
+- [Orders\DraftOrder](src/Service/Orders/DraftOrderManagerInterface.php)
+- [Orders\Order](src/Service/Orders/OrderManagerInterface.php)
+- [Orders\Refund](src/Service/Orders/RefundManagerInterface.php)
+- [Orders\Risk](src/Service/Orders/RiskManagerInterface.php)
+- [Orders\Transaction](src/Service/Orders/TransactionManagerInterface.php)
+- [Products\Collect](src/Service/Products/CollectManagerInterface.php)
+- [Products\CustomCollection](src/Service/Products/CustomCollectionManagerInterface.php)
+- [Products\Image](src/Service/Products/ImageManagerInterface.php)
+- [Products\Product](src/Service/Products/ProductManagerInterface.php)
+- [Products\SmartCollection](src/Service/Products/SmartCollectionManagerInterface.php)
+- [Products\Variant](src/Service/Products/VariantManagerInterface.php)
+- [Shipping\AssignedFulfillmentOrder](src/Service/Shipping/AssignedFulfillmentOrderManagerInterface.php)
+- [Shipping\CarrierService](src/Service/Shipping/CarrierServiceManagerInterface.php)
+- [Shipping\Fulfillment](src/Service/Shipping/FulfillmentManagerInterface.php)
+- [Shipping\FulfillmentOrder](src/Service/Shipping/FulfillmentOrderManagerInterface.php)
+- [Shipping\FulfillmentService](src/Service/Shipping/FulfillmentServiceManagerInterface.php)
+- [Store\Country](src/Service/Store/CountryManagerInterface.php)
+- [Store\Currency](src/Service/Store/CurrencyManagerInterface.php)
+- [Store\Policy](src/Service/Store/PolicyManagerInterface.php)
+- [Store\Province](src/Service/Store/ProvinceManagerInterface.php)
+- [Store\ShippingZone](src/Service/Store/ShippingZoneManagerInterface.php)
+- [Store\Shop](src/Service/Store/ShopManagerInterface.php)
 
 You can access the manager like `$client->getProductManager()`, `$client->getOrderManager()`. 
 
@@ -204,7 +226,6 @@ $product = $client->put('products/12800', [
 
 $client->delete('products/12800');
 ```
-
 ## LICENSE
 
 The MIT license. See [MIT](https://opensource.org/licenses/MIT)

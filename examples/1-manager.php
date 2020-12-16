@@ -19,7 +19,7 @@ $pagination = $client->getProductManager()->paginate([
     'created_at_min' => '2014-04-25T16:15:47-04:00'
 ]);
 
-// $pagination is instance of `Slince\Shopify\Common\CursorBasedPagination`
+// $pagination is instance of `Slince\Shopify\Service\Common\CursorBasedPagination`
 $products = $pagination->current();
 while ($pagination->hasNext()) {
     $products = $pagination->next();
@@ -53,7 +53,7 @@ $product = $client->getProductManager()->create([
 //Removes the product by its id
 $client->getProductManager()->delete(12800);
 
-// The product is an instance of Slince\Shopify\Manager\Product\Product; You can access properties like following:
+// The product is an instance of Slince\Shopify\Model\Products\Product; You can access properties like following:
 echo $product->getTitle();
 echo $product->getCreatedAt(); // DateTime Object
 print_r($product->getVariants());
