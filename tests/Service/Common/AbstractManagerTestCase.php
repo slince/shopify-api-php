@@ -24,6 +24,7 @@ class AbstractManagerTestCase extends TestCase
 
     protected function getFixturesDir()
     {
-        return str_ireplace(['Slince\Shopify\Tests\Service', 'ManagerTest'], ['', ''], get_called_class());
+        $fixture = str_ireplace(['Slince\Shopify\Tests\Service', 'ManagerTest'], ['', ''], get_called_class());
+        return str_replace('\\', '/', $fixture);
     }
 }
