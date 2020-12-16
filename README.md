@@ -20,6 +20,9 @@
     <a href="https://scrutinizer-ci.com/g/slince/shopify-api-php/?branch=master">
         <img src="https://img.shields.io/scrutinizer/g/slince/shopify-api-php.svg?style=flat-square" alt="Scrutinizer">
     </a>
+    <a href="https://packagist.org/packages/slince/shopify-api-php">
+        <img src="https://img.shields.io/packagist/dt/slince/shopify-api-php.svg?style=flat-square" alt="Total Downloads">
+    </a>
 </p>
 
 ## Installation
