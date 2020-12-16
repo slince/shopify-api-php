@@ -1,0 +1,4 @@
+Slince\Shopify\Model\Access\AccessScope:
+    properties:
+        handle:
+            type: string

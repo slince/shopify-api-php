@@ -1,0 +1,26 @@
+Slince\Shopify\Model\Shipping\FulfillmentService:
+    properties:
+        id:
+            type: int
+        name:
+            type: string
+        email:
+            type: string
+        serviceName:
+            type: string
+        handle:
+            type: string
+        fulfillmentOrdersOptIn:
+            type: bool
+        includePendingStock:
+            type: bool
+        providerId:
+            type: int
+        locationId:
+            type: int
+        callbackUrl:
+            type: string
+        trackingSupport:
+            type: bool
+        inventoryManagement:
+            type: bool

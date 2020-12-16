@@ -1,0 +1,14 @@
+Slince\Shopify\Model\Orders\Common\LineItemDuty:
+    properties:
+        shopMoney:
+            type: Slince\Shopify\Model\Common\Price
+        presentmentMoney:
+            type: Slince\Shopify\Model\Common\Price
+        id:
+            type: int
+        harmonizedSystemCode:
+            type: string
+        taxLines:
+            type: array<Slince\Shopify\Model\Orders\Common\TaxLine>
+        adminGraphqlApiId:
+            type: string

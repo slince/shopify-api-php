@@ -1,0 +1,30 @@
+Slince\Shopify\Model\OnlineStore\Article:
+    properties:
+        id:
+            type: int
+        title:
+            type: string
+        createdAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        bodyHtml:
+            type: string
+        blogId:
+            type: int
+        author:
+            type: string
+        userId:
+            type: int
+        publishedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        updatedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        summaryHtml:
+            type: string
+        templateSuffix:
+            type: string
+        handle:
+            type: string
+        tags:
+            type: string
+        adminGraphqlApiId:
+            type: string

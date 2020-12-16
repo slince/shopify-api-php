@@ -1,0 +1,12 @@
+Slince\Shopify\Model\Customers\CustomerSavedSearch:
+    properties:
+        id:
+            type: int
+        name:
+            type: string
+        createdAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        updatedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        query:
+            type: string

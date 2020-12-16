@@ -1,0 +1,152 @@
+Slince\Shopify\Model\Orders\Order:
+    properties:
+        id:
+            type: int
+        email:
+            type: string
+        closedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        createdAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        updatedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        number:
+            type: int
+        note:
+            type: string
+        token:
+            type: string
+        gateway:
+            type: string
+        test:
+            type: bool
+        totalPrice:
+            type: string
+        subtotalPrice:
+            type: string
+        totalWeight:
+            type: int
+        totalTax:
+            type: string
+        taxesIncluded:
+            type: bool
+        currency:
+            type: string
+        financialStatus:
+            type: string
+        confirmed:
+            type: bool
+        totalDiscounts:
+            type: string
+        totalLineItemsPrice:
+            type: string
+        cartToken:
+            type: string
+        buyerAcceptsMarketing:
+            type: bool
+        name:
+            type: string
+        referringSite:
+            type: string
+        landingSite:
+            type: string
+        cancelledAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        cancelReason:
+            type: string
+        totalPriceUsd:
+            type: string
+        checkoutToken:
+            type: string
+        reference:
+            type: string
+        userId:
+            type: int
+        locationId:
+            type: int
+        sourceIdentifier:
+            type: string
+        sourceUrl:
+            type: string
+        processedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        deviceId:
+            type: string
+        phone:
+            type: string
+        customLocale:
+            type: string
+        appId:
+            type: string
+        browserIp:
+            type: string
+        landingSiteRef:
+            type: string
+        orderNumber:
+            type: int
+        discountApplications:
+            type: array<Slince\Shopify\Model\Orders\Common\DiscountAllocation>
+        discountCodes:
+            type: array<Slince\Shopify\Model\Orders\Common\DiscountCode>
+        noteAttributes:
+            type: array<Slince\Shopify\Model\Orders\Common\NoteAttribute>
+        paymentGatewayNames:
+            type: array<string>
+        processingMethod:
+            type: string
+        checkoutId:
+            type: int
+        sourceName:
+            type: string
+        fulfillmentStatus:
+            type: string
+        taxLines:
+            type: array<Slince\Shopify\Model\Orders\Common\TaxLine>
+        tags:
+            type: string
+        contactEmail:
+            type: string
+        orderStatusUrl:
+            type: string
+        presentmentCurrency:
+            type: string
+        totalLineItemsPriceSet:
+            type: Slince\Shopify\Model\Common\PriceSet
+        totalDiscountsSet:
+            type: Slince\Shopify\Model\Common\PriceSet
+        totalShippingPriceSet:
+            type: Slince\Shopify\Model\Common\PriceSet
+        subtotalPriceSet:
+            type: Slince\Shopify\Model\Common\PriceSet
+        totalPriceSet:
+            type: Slince\Shopify\Model\Common\PriceSet
+        totalTaxSet:
+            type: Slince\Shopify\Model\Common\PriceSet
+        lineItems:
+            type: array<Slince\Shopify\Model\Orders\Common\LineItem>
+        fulfillments:
+            type: array<Slince\Shopify\Model\Shipping\Fulfillment>
+        refunds:
+            type: array<Slince\Shopify\Model\Orders\Refund>
+        totalTipReceived:
+            type: string
+        originalTotalDutiesSet:
+            type: Slince\Shopify\Model\Common\PriceSet
+        currentTotalDutiesSet:
+            type: Slince\Shopify\Model\Common\PriceSet
+        adminGraphqlApiId:
+            type: string
+        shippingLines:
+            type: array<Slince\Shopify\Model\Orders\Common\ShippingLine>
+        billingAddress:
+            type: Slince\Shopify\Model\Orders\Common\OrderAddress
+        shippingAddress:
+            type: Slince\Shopify\Model\Orders\Common\OrderAddress
+        clientDetails:
+            type: Slince\Shopify\Model\Orders\Common\ClientDetails
+        paymentDetails:
+            type: Slince\Shopify\Model\Orders\Common\PaymentDetails
+        transactions:
+            type: array<Slince\Shopify\Model\Orders\Transaction>
+        customer:
+            type: Slince\Shopify\Model\Customers\Customer

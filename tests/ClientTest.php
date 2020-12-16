@@ -18,7 +18,7 @@ class ClientTest extends TestCase
     public function testShop()
     {
         $client = new Client('bar.myshopify.com', new PublicAppCredential('foobarbazfoobarbaz'), [
-            'metaCacheDir' => __DIR__ . '/tmp'
+            'meta_cache_dir' => __DIR__ . '/tmp'
         ]);
         $this->assertEquals('bar.myshopify.com', $client->getShop());
         try{
@@ -85,7 +85,7 @@ class ClientTest extends TestCase
     {
         $credential = new PublicAppCredential('foobarbazfoobarbaz');
         $client = new Client('bar.myshopify.com', $credential, [
-            'metaCacheDir' => __DIR__ . '/tmp'
+            'meta_cache_dir' => __DIR__ . '/tmp'
         ]);
         $this->assertEquals($credential, $client->getCredential());
     }
@@ -94,7 +94,7 @@ class ClientTest extends TestCase
     {
         $credential = new PublicAppCredential('foobarbazfoobarbaz');
         $client = new Client('bar.myshopify.com', $credential, [
-            'metaCacheDir' => __DIR__ . '/tmp'
+            'meta_cache_dir' => __DIR__ . '/tmp'
         ]);
 
         foreach ($client->serviceClass as $serviceClass) {
@@ -109,7 +109,7 @@ class ClientTest extends TestCase
     {
         $credential = new PublicAppCredential('foobarbazfoobarbaz');
         $client = new Client('bar.myshopify.com', $credential, [
-            'metaCacheDir' => __DIR__ . '/tmp'
+            'meta_cache_dir' => __DIR__ . '/tmp'
         ]);
         $client->addMetaDir('', __DIR__ . '/Hydrator/serializer');
         $hydrator = $client->getHydrator();
@@ -139,7 +139,7 @@ class ClientTest extends TestCase
     {
         $credential = new PublicAppCredential('foobarbazfoobarbaz');
         $client = new Client('bar.myshopify.com', $credential, [
-            'metaCacheDir' => __DIR__ . '/tmp'
+            'meta_cache_dir' => __DIR__ . '/tmp'
         ]);
         $client->addServiceClass(FooPostManager::class);
         $this->assertInstanceOf(FooPostManager::class, $client->getFooPostManager());
@@ -152,31 +152,31 @@ class ClientTest extends TestCase
         $credential = new PublicAppCredential('foobarbazfoobarbaz');
         try {
             new Client('bar.myshopify.com', $credential, [
-                'metaCacheDir' => __DIR__ . '/tmp',
-                'apiVersion' => '201809'
+                'meta_cache_dir' => __DIR__ . '/tmp',
+                'api_version' => '201809'
             ]);
             new Client('bar.myshopify.com', $credential, [
-                'metaCacheDir' => __DIR__ . '/tmp',
-                'apiVersion' => '2018-092'
+                'meta_cache_dir' => __DIR__ . '/tmp',
+                'api_version' => '2018-092'
             ]);
             new Client('bar.myshopify.com', $credential, [
-                'metaCacheDir' => __DIR__ . '/tmp',
-                'apiVersion' => 'unstableas'
+                'meta_cache_dir' => __DIR__ . '/tmp',
+                'api_version' => 'unstableas'
             ]);
             new Client('bar.myshopify.com', $credential, [
-                'metaCacheDir' => __DIR__ . '/tmp',
-                'apiVersion' => 'prefixunstable'
+                'meta_cache_dir' => __DIR__ . '/tmp',
+                'api_version' => 'prefixunstable'
             ]);
             $this->fail('fail to check version');
         } catch (InvalidArgumentException $exception) {
         }
         new Client('bar.myshopify.com', $credential, [
-            'metaCacheDir' => __DIR__ . '/tmp',
-            'apiVersion' => 'unstable'
+            'meta_cache_dir' => __DIR__ . '/tmp',
+            'api_version' => 'unstable'
         ]);
         new Client('bar.myshopify.com', $credential, [
-            'metaCacheDir' => __DIR__ . '/tmp',
-            'apiVersion' => '2019-10'
+            'meta_cache_dir' => __DIR__ . '/tmp',
+            'api_version' => '2019-10'
         ]);
     }
 
@@ -194,23 +194,20 @@ class ClientTest extends TestCase
                 new \GuzzleHttp\Exception\RequestException(
                     'Client error message.',
                     new \GuzzleHttp\Psr7\Request('GET', '/admin/shop.json'),
-                    new \GuzzleHttp\Psr7\Response(401)
                 )
             );
 
         $credential = new PublicAppCredential('foobarbazfoobarbaz');
         $client = new Client('bar.myshopify.com', $credential, [
-            'metaCacheDir' => __DIR__ . '/tmp',
-            'httpClient' => $httpClientMock,
+            'meta_cache_dir' => __DIR__ . '/tmp',
+            'http_client' => $httpClientMock,
         ]);
 
         try {
             $client->getShopManager()->get();
         } catch (\Exception $exception) {
-            var_dump(get_class($exception), $exception->getMessage());
             $this->assertInstanceOf(ClientException::class, $exception);
             $this->assertEquals($exception->getMessage(), 'Client error message.');
-            $this->assertEquals($exception->getCode(), 401);
         }
     }
 }

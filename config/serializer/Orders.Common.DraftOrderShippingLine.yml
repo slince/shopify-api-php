@@ -1,0 +1,10 @@
+Slince\Shopify\Model\Orders\Common\DraftOrderShippingLine:
+    properties:
+        custom:
+            type: bool
+        handle:
+            type: string
+        title:
+            type: string
+        price:
+            type: float

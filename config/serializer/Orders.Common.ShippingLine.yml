@@ -1,0 +1,22 @@
+Slince\Shopify\Model\Orders\Common\ShippingLine:
+    properties:
+        code:
+            type: string
+        price:
+            type: string
+        priceSet:
+            type: Slince\Shopify\Model\Common\PriceSet
+        discountedPrice:
+            type: string
+        discountedPriceSet:
+            type: Slince\Shopify\Model\Common\PriceSet
+        source:
+            type: string
+        title:
+            type: string
+        taxLines:
+            type: array<Slince\Shopify\Model\Orders\Common\TaxLine>
+        carrierIdentifier:
+            type: string
+        requestedFulfillmentServiceId:
+            type: string

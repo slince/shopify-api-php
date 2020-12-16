@@ -1,0 +1,14 @@
+Slince\Shopify\Model\Access\StorefrontAccessToken:
+    properties:
+        id:
+            type: int
+        title:
+            type: string
+        accessToken:
+            type: string
+        accessScope:
+            type: string
+        adminGraphqlApiId:
+            type: string
+        createdAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>

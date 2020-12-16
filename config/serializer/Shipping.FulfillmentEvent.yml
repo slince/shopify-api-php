@@ -1,0 +1,38 @@
+Slince\Shopify\Model\Shipping\FulfillmentEvent:
+    properties:
+        id:
+            type: int
+        fulfillmentId:
+            type: int
+        status:
+            type: string
+        message:
+            type: string
+        happenedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        city:
+            type: string
+        province:
+            type: string
+        country:
+            type: string
+        zip:
+            type: string
+        address1:
+            type: string
+        latitude:
+            type: float
+        longitude:
+            type: float
+        shopId:
+            type: int
+        createdAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        updatedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        estimatedDeliveryAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        orderId:
+            type: int
+        adminGraphqlApiId:
+            type: string

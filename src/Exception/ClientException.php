@@ -40,7 +40,11 @@ class ClientException extends RuntimeException
     protected static function extractErrorMessages(ResponseInterface $response)
     {
         $rawBody = (string)$response->getBody();
-        $data = Utils::jsonDecode($rawBody, true);
+        try {
+            $data = Utils::jsonDecode($rawBody, true);
+        } catch (\Exception $e) {
+            $data = [];
+        }
         return $data['errors'] ?? $rawBody;
     }
 

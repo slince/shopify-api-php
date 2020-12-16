@@ -31,7 +31,7 @@ class ApplicationCredit
     protected $description;
 
     /**
-     * @var true|null
+     * @var bool
      */
     protected $test;
 
@@ -84,7 +84,7 @@ class ApplicationCredit
     }
 
     /**
-     * @return true|null
+     * @return bool
      */
     public function getTest(): ?bool
     {
@@ -92,7 +92,7 @@ class ApplicationCredit
     }
 
     /**
-     * @param true|null $test
+     * @param bool $test
      */
     public function setTest(?bool $test): void
     {

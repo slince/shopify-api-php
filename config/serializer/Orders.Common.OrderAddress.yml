@@ -1,0 +1,32 @@
+Slince\Shopify\Model\Orders\Common\OrderAddress:
+    properties:
+        firstName:
+            type: string
+        address1:
+            type: string
+        phone:
+            type: string
+        city:
+            type: string
+        zip:
+            type: string
+        province:
+            type: string
+        country:
+            type: string
+        lastName:
+            type: string
+        address2:
+            type: string
+        company:
+            type: string
+        latitude:
+            type: float
+        longitude:
+            type: float
+        name:
+            type: string
+        countryCode:
+            type: string
+        provinceCode:
+            type: string

@@ -1,0 +1,26 @@
+Slince\Shopify\Model\Inventory\InventoryItem:
+    properties:
+        id:
+            type: int
+        sku:
+            type: string
+        createdAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        updatedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        requiresShipping:
+            type: bool
+        cost:
+            type: string
+        countryCodeOfOrigin:
+            type: string
+        provinceCodeOfOrigin:
+            type: string
+        harmonizedSystemCode:
+            type: int
+        tracked:
+            type: bool
+        countryHarmonizedSystemCodes:
+            type: array<Slince\Shopify\Model\Inventory\Common\CountryHarmonizedSystemCode>
+        adminGraphqlApiId:
+            type: string

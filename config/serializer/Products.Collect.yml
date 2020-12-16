@@ -1,0 +1,18 @@
+Slince\Shopify\Model\Products\Collect:
+    properties:
+        id:
+            type: int
+        collectionId:
+            type: int
+        createdAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        updatedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        featured:
+            type: bool
+        position:
+            type: int
+        productId:
+            type: int
+        sortValue:
+            type: int

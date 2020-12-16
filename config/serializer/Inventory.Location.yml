@@ -1,0 +1,40 @@
+Slince\Shopify\Model\Inventory\Location:
+    properties:
+        id:
+            type: int
+        name:
+            type: string
+        address1:
+            type: string
+        address2:
+            type: string
+        city:
+            type: string
+        zip:
+            type: string
+        province:
+            type: string
+        country:
+            type: string
+        phone:
+            type: int
+        createdAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        updatedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        countryCode:
+            type: string
+        countryName:
+            type: string
+        provinceCode:
+            type: string
+        legacy:
+            type: bool
+        active:
+            type: bool
+        adminGraphqlApiId:
+            type: string
+        localizedCountryName:
+            type: string
+        localizedProvinceName:
+            type: string

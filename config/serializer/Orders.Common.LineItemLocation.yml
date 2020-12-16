@@ -1,0 +1,18 @@
+Slince\Shopify\Model\Orders\Common\LineItemLocation:
+    properties:
+        id:
+            type: int
+        countryCode:
+            type: string
+        provinceCode:
+            type: string
+        name:
+            type: string
+        address1:
+            type: string
+        address2:
+            type: string
+        city:
+            type: string
+        zip:
+            type: string

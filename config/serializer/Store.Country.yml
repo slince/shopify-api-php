@@ -1,0 +1,12 @@
+Slince\Shopify\Model\Store\Country:
+    properties:
+        name:
+            type: string
+        tax:
+            type: float
+        code:
+            type: string
+        taxName:
+            type: string
+        provinces:
+            type: array<Slince\Shopify\Model\Store\Province>

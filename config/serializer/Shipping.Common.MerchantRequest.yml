@@ -1,0 +1,8 @@
+Slince\Shopify\Model\Shipping\Common\MerchantRequest:
+    properties:
+        message:
+            type: string
+        requestOptions:
+            type: array<Slince\Shopify\Model\Shipping\Common\RequestOption>
+        kind:
+            type: string

@@ -1,0 +1,14 @@
+Slince\Shopify\Model\Orders\Common\ClientDetails:
+    properties:
+        browserIp:
+            type: string
+        acceptLanguage:
+            type: string
+        userAgent:
+            type: string
+        sessionHash:
+            type: string
+        browserWidth:
+            type: int
+        browserHeight:
+            type: int

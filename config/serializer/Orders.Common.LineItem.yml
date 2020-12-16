@@ -1,0 +1,58 @@
+Slince\Shopify\Model\Orders\Common\LineItem:
+    properties:
+        id:
+            type: int
+        variantId:
+            type: int
+        title:
+            type: string
+        quantity:
+            type: int
+        sku:
+            type: string
+        variantTitle:
+            type: string
+        vendor:
+            type: string
+        fulfillmentService:
+            type: string
+        productId:
+            type: int
+        requiresShipping:
+            type: bool
+        taxable:
+            type: bool
+        giftCard:
+            type: bool
+        name:
+            type: string
+        variantInventoryManagement:
+            type: string
+        properties:
+            type: array<Slince\Shopify\Model\Orders\Common\LineItemProperty>
+        productExists:
+            type: bool
+        fulfillableQuantity:
+            type: int
+        grams:
+            type: int
+        price:
+            type: string
+        totalDiscount:
+            type: string
+        fulfillmentStatus:
+            type: string
+        priceSet:
+            type: Slince\Shopify\Model\Common\PriceSet
+        totalDiscountSet:
+            type: Slince\Shopify\Model\Common\PriceSet
+        discountAllocations:
+            type: array<Slince\Shopify\Model\Orders\Common\DiscountAllocation>
+        originLocation:
+            type: Slince\Shopify\Model\Orders\Common\LineItemLocation
+        duties:
+            type: array<Slince\Shopify\Model\Orders\Common\LineItemDuty>
+        adminGraphqlApiId:
+            type: string
+        taxLines:
+            type: array<Slince\Shopify\Model\Orders\Common\TaxLine>

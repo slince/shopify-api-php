@@ -21,4 +21,9 @@ class FulfillmentOrderManagerTest extends NestCurdManagerTestCase
     {
         $this->markTestSkipped('Yet not support.');
     }
+
+    public function testCount()
+    {
+        $this->markTestSkipped('Yet not support.');
+    }
 }

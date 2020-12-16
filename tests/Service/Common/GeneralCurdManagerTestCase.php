@@ -9,17 +9,6 @@ use Slince\Shopify\Tests\TestCase;
 class GeneralCurdManagerTestCase extends AbstractManagerTestCase
 {
 
-    /**
-     * @param string $fixture
-     *
-     * @return GeneralCurdManager
-     */
-    public function getService($fixture)
-    {
-        $class = $this->getServiceClass();
-        return new $class($this->getClientMock($fixture));
-    }
-
     public function testFindAll()
     {
         $fixture = $this->getFixturesDir().'/all.json';

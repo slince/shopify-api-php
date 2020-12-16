@@ -1,0 +1,62 @@
+Slince\Shopify\Model\Discounts\PriceRule:
+    properties:
+        id:
+            type: int
+        valueType:
+            type: string
+        value:
+            type: string
+        customerSelection:
+            type: string
+        targetType:
+            type: string
+        targetSelection:
+            type: string
+        allocationMethod:
+            type: string
+        allocationLimit:
+            type: int
+        oncePerCustomer:
+            type: bool
+        usageLimit:
+            type: int
+        startsAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        endsAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        createdAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        updatedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        entitledProductIds:
+            type: array<int>
+        entitledVariantIds:
+            type: array<int>
+        entitledCollectionIds:
+            type: array<int>
+        entitledCountryIds:
+            type: array<int>
+        prerequisiteProductIds:
+            type: array<int>
+        prerequisiteVariantIds:
+            type: array<int>
+        prerequisiteCollectionIds:
+            type: array<int>
+        prerequisiteSavedSearchIds:
+            type: array<int>
+        prerequisiteCustomerIds:
+            type: array<int>
+        prerequisiteSubtotalRange:
+            type: array
+        prerequisiteQuantityRange:
+            type: array
+        prerequisiteShippingPriceRange:
+            type: array
+        prerequisiteToEntitlementQuantityRatio:
+            type: array
+        prerequisiteToEntitlementPurchase:
+            type: array
+        title:
+            type: string
+        adminGraphqlApiId:
+            type: string

@@ -1,0 +1,22 @@
+Slince\Shopify\Model\Orders\Common\RefundLineItem:
+    properties:
+        id:
+            type: int
+        quantity:
+            type: int
+        lineItemId:
+            type: int
+        locationId:
+            type: int
+        restockType:
+            type: string
+        subtotal:
+            type: float
+        totalTax:
+            type: float
+        subtotalSet:
+            type: Slince\Shopify\Model\Common\PriceSet
+        totalTaxSet:
+            type: Slince\Shopify\Model\Common\PriceSet
+        lineItem:
+            type: Slince\Shopify\Model\Orders\Common\LineItem

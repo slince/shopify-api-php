@@ -1,0 +1,26 @@
+Slince\Shopify\Model\Billing\ApplicationCharge:
+    properties:
+        id:
+            type: int
+        name:
+            type: string
+        apiClientId:
+            type: int
+        price:
+            type: string
+        status:
+            type: string
+        returnUrl:
+            type: string
+        test:
+            type: bool
+        createdAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        updatedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        chargeType:
+            type: string
+        decoratedReturnUrl:
+            type: string
+        confirmationUrl:
+            type: string

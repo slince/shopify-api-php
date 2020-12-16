@@ -1,0 +1,6 @@
+Slince\Shopify\Model\Orders\Common\RefundDuty:
+    properties:
+        dutyId:
+            type: int
+        refundType:
+            type: string

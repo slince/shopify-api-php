@@ -1,0 +1,24 @@
+Slince\Shopify\Model\Products\CustomCollection:
+    properties:
+        id:
+            type: int
+        handle:
+            type: string
+        title:
+            type: string
+        updatedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        bodyHtml:
+            type: string
+        publishedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        sortOrder:
+            type: string
+        templateSuffix:
+            type: string
+        publishedScope:
+            type: string
+        image:
+            type: Slince\Shopify\Model\Products\CollectionImage
+        adminGraphqlApiId:
+            type: string

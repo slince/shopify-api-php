@@ -47,6 +47,6 @@ class PriceRuleManager extends GeneralCurdManager implements PriceRuleManagerInt
      */
     public function count(array $query = [])
     {
-        return new \Exception('The method is not supported');
+        throw new \Exception('The method is not supported');
     }
 }

@@ -1,0 +1,28 @@
+Slince\Shopify\Model\OnlineStore\Comment:
+    properties:
+        id:
+            type: int
+        body:
+            type: string
+        bodyHtml:
+            type: string
+        author:
+            type: string
+        email:
+            type: string
+        status:
+            type: string
+        articleId:
+            type: int
+        blogId:
+            type: int
+        createdAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        updatedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        ip:
+            type: string
+        userAgent:
+            type: string
+        publishedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>

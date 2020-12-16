@@ -1,0 +1,24 @@
+Slince\Shopify\Model\OnlineStore\Blog:
+    properties:
+        id:
+            type: int
+        handle:
+            type: string
+        title:
+            type: string
+        updatedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        commentable:
+            type: string
+        feedburner:
+            type: string
+        feedburnerLocation:
+            type: string
+        createdAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        templateSuffix:
+            type: string
+        tags:
+            type: string
+        adminGraphqlApiId:
+            type: string

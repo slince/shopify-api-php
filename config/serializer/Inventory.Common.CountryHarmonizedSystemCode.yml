@@ -1,0 +1,6 @@
+Slince\Shopify\Model\Inventory\Common\CountryHarmonizedSystemCode:
+    properties:
+        harmonizedSystemCode:
+            type: string
+        countryCode:
+            type: string

@@ -1,0 +1,16 @@
+Slince\Shopify\Model\Shipping\Common\LineItem:
+    properties:
+        id:
+            type: int
+        shopId:
+            type: int
+        fulfillmentOrderId:
+            type: int
+        quantity:
+            type: int
+        lineItemId:
+            type: int
+        fulfillableQuantity:
+            type: int
+        variantId:
+            type: int

@@ -6,6 +6,17 @@ use Slince\Shopify\Tests\TestCase;
 
 class AbstractManagerTestCase extends TestCase
 {
+    /**
+     * @param string $fixture
+     *
+     * @return object
+     */
+    public function getService($fixture)
+    {
+        $class = $this->getServiceClass();
+        return new $class($this->getClientMock($fixture));
+    }
+
     protected function getServiceClass()
     {
         return str_ireplace(['\Tests', 'Test'], ['', ''], get_called_class());

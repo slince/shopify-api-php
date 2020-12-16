@@ -1,0 +1,86 @@
+Slince\Shopify\Model\Orders\Checkout:
+    properties:
+        id:
+            type: int
+        token:
+            type: string
+        cartToken:
+            type: string
+        email:
+            type: string
+        gateway:
+            type: string
+        buyerAcceptsMarketing:
+            type: bool
+        createdAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        updatedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        landingSite:
+            type: string
+        note:
+            type: string
+        noteAttributes:
+            type: array<Slince\Shopify\Model\Orders\Common\NoteAttribute>
+        referringSite:
+            type: string
+        shippingLines:
+            type: array<Slince\Shopify\Model\Orders\Common\CheckoutShippingLine>
+        taxesIncluded:
+            type: bool
+        totalWeight:
+            type: int
+        currency:
+            type: string
+        completedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        closedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        userId:
+            type: int
+        locationId:
+            type: int
+        sourceIdentifier:
+            type: string
+        sourceUrl:
+            type: string
+        deviceId:
+            type: string
+        phone:
+            type: string
+        customerLocale:
+            type: string
+        lineItems:
+            type: array<Slince\Shopify\Model\Orders\Common\LineItem>
+        name:
+            type: string
+        source:
+            type: string
+        abandonedCheckoutUrl:
+            type: string
+        discountCodes:
+            type: array<Slince\Shopify\Model\Discounts\DiscountCode>
+        taxLines:
+            type: array<Slince\Shopify\Model\Orders\Common\TaxLine>
+        sourceName:
+            type: string
+        presentmentCurrency:
+            type: string
+        totalDiscounts:
+            type: string
+        totalLineItemsPrice:
+            type: string
+        totalPrice:
+            type: string
+        totalTax:
+            type: string
+        subtotalPrice:
+            type: string
+        totalDuties:
+            type: string
+        billingAddress:
+            type: Slince\Shopify\Model\Orders\Common\OrderAddress
+        shippingAddress:
+            type: Slince\Shopify\Model\Orders\Common\OrderAddress
+        customer:
+            type: Slince\Shopify\Model\Customers\Customer

@@ -1,0 +1,24 @@
+Slince\Shopify\Model\Shipping\AssignedFulfillmentOrder:
+    properties:
+        id:
+            type: int
+        shopId:
+            type: int
+        orderId:
+            type: int
+        assignedLocationId:
+            type: int
+        fulfillmentServiceHandle:
+            type: string
+        requestStatus:
+            type: string
+        status:
+            type: string
+        supportedActions:
+            type: array<string>
+        destination:
+            type: Slince\Shopify\Model\Shipping\Common\Destination
+        lineItems:
+            type: array<Slince\Shopify\Model\Shipping\Common\LineItem>
+        assignedLocation:
+            type: Slince\Shopify\Model\Inventory\Location

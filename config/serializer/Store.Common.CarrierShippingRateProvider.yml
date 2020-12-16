@@ -1,0 +1,14 @@
+Slince\Shopify\Model\Store\Common\CarrierShippingRateProvider:
+    properties:
+        id:
+            type: int
+        carrierServiceId:
+            type: int
+        flatModifier:
+            type: string
+        percentModifier:
+            type: string
+        serviceFilter:
+            type: array
+        shippingZoneId:
+            type: int

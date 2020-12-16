@@ -1,0 +1,6 @@
+Slince\Shopify\Model\Common\Price:
+    properties:
+        amount:
+            type: string
+        currencyCode:
+            type: string

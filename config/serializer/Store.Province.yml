@@ -1,0 +1,18 @@
+Slince\Shopify\Model\Store\Province:
+    properties:
+        countryId:
+            type: int
+        name:
+            type: string
+        code:
+            type: string
+        tax:
+            type: float
+        taxName:
+            type: string
+        taxType:
+            type: string
+        shippingZoneId:
+            type: int
+        taxPercentage:
+            type: float

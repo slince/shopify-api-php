@@ -55,7 +55,7 @@ class ProvinceManager extends NestCrudManager implements ProvinceManagerInterfac
      */
     public function remove($countryId, $id)
     {
-        return new \Exception('The method is not supported');
+        throw new \Exception('The method is not supported');
     }
 
     /**
@@ -63,6 +63,6 @@ class ProvinceManager extends NestCrudManager implements ProvinceManagerInterfac
      */
     public function create($countryId, array $data)
     {
-        return new \Exception('The method is not supported');
+        throw new \Exception('The method is not supported');
     }
 }

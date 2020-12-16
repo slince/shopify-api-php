@@ -1,0 +1,6 @@
+Slince\Shopify\Model\Orders\Common\NoteAttribute:
+    properties:
+        name:
+            type: string
+        value:
+            type: string

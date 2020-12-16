@@ -1,0 +1,12 @@
+Slince\Shopify\Model\Orders\Common\CurrencyExchangeAdjustment:
+    properties:
+        id:
+            type: int
+        adjustment:
+            type: string
+        originalAmount:
+            type: string
+        finalAmount:
+            type: string
+        currency:
+            type: string

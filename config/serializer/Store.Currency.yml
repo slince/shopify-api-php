@@ -1,0 +1,8 @@
+Slince\Shopify\Model\Store\Currency:
+    properties:
+        currency:
+            type: string
+        rateUpdatedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        enabled:
+            type: bool

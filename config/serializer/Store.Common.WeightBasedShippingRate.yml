@@ -1,0 +1,14 @@
+Slince\Shopify\Model\Store\Common\WeightBasedShippingRate:
+    properties:
+        id:
+            type: int
+        name:
+            type: string
+        price:
+            type: string
+        shippingZoneId:
+            type: int
+        weightLow:
+            type: float
+        weightHigh:
+            type: float

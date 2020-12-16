@@ -1,0 +1,54 @@
+Slince\Shopify\Model\Products\Variant:
+    properties:
+        id:
+            type: int
+        productId:
+            type: int
+        title:
+            type: string
+        price:
+            type: float
+        sku:
+            type: string
+        position:
+            type: int
+        grams:
+            type: int
+        inventoryPolicy:
+            type: string
+        compareAtPrice:
+            type: string
+        fulfillmentService:
+            type: string
+        inventoryManagement:
+            type: string
+        option1:
+            type: string
+        option2:
+            type: string
+        option3:
+            type: string
+        createdAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        updatedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        taxable:
+            type: bool
+        barcode:
+            type: string
+        imageId:
+            type: int
+        inventoryQuantity:
+            type: int
+        weight:
+            type: float
+        weightUnit:
+            type: string
+        inventoryItemId:
+            type: int
+        oldInventoryQuantity:
+            type: int
+        requiresShipping:
+            type: bool
+        adminGraphqlApiId:
+            type: string

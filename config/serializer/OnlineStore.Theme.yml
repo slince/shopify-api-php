@@ -1,0 +1,20 @@
+Slince\Shopify\Model\OnlineStore\Theme:
+    properties:
+        id:
+            type: int
+        name:
+            type: string
+        createdAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        updatedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        role:
+            type: string
+        themeStoreId:
+            type: int
+        previewable:
+            type: bool
+        processing:
+            type: bool
+        adminGraphqlApiId:
+            type: string

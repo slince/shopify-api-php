@@ -1,0 +1,10 @@
+Slince\Shopify\Model\Products\CollectionImage:
+    properties:
+        src:
+            type: string
+        width:
+            type: int
+        height:
+            type: int
+        createdAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>

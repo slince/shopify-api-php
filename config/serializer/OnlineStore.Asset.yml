@@ -1,0 +1,20 @@
+Slince\Shopify\Model\OnlineStore\Asset:
+    properties:
+        key:
+            type: string
+        publicUrl:
+            type: string
+        value:
+            type: string
+        createdAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        updatedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        contentType:
+            type: string
+        size:
+            type: int
+        checkSum:
+            type: string
+        themeId:
+            type: int

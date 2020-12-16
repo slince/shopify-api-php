@@ -1,0 +1,14 @@
+Slince\Shopify\Model\OnlineStore\ScriptTag:
+    properties:
+        id:
+            type: int
+        src:
+            type: string
+        event:
+            type: string
+        createdAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        updatedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        displayScope:
+            type: string

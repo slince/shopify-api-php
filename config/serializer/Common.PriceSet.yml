@@ -1,0 +1,6 @@
+Slince\Shopify\Model\Common\PriceSet:
+    properties:
+        shopMoney:
+            type: Slince\Shopify\Model\Common\Price
+        presentmentMoney:
+            type: Slince\Shopify\Model\Common\Price

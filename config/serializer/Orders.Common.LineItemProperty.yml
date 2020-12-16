@@ -1,0 +1,6 @@
+Slince\Shopify\Model\Orders\Common\LineItemProperty:
+    properties:
+        name:
+            type: string
+        value:
+            type: string

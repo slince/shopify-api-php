@@ -1,0 +1,22 @@
+Slince\Shopify\Model\Events\Webhook:
+    properties:
+        id:
+            type: int
+        address:
+            type: string
+        topic:
+            type: string
+        createdAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        updatedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        format:
+            type: string
+        fields:
+            type: array<string>
+        metafieldNamespaces:
+            type: array<string>
+        apiVersion:
+            type: string
+        privateMetafieldNamespaces:
+            type: array<string>

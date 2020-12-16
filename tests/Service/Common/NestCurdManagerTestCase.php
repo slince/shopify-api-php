@@ -8,18 +8,6 @@ use Slince\Shopify\Service\Common\NestCrudManager;
 abstract class NestCurdManagerTestCase extends AbstractManagerTestCase
 {
 
-    /**
-     * @param string $fixture
-     *
-     * @return NestCrudManager
-     */
-    public function getService($fixture)
-    {
-        $class = $this->getServiceClass();
-
-        return new $class($this->getClientMock($fixture));
-    }
-
     public function testFindAll()
     {
         $fixture = $this->getFixturesDir().'/'.'all.json';

@@ -1,0 +1,12 @@
+Slince\Shopify\Model\Orders\Common\AppliedDiscount:
+    properties:
+        title:
+            type: string
+        description:
+            type: string
+        value:
+            type: string
+        valueType:
+            type: string
+        amount:
+            type: string

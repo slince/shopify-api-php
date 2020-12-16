@@ -1,0 +1,30 @@
+Slince\Shopify\Model\Orders\Refund:
+    properties:
+        id:
+            type: int
+        orderId:
+            type: int
+        createdAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        note:
+            type: string
+        userId:
+            type: int
+        processedAt:
+            type: string
+        restock:
+            type: bool
+        duties:
+            type: array<Slince\Shopify\Model\Orders\Common\Duty>
+        totalDutiesSet:
+            type: Slince\Shopify\Model\Common\PriceSet
+        adminGraphqlApiId:
+            type: string
+        refundDuties:
+            type: array<Slince\Shopify\Model\Orders\Common\RefundDuty>
+        refundLineItems:
+            type: array<Slince\Shopify\Model\Orders\Common\RefundLineItem>
+        transactions:
+            type: array<Slince\Shopify\Model\Orders\Transaction>
+        orderAdjustments:
+            type: array<Slince\Shopify\Model\Orders\Common\OrderAdjustment>

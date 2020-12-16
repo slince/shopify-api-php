@@ -1,0 +1,10 @@
+Slince\Shopify\Model\Orders\Common\CheckoutShippingLine:
+    properties:
+        code:
+            type: string
+        price:
+            type: string
+        source:
+            type: string
+        title:
+            type: string

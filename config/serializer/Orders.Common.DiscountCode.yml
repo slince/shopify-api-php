@@ -1,0 +1,8 @@
+Slince\Shopify\Model\Orders\Common\DiscountCode:
+    properties:
+        code:
+            type: string
+        amount:
+            type: string
+        type:
+            type: string

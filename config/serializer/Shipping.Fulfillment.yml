@@ -1,0 +1,36 @@
+Slince\Shopify\Model\Shipping\Fulfillment:
+    properties:
+        id:
+            type: int
+        orderId:
+            type: int
+        status:
+            type: string
+        createdAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        service:
+            type: string
+        updatedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        trackingCompany:
+            type: string
+        shipmentStatus:
+            type: string
+        locationId:
+            type: int
+        lineItems:
+            type: array<Slince\Shopify\Model\Orders\Common\LineItem>
+        trackingNumber:
+            type: string
+        trackingNumbers:
+            type: array<string>
+        trackingUrl:
+            type: string
+        trackingUrls:
+            type: array<string>
+        receipt:
+            type: array
+        name:
+            type: string
+        adminGraphqlApiId:
+            type: string

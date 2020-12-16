@@ -47,6 +47,6 @@ class CollectManager extends GeneralCurdManager implements CollectManagerInterfa
      */
     public function update($id, array $data)
     {
-        return new \Exception('The method is not supported');
+        throw new \Exception('The method is not supported');
     }
 }

@@ -1,0 +1,12 @@
+Slince\Shopify\Model\Inventory\InventoryLevel:
+    properties:
+        inventoryItemId:
+            type: int
+        locationId:
+            type: int
+        available:
+            type: int
+        updatedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        adminGraphqlApiId:
+            type: string

@@ -1,0 +1,10 @@
+Slince\Shopify\Model\Billing\ApplicationCredit:
+    properties:
+        id:
+            type: int
+        amount:
+            type: string
+        description:
+            type: string
+        test:
+            type: bool

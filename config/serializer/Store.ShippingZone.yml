@@ -1,0 +1,14 @@
+Slince\Shopify\Model\Store\ShippingZone:
+    properties:
+        name:
+            type: string
+        countries:
+            type: array<Slince\Shopify\Model\Store\Country>
+        provinces:
+            type: array<Slince\Shopify\Model\Store\Province>
+        carrierShippingRateProviders:
+            type: array<Slince\Shopify\Model\Store\Common\CarrierShippingRateProvider>
+        priceBasedShippingRates:
+            type: Slince\Shopify\Model\Store\Common\PriceBasedShippingRate
+        weightBasedShippingRates:
+            type: Slince\Shopify\Model\Store\Common\WeightBasedShippingRate

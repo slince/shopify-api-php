@@ -1,0 +1,14 @@
+Slince\Shopify\Model\Store\Policy:
+    properties:
+        title:
+            type: string
+        body:
+            type: string
+        handle:
+            type: string
+        createdAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        updatedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        url:
+            type: string

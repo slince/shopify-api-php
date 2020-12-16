@@ -1,0 +1,16 @@
+Slince\Shopify\Model\Shipping\CarrierService:
+    properties:
+        id:
+            type: int
+        name:
+            type: string
+        active:
+            type: bool
+        serviceDiscovery:
+            type: bool
+        carrierServiceType:
+            type: string
+        format:
+            type: string
+        callbackUrl:
+            type: string

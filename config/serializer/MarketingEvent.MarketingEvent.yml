@@ -1,0 +1,46 @@
+Slince\Shopify\Model\MarketingEvent\MarketingEvent:
+    properties:
+        id:
+            type: int
+        eventType:
+            type: string
+        remoteId:
+            type: string
+        startedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        endedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        scheduledToEndAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        budget:
+            type: string
+        currency:
+            type: string
+        manageUrl:
+            type: string
+        previewUrl:
+            type: string
+        utmCampaign:
+            type: string
+        utmSource:
+            type: string
+        utmMedium:
+            type: string
+        budgetType:
+            type: string
+        description:
+            type: string
+        marketingChannel:
+            type: string
+        paid:
+            type: bool
+        referringDomain:
+            type: string
+        breadcrumbId:
+            type: string
+        marketingActivityId:
+            type: string
+        adminGraphqlApiId:
+            type: string
+        marketedResources:
+            type: array<Slince\Shopify\Model\MarketingEvent\Common\MarketedResource>

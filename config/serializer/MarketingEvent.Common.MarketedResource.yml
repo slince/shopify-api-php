@@ -1,0 +1,6 @@
+Slince\Shopify\Model\MarketingEvent\Common\MarketedResource:
+    properties:
+        type:
+            type: string
+        id:
+            type: int

@@ -1,0 +1,8 @@
+Slince\Shopify\Model\OnlineStore\Redirect:
+    properties:
+        id:
+            type: int
+        path:
+            type: string
+        target:
+            type: string

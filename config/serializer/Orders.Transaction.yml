@@ -1,0 +1,46 @@
+Slince\Shopify\Model\Orders\Transaction:
+    properties:
+        id:
+            type: int
+        orderId:
+            type: int
+        kind:
+            type: string
+        gateway:
+            type: string
+        status:
+            type: string
+        message:
+            type: string
+        createdAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        test:
+            type: bool
+        authorization:
+            type: string
+        locationId:
+            type: int
+        userId:
+            type: int
+        parentId:
+            type: int
+        processedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        deviceId:
+            type: string
+        receipt:
+            type: array
+        errorCode:
+            type: string
+        sourceName:
+            type: string
+        currencyExchangeAdjustment:
+            type: Slince\Shopify\Model\Orders\Common\CurrencyExchangeAdjustment
+        amount:
+            type: string
+        currency:
+            type: string
+        adminGraphqlApiId:
+            type: string
+        paymentDetails:
+            type: Slince\Shopify\Model\Orders\Common\PaymentDetails

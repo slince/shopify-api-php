@@ -1,0 +1,18 @@
+Slince\Shopify\Model\Billing\UsageCharge:
+    properties:
+        id:
+            type: int
+        description:
+            type: string
+        price:
+            type: string
+        createdAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        billingOn:
+            type: DateTime<'Y-m-d'>
+        balanceUsed:
+            type: float
+        balanceRemaining:
+            type: float
+        riskLevel:
+            type: int

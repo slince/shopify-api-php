@@ -1,0 +1,12 @@
+Slince\Shopify\Model\Orders\Common\PaymentDetails:
+    properties:
+        avsResultCode:
+            type: string
+        creditCardBin:
+            type: string
+        cvvResultCode:
+            type: string
+        creditCardNumber:
+            type: string
+        creditCardCompany:
+            type: string

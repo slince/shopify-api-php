@@ -427,21 +427,21 @@ class Client
      */
     protected function applyOptions(array $options)
     {
-        if (!isset($options['httpClient'])) {
-            $options['httpClient'] = new HttpClient([
+        if (!isset($options['http_client'])) {
+            $options['http_client'] = new HttpClient([
                 'verify' => false
             ]);
         }
-        $this->httpClient = $options['httpClient'];
-        if (!isset($options['metaCacheDir'])) {
-            throw new InvalidArgumentException('You must provide option "metaCacheDir"');
+        $this->httpClient = $options['http_client'];
+        if (!isset($options['meta_cache_dir'])) {
+            throw new InvalidArgumentException('You must provide option "meta_cache_dir"');
         }
-        $this->metaCacheDir = $options['metaCacheDir'];
-        if (isset($options['apiVersion'])) {
-            if (!preg_match('/^[0-9]{4}-[0-9]{2}$|^unstable$/', $options['apiVersion'])) {
+        $this->metaCacheDir = $options['meta_cache_dir'];
+        if (isset($options['api_version'])) {
+            if (!preg_match('/^[0-9]{4}-[0-9]{2}$|^unstable$/', $options['api_version'])) {
                 throw new InvalidArgumentException('Version string must be of YYYY-MM or unstable');
             }
-            $this->apiVersion = $options['apiVersion'];
+            $this->apiVersion = $options['api_version'];
         }
         if (!isset($options['middlewares'])) {
             $options['middlewares'] = new MiddlewareChain([
@@ -449,6 +449,16 @@ class Client
             ]);
         }
         $this->middlewares = $options['middlewares'];
+    }
+
+    /**
+     * Gets the middleware chain.
+     *
+     * @return MiddlewareChain
+     */
+    public function getMiddlewares(): MiddlewareChain
+    {
+        return $this->middlewares;
     }
 
     /**

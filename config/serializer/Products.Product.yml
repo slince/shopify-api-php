@@ -1,0 +1,36 @@
+Slince\Shopify\Model\Products\Product:
+    properties:
+        id:
+            type: int
+        title:
+            type: string
+        bodyHtml:
+            type: string
+        vendor:
+            type: string
+        productType:
+            type: string
+        createdAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        handle:
+            type: string
+        updatedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        publishedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        templateSuffix:
+            type: string
+        publishedScope:
+            type: string
+        tags:
+            type: string
+        variants:
+            type: array<Slince\Shopify\Model\Products\Variant>
+        images:
+            type: array<Slince\Shopify\Model\Products\Image>
+        image:
+            type: Slince\Shopify\Model\Products\Image
+        options:
+            type: array<Slince\Shopify\Model\Products\Option>
+        adminGraphqlApiId:
+            type: string

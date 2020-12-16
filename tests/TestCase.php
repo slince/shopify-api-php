@@ -49,7 +49,7 @@ class TestCase extends BaseTestCase
                 static::SHOP_NAME,
                 new PublicAppCredential(static::ACCESS_TOKEN),
                 [
-                    'metaCacheDir' => __DIR__ . '/tmp'
+                    'meta_cache_dir' => __DIR__ . '/tmp'
                 ]
             ])
             ->onlyMethods(['sendRequest'])

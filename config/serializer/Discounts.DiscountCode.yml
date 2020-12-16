@@ -1,0 +1,14 @@
+Slince\Shopify\Model\Discounts\DiscountCode:
+    properties:
+        id:
+            type: int
+        priceRuleId:
+            type: int
+        code:
+            type: string
+        usageCount:
+            type: int
+        createdAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        updatedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>

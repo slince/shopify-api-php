@@ -1,0 +1,52 @@
+Slince\Shopify\Model\Customers\Customer:
+    properties:
+        id:
+            type: int
+        email:
+            type: string
+        acceptsMarketing:
+            type: bool
+        createdAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        updatedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        firstName:
+            type: string
+        lastName:
+            type: string
+        ordersCount:
+            type: int
+        state:
+            type: string
+        totalSpent:
+            type: float
+        lastOrderId:
+            type: int
+        note:
+            type: string
+        verifiedEmail:
+            type: bool
+        multipassIdentifier:
+            type: string
+        taxExempt:
+            type: bool
+        phone:
+            type: string
+        tags:
+            type: string
+        lastOrderName:
+            type: string
+        currency:
+            type: string
+        addresses:
+            type: array<Slince\Shopify\Model\Customers\Address>
+        acceptsMarketingUpdatedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        marketingOptInLevel:
+            type: string
+        taxExemptions:
+            type: array<string>
+        adminGraphqlApiId:
+            type: string
+        defaultAddress:
+            type: Slince\Shopify\Model\Customers\Address

@@ -1,0 +1,98 @@
+Slince\Shopify\Model\Store\Shop:
+    properties:
+        name:
+            type: string
+        email:
+            type: string
+        domain:
+            type: string
+        createdAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        province:
+            type: string
+        country:
+            type: string
+        address1:
+            type: string
+        zip:
+            type: string
+        city:
+            type: string
+        source:
+            type: string
+        phone:
+            type: string
+        updatedAt:
+            type: string
+        customerEmail:
+            type: string
+        latitude:
+            type: float
+        longitude:
+            type: float
+        primaryLocationId:
+            type: int
+        primaryLocale:
+            type: string
+        address2:
+            type: string
+        countryCode:
+            type: string
+        countryName:
+            type: string
+        currency:
+            type: string
+        timezone:
+            type: string
+        ianaTimezone:
+            type: string
+        shopOwner:
+            type: string
+        moneyFormat:
+            type: string
+        moneyWithCurrencyFormat:
+            type: string
+        weightUnit:
+            type: string
+        provinceCode:
+            type: string
+        taxesIncluded:
+            type: bool
+        taxShipping:
+            type: string
+        countyTaxes:
+            type: string
+        planDisplayName:
+            type: string
+        planName:
+            type: string
+        hasDiscounts:
+            type: bool
+        hasGiftCards:
+            type: bool
+        myshopifyDomain:
+            type: string
+        googleAppsDomain:
+            type: string
+        googleAppsLoginEnabled:
+            type: string
+        moneyInEmailsFormat:
+            type: string
+        moneyWithCurrencyInEmailsFormat:
+            type: string
+        eligibleForPayments:
+            type: bool
+        requiresExtraPaymentsAgreement:
+            type: bool
+        passwordEnabled:
+            type: bool
+        hasStoreFront:
+            type: bool
+        eligibleForCardReaderGiveaway:
+            type: bool
+        finances:
+            type: bool
+        setupRequired:
+            type: bool
+        forceSsl:
+            type: bool

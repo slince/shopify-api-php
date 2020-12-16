@@ -1,0 +1,20 @@
+Slince\Shopify\Model\Orders\Common\OrderAdjustment:
+    properties:
+        id:
+            type: int
+        orderId:
+            type: int
+        refundId:
+            type: int
+        amount:
+            type: string
+        taxAmount:
+            type: string
+        kind:
+            type: string
+        reason:
+            type: string
+        amountSet:
+            type: Slince\Shopify\Model\Common\PriceSet
+        taxAmountSet:
+            type: Slince\Shopify\Model\Common\PriceSet

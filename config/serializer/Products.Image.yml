@@ -1,0 +1,24 @@
+Slince\Shopify\Model\Products\Image:
+    properties:
+        id:
+            type: int
+        productId:
+            type: int
+        position:
+            type: int
+        createdAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        updatedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        width:
+            type: int
+        height:
+            type: int
+        src:
+            type: string
+        variantIds:
+            type: array<int>
+        alt:
+            type: string
+        adminGraphqlApiId:
+            type: string

@@ -1,0 +1,24 @@
+Slince\Shopify\Model\Events\Event:
+    properties:
+        id:
+            type: int
+        subjectId:
+            type: int
+        createdAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        subjectType:
+            type: string
+        verb:
+            type: string
+        arguments:
+            type: array<string>
+        body:
+            type: string
+        message:
+            type: string
+        author:
+            type: string
+        description:
+            type: string
+        path:
+            type: string

@@ -1,0 +1,10 @@
+Slince\Shopify\Model\Orders\Common\TaxLine:
+    properties:
+        title:
+            type: string
+        price:
+            type: string
+        rate:
+            type: float
+        priceSet:
+            type: Slince\Shopify\Model\Common\PriceSet

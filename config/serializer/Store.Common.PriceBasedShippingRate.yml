@@ -1,0 +1,14 @@
+Slince\Shopify\Model\Store\Common\PriceBasedShippingRate:
+    properties:
+        id:
+            type: int
+        name:
+            type: string
+        price:
+            type: string
+        shippingZoneId:
+            type: int
+        minOrderSubtotal:
+            type: string
+        maxOrderSubtotal:
+            type: string

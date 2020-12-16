@@ -14,6 +14,14 @@ class AssetManagerTest extends GeneralCurdManagerTestCase
         $this->assertInstanceOf($service->getModelClass(), $entities[0]);
     }
 
+    public function testFind()
+    {
+        $fixture = $this->getFixturesDir().'/view.json';
+        $service = $this->getService($fixture);
+        $entity = $service->find(1, 2);
+        $this->assertInstanceOf($service->getModelClass(), $entity);
+    }
+
     public function testCreate()
     {
         $this->markTestSkipped('Yet not support.');

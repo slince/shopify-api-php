@@ -1,0 +1,12 @@
+Slince\Shopify\Model\Analytics\Report:
+    properties:
+        id:
+            type: int
+        name:
+            type: string
+        shopifyQl:
+            type: string
+        updatedAt:
+            type: DateTime<'Y-m-d\TH:i:sO'>
+        category:
+            type: string

@@ -1,0 +1,8 @@
+Slince\Shopify\Model\Orders\Common\DiscountAllocation:
+    properties:
+        amount:
+            type: string
+        discountApplicationIndex:
+            type: int
+        amountSet:
+            type: Slince\Shopify\Model\Common\PriceSet

@@ -1,0 +1,8 @@
+Slince\Shopify\Model\Products\Common\Rule:
+    properties:
+        column:
+            type: string
+        relation:
+            type: string
+        condition:
+            type: string

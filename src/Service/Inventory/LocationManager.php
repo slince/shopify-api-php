@@ -48,7 +48,7 @@ class LocationManager extends GeneralCurdManager implements LocationManagerInter
      */
     public function create(array $data)
     {
-        return new \Exception('The method is not supported');
+        throw new \Exception('The method is not supported');
     }
 
     /**
@@ -56,7 +56,7 @@ class LocationManager extends GeneralCurdManager implements LocationManagerInter
      */
     public function update($id, array $data)
     {
-        return new \Exception('The method is not supported');
+        throw new \Exception('The method is not supported');
     }
 
     /**
@@ -64,7 +64,7 @@ class LocationManager extends GeneralCurdManager implements LocationManagerInter
      */
     public function remove($id)
     {
-        return new \Exception('The method is not supported');
+        throw new \Exception('The method is not supported');
     }
 
     /**
