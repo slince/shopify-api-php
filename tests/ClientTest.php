@@ -193,7 +193,7 @@ class ClientTest extends TestCase
             ->willThrowException(
                 new \GuzzleHttp\Exception\RequestException(
                     'Client error message.',
-                    new \GuzzleHttp\Psr7\Request('GET', '/admin/shop.json'),
+                    new \GuzzleHttp\Psr7\Request('GET', '/admin/shop.json')
                 )
             );
 
