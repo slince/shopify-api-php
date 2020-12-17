@@ -13,6 +13,7 @@ use Symfony\Component\Filesystem\Filesystem;
 class TestCase extends BaseTestCase
 {
     const FIXTURES_DIR = __DIR__.'/Resources';
+    const METADATA_DIR = __DIR__.'/../config/serializer';
 
     const ACCESS_TOKEN = 'asdasdadasdadasda';
 
@@ -48,9 +49,7 @@ class TestCase extends BaseTestCase
             ->setConstructorArgs([
                 static::SHOP_NAME,
                 new PublicAppCredential(static::ACCESS_TOKEN),
-                [
-                    'meta_cache_dir' => __DIR__ . '/tmp'
-                ]
+                ['meta_cache_dir' => __DIR__ . '/tmp']
             ])
             ->onlyMethods(['sendRequest'])
             ->getMock();

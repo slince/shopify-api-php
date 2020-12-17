@@ -4,8 +4,15 @@ namespace Slince\Shopify\Tests;
 
 use GuzzleHttp\Utils;
 use Slince\Shopify\Client;
+use Slince\Shopify\Exception\BadRequestException;
+use Slince\Shopify\Exception\ForbiddenException;
+use Slince\Shopify\Exception\NotAcceptableException;
+use Slince\Shopify\Exception\NotFoundException;
 use Slince\Shopify\Exception\RuntimeException;
 use Slince\Shopify\Exception\ClientException;
+use Slince\Shopify\Exception\TooManyRequestsException;
+use Slince\Shopify\Exception\UnauthorizedException;
+use Slince\Shopify\Exception\UnprocessableEntityException;
 use Slince\Shopify\Inflector;
 use Slince\Shopify\PublicAppCredential;
 use Slince\Shopify\Exception\InvalidArgumentException;
@@ -189,14 +196,6 @@ class ClientTest extends TestCase
             ->onlyMethods(['send'])
             ->getMock();
 
-        $httpClientMock->method('send')
-            ->willThrowException(
-                new \GuzzleHttp\Exception\RequestException(
-                    'Client error message.',
-                    new \GuzzleHttp\Psr7\Request('GET', '/admin/shop.json')
-                )
-            );
-
         $credential = new PublicAppCredential('foobarbazfoobarbaz');
         $client = new Client('bar.myshopify.com', $credential, [
             'meta_cache_dir' => __DIR__ . '/tmp',
@@ -204,10 +203,116 @@ class ClientTest extends TestCase
         ]);
 
         try {
+            $httpClientMock->method('send')
+                ->willThrowException(
+                    new \GuzzleHttp\Exception\RequestException(
+                        'Client error message.',
+                        new \GuzzleHttp\Psr7\Request('GET', '/admin/shop.json')
+                    )
+                );
             $client->getShopManager()->get();
         } catch (\Exception $exception) {
             $this->assertInstanceOf(ClientException::class, $exception);
             $this->assertEquals($exception->getMessage(), 'Client error message.');
+        }
+
+        try {
+            $httpClientMock->method('send')
+                ->willThrowException(
+                    new \GuzzleHttp\Exception\RequestException(
+                        'Client error message.',
+                        new \GuzzleHttp\Psr7\Request('GET', '/admin/shop.json'),
+                        new \GuzzleHttp\Psr7\Response(400, [], 'bad request')
+                    )
+                );
+            $client->getShopManager()->get();
+        } catch (\Exception $exception) {
+            $this->assertInstanceOf(BadRequestException::class, $exception);
+            $this->assertEquals($exception->getMessage(), 'bad request');
+        }
+
+        try {
+            $httpClientMock->method('send')
+                ->willThrowException(
+                    new \GuzzleHttp\Exception\RequestException(
+                        'Client error message.',
+                        new \GuzzleHttp\Psr7\Request('GET', '/admin/shop.json'),
+                        new \GuzzleHttp\Psr7\Response(401, [], 'bad request')
+                    )
+                );
+            $client->getShopManager()->get();
+        } catch (\Exception $exception) {
+            $this->assertInstanceOf(UnauthorizedException::class, $exception);
+        }
+
+        try {
+            $httpClientMock->method('send')
+                ->willThrowException(
+                    new \GuzzleHttp\Exception\RequestException(
+                        'Client error message.',
+                        new \GuzzleHttp\Psr7\Request('GET', '/admin/shop.json'),
+                        new \GuzzleHttp\Psr7\Response(403, [], 'bad request')
+                    )
+                );
+            $client->getShopManager()->get();
+        } catch (\Exception $exception) {
+            $this->assertInstanceOf(ForbiddenException::class, $exception);
+        }
+
+        try {
+            $httpClientMock->method('send')
+                ->willThrowException(
+                    new \GuzzleHttp\Exception\RequestException(
+                        'Client error message.',
+                        new \GuzzleHttp\Psr7\Request('GET', '/admin/shop.json'),
+                        new \GuzzleHttp\Psr7\Response(404, [], 'bad request')
+                    )
+                );
+            $client->getShopManager()->get();
+        } catch (\Exception $exception) {
+            $this->assertInstanceOf(NotFoundException::class, $exception);
+        }
+
+        try {
+            $httpClientMock->method('send')
+                ->willThrowException(
+                    new \GuzzleHttp\Exception\RequestException(
+                        'Client error message.',
+                        new \GuzzleHttp\Psr7\Request('GET', '/admin/shop.json'),
+                        new \GuzzleHttp\Psr7\Response(406, [], 'bad request')
+                    )
+                );
+            $client->getShopManager()->get();
+        } catch (\Exception $exception) {
+            $this->assertInstanceOf(NotAcceptableException::class, $exception);
+        }
+
+        try {
+            $httpClientMock->method('send')
+                ->willThrowException(
+                    new \GuzzleHttp\Exception\RequestException(
+                        'Client error message.',
+                        new \GuzzleHttp\Psr7\Request('GET', '/admin/shop.json'),
+                        new \GuzzleHttp\Psr7\Response(422, [], 'bad request')
+                    )
+                );
+            $client->getShopManager()->get();
+        } catch (\Exception $exception) {
+            $this->assertInstanceOf(UnprocessableEntityException::class, $exception);
+        }
+
+        try {
+            $httpClientMock->method('send')
+                ->willThrowException(
+                    new \GuzzleHttp\Exception\RequestException(
+                        'Client error message.',
+                        new \GuzzleHttp\Psr7\Request('GET', '/admin/shop.json'),
+                        new \GuzzleHttp\Psr7\Response(429, [], 'bad request')
+                    )
+                );
+            $client->getShopManager()->get();
+        } catch (\Exception $exception) {
+            $this->assertInstanceOf(TooManyRequestsException::class, $exception);
         }
     }
 }

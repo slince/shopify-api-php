@@ -432,7 +432,7 @@ class Shop
     }
 
     /**
-     * @return string
+     * @return \DateTimeInterface
      */
     public function getUpdatedAt(): ?\DateTimeInterface
     {
@@ -440,7 +440,7 @@ class Shop
     }
 
     /**
-     * @param string $updatedAt
+     * @param \DateTimeInterface $updatedAt
       */
     public function setUpdatedAt(?\DateTimeInterface $updatedAt)
     {

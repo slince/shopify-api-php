@@ -23,7 +23,7 @@ Slince\Shopify\Model\Store\Shop:
         phone:
             type: string
         updatedAt:
-            type: string
+            type: DateTime<'Y-m-d\TH:i:sO'>
         customerEmail:
             type: string
         latitude:
