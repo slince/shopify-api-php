@@ -53,13 +53,17 @@ $client = new Slince\Shopify\Client($credential, 'your-store.myshopify.com', [
 
 ### Middleware
 
+Middleware augments the functionality of handlers by invoking them in the process of generating responses. Middleware is implemented as a higher order function that takes the following form.
 
 ```php
-$client->getMiddlewares()->push(function(\Psr\Http\Message\ServerRequestInterface $request, callable $next){
+
+$middleware = function(\Psr\Http\Message\ServerRequestInterface $request, callable $next){
     $response = $next($request);
     $this->logger->log($request, $response);
     return $response;
-});
+};
+
+$client->getMiddlewares()->push($middleware);
 ```
 
 ### Use Manager to manipulate your data;
@@ -207,7 +211,7 @@ $product = $client->post('products', [
         "product_type" => "Snowboard",
         "images" => [
             [ 
-                "attachment" => "R0lGODlhAQABAIAAAAAAAAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==\n"
+                "attachment" => "R0lGODlhAQABAIAAAAAAAAAAACH5BAEAAAAALAAAAAABAw==\n"
             ]
         ]
      ]
@@ -221,7 +225,7 @@ $product = $client->put('products/12800', [
         "product_type" => "Snowboard",
         "images" => [
             [ 
-                "attachment" => "R0lGODlhAQABAIAAAAAAAAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==\n"
+                "attachment" => "R0lGODlhAQABAIAAAAAAAAAAACH5BAEAAAAALAAAAAABAw==\n"
             ]
         ]
      ]
