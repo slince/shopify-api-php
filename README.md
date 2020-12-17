@@ -65,6 +65,22 @@ $middleware = function(\Psr\Http\Message\ServerRequestInterface $request, callab
 
 $client->getMiddlewares()->push($middleware);
 ```
+Built-in middleware:
+
+- [DelayMiddleware](src/Middleware/DelayMiddleware.php) 
+
+### Exception
+
+The Client throws the following types of exceptions.
+
+- [BadRequestException](src/Exception/BadRequestException.php) 400
+- [UnauthorizedException](src/Exception/UnauthorizedException.php) 401
+- [ForbiddenException](src/Exception/ForbiddenException.php) 403
+- [NotFoundException](src/Exception/NotFoundException.php) 404
+- [NotAcceptableException](src/Exception/NotAcceptableException.php) 406
+- [UnprocessableEntityException](src/Exception/UnprocessableEntityException.php) 422
+- [TooManyRequestsException](src/Exception/TooManyRequestsException.php) 429
+- [ClientException](src/Exception/ClientException.php) other
 
 ### Use Manager to manipulate your data;
 
