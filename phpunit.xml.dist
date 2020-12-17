@@ -5,21 +5,22 @@
         colors="true"
         beStrictAboutOutputDuringTests="true"
         beStrictAboutTodoAnnotatedTests="true"
-        failOnRisky="true"
-        failOnWarning="true"
+        failOnRisky="false"
+        failOnWarning="false"
         bootstrap="vendor/autoload.php"
 >
-  <coverage>
-    <include>
-      <directory suffix=".php">src</directory>
-    </include>
-    <exclude>
-      <directory suffix="Interface.php">src/</directory>
-    </exclude>
-  </coverage>
   <testsuites>
     <testsuite name="Slince Test Suite">
       <directory>./tests/</directory>
     </testsuite>
   </testsuites>
+        
+  <filter>
+    <whitelist>
+      <directory suffix=".php">src</directory>
+      <exclude>
+        <directory suffix="Interface.php">src/</directory>
+      </exclude>
+    </whitelist>
+  </filter>
 </phpunit>
