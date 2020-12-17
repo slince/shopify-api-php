@@ -8,11 +8,11 @@
     <a href="LICENSE" target="_blank">
         <img alt="Software License" src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square">
     </a>
-    <a href="https://travis-ci.org/slince/shopify-api-php">
+    <a href="https://travis-ci.com/slince/shopify-api-php">
         <img src="https://img.shields.io/travis/com/slince/shopify-api-php/3.x?style=flat-square" alt="Build Status">
     </a>
     <a href="https://codecov.io/github/slince/shopify-api-php">
-        <img src="https://img.shields.io/codecov/c/github/slince/shopify-api-php.svg?style=flat-square" alt="Coverage Status">
+        <img src="https://img.shields.io/codecov/c/github/slince/shopify-api-php/3.x?style=flat-square" alt="Coverage Status">
     </a>
     <a href="https://packagist.org/packages/slince/shopify-api-php">
         <img src="https://img.shields.io/packagist/v/slince/shopify-api-php.svg?style=flat-square&amp;label=stable" alt="Latest Stable Version">
