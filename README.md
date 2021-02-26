@@ -49,6 +49,11 @@ $credential = new Slince\Shopify\PrivateAppCredential('API KEY', 'PASSWORD', 'SH
 $client = new Slince\Shopify\Client('your-store.myshopify.com', $credential, [
     'meta_cache_dir' => './tmp' // Metadata cache dir, required
 ]);
+
+// Or Private App
+$client = new Slince\Shopify\Client($credential, 'your-store.myshopify.com', [
+    'metaCacheDir' => './tmp' // Metadata cache dir, required
+]);
 ```
 
 ### Middleware
