@@ -45,7 +45,10 @@ class ClientException extends RuntimeException
         } catch (\Exception $e) {
             $data = [];
         }
-        return $data['errors'] ?? $rawBody;
+        if (isset($data['errors']) && is_string($data['errors'])) {
+            return $data['errors'];
+        }
+        return $rawBody;
     }
 
     /**
