@@ -63,7 +63,7 @@ class FulfillmentManager extends NestCrudManager implements FulfillmentManagerIn
      */
     public function open($orderId, $id)
     {
-        $data = $this->client->post('orders/{$orderId}/fulfillments/{$id}/open', []);
+        $data = $this->client->post("orders/{$orderId}/fulfillments/{$id}/open", []);
 
         return $this->fromArray($data['fulfillment']);
     }
@@ -73,7 +73,7 @@ class FulfillmentManager extends NestCrudManager implements FulfillmentManagerIn
      */
     public function cancel($orderId, $id)
     {
-        $data = $this->client->post('orders/{$orderId}/fulfillments/{$id}/cancel', []);
+        $data = $this->client->post("orders/{$orderId}/fulfillments/{$id}/cancel", []);
 
         return $this->fromArray($data['fulfillment']);
     }
