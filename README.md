@@ -75,6 +75,7 @@ The Client throws the following types of exceptions.
 
 - [BadRequestException](src/Exception/BadRequestException.php) 400
 - [UnauthorizedException](src/Exception/UnauthorizedException.php) 401
+- [PaymentRequiredException](src/Exception/PaymentRequiredException.php) 402
 - [ForbiddenException](src/Exception/ForbiddenException.php) 403
 - [NotFoundException](src/Exception/NotFoundException.php) 404
 - [NotAcceptableException](src/Exception/NotAcceptableException.php) 406
