@@ -384,6 +384,8 @@ class Client
                 throw new Exception\BadRequestException($request, $response);
             case 401:
                 throw new Exception\UnauthorizedException($request, $response);
+            case 402:
+                throw new Exception\PaymentRequiredException($request, $response);
             case 403:
                 throw new Exception\ForbiddenException($request, $response);
             case 404:
