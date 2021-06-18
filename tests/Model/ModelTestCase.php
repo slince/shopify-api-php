@@ -7,11 +7,10 @@ use Symfony\Component\PropertyAccess\PropertyAccess;
 use Symfony\Component\PropertyAccess\PropertyAccessor;
 use Doctrine\Common\Annotations\AnnotationReader;
 use JMS\Serializer\Builder\DefaultDriverFactory;
-use JMS\Serializer\Metadata\Driver\DocBlockDriverFactory;
+use JMS\Serializer\Builder\DocBlockDriverFactory;
 use JMS\Serializer\Naming\CamelCaseNamingStrategy;
 use JMS\Serializer\Naming\SerializedNameAnnotationStrategy;
 use JMS\Serializer\Type\Parser;
-use JMS\Serializer\Metadata\ClassMetadata;
 use Metadata\MetadataFactory;
 
 abstract class ModelTestCase extends TestCase
