@@ -38,7 +38,7 @@ class CheckoutShippingLine
     /**
      * @return string
      */
-    public function getCode(): string
+    public function getCode(): ?string
     {
         return $this->code;
     }
@@ -46,7 +46,7 @@ class CheckoutShippingLine
     /**
      * @param string $code
      */
-    public function setCode(string $code): void
+    public function setCode(?string $code)
     {
         $this->code = $code;
     }
@@ -54,7 +54,7 @@ class CheckoutShippingLine
     /**
      * @return string
      */
-    public function getPrice(): string
+    public function getPrice(): ?string
     {
         return $this->price;
     }
@@ -62,7 +62,7 @@ class CheckoutShippingLine
     /**
      * @param string $price
      */
-    public function setPrice(string $price): void
+    public function setPrice(?string $price)
     {
         $this->price = $price;
     }
@@ -70,7 +70,7 @@ class CheckoutShippingLine
     /**
      * @return string
      */
-    public function getSource(): string
+    public function getSource(): ?string
     {
         return $this->source;
     }
@@ -78,7 +78,7 @@ class CheckoutShippingLine
     /**
      * @param string $source
      */
-    public function setSource(string $source): void
+    public function setSource(?string $source)
     {
         $this->source = $source;
     }
@@ -86,7 +86,7 @@ class CheckoutShippingLine
     /**
      * @return string
      */
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
@@ -94,7 +94,7 @@ class CheckoutShippingLine
     /**
      * @param string $title
      */
-    public function setTitle(string $title): void
+    public function setTitle(?string $title)
     {
         $this->title = $title;
     }

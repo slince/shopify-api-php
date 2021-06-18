@@ -56,7 +56,7 @@ class StorefrontAccessToken
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -64,7 +64,7 @@ class StorefrontAccessToken
     /**
      * @return string
      */
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
@@ -72,7 +72,7 @@ class StorefrontAccessToken
     /**
      * @param string $title
      */
-    public function setTitle(string $title): void
+    public function setTitle(?string $title)
     {
         $this->title = $title;
     }
@@ -80,7 +80,7 @@ class StorefrontAccessToken
     /**
      * @return string
      */
-    public function getAccessToken(): string
+    public function getAccessToken(): ?string
     {
         return $this->accessToken;
     }
@@ -88,7 +88,7 @@ class StorefrontAccessToken
     /**
      * @param string $accessToken
      */
-    public function setAccessToken(string $accessToken): void
+    public function setAccessToken(?string $accessToken)
     {
         $this->accessToken = $accessToken;
     }
@@ -96,7 +96,7 @@ class StorefrontAccessToken
     /**
      * @return string
      */
-    public function getAccessScope(): string
+    public function getAccessScope(): ?string
     {
         return $this->accessScope;
     }
@@ -104,7 +104,7 @@ class StorefrontAccessToken
     /**
      * @param string $accessScope
      */
-    public function setAccessScope(string $accessScope): void
+    public function setAccessScope(?string $accessScope)
     {
         $this->accessScope = $accessScope;
     }
@@ -112,7 +112,7 @@ class StorefrontAccessToken
     /**
      * @return string
      */
-    public function getAdminGraphqlApiId(): string
+    public function getAdminGraphqlApiId(): ?string
     {
         return $this->adminGraphqlApiId;
     }
@@ -120,7 +120,7 @@ class StorefrontAccessToken
     /**
      * @param string $adminGraphqlApiId
      */
-    public function setAdminGraphqlApiId(string $adminGraphqlApiId): void
+    public function setAdminGraphqlApiId(?string $adminGraphqlApiId)
     {
         $this->adminGraphqlApiId = $adminGraphqlApiId;
     }
@@ -136,7 +136,7 @@ class StorefrontAccessToken
     /**
      * @param \DateTimeInterface $createdAt
      */
-    public function setCreatedAt(?\DateTimeInterface $createdAt): void
+    public function setCreatedAt(?\DateTimeInterface $createdAt)
     {
         $this->createdAt = $createdAt;
     }

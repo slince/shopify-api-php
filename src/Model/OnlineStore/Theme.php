@@ -71,7 +71,7 @@ class Theme
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -79,7 +79,7 @@ class Theme
     /**
      * @return string
      */
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->name;
     }
@@ -87,7 +87,7 @@ class Theme
     /**
      * @param string $name
      */
-    public function setName(string $name): void
+    public function setName(?string $name)
     {
         $this->name = $name;
     }
@@ -103,7 +103,7 @@ class Theme
     /**
      * @param \DateTimeInterface $createdAt
      */
-    public function setCreatedAt(?\DateTimeInterface $createdAt): void
+    public function setCreatedAt(?\DateTimeInterface $createdAt)
     {
         $this->createdAt = $createdAt;
     }
@@ -119,7 +119,7 @@ class Theme
     /**
      * @param \DateTimeInterface $updatedAt
      */
-    public function setUpdatedAt(?\DateTimeInterface $updatedAt): void
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }
@@ -127,7 +127,7 @@ class Theme
     /**
      * @return string
      */
-    public function getRole(): string
+    public function getRole(): ?string
     {
         return $this->role;
     }
@@ -135,7 +135,7 @@ class Theme
     /**
      * @param string $role
      */
-    public function setRole(string $role): void
+    public function setRole(?string $role)
     {
         $this->role = $role;
     }
@@ -151,7 +151,7 @@ class Theme
     /**
      * @param int $themeStoreId
      */
-    public function setThemeStoreId(int $themeStoreId): void
+    public function setThemeStoreId(?int $themeStoreId)
     {
         $this->themeStoreId = $themeStoreId;
     }
@@ -159,7 +159,7 @@ class Theme
     /**
      * @return bool
      */
-    public function isPreviewable(): bool
+    public function isPreviewable(): ?bool
     {
         return $this->previewable;
     }
@@ -167,7 +167,7 @@ class Theme
     /**
      * @param bool $previewable
      */
-    public function setPreviewable(bool $previewable): void
+    public function setPreviewable(?bool $previewable)
     {
         $this->previewable = $previewable;
     }
@@ -175,7 +175,7 @@ class Theme
     /**
      * @return bool
      */
-    public function isProcessing(): bool
+    public function isProcessing(): ?bool
     {
         return $this->processing;
     }
@@ -183,7 +183,7 @@ class Theme
     /**
      * @param bool $processing
      */
-    public function setProcessing(bool $processing): void
+    public function setProcessing(?bool $processing)
     {
         $this->processing = $processing;
     }
@@ -191,7 +191,7 @@ class Theme
     /**
      * @return string
      */
-    public function getAdminGraphqlApiId(): string
+    public function getAdminGraphqlApiId(): ?string
     {
         return $this->adminGraphqlApiId;
     }
@@ -199,7 +199,7 @@ class Theme
     /**
      * @param string $adminGraphqlApiId
      */
-    public function setAdminGraphqlApiId(string $adminGraphqlApiId): void
+    public function setAdminGraphqlApiId(?string $adminGraphqlApiId)
     {
         $this->adminGraphqlApiId = $adminGraphqlApiId;
     }

@@ -53,7 +53,7 @@ class DiscountApplication
     /**
      * @return string
      */
-    public function getType(): string
+    public function getType(): ?string
     {
         return $this->type;
     }
@@ -61,7 +61,7 @@ class DiscountApplication
     /**
      * @param string $type
      */
-    public function setType(string $type): void
+    public function setType(?string $type)
     {
         $this->type = $type;
     }
@@ -69,7 +69,7 @@ class DiscountApplication
     /**
      * @return string
      */
-    public function getValue(): string
+    public function getValue(): ?string
     {
         return $this->value;
     }
@@ -77,7 +77,7 @@ class DiscountApplication
     /**
      * @param string $value
      */
-    public function setValue(string $value): void
+    public function setValue(?string $value)
     {
         $this->value = $value;
     }
@@ -85,7 +85,7 @@ class DiscountApplication
     /**
      * @return string
      */
-    public function getValueType(): string
+    public function getValueType(): ?string
     {
         return $this->valueType;
     }
@@ -93,7 +93,7 @@ class DiscountApplication
     /**
      * @param string $valueType
      */
-    public function setValueType(string $valueType): void
+    public function setValueType(?string $valueType)
     {
         $this->valueType = $valueType;
     }
@@ -101,7 +101,7 @@ class DiscountApplication
     /**
      * @return string
      */
-    public function getAllocationMethod(): string
+    public function getAllocationMethod(): ?string
     {
         return $this->allocationMethod;
     }
@@ -109,7 +109,7 @@ class DiscountApplication
     /**
      * @param string $allocationMethod
      */
-    public function setAllocationMethod(string $allocationMethod): void
+    public function setAllocationMethod(?string $allocationMethod)
     {
         $this->allocationMethod = $allocationMethod;
     }
@@ -117,7 +117,7 @@ class DiscountApplication
     /**
      * @return string
      */
-    public function getTargetSelection(): string
+    public function getTargetSelection(): ?string
     {
         return $this->targetSelection;
     }
@@ -125,7 +125,7 @@ class DiscountApplication
     /**
      * @param string $targetSelection
      */
-    public function setTargetSelection(string $targetSelection): void
+    public function setTargetSelection(?string $targetSelection)
     {
         $this->targetSelection = $targetSelection;
     }
@@ -133,7 +133,7 @@ class DiscountApplication
     /**
      * @return string
      */
-    public function getTargetType(): string
+    public function getTargetType(): ?string
     {
         return $this->targetType;
     }
@@ -141,7 +141,7 @@ class DiscountApplication
     /**
      * @param string $targetType
      */
-    public function setTargetType(string $targetType): void
+    public function setTargetType(?string $targetType)
     {
         $this->targetType = $targetType;
     }
@@ -149,7 +149,7 @@ class DiscountApplication
     /**
      * @return string
      */
-    public function getCode(): string
+    public function getCode(): ?string
     {
         return $this->code;
     }
@@ -157,7 +157,7 @@ class DiscountApplication
     /**
      * @param string $code
      */
-    public function setCode(string $code): void
+    public function setCode(?string $code)
     {
         $this->code = $code;
     }

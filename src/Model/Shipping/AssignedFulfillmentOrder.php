@@ -86,7 +86,7 @@ class AssignedFulfillmentOrder
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -102,7 +102,7 @@ class AssignedFulfillmentOrder
     /**
      * @param int $shopId
      */
-    public function setShopId(int $shopId): void
+    public function setShopId(?int $shopId)
     {
         $this->shopId = $shopId;
     }
@@ -118,7 +118,7 @@ class AssignedFulfillmentOrder
     /**
      * @param int $orderId
      */
-    public function setOrderId(int $orderId): void
+    public function setOrderId(?int $orderId)
     {
         $this->orderId = $orderId;
     }
@@ -134,7 +134,7 @@ class AssignedFulfillmentOrder
     /**
      * @param int $assignedLocationId
      */
-    public function setAssignedLocationId(int $assignedLocationId): void
+    public function setAssignedLocationId(?int $assignedLocationId)
     {
         $this->assignedLocationId = $assignedLocationId;
     }
@@ -142,7 +142,7 @@ class AssignedFulfillmentOrder
     /**
      * @return string
      */
-    public function getFulfillmentServiceHandle(): string
+    public function getFulfillmentServiceHandle(): ?string
     {
         return $this->fulfillmentServiceHandle;
     }
@@ -150,7 +150,7 @@ class AssignedFulfillmentOrder
     /**
      * @param string $fulfillmentServiceHandle
      */
-    public function setFulfillmentServiceHandle(string $fulfillmentServiceHandle): void
+    public function setFulfillmentServiceHandle(?string $fulfillmentServiceHandle)
     {
         $this->fulfillmentServiceHandle = $fulfillmentServiceHandle;
     }
@@ -158,7 +158,7 @@ class AssignedFulfillmentOrder
     /**
      * @return string
      */
-    public function getRequestStatus(): string
+    public function getRequestStatus(): ?string
     {
         return $this->requestStatus;
     }
@@ -166,7 +166,7 @@ class AssignedFulfillmentOrder
     /**
      * @param string $requestStatus
      */
-    public function setRequestStatus(string $requestStatus): void
+    public function setRequestStatus(?string $requestStatus)
     {
         $this->requestStatus = $requestStatus;
     }
@@ -174,7 +174,7 @@ class AssignedFulfillmentOrder
     /**
      * @return string
      */
-    public function getStatus(): string
+    public function getStatus(): ?string
     {
         return $this->status;
     }
@@ -182,7 +182,7 @@ class AssignedFulfillmentOrder
     /**
      * @param string $status
      */
-    public function setStatus(string $status): void
+    public function setStatus(?string $status)
     {
         $this->status = $status;
     }
@@ -198,7 +198,7 @@ class AssignedFulfillmentOrder
     /**
      * @param array $supportedActions
      */
-    public function setSupportedActions(array $supportedActions): void
+    public function setSupportedActions(array $supportedActions)
     {
         $this->supportedActions = $supportedActions;
     }
@@ -214,7 +214,7 @@ class AssignedFulfillmentOrder
     /**
      * @param Destination $destination
      */
-    public function setDestination(Destination $destination): void
+    public function setDestination(Destination $destination)
     {
         $this->destination = $destination;
     }
@@ -230,7 +230,7 @@ class AssignedFulfillmentOrder
     /**
      * @param LineItem[] $lineItems
      */
-    public function setLineItems(array $lineItems): void
+    public function setLineItems(array $lineItems)
     {
         $this->lineItems = $lineItems;
     }
@@ -246,7 +246,7 @@ class AssignedFulfillmentOrder
     /**
      * @param Location $assignedLocation
      */
-    public function setAssignedLocation(Location $assignedLocation): void
+    public function setAssignedLocation(Location $assignedLocation)
     {
         $this->assignedLocation = $assignedLocation;
     }

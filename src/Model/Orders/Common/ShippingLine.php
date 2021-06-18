@@ -69,7 +69,7 @@ class ShippingLine
     /**
      * @return string
      */
-    public function getCode(): string
+    public function getCode(): ?string
     {
         return $this->code;
     }
@@ -77,7 +77,7 @@ class ShippingLine
     /**
      * @param string $code
      */
-    public function setCode(string $code): void
+    public function setCode(?string $code)
     {
         $this->code = $code;
     }
@@ -85,7 +85,7 @@ class ShippingLine
     /**
      * @return string
      */
-    public function getPrice(): string
+    public function getPrice(): ?string
     {
         return $this->price;
     }
@@ -93,7 +93,7 @@ class ShippingLine
     /**
      * @param string $price
      */
-    public function setPrice(string $price): void
+    public function setPrice(?string $price)
     {
         $this->price = $price;
     }
@@ -109,7 +109,7 @@ class ShippingLine
     /**
      * @param PriceSet $priceSet
      */
-    public function setPriceSet(PriceSet $priceSet): void
+    public function setPriceSet(PriceSet $priceSet)
     {
         $this->priceSet = $priceSet;
     }
@@ -117,7 +117,7 @@ class ShippingLine
     /**
      * @return string
      */
-    public function getDiscountedPrice(): string
+    public function getDiscountedPrice(): ?string
     {
         return $this->discountedPrice;
     }
@@ -125,7 +125,7 @@ class ShippingLine
     /**
      * @param string $discountedPrice
      */
-    public function setDiscountedPrice(string $discountedPrice): void
+    public function setDiscountedPrice(?string $discountedPrice)
     {
         $this->discountedPrice = $discountedPrice;
     }
@@ -141,7 +141,7 @@ class ShippingLine
     /**
      * @param PriceSet $discountedPriceSet
      */
-    public function setDiscountedPriceSet(PriceSet $discountedPriceSet): void
+    public function setDiscountedPriceSet(PriceSet $discountedPriceSet)
     {
         $this->discountedPriceSet = $discountedPriceSet;
     }
@@ -149,7 +149,7 @@ class ShippingLine
     /**
      * @return string
      */
-    public function getSource(): string
+    public function getSource(): ?string
     {
         return $this->source;
     }
@@ -157,7 +157,7 @@ class ShippingLine
     /**
      * @param string $source
      */
-    public function setSource(string $source): void
+    public function setSource(?string $source)
     {
         $this->source = $source;
     }
@@ -165,7 +165,7 @@ class ShippingLine
     /**
      * @return string
      */
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
@@ -173,7 +173,7 @@ class ShippingLine
     /**
      * @param string $title
      */
-    public function setTitle(string $title): void
+    public function setTitle(?string $title)
     {
         $this->title = $title;
     }
@@ -189,7 +189,7 @@ class ShippingLine
     /**
      * @param TaxLine[] $taxLines
      */
-    public function setTaxLines(array $taxLines): void
+    public function setTaxLines(array $taxLines)
     {
         $this->taxLines = $taxLines;
     }
@@ -197,7 +197,7 @@ class ShippingLine
     /**
      * @return string
      */
-    public function getCarrierIdentifier(): string
+    public function getCarrierIdentifier(): ?string
     {
         return $this->carrierIdentifier;
     }
@@ -205,7 +205,7 @@ class ShippingLine
     /**
      * @param string $carrierIdentifier
      */
-    public function setCarrierIdentifier(string $carrierIdentifier): void
+    public function setCarrierIdentifier(?string $carrierIdentifier)
     {
         $this->carrierIdentifier = $carrierIdentifier;
     }
@@ -213,7 +213,7 @@ class ShippingLine
     /**
      * @return string
      */
-    public function getRequestedFulfillmentServiceId(): string
+    public function getRequestedFulfillmentServiceId(): ?string
     {
         return $this->requestedFulfillmentServiceId;
     }
@@ -221,7 +221,7 @@ class ShippingLine
     /**
      * @param string $requestedFulfillmentServiceId
      */
-    public function setRequestedFulfillmentServiceId(string $requestedFulfillmentServiceId): void
+    public function setRequestedFulfillmentServiceId(?string $requestedFulfillmentServiceId)
     {
         $this->requestedFulfillmentServiceId = $requestedFulfillmentServiceId;
     }

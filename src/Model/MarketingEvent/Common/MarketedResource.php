@@ -36,7 +36,7 @@ class MarketedResource
     /**
      * @param string $type
      */
-    public function setType(string $type): void
+    public function setType(?string $type)
     {
         $this->type = $type;
     }
@@ -52,7 +52,7 @@ class MarketedResource
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }

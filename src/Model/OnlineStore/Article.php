@@ -96,7 +96,7 @@ class Article
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -104,7 +104,7 @@ class Article
     /**
      * @return string
      */
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
@@ -112,7 +112,7 @@ class Article
     /**
      * @param string $title
      */
-    public function setTitle(string $title): void
+    public function setTitle(?string $title)
     {
         $this->title = $title;
     }
@@ -128,7 +128,7 @@ class Article
     /**
      * @param \DateTimeInterface $createdAt
      */
-    public function setCreatedAt(?\DateTimeInterface $createdAt): void
+    public function setCreatedAt(?\DateTimeInterface $createdAt)
     {
         $this->createdAt = $createdAt;
     }
@@ -136,7 +136,7 @@ class Article
     /**
      * @return string
      */
-    public function getBodyHtml(): string
+    public function getBodyHtml(): ?string
     {
         return $this->bodyHtml;
     }
@@ -144,7 +144,7 @@ class Article
     /**
      * @param string $bodyHtml
      */
-    public function setBodyHtml(string $bodyHtml): void
+    public function setBodyHtml(?string $bodyHtml)
     {
         $this->bodyHtml = $bodyHtml;
     }
@@ -160,7 +160,7 @@ class Article
     /**
      * @param int $blogId
      */
-    public function setBlogId(int $blogId): void
+    public function setBlogId(?int $blogId)
     {
         $this->blogId = $blogId;
     }
@@ -168,7 +168,7 @@ class Article
     /**
      * @return string
      */
-    public function getAuthor(): string
+    public function getAuthor(): ?string
     {
         return $this->author;
     }
@@ -176,7 +176,7 @@ class Article
     /**
      * @param string $author
      */
-    public function setAuthor(string $author): void
+    public function setAuthor(?string $author)
     {
         $this->author = $author;
     }
@@ -192,7 +192,7 @@ class Article
     /**
      * @param int $userId
      */
-    public function setUserId(int $userId): void
+    public function setUserId(?int $userId)
     {
         $this->userId = $userId;
     }
@@ -208,7 +208,7 @@ class Article
     /**
      * @param \DateTimeInterface $publishedAt
      */
-    public function setPublishedAt(\DateTimeInterface $publishedAt): void
+    public function setPublishedAt(\DateTimeInterface $publishedAt)
     {
         $this->publishedAt = $publishedAt;
     }
@@ -224,7 +224,7 @@ class Article
     /**
      * @param \DateTimeInterface $updatedAt
      */
-    public function setUpdatedAt(?\DateTimeInterface $updatedAt): void
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }
@@ -232,7 +232,7 @@ class Article
     /**
      * @return string
      */
-    public function getSummaryHtml(): string
+    public function getSummaryHtml(): ?string
     {
         return $this->summaryHtml;
     }
@@ -240,7 +240,7 @@ class Article
     /**
      * @param string $summaryHtml
      */
-    public function setSummaryHtml(string $summaryHtml): void
+    public function setSummaryHtml(?string $summaryHtml)
     {
         $this->summaryHtml = $summaryHtml;
     }
@@ -248,7 +248,7 @@ class Article
     /**
      * @return string
      */
-    public function getTemplateSuffix(): string
+    public function getTemplateSuffix(): ?string
     {
         return $this->templateSuffix;
     }
@@ -256,7 +256,7 @@ class Article
     /**
      * @param string $templateSuffix
      */
-    public function setTemplateSuffix(string $templateSuffix): void
+    public function setTemplateSuffix(?string $templateSuffix)
     {
         $this->templateSuffix = $templateSuffix;
     }
@@ -264,7 +264,7 @@ class Article
     /**
      * @return string
      */
-    public function getHandle(): string
+    public function getHandle(): ?string
     {
         return $this->handle;
     }
@@ -272,7 +272,7 @@ class Article
     /**
      * @param string $handle
      */
-    public function setHandle(string $handle): void
+    public function setHandle(?string $handle)
     {
         $this->handle = $handle;
     }
@@ -280,7 +280,7 @@ class Article
     /**
      * @return string
      */
-    public function getTags(): string
+    public function getTags(): ?string
     {
         return $this->tags;
     }
@@ -288,7 +288,7 @@ class Article
     /**
      * @param string $tags
      */
-    public function setTags(string $tags): void
+    public function setTags(?string $tags)
     {
         $this->tags = $tags;
     }
@@ -296,7 +296,7 @@ class Article
     /**
      * @return string
      */
-    public function getAdminGraphqlApiId(): string
+    public function getAdminGraphqlApiId(): ?string
     {
         return $this->adminGraphqlApiId;
     }
@@ -304,7 +304,7 @@ class Article
     /**
      * @param string $adminGraphqlApiId
      */
-    public function setAdminGraphqlApiId(string $adminGraphqlApiId): void
+    public function setAdminGraphqlApiId(?string $adminGraphqlApiId)
     {
         $this->adminGraphqlApiId = $adminGraphqlApiId;
     }

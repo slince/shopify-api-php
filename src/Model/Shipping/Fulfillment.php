@@ -113,7 +113,7 @@ class Fulfillment
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -129,7 +129,7 @@ class Fulfillment
     /**
      * @param int $orderId
      */
-    public function setOrderId(int $orderId): void
+    public function setOrderId(?int $orderId)
     {
         $this->orderId = $orderId;
     }
@@ -137,7 +137,7 @@ class Fulfillment
     /**
      * @return string
      */
-    public function getStatus(): string
+    public function getStatus(): ?string
     {
         return $this->status;
     }
@@ -145,7 +145,7 @@ class Fulfillment
     /**
      * @param string $status
      */
-    public function setStatus(string $status): void
+    public function setStatus(?string $status)
     {
         $this->status = $status;
     }
@@ -161,7 +161,7 @@ class Fulfillment
     /**
      * @param \DateTimeInterface $createdAt
      */
-    public function setCreatedAt(?\DateTimeInterface $createdAt): void
+    public function setCreatedAt(?\DateTimeInterface $createdAt)
     {
         $this->createdAt = $createdAt;
     }
@@ -169,7 +169,7 @@ class Fulfillment
     /**
      * @return string
      */
-    public function getService(): string
+    public function getService(): ?string
     {
         return $this->service;
     }
@@ -177,7 +177,7 @@ class Fulfillment
     /**
      * @param string $service
      */
-    public function setService(string $service): void
+    public function setService(?string $service)
     {
         $this->service = $service;
     }
@@ -193,7 +193,7 @@ class Fulfillment
     /**
      * @param \DateTimeInterface $updatedAt
      */
-    public function setUpdatedAt(?\DateTimeInterface $updatedAt): void
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }
@@ -201,7 +201,7 @@ class Fulfillment
     /**
      * @return string
      */
-    public function getTrackingCompany(): string
+    public function getTrackingCompany(): ?string
     {
         return $this->trackingCompany;
     }
@@ -209,7 +209,7 @@ class Fulfillment
     /**
      * @param string $trackingCompany
      */
-    public function setTrackingCompany(string $trackingCompany): void
+    public function setTrackingCompany(?string $trackingCompany)
     {
         $this->trackingCompany = $trackingCompany;
     }
@@ -217,7 +217,7 @@ class Fulfillment
     /**
      * @return string
      */
-    public function getShipmentStatus(): string
+    public function getShipmentStatus(): ?string
     {
         return $this->shipmentStatus;
     }
@@ -225,7 +225,7 @@ class Fulfillment
     /**
      * @param string $shipmentStatus
      */
-    public function setShipmentStatus(string $shipmentStatus): void
+    public function setShipmentStatus(?string $shipmentStatus)
     {
         $this->shipmentStatus = $shipmentStatus;
     }
@@ -241,7 +241,7 @@ class Fulfillment
     /**
      * @param int $locationId
      */
-    public function setLocationId(int $locationId): void
+    public function setLocationId(?int $locationId)
     {
         $this->locationId = $locationId;
     }
@@ -257,7 +257,7 @@ class Fulfillment
     /**
      * @param LineItem[] $lineItems
      */
-    public function setLineItems(array $lineItems): void
+    public function setLineItems(array $lineItems)
     {
         $this->lineItems = $lineItems;
     }
@@ -265,7 +265,7 @@ class Fulfillment
     /**
      * @return string
      */
-    public function getTrackingNumber(): string
+    public function getTrackingNumber(): ?string
     {
         return $this->trackingNumber;
     }
@@ -273,7 +273,7 @@ class Fulfillment
     /**
      * @param string $trackingNumber
      */
-    public function setTrackingNumber(string $trackingNumber): void
+    public function setTrackingNumber(?string $trackingNumber)
     {
         $this->trackingNumber = $trackingNumber;
     }
@@ -289,7 +289,7 @@ class Fulfillment
     /**
      * @param array $trackingNumbers
      */
-    public function setTrackingNumbers(array $trackingNumbers): void
+    public function setTrackingNumbers(array $trackingNumbers)
     {
         $this->trackingNumbers = $trackingNumbers;
     }
@@ -297,7 +297,7 @@ class Fulfillment
     /**
      * @return string
      */
-    public function getTrackingUrl(): string
+    public function getTrackingUrl(): ?string
     {
         return $this->trackingUrl;
     }
@@ -305,7 +305,7 @@ class Fulfillment
     /**
      * @param string $trackingUrl
      */
-    public function setTrackingUrl(string $trackingUrl): void
+    public function setTrackingUrl(?string $trackingUrl)
     {
         $this->trackingUrl = $trackingUrl;
     }
@@ -321,7 +321,7 @@ class Fulfillment
     /**
      * @param array $trackingUrls
      */
-    public function setTrackingUrls(array $trackingUrls): void
+    public function setTrackingUrls(array $trackingUrls)
     {
         $this->trackingUrls = $trackingUrls;
     }
@@ -337,7 +337,7 @@ class Fulfillment
     /**
      * @param array $receipt
      */
-    public function setReceipt(array $receipt): void
+    public function setReceipt(array $receipt)
     {
         $this->receipt = $receipt;
     }
@@ -345,7 +345,7 @@ class Fulfillment
     /**
      * @return string
      */
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->name;
     }
@@ -353,7 +353,7 @@ class Fulfillment
     /**
      * @param string $name
      */
-    public function setName(string $name): void
+    public function setName(?string $name)
     {
         $this->name = $name;
     }
@@ -361,7 +361,7 @@ class Fulfillment
     /**
      * @return string
      */
-    public function getAdminGraphqlApiId(): string
+    public function getAdminGraphqlApiId(): ?string
     {
         return $this->adminGraphqlApiId;
     }
@@ -369,7 +369,7 @@ class Fulfillment
     /**
      * @param string $adminGraphqlApiId
      */
-    public function setAdminGraphqlApiId(string $adminGraphqlApiId): void
+    public function setAdminGraphqlApiId(?string $adminGraphqlApiId)
     {
         $this->adminGraphqlApiId = $adminGraphqlApiId;
     }

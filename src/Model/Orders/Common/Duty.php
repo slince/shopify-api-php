@@ -38,7 +38,7 @@ class Duty
     /**
      * @param int $dutyId
      */
-    public function setDutyId(int $dutyId): void
+    public function setDutyId(?int $dutyId)
     {
         $this->dutyId = $dutyId;
     }
@@ -54,7 +54,7 @@ class Duty
     /**
      * @param PriceSet $amountSet
      */
-    public function setAmountSet(PriceSet $amountSet): void
+    public function setAmountSet(PriceSet $amountSet)
     {
         $this->amountSet = $amountSet;
     }

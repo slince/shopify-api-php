@@ -80,7 +80,7 @@ class Event
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -96,7 +96,7 @@ class Event
     /**
      * @param int $subjectId
      */
-    public function setSubjectId(int $subjectId): void
+    public function setSubjectId(?int $subjectId)
     {
         $this->subjectId = $subjectId;
     }
@@ -112,7 +112,7 @@ class Event
     /**
      * @param \DateTimeInterface $createdAt
      */
-    public function setCreatedAt(?\DateTimeInterface $createdAt): void
+    public function setCreatedAt(?\DateTimeInterface $createdAt)
     {
         $this->createdAt = $createdAt;
     }
@@ -120,7 +120,7 @@ class Event
     /**
      * @return string
      */
-    public function getSubjectType(): string
+    public function getSubjectType(): ?string
     {
         return $this->subjectType;
     }
@@ -128,7 +128,7 @@ class Event
     /**
      * @param string $subjectType
      */
-    public function setSubjectType(string $subjectType): void
+    public function setSubjectType(?string $subjectType)
     {
         $this->subjectType = $subjectType;
     }
@@ -136,7 +136,7 @@ class Event
     /**
      * @return string
      */
-    public function getVerb(): string
+    public function getVerb(): ?string
     {
         return $this->verb;
     }
@@ -144,7 +144,7 @@ class Event
     /**
      * @param string $verb
      */
-    public function setVerb(string $verb): void
+    public function setVerb(?string $verb)
     {
         $this->verb = $verb;
     }
@@ -160,7 +160,7 @@ class Event
     /**
      * @param array $arguments
      */
-    public function setArguments(array $arguments): void
+    public function setArguments(array $arguments)
     {
         $this->arguments = $arguments;
     }
@@ -168,7 +168,7 @@ class Event
     /**
      * @return string
      */
-    public function getBody(): string
+    public function getBody(): ?string
     {
         return $this->body;
     }
@@ -176,7 +176,7 @@ class Event
     /**
      * @param string $body
      */
-    public function setBody(string $body): void
+    public function setBody(?string $body)
     {
         $this->body = $body;
     }
@@ -184,7 +184,7 @@ class Event
     /**
      * @return string
      */
-    public function getMessage(): string
+    public function getMessage(): ?string
     {
         return $this->message;
     }
@@ -192,7 +192,7 @@ class Event
     /**
      * @param string $message
      */
-    public function setMessage(string $message): void
+    public function setMessage(?string $message)
     {
         $this->message = $message;
     }
@@ -200,7 +200,7 @@ class Event
     /**
      * @return string
      */
-    public function getAuthor(): string
+    public function getAuthor(): ?string
     {
         return $this->author;
     }
@@ -208,7 +208,7 @@ class Event
     /**
      * @param string $author
      */
-    public function setAuthor(string $author): void
+    public function setAuthor(?string $author)
     {
         $this->author = $author;
     }
@@ -216,7 +216,7 @@ class Event
     /**
      * @return string
      */
-    public function getDescription(): string
+    public function getDescription(): ?string
     {
         return $this->description;
     }
@@ -224,7 +224,7 @@ class Event
     /**
      * @param string $description
      */
-    public function setDescription(string $description): void
+    public function setDescription(?string $description)
     {
         $this->description = $description;
     }
@@ -232,7 +232,7 @@ class Event
     /**
      * @return string
      */
-    public function getPath(): string
+    public function getPath(): ?string
     {
         return $this->path;
     }
@@ -240,7 +240,7 @@ class Event
     /**
      * @param string $path
      */
-    public function setPath(string $path): void
+    public function setPath(?string $path)
     {
         $this->path = $path;
     }

@@ -41,7 +41,7 @@ class Rule
     /**
      * @param string $column
      */
-    public function setColumn(string $column): void
+    public function setColumn(?string $column)
     {
         $this->column = $column;
     }
@@ -57,7 +57,7 @@ class Rule
     /**
      * @param string $relation
      */
-    public function setRelation(string $relation): void
+    public function setRelation(?string $relation)
     {
         $this->relation = $relation;
     }
@@ -73,7 +73,7 @@ class Rule
     /**
      * @param string $condition
      */
-    public function setCondition(string $condition): void
+    public function setCondition(?string $condition)
     {
         $this->condition = $condition;
     }

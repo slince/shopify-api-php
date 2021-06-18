@@ -76,7 +76,7 @@ class Webhook
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -84,7 +84,7 @@ class Webhook
     /**
      * @return string
      */
-    public function getAddress(): string
+    public function getAddress(): ?string
     {
         return $this->address;
     }
@@ -92,7 +92,7 @@ class Webhook
     /**
      * @param string $address
      */
-    public function setAddress(string $address): void
+    public function setAddress(?string $address)
     {
         $this->address = $address;
     }
@@ -100,7 +100,7 @@ class Webhook
     /**
      * @return string
      */
-    public function getTopic(): string
+    public function getTopic(): ?string
     {
         return $this->topic;
     }
@@ -108,7 +108,7 @@ class Webhook
     /**
      * @param string $topic
      */
-    public function setTopic(string $topic): void
+    public function setTopic(?string $topic)
     {
         $this->topic = $topic;
     }
@@ -124,7 +124,7 @@ class Webhook
     /**
      * @param \DateTimeInterface $createdAt
      */
-    public function setCreatedAt(?\DateTimeInterface $createdAt): void
+    public function setCreatedAt(?\DateTimeInterface $createdAt)
     {
         $this->createdAt = $createdAt;
     }
@@ -140,7 +140,7 @@ class Webhook
     /**
      * @param \DateTimeInterface $updatedAt
      */
-    public function setUpdatedAt(?\DateTimeInterface $updatedAt): void
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }
@@ -148,7 +148,7 @@ class Webhook
     /**
      * @return string
      */
-    public function getFormat(): string
+    public function getFormat(): ?string
     {
         return $this->format;
     }
@@ -156,7 +156,7 @@ class Webhook
     /**
      * @param string $format
      */
-    public function setFormat(string $format): void
+    public function setFormat(?string $format)
     {
         $this->format = $format;
     }
@@ -172,7 +172,7 @@ class Webhook
     /**
      * @param array $fields
      */
-    public function setFields(array $fields): void
+    public function setFields(array $fields)
     {
         $this->fields = $fields;
     }
@@ -188,7 +188,7 @@ class Webhook
     /**
      * @param array $metafieldNamespaces
      */
-    public function setMetafieldNamespaces(array $metafieldNamespaces): void
+    public function setMetafieldNamespaces(array $metafieldNamespaces)
     {
         $this->metafieldNamespaces = $metafieldNamespaces;
     }
@@ -196,7 +196,7 @@ class Webhook
     /**
      * @return string
      */
-    public function getApiVersion(): string
+    public function getApiVersion(): ?string
     {
         return $this->apiVersion;
     }
@@ -204,7 +204,7 @@ class Webhook
     /**
      * @param string $apiVersion
      */
-    public function setApiVersion(string $apiVersion): void
+    public function setApiVersion(?string $apiVersion)
     {
         $this->apiVersion = $apiVersion;
     }
@@ -220,7 +220,7 @@ class Webhook
     /**
      * @param array $privateMetafieldNamespaces
      */
-    public function setPrivateMetafieldNamespaces(array $privateMetafieldNamespaces): void
+    public function setPrivateMetafieldNamespaces(array $privateMetafieldNamespaces)
     {
         $this->privateMetafieldNamespaces = $privateMetafieldNamespaces;
     }

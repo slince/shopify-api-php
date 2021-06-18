@@ -38,7 +38,7 @@ class DraftOrderShippingLine
     /**
      * @return bool
      */
-    public function isCustom(): bool
+    public function isCustom(): ?bool
     {
         return $this->custom;
     }
@@ -46,7 +46,7 @@ class DraftOrderShippingLine
     /**
      * @param bool $custom
      */
-    public function setCustom(bool $custom): void
+    public function setCustom(?bool $custom)
     {
         $this->custom = $custom;
     }
@@ -54,7 +54,7 @@ class DraftOrderShippingLine
     /**
      * @return string
      */
-    public function getHandle(): string
+    public function getHandle(): ?string
     {
         return $this->handle;
     }
@@ -62,7 +62,7 @@ class DraftOrderShippingLine
     /**
      * @param string $handle
      */
-    public function setHandle(string $handle): void
+    public function setHandle(?string $handle)
     {
         $this->handle = $handle;
     }
@@ -70,7 +70,7 @@ class DraftOrderShippingLine
     /**
      * @return string
      */
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
@@ -78,7 +78,7 @@ class DraftOrderShippingLine
     /**
      * @param string $title
      */
-    public function setTitle(string $title): void
+    public function setTitle(?string $title)
     {
         $this->title = $title;
     }
@@ -94,7 +94,7 @@ class DraftOrderShippingLine
     /**
      * @param float $price
      */
-    public function setPrice(float $price): void
+    public function setPrice(float $price)
     {
         $this->price = $price;
     }

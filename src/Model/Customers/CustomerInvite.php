@@ -57,7 +57,7 @@ class CustomerInvite
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -65,7 +65,7 @@ class CustomerInvite
     /**
      * @return string
      */
-    public function getTo(): string
+    public function getTo(): ?string
     {
         return $this->to;
     }
@@ -73,7 +73,7 @@ class CustomerInvite
     /**
      * @param string $to
      */
-    public function setTo(string $to): void
+    public function setTo(?string $to)
     {
         $this->to = $to;
     }
@@ -81,7 +81,7 @@ class CustomerInvite
     /**
      * @return string
      */
-    public function getFrom(): string
+    public function getFrom(): ?string
     {
         return $this->from;
     }
@@ -89,7 +89,7 @@ class CustomerInvite
     /**
      * @param string $from
      */
-    public function setFrom(string $from): void
+    public function setFrom(?string $from)
     {
         $this->from = $from;
     }
@@ -97,7 +97,7 @@ class CustomerInvite
     /**
      * @return string
      */
-    public function getSubject(): string
+    public function getSubject(): ?string
     {
         return $this->subject;
     }
@@ -105,7 +105,7 @@ class CustomerInvite
     /**
      * @param string $subject
      */
-    public function setSubject(string $subject): void
+    public function setSubject(?string $subject)
     {
         $this->subject = $subject;
     }
@@ -121,7 +121,7 @@ class CustomerInvite
     /**
      * @param array $bcc
      */
-    public function setBcc(array $bcc): void
+    public function setBcc(array $bcc)
     {
         $this->bcc = $bcc;
     }
@@ -129,7 +129,7 @@ class CustomerInvite
     /**
      * @return string
      */
-    public function getCustomMessage(): string
+    public function getCustomMessage(): ?string
     {
         return $this->customMessage;
     }
@@ -137,7 +137,7 @@ class CustomerInvite
     /**
      * @param string $customMessage
      */
-    public function setCustomMessage(string $customMessage): void
+    public function setCustomMessage(?string $customMessage)
     {
         $this->customMessage = $customMessage;
     }

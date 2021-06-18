@@ -413,7 +413,7 @@ class Order
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -421,7 +421,7 @@ class Order
     /**
      * @return string
      */
-    public function getEmail(): string
+    public function getEmail(): ?string
     {
         return $this->email;
     }
@@ -429,7 +429,7 @@ class Order
     /**
      * @param string $email
      */
-    public function setEmail(string $email): void
+    public function setEmail(?string $email)
     {
         $this->email = $email;
     }
@@ -445,7 +445,7 @@ class Order
     /**
      * @param \DateTimeInterface $closedAt
      */
-    public function setClosedAt(\DateTimeInterface $closedAt): void
+    public function setClosedAt(\DateTimeInterface $closedAt)
     {
         $this->closedAt = $closedAt;
     }
@@ -461,7 +461,7 @@ class Order
     /**
      * @param \DateTimeInterface $createdAt
      */
-    public function setCreatedAt(?\DateTimeInterface $createdAt): void
+    public function setCreatedAt(?\DateTimeInterface $createdAt)
     {
         $this->createdAt = $createdAt;
     }
@@ -477,7 +477,7 @@ class Order
     /**
      * @param \DateTimeInterface $updatedAt
      */
-    public function setUpdatedAt(?\DateTimeInterface $updatedAt): void
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }
@@ -493,7 +493,7 @@ class Order
     /**
      * @param int $number
      */
-    public function setNumber(int $number): void
+    public function setNumber(?int $number)
     {
         $this->number = $number;
     }
@@ -501,7 +501,7 @@ class Order
     /**
      * @return string
      */
-    public function getNote(): string
+    public function getNote(): ?string
     {
         return $this->note;
     }
@@ -509,7 +509,7 @@ class Order
     /**
      * @param string $note
      */
-    public function setNote(string $note): void
+    public function setNote(?string $note)
     {
         $this->note = $note;
     }
@@ -517,7 +517,7 @@ class Order
     /**
      * @return string
      */
-    public function getToken(): string
+    public function getToken(): ?string
     {
         return $this->token;
     }
@@ -525,7 +525,7 @@ class Order
     /**
      * @param string $token
      */
-    public function setToken(string $token): void
+    public function setToken(?string $token)
     {
         $this->token = $token;
     }
@@ -533,7 +533,7 @@ class Order
     /**
      * @return string
      */
-    public function getGateway(): string
+    public function getGateway(): ?string
     {
         return $this->gateway;
     }
@@ -541,7 +541,7 @@ class Order
     /**
      * @param string $gateway
      */
-    public function setGateway(string $gateway): void
+    public function setGateway(?string $gateway)
     {
         $this->gateway = $gateway;
     }
@@ -549,7 +549,7 @@ class Order
     /**
      * @return bool
      */
-    public function isTest(): bool
+    public function isTest(): ?bool
     {
         return $this->test;
     }
@@ -557,7 +557,7 @@ class Order
     /**
      * @param bool $test
      */
-    public function setTest(bool $test): void
+    public function setTest(?bool $test)
     {
         $this->test = $test;
     }
@@ -565,7 +565,7 @@ class Order
     /**
      * @return string
      */
-    public function getTotalPrice(): string
+    public function getTotalPrice(): ?string
     {
         return $this->totalPrice;
     }
@@ -573,7 +573,7 @@ class Order
     /**
      * @param string $totalPrice
      */
-    public function setTotalPrice(string $totalPrice): void
+    public function setTotalPrice(?string $totalPrice)
     {
         $this->totalPrice = $totalPrice;
     }
@@ -581,7 +581,7 @@ class Order
     /**
      * @return string
      */
-    public function getSubtotalPrice(): string
+    public function getSubtotalPrice(): ?string
     {
         return $this->subtotalPrice;
     }
@@ -589,7 +589,7 @@ class Order
     /**
      * @param string $subtotalPrice
      */
-    public function setSubtotalPrice(string $subtotalPrice): void
+    public function setSubtotalPrice(?string $subtotalPrice)
     {
         $this->subtotalPrice = $subtotalPrice;
     }
@@ -605,7 +605,7 @@ class Order
     /**
      * @param int $totalWeight
      */
-    public function setTotalWeight(int $totalWeight): void
+    public function setTotalWeight(?int $totalWeight)
     {
         $this->totalWeight = $totalWeight;
     }
@@ -613,7 +613,7 @@ class Order
     /**
      * @return string
      */
-    public function getTotalTax(): string
+    public function getTotalTax(): ?string
     {
         return $this->totalTax;
     }
@@ -621,7 +621,7 @@ class Order
     /**
      * @param string $totalTax
      */
-    public function setTotalTax(string $totalTax): void
+    public function setTotalTax(?string $totalTax)
     {
         $this->totalTax = $totalTax;
     }
@@ -629,7 +629,7 @@ class Order
     /**
      * @return bool
      */
-    public function isTaxesIncluded(): bool
+    public function isTaxesIncluded(): ?bool
     {
         return $this->taxesIncluded;
     }
@@ -637,7 +637,7 @@ class Order
     /**
      * @param bool $taxesIncluded
      */
-    public function setTaxesIncluded(bool $taxesIncluded): void
+    public function setTaxesIncluded(?bool $taxesIncluded)
     {
         $this->taxesIncluded = $taxesIncluded;
     }
@@ -645,7 +645,7 @@ class Order
     /**
      * @return string
      */
-    public function getCurrency(): string
+    public function getCurrency(): ?string
     {
         return $this->currency;
     }
@@ -653,7 +653,7 @@ class Order
     /**
      * @param string $currency
      */
-    public function setCurrency(string $currency): void
+    public function setCurrency(?string $currency)
     {
         $this->currency = $currency;
     }
@@ -661,7 +661,7 @@ class Order
     /**
      * @return string
      */
-    public function getFinancialStatus(): string
+    public function getFinancialStatus(): ?string
     {
         return $this->financialStatus;
     }
@@ -669,7 +669,7 @@ class Order
     /**
      * @param string $financialStatus
      */
-    public function setFinancialStatus(string $financialStatus): void
+    public function setFinancialStatus(?string $financialStatus)
     {
         $this->financialStatus = $financialStatus;
     }
@@ -677,7 +677,7 @@ class Order
     /**
      * @return bool
      */
-    public function isConfirmed(): bool
+    public function isConfirmed(): ?bool
     {
         return $this->confirmed;
     }
@@ -685,7 +685,7 @@ class Order
     /**
      * @param bool $confirmed
      */
-    public function setConfirmed(bool $confirmed): void
+    public function setConfirmed(?bool $confirmed)
     {
         $this->confirmed = $confirmed;
     }
@@ -693,7 +693,7 @@ class Order
     /**
      * @return string
      */
-    public function getTotalDiscounts(): string
+    public function getTotalDiscounts(): ?string
     {
         return $this->totalDiscounts;
     }
@@ -701,7 +701,7 @@ class Order
     /**
      * @param string $totalDiscounts
      */
-    public function setTotalDiscounts(string $totalDiscounts): void
+    public function setTotalDiscounts(?string $totalDiscounts)
     {
         $this->totalDiscounts = $totalDiscounts;
     }
@@ -709,7 +709,7 @@ class Order
     /**
      * @return string
      */
-    public function getTotalLineItemsPrice(): string
+    public function getTotalLineItemsPrice(): ?string
     {
         return $this->totalLineItemsPrice;
     }
@@ -717,7 +717,7 @@ class Order
     /**
      * @param string $totalLineItemsPrice
      */
-    public function setTotalLineItemsPrice(string $totalLineItemsPrice): void
+    public function setTotalLineItemsPrice(?string $totalLineItemsPrice)
     {
         $this->totalLineItemsPrice = $totalLineItemsPrice;
     }
@@ -725,7 +725,7 @@ class Order
     /**
      * @return string
      */
-    public function getCartToken(): string
+    public function getCartToken(): ?string
     {
         return $this->cartToken;
     }
@@ -733,7 +733,7 @@ class Order
     /**
      * @param string $cartToken
      */
-    public function setCartToken(string $cartToken): void
+    public function setCartToken(?string $cartToken)
     {
         $this->cartToken = $cartToken;
     }
@@ -741,7 +741,7 @@ class Order
     /**
      * @return bool
      */
-    public function isBuyerAcceptsMarketing(): bool
+    public function isBuyerAcceptsMarketing(): ?bool
     {
         return $this->buyerAcceptsMarketing;
     }
@@ -749,7 +749,7 @@ class Order
     /**
      * @param bool $buyerAcceptsMarketing
      */
-    public function setBuyerAcceptsMarketing(bool $buyerAcceptsMarketing): void
+    public function setBuyerAcceptsMarketing(?bool $buyerAcceptsMarketing)
     {
         $this->buyerAcceptsMarketing = $buyerAcceptsMarketing;
     }
@@ -757,7 +757,7 @@ class Order
     /**
      * @return string
      */
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->name;
     }
@@ -765,7 +765,7 @@ class Order
     /**
      * @param string $name
      */
-    public function setName(string $name): void
+    public function setName(?string $name)
     {
         $this->name = $name;
     }
@@ -773,7 +773,7 @@ class Order
     /**
      * @return string
      */
-    public function getReferringSite(): string
+    public function getReferringSite(): ?string
     {
         return $this->referringSite;
     }
@@ -781,7 +781,7 @@ class Order
     /**
      * @param string $referringSite
      */
-    public function setReferringSite(string $referringSite): void
+    public function setReferringSite(?string $referringSite)
     {
         $this->referringSite = $referringSite;
     }
@@ -789,7 +789,7 @@ class Order
     /**
      * @return string
      */
-    public function getLandingSite(): string
+    public function getLandingSite(): ?string
     {
         return $this->landingSite;
     }
@@ -797,7 +797,7 @@ class Order
     /**
      * @param string $landingSite
      */
-    public function setLandingSite(string $landingSite): void
+    public function setLandingSite(?string $landingSite)
     {
         $this->landingSite = $landingSite;
     }
@@ -813,7 +813,7 @@ class Order
     /**
      * @param \DateTimeInterface $cancelledAt
      */
-    public function setCancelledAt(\DateTimeInterface $cancelledAt): void
+    public function setCancelledAt(\DateTimeInterface $cancelledAt)
     {
         $this->cancelledAt = $cancelledAt;
     }
@@ -821,7 +821,7 @@ class Order
     /**
      * @return string
      */
-    public function getCancelReason(): string
+    public function getCancelReason(): ?string
     {
         return $this->cancelReason;
     }
@@ -829,7 +829,7 @@ class Order
     /**
      * @param string $cancelReason
      */
-    public function setCancelReason(string $cancelReason): void
+    public function setCancelReason(?string $cancelReason)
     {
         $this->cancelReason = $cancelReason;
     }
@@ -837,7 +837,7 @@ class Order
     /**
      * @return string
      */
-    public function getTotalPriceUsd(): string
+    public function getTotalPriceUsd(): ?string
     {
         return $this->totalPriceUsd;
     }
@@ -845,7 +845,7 @@ class Order
     /**
      * @param string $totalPriceUsd
      */
-    public function setTotalPriceUsd(string $totalPriceUsd): void
+    public function setTotalPriceUsd(?string $totalPriceUsd)
     {
         $this->totalPriceUsd = $totalPriceUsd;
     }
@@ -853,7 +853,7 @@ class Order
     /**
      * @return string
      */
-    public function getCheckoutToken(): string
+    public function getCheckoutToken(): ?string
     {
         return $this->checkoutToken;
     }
@@ -861,7 +861,7 @@ class Order
     /**
      * @param string $checkoutToken
      */
-    public function setCheckoutToken(string $checkoutToken): void
+    public function setCheckoutToken(?string $checkoutToken)
     {
         $this->checkoutToken = $checkoutToken;
     }
@@ -869,7 +869,7 @@ class Order
     /**
      * @return string
      */
-    public function getReference(): string
+    public function getReference(): ?string
     {
         return $this->reference;
     }
@@ -877,7 +877,7 @@ class Order
     /**
      * @param string $reference
      */
-    public function setReference(string $reference): void
+    public function setReference(?string $reference)
     {
         $this->reference = $reference;
     }
@@ -893,7 +893,7 @@ class Order
     /**
      * @param int $userId
      */
-    public function setUserId(int $userId): void
+    public function setUserId(?int $userId)
     {
         $this->userId = $userId;
     }
@@ -909,7 +909,7 @@ class Order
     /**
      * @param int $locationId
      */
-    public function setLocationId(int $locationId): void
+    public function setLocationId(?int $locationId)
     {
         $this->locationId = $locationId;
     }
@@ -917,7 +917,7 @@ class Order
     /**
      * @return string
      */
-    public function getSourceIdentifier(): string
+    public function getSourceIdentifier(): ?string
     {
         return $this->sourceIdentifier;
     }
@@ -925,7 +925,7 @@ class Order
     /**
      * @param string $sourceIdentifier
      */
-    public function setSourceIdentifier(string $sourceIdentifier): void
+    public function setSourceIdentifier(?string $sourceIdentifier)
     {
         $this->sourceIdentifier = $sourceIdentifier;
     }
@@ -933,7 +933,7 @@ class Order
     /**
      * @return string
      */
-    public function getSourceUrl(): string
+    public function getSourceUrl(): ?string
     {
         return $this->sourceUrl;
     }
@@ -941,7 +941,7 @@ class Order
     /**
      * @param string $sourceUrl
      */
-    public function setSourceUrl(string $sourceUrl): void
+    public function setSourceUrl(?string $sourceUrl)
     {
         $this->sourceUrl = $sourceUrl;
     }
@@ -957,7 +957,7 @@ class Order
     /**
      * @param \DateTimeInterface $processedAt
      */
-    public function setProcessedAt(\DateTimeInterface $processedAt): void
+    public function setProcessedAt(\DateTimeInterface $processedAt)
     {
         $this->processedAt = $processedAt;
     }
@@ -965,7 +965,7 @@ class Order
     /**
      * @return string
      */
-    public function getDeviceId(): string
+    public function getDeviceId(): ?string
     {
         return $this->deviceId;
     }
@@ -973,7 +973,7 @@ class Order
     /**
      * @param string $deviceId
      */
-    public function setDeviceId(string $deviceId): void
+    public function setDeviceId(?string $deviceId)
     {
         $this->deviceId = $deviceId;
     }
@@ -981,7 +981,7 @@ class Order
     /**
      * @return string
      */
-    public function getPhone(): string
+    public function getPhone(): ?string
     {
         return $this->phone;
     }
@@ -989,7 +989,7 @@ class Order
     /**
      * @param string $phone
      */
-    public function setPhone(string $phone): void
+    public function setPhone(?string $phone)
     {
         $this->phone = $phone;
     }
@@ -997,7 +997,7 @@ class Order
     /**
      * @return string
      */
-    public function getCustomLocale(): string
+    public function getCustomLocale(): ?string
     {
         return $this->customLocale;
     }
@@ -1005,7 +1005,7 @@ class Order
     /**
      * @param string $customLocale
      */
-    public function setCustomLocale(string $customLocale): void
+    public function setCustomLocale(?string $customLocale)
     {
         $this->customLocale = $customLocale;
     }
@@ -1013,7 +1013,7 @@ class Order
     /**
      * @return string
      */
-    public function getAppId(): string
+    public function getAppId(): ?string
     {
         return $this->appId;
     }
@@ -1021,7 +1021,7 @@ class Order
     /**
      * @param string $appId
      */
-    public function setAppId(string $appId): void
+    public function setAppId(?string $appId)
     {
         $this->appId = $appId;
     }
@@ -1029,7 +1029,7 @@ class Order
     /**
      * @return string
      */
-    public function getBrowserIp(): string
+    public function getBrowserIp(): ?string
     {
         return $this->browserIp;
     }
@@ -1037,7 +1037,7 @@ class Order
     /**
      * @param string $browserIp
      */
-    public function setBrowserIp(string $browserIp): void
+    public function setBrowserIp(?string $browserIp)
     {
         $this->browserIp = $browserIp;
     }
@@ -1045,7 +1045,7 @@ class Order
     /**
      * @return string
      */
-    public function getLandingSiteRef(): string
+    public function getLandingSiteRef(): ?string
     {
         return $this->landingSiteRef;
     }
@@ -1053,7 +1053,7 @@ class Order
     /**
      * @param string $landingSiteRef
      */
-    public function setLandingSiteRef(string $landingSiteRef): void
+    public function setLandingSiteRef(?string $landingSiteRef)
     {
         $this->landingSiteRef = $landingSiteRef;
     }
@@ -1069,7 +1069,7 @@ class Order
     /**
      * @param int $orderNumber
      */
-    public function setOrderNumber(int $orderNumber): void
+    public function setOrderNumber(?int $orderNumber)
     {
         $this->orderNumber = $orderNumber;
     }
@@ -1085,7 +1085,7 @@ class Order
     /**
      * @param DiscountAllocation[] $discountApplications
      */
-    public function setDiscountApplications(array $discountApplications): void
+    public function setDiscountApplications(array $discountApplications)
     {
         $this->discountApplications = $discountApplications;
     }
@@ -1101,7 +1101,7 @@ class Order
     /**
      * @param DiscountCode[] $discountCodes
      */
-    public function setDiscountCodes(array $discountCodes): void
+    public function setDiscountCodes(array $discountCodes)
     {
         $this->discountCodes = $discountCodes;
     }
@@ -1117,7 +1117,7 @@ class Order
     /**
      * @param NoteAttribute[] $noteAttributes
      */
-    public function setNoteAttributes(array $noteAttributes): void
+    public function setNoteAttributes(array $noteAttributes)
     {
         $this->noteAttributes = $noteAttributes;
     }
@@ -1133,7 +1133,7 @@ class Order
     /**
      * @param array $paymentGatewayNames
      */
-    public function setPaymentGatewayNames(array $paymentGatewayNames): void
+    public function setPaymentGatewayNames(array $paymentGatewayNames)
     {
         $this->paymentGatewayNames = $paymentGatewayNames;
     }
@@ -1141,7 +1141,7 @@ class Order
     /**
      * @return string
      */
-    public function getProcessingMethod(): string
+    public function getProcessingMethod(): ?string
     {
         return $this->processingMethod;
     }
@@ -1149,7 +1149,7 @@ class Order
     /**
      * @param string $processingMethod
      */
-    public function setProcessingMethod(string $processingMethod): void
+    public function setProcessingMethod(?string $processingMethod)
     {
         $this->processingMethod = $processingMethod;
     }
@@ -1165,7 +1165,7 @@ class Order
     /**
      * @param int $checkoutId
      */
-    public function setCheckoutId(int $checkoutId): void
+    public function setCheckoutId(?int $checkoutId)
     {
         $this->checkoutId = $checkoutId;
     }
@@ -1173,7 +1173,7 @@ class Order
     /**
      * @return string
      */
-    public function getSourceName(): string
+    public function getSourceName(): ?string
     {
         return $this->sourceName;
     }
@@ -1181,7 +1181,7 @@ class Order
     /**
      * @param string $sourceName
      */
-    public function setSourceName(string $sourceName): void
+    public function setSourceName(?string $sourceName)
     {
         $this->sourceName = $sourceName;
     }
@@ -1189,7 +1189,7 @@ class Order
     /**
      * @return string
      */
-    public function getFulfillmentStatus(): string
+    public function getFulfillmentStatus(): ?string
     {
         return $this->fulfillmentStatus;
     }
@@ -1197,7 +1197,7 @@ class Order
     /**
      * @param string $fulfillmentStatus
      */
-    public function setFulfillmentStatus(string $fulfillmentStatus): void
+    public function setFulfillmentStatus(?string $fulfillmentStatus)
     {
         $this->fulfillmentStatus = $fulfillmentStatus;
     }
@@ -1213,7 +1213,7 @@ class Order
     /**
      * @param TaxLine[] $taxLines
      */
-    public function setTaxLines(array $taxLines): void
+    public function setTaxLines(array $taxLines)
     {
         $this->taxLines = $taxLines;
     }
@@ -1221,7 +1221,7 @@ class Order
     /**
      * @return string
      */
-    public function getTags(): string
+    public function getTags(): ?string
     {
         return $this->tags;
     }
@@ -1229,7 +1229,7 @@ class Order
     /**
      * @param string $tags
      */
-    public function setTags(string $tags): void
+    public function setTags(?string $tags)
     {
         $this->tags = $tags;
     }
@@ -1237,7 +1237,7 @@ class Order
     /**
      * @return string
      */
-    public function getContactEmail(): string
+    public function getContactEmail(): ?string
     {
         return $this->contactEmail;
     }
@@ -1245,7 +1245,7 @@ class Order
     /**
      * @param string $contactEmail
      */
-    public function setContactEmail(string $contactEmail): void
+    public function setContactEmail(?string $contactEmail)
     {
         $this->contactEmail = $contactEmail;
     }
@@ -1253,7 +1253,7 @@ class Order
     /**
      * @return string
      */
-    public function getOrderStatusUrl(): string
+    public function getOrderStatusUrl(): ?string
     {
         return $this->orderStatusUrl;
     }
@@ -1261,7 +1261,7 @@ class Order
     /**
      * @param string $orderStatusUrl
      */
-    public function setOrderStatusUrl(string $orderStatusUrl): void
+    public function setOrderStatusUrl(?string $orderStatusUrl)
     {
         $this->orderStatusUrl = $orderStatusUrl;
     }
@@ -1269,7 +1269,7 @@ class Order
     /**
      * @return string
      */
-    public function getPresentmentCurrency(): string
+    public function getPresentmentCurrency(): ?string
     {
         return $this->presentmentCurrency;
     }
@@ -1277,7 +1277,7 @@ class Order
     /**
      * @param string $presentmentCurrency
      */
-    public function setPresentmentCurrency(string $presentmentCurrency): void
+    public function setPresentmentCurrency(?string $presentmentCurrency)
     {
         $this->presentmentCurrency = $presentmentCurrency;
     }
@@ -1293,7 +1293,7 @@ class Order
     /**
      * @param PriceSet $totalLineItemsPriceSet
      */
-    public function setTotalLineItemsPriceSet(PriceSet $totalLineItemsPriceSet): void
+    public function setTotalLineItemsPriceSet(PriceSet $totalLineItemsPriceSet)
     {
         $this->totalLineItemsPriceSet = $totalLineItemsPriceSet;
     }
@@ -1309,7 +1309,7 @@ class Order
     /**
      * @param PriceSet $totalDiscountsSet
      */
-    public function setTotalDiscountsSet(PriceSet $totalDiscountsSet): void
+    public function setTotalDiscountsSet(PriceSet $totalDiscountsSet)
     {
         $this->totalDiscountsSet = $totalDiscountsSet;
     }
@@ -1325,7 +1325,7 @@ class Order
     /**
      * @param PriceSet $totalShippingPriceSet
      */
-    public function setTotalShippingPriceSet(PriceSet $totalShippingPriceSet): void
+    public function setTotalShippingPriceSet(PriceSet $totalShippingPriceSet)
     {
         $this->totalShippingPriceSet = $totalShippingPriceSet;
     }
@@ -1341,7 +1341,7 @@ class Order
     /**
      * @param PriceSet $subtotalPriceSet
      */
-    public function setSubtotalPriceSet(PriceSet $subtotalPriceSet): void
+    public function setSubtotalPriceSet(PriceSet $subtotalPriceSet)
     {
         $this->subtotalPriceSet = $subtotalPriceSet;
     }
@@ -1357,7 +1357,7 @@ class Order
     /**
      * @param PriceSet $totalPriceSet
      */
-    public function setTotalPriceSet(PriceSet $totalPriceSet): void
+    public function setTotalPriceSet(PriceSet $totalPriceSet)
     {
         $this->totalPriceSet = $totalPriceSet;
     }
@@ -1373,7 +1373,7 @@ class Order
     /**
      * @param PriceSet $totalTaxSet
      */
-    public function setTotalTaxSet(PriceSet $totalTaxSet): void
+    public function setTotalTaxSet(PriceSet $totalTaxSet)
     {
         $this->totalTaxSet = $totalTaxSet;
     }
@@ -1389,7 +1389,7 @@ class Order
     /**
      * @param LineItem[] $lineItems
      */
-    public function setLineItems(array $lineItems): void
+    public function setLineItems(array $lineItems)
     {
         $this->lineItems = $lineItems;
     }
@@ -1405,7 +1405,7 @@ class Order
     /**
      * @param Fulfillment[] $fulfillments
      */
-    public function setFulfillments(array $fulfillments): void
+    public function setFulfillments(array $fulfillments)
     {
         $this->fulfillments = $fulfillments;
     }
@@ -1421,7 +1421,7 @@ class Order
     /**
      * @param Refund[] $refunds
      */
-    public function setRefunds(array $refunds): void
+    public function setRefunds(array $refunds)
     {
         $this->refunds = $refunds;
     }
@@ -1429,7 +1429,7 @@ class Order
     /**
      * @return string
      */
-    public function getTotalTipReceived(): string
+    public function getTotalTipReceived(): ?string
     {
         return $this->totalTipReceived;
     }
@@ -1437,7 +1437,7 @@ class Order
     /**
      * @param string $totalTipReceived
      */
-    public function setTotalTipReceived(string $totalTipReceived): void
+    public function setTotalTipReceived(?string $totalTipReceived)
     {
         $this->totalTipReceived = $totalTipReceived;
     }
@@ -1453,7 +1453,7 @@ class Order
     /**
      * @param PriceSet $originalTotalDutiesSet
      */
-    public function setOriginalTotalDutiesSet(PriceSet $originalTotalDutiesSet): void
+    public function setOriginalTotalDutiesSet(PriceSet $originalTotalDutiesSet)
     {
         $this->originalTotalDutiesSet = $originalTotalDutiesSet;
     }
@@ -1469,7 +1469,7 @@ class Order
     /**
      * @param PriceSet $currentTotalDutiesSet
      */
-    public function setCurrentTotalDutiesSet(PriceSet $currentTotalDutiesSet): void
+    public function setCurrentTotalDutiesSet(PriceSet $currentTotalDutiesSet)
     {
         $this->currentTotalDutiesSet = $currentTotalDutiesSet;
     }
@@ -1477,7 +1477,7 @@ class Order
     /**
      * @return string
      */
-    public function getAdminGraphqlApiId(): string
+    public function getAdminGraphqlApiId(): ?string
     {
         return $this->adminGraphqlApiId;
     }
@@ -1485,7 +1485,7 @@ class Order
     /**
      * @param string $adminGraphqlApiId
      */
-    public function setAdminGraphqlApiId(string $adminGraphqlApiId): void
+    public function setAdminGraphqlApiId(?string $adminGraphqlApiId)
     {
         $this->adminGraphqlApiId = $adminGraphqlApiId;
     }
@@ -1501,7 +1501,7 @@ class Order
     /**
      * @param ShippingLine[] $shippingLines
      */
-    public function setShippingLines(array $shippingLines): void
+    public function setShippingLines(array $shippingLines)
     {
         $this->shippingLines = $shippingLines;
     }
@@ -1517,7 +1517,7 @@ class Order
     /**
      * @param OrderAddress $billingAddress
      */
-    public function setBillingAddress(OrderAddress $billingAddress): void
+    public function setBillingAddress(OrderAddress $billingAddress)
     {
         $this->billingAddress = $billingAddress;
     }
@@ -1533,7 +1533,7 @@ class Order
     /**
      * @param OrderAddress $shippingAddress
      */
-    public function setShippingAddress(OrderAddress $shippingAddress): void
+    public function setShippingAddress(OrderAddress $shippingAddress)
     {
         $this->shippingAddress = $shippingAddress;
     }
@@ -1549,7 +1549,7 @@ class Order
     /**
      * @param ClientDetails $clientDetails
      */
-    public function setClientDetails(ClientDetails $clientDetails): void
+    public function setClientDetails(ClientDetails $clientDetails)
     {
         $this->clientDetails = $clientDetails;
     }
@@ -1565,7 +1565,7 @@ class Order
     /**
      * @param PaymentDetails $paymentDetails
      */
-    public function setPaymentDetails(PaymentDetails $paymentDetails): void
+    public function setPaymentDetails(PaymentDetails $paymentDetails)
     {
         $this->paymentDetails = $paymentDetails;
     }
@@ -1581,7 +1581,7 @@ class Order
     /**
      * @param Transaction[] $transactions
      */
-    public function setTransactions(array $transactions): void
+    public function setTransactions(array $transactions)
     {
         $this->transactions = $transactions;
     }
@@ -1597,7 +1597,7 @@ class Order
     /**
      * @param Customer $customer
      */
-    public function setCustomer(Customer $customer): void
+    public function setCustomer(Customer $customer)
     {
         $this->customer = $customer;
     }

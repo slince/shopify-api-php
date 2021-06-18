@@ -66,7 +66,7 @@ class LineItemLocation
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -74,7 +74,7 @@ class LineItemLocation
     /**
      * @return string
      */
-    public function getCountryCode(): string
+    public function getCountryCode(): ?string
     {
         return $this->countryCode;
     }
@@ -82,7 +82,7 @@ class LineItemLocation
     /**
      * @param string $countryCode
      */
-    public function setCountryCode(string $countryCode): void
+    public function setCountryCode(?string $countryCode)
     {
         $this->countryCode = $countryCode;
     }
@@ -90,7 +90,7 @@ class LineItemLocation
     /**
      * @return string
      */
-    public function getProvinceCode(): string
+    public function getProvinceCode(): ?string
     {
         return $this->provinceCode;
     }
@@ -98,7 +98,7 @@ class LineItemLocation
     /**
      * @param string $provinceCode
      */
-    public function setProvinceCode(string $provinceCode): void
+    public function setProvinceCode(?string $provinceCode)
     {
         $this->provinceCode = $provinceCode;
     }
@@ -106,7 +106,7 @@ class LineItemLocation
     /**
      * @return string
      */
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->name;
     }
@@ -114,7 +114,7 @@ class LineItemLocation
     /**
      * @param string $name
      */
-    public function setName(string $name): void
+    public function setName(?string $name)
     {
         $this->name = $name;
     }
@@ -122,7 +122,7 @@ class LineItemLocation
     /**
      * @return string
      */
-    public function getAddress1(): string
+    public function getAddress1(): ?string
     {
         return $this->address1;
     }
@@ -130,7 +130,7 @@ class LineItemLocation
     /**
      * @param string $address1
      */
-    public function setAddress1(string $address1): void
+    public function setAddress1(?string $address1)
     {
         $this->address1 = $address1;
     }
@@ -138,7 +138,7 @@ class LineItemLocation
     /**
      * @return string
      */
-    public function getAddress2(): string
+    public function getAddress2(): ?string
     {
         return $this->address2;
     }
@@ -146,7 +146,7 @@ class LineItemLocation
     /**
      * @param string $address2
      */
-    public function setAddress2(string $address2): void
+    public function setAddress2(?string $address2)
     {
         $this->address2 = $address2;
     }
@@ -154,7 +154,7 @@ class LineItemLocation
     /**
      * @return string
      */
-    public function getCity(): string
+    public function getCity(): ?string
     {
         return $this->city;
     }
@@ -162,7 +162,7 @@ class LineItemLocation
     /**
      * @param string $city
      */
-    public function setCity(string $city): void
+    public function setCity(?string $city)
     {
         $this->city = $city;
     }
@@ -170,7 +170,7 @@ class LineItemLocation
     /**
      * @return string
      */
-    public function getZip(): string
+    public function getZip(): ?string
     {
         return $this->zip;
     }
@@ -178,7 +178,7 @@ class LineItemLocation
     /**
      * @param string $zip
      */
-    public function setZip(string $zip): void
+    public function setZip(?string $zip)
     {
         $this->zip = $zip;
     }

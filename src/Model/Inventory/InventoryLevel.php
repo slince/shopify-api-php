@@ -51,7 +51,7 @@ class InventoryLevel
     /**
      * @param int $inventoryItemId
      */
-    public function setInventoryItemId(int $inventoryItemId): void
+    public function setInventoryItemId(?int $inventoryItemId)
     {
         $this->inventoryItemId = $inventoryItemId;
     }
@@ -67,7 +67,7 @@ class InventoryLevel
     /**
      * @param int $locationId
      */
-    public function setLocationId(int $locationId): void
+    public function setLocationId(?int $locationId)
     {
         $this->locationId = $locationId;
     }
@@ -83,7 +83,7 @@ class InventoryLevel
     /**
      * @param int $available
      */
-    public function setAvailable(int $available): void
+    public function setAvailable(?int $available)
     {
         $this->available = $available;
     }
@@ -99,7 +99,7 @@ class InventoryLevel
     /**
      * @param \DateTimeInterface $updatedAt
      */
-    public function setUpdatedAt(?\DateTimeInterface $updatedAt): void
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }
@@ -107,7 +107,7 @@ class InventoryLevel
     /**
      * @return string
      */
-    public function getAdminGraphqlApiId(): string
+    public function getAdminGraphqlApiId(): ?string
     {
         return $this->adminGraphqlApiId;
     }
@@ -115,7 +115,7 @@ class InventoryLevel
     /**
      * @param string $adminGraphqlApiId
      */
-    public function setAdminGraphqlApiId(string $adminGraphqlApiId): void
+    public function setAdminGraphqlApiId(?string $adminGraphqlApiId)
     {
         $this->adminGraphqlApiId = $adminGraphqlApiId;
     }

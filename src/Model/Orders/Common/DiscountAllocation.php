@@ -35,7 +35,7 @@ class DiscountAllocation
     /**
      * @return string
      */
-    public function getAmount(): string
+    public function getAmount(): ?string
     {
         return $this->amount;
     }
@@ -43,7 +43,7 @@ class DiscountAllocation
     /**
      * @param string $amount
      */
-    public function setAmount(string $amount): void
+    public function setAmount(?string $amount)
     {
         $this->amount = $amount;
     }
@@ -59,7 +59,7 @@ class DiscountAllocation
     /**
      * @param int $discountApplicationIndex
      */
-    public function setDiscountApplicationIndex(int $discountApplicationIndex): void
+    public function setDiscountApplicationIndex(?int $discountApplicationIndex)
     {
         $this->discountApplicationIndex = $discountApplicationIndex;
     }
@@ -75,7 +75,7 @@ class DiscountAllocation
     /**
      * @param PriceSet $amountSet
      */
-    public function setAmountSet(PriceSet $amountSet): void
+    public function setAmountSet(PriceSet $amountSet)
     {
         $this->amountSet = $amountSet;
     }

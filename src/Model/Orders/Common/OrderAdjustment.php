@@ -65,7 +65,7 @@ class OrderAdjustment
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -81,7 +81,7 @@ class OrderAdjustment
     /**
      * @param int $orderId
      */
-    public function setOrderId(int $orderId): void
+    public function setOrderId(?int $orderId)
     {
         $this->orderId = $orderId;
     }
@@ -97,7 +97,7 @@ class OrderAdjustment
     /**
      * @param int $refundId
      */
-    public function setRefundId(int $refundId): void
+    public function setRefundId(?int $refundId)
     {
         $this->refundId = $refundId;
     }
@@ -105,7 +105,7 @@ class OrderAdjustment
     /**
      * @return string
      */
-    public function getAmount(): string
+    public function getAmount(): ?string
     {
         return $this->amount;
     }
@@ -113,7 +113,7 @@ class OrderAdjustment
     /**
      * @param string $amount
      */
-    public function setAmount(string $amount): void
+    public function setAmount(?string $amount)
     {
         $this->amount = $amount;
     }
@@ -121,7 +121,7 @@ class OrderAdjustment
     /**
      * @return string
      */
-    public function getTaxAmount(): string
+    public function getTaxAmount(): ?string
     {
         return $this->taxAmount;
     }
@@ -129,7 +129,7 @@ class OrderAdjustment
     /**
      * @param string $taxAmount
      */
-    public function setTaxAmount(string $taxAmount): void
+    public function setTaxAmount(?string $taxAmount)
     {
         $this->taxAmount = $taxAmount;
     }
@@ -137,7 +137,7 @@ class OrderAdjustment
     /**
      * @return string
      */
-    public function getKind(): string
+    public function getKind(): ?string
     {
         return $this->kind;
     }
@@ -145,7 +145,7 @@ class OrderAdjustment
     /**
      * @param string $kind
      */
-    public function setKind(string $kind): void
+    public function setKind(?string $kind)
     {
         $this->kind = $kind;
     }
@@ -153,7 +153,7 @@ class OrderAdjustment
     /**
      * @return string
      */
-    public function getReason(): string
+    public function getReason(): ?string
     {
         return $this->reason;
     }
@@ -161,7 +161,7 @@ class OrderAdjustment
     /**
      * @param string $reason
      */
-    public function setReason(string $reason): void
+    public function setReason(?string $reason)
     {
         $this->reason = $reason;
     }
@@ -177,7 +177,7 @@ class OrderAdjustment
     /**
      * @param PriceSet $amountSet
      */
-    public function setAmountSet(PriceSet $amountSet): void
+    public function setAmountSet(PriceSet $amountSet)
     {
         $this->amountSet = $amountSet;
     }
@@ -193,7 +193,7 @@ class OrderAdjustment
     /**
      * @param PriceSet $taxAmountSet
      */
-    public function setTaxAmountSet(PriceSet $taxAmountSet): void
+    public function setTaxAmountSet(PriceSet $taxAmountSet)
     {
         $this->taxAmountSet = $taxAmountSet;
     }

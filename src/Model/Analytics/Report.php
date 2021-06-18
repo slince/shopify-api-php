@@ -51,7 +51,7 @@ class Report
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -59,7 +59,7 @@ class Report
     /**
      * @return string
      */
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->name;
     }
@@ -67,7 +67,7 @@ class Report
     /**
      * @param string $name
      */
-    public function setName(string $name): void
+    public function setName(?string $name)
     {
         $this->name = $name;
     }
@@ -75,7 +75,7 @@ class Report
     /**
      * @return string
      */
-    public function getShopifyQl(): string
+    public function getShopifyQl(): ?string
     {
         return $this->shopifyQl;
     }
@@ -83,7 +83,7 @@ class Report
     /**
      * @param string $shopifyQl
      */
-    public function setShopifyQl(string $shopifyQl): void
+    public function setShopifyQl(?string $shopifyQl)
     {
         $this->shopifyQl = $shopifyQl;
     }
@@ -99,7 +99,7 @@ class Report
     /**
      * @param \DateTimeInterface $updatedAt
      */
-    public function setUpdatedAt(?\DateTimeInterface $updatedAt): void
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }
@@ -107,7 +107,7 @@ class Report
     /**
      * @return string
      */
-    public function getCategory(): string
+    public function getCategory(): ?string
     {
         return $this->category;
     }
@@ -115,7 +115,7 @@ class Report
     /**
      * @param string $category
      */
-    public function setCategory(string $category): void
+    public function setCategory(?string $category)
     {
         $this->category = $category;
     }

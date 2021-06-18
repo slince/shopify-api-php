@@ -168,7 +168,7 @@ class LineItem
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -184,7 +184,7 @@ class LineItem
     /**
      * @param int $variantId
      */
-    public function setVariantId(int $variantId): void
+    public function setVariantId(?int $variantId)
     {
         $this->variantId = $variantId;
     }
@@ -192,7 +192,7 @@ class LineItem
     /**
      * @return string
      */
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
@@ -200,7 +200,7 @@ class LineItem
     /**
      * @param string $title
      */
-    public function setTitle(string $title): void
+    public function setTitle(?string $title)
     {
         $this->title = $title;
     }
@@ -216,7 +216,7 @@ class LineItem
     /**
      * @param int $quantity
      */
-    public function setQuantity(int $quantity): void
+    public function setQuantity(?int $quantity)
     {
         $this->quantity = $quantity;
     }
@@ -224,7 +224,7 @@ class LineItem
     /**
      * @return string
      */
-    public function getSku(): string
+    public function getSku(): ?string
     {
         return $this->sku;
     }
@@ -232,7 +232,7 @@ class LineItem
     /**
      * @param string $sku
      */
-    public function setSku(string $sku): void
+    public function setSku(?string $sku)
     {
         $this->sku = $sku;
     }
@@ -240,7 +240,7 @@ class LineItem
     /**
      * @return string
      */
-    public function getVariantTitle(): string
+    public function getVariantTitle(): ?string
     {
         return $this->variantTitle;
     }
@@ -248,7 +248,7 @@ class LineItem
     /**
      * @param string $variantTitle
      */
-    public function setVariantTitle(string $variantTitle): void
+    public function setVariantTitle(?string $variantTitle)
     {
         $this->variantTitle = $variantTitle;
     }
@@ -256,7 +256,7 @@ class LineItem
     /**
      * @return string
      */
-    public function getVendor(): string
+    public function getVendor(): ?string
     {
         return $this->vendor;
     }
@@ -264,7 +264,7 @@ class LineItem
     /**
      * @param string $vendor
      */
-    public function setVendor(string $vendor): void
+    public function setVendor(?string $vendor)
     {
         $this->vendor = $vendor;
     }
@@ -272,7 +272,7 @@ class LineItem
     /**
      * @return string
      */
-    public function getFulfillmentService(): string
+    public function getFulfillmentService(): ?string
     {
         return $this->fulfillmentService;
     }
@@ -280,7 +280,7 @@ class LineItem
     /**
      * @param string $fulfillmentService
      */
-    public function setFulfillmentService(string $fulfillmentService): void
+    public function setFulfillmentService(?string $fulfillmentService)
     {
         $this->fulfillmentService = $fulfillmentService;
     }
@@ -296,7 +296,7 @@ class LineItem
     /**
      * @param int $productId
      */
-    public function setProductId(int $productId): void
+    public function setProductId(?int $productId)
     {
         $this->productId = $productId;
     }
@@ -304,7 +304,7 @@ class LineItem
     /**
      * @return bool
      */
-    public function isRequiresShipping(): bool
+    public function isRequiresShipping(): ?bool
     {
         return $this->requiresShipping;
     }
@@ -312,7 +312,7 @@ class LineItem
     /**
      * @param bool $requiresShipping
      */
-    public function setRequiresShipping(bool $requiresShipping): void
+    public function setRequiresShipping(?bool $requiresShipping)
     {
         $this->requiresShipping = $requiresShipping;
     }
@@ -320,7 +320,7 @@ class LineItem
     /**
      * @return bool
      */
-    public function isTaxable(): bool
+    public function isTaxable(): ?bool
     {
         return $this->taxable;
     }
@@ -328,7 +328,7 @@ class LineItem
     /**
      * @param bool $taxable
      */
-    public function setTaxable(bool $taxable): void
+    public function setTaxable(?bool $taxable)
     {
         $this->taxable = $taxable;
     }
@@ -336,7 +336,7 @@ class LineItem
     /**
      * @return bool
      */
-    public function isGiftCard(): bool
+    public function isGiftCard(): ?bool
     {
         return $this->giftCard;
     }
@@ -344,7 +344,7 @@ class LineItem
     /**
      * @param bool $giftCard
      */
-    public function setGiftCard(bool $giftCard): void
+    public function setGiftCard(?bool $giftCard)
     {
         $this->giftCard = $giftCard;
     }
@@ -352,7 +352,7 @@ class LineItem
     /**
      * @return string
      */
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->name;
     }
@@ -360,7 +360,7 @@ class LineItem
     /**
      * @param string $name
      */
-    public function setName(string $name): void
+    public function setName(?string $name)
     {
         $this->name = $name;
     }
@@ -368,7 +368,7 @@ class LineItem
     /**
      * @return string
      */
-    public function getVariantInventoryManagement(): string
+    public function getVariantInventoryManagement(): ?string
     {
         return $this->variantInventoryManagement;
     }
@@ -376,7 +376,7 @@ class LineItem
     /**
      * @param string $variantInventoryManagement
      */
-    public function setVariantInventoryManagement(string $variantInventoryManagement): void
+    public function setVariantInventoryManagement(?string $variantInventoryManagement)
     {
         $this->variantInventoryManagement = $variantInventoryManagement;
     }
@@ -392,7 +392,7 @@ class LineItem
     /**
      * @param LineItemProperty[] $properties
      */
-    public function setProperties(array $properties): void
+    public function setProperties(array $properties)
     {
         $this->properties = $properties;
     }
@@ -400,7 +400,7 @@ class LineItem
     /**
      * @return bool
      */
-    public function isProductExists(): bool
+    public function isProductExists(): ?bool
     {
         return $this->productExists;
     }
@@ -408,7 +408,7 @@ class LineItem
     /**
      * @param bool $productExists
      */
-    public function setProductExists(bool $productExists): void
+    public function setProductExists(?bool $productExists)
     {
         $this->productExists = $productExists;
     }
@@ -424,7 +424,7 @@ class LineItem
     /**
      * @param int $fulfillableQuantity
      */
-    public function setFulfillableQuantity(int $fulfillableQuantity): void
+    public function setFulfillableQuantity(?int $fulfillableQuantity)
     {
         $this->fulfillableQuantity = $fulfillableQuantity;
     }
@@ -440,7 +440,7 @@ class LineItem
     /**
      * @param int $grams
      */
-    public function setGrams(int $grams): void
+    public function setGrams(?int $grams)
     {
         $this->grams = $grams;
     }
@@ -448,7 +448,7 @@ class LineItem
     /**
      * @return string
      */
-    public function getPrice(): string
+    public function getPrice(): ?string
     {
         return $this->price;
     }
@@ -456,7 +456,7 @@ class LineItem
     /**
      * @param string $price
      */
-    public function setPrice(string $price): void
+    public function setPrice(?string $price)
     {
         $this->price = $price;
     }
@@ -464,7 +464,7 @@ class LineItem
     /**
      * @return string
      */
-    public function getTotalDiscount(): string
+    public function getTotalDiscount(): ?string
     {
         return $this->totalDiscount;
     }
@@ -472,7 +472,7 @@ class LineItem
     /**
      * @param string $totalDiscount
      */
-    public function setTotalDiscount(string $totalDiscount): void
+    public function setTotalDiscount(?string $totalDiscount)
     {
         $this->totalDiscount = $totalDiscount;
     }
@@ -480,7 +480,7 @@ class LineItem
     /**
      * @return string
      */
-    public function getFulfillmentStatus(): string
+    public function getFulfillmentStatus(): ?string
     {
         return $this->fulfillmentStatus;
     }
@@ -488,7 +488,7 @@ class LineItem
     /**
      * @param string $fulfillmentStatus
      */
-    public function setFulfillmentStatus(string $fulfillmentStatus): void
+    public function setFulfillmentStatus(?string $fulfillmentStatus)
     {
         $this->fulfillmentStatus = $fulfillmentStatus;
     }
@@ -504,7 +504,7 @@ class LineItem
     /**
      * @param PriceSet $priceSet
      */
-    public function setPriceSet(PriceSet $priceSet): void
+    public function setPriceSet(PriceSet $priceSet)
     {
         $this->priceSet = $priceSet;
     }
@@ -520,7 +520,7 @@ class LineItem
     /**
      * @param PriceSet $totalDiscountSet
      */
-    public function setTotalDiscountSet(PriceSet $totalDiscountSet): void
+    public function setTotalDiscountSet(PriceSet $totalDiscountSet)
     {
         $this->totalDiscountSet = $totalDiscountSet;
     }
@@ -536,7 +536,7 @@ class LineItem
     /**
      * @param DiscountAllocation[] $discountAllocations
      */
-    public function setDiscountAllocations(array $discountAllocations): void
+    public function setDiscountAllocations(array $discountAllocations)
     {
         $this->discountAllocations = $discountAllocations;
     }
@@ -552,7 +552,7 @@ class LineItem
     /**
      * @param LineItemLocation $originLocation
      */
-    public function setOriginLocation(LineItemLocation $originLocation): void
+    public function setOriginLocation(LineItemLocation $originLocation)
     {
         $this->originLocation = $originLocation;
     }
@@ -568,7 +568,7 @@ class LineItem
     /**
      * @param LineItemDuty[] $duties
      */
-    public function setDuties(array $duties): void
+    public function setDuties(array $duties)
     {
         $this->duties = $duties;
     }
@@ -576,7 +576,7 @@ class LineItem
     /**
      * @return string
      */
-    public function getAdminGraphqlApiId(): string
+    public function getAdminGraphqlApiId(): ?string
     {
         return $this->adminGraphqlApiId;
     }
@@ -584,7 +584,7 @@ class LineItem
     /**
      * @param string $adminGraphqlApiId
      */
-    public function setAdminGraphqlApiId(string $adminGraphqlApiId): void
+    public function setAdminGraphqlApiId(?string $adminGraphqlApiId)
     {
         $this->adminGraphqlApiId = $adminGraphqlApiId;
     }
@@ -600,7 +600,7 @@ class LineItem
     /**
      * @param TaxLine[] $taxLines
      */
-    public function setTaxLines(array $taxLines): void
+    public function setTaxLines(array $taxLines)
     {
         $this->taxLines = $taxLines;
     }

@@ -151,7 +151,7 @@ class Customer
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -159,7 +159,7 @@ class Customer
     /**
      * @return string
      */
-    public function getEmail(): string
+    public function getEmail(): ?string
     {
         return $this->email;
     }
@@ -167,7 +167,7 @@ class Customer
     /**
      * @param string $email
      */
-    public function setEmail(string $email): void
+    public function setEmail(?string $email)
     {
         $this->email = $email;
     }
@@ -175,7 +175,7 @@ class Customer
     /**
      * @return bool
      */
-    public function isAcceptsMarketing(): bool
+    public function isAcceptsMarketing(): ?bool
     {
         return $this->acceptsMarketing;
     }
@@ -183,7 +183,7 @@ class Customer
     /**
      * @param bool $acceptsMarketing
      */
-    public function setAcceptsMarketing(bool $acceptsMarketing): void
+    public function setAcceptsMarketing(?bool $acceptsMarketing)
     {
         $this->acceptsMarketing = $acceptsMarketing;
     }
@@ -199,7 +199,7 @@ class Customer
     /**
      * @param \DateTimeInterface $createdAt
      */
-    public function setCreatedAt(?\DateTimeInterface $createdAt): void
+    public function setCreatedAt(?\DateTimeInterface $createdAt)
     {
         $this->createdAt = $createdAt;
     }
@@ -215,7 +215,7 @@ class Customer
     /**
      * @param \DateTimeInterface $updatedAt
      */
-    public function setUpdatedAt(?\DateTimeInterface $updatedAt): void
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }
@@ -223,7 +223,7 @@ class Customer
     /**
      * @return string
      */
-    public function getFirstName(): string
+    public function getFirstName(): ?string
     {
         return $this->firstName;
     }
@@ -231,7 +231,7 @@ class Customer
     /**
      * @param string $firstName
      */
-    public function setFirstName(string $firstName): void
+    public function setFirstName(?string $firstName)
     {
         $this->firstName = $firstName;
     }
@@ -239,7 +239,7 @@ class Customer
     /**
      * @return string
      */
-    public function getLastName(): string
+    public function getLastName(): ?string
     {
         return $this->lastName;
     }
@@ -247,7 +247,7 @@ class Customer
     /**
      * @param string $lastName
      */
-    public function setLastName(string $lastName): void
+    public function setLastName(?string $lastName)
     {
         $this->lastName = $lastName;
     }
@@ -263,7 +263,7 @@ class Customer
     /**
      * @param int $ordersCount
      */
-    public function setOrdersCount(int $ordersCount): void
+    public function setOrdersCount(?int $ordersCount)
     {
         $this->ordersCount = $ordersCount;
     }
@@ -271,7 +271,7 @@ class Customer
     /**
      * @return string
      */
-    public function getState(): string
+    public function getState(): ?string
     {
         return $this->state;
     }
@@ -279,7 +279,7 @@ class Customer
     /**
      * @param string $state
      */
-    public function setState(string $state): void
+    public function setState(?string $state)
     {
         $this->state = $state;
     }
@@ -295,7 +295,7 @@ class Customer
     /**
      * @param float $totalSpent
      */
-    public function setTotalSpent(float $totalSpent): void
+    public function setTotalSpent(float $totalSpent)
     {
         $this->totalSpent = $totalSpent;
     }
@@ -311,7 +311,7 @@ class Customer
     /**
      * @param int $lastOrderId
      */
-    public function setLastOrderId(int $lastOrderId): void
+    public function setLastOrderId(?int $lastOrderId)
     {
         $this->lastOrderId = $lastOrderId;
     }
@@ -319,7 +319,7 @@ class Customer
     /**
      * @return string
      */
-    public function getNote(): string
+    public function getNote(): ?string
     {
         return $this->note;
     }
@@ -327,7 +327,7 @@ class Customer
     /**
      * @param string $note
      */
-    public function setNote(string $note): void
+    public function setNote(?string $note)
     {
         $this->note = $note;
     }
@@ -335,7 +335,7 @@ class Customer
     /**
      * @return bool
      */
-    public function isVerifiedEmail(): bool
+    public function isVerifiedEmail(): ?bool
     {
         return $this->verifiedEmail;
     }
@@ -343,7 +343,7 @@ class Customer
     /**
      * @param bool $verifiedEmail
      */
-    public function setVerifiedEmail(bool $verifiedEmail): void
+    public function setVerifiedEmail(?bool $verifiedEmail)
     {
         $this->verifiedEmail = $verifiedEmail;
     }
@@ -351,7 +351,7 @@ class Customer
     /**
      * @return string
      */
-    public function getMultipassIdentifier(): string
+    public function getMultipassIdentifier(): ?string
     {
         return $this->multipassIdentifier;
     }
@@ -359,7 +359,7 @@ class Customer
     /**
      * @param string $multipassIdentifier
      */
-    public function setMultipassIdentifier(string $multipassIdentifier): void
+    public function setMultipassIdentifier(?string $multipassIdentifier)
     {
         $this->multipassIdentifier = $multipassIdentifier;
     }
@@ -367,7 +367,7 @@ class Customer
     /**
      * @return bool
      */
-    public function isTaxExempt(): bool
+    public function isTaxExempt(): ?bool
     {
         return $this->taxExempt;
     }
@@ -375,7 +375,7 @@ class Customer
     /**
      * @param bool $taxExempt
      */
-    public function setTaxExempt(bool $taxExempt): void
+    public function setTaxExempt(?bool $taxExempt)
     {
         $this->taxExempt = $taxExempt;
     }
@@ -383,7 +383,7 @@ class Customer
     /**
      * @return string
      */
-    public function getPhone(): string
+    public function getPhone(): ?string
     {
         return $this->phone;
     }
@@ -391,7 +391,7 @@ class Customer
     /**
      * @param string $phone
      */
-    public function setPhone(string $phone): void
+    public function setPhone(?string $phone)
     {
         $this->phone = $phone;
     }
@@ -399,7 +399,7 @@ class Customer
     /**
      * @return string
      */
-    public function getTags(): string
+    public function getTags(): ?string
     {
         return $this->tags;
     }
@@ -407,7 +407,7 @@ class Customer
     /**
      * @param string $tags
      */
-    public function setTags(string $tags): void
+    public function setTags(?string $tags)
     {
         $this->tags = $tags;
     }
@@ -415,7 +415,7 @@ class Customer
     /**
      * @return string
      */
-    public function getLastOrderName(): string
+    public function getLastOrderName(): ?string
     {
         return $this->lastOrderName;
     }
@@ -423,7 +423,7 @@ class Customer
     /**
      * @param string $lastOrderName
      */
-    public function setLastOrderName(string $lastOrderName): void
+    public function setLastOrderName(?string $lastOrderName)
     {
         $this->lastOrderName = $lastOrderName;
     }
@@ -431,7 +431,7 @@ class Customer
     /**
      * @return string
      */
-    public function getCurrency(): string
+    public function getCurrency(): ?string
     {
         return $this->currency;
     }
@@ -439,7 +439,7 @@ class Customer
     /**
      * @param string $currency
      */
-    public function setCurrency(string $currency): void
+    public function setCurrency(?string $currency)
     {
         $this->currency = $currency;
     }
@@ -455,7 +455,7 @@ class Customer
     /**
      * @param Address[] $addresses
      */
-    public function setAddresses(array $addresses): void
+    public function setAddresses(array $addresses)
     {
         $this->addresses = $addresses;
     }
@@ -471,7 +471,7 @@ class Customer
     /**
      * @param \DateTimeInterface $acceptsMarketingUpdatedAt
      */
-    public function setAcceptsMarketingUpdatedAt(\DateTimeInterface $acceptsMarketingUpdatedAt): void
+    public function setAcceptsMarketingUpdatedAt(\DateTimeInterface $acceptsMarketingUpdatedAt)
     {
         $this->acceptsMarketingUpdatedAt = $acceptsMarketingUpdatedAt;
     }
@@ -479,7 +479,7 @@ class Customer
     /**
      * @return string
      */
-    public function getMarketingOptInLevel(): string
+    public function getMarketingOptInLevel(): ?string
     {
         return $this->marketingOptInLevel;
     }
@@ -487,7 +487,7 @@ class Customer
     /**
      * @param string $marketingOptInLevel
      */
-    public function setMarketingOptInLevel(string $marketingOptInLevel): void
+    public function setMarketingOptInLevel(?string $marketingOptInLevel)
     {
         $this->marketingOptInLevel = $marketingOptInLevel;
     }
@@ -503,7 +503,7 @@ class Customer
     /**
      * @param array $taxExemptions
      */
-    public function setTaxExemptions(array $taxExemptions): void
+    public function setTaxExemptions(array $taxExemptions)
     {
         $this->taxExemptions = $taxExemptions;
     }
@@ -511,7 +511,7 @@ class Customer
     /**
      * @return string
      */
-    public function getAdminGraphqlApiId(): string
+    public function getAdminGraphqlApiId(): ?string
     {
         return $this->adminGraphqlApiId;
     }
@@ -519,7 +519,7 @@ class Customer
     /**
      * @param string $adminGraphqlApiId
      */
-    public function setAdminGraphqlApiId(string $adminGraphqlApiId): void
+    public function setAdminGraphqlApiId(?string $adminGraphqlApiId)
     {
         $this->adminGraphqlApiId = $adminGraphqlApiId;
     }
@@ -535,7 +535,7 @@ class Customer
     /**
      * @param Address $defaultAddress
      */
-    public function setDefaultAddress(Address $defaultAddress): void
+    public function setDefaultAddress(Address $defaultAddress)
     {
         $this->defaultAddress = $defaultAddress;
     }

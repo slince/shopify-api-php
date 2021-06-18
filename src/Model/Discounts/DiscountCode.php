@@ -56,7 +56,7 @@ class DiscountCode
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -72,7 +72,7 @@ class DiscountCode
     /**
      * @param int $priceRuleId
      */
-    public function setPriceRuleId(int $priceRuleId): void
+    public function setPriceRuleId(?int $priceRuleId)
     {
         $this->priceRuleId = $priceRuleId;
     }
@@ -80,7 +80,7 @@ class DiscountCode
     /**
      * @return string
      */
-    public function getCode(): string
+    public function getCode(): ?string
     {
         return $this->code;
     }
@@ -88,7 +88,7 @@ class DiscountCode
     /**
      * @param string $code
      */
-    public function setCode(string $code): void
+    public function setCode(?string $code)
     {
         $this->code = $code;
     }
@@ -104,7 +104,7 @@ class DiscountCode
     /**
      * @param int $usageCount
      */
-    public function setUsageCount(int $usageCount): void
+    public function setUsageCount(?int $usageCount)
     {
         $this->usageCount = $usageCount;
     }
@@ -120,7 +120,7 @@ class DiscountCode
     /**
      * @param \DateTimeInterface $createdAt
      */
-    public function setCreatedAt(?\DateTimeInterface $createdAt): void
+    public function setCreatedAt(?\DateTimeInterface $createdAt)
     {
         $this->createdAt = $createdAt;
     }
@@ -136,7 +136,7 @@ class DiscountCode
     /**
      * @param \DateTimeInterface $updatedAt
      */
-    public function setUpdatedAt(?\DateTimeInterface $updatedAt): void
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }

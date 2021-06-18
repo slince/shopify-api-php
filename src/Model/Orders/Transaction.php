@@ -138,7 +138,7 @@ class Transaction
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -154,7 +154,7 @@ class Transaction
     /**
      * @param int $orderId
      */
-    public function setOrderId(int $orderId): void
+    public function setOrderId(?int $orderId)
     {
         $this->orderId = $orderId;
     }
@@ -162,7 +162,7 @@ class Transaction
     /**
      * @return string
      */
-    public function getKind(): string
+    public function getKind(): ?string
     {
         return $this->kind;
     }
@@ -170,7 +170,7 @@ class Transaction
     /**
      * @param string $kind
      */
-    public function setKind(string $kind): void
+    public function setKind(?string $kind)
     {
         $this->kind = $kind;
     }
@@ -178,7 +178,7 @@ class Transaction
     /**
      * @return string
      */
-    public function getGateway(): string
+    public function getGateway(): ?string
     {
         return $this->gateway;
     }
@@ -186,7 +186,7 @@ class Transaction
     /**
      * @param string $gateway
      */
-    public function setGateway(string $gateway): void
+    public function setGateway(?string $gateway)
     {
         $this->gateway = $gateway;
     }
@@ -194,7 +194,7 @@ class Transaction
     /**
      * @return string
      */
-    public function getStatus(): string
+    public function getStatus(): ?string
     {
         return $this->status;
     }
@@ -202,7 +202,7 @@ class Transaction
     /**
      * @param string $status
      */
-    public function setStatus(string $status): void
+    public function setStatus(?string $status)
     {
         $this->status = $status;
     }
@@ -210,7 +210,7 @@ class Transaction
     /**
      * @return string
      */
-    public function getMessage(): string
+    public function getMessage(): ?string
     {
         return $this->message;
     }
@@ -218,7 +218,7 @@ class Transaction
     /**
      * @param string $message
      */
-    public function setMessage(string $message): void
+    public function setMessage(?string $message)
     {
         $this->message = $message;
     }
@@ -234,7 +234,7 @@ class Transaction
     /**
      * @param \DateTimeInterface $createdAt
      */
-    public function setCreatedAt(?\DateTimeInterface $createdAt): void
+    public function setCreatedAt(?\DateTimeInterface $createdAt)
     {
         $this->createdAt = $createdAt;
     }
@@ -242,7 +242,7 @@ class Transaction
     /**
      * @return bool
      */
-    public function isTest(): bool
+    public function isTest(): ?bool
     {
         return $this->test;
     }
@@ -250,7 +250,7 @@ class Transaction
     /**
      * @param bool $test
      */
-    public function setTest(bool $test): void
+    public function setTest(?bool $test)
     {
         $this->test = $test;
     }
@@ -258,7 +258,7 @@ class Transaction
     /**
      * @return string
      */
-    public function getAuthorization(): string
+    public function getAuthorization(): ?string
     {
         return $this->authorization;
     }
@@ -266,7 +266,7 @@ class Transaction
     /**
      * @param string $authorization
      */
-    public function setAuthorization(string $authorization): void
+    public function setAuthorization(?string $authorization)
     {
         $this->authorization = $authorization;
     }
@@ -282,7 +282,7 @@ class Transaction
     /**
      * @param int $locationId
      */
-    public function setLocationId(int $locationId): void
+    public function setLocationId(?int $locationId)
     {
         $this->locationId = $locationId;
     }
@@ -298,7 +298,7 @@ class Transaction
     /**
      * @param int $userId
      */
-    public function setUserId(int $userId): void
+    public function setUserId(?int $userId)
     {
         $this->userId = $userId;
     }
@@ -314,7 +314,7 @@ class Transaction
     /**
      * @param int $parentId
      */
-    public function setParentId(int $parentId): void
+    public function setParentId(?int $parentId)
     {
         $this->parentId = $parentId;
     }
@@ -330,7 +330,7 @@ class Transaction
     /**
      * @param \DateTimeInterface $processedAt
      */
-    public function setProcessedAt(\DateTimeInterface $processedAt): void
+    public function setProcessedAt(\DateTimeInterface $processedAt)
     {
         $this->processedAt = $processedAt;
     }
@@ -338,7 +338,7 @@ class Transaction
     /**
      * @return string
      */
-    public function getDeviceId(): string
+    public function getDeviceId(): ?string
     {
         return $this->deviceId;
     }
@@ -346,7 +346,7 @@ class Transaction
     /**
      * @param string $deviceId
      */
-    public function setDeviceId(string $deviceId): void
+    public function setDeviceId(?string $deviceId)
     {
         $this->deviceId = $deviceId;
     }
@@ -362,7 +362,7 @@ class Transaction
     /**
      * @param array $receipt
      */
-    public function setReceipt(array $receipt): void
+    public function setReceipt(array $receipt)
     {
         $this->receipt = $receipt;
     }
@@ -370,7 +370,7 @@ class Transaction
     /**
      * @return string
      */
-    public function getErrorCode(): string
+    public function getErrorCode(): ?string
     {
         return $this->errorCode;
     }
@@ -378,7 +378,7 @@ class Transaction
     /**
      * @param string $errorCode
      */
-    public function setErrorCode(string $errorCode): void
+    public function setErrorCode(?string $errorCode)
     {
         $this->errorCode = $errorCode;
     }
@@ -386,7 +386,7 @@ class Transaction
     /**
      * @return string
      */
-    public function getSourceName(): string
+    public function getSourceName(): ?string
     {
         return $this->sourceName;
     }
@@ -394,7 +394,7 @@ class Transaction
     /**
      * @param string $sourceName
      */
-    public function setSourceName(string $sourceName): void
+    public function setSourceName(?string $sourceName)
     {
         $this->sourceName = $sourceName;
     }
@@ -410,7 +410,7 @@ class Transaction
     /**
      * @param CurrencyExchangeAdjustment $currencyExchangeAdjustment
      */
-    public function setCurrencyExchangeAdjustment(CurrencyExchangeAdjustment $currencyExchangeAdjustment): void
+    public function setCurrencyExchangeAdjustment(CurrencyExchangeAdjustment $currencyExchangeAdjustment)
     {
         $this->currencyExchangeAdjustment = $currencyExchangeAdjustment;
     }
@@ -418,7 +418,7 @@ class Transaction
     /**
      * @return string
      */
-    public function getAmount(): string
+    public function getAmount(): ?string
     {
         return $this->amount;
     }
@@ -426,7 +426,7 @@ class Transaction
     /**
      * @param string $amount
      */
-    public function setAmount(string $amount): void
+    public function setAmount(?string $amount)
     {
         $this->amount = $amount;
     }
@@ -434,7 +434,7 @@ class Transaction
     /**
      * @return string
      */
-    public function getCurrency(): string
+    public function getCurrency(): ?string
     {
         return $this->currency;
     }
@@ -442,7 +442,7 @@ class Transaction
     /**
      * @param string $currency
      */
-    public function setCurrency(string $currency): void
+    public function setCurrency(?string $currency)
     {
         $this->currency = $currency;
     }
@@ -450,7 +450,7 @@ class Transaction
     /**
      * @return string
      */
-    public function getAdminGraphqlApiId(): string
+    public function getAdminGraphqlApiId(): ?string
     {
         return $this->adminGraphqlApiId;
     }
@@ -458,7 +458,7 @@ class Transaction
     /**
      * @param string $adminGraphqlApiId
      */
-    public function setAdminGraphqlApiId(string $adminGraphqlApiId): void
+    public function setAdminGraphqlApiId(?string $adminGraphqlApiId)
     {
         $this->adminGraphqlApiId = $adminGraphqlApiId;
     }
@@ -474,7 +474,7 @@ class Transaction
     /**
      * @param PaymentDetails $paymentDetails
      */
-    public function setPaymentDetails(PaymentDetails $paymentDetails): void
+    public function setPaymentDetails(PaymentDetails $paymentDetails)
     {
         $this->paymentDetails = $paymentDetails;
     }

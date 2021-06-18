@@ -33,7 +33,7 @@ class RequestOption
     /**
      * @return string
      */
-    public function getShippingMethod(): string
+    public function getShippingMethod(): ?string
     {
         return $this->shippingMethod;
     }
@@ -41,7 +41,7 @@ class RequestOption
     /**
      * @param string $shippingMethod
      */
-    public function setShippingMethod(string $shippingMethod): void
+    public function setShippingMethod(?string $shippingMethod)
     {
         $this->shippingMethod = $shippingMethod;
     }
@@ -49,7 +49,7 @@ class RequestOption
     /**
      * @return string
      */
-    public function getNote(): string
+    public function getNote(): ?string
     {
         return $this->note;
     }
@@ -57,7 +57,7 @@ class RequestOption
     /**
      * @param string $note
      */
-    public function setNote(string $note): void
+    public function setNote(?string $note)
     {
         $this->note = $note;
     }
@@ -73,7 +73,7 @@ class RequestOption
     /**
      * @param \DateTimeInterface $date
      */
-    public function setDate(\DateTimeInterface $date): void
+    public function setDate(\DateTimeInterface $date)
     {
         $this->date = $date;
     }
@@ -99,7 +99,7 @@ class MerchantRequest
     /**
      * @return string
      */
-    public function getMessage(): string
+    public function getMessage(): ?string
     {
         return $this->message;
     }
@@ -107,7 +107,7 @@ class MerchantRequest
     /**
      * @param string $message
      */
-    public function setMessage(string $message): void
+    public function setMessage(?string $message)
     {
         $this->message = $message;
     }
@@ -123,7 +123,7 @@ class MerchantRequest
     /**
      * @param array $requestOptions
      */
-    public function setRequestOptions(array $requestOptions): void
+    public function setRequestOptions(array $requestOptions)
     {
         $this->requestOptions = $requestOptions;
     }
@@ -131,7 +131,7 @@ class MerchantRequest
     /**
      * @return string
      */
-    public function getKind(): string
+    public function getKind(): ?string
     {
         return $this->kind;
     }
@@ -139,7 +139,7 @@ class MerchantRequest
     /**
      * @param string $kind
      */
-    public function setKind(string $kind): void
+    public function setKind(?string $kind)
     {
         $this->kind = $kind;
     }

@@ -91,7 +91,7 @@ class Comment
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -99,7 +99,7 @@ class Comment
     /**
      * @return string
      */
-    public function getBody(): string
+    public function getBody(): ?string
     {
         return $this->body;
     }
@@ -107,7 +107,7 @@ class Comment
     /**
      * @param string $body
      */
-    public function setBody(string $body): void
+    public function setBody(?string $body)
     {
         $this->body = $body;
     }
@@ -115,7 +115,7 @@ class Comment
     /**
      * @return string
      */
-    public function getBodyHtml(): string
+    public function getBodyHtml(): ?string
     {
         return $this->bodyHtml;
     }
@@ -123,7 +123,7 @@ class Comment
     /**
      * @param string $bodyHtml
      */
-    public function setBodyHtml(string $bodyHtml): void
+    public function setBodyHtml(?string $bodyHtml)
     {
         $this->bodyHtml = $bodyHtml;
     }
@@ -131,7 +131,7 @@ class Comment
     /**
      * @return string
      */
-    public function getAuthor(): string
+    public function getAuthor(): ?string
     {
         return $this->author;
     }
@@ -139,7 +139,7 @@ class Comment
     /**
      * @param string $author
      */
-    public function setAuthor(string $author): void
+    public function setAuthor(?string $author)
     {
         $this->author = $author;
     }
@@ -147,7 +147,7 @@ class Comment
     /**
      * @return string
      */
-    public function getEmail(): string
+    public function getEmail(): ?string
     {
         return $this->email;
     }
@@ -155,7 +155,7 @@ class Comment
     /**
      * @param string $email
      */
-    public function setEmail(string $email): void
+    public function setEmail(?string $email)
     {
         $this->email = $email;
     }
@@ -163,7 +163,7 @@ class Comment
     /**
      * @return string
      */
-    public function getStatus(): string
+    public function getStatus(): ?string
     {
         return $this->status;
     }
@@ -171,7 +171,7 @@ class Comment
     /**
      * @param string $status
      */
-    public function setStatus(string $status): void
+    public function setStatus(?string $status)
     {
         $this->status = $status;
     }
@@ -187,7 +187,7 @@ class Comment
     /**
      * @param int $articleId
      */
-    public function setArticleId(int $articleId): void
+    public function setArticleId(?int $articleId)
     {
         $this->articleId = $articleId;
     }
@@ -203,7 +203,7 @@ class Comment
     /**
      * @param int $blogId
      */
-    public function setBlogId(int $blogId): void
+    public function setBlogId(?int $blogId)
     {
         $this->blogId = $blogId;
     }
@@ -219,7 +219,7 @@ class Comment
     /**
      * @param \DateTimeInterface $createdAt
      */
-    public function setCreatedAt(?\DateTimeInterface $createdAt): void
+    public function setCreatedAt(?\DateTimeInterface $createdAt)
     {
         $this->createdAt = $createdAt;
     }
@@ -235,7 +235,7 @@ class Comment
     /**
      * @param \DateTimeInterface $updatedAt
      */
-    public function setUpdatedAt(?\DateTimeInterface $updatedAt): void
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }
@@ -243,7 +243,7 @@ class Comment
     /**
      * @return string
      */
-    public function getIp(): string
+    public function getIp(): ?string
     {
         return $this->ip;
     }
@@ -251,7 +251,7 @@ class Comment
     /**
      * @param string $ip
      */
-    public function setIp(string $ip): void
+    public function setIp(?string $ip)
     {
         $this->ip = $ip;
     }
@@ -259,7 +259,7 @@ class Comment
     /**
      * @return string
      */
-    public function getUserAgent(): string
+    public function getUserAgent(): ?string
     {
         return $this->userAgent;
     }
@@ -267,7 +267,7 @@ class Comment
     /**
      * @param string $userAgent
      */
-    public function setUserAgent(string $userAgent): void
+    public function setUserAgent(?string $userAgent)
     {
         $this->userAgent = $userAgent;
     }
@@ -283,7 +283,7 @@ class Comment
     /**
      * @param \DateTimeInterface $publishedAt
      */
-    public function setPublishedAt(\DateTimeInterface $publishedAt): void
+    public function setPublishedAt(\DateTimeInterface $publishedAt)
     {
         $this->publishedAt = $publishedAt;
     }

@@ -56,7 +56,7 @@ class ScriptTag
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -64,7 +64,7 @@ class ScriptTag
     /**
      * @return string
      */
-    public function getSrc(): string
+    public function getSrc(): ?string
     {
         return $this->src;
     }
@@ -72,7 +72,7 @@ class ScriptTag
     /**
      * @param string $src
      */
-    public function setSrc(string $src): void
+    public function setSrc(?string $src)
     {
         $this->src = $src;
     }
@@ -80,7 +80,7 @@ class ScriptTag
     /**
      * @return string
      */
-    public function getEvent(): string
+    public function getEvent(): ?string
     {
         return $this->event;
     }
@@ -88,7 +88,7 @@ class ScriptTag
     /**
      * @param string $event
      */
-    public function setEvent(string $event): void
+    public function setEvent(?string $event)
     {
         $this->event = $event;
     }
@@ -104,7 +104,7 @@ class ScriptTag
     /**
      * @param \DateTimeInterface $createdAt
      */
-    public function setCreatedAt(?\DateTimeInterface $createdAt): void
+    public function setCreatedAt(?\DateTimeInterface $createdAt)
     {
         $this->createdAt = $createdAt;
     }
@@ -120,7 +120,7 @@ class ScriptTag
     /**
      * @param \DateTimeInterface $updatedAt
      */
-    public function setUpdatedAt(\DateTimeInterface $updatedAt): void
+    public function setUpdatedAt(\DateTimeInterface $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }
@@ -128,7 +128,7 @@ class ScriptTag
     /**
      * @return string
      */
-    public function getDisplayScope(): string
+    public function getDisplayScope(): ?string
     {
         return $this->displayScope;
     }
@@ -136,7 +136,7 @@ class ScriptTag
     /**
      * @param string $displayScope
      */
-    public function setDisplayScope(string $displayScope): void
+    public function setDisplayScope(?string $displayScope)
     {
         $this->displayScope = $displayScope;
     }

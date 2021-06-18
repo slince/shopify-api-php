@@ -32,7 +32,7 @@ class DiscountCode
     /**
      * @return string
      */
-    public function getCode(): string
+    public function getCode(): ?string
     {
         return $this->code;
     }
@@ -40,7 +40,7 @@ class DiscountCode
     /**
      * @param string $code
      */
-    public function setCode(string $code): void
+    public function setCode(?string $code)
     {
         $this->code = $code;
     }
@@ -48,7 +48,7 @@ class DiscountCode
     /**
      * @return string
      */
-    public function getAmount(): string
+    public function getAmount(): ?string
     {
         return $this->amount;
     }
@@ -56,7 +56,7 @@ class DiscountCode
     /**
      * @param string $amount
      */
-    public function setAmount(string $amount): void
+    public function setAmount(?string $amount)
     {
         $this->amount = $amount;
     }
@@ -64,7 +64,7 @@ class DiscountCode
     /**
      * @return string
      */
-    public function getType(): string
+    public function getType(): ?string
     {
         return $this->type;
     }
@@ -72,7 +72,7 @@ class DiscountCode
     /**
      * @param string $type
      */
-    public function setType(string $type): void
+    public function setType(?string $type)
     {
         $this->type = $type;
     }

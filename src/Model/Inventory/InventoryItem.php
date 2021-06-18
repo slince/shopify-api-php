@@ -88,7 +88,7 @@ class InventoryItem
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -96,7 +96,7 @@ class InventoryItem
     /**
      * @return string
      */
-    public function getSku(): string
+    public function getSku(): ?string
     {
         return $this->sku;
     }
@@ -104,7 +104,7 @@ class InventoryItem
     /**
      * @param string $sku
      */
-    public function setSku(string $sku): void
+    public function setSku(?string $sku)
     {
         $this->sku = $sku;
     }
@@ -120,7 +120,7 @@ class InventoryItem
     /**
      * @param \DateTimeInterface $createdAt
      */
-    public function setCreatedAt(?\DateTimeInterface $createdAt): void
+    public function setCreatedAt(?\DateTimeInterface $createdAt)
     {
         $this->createdAt = $createdAt;
     }
@@ -136,7 +136,7 @@ class InventoryItem
     /**
      * @param \DateTimeInterface $updatedAt
      */
-    public function setUpdatedAt(?\DateTimeInterface $updatedAt): void
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }
@@ -144,7 +144,7 @@ class InventoryItem
     /**
      * @return bool
      */
-    public function isRequiresShipping(): bool
+    public function isRequiresShipping(): ?bool
     {
         return $this->requiresShipping;
     }
@@ -152,7 +152,7 @@ class InventoryItem
     /**
      * @param bool $requiresShipping
      */
-    public function setRequiresShipping(bool $requiresShipping): void
+    public function setRequiresShipping(?bool $requiresShipping)
     {
         $this->requiresShipping = $requiresShipping;
     }
@@ -160,7 +160,7 @@ class InventoryItem
     /**
      * @return string
      */
-    public function getCost(): string
+    public function getCost(): ?string
     {
         return $this->cost;
     }
@@ -168,7 +168,7 @@ class InventoryItem
     /**
      * @param string $cost
      */
-    public function setCost(string $cost): void
+    public function setCost(?string $cost)
     {
         $this->cost = $cost;
     }
@@ -176,7 +176,7 @@ class InventoryItem
     /**
      * @return string
      */
-    public function getCountryCodeOfOrigin(): string
+    public function getCountryCodeOfOrigin(): ?string
     {
         return $this->countryCodeOfOrigin;
     }
@@ -184,7 +184,7 @@ class InventoryItem
     /**
      * @param string $countryCodeOfOrigin
      */
-    public function setCountryCodeOfOrigin(string $countryCodeOfOrigin): void
+    public function setCountryCodeOfOrigin(?string $countryCodeOfOrigin)
     {
         $this->countryCodeOfOrigin = $countryCodeOfOrigin;
     }
@@ -192,7 +192,7 @@ class InventoryItem
     /**
      * @return string
      */
-    public function getProvinceCodeOfOrigin(): string
+    public function getProvinceCodeOfOrigin(): ?string
     {
         return $this->provinceCodeOfOrigin;
     }
@@ -200,7 +200,7 @@ class InventoryItem
     /**
      * @param string $provinceCodeOfOrigin
      */
-    public function setProvinceCodeOfOrigin(string $provinceCodeOfOrigin): void
+    public function setProvinceCodeOfOrigin(?string $provinceCodeOfOrigin)
     {
         $this->provinceCodeOfOrigin = $provinceCodeOfOrigin;
     }
@@ -216,7 +216,7 @@ class InventoryItem
     /**
      * @param int $harmonizedSystemCode
      */
-    public function setHarmonizedSystemCode(int $harmonizedSystemCode): void
+    public function setHarmonizedSystemCode(?int $harmonizedSystemCode)
     {
         $this->harmonizedSystemCode = $harmonizedSystemCode;
     }
@@ -224,7 +224,7 @@ class InventoryItem
     /**
      * @return bool
      */
-    public function isTracked(): bool
+    public function isTracked(): ?bool
     {
         return $this->tracked;
     }
@@ -232,7 +232,7 @@ class InventoryItem
     /**
      * @param bool $tracked
      */
-    public function setTracked(bool $tracked): void
+    public function setTracked(?bool $tracked)
     {
         $this->tracked = $tracked;
     }
@@ -248,7 +248,7 @@ class InventoryItem
     /**
      * @param array $countryHarmonizedSystemCodes
      */
-    public function setCountryHarmonizedSystemCodes(array $countryHarmonizedSystemCodes): void
+    public function setCountryHarmonizedSystemCodes(array $countryHarmonizedSystemCodes)
     {
         $this->countryHarmonizedSystemCodes = $countryHarmonizedSystemCodes;
     }
@@ -256,7 +256,7 @@ class InventoryItem
     /**
      * @return string
      */
-    public function getAdminGraphqlApiId(): string
+    public function getAdminGraphqlApiId(): ?string
     {
         return $this->adminGraphqlApiId;
     }
@@ -264,7 +264,7 @@ class InventoryItem
     /**
      * @param string $adminGraphqlApiId
      */
-    public function setAdminGraphqlApiId(string $adminGraphqlApiId): void
+    public function setAdminGraphqlApiId(?string $adminGraphqlApiId)
     {
         $this->adminGraphqlApiId = $adminGraphqlApiId;
     }

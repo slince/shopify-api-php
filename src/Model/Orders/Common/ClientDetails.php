@@ -47,7 +47,7 @@ class ClientDetails
     /**
      * @return string
      */
-    public function getBrowserIp(): string
+    public function getBrowserIp(): ?string
     {
         return $this->browserIp;
     }
@@ -55,7 +55,7 @@ class ClientDetails
     /**
      * @param string $browserIp
      */
-    public function setBrowserIp(string $browserIp): void
+    public function setBrowserIp(?string $browserIp)
     {
         $this->browserIp = $browserIp;
     }
@@ -63,7 +63,7 @@ class ClientDetails
     /**
      * @return string
      */
-    public function getAcceptLanguage(): string
+    public function getAcceptLanguage(): ?string
     {
         return $this->acceptLanguage;
     }
@@ -71,7 +71,7 @@ class ClientDetails
     /**
      * @param string $acceptLanguage
      */
-    public function setAcceptLanguage(string $acceptLanguage): void
+    public function setAcceptLanguage(?string $acceptLanguage)
     {
         $this->acceptLanguage = $acceptLanguage;
     }
@@ -79,7 +79,7 @@ class ClientDetails
     /**
      * @return string
      */
-    public function getUserAgent(): string
+    public function getUserAgent(): ?string
     {
         return $this->userAgent;
     }
@@ -87,7 +87,7 @@ class ClientDetails
     /**
      * @param string $userAgent
      */
-    public function setUserAgent(string $userAgent): void
+    public function setUserAgent(?string $userAgent)
     {
         $this->userAgent = $userAgent;
     }
@@ -95,7 +95,7 @@ class ClientDetails
     /**
      * @return string
      */
-    public function getSessionHash(): string
+    public function getSessionHash(): ?string
     {
         return $this->sessionHash;
     }
@@ -103,7 +103,7 @@ class ClientDetails
     /**
      * @param string $sessionHash
      */
-    public function setSessionHash(string $sessionHash): void
+    public function setSessionHash(?string $sessionHash)
     {
         $this->sessionHash = $sessionHash;
     }
@@ -119,7 +119,7 @@ class ClientDetails
     /**
      * @param int $browserWidth
      */
-    public function setBrowserWidth(int $browserWidth): void
+    public function setBrowserWidth(?int $browserWidth)
     {
         $this->browserWidth = $browserWidth;
     }
@@ -135,7 +135,7 @@ class ClientDetails
     /**
      * @param int $browserHeight
      */
-    public function setBrowserHeight(int $browserHeight): void
+    public function setBrowserHeight(?int $browserHeight)
     {
         $this->browserHeight = $browserHeight;
     }

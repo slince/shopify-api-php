@@ -116,7 +116,7 @@ class FulfillmentEvent
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -132,7 +132,7 @@ class FulfillmentEvent
     /**
      * @param int $fulfillmentId
      */
-    public function setFulfillmentId(int $fulfillmentId): void
+    public function setFulfillmentId(?int $fulfillmentId)
     {
         $this->fulfillmentId = $fulfillmentId;
     }
@@ -140,7 +140,7 @@ class FulfillmentEvent
     /**
      * @return string
      */
-    public function getStatus(): string
+    public function getStatus(): ?string
     {
         return $this->status;
     }
@@ -148,7 +148,7 @@ class FulfillmentEvent
     /**
      * @param string $status
      */
-    public function setStatus(string $status): void
+    public function setStatus(?string $status)
     {
         $this->status = $status;
     }
@@ -156,7 +156,7 @@ class FulfillmentEvent
     /**
      * @return string
      */
-    public function getMessage(): string
+    public function getMessage(): ?string
     {
         return $this->message;
     }
@@ -164,7 +164,7 @@ class FulfillmentEvent
     /**
      * @param string $message
      */
-    public function setMessage(string $message): void
+    public function setMessage(?string $message)
     {
         $this->message = $message;
     }
@@ -180,7 +180,7 @@ class FulfillmentEvent
     /**
      * @param \DateTimeInterface $happenedAt
      */
-    public function setHappenedAt(\DateTimeInterface $happenedAt): void
+    public function setHappenedAt(\DateTimeInterface $happenedAt)
     {
         $this->happenedAt = $happenedAt;
     }
@@ -188,7 +188,7 @@ class FulfillmentEvent
     /**
      * @return string
      */
-    public function getCity(): string
+    public function getCity(): ?string
     {
         return $this->city;
     }
@@ -196,7 +196,7 @@ class FulfillmentEvent
     /**
      * @param string $city
      */
-    public function setCity(string $city): void
+    public function setCity(?string $city)
     {
         $this->city = $city;
     }
@@ -204,7 +204,7 @@ class FulfillmentEvent
     /**
      * @return string
      */
-    public function getProvince(): string
+    public function getProvince(): ?string
     {
         return $this->province;
     }
@@ -212,7 +212,7 @@ class FulfillmentEvent
     /**
      * @param string $province
      */
-    public function setProvince(string $province): void
+    public function setProvince(?string $province)
     {
         $this->province = $province;
     }
@@ -220,7 +220,7 @@ class FulfillmentEvent
     /**
      * @return string
      */
-    public function getCountry(): string
+    public function getCountry(): ?string
     {
         return $this->country;
     }
@@ -228,7 +228,7 @@ class FulfillmentEvent
     /**
      * @param string $country
      */
-    public function setCountry(string $country): void
+    public function setCountry(?string $country)
     {
         $this->country = $country;
     }
@@ -236,7 +236,7 @@ class FulfillmentEvent
     /**
      * @return string
      */
-    public function getZip(): string
+    public function getZip(): ?string
     {
         return $this->zip;
     }
@@ -244,7 +244,7 @@ class FulfillmentEvent
     /**
      * @param string $zip
      */
-    public function setZip(string $zip): void
+    public function setZip(?string $zip)
     {
         $this->zip = $zip;
     }
@@ -252,7 +252,7 @@ class FulfillmentEvent
     /**
      * @return string
      */
-    public function getAddress1(): string
+    public function getAddress1(): ?string
     {
         return $this->address1;
     }
@@ -260,7 +260,7 @@ class FulfillmentEvent
     /**
      * @param string $address1
      */
-    public function setAddress1(string $address1): void
+    public function setAddress1(?string $address1)
     {
         $this->address1 = $address1;
     }
@@ -276,7 +276,7 @@ class FulfillmentEvent
     /**
      * @param float $latitude
      */
-    public function setLatitude(float $latitude): void
+    public function setLatitude(float $latitude)
     {
         $this->latitude = $latitude;
     }
@@ -292,7 +292,7 @@ class FulfillmentEvent
     /**
      * @param float $longitude
      */
-    public function setLongitude(float $longitude): void
+    public function setLongitude(float $longitude)
     {
         $this->longitude = $longitude;
     }
@@ -308,7 +308,7 @@ class FulfillmentEvent
     /**
      * @param int $shopId
      */
-    public function setShopId(int $shopId): void
+    public function setShopId(?int $shopId)
     {
         $this->shopId = $shopId;
     }
@@ -324,7 +324,7 @@ class FulfillmentEvent
     /**
      * @param \DateTimeInterface $createdAt
      */
-    public function setCreatedAt(?\DateTimeInterface $createdAt): void
+    public function setCreatedAt(?\DateTimeInterface $createdAt)
     {
         $this->createdAt = $createdAt;
     }
@@ -340,7 +340,7 @@ class FulfillmentEvent
     /**
      * @param \DateTimeInterface $updatedAt
      */
-    public function setUpdatedAt(?\DateTimeInterface $updatedAt): void
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }
@@ -356,7 +356,7 @@ class FulfillmentEvent
     /**
      * @param \DateTimeInterface $estimatedDeliveryAt
      */
-    public function setEstimatedDeliveryAt(\DateTimeInterface $estimatedDeliveryAt): void
+    public function setEstimatedDeliveryAt(\DateTimeInterface $estimatedDeliveryAt)
     {
         $this->estimatedDeliveryAt = $estimatedDeliveryAt;
     }
@@ -372,7 +372,7 @@ class FulfillmentEvent
     /**
      * @param int $orderId
      */
-    public function setOrderId(int $orderId): void
+    public function setOrderId(?int $orderId)
     {
         $this->orderId = $orderId;
     }
@@ -380,7 +380,7 @@ class FulfillmentEvent
     /**
      * @return string
      */
-    public function getAdminGraphqlApiId(): string
+    public function getAdminGraphqlApiId(): ?string
     {
         return $this->adminGraphqlApiId;
     }
@@ -388,7 +388,7 @@ class FulfillmentEvent
     /**
      * @param string $adminGraphqlApiId
      */
-    public function setAdminGraphqlApiId(string $adminGraphqlApiId): void
+    public function setAdminGraphqlApiId(?string $adminGraphqlApiId)
     {
         $this->adminGraphqlApiId = $adminGraphqlApiId;
     }

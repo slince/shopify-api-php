@@ -111,7 +111,7 @@ class Address
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -127,7 +127,7 @@ class Address
     /**
      * @param int $customerId
      */
-    public function setCustomerId(int $customerId): void
+    public function setCustomerId(?int $customerId)
     {
         $this->customerId = $customerId;
     }
@@ -135,7 +135,7 @@ class Address
     /**
      * @return string
      */
-    public function getFirstName(): string
+    public function getFirstName(): ?string
     {
         return $this->firstName;
     }
@@ -143,7 +143,7 @@ class Address
     /**
      * @param string $firstName
      */
-    public function setFirstName(string $firstName): void
+    public function setFirstName(?string $firstName)
     {
         $this->firstName = $firstName;
     }
@@ -151,7 +151,7 @@ class Address
     /**
      * @return string
      */
-    public function getLastName(): string
+    public function getLastName(): ?string
     {
         return $this->lastName;
     }
@@ -159,7 +159,7 @@ class Address
     /**
      * @param string $lastName
      */
-    public function setLastName(string $lastName): void
+    public function setLastName(?string $lastName)
     {
         $this->lastName = $lastName;
     }
@@ -167,7 +167,7 @@ class Address
     /**
      * @return string
      */
-    public function getCompany(): string
+    public function getCompany(): ?string
     {
         return $this->company;
     }
@@ -175,7 +175,7 @@ class Address
     /**
      * @param string $company
      */
-    public function setCompany(string $company): void
+    public function setCompany(?string $company)
     {
         $this->company = $company;
     }
@@ -183,7 +183,7 @@ class Address
     /**
      * @return string
      */
-    public function getAddress1(): string
+    public function getAddress1(): ?string
     {
         return $this->address1;
     }
@@ -191,7 +191,7 @@ class Address
     /**
      * @param string $address1
      */
-    public function setAddress1(string $address1): void
+    public function setAddress1(?string $address1)
     {
         $this->address1 = $address1;
     }
@@ -199,7 +199,7 @@ class Address
     /**
      * @return string
      */
-    public function getAddress2(): string
+    public function getAddress2(): ?string
     {
         return $this->address2;
     }
@@ -207,7 +207,7 @@ class Address
     /**
      * @param string $address2
      */
-    public function setAddress2(string $address2): void
+    public function setAddress2(?string $address2)
     {
         $this->address2 = $address2;
     }
@@ -215,7 +215,7 @@ class Address
     /**
      * @return string
      */
-    public function getCity(): string
+    public function getCity(): ?string
     {
         return $this->city;
     }
@@ -223,7 +223,7 @@ class Address
     /**
      * @param string $city
      */
-    public function setCity(string $city): void
+    public function setCity(?string $city)
     {
         $this->city = $city;
     }
@@ -231,7 +231,7 @@ class Address
     /**
      * @return string
      */
-    public function getProvince(): string
+    public function getProvince(): ?string
     {
         return $this->province;
     }
@@ -239,7 +239,7 @@ class Address
     /**
      * @param string $province
      */
-    public function setProvince(string $province): void
+    public function setProvince(?string $province)
     {
         $this->province = $province;
     }
@@ -247,7 +247,7 @@ class Address
     /**
      * @return string
      */
-    public function getCountry(): string
+    public function getCountry(): ?string
     {
         return $this->country;
     }
@@ -255,7 +255,7 @@ class Address
     /**
      * @param string $country
      */
-    public function setCountry(string $country): void
+    public function setCountry(?string $country)
     {
         $this->country = $country;
     }
@@ -263,7 +263,7 @@ class Address
     /**
      * @return string
      */
-    public function getZip(): string
+    public function getZip(): ?string
     {
         return $this->zip;
     }
@@ -271,7 +271,7 @@ class Address
     /**
      * @param string $zip
      */
-    public function setZip(string $zip): void
+    public function setZip(?string $zip)
     {
         $this->zip = $zip;
     }
@@ -279,7 +279,7 @@ class Address
     /**
      * @return string
      */
-    public function getPhone(): string
+    public function getPhone(): ?string
     {
         return $this->phone;
     }
@@ -287,7 +287,7 @@ class Address
     /**
      * @param string $phone
      */
-    public function setPhone(string $phone): void
+    public function setPhone(?string $phone)
     {
         $this->phone = $phone;
     }
@@ -295,7 +295,7 @@ class Address
     /**
      * @return string
      */
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->name;
     }
@@ -303,7 +303,7 @@ class Address
     /**
      * @param string $name
      */
-    public function setName(string $name): void
+    public function setName(?string $name)
     {
         $this->name = $name;
     }
@@ -311,7 +311,7 @@ class Address
     /**
      * @return string
      */
-    public function getProvinceCode(): string
+    public function getProvinceCode(): ?string
     {
         return $this->provinceCode;
     }
@@ -319,7 +319,7 @@ class Address
     /**
      * @param string $provinceCode
      */
-    public function setProvinceCode(string $provinceCode): void
+    public function setProvinceCode(?string $provinceCode)
     {
         $this->provinceCode = $provinceCode;
     }
@@ -327,7 +327,7 @@ class Address
     /**
      * @return string
      */
-    public function getCountryCode(): string
+    public function getCountryCode(): ?string
     {
         return $this->countryCode;
     }
@@ -335,7 +335,7 @@ class Address
     /**
      * @param string $countryCode
      */
-    public function setCountryCode(string $countryCode): void
+    public function setCountryCode(?string $countryCode)
     {
         $this->countryCode = $countryCode;
     }
@@ -343,7 +343,7 @@ class Address
     /**
      * @return string
      */
-    public function getCountryName(): string
+    public function getCountryName(): ?string
     {
         return $this->countryName;
     }
@@ -351,7 +351,7 @@ class Address
     /**
      * @param string $countryName
      */
-    public function setCountryName(string $countryName): void
+    public function setCountryName(?string $countryName)
     {
         $this->countryName = $countryName;
     }
@@ -359,7 +359,7 @@ class Address
     /**
      * @return bool
      */
-    public function isDefault(): bool
+    public function isDefault(): ?bool
     {
         return $this->default;
     }
@@ -367,7 +367,7 @@ class Address
     /**
      * @param bool $default
      */
-    public function setDefault(bool $default): void
+    public function setDefault(?bool $default)
     {
         $this->default = $default;
     }

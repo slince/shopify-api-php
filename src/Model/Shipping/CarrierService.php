@@ -60,7 +60,7 @@ class CarrierService
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -68,7 +68,7 @@ class CarrierService
     /**
      * @return string
      */
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->name;
     }
@@ -76,7 +76,7 @@ class CarrierService
     /**
      * @param string $name
      */
-    public function setName(string $name): void
+    public function setName(?string $name)
     {
         $this->name = $name;
     }
@@ -84,7 +84,7 @@ class CarrierService
     /**
      * @return bool
      */
-    public function isActive(): bool
+    public function isActive(): ?bool
     {
         return $this->active;
     }
@@ -92,7 +92,7 @@ class CarrierService
     /**
      * @param bool $active
      */
-    public function setActive(bool $active): void
+    public function setActive(?bool $active)
     {
         $this->active = $active;
     }
@@ -100,7 +100,7 @@ class CarrierService
     /**
      * @return bool
      */
-    public function isServiceDiscovery(): bool
+    public function isServiceDiscovery(): ?bool
     {
         return $this->serviceDiscovery;
     }
@@ -108,7 +108,7 @@ class CarrierService
     /**
      * @param bool $serviceDiscovery
      */
-    public function setServiceDiscovery(bool $serviceDiscovery): void
+    public function setServiceDiscovery(?bool $serviceDiscovery)
     {
         $this->serviceDiscovery = $serviceDiscovery;
     }
@@ -116,7 +116,7 @@ class CarrierService
     /**
      * @return string
      */
-    public function getCarrierServiceType(): string
+    public function getCarrierServiceType(): ?string
     {
         return $this->carrierServiceType;
     }
@@ -124,7 +124,7 @@ class CarrierService
     /**
      * @param string $carrierServiceType
      */
-    public function setCarrierServiceType(string $carrierServiceType): void
+    public function setCarrierServiceType(?string $carrierServiceType)
     {
         $this->carrierServiceType = $carrierServiceType;
     }
@@ -132,7 +132,7 @@ class CarrierService
     /**
      * @return string
      */
-    public function getFormat(): string
+    public function getFormat(): ?string
     {
         return $this->format;
     }
@@ -140,7 +140,7 @@ class CarrierService
     /**
      * @param string $format
      */
-    public function setFormat(string $format): void
+    public function setFormat(?string $format)
     {
         $this->format = $format;
     }
@@ -148,7 +148,7 @@ class CarrierService
     /**
      * @return string
      */
-    public function getCallbackUrl(): string
+    public function getCallbackUrl(): ?string
     {
         return $this->callbackUrl;
     }
@@ -156,7 +156,7 @@ class CarrierService
     /**
      * @param string $callbackUrl
      */
-    public function setCallbackUrl(string $callbackUrl): void
+    public function setCallbackUrl(?string $callbackUrl)
     {
         $this->callbackUrl = $callbackUrl;
     }
