@@ -314,7 +314,7 @@ class Shop
     /**
      * @param \DateTimeInterface $createdAt
       */
-    public function setCreatedAt(\DateTimeInterface $createdAt)
+    public function setCreatedAt(?\DateTimeInterface $createdAt)
     {
         $this->createdAt = $createdAt;
     }

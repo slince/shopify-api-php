@@ -240,7 +240,7 @@ class DraftOrder
     /**
      * @return \DateTimeInterface
      */
-    public function getInvoiceSentAt(): \DateTimeInterface
+    public function getInvoiceSentAt(): ?\DateTimeInterface
     {
         return $this->invoiceSentAt;
     }
@@ -248,7 +248,7 @@ class DraftOrder
     /**
      * @param \DateTimeInterface $invoiceSentAt
      */
-    public function setInvoiceSentAt(\DateTimeInterface $invoiceSentAt)
+    public function setInvoiceSentAt(?\DateTimeInterface $invoiceSentAt)
     {
         $this->invoiceSentAt = $invoiceSentAt;
     }
@@ -304,7 +304,7 @@ class DraftOrder
     /**
      * @return \DateTimeInterface
      */
-    public function getCompletedAt(): \DateTimeInterface
+    public function getCompletedAt(): ?\DateTimeInterface
     {
         return $this->completedAt;
     }
@@ -312,7 +312,7 @@ class DraftOrder
     /**
      * @param \DateTimeInterface $completedAt
      */
-    public function setCompletedAt(\DateTimeInterface $completedAt)
+    public function setCompletedAt(?\DateTimeInterface $completedAt)
     {
         $this->completedAt = $completedAt;
     }

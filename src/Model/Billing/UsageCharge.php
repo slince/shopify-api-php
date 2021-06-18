@@ -122,7 +122,7 @@ class UsageCharge
     /**
      * @return \DateTimeInterface
      */
-    public function getBillingOn(): \DateTimeInterface
+    public function getBillingOn(): ?\DateTimeInterface
     {
         return $this->billingOn;
     }
@@ -130,7 +130,7 @@ class UsageCharge
     /**
      * @param \DateTimeInterface $billingOn
      */
-    public function setBillingOn(\DateTimeInterface $billingOn)
+    public function setBillingOn(?\DateTimeInterface $billingOn)
     {
         $this->billingOn = $billingOn;
     }

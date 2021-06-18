@@ -172,7 +172,7 @@ class FulfillmentEvent
     /**
      * @return \DateTimeInterface
      */
-    public function getHappenedAt(): \DateTimeInterface
+    public function getHappenedAt(): ?\DateTimeInterface
     {
         return $this->happenedAt;
     }
@@ -180,7 +180,7 @@ class FulfillmentEvent
     /**
      * @param \DateTimeInterface $happenedAt
      */
-    public function setHappenedAt(\DateTimeInterface $happenedAt)
+    public function setHappenedAt(?\DateTimeInterface $happenedAt)
     {
         $this->happenedAt = $happenedAt;
     }
@@ -348,7 +348,7 @@ class FulfillmentEvent
     /**
      * @return \DateTimeInterface
      */
-    public function getEstimatedDeliveryAt(): \DateTimeInterface
+    public function getEstimatedDeliveryAt(): ?\DateTimeInterface
     {
         return $this->estimatedDeliveryAt;
     }
@@ -356,7 +356,7 @@ class FulfillmentEvent
     /**
      * @param \DateTimeInterface $estimatedDeliveryAt
      */
-    public function setEstimatedDeliveryAt(\DateTimeInterface $estimatedDeliveryAt)
+    public function setEstimatedDeliveryAt(?\DateTimeInterface $estimatedDeliveryAt)
     {
         $this->estimatedDeliveryAt = $estimatedDeliveryAt;
     }

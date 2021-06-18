@@ -49,7 +49,7 @@ class Currency
     /**
      * @return \DateTimeInterface
      */
-    public function getRateUpdatedAt(): \DateTimeInterface
+    public function getRateUpdatedAt(): ?\DateTimeInterface
     {
         return $this->rateUpdatedAt;
     }
@@ -57,7 +57,7 @@ class Currency
     /**
      * @param \DateTimeInterface $rateUpdatedAt
      */
-    public function setRateUpdatedAt(\DateTimeInterface $rateUpdatedAt)
+    public function setRateUpdatedAt(?\DateTimeInterface $rateUpdatedAt)
     {
         $this->rateUpdatedAt = $rateUpdatedAt;
     }

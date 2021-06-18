@@ -236,7 +236,7 @@ class RecurringApplicationCharge
     /**
      * @return \DateTimeInterface
      */
-    public function getBillingOn(): \DateTimeInterface
+    public function getBillingOn(): ?\DateTimeInterface
     {
         return $this->billingOn;
     }
@@ -244,7 +244,7 @@ class RecurringApplicationCharge
     /**
      * @param \DateTimeInterface $billingOn
      */
-    public function setBillingOn(\DateTimeInterface $billingOn)
+    public function setBillingOn(?\DateTimeInterface $billingOn)
     {
         $this->billingOn = $billingOn;
     }
@@ -300,7 +300,7 @@ class RecurringApplicationCharge
     /**
      * @return \DateTimeInterface
      */
-    public function getActivatedOn(): \DateTimeInterface
+    public function getActivatedOn(): ?\DateTimeInterface
     {
         return $this->activatedOn;
     }
@@ -308,7 +308,7 @@ class RecurringApplicationCharge
     /**
      * @param \DateTimeInterface $activatedOn
      */
-    public function setActivatedOn(\DateTimeInterface $activatedOn)
+    public function setActivatedOn(?\DateTimeInterface $activatedOn)
     {
         $this->activatedOn = $activatedOn;
     }
@@ -316,7 +316,7 @@ class RecurringApplicationCharge
     /**
      * @return \DateTimeInterface
      */
-    public function getCancelledOn(): \DateTimeInterface
+    public function getCancelledOn(): ?\DateTimeInterface
     {
         return $this->cancelledOn;
     }
@@ -324,7 +324,7 @@ class RecurringApplicationCharge
     /**
      * @param \DateTimeInterface $cancelledOn
      */
-    public function setCancelledOn(\DateTimeInterface $cancelledOn)
+    public function setCancelledOn(?\DateTimeInterface $cancelledOn)
     {
         $this->cancelledOn = $cancelledOn;
     }
@@ -364,7 +364,7 @@ class RecurringApplicationCharge
     /**
      * @return \DateTimeInterface
      */
-    public function getTrialEndsAOn(): \DateTimeInterface
+    public function getTrialEndsAOn(): ?\DateTimeInterface
     {
         return $this->trialEndsAOn;
     }
@@ -372,7 +372,7 @@ class RecurringApplicationCharge
     /**
      * @param \DateTimeInterface $trialEndsAOn
      */
-    public function setTrialEndsAOn(\DateTimeInterface $trialEndsAOn)
+    public function setTrialEndsAOn(?\DateTimeInterface $trialEndsAOn)
     {
         $this->trialEndsAOn = $trialEndsAOn;
     }

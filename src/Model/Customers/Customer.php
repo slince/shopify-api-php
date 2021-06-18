@@ -463,7 +463,7 @@ class Customer
     /**
      * @return \DateTimeInterface
      */
-    public function getAcceptsMarketingUpdatedAt(): \DateTimeInterface
+    public function getAcceptsMarketingUpdatedAt(): ?\DateTimeInterface
     {
         return $this->acceptsMarketingUpdatedAt;
     }
@@ -471,7 +471,7 @@ class Customer
     /**
      * @param \DateTimeInterface $acceptsMarketingUpdatedAt
      */
-    public function setAcceptsMarketingUpdatedAt(\DateTimeInterface $acceptsMarketingUpdatedAt)
+    public function setAcceptsMarketingUpdatedAt(?\DateTimeInterface $acceptsMarketingUpdatedAt)
     {
         $this->acceptsMarketingUpdatedAt = $acceptsMarketingUpdatedAt;
     }

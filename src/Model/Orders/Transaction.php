@@ -322,7 +322,7 @@ class Transaction
     /**
      * @return \DateTimeInterface
      */
-    public function getProcessedAt(): \DateTimeInterface
+    public function getProcessedAt(): ?\DateTimeInterface
     {
         return $this->processedAt;
     }
@@ -330,7 +330,7 @@ class Transaction
     /**
      * @param \DateTimeInterface $processedAt
      */
-    public function setProcessedAt(\DateTimeInterface $processedAt)
+    public function setProcessedAt(?\DateTimeInterface $processedAt)
     {
         $this->processedAt = $processedAt;
     }

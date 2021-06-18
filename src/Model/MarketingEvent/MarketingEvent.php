@@ -178,7 +178,7 @@ class MarketingEvent
     /**
      * @return \DateTimeInterface
      */
-    public function getStartedAt(): \DateTimeInterface
+    public function getStartedAt(): ?\DateTimeInterface
     {
         return $this->startedAt;
     }
@@ -186,7 +186,7 @@ class MarketingEvent
     /**
      * @param \DateTimeInterface $startedAt
      */
-    public function setStartedAt(\DateTimeInterface $startedAt)
+    public function setStartedAt(?\DateTimeInterface $startedAt)
     {
         $this->startedAt = $startedAt;
     }
@@ -194,7 +194,7 @@ class MarketingEvent
     /**
      * @return \DateTimeInterface
      */
-    public function getEndedAt(): \DateTimeInterface
+    public function getEndedAt(): ?\DateTimeInterface
     {
         return $this->endedAt;
     }
@@ -202,7 +202,7 @@ class MarketingEvent
     /**
      * @param \DateTimeInterface $endedAt
      */
-    public function setEndedAt(\DateTimeInterface $endedAt)
+    public function setEndedAt(?\DateTimeInterface $endedAt)
     {
         $this->endedAt = $endedAt;
     }
@@ -210,7 +210,7 @@ class MarketingEvent
     /**
      * @return \DateTimeInterface
      */
-    public function getScheduledToEndAt(): \DateTimeInterface
+    public function getScheduledToEndAt(): ?\DateTimeInterface
     {
         return $this->scheduledToEndAt;
     }
@@ -218,7 +218,7 @@ class MarketingEvent
     /**
      * @param \DateTimeInterface $scheduledToEndAt
      */
-    public function setScheduledToEndAt(\DateTimeInterface $scheduledToEndAt)
+    public function setScheduledToEndAt(?\DateTimeInterface $scheduledToEndAt)
     {
         $this->scheduledToEndAt = $scheduledToEndAt;
     }

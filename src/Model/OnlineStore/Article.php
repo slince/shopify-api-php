@@ -200,7 +200,7 @@ class Article
     /**
      * @return \DateTimeInterface
      */
-    public function getPublishedAt(): \DateTimeInterface
+    public function getPublishedAt(): ?\DateTimeInterface
     {
         return $this->publishedAt;
     }
@@ -208,7 +208,7 @@ class Article
     /**
      * @param \DateTimeInterface $publishedAt
      */
-    public function setPublishedAt(\DateTimeInterface $publishedAt)
+    public function setPublishedAt(?\DateTimeInterface $publishedAt)
     {
         $this->publishedAt = $publishedAt;
     }

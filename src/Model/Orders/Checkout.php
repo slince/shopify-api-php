@@ -491,7 +491,7 @@ class Checkout
     /**
      * @return \DateTimeInterface
      */
-    public function getCompletedAt(): \DateTimeInterface
+    public function getCompletedAt(): ?\DateTimeInterface
     {
         return $this->completedAt;
     }
@@ -499,7 +499,7 @@ class Checkout
     /**
      * @param \DateTimeInterface $completedAt
      */
-    public function setCompletedAt(\DateTimeInterface $completedAt)
+    public function setCompletedAt(?\DateTimeInterface $completedAt)
     {
         $this->completedAt = $completedAt;
     }
@@ -507,7 +507,7 @@ class Checkout
     /**
      * @return \DateTimeInterface
      */
-    public function getClosedAt(): \DateTimeInterface
+    public function getClosedAt(): ?\DateTimeInterface
     {
         return $this->closedAt;
     }
@@ -515,7 +515,7 @@ class Checkout
     /**
      * @param \DateTimeInterface $closedAt
      */
-    public function setClosedAt(\DateTimeInterface $closedAt)
+    public function setClosedAt(?\DateTimeInterface $closedAt)
     {
         $this->closedAt = $closedAt;
     }

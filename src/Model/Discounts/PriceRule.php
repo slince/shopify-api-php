@@ -328,7 +328,7 @@ class PriceRule
     /**
      * @return \DateTimeInterface
      */
-    public function getStartsAt(): \DateTimeInterface
+    public function getStartsAt(): ?\DateTimeInterface
     {
         return $this->startsAt;
     }
@@ -336,7 +336,7 @@ class PriceRule
     /**
      * @param \DateTimeInterface $startsAt
      */
-    public function setStartsAt(\DateTimeInterface $startsAt)
+    public function setStartsAt(?\DateTimeInterface $startsAt)
     {
         $this->startsAt = $startsAt;
     }
@@ -344,7 +344,7 @@ class PriceRule
     /**
      * @return \DateTimeInterface
      */
-    public function getEndsAt(): \DateTimeInterface
+    public function getEndsAt(): ?\DateTimeInterface
     {
         return $this->endsAt;
     }
@@ -352,7 +352,7 @@ class PriceRule
     /**
      * @param \DateTimeInterface $endsAt
      */
-    public function setEndsAt(\DateTimeInterface $endsAt)
+    public function setEndsAt(?\DateTimeInterface $endsAt)
     {
         $this->endsAt = $endsAt;
     }

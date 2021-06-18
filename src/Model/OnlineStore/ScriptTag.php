@@ -120,7 +120,7 @@ class ScriptTag
     /**
      * @param \DateTimeInterface $updatedAt
      */
-    public function setUpdatedAt(\DateTimeInterface $updatedAt)
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }

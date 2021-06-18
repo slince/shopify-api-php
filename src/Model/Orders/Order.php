@@ -437,7 +437,7 @@ class Order
     /**
      * @return \DateTimeInterface
      */
-    public function getClosedAt(): \DateTimeInterface
+    public function getClosedAt(): ?\DateTimeInterface
     {
         return $this->closedAt;
     }
@@ -445,7 +445,7 @@ class Order
     /**
      * @param \DateTimeInterface $closedAt
      */
-    public function setClosedAt(\DateTimeInterface $closedAt)
+    public function setClosedAt(?\DateTimeInterface $closedAt)
     {
         $this->closedAt = $closedAt;
     }
@@ -805,7 +805,7 @@ class Order
     /**
      * @return \DateTimeInterface
      */
-    public function getCancelledAt(): \DateTimeInterface
+    public function getCancelledAt(): ?\DateTimeInterface
     {
         return $this->cancelledAt;
     }
@@ -813,7 +813,7 @@ class Order
     /**
      * @param \DateTimeInterface $cancelledAt
      */
-    public function setCancelledAt(\DateTimeInterface $cancelledAt)
+    public function setCancelledAt(?\DateTimeInterface $cancelledAt)
     {
         $this->cancelledAt = $cancelledAt;
     }
@@ -949,7 +949,7 @@ class Order
     /**
      * @return \DateTimeInterface
      */
-    public function getProcessedAt(): \DateTimeInterface
+    public function getProcessedAt(): ?\DateTimeInterface
     {
         return $this->processedAt;
     }
@@ -957,7 +957,7 @@ class Order
     /**
      * @param \DateTimeInterface $processedAt
      */
-    public function setProcessedAt(\DateTimeInterface $processedAt)
+    public function setProcessedAt(?\DateTimeInterface $processedAt)
     {
         $this->processedAt = $processedAt;
     }

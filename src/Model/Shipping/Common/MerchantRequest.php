@@ -65,7 +65,7 @@ class RequestOption
     /**
      * @return \DateTimeInterface
      */
-    public function getDate(): \DateTimeInterface
+    public function getDate(): ?\DateTimeInterface
     {
         return $this->date;
     }
@@ -73,7 +73,7 @@ class RequestOption
     /**
      * @param \DateTimeInterface $date
      */
-    public function setDate(\DateTimeInterface $date)
+    public function setDate(?\DateTimeInterface $date)
     {
         $this->date = $date;
     }
