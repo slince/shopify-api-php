@@ -1,5 +1,7 @@
 Slince\Shopify\Model\Store\Shop:
     properties:
+        id:
+            type: int
         name:
             type: string
         email:
