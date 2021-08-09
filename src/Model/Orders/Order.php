@@ -1285,7 +1285,7 @@ class Order
     /**
      * @return PriceSet
      */
-    public function getTotalLineItemsPriceSet(): PriceSet
+    public function getTotalLineItemsPriceSet(): ?PriceSet
     {
         return $this->totalLineItemsPriceSet;
     }
@@ -1293,7 +1293,7 @@ class Order
     /**
      * @param PriceSet $totalLineItemsPriceSet
      */
-    public function setTotalLineItemsPriceSet(PriceSet $totalLineItemsPriceSet)
+    public function setTotalLineItemsPriceSet(?PriceSet $totalLineItemsPriceSet)
     {
         $this->totalLineItemsPriceSet = $totalLineItemsPriceSet;
     }
@@ -1301,7 +1301,7 @@ class Order
     /**
      * @return PriceSet
      */
-    public function getTotalDiscountsSet(): PriceSet
+    public function getTotalDiscountsSet(): ?PriceSet
     {
         return $this->totalDiscountsSet;
     }
@@ -1309,7 +1309,7 @@ class Order
     /**
      * @param PriceSet $totalDiscountsSet
      */
-    public function setTotalDiscountsSet(PriceSet $totalDiscountsSet)
+    public function setTotalDiscountsSet(?PriceSet $totalDiscountsSet)
     {
         $this->totalDiscountsSet = $totalDiscountsSet;
     }
@@ -1317,7 +1317,7 @@ class Order
     /**
      * @return PriceSet
      */
-    public function getTotalShippingPriceSet(): PriceSet
+    public function getTotalShippingPriceSet(): ?PriceSet
     {
         return $this->totalShippingPriceSet;
     }
@@ -1325,7 +1325,7 @@ class Order
     /**
      * @param PriceSet $totalShippingPriceSet
      */
-    public function setTotalShippingPriceSet(PriceSet $totalShippingPriceSet)
+    public function setTotalShippingPriceSet(?PriceSet $totalShippingPriceSet)
     {
         $this->totalShippingPriceSet = $totalShippingPriceSet;
     }
@@ -1333,7 +1333,7 @@ class Order
     /**
      * @return PriceSet
      */
-    public function getSubtotalPriceSet(): PriceSet
+    public function getSubtotalPriceSet(): ?PriceSet
     {
         return $this->subtotalPriceSet;
     }
@@ -1341,7 +1341,7 @@ class Order
     /**
      * @param PriceSet $subtotalPriceSet
      */
-    public function setSubtotalPriceSet(PriceSet $subtotalPriceSet)
+    public function setSubtotalPriceSet(?PriceSet $subtotalPriceSet)
     {
         $this->subtotalPriceSet = $subtotalPriceSet;
     }
@@ -1349,7 +1349,7 @@ class Order
     /**
      * @return PriceSet
      */
-    public function getTotalPriceSet(): PriceSet
+    public function getTotalPriceSet(): ?PriceSet
     {
         return $this->totalPriceSet;
     }
@@ -1357,7 +1357,7 @@ class Order
     /**
      * @param PriceSet $totalPriceSet
      */
-    public function setTotalPriceSet(PriceSet $totalPriceSet)
+    public function setTotalPriceSet(?PriceSet $totalPriceSet)
     {
         $this->totalPriceSet = $totalPriceSet;
     }
@@ -1365,7 +1365,7 @@ class Order
     /**
      * @return PriceSet
      */
-    public function getTotalTaxSet(): PriceSet
+    public function getTotalTaxSet(): ?PriceSet
     {
         return $this->totalTaxSet;
     }
@@ -1373,7 +1373,7 @@ class Order
     /**
      * @param PriceSet $totalTaxSet
      */
-    public function setTotalTaxSet(PriceSet $totalTaxSet)
+    public function setTotalTaxSet(?PriceSet $totalTaxSet)
     {
         $this->totalTaxSet = $totalTaxSet;
     }
@@ -1445,7 +1445,7 @@ class Order
     /**
      * @return PriceSet
      */
-    public function getOriginalTotalDutiesSet(): PriceSet
+    public function getOriginalTotalDutiesSet(): ?PriceSet
     {
         return $this->originalTotalDutiesSet;
     }
@@ -1453,7 +1453,7 @@ class Order
     /**
      * @param PriceSet $originalTotalDutiesSet
      */
-    public function setOriginalTotalDutiesSet(PriceSet $originalTotalDutiesSet)
+    public function setOriginalTotalDutiesSet(?PriceSet $originalTotalDutiesSet)
     {
         $this->originalTotalDutiesSet = $originalTotalDutiesSet;
     }
@@ -1461,7 +1461,7 @@ class Order
     /**
      * @return PriceSet
      */
-    public function getCurrentTotalDutiesSet(): PriceSet
+    public function getCurrentTotalDutiesSet(): ?PriceSet
     {
         return $this->currentTotalDutiesSet;
     }
@@ -1469,7 +1469,7 @@ class Order
     /**
      * @param PriceSet $currentTotalDutiesSet
      */
-    public function setCurrentTotalDutiesSet(PriceSet $currentTotalDutiesSet)
+    public function setCurrentTotalDutiesSet(?PriceSet $currentTotalDutiesSet)
     {
         $this->currentTotalDutiesSet = $currentTotalDutiesSet;
     }
@@ -1509,7 +1509,7 @@ class Order
     /**
      * @return OrderAddress
      */
-    public function getBillingAddress(): OrderAddress
+    public function getBillingAddress(): ?OrderAddress
     {
         return $this->billingAddress;
     }
@@ -1517,7 +1517,7 @@ class Order
     /**
      * @param OrderAddress $billingAddress
      */
-    public function setBillingAddress(OrderAddress $billingAddress)
+    public function setBillingAddress(?OrderAddress $billingAddress)
     {
         $this->billingAddress = $billingAddress;
     }
@@ -1525,7 +1525,7 @@ class Order
     /**
      * @return OrderAddress
      */
-    public function getShippingAddress(): OrderAddress
+    public function getShippingAddress(): ?OrderAddress
     {
         return $this->shippingAddress;
     }
@@ -1533,7 +1533,7 @@ class Order
     /**
      * @param OrderAddress $shippingAddress
      */
-    public function setShippingAddress(OrderAddress $shippingAddress)
+    public function setShippingAddress(?OrderAddress $shippingAddress)
     {
         $this->shippingAddress = $shippingAddress;
     }
@@ -1541,7 +1541,7 @@ class Order
     /**
      * @return ClientDetails
      */
-    public function getClientDetails(): ClientDetails
+    public function getClientDetails(): ?ClientDetails
     {
         return $this->clientDetails;
     }
@@ -1549,7 +1549,7 @@ class Order
     /**
      * @param ClientDetails $clientDetails
      */
-    public function setClientDetails(ClientDetails $clientDetails)
+    public function setClientDetails(?ClientDetails $clientDetails)
     {
         $this->clientDetails = $clientDetails;
     }
@@ -1557,7 +1557,7 @@ class Order
     /**
      * @return PaymentDetails
      */
-    public function getPaymentDetails(): PaymentDetails
+    public function getPaymentDetails(): ?PaymentDetails
     {
         return $this->paymentDetails;
     }
@@ -1565,7 +1565,7 @@ class Order
     /**
      * @param PaymentDetails $paymentDetails
      */
-    public function setPaymentDetails(PaymentDetails $paymentDetails)
+    public function setPaymentDetails(?PaymentDetails $paymentDetails)
     {
         $this->paymentDetails = $paymentDetails;
     }
@@ -1589,7 +1589,7 @@ class Order
     /**
      * @return Customer
      */
-    public function getCustomer(): Customer
+    public function getCustomer(): ?Customer
     {
         return $this->customer;
     }
@@ -1597,7 +1597,7 @@ class Order
     /**
      * @param Customer $customer
      */
-    public function setCustomer(Customer $customer)
+    public function setCustomer(?Customer $customer)
     {
         $this->customer = $customer;
     }
