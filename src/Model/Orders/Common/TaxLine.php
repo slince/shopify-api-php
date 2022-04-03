@@ -40,7 +40,7 @@ class TaxLine
     /**
      * @return string
      */
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
@@ -48,7 +48,7 @@ class TaxLine
     /**
      * @param string $title
      */
-    public function setTitle(string $title): void
+    public function setTitle(?string $title)
     {
         $this->title = $title;
     }
@@ -56,7 +56,7 @@ class TaxLine
     /**
      * @return string
      */
-    public function getPrice(): string
+    public function getPrice(): ?string
     {
         return $this->price;
     }
@@ -64,7 +64,7 @@ class TaxLine
     /**
      * @param string $price
      */
-    public function setPrice(string $price): void
+    public function setPrice(?string $price)
     {
         $this->price = $price;
     }
@@ -80,7 +80,7 @@ class TaxLine
     /**
      * @param float $rate
      */
-    public function setRate(float $rate): void
+    public function setRate(float $rate)
     {
         $this->rate = $rate;
     }
@@ -96,7 +96,7 @@ class TaxLine
     /**
      * @param PriceSet $priceSet
      */
-    public function setPriceSet(PriceSet $priceSet): void
+    public function setPriceSet(PriceSet $priceSet)
     {
         $this->priceSet = $priceSet;
     }

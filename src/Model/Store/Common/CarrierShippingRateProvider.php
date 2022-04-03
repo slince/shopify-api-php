@@ -56,7 +56,7 @@ class CarrierShippingRateProvider
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -72,7 +72,7 @@ class CarrierShippingRateProvider
     /**
      * @param int $carrierServiceId
      */
-    public function setCarrierServiceId(int $carrierServiceId): void
+    public function setCarrierServiceId(?int $carrierServiceId)
     {
         $this->carrierServiceId = $carrierServiceId;
     }
@@ -88,7 +88,7 @@ class CarrierShippingRateProvider
     /**
      * @param string $flatModifier
      */
-    public function setFlatModifier(string $flatModifier): void
+    public function setFlatModifier(?string $flatModifier)
     {
         $this->flatModifier = $flatModifier;
     }
@@ -104,7 +104,7 @@ class CarrierShippingRateProvider
     /**
      * @param string $percentModifier
      */
-    public function setPercentModifier(string $percentModifier): void
+    public function setPercentModifier(?string $percentModifier)
     {
         $this->percentModifier = $percentModifier;
     }
@@ -120,7 +120,7 @@ class CarrierShippingRateProvider
     /**
      * @param array $serviceFilter
      */
-    public function setServiceFilter(array $serviceFilter): void
+    public function setServiceFilter(array $serviceFilter)
     {
         $this->serviceFilter = $serviceFilter;
     }
@@ -136,7 +136,7 @@ class CarrierShippingRateProvider
     /**
      * @param int $shippingZoneId
      */
-    public function setShippingZoneId(int $shippingZoneId): void
+    public function setShippingZoneId(?int $shippingZoneId)
     {
         $this->shippingZoneId = $shippingZoneId;
     }

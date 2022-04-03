@@ -77,7 +77,7 @@ class RefundLineItem
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -93,7 +93,7 @@ class RefundLineItem
     /**
      * @param int $quantity
      */
-    public function setQuantity(int $quantity): void
+    public function setQuantity(?int $quantity)
     {
         $this->quantity = $quantity;
     }
@@ -109,7 +109,7 @@ class RefundLineItem
     /**
      * @param int $lineItemId
      */
-    public function setLineItemId(int $lineItemId): void
+    public function setLineItemId(?int $lineItemId)
     {
         $this->lineItemId = $lineItemId;
     }
@@ -125,7 +125,7 @@ class RefundLineItem
     /**
      * @param int $locationId
      */
-    public function setLocationId(int $locationId): void
+    public function setLocationId(?int $locationId)
     {
         $this->locationId = $locationId;
     }
@@ -133,7 +133,7 @@ class RefundLineItem
     /**
      * @return string
      */
-    public function getRestockType(): string
+    public function getRestockType(): ?string
     {
         return $this->restockType;
     }
@@ -141,7 +141,7 @@ class RefundLineItem
     /**
      * @param string $restockType
      */
-    public function setRestockType(string $restockType): void
+    public function setRestockType(?string $restockType)
     {
         $this->restockType = $restockType;
     }
@@ -157,7 +157,7 @@ class RefundLineItem
     /**
      * @param float $subtotal
      */
-    public function setSubtotal(float $subtotal): void
+    public function setSubtotal(float $subtotal)
     {
         $this->subtotal = $subtotal;
     }
@@ -173,7 +173,7 @@ class RefundLineItem
     /**
      * @param float $totalTax
      */
-    public function setTotalTax(float $totalTax): void
+    public function setTotalTax(float $totalTax)
     {
         $this->totalTax = $totalTax;
     }
@@ -189,7 +189,7 @@ class RefundLineItem
     /**
      * @param PriceSet $subtotalSet
      */
-    public function setSubtotalSet(PriceSet $subtotalSet): void
+    public function setSubtotalSet(PriceSet $subtotalSet)
     {
         $this->subtotalSet = $subtotalSet;
     }
@@ -205,7 +205,7 @@ class RefundLineItem
     /**
      * @param PriceSet $totalTaxSet
      */
-    public function setTotalTaxSet(PriceSet $totalTaxSet): void
+    public function setTotalTaxSet(PriceSet $totalTaxSet)
     {
         $this->totalTaxSet = $totalTaxSet;
     }
@@ -221,7 +221,7 @@ class RefundLineItem
     /**
      * @param LineItem $lineItem
      */
-    public function setLineItem(LineItem $lineItem): void
+    public function setLineItem(LineItem $lineItem)
     {
         $this->lineItem = $lineItem;
     }

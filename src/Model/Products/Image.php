@@ -82,7 +82,7 @@ class Image
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -90,7 +90,7 @@ class Image
     /**
      * @return string
      */
-    public function getAdminGraphqlApiId(): string
+    public function getAdminGraphqlApiId(): ?string
     {
         return $this->adminGraphqlApiId;
     }
@@ -98,7 +98,7 @@ class Image
     /**
      * @param string $adminGraphqlApiId
      */
-    public function setAdminGraphqlApiId(string $adminGraphqlApiId): void
+    public function setAdminGraphqlApiId(?string $adminGraphqlApiId)
     {
         $this->adminGraphqlApiId = $adminGraphqlApiId;
     }
@@ -146,7 +146,7 @@ class Image
     /**
      * @param \DateTimeInterface $createdAt
       */
-    public function setCreatedAt(\DateTimeInterface $createdAt)
+    public function setCreatedAt(?\DateTimeInterface $createdAt)
     {
         $this->createdAt = $createdAt;
     }

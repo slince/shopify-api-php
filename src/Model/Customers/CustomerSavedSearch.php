@@ -51,7 +51,7 @@ class CustomerSavedSearch
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -59,7 +59,7 @@ class CustomerSavedSearch
     /**
      * @return string
      */
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->name;
     }
@@ -67,7 +67,7 @@ class CustomerSavedSearch
     /**
      * @param string $name
      */
-    public function setName(string $name): void
+    public function setName(?string $name)
     {
         $this->name = $name;
     }
@@ -83,7 +83,7 @@ class CustomerSavedSearch
     /**
      * @param \DateTimeInterface $createdAt
      */
-    public function setCreatedAt(?\DateTimeInterface $createdAt): void
+    public function setCreatedAt(?\DateTimeInterface $createdAt)
     {
         $this->createdAt = $createdAt;
     }
@@ -99,7 +99,7 @@ class CustomerSavedSearch
     /**
      * @param \DateTimeInterface $updatedAt
      */
-    public function setUpdatedAt(?\DateTimeInterface $updatedAt): void
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }
@@ -107,7 +107,7 @@ class CustomerSavedSearch
     /**
      * @return string
      */
-    public function getQuery(): string
+    public function getQuery(): ?string
     {
         return $this->query;
     }
@@ -115,7 +115,7 @@ class CustomerSavedSearch
     /**
      * @param string $query
      */
-    public function setQuery(string $query): void
+    public function setQuery(?string $query)
     {
         $this->query = $query;
     }

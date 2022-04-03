@@ -36,7 +36,7 @@ class CountryHarmonizedSystemCode
     /**
      * @param string $harmonizedSystemCode
      */
-    public function setHarmonizedSystemCode(string $harmonizedSystemCode): void
+    public function setHarmonizedSystemCode(?string $harmonizedSystemCode)
     {
         $this->harmonizedSystemCode = $harmonizedSystemCode;
     }
@@ -52,7 +52,7 @@ class CountryHarmonizedSystemCode
     /**
      * @param string $countryCode
      */
-    public function setCountryCode(string $countryCode): void
+    public function setCountryCode(?string $countryCode)
     {
         $this->countryCode = $countryCode;
     }

@@ -66,7 +66,7 @@ class Collect
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -98,7 +98,7 @@ class Collect
     /**
      * @param \DateTimeInterface $createdAt
       */
-    public function setCreatedAt(\DateTimeInterface $createdAt)
+    public function setCreatedAt(?\DateTimeInterface $createdAt)
     {
         $this->createdAt = $createdAt;
     }

@@ -48,7 +48,7 @@ class LineItemDuty extends PriceSet
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -56,7 +56,7 @@ class LineItemDuty extends PriceSet
     /**
      * @return string
      */
-    public function getHarmonizedSystemCode(): string
+    public function getHarmonizedSystemCode(): ?string
     {
         return $this->harmonizedSystemCode;
     }
@@ -64,7 +64,7 @@ class LineItemDuty extends PriceSet
     /**
      * @param string $harmonizedSystemCode
      */
-    public function setHarmonizedSystemCode(string $harmonizedSystemCode): void
+    public function setHarmonizedSystemCode(?string $harmonizedSystemCode)
     {
         $this->harmonizedSystemCode = $harmonizedSystemCode;
     }
@@ -80,7 +80,7 @@ class LineItemDuty extends PriceSet
     /**
      * @param TaxLine[] $taxLines
      */
-    public function setTaxLines(array $taxLines): void
+    public function setTaxLines(array $taxLines)
     {
         $this->taxLines = $taxLines;
     }
@@ -88,7 +88,7 @@ class LineItemDuty extends PriceSet
     /**
      * @return string
      */
-    public function getAdminGraphqlApiId(): string
+    public function getAdminGraphqlApiId(): ?string
     {
         return $this->adminGraphqlApiId;
     }
@@ -96,7 +96,7 @@ class LineItemDuty extends PriceSet
     /**
      * @param string $adminGraphqlApiId
      */
-    public function setAdminGraphqlApiId(string $adminGraphqlApiId): void
+    public function setAdminGraphqlApiId(?string $adminGraphqlApiId)
     {
         $this->adminGraphqlApiId = $adminGraphqlApiId;
     }

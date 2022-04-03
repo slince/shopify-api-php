@@ -42,7 +42,7 @@ class PaymentDetails
     /**
      * @return string
      */
-    public function getAvsResultCode(): string
+    public function getAvsResultCode(): ?string
     {
         return $this->avsResultCode;
     }
@@ -50,7 +50,7 @@ class PaymentDetails
     /**
      * @param string $avsResultCode
      */
-    public function setAvsResultCode(string $avsResultCode): void
+    public function setAvsResultCode(?string $avsResultCode)
     {
         $this->avsResultCode = $avsResultCode;
     }
@@ -58,7 +58,7 @@ class PaymentDetails
     /**
      * @return string
      */
-    public function getCreditCardBin(): string
+    public function getCreditCardBin(): ?string
     {
         return $this->creditCardBin;
     }
@@ -66,7 +66,7 @@ class PaymentDetails
     /**
      * @param string $creditCardBin
      */
-    public function setCreditCardBin(string $creditCardBin): void
+    public function setCreditCardBin(?string $creditCardBin)
     {
         $this->creditCardBin = $creditCardBin;
     }
@@ -74,7 +74,7 @@ class PaymentDetails
     /**
      * @return string
      */
-    public function getCvvResultCode(): string
+    public function getCvvResultCode(): ?string
     {
         return $this->cvvResultCode;
     }
@@ -82,7 +82,7 @@ class PaymentDetails
     /**
      * @param string $cvvResultCode
      */
-    public function setCvvResultCode(string $cvvResultCode): void
+    public function setCvvResultCode(?string $cvvResultCode)
     {
         $this->cvvResultCode = $cvvResultCode;
     }
@@ -90,7 +90,7 @@ class PaymentDetails
     /**
      * @return string
      */
-    public function getCreditCardNumber(): string
+    public function getCreditCardNumber(): ?string
     {
         return $this->creditCardNumber;
     }
@@ -98,7 +98,7 @@ class PaymentDetails
     /**
      * @param string $creditCardNumber
      */
-    public function setCreditCardNumber(string $creditCardNumber): void
+    public function setCreditCardNumber(?string $creditCardNumber)
     {
         $this->creditCardNumber = $creditCardNumber;
     }
@@ -106,7 +106,7 @@ class PaymentDetails
     /**
      * @return string
      */
-    public function getCreditCardCompany(): string
+    public function getCreditCardCompany(): ?string
     {
         return $this->creditCardCompany;
     }
@@ -114,7 +114,7 @@ class PaymentDetails
     /**
      * @param string $creditCardCompany
      */
-    public function setCreditCardCompany(string $creditCardCompany): void
+    public function setCreditCardCompany(?string $creditCardCompany)
     {
         $this->creditCardCompany = $creditCardCompany;
     }

@@ -122,7 +122,7 @@ class Location
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -130,7 +130,7 @@ class Location
     /**
      * @return string
      */
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->name;
     }
@@ -138,7 +138,7 @@ class Location
     /**
      * @param string $name
      */
-    public function setName(string $name): void
+    public function setName(?string $name)
     {
         $this->name = $name;
     }
@@ -146,7 +146,7 @@ class Location
     /**
      * @return string
      */
-    public function getAddress1(): string
+    public function getAddress1(): ?string
     {
         return $this->address1;
     }
@@ -154,7 +154,7 @@ class Location
     /**
      * @param string $address1
      */
-    public function setAddress1(string $address1): void
+    public function setAddress1(?string $address1)
     {
         $this->address1 = $address1;
     }
@@ -162,7 +162,7 @@ class Location
     /**
      * @return string
      */
-    public function getAddress2(): string
+    public function getAddress2(): ?string
     {
         return $this->address2;
     }
@@ -170,7 +170,7 @@ class Location
     /**
      * @param string $address2
      */
-    public function setAddress2(string $address2): void
+    public function setAddress2(?string $address2)
     {
         $this->address2 = $address2;
     }
@@ -178,7 +178,7 @@ class Location
     /**
      * @return string
      */
-    public function getCity(): string
+    public function getCity(): ?string
     {
         return $this->city;
     }
@@ -186,7 +186,7 @@ class Location
     /**
      * @param string $city
      */
-    public function setCity(string $city): void
+    public function setCity(?string $city)
     {
         $this->city = $city;
     }
@@ -194,7 +194,7 @@ class Location
     /**
      * @return string
      */
-    public function getZip(): string
+    public function getZip(): ?string
     {
         return $this->zip;
     }
@@ -202,7 +202,7 @@ class Location
     /**
      * @param string $zip
      */
-    public function setZip(string $zip): void
+    public function setZip(?string $zip)
     {
         $this->zip = $zip;
     }
@@ -210,7 +210,7 @@ class Location
     /**
      * @return string
      */
-    public function getProvince(): string
+    public function getProvince(): ?string
     {
         return $this->province;
     }
@@ -218,7 +218,7 @@ class Location
     /**
      * @param string $province
      */
-    public function setProvince(string $province): void
+    public function setProvince(?string $province)
     {
         $this->province = $province;
     }
@@ -226,7 +226,7 @@ class Location
     /**
      * @return string
      */
-    public function getCountry(): string
+    public function getCountry(): ?string
     {
         return $this->country;
     }
@@ -234,7 +234,7 @@ class Location
     /**
      * @param string $country
      */
-    public function setCountry(string $country): void
+    public function setCountry(?string $country)
     {
         $this->country = $country;
     }
@@ -250,7 +250,7 @@ class Location
     /**
      * @param int $phone
      */
-    public function setPhone(int $phone): void
+    public function setPhone(?int $phone)
     {
         $this->phone = $phone;
     }
@@ -266,7 +266,7 @@ class Location
     /**
      * @param \DateTimeInterface $createdAt
      */
-    public function setCreatedAt(?\DateTimeInterface $createdAt): void
+    public function setCreatedAt(?\DateTimeInterface $createdAt)
     {
         $this->createdAt = $createdAt;
     }
@@ -282,7 +282,7 @@ class Location
     /**
      * @param \DateTimeInterface $updatedAt
      */
-    public function setUpdatedAt(?\DateTimeInterface $updatedAt): void
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }
@@ -290,7 +290,7 @@ class Location
     /**
      * @return string
      */
-    public function getCountryCode(): string
+    public function getCountryCode(): ?string
     {
         return $this->countryCode;
     }
@@ -298,7 +298,7 @@ class Location
     /**
      * @param string $countryCode
      */
-    public function setCountryCode(string $countryCode): void
+    public function setCountryCode(?string $countryCode)
     {
         $this->countryCode = $countryCode;
     }
@@ -306,7 +306,7 @@ class Location
     /**
      * @return string
      */
-    public function getCountryName(): string
+    public function getCountryName(): ?string
     {
         return $this->countryName;
     }
@@ -314,7 +314,7 @@ class Location
     /**
      * @param string $countryName
      */
-    public function setCountryName(string $countryName): void
+    public function setCountryName(?string $countryName)
     {
         $this->countryName = $countryName;
     }
@@ -322,7 +322,7 @@ class Location
     /**
      * @return string
      */
-    public function getProvinceCode(): string
+    public function getProvinceCode(): ?string
     {
         return $this->provinceCode;
     }
@@ -330,7 +330,7 @@ class Location
     /**
      * @param string $provinceCode
      */
-    public function setProvinceCode(string $provinceCode): void
+    public function setProvinceCode(?string $provinceCode)
     {
         $this->provinceCode = $provinceCode;
     }
@@ -338,7 +338,7 @@ class Location
     /**
      * @return bool
      */
-    public function isLegacy(): bool
+    public function isLegacy(): ?bool
     {
         return $this->legacy;
     }
@@ -346,7 +346,7 @@ class Location
     /**
      * @param bool $legacy
      */
-    public function setLegacy(bool $legacy): void
+    public function setLegacy(?bool $legacy)
     {
         $this->legacy = $legacy;
     }
@@ -354,7 +354,7 @@ class Location
     /**
      * @return bool
      */
-    public function isActive(): bool
+    public function isActive(): ?bool
     {
         return $this->active;
     }
@@ -362,7 +362,7 @@ class Location
     /**
      * @param bool $active
      */
-    public function setActive(bool $active): void
+    public function setActive(?bool $active)
     {
         $this->active = $active;
     }
@@ -370,7 +370,7 @@ class Location
     /**
      * @return string
      */
-    public function getAdminGraphqlApiId(): string
+    public function getAdminGraphqlApiId(): ?string
     {
         return $this->adminGraphqlApiId;
     }
@@ -378,7 +378,7 @@ class Location
     /**
      * @param string $adminGraphqlApiId
      */
-    public function setAdminGraphqlApiId(string $adminGraphqlApiId): void
+    public function setAdminGraphqlApiId(?string $adminGraphqlApiId)
     {
         $this->adminGraphqlApiId = $adminGraphqlApiId;
     }
@@ -386,7 +386,7 @@ class Location
     /**
      * @return string
      */
-    public function getLocalizedCountryName(): string
+    public function getLocalizedCountryName(): ?string
     {
         return $this->localizedCountryName;
     }
@@ -394,7 +394,7 @@ class Location
     /**
      * @param string $localizedCountryName
      */
-    public function setLocalizedCountryName(string $localizedCountryName): void
+    public function setLocalizedCountryName(?string $localizedCountryName)
     {
         $this->localizedCountryName = $localizedCountryName;
     }
@@ -402,7 +402,7 @@ class Location
     /**
      * @return string
      */
-    public function getLocalizedProvinceName(): string
+    public function getLocalizedProvinceName(): ?string
     {
         return $this->localizedProvinceName;
     }
@@ -410,7 +410,7 @@ class Location
     /**
      * @param string $localizedProvinceName
      */
-    public function setLocalizedProvinceName(string $localizedProvinceName): void
+    public function setLocalizedProvinceName(?string $localizedProvinceName)
     {
         $this->localizedProvinceName = $localizedProvinceName;
     }

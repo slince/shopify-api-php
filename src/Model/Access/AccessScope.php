@@ -23,7 +23,7 @@ class AccessScope
     /**
      * @return string
      */
-    public function getHandle(): string
+    public function getHandle(): ?string
     {
         return $this->handle;
     }
@@ -31,7 +31,7 @@ class AccessScope
     /**
      * @param string $handle
      */
-    public function setHandle(string $handle): void
+    public function setHandle(?string $handle)
     {
         $this->handle = $handle;
     }

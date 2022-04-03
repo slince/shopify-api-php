@@ -86,7 +86,7 @@ class ApplicationCharge
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -94,7 +94,7 @@ class ApplicationCharge
     /**
      * @return string
      */
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->name;
     }
@@ -102,7 +102,7 @@ class ApplicationCharge
     /**
      * @param string $name
      */
-    public function setName(string $name): void
+    public function setName(?string $name)
     {
         $this->name = $name;
     }
@@ -118,7 +118,7 @@ class ApplicationCharge
     /**
      * @param int $apiClientId
      */
-    public function setApiClientId(int $apiClientId): void
+    public function setApiClientId(?int $apiClientId)
     {
         $this->apiClientId = $apiClientId;
     }
@@ -126,7 +126,7 @@ class ApplicationCharge
     /**
      * @return string
      */
-    public function getPrice(): string
+    public function getPrice(): ?string
     {
         return $this->price;
     }
@@ -134,7 +134,7 @@ class ApplicationCharge
     /**
      * @param string $price
      */
-    public function setPrice(string $price): void
+    public function setPrice(?string $price)
     {
         $this->price = $price;
     }
@@ -142,7 +142,7 @@ class ApplicationCharge
     /**
      * @return string
      */
-    public function getStatus(): string
+    public function getStatus(): ?string
     {
         return $this->status;
     }
@@ -150,7 +150,7 @@ class ApplicationCharge
     /**
      * @param string $status
      */
-    public function setStatus(string $status): void
+    public function setStatus(?string $status)
     {
         $this->status = $status;
     }
@@ -158,7 +158,7 @@ class ApplicationCharge
     /**
      * @return string
      */
-    public function getReturnUrl(): string
+    public function getReturnUrl(): ?string
     {
         return $this->returnUrl;
     }
@@ -166,7 +166,7 @@ class ApplicationCharge
     /**
      * @param string $returnUrl
      */
-    public function setReturnUrl(string $returnUrl): void
+    public function setReturnUrl(?string $returnUrl)
     {
         $this->returnUrl = $returnUrl;
     }
@@ -182,7 +182,7 @@ class ApplicationCharge
     /**
      * @param bool $test
      */
-    public function setTest(bool $test): void
+    public function setTest(?bool $test)
     {
         $this->test = $test;
     }
@@ -198,7 +198,7 @@ class ApplicationCharge
     /**
      * @param \DateTimeInterface $createdAt
      */
-    public function setCreatedAt(?\DateTimeInterface $createdAt): void
+    public function setCreatedAt(?\DateTimeInterface $createdAt)
     {
         $this->createdAt = $createdAt;
     }
@@ -214,7 +214,7 @@ class ApplicationCharge
     /**
      * @param \DateTimeInterface $updatedAt
      */
-    public function setUpdatedAt(?\DateTimeInterface $updatedAt): void
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }
@@ -222,7 +222,7 @@ class ApplicationCharge
     /**
      * @return string
      */
-    public function getChargeType(): string
+    public function getChargeType(): ?string
     {
         return $this->chargeType;
     }
@@ -230,7 +230,7 @@ class ApplicationCharge
     /**
      * @param string $chargeType
      */
-    public function setChargeType(string $chargeType): void
+    public function setChargeType(?string $chargeType)
     {
         $this->chargeType = $chargeType;
     }
@@ -238,7 +238,7 @@ class ApplicationCharge
     /**
      * @return string
      */
-    public function getDecoratedReturnUrl(): string
+    public function getDecoratedReturnUrl(): ?string
     {
         return $this->decoratedReturnUrl;
     }
@@ -246,7 +246,7 @@ class ApplicationCharge
     /**
      * @param string $decoratedReturnUrl
      */
-    public function setDecoratedReturnUrl(string $decoratedReturnUrl): void
+    public function setDecoratedReturnUrl(?string $decoratedReturnUrl)
     {
         $this->decoratedReturnUrl = $decoratedReturnUrl;
     }
@@ -254,7 +254,7 @@ class ApplicationCharge
     /**
      * @return string
      */
-    public function getConfirmationUrl(): string
+    public function getConfirmationUrl(): ?string
     {
         return $this->confirmationUrl;
     }
@@ -262,7 +262,7 @@ class ApplicationCharge
     /**
      * @param string $confirmationUrl
      */
-    public function setConfirmationUrl(string $confirmationUrl): void
+    public function setConfirmationUrl(?string $confirmationUrl)
     {
         $this->confirmationUrl = $confirmationUrl;
     }

@@ -132,7 +132,7 @@ class RecurringApplicationCharge
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -140,7 +140,7 @@ class RecurringApplicationCharge
     /**
      * @return string
      */
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->name;
     }
@@ -148,7 +148,7 @@ class RecurringApplicationCharge
     /**
      * @param string $name
      */
-    public function setName(string $name): void
+    public function setName(?string $name)
     {
         $this->name = $name;
     }
@@ -164,7 +164,7 @@ class RecurringApplicationCharge
     /**
      * @param int $apiClientId
      */
-    public function setApiClientId(int $apiClientId): void
+    public function setApiClientId(?int $apiClientId)
     {
         $this->apiClientId = $apiClientId;
     }
@@ -172,7 +172,7 @@ class RecurringApplicationCharge
     /**
      * @return string
      */
-    public function getPrice(): string
+    public function getPrice(): ?string
     {
         return $this->price;
     }
@@ -180,7 +180,7 @@ class RecurringApplicationCharge
     /**
      * @param string $price
      */
-    public function setPrice(string $price): void
+    public function setPrice(?string $price)
     {
         $this->price = $price;
     }
@@ -188,7 +188,7 @@ class RecurringApplicationCharge
     /**
      * @return string
      */
-    public function getStatus(): string
+    public function getStatus(): ?string
     {
         return $this->status;
     }
@@ -196,7 +196,7 @@ class RecurringApplicationCharge
     /**
      * @param string $status
      */
-    public function setStatus(string $status): void
+    public function setStatus(?string $status)
     {
         $this->status = $status;
     }
@@ -204,7 +204,7 @@ class RecurringApplicationCharge
     /**
      * @return string
      */
-    public function getTerms(): string
+    public function getTerms(): ?string
     {
         return $this->terms;
     }
@@ -212,7 +212,7 @@ class RecurringApplicationCharge
     /**
      * @param string $terms
      */
-    public function setTerms(string $terms): void
+    public function setTerms(?string $terms)
     {
         $this->terms = $terms;
     }
@@ -220,7 +220,7 @@ class RecurringApplicationCharge
     /**
      * @return string
      */
-    public function getReturnUrl(): string
+    public function getReturnUrl(): ?string
     {
         return $this->returnUrl;
     }
@@ -228,7 +228,7 @@ class RecurringApplicationCharge
     /**
      * @param string $returnUrl
      */
-    public function setReturnUrl(string $returnUrl): void
+    public function setReturnUrl(?string $returnUrl)
     {
         $this->returnUrl = $returnUrl;
     }
@@ -236,7 +236,7 @@ class RecurringApplicationCharge
     /**
      * @return \DateTimeInterface
      */
-    public function getBillingOn(): \DateTimeInterface
+    public function getBillingOn(): ?\DateTimeInterface
     {
         return $this->billingOn;
     }
@@ -244,7 +244,7 @@ class RecurringApplicationCharge
     /**
      * @param \DateTimeInterface $billingOn
      */
-    public function setBillingOn(\DateTimeInterface $billingOn): void
+    public function setBillingOn(?\DateTimeInterface $billingOn)
     {
         $this->billingOn = $billingOn;
     }
@@ -260,7 +260,7 @@ class RecurringApplicationCharge
     /**
      * @param \DateTimeInterface $createdAt
      */
-    public function setCreatedAt(?\DateTimeInterface $createdAt): void
+    public function setCreatedAt(?\DateTimeInterface $createdAt)
     {
         $this->createdAt = $createdAt;
     }
@@ -276,7 +276,7 @@ class RecurringApplicationCharge
     /**
      * @param \DateTimeInterface $updatedAt
      */
-    public function setUpdatedAt(?\DateTimeInterface $updatedAt): void
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }
@@ -292,7 +292,7 @@ class RecurringApplicationCharge
     /**
      * @param bool $test
      */
-    public function setTest(?bool $test): void
+    public function setTest(?bool $test)
     {
         $this->test = $test;
     }
@@ -300,7 +300,7 @@ class RecurringApplicationCharge
     /**
      * @return \DateTimeInterface
      */
-    public function getActivatedOn(): \DateTimeInterface
+    public function getActivatedOn(): ?\DateTimeInterface
     {
         return $this->activatedOn;
     }
@@ -308,7 +308,7 @@ class RecurringApplicationCharge
     /**
      * @param \DateTimeInterface $activatedOn
      */
-    public function setActivatedOn(\DateTimeInterface $activatedOn): void
+    public function setActivatedOn(?\DateTimeInterface $activatedOn)
     {
         $this->activatedOn = $activatedOn;
     }
@@ -316,7 +316,7 @@ class RecurringApplicationCharge
     /**
      * @return \DateTimeInterface
      */
-    public function getCancelledOn(): \DateTimeInterface
+    public function getCancelledOn(): ?\DateTimeInterface
     {
         return $this->cancelledOn;
     }
@@ -324,7 +324,7 @@ class RecurringApplicationCharge
     /**
      * @param \DateTimeInterface $cancelledOn
      */
-    public function setCancelledOn(\DateTimeInterface $cancelledOn): void
+    public function setCancelledOn(?\DateTimeInterface $cancelledOn)
     {
         $this->cancelledOn = $cancelledOn;
     }
@@ -340,7 +340,7 @@ class RecurringApplicationCharge
     /**
      * @param int $trialDays
      */
-    public function setTrialDays(int $trialDays): void
+    public function setTrialDays(?int $trialDays)
     {
         $this->trialDays = $trialDays;
     }
@@ -356,7 +356,7 @@ class RecurringApplicationCharge
     /**
      * @param int $cappedAmount
      */
-    public function setCappedAmount(int $cappedAmount): void
+    public function setCappedAmount(?int $cappedAmount)
     {
         $this->cappedAmount = $cappedAmount;
     }
@@ -364,7 +364,7 @@ class RecurringApplicationCharge
     /**
      * @return \DateTimeInterface
      */
-    public function getTrialEndsAOn(): \DateTimeInterface
+    public function getTrialEndsAOn(): ?\DateTimeInterface
     {
         return $this->trialEndsAOn;
     }
@@ -372,7 +372,7 @@ class RecurringApplicationCharge
     /**
      * @param \DateTimeInterface $trialEndsAOn
      */
-    public function setTrialEndsAOn(\DateTimeInterface $trialEndsAOn): void
+    public function setTrialEndsAOn(?\DateTimeInterface $trialEndsAOn)
     {
         $this->trialEndsAOn = $trialEndsAOn;
     }
@@ -388,7 +388,7 @@ class RecurringApplicationCharge
     /**
      * @param float $balanceUsed
      */
-    public function setBalanceUsed(float $balanceUsed): void
+    public function setBalanceUsed(float $balanceUsed)
     {
         $this->balanceUsed = $balanceUsed;
     }
@@ -404,7 +404,7 @@ class RecurringApplicationCharge
     /**
      * @param float $balanceRemaining
      */
-    public function setBalanceRemaining(float $balanceRemaining): void
+    public function setBalanceRemaining(float $balanceRemaining)
     {
         $this->balanceRemaining = $balanceRemaining;
     }
@@ -420,7 +420,7 @@ class RecurringApplicationCharge
     /**
      * @param int $riskLevel
      */
-    public function setRiskLevel(int $riskLevel): void
+    public function setRiskLevel(?int $riskLevel)
     {
         $this->riskLevel = $riskLevel;
     }
@@ -428,7 +428,7 @@ class RecurringApplicationCharge
     /**
      * @return string
      */
-    public function getDecoratedReturnUrl(): string
+    public function getDecoratedReturnUrl(): ?string
     {
         return $this->decoratedReturnUrl;
     }
@@ -436,7 +436,7 @@ class RecurringApplicationCharge
     /**
      * @param string $decoratedReturnUrl
      */
-    public function setDecoratedReturnUrl(string $decoratedReturnUrl): void
+    public function setDecoratedReturnUrl(?string $decoratedReturnUrl)
     {
         $this->decoratedReturnUrl = $decoratedReturnUrl;
     }
@@ -444,7 +444,7 @@ class RecurringApplicationCharge
     /**
      * @return string
      */
-    public function getConfirmationUrl(): string
+    public function getConfirmationUrl(): ?string
     {
         return $this->confirmationUrl;
     }
@@ -452,7 +452,7 @@ class RecurringApplicationCharge
     /**
      * @param string $confirmationUrl
      */
-    public function setConfirmationUrl(string $confirmationUrl): void
+    public function setConfirmationUrl(?string $confirmationUrl)
     {
         $this->confirmationUrl = $confirmationUrl;
     }

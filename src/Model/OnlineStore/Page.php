@@ -80,7 +80,7 @@ class Page
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -88,7 +88,7 @@ class Page
     /**
      * @return string
      */
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
@@ -96,7 +96,7 @@ class Page
     /**
      * @param string $title
      */
-    public function setTitle(string $title): void
+    public function setTitle(?string $title)
     {
         $this->title = $title;
     }
@@ -112,7 +112,7 @@ class Page
     /**
      * @param int $shopId
      */
-    public function setShopId(int $shopId): void
+    public function setShopId(?int $shopId)
     {
         $this->shopId = $shopId;
     }
@@ -120,7 +120,7 @@ class Page
     /**
      * @return string
      */
-    public function getHandle(): string
+    public function getHandle(): ?string
     {
         return $this->handle;
     }
@@ -128,7 +128,7 @@ class Page
     /**
      * @param string $handle
      */
-    public function setHandle(string $handle): void
+    public function setHandle(?string $handle)
     {
         $this->handle = $handle;
     }
@@ -136,7 +136,7 @@ class Page
     /**
      * @return string
      */
-    public function getBodyHtml(): string
+    public function getBodyHtml(): ?string
     {
         return $this->bodyHtml;
     }
@@ -144,7 +144,7 @@ class Page
     /**
      * @param string $bodyHtml
      */
-    public function setBodyHtml(string $bodyHtml): void
+    public function setBodyHtml(?string $bodyHtml)
     {
         $this->bodyHtml = $bodyHtml;
     }
@@ -152,7 +152,7 @@ class Page
     /**
      * @return string
      */
-    public function getAuthor(): string
+    public function getAuthor(): ?string
     {
         return $this->author;
     }
@@ -160,7 +160,7 @@ class Page
     /**
      * @param string $author
      */
-    public function setAuthor(string $author): void
+    public function setAuthor(?string $author)
     {
         $this->author = $author;
     }
@@ -176,7 +176,7 @@ class Page
     /**
      * @param \DateTimeInterface $createdAt
      */
-    public function setCreatedAt(?\DateTimeInterface $createdAt): void
+    public function setCreatedAt(?\DateTimeInterface $createdAt)
     {
         $this->createdAt = $createdAt;
     }
@@ -192,7 +192,7 @@ class Page
     /**
      * @param \DateTimeInterface $updatedAt
      */
-    public function setUpdatedAt(?\DateTimeInterface $updatedAt): void
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }
@@ -200,7 +200,7 @@ class Page
     /**
      * @return \DateTimeInterface
      */
-    public function getPublishedAt(): \DateTimeInterface
+    public function getPublishedAt(): ?\DateTimeInterface
     {
         return $this->publishedAt;
     }
@@ -208,7 +208,7 @@ class Page
     /**
      * @param \DateTimeInterface $publishedAt
      */
-    public function setPublishedAt(\DateTimeInterface $publishedAt): void
+    public function setPublishedAt(?\DateTimeInterface $publishedAt)
     {
         $this->publishedAt = $publishedAt;
     }
@@ -216,7 +216,7 @@ class Page
     /**
      * @return string
      */
-    public function getTemplateSuffix(): string
+    public function getTemplateSuffix(): ?string
     {
         return $this->templateSuffix;
     }
@@ -224,7 +224,7 @@ class Page
     /**
      * @param string $templateSuffix
      */
-    public function setTemplateSuffix(string $templateSuffix): void
+    public function setTemplateSuffix(?string $templateSuffix)
     {
         $this->templateSuffix = $templateSuffix;
     }
@@ -232,7 +232,7 @@ class Page
     /**
      * @return string
      */
-    public function getAdminGraphqlApiId(): string
+    public function getAdminGraphqlApiId(): ?string
     {
         return $this->adminGraphqlApiId;
     }
@@ -240,7 +240,7 @@ class Page
     /**
      * @param string $adminGraphqlApiId
      */
-    public function setAdminGraphqlApiId(string $adminGraphqlApiId): void
+    public function setAdminGraphqlApiId(?string $adminGraphqlApiId)
     {
         $this->adminGraphqlApiId = $adminGraphqlApiId;
     }

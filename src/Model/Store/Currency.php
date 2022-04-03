@@ -33,7 +33,7 @@ class Currency
     /**
      * @return string
      */
-    public function getCurrency(): string
+    public function getCurrency(): ?string
     {
         return $this->currency;
     }
@@ -41,7 +41,7 @@ class Currency
     /**
      * @param string $currency
      */
-    public function setCurrency(string $currency): void
+    public function setCurrency(?string $currency)
     {
         $this->currency = $currency;
     }
@@ -49,7 +49,7 @@ class Currency
     /**
      * @return \DateTimeInterface
      */
-    public function getRateUpdatedAt(): \DateTimeInterface
+    public function getRateUpdatedAt(): ?\DateTimeInterface
     {
         return $this->rateUpdatedAt;
     }
@@ -57,7 +57,7 @@ class Currency
     /**
      * @param \DateTimeInterface $rateUpdatedAt
      */
-    public function setRateUpdatedAt(\DateTimeInterface $rateUpdatedAt): void
+    public function setRateUpdatedAt(?\DateTimeInterface $rateUpdatedAt)
     {
         $this->rateUpdatedAt = $rateUpdatedAt;
     }
@@ -65,7 +65,7 @@ class Currency
     /**
      * @return bool
      */
-    public function isEnabled(): bool
+    public function isEnabled(): ?bool
     {
         return $this->enabled;
     }
@@ -73,7 +73,7 @@ class Currency
     /**
      * @param bool $enabled
      */
-    public function setEnabled(bool $enabled): void
+    public function setEnabled(?bool $enabled)
     {
         $this->enabled = $enabled;
     }

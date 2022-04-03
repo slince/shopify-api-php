@@ -50,7 +50,7 @@ class CurrencyExchangeAdjustment
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -58,7 +58,7 @@ class CurrencyExchangeAdjustment
     /**
      * @return string
      */
-    public function getAdjustment(): string
+    public function getAdjustment(): ?string
     {
         return $this->adjustment;
     }
@@ -66,7 +66,7 @@ class CurrencyExchangeAdjustment
     /**
      * @param string $adjustment
      */
-    public function setAdjustment(string $adjustment): void
+    public function setAdjustment(?string $adjustment)
     {
         $this->adjustment = $adjustment;
     }
@@ -74,7 +74,7 @@ class CurrencyExchangeAdjustment
     /**
      * @return string
      */
-    public function getOriginalAmount(): string
+    public function getOriginalAmount(): ?string
     {
         return $this->originalAmount;
     }
@@ -82,7 +82,7 @@ class CurrencyExchangeAdjustment
     /**
      * @param string $originalAmount
      */
-    public function setOriginalAmount(string $originalAmount): void
+    public function setOriginalAmount(?string $originalAmount)
     {
         $this->originalAmount = $originalAmount;
     }
@@ -90,7 +90,7 @@ class CurrencyExchangeAdjustment
     /**
      * @return string
      */
-    public function getFinalAmount(): string
+    public function getFinalAmount(): ?string
     {
         return $this->finalAmount;
     }
@@ -98,7 +98,7 @@ class CurrencyExchangeAdjustment
     /**
      * @param string $finalAmount
      */
-    public function setFinalAmount(string $finalAmount): void
+    public function setFinalAmount(?string $finalAmount)
     {
         $this->finalAmount = $finalAmount;
     }
@@ -106,7 +106,7 @@ class CurrencyExchangeAdjustment
     /**
      * @return string
      */
-    public function getCurrency(): string
+    public function getCurrency(): ?string
     {
         return $this->currency;
     }
@@ -114,7 +114,7 @@ class CurrencyExchangeAdjustment
     /**
      * @param string $currency
      */
-    public function setCurrency(string $currency): void
+    public function setCurrency(?string $currency)
     {
         $this->currency = $currency;
     }

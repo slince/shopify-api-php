@@ -41,7 +41,7 @@ class Redirect
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -49,7 +49,7 @@ class Redirect
     /**
      * @return string
      */
-    public function getPath(): string
+    public function getPath(): ?string
     {
         return $this->path;
     }
@@ -57,7 +57,7 @@ class Redirect
     /**
      * @param string $path
      */
-    public function setPath(string $path): void
+    public function setPath(?string $path)
     {
         $this->path = $path;
     }
@@ -65,7 +65,7 @@ class Redirect
     /**
      * @return string
      */
-    public function getTarget(): string
+    public function getTarget(): ?string
     {
         return $this->target;
     }
@@ -73,7 +73,7 @@ class Redirect
     /**
      * @param string $target
      */
-    public function setTarget(string $target): void
+    public function setTarget(?string $target)
     {
         $this->target = $target;
     }

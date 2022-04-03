@@ -36,7 +36,7 @@ class RefundDuty
     /**
      * @param int $dutyId
      */
-    public function setDutyId(int $dutyId): void
+    public function setDutyId(?int $dutyId)
     {
         $this->dutyId = $dutyId;
     }
@@ -44,7 +44,7 @@ class RefundDuty
     /**
      * @return string
      */
-    public function getRefundType(): string
+    public function getRefundType(): ?string
     {
         return $this->refundType;
     }
@@ -52,7 +52,7 @@ class RefundDuty
     /**
      * @param string $refundType
      */
-    public function setRefundType(string $refundType): void
+    public function setRefundType(?string $refundType)
     {
         $this->refundType = $refundType;
     }

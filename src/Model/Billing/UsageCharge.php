@@ -66,7 +66,7 @@ class UsageCharge
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -74,7 +74,7 @@ class UsageCharge
     /**
      * @return string
      */
-    public function getDescription(): string
+    public function getDescription(): ?string
     {
         return $this->description;
     }
@@ -82,7 +82,7 @@ class UsageCharge
     /**
      * @param string $description
      */
-    public function setDescription(string $description): void
+    public function setDescription(?string $description)
     {
         $this->description = $description;
     }
@@ -90,7 +90,7 @@ class UsageCharge
     /**
      * @return string
      */
-    public function getPrice(): string
+    public function getPrice(): ?string
     {
         return $this->price;
     }
@@ -98,7 +98,7 @@ class UsageCharge
     /**
      * @param string $price
      */
-    public function setPrice(string $price): void
+    public function setPrice(?string $price)
     {
         $this->price = $price;
     }
@@ -114,7 +114,7 @@ class UsageCharge
     /**
      * @param \DateTimeInterface $createdAt
      */
-    public function setCreatedAt(?\DateTimeInterface $createdAt): void
+    public function setCreatedAt(?\DateTimeInterface $createdAt)
     {
         $this->createdAt = $createdAt;
     }
@@ -122,7 +122,7 @@ class UsageCharge
     /**
      * @return \DateTimeInterface
      */
-    public function getBillingOn(): \DateTimeInterface
+    public function getBillingOn(): ?\DateTimeInterface
     {
         return $this->billingOn;
     }
@@ -130,7 +130,7 @@ class UsageCharge
     /**
      * @param \DateTimeInterface $billingOn
      */
-    public function setBillingOn(\DateTimeInterface $billingOn): void
+    public function setBillingOn(?\DateTimeInterface $billingOn)
     {
         $this->billingOn = $billingOn;
     }
@@ -146,7 +146,7 @@ class UsageCharge
     /**
      * @param float $balanceUsed
      */
-    public function setBalanceUsed(float $balanceUsed): void
+    public function setBalanceUsed(float $balanceUsed)
     {
         $this->balanceUsed = $balanceUsed;
     }
@@ -162,7 +162,7 @@ class UsageCharge
     /**
      * @param float $balanceRemaining
      */
-    public function setBalanceRemaining(float $balanceRemaining): void
+    public function setBalanceRemaining(float $balanceRemaining)
     {
         $this->balanceRemaining = $balanceRemaining;
     }
@@ -178,7 +178,7 @@ class UsageCharge
     /**
      * @param int $riskLevel
      */
-    public function setRiskLevel(int $riskLevel): void
+    public function setRiskLevel(?int $riskLevel)
     {
         $this->riskLevel = $riskLevel;
     }

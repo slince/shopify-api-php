@@ -46,7 +46,7 @@ class ApplicationCredit
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -54,7 +54,7 @@ class ApplicationCredit
     /**
      * @return string
      */
-    public function getAmount(): string
+    public function getAmount(): ?string
     {
         return $this->amount;
     }
@@ -62,7 +62,7 @@ class ApplicationCredit
     /**
      * @param string $amount
      */
-    public function setAmount(string $amount): void
+    public function setAmount(?string $amount)
     {
         $this->amount = $amount;
     }
@@ -70,7 +70,7 @@ class ApplicationCredit
     /**
      * @return string
      */
-    public function getDescription(): string
+    public function getDescription(): ?string
     {
         return $this->description;
     }
@@ -78,7 +78,7 @@ class ApplicationCredit
     /**
      * @param string $description
      */
-    public function setDescription(string $description): void
+    public function setDescription(?string $description)
     {
         $this->description = $description;
     }
@@ -94,7 +94,7 @@ class ApplicationCredit
     /**
      * @param bool $test
      */
-    public function setTest(?bool $test): void
+    public function setTest(?bool $test)
     {
         $this->test = $test;
     }

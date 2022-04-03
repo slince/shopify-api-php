@@ -28,7 +28,7 @@ class LineItemProperty
     /**
      * @return string
      */
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->name;
     }
@@ -36,7 +36,7 @@ class LineItemProperty
     /**
      * @param string $name
      */
-    public function setName(string $name): void
+    public function setName(?string $name)
     {
         $this->name = $name;
     }
@@ -44,7 +44,7 @@ class LineItemProperty
     /**
      * @return string
      */
-    public function getValue(): string
+    public function getValue(): ?string
     {
         return $this->value;
     }
@@ -52,7 +52,7 @@ class LineItemProperty
     /**
      * @param string $value
      */
-    public function setValue(string $value): void
+    public function setValue(?string $value)
     {
         $this->value = $value;
     }

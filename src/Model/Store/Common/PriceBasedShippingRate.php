@@ -55,7 +55,7 @@ class PriceBasedShippingRate
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -71,7 +71,7 @@ class PriceBasedShippingRate
     /**
      * @param string $name
      */
-    public function setName(string $name): void
+    public function setName(?string $name)
     {
         $this->name = $name;
     }
@@ -87,7 +87,7 @@ class PriceBasedShippingRate
     /**
      * @param string $price
      */
-    public function setPrice(string $price): void
+    public function setPrice(?string $price)
     {
         $this->price = $price;
     }
@@ -103,7 +103,7 @@ class PriceBasedShippingRate
     /**
      * @param int $shippingZoneId
      */
-    public function setShippingZoneId(int $shippingZoneId): void
+    public function setShippingZoneId(?int $shippingZoneId)
     {
         $this->shippingZoneId = $shippingZoneId;
     }
@@ -119,7 +119,7 @@ class PriceBasedShippingRate
     /**
      * @param string $minOrderSubtotal
      */
-    public function setMinOrderSubtotal(string $minOrderSubtotal): void
+    public function setMinOrderSubtotal(?string $minOrderSubtotal)
     {
         $this->minOrderSubtotal = $minOrderSubtotal;
     }
@@ -135,7 +135,7 @@ class PriceBasedShippingRate
     /**
      * @param string $maxOrderSubtotal
      */
-    public function setMaxOrderSubtotal(string $maxOrderSubtotal): void
+    public function setMaxOrderSubtotal(?string $maxOrderSubtotal)
     {
         $this->maxOrderSubtotal = $maxOrderSubtotal;
     }

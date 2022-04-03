@@ -168,7 +168,7 @@ class DraftOrder
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -176,7 +176,7 @@ class DraftOrder
     /**
      * @return string
      */
-    public function getNote(): string
+    public function getNote(): ?string
     {
         return $this->note;
     }
@@ -184,7 +184,7 @@ class DraftOrder
     /**
      * @param string $note
      */
-    public function setNote(string $note): void
+    public function setNote(?string $note)
     {
         $this->note = $note;
     }
@@ -192,7 +192,7 @@ class DraftOrder
     /**
      * @return string
      */
-    public function getEmail(): string
+    public function getEmail(): ?string
     {
         return $this->email;
     }
@@ -200,7 +200,7 @@ class DraftOrder
     /**
      * @param string $email
      */
-    public function setEmail(string $email): void
+    public function setEmail(?string $email)
     {
         $this->email = $email;
     }
@@ -208,7 +208,7 @@ class DraftOrder
     /**
      * @return bool
      */
-    public function isTaxesIncluded(): bool
+    public function isTaxesIncluded(): ?bool
     {
         return $this->taxesIncluded;
     }
@@ -216,7 +216,7 @@ class DraftOrder
     /**
      * @param bool $taxesIncluded
      */
-    public function setTaxesIncluded(bool $taxesIncluded): void
+    public function setTaxesIncluded(?bool $taxesIncluded)
     {
         $this->taxesIncluded = $taxesIncluded;
     }
@@ -224,7 +224,7 @@ class DraftOrder
     /**
      * @return string
      */
-    public function getCurrency(): string
+    public function getCurrency(): ?string
     {
         return $this->currency;
     }
@@ -232,7 +232,7 @@ class DraftOrder
     /**
      * @param string $currency
      */
-    public function setCurrency(string $currency): void
+    public function setCurrency(?string $currency)
     {
         $this->currency = $currency;
     }
@@ -240,7 +240,7 @@ class DraftOrder
     /**
      * @return \DateTimeInterface
      */
-    public function getInvoiceSentAt(): \DateTimeInterface
+    public function getInvoiceSentAt(): ?\DateTimeInterface
     {
         return $this->invoiceSentAt;
     }
@@ -248,7 +248,7 @@ class DraftOrder
     /**
      * @param \DateTimeInterface $invoiceSentAt
      */
-    public function setInvoiceSentAt(\DateTimeInterface $invoiceSentAt): void
+    public function setInvoiceSentAt(?\DateTimeInterface $invoiceSentAt)
     {
         $this->invoiceSentAt = $invoiceSentAt;
     }
@@ -264,7 +264,7 @@ class DraftOrder
     /**
      * @param \DateTimeInterface $createdAt
      */
-    public function setCreatedAt(?\DateTimeInterface $createdAt): void
+    public function setCreatedAt(?\DateTimeInterface $createdAt)
     {
         $this->createdAt = $createdAt;
     }
@@ -280,7 +280,7 @@ class DraftOrder
     /**
      * @param \DateTimeInterface $updatedAt
      */
-    public function setUpdatedAt(?\DateTimeInterface $updatedAt): void
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }
@@ -288,7 +288,7 @@ class DraftOrder
     /**
      * @return bool
      */
-    public function isTaxExempt(): bool
+    public function isTaxExempt(): ?bool
     {
         return $this->taxExempt;
     }
@@ -296,7 +296,7 @@ class DraftOrder
     /**
      * @param bool $taxExempt
      */
-    public function setTaxExempt(bool $taxExempt): void
+    public function setTaxExempt(?bool $taxExempt)
     {
         $this->taxExempt = $taxExempt;
     }
@@ -304,7 +304,7 @@ class DraftOrder
     /**
      * @return \DateTimeInterface
      */
-    public function getCompletedAt(): \DateTimeInterface
+    public function getCompletedAt(): ?\DateTimeInterface
     {
         return $this->completedAt;
     }
@@ -312,7 +312,7 @@ class DraftOrder
     /**
      * @param \DateTimeInterface $completedAt
      */
-    public function setCompletedAt(\DateTimeInterface $completedAt): void
+    public function setCompletedAt(?\DateTimeInterface $completedAt)
     {
         $this->completedAt = $completedAt;
     }
@@ -320,7 +320,7 @@ class DraftOrder
     /**
      * @return string
      */
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->name;
     }
@@ -328,7 +328,7 @@ class DraftOrder
     /**
      * @param string $name
      */
-    public function setName(string $name): void
+    public function setName(?string $name)
     {
         $this->name = $name;
     }
@@ -336,7 +336,7 @@ class DraftOrder
     /**
      * @return string
      */
-    public function getStatus(): string
+    public function getStatus(): ?string
     {
         return $this->status;
     }
@@ -344,7 +344,7 @@ class DraftOrder
     /**
      * @param string $status
      */
-    public function setStatus(string $status): void
+    public function setStatus(?string $status)
     {
         $this->status = $status;
     }
@@ -360,7 +360,7 @@ class DraftOrder
     /**
      * @param LineItem[] $lineItems
      */
-    public function setLineItems(array $lineItems): void
+    public function setLineItems(array $lineItems)
     {
         $this->lineItems = $lineItems;
     }
@@ -376,7 +376,7 @@ class DraftOrder
     /**
      * @param OrderAddress $shippingAddress
      */
-    public function setShippingAddress(OrderAddress $shippingAddress): void
+    public function setShippingAddress(OrderAddress $shippingAddress)
     {
         $this->shippingAddress = $shippingAddress;
     }
@@ -392,7 +392,7 @@ class DraftOrder
     /**
      * @param OrderAddress $billingAddress
      */
-    public function setBillingAddress(OrderAddress $billingAddress): void
+    public function setBillingAddress(OrderAddress $billingAddress)
     {
         $this->billingAddress = $billingAddress;
     }
@@ -400,7 +400,7 @@ class DraftOrder
     /**
      * @return string
      */
-    public function getInvoiceUrl(): string
+    public function getInvoiceUrl(): ?string
     {
         return $this->invoiceUrl;
     }
@@ -408,7 +408,7 @@ class DraftOrder
     /**
      * @param string $invoiceUrl
      */
-    public function setInvoiceUrl(string $invoiceUrl): void
+    public function setInvoiceUrl(?string $invoiceUrl)
     {
         $this->invoiceUrl = $invoiceUrl;
     }
@@ -424,7 +424,7 @@ class DraftOrder
     /**
      * @param AppliedDiscount $appliedDiscount
      */
-    public function setAppliedDiscount(AppliedDiscount $appliedDiscount): void
+    public function setAppliedDiscount(AppliedDiscount $appliedDiscount)
     {
         $this->appliedDiscount = $appliedDiscount;
     }
@@ -440,7 +440,7 @@ class DraftOrder
     /**
      * @param int $orderId
      */
-    public function setOrderId(int $orderId): void
+    public function setOrderId(?int $orderId)
     {
         $this->orderId = $orderId;
     }
@@ -456,7 +456,7 @@ class DraftOrder
     /**
      * @param DraftOrderShippingLine $shippingLine
      */
-    public function setShippingLine(DraftOrderShippingLine $shippingLine): void
+    public function setShippingLine(DraftOrderShippingLine $shippingLine)
     {
         $this->shippingLine = $shippingLine;
     }
@@ -472,7 +472,7 @@ class DraftOrder
     /**
      * @param TaxLine[] $taxLines
      */
-    public function setTaxLines(array $taxLines): void
+    public function setTaxLines(array $taxLines)
     {
         $this->taxLines = $taxLines;
     }
@@ -480,7 +480,7 @@ class DraftOrder
     /**
      * @return string
      */
-    public function getTag(): string
+    public function getTag(): ?string
     {
         return $this->tag;
     }
@@ -488,7 +488,7 @@ class DraftOrder
     /**
      * @param string $tag
      */
-    public function setTag(string $tag): void
+    public function setTag(?string $tag)
     {
         $this->tag = $tag;
     }
@@ -504,7 +504,7 @@ class DraftOrder
     /**
      * @param NoteAttribute $noteAttributes
      */
-    public function setNoteAttributes(NoteAttribute $noteAttributes): void
+    public function setNoteAttributes(NoteAttribute $noteAttributes)
     {
         $this->noteAttributes = $noteAttributes;
     }
@@ -512,7 +512,7 @@ class DraftOrder
     /**
      * @return string
      */
-    public function getTotalPrice(): string
+    public function getTotalPrice(): ?string
     {
         return $this->totalPrice;
     }
@@ -520,7 +520,7 @@ class DraftOrder
     /**
      * @param string $totalPrice
      */
-    public function setTotalPrice(string $totalPrice): void
+    public function setTotalPrice(?string $totalPrice)
     {
         $this->totalPrice = $totalPrice;
     }
@@ -528,7 +528,7 @@ class DraftOrder
     /**
      * @return string
      */
-    public function getSubtotalPrice(): string
+    public function getSubtotalPrice(): ?string
     {
         return $this->subtotalPrice;
     }
@@ -536,7 +536,7 @@ class DraftOrder
     /**
      * @param string $subtotalPrice
      */
-    public function setSubtotalPrice(string $subtotalPrice): void
+    public function setSubtotalPrice(?string $subtotalPrice)
     {
         $this->subtotalPrice = $subtotalPrice;
     }
@@ -544,7 +544,7 @@ class DraftOrder
     /**
      * @return string
      */
-    public function getTotalTax(): string
+    public function getTotalTax(): ?string
     {
         return $this->totalTax;
     }
@@ -552,7 +552,7 @@ class DraftOrder
     /**
      * @param string $totalTax
      */
-    public function setTotalTax(string $totalTax): void
+    public function setTotalTax(?string $totalTax)
     {
         $this->totalTax = $totalTax;
     }
@@ -560,7 +560,7 @@ class DraftOrder
     /**
      * @return string
      */
-    public function getAdminGraphqlApiId(): string
+    public function getAdminGraphqlApiId(): ?string
     {
         return $this->adminGraphqlApiId;
     }
@@ -568,7 +568,7 @@ class DraftOrder
     /**
      * @param string $adminGraphqlApiId
      */
-    public function setAdminGraphqlApiId(string $adminGraphqlApiId): void
+    public function setAdminGraphqlApiId(?string $adminGraphqlApiId)
     {
         $this->adminGraphqlApiId = $adminGraphqlApiId;
     }
@@ -584,7 +584,7 @@ class DraftOrder
     /**
      * @param Customer $customer
      */
-    public function setCustomer(Customer $customer): void
+    public function setCustomer(Customer $customer)
     {
         $this->customer = $customer;
     }

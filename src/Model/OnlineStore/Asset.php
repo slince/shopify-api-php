@@ -62,7 +62,7 @@ class Asset
     /**
      * @return string
      */
-    public function getKey(): string
+    public function getKey(): ?string
     {
         return $this->key;
     }
@@ -70,7 +70,7 @@ class Asset
     /**
      * @param string $key
      */
-    public function setKey(string $key): void
+    public function setKey(?string $key)
     {
         $this->key = $key;
     }
@@ -78,7 +78,7 @@ class Asset
     /**
      * @return string
      */
-    public function getPublicUrl(): string
+    public function getPublicUrl(): ?string
     {
         return $this->publicUrl;
     }
@@ -86,7 +86,7 @@ class Asset
     /**
      * @param string $publicUrl
      */
-    public function setPublicUrl(string $publicUrl): void
+    public function setPublicUrl(?string $publicUrl)
     {
         $this->publicUrl = $publicUrl;
     }
@@ -94,7 +94,7 @@ class Asset
     /**
      * @return string
      */
-    public function getValue(): string
+    public function getValue(): ?string
     {
         return $this->value;
     }
@@ -102,7 +102,7 @@ class Asset
     /**
      * @param string $value
      */
-    public function setValue(string $value): void
+    public function setValue(?string $value)
     {
         $this->value = $value;
     }
@@ -118,7 +118,7 @@ class Asset
     /**
      * @param \DateTimeInterface $createdAt
      */
-    public function setCreatedAt(?\DateTimeInterface $createdAt): void
+    public function setCreatedAt(?\DateTimeInterface $createdAt)
     {
         $this->createdAt = $createdAt;
     }
@@ -134,7 +134,7 @@ class Asset
     /**
      * @param \DateTimeInterface $updatedAt
      */
-    public function setUpdatedAt(?\DateTimeInterface $updatedAt): void
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }
@@ -142,7 +142,7 @@ class Asset
     /**
      * @return string
      */
-    public function getContentType(): string
+    public function getContentType(): ?string
     {
         return $this->contentType;
     }
@@ -150,7 +150,7 @@ class Asset
     /**
      * @param string $contentType
      */
-    public function setContentType(string $contentType): void
+    public function setContentType(?string $contentType)
     {
         $this->contentType = $contentType;
     }
@@ -166,7 +166,7 @@ class Asset
     /**
      * @param int $size
      */
-    public function setSize(int $size): void
+    public function setSize(?int $size)
     {
         $this->size = $size;
     }
@@ -174,7 +174,7 @@ class Asset
     /**
      * @return string
      */
-    public function getCheckSum(): string
+    public function getCheckSum(): ?string
     {
         return $this->checkSum;
     }
@@ -182,7 +182,7 @@ class Asset
     /**
      * @param string $checkSum
      */
-    public function setCheckSum(string $checkSum): void
+    public function setCheckSum(?string $checkSum)
     {
         $this->checkSum = $checkSum;
     }
@@ -198,7 +198,7 @@ class Asset
     /**
      * @param int $themeId
      */
-    public function setThemeId(int $themeId): void
+    public function setThemeId(?int $themeId)
     {
         $this->themeId = $themeId;
     }

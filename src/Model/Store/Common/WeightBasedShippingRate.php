@@ -55,7 +55,7 @@ class WeightBasedShippingRate
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -71,7 +71,7 @@ class WeightBasedShippingRate
     /**
      * @param string $name
      */
-    public function setName(string $name): void
+    public function setName(?string $name)
     {
         $this->name = $name;
     }
@@ -87,7 +87,7 @@ class WeightBasedShippingRate
     /**
      * @param string $price
      */
-    public function setPrice(string $price): void
+    public function setPrice(?string $price)
     {
         $this->price = $price;
     }
@@ -103,7 +103,7 @@ class WeightBasedShippingRate
     /**
      * @param int $shippingZoneId
      */
-    public function setShippingZoneId(int $shippingZoneId): void
+    public function setShippingZoneId(?int $shippingZoneId)
     {
         $this->shippingZoneId = $shippingZoneId;
     }
@@ -119,7 +119,7 @@ class WeightBasedShippingRate
     /**
      * @param float $weightLow
      */
-    public function setWeightLow(float $weightLow): void
+    public function setWeightLow(float $weightLow)
     {
         $this->weightLow = $weightLow;
     }
@@ -135,7 +135,7 @@ class WeightBasedShippingRate
     /**
      * @param float $weightHigh
      */
-    public function setWeightHigh(float $weightHigh): void
+    public function setWeightHigh(float $weightHigh)
     {
         $this->weightHigh = $weightHigh;
     }

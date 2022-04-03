@@ -39,7 +39,7 @@ class AppliedDiscount
     /**
      * @return string
      */
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
@@ -47,7 +47,7 @@ class AppliedDiscount
     /**
      * @param string $title
      */
-    public function setTitle(string $title): void
+    public function setTitle(?string $title)
     {
         $this->title = $title;
     }
@@ -55,7 +55,7 @@ class AppliedDiscount
     /**
      * @return string
      */
-    public function getDescription(): string
+    public function getDescription(): ?string
     {
         return $this->description;
     }
@@ -63,7 +63,7 @@ class AppliedDiscount
     /**
      * @param string $description
      */
-    public function setDescription(string $description): void
+    public function setDescription(?string $description)
     {
         $this->description = $description;
     }
@@ -71,7 +71,7 @@ class AppliedDiscount
     /**
      * @return string
      */
-    public function getValue(): string
+    public function getValue(): ?string
     {
         return $this->value;
     }
@@ -79,7 +79,7 @@ class AppliedDiscount
     /**
      * @param string $value
      */
-    public function setValue(string $value): void
+    public function setValue(?string $value)
     {
         $this->value = $value;
     }
@@ -87,7 +87,7 @@ class AppliedDiscount
     /**
      * @return string
      */
-    public function getValueType(): string
+    public function getValueType(): ?string
     {
         return $this->valueType;
     }
@@ -95,7 +95,7 @@ class AppliedDiscount
     /**
      * @param string $valueType
      */
-    public function setValueType(string $valueType): void
+    public function setValueType(?string $valueType)
     {
         $this->valueType = $valueType;
     }
@@ -103,7 +103,7 @@ class AppliedDiscount
     /**
      * @return string
      */
-    public function getAmount(): string
+    public function getAmount(): ?string
     {
         return $this->amount;
     }
@@ -111,7 +111,7 @@ class AppliedDiscount
     /**
      * @param string $amount
      */
-    public function setAmount(string $amount): void
+    public function setAmount(?string $amount)
     {
         $this->amount = $amount;
     }

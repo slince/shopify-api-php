@@ -75,7 +75,7 @@ class Risk
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -91,7 +91,7 @@ class Risk
     /**
      * @param int $orderId
      */
-    public function setOrderId(int $orderId): void
+    public function setOrderId(?int $orderId)
     {
         $this->orderId = $orderId;
     }
@@ -107,7 +107,7 @@ class Risk
     /**
      * @param int $checkoutId
      */
-    public function setCheckoutId(int $checkoutId): void
+    public function setCheckoutId(?int $checkoutId)
     {
         $this->checkoutId = $checkoutId;
     }
@@ -115,7 +115,7 @@ class Risk
     /**
      * @return string
      */
-    public function getSource(): string
+    public function getSource(): ?string
     {
         return $this->source;
     }
@@ -123,7 +123,7 @@ class Risk
     /**
      * @param string $source
      */
-    public function setSource(string $source): void
+    public function setSource(?string $source)
     {
         $this->source = $source;
     }
@@ -131,7 +131,7 @@ class Risk
     /**
      * @return string
      */
-    public function getScore(): string
+    public function getScore(): ?string
     {
         return $this->score;
     }
@@ -139,7 +139,7 @@ class Risk
     /**
      * @param string $score
      */
-    public function setScore(string $score): void
+    public function setScore(?string $score)
     {
         $this->score = $score;
     }
@@ -147,7 +147,7 @@ class Risk
     /**
      * @return string
      */
-    public function getRecommendation(): string
+    public function getRecommendation(): ?string
     {
         return $this->recommendation;
     }
@@ -155,7 +155,7 @@ class Risk
     /**
      * @param string $recommendation
      */
-    public function setRecommendation(string $recommendation): void
+    public function setRecommendation(?string $recommendation)
     {
         $this->recommendation = $recommendation;
     }
@@ -163,7 +163,7 @@ class Risk
     /**
      * @return bool
      */
-    public function isDisplay(): bool
+    public function isDisplay(): ?bool
     {
         return $this->display;
     }
@@ -171,7 +171,7 @@ class Risk
     /**
      * @param bool $display
      */
-    public function setDisplay(bool $display): void
+    public function setDisplay(?bool $display)
     {
         $this->display = $display;
     }
@@ -179,7 +179,7 @@ class Risk
     /**
      * @return bool
      */
-    public function isCauseCancel(): bool
+    public function isCauseCancel(): ?bool
     {
         return $this->causeCancel;
     }
@@ -187,7 +187,7 @@ class Risk
     /**
      * @param bool $causeCancel
      */
-    public function setCauseCancel(bool $causeCancel): void
+    public function setCauseCancel(?bool $causeCancel)
     {
         $this->causeCancel = $causeCancel;
     }
@@ -195,7 +195,7 @@ class Risk
     /**
      * @return string
      */
-    public function getMessage(): string
+    public function getMessage(): ?string
     {
         return $this->message;
     }
@@ -203,7 +203,7 @@ class Risk
     /**
      * @param string $message
      */
-    public function setMessage(string $message): void
+    public function setMessage(?string $message)
     {
         $this->message = $message;
     }
@@ -211,7 +211,7 @@ class Risk
     /**
      * @return string
      */
-    public function getMerchantMessage(): string
+    public function getMerchantMessage(): ?string
     {
         return $this->merchantMessage;
     }
@@ -219,7 +219,7 @@ class Risk
     /**
      * @param string $merchantMessage
      */
-    public function setMerchantMessage(string $merchantMessage): void
+    public function setMerchantMessage(?string $merchantMessage)
     {
         $this->merchantMessage = $merchantMessage;
     }

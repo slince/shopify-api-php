@@ -62,7 +62,7 @@ class LineItem
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -78,7 +78,7 @@ class LineItem
     /**
      * @param int $shopId
      */
-    public function setShopId(int $shopId): void
+    public function setShopId(?int $shopId)
     {
         $this->shopId = $shopId;
     }
@@ -94,7 +94,7 @@ class LineItem
     /**
      * @param int $fulfillmentOrderId
      */
-    public function setFulfillmentOrderId(int $fulfillmentOrderId): void
+    public function setFulfillmentOrderId(?int $fulfillmentOrderId)
     {
         $this->fulfillmentOrderId = $fulfillmentOrderId;
     }
@@ -110,7 +110,7 @@ class LineItem
     /**
      * @param int $quantity
      */
-    public function setQuantity(int $quantity): void
+    public function setQuantity(?int $quantity)
     {
         $this->quantity = $quantity;
     }
@@ -126,7 +126,7 @@ class LineItem
     /**
      * @param int $lineItemId
      */
-    public function setLineItemId(int $lineItemId): void
+    public function setLineItemId(?int $lineItemId)
     {
         $this->lineItemId = $lineItemId;
     }
@@ -142,7 +142,7 @@ class LineItem
     /**
      * @param int $fulfillableQuantity
      */
-    public function setFulfillableQuantity(int $fulfillableQuantity): void
+    public function setFulfillableQuantity(?int $fulfillableQuantity)
     {
         $this->fulfillableQuantity = $fulfillableQuantity;
     }
@@ -158,7 +158,7 @@ class LineItem
     /**
      * @param int $variantId
      */
-    public function setVariantId(int $variantId): void
+    public function setVariantId(?int $variantId)
     {
         $this->variantId = $variantId;
     }

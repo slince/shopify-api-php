@@ -81,7 +81,7 @@ class Blog
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -89,7 +89,7 @@ class Blog
     /**
      * @return string
      */
-    public function getHandle(): string
+    public function getHandle(): ?string
     {
         return $this->handle;
     }
@@ -97,7 +97,7 @@ class Blog
     /**
      * @param string $handle
      */
-    public function setHandle(string $handle): void
+    public function setHandle(?string $handle)
     {
         $this->handle = $handle;
     }
@@ -105,7 +105,7 @@ class Blog
     /**
      * @return string
      */
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
@@ -113,7 +113,7 @@ class Blog
     /**
      * @param string $title
      */
-    public function setTitle(string $title): void
+    public function setTitle(?string $title)
     {
         $this->title = $title;
     }
@@ -129,7 +129,7 @@ class Blog
     /**
      * @param \DateTimeInterface $updatedAt
      */
-    public function setUpdatedAt(?\DateTimeInterface $updatedAt): void
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }
@@ -137,7 +137,7 @@ class Blog
     /**
      * @return string
      */
-    public function getCommentable(): string
+    public function getCommentable(): ?string
     {
         return $this->commentable;
     }
@@ -145,7 +145,7 @@ class Blog
     /**
      * @param string $commentable
      */
-    public function setCommentable(string $commentable): void
+    public function setCommentable(?string $commentable)
     {
         $this->commentable = $commentable;
     }
@@ -153,7 +153,7 @@ class Blog
     /**
      * @return string
      */
-    public function getFeedburner(): string
+    public function getFeedburner(): ?string
     {
         return $this->feedburner;
     }
@@ -161,7 +161,7 @@ class Blog
     /**
      * @param string $feedburner
      */
-    public function setFeedburner(string $feedburner): void
+    public function setFeedburner(?string $feedburner)
     {
         $this->feedburner = $feedburner;
     }
@@ -169,7 +169,7 @@ class Blog
     /**
      * @return string
      */
-    public function getFeedburnerLocation(): string
+    public function getFeedburnerLocation(): ?string
     {
         return $this->feedburnerLocation;
     }
@@ -177,7 +177,7 @@ class Blog
     /**
      * @param string $feedburnerLocation
      */
-    public function setFeedburnerLocation(string $feedburnerLocation): void
+    public function setFeedburnerLocation(?string $feedburnerLocation)
     {
         $this->feedburnerLocation = $feedburnerLocation;
     }
@@ -193,7 +193,7 @@ class Blog
     /**
      * @param \DateTimeInterface $createdAt
      */
-    public function setCreatedAt(?\DateTimeInterface $createdAt): void
+    public function setCreatedAt(?\DateTimeInterface $createdAt)
     {
         $this->createdAt = $createdAt;
     }
@@ -201,7 +201,7 @@ class Blog
     /**
      * @return string
      */
-    public function getTemplateSuffix(): string
+    public function getTemplateSuffix(): ?string
     {
         return $this->templateSuffix;
     }
@@ -209,7 +209,7 @@ class Blog
     /**
      * @param string $templateSuffix
      */
-    public function setTemplateSuffix(string $templateSuffix): void
+    public function setTemplateSuffix(?string $templateSuffix)
     {
         $this->templateSuffix = $templateSuffix;
     }
@@ -217,7 +217,7 @@ class Blog
     /**
      * @return string
      */
-    public function getTags(): string
+    public function getTags(): ?string
     {
         return $this->tags;
     }
@@ -225,7 +225,7 @@ class Blog
     /**
      * @param string $tags
      */
-    public function setTags(string $tags): void
+    public function setTags(?string $tags)
     {
         $this->tags = $tags;
     }
@@ -233,7 +233,7 @@ class Blog
     /**
      * @return string
      */
-    public function getAdminGraphqlApiId(): string
+    public function getAdminGraphqlApiId(): ?string
     {
         return $this->adminGraphqlApiId;
     }
@@ -241,7 +241,7 @@ class Blog
     /**
      * @param string $adminGraphqlApiId
      */
-    public function setAdminGraphqlApiId(string $adminGraphqlApiId): void
+    public function setAdminGraphqlApiId(?string $adminGraphqlApiId)
     {
         $this->adminGraphqlApiId = $adminGraphqlApiId;
     }

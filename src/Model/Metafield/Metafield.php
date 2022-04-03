@@ -81,7 +81,7 @@ class Metafield
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -89,7 +89,7 @@ class Metafield
     /**
      * @return string
      */
-    public function getNamespace(): string
+    public function getNamespace(): ?string
     {
         return $this->namespace;
     }
@@ -97,7 +97,7 @@ class Metafield
     /**
      * @param string $namespace
      */
-    public function setNamespace(string $namespace): void
+    public function setNamespace(?string $namespace)
     {
         $this->namespace = $namespace;
     }
@@ -105,7 +105,7 @@ class Metafield
     /**
      * @return string
      */
-    public function getKey(): string
+    public function getKey(): ?string
     {
         return $this->key;
     }
@@ -113,7 +113,7 @@ class Metafield
     /**
      * @param string $key
      */
-    public function setKey(string $key): void
+    public function setKey(?string $key)
     {
         $this->key = $key;
     }
@@ -121,7 +121,7 @@ class Metafield
     /**
      * @return string
      */
-    public function getValue(): string
+    public function getValue(): ?string
     {
         return $this->value;
     }
@@ -129,7 +129,7 @@ class Metafield
     /**
      * @param string $value
      */
-    public function setValue(string $value): void
+    public function setValue(?string $value)
     {
         $this->value = $value;
     }
@@ -137,7 +137,7 @@ class Metafield
     /**
      * @return string
      */
-    public function getValueType(): string
+    public function getValueType(): ?string
     {
         return $this->valueType;
     }
@@ -145,7 +145,7 @@ class Metafield
     /**
      * @param string $valueType
      */
-    public function setValueType(string $valueType): void
+    public function setValueType(?string $valueType)
     {
         $this->valueType = $valueType;
     }
@@ -153,7 +153,7 @@ class Metafield
     /**
      * @return string
      */
-    public function getDescription(): string
+    public function getDescription(): ?string
     {
         return $this->description;
     }
@@ -161,7 +161,7 @@ class Metafield
     /**
      * @param string $description
      */
-    public function setDescription(string $description): void
+    public function setDescription(?string $description)
     {
         $this->description = $description;
     }
@@ -177,7 +177,7 @@ class Metafield
     /**
      * @param int $ownerId
      */
-    public function setOwnerId(int $ownerId): void
+    public function setOwnerId(?int $ownerId)
     {
         $this->ownerId = $ownerId;
     }
@@ -193,7 +193,7 @@ class Metafield
     /**
      * @param \DateTimeInterface $createdAt
      */
-    public function setCreatedAt(?\DateTimeInterface $createdAt): void
+    public function setCreatedAt(?\DateTimeInterface $createdAt)
     {
         $this->createdAt = $createdAt;
     }
@@ -209,7 +209,7 @@ class Metafield
     /**
      * @param \DateTimeInterface $updatedAt
      */
-    public function setUpdatedAt(?\DateTimeInterface $updatedAt): void
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }
@@ -217,7 +217,7 @@ class Metafield
     /**
      * @return string
      */
-    public function getOwnerResource(): string
+    public function getOwnerResource(): ?string
     {
         return $this->ownerResource;
     }
@@ -225,7 +225,7 @@ class Metafield
     /**
      * @param string $ownerResource
      */
-    public function setOwnerResource(string $ownerResource): void
+    public function setOwnerResource(?string $ownerResource)
     {
         $this->ownerResource = $ownerResource;
     }
@@ -233,7 +233,7 @@ class Metafield
     /**
      * @return string
      */
-    public function getAdminGraphqlApiId(): string
+    public function getAdminGraphqlApiId(): ?string
     {
         return $this->adminGraphqlApiId;
     }
@@ -241,7 +241,7 @@ class Metafield
     /**
      * @param string $adminGraphqlApiId
      */
-    public function setAdminGraphqlApiId(string $adminGraphqlApiId): void
+    public function setAdminGraphqlApiId(?string $adminGraphqlApiId)
     {
         $this->adminGraphqlApiId = $adminGraphqlApiId;
     }

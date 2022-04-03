@@ -28,7 +28,7 @@ class Price
     /**
      * @return string
      */
-    public function getAmount(): string
+    public function getAmount(): ?string
     {
         return $this->amount;
     }
@@ -36,7 +36,7 @@ class Price
     /**
      * @param string $amount
      */
-    public function setAmount(string $amount): void
+    public function setAmount(?string $amount)
     {
         $this->amount = $amount;
     }
@@ -44,7 +44,7 @@ class Price
     /**
      * @return string
      */
-    public function getCurrencyCode(): string
+    public function getCurrencyCode(): ?string
     {
         return $this->currencyCode;
     }
@@ -52,7 +52,7 @@ class Price
     /**
      * @param string $currencyCode
      */
-    public function setCurrencyCode(string $currencyCode): void
+    public function setCurrencyCode(?string $currencyCode)
     {
         $this->currencyCode = $currencyCode;
     }

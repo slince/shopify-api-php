@@ -138,7 +138,7 @@ class MarketingEvent
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -146,7 +146,7 @@ class MarketingEvent
     /**
      * @return string
      */
-    public function getEventType(): string
+    public function getEventType(): ?string
     {
         return $this->eventType;
     }
@@ -154,7 +154,7 @@ class MarketingEvent
     /**
      * @param string $eventType
      */
-    public function setEventType(string $eventType): void
+    public function setEventType(?string $eventType)
     {
         $this->eventType = $eventType;
     }
@@ -162,7 +162,7 @@ class MarketingEvent
     /**
      * @return string
      */
-    public function getRemoteId(): string
+    public function getRemoteId(): ?string
     {
         return $this->remoteId;
     }
@@ -170,7 +170,7 @@ class MarketingEvent
     /**
      * @param string $remoteId
      */
-    public function setRemoteId(string $remoteId): void
+    public function setRemoteId(?string $remoteId)
     {
         $this->remoteId = $remoteId;
     }
@@ -178,7 +178,7 @@ class MarketingEvent
     /**
      * @return \DateTimeInterface
      */
-    public function getStartedAt(): \DateTimeInterface
+    public function getStartedAt(): ?\DateTimeInterface
     {
         return $this->startedAt;
     }
@@ -186,7 +186,7 @@ class MarketingEvent
     /**
      * @param \DateTimeInterface $startedAt
      */
-    public function setStartedAt(\DateTimeInterface $startedAt): void
+    public function setStartedAt(?\DateTimeInterface $startedAt)
     {
         $this->startedAt = $startedAt;
     }
@@ -194,7 +194,7 @@ class MarketingEvent
     /**
      * @return \DateTimeInterface
      */
-    public function getEndedAt(): \DateTimeInterface
+    public function getEndedAt(): ?\DateTimeInterface
     {
         return $this->endedAt;
     }
@@ -202,7 +202,7 @@ class MarketingEvent
     /**
      * @param \DateTimeInterface $endedAt
      */
-    public function setEndedAt(\DateTimeInterface $endedAt): void
+    public function setEndedAt(?\DateTimeInterface $endedAt)
     {
         $this->endedAt = $endedAt;
     }
@@ -210,7 +210,7 @@ class MarketingEvent
     /**
      * @return \DateTimeInterface
      */
-    public function getScheduledToEndAt(): \DateTimeInterface
+    public function getScheduledToEndAt(): ?\DateTimeInterface
     {
         return $this->scheduledToEndAt;
     }
@@ -218,7 +218,7 @@ class MarketingEvent
     /**
      * @param \DateTimeInterface $scheduledToEndAt
      */
-    public function setScheduledToEndAt(\DateTimeInterface $scheduledToEndAt): void
+    public function setScheduledToEndAt(?\DateTimeInterface $scheduledToEndAt)
     {
         $this->scheduledToEndAt = $scheduledToEndAt;
     }
@@ -226,7 +226,7 @@ class MarketingEvent
     /**
      * @return string
      */
-    public function getBudget(): string
+    public function getBudget(): ?string
     {
         return $this->budget;
     }
@@ -234,7 +234,7 @@ class MarketingEvent
     /**
      * @param string $budget
      */
-    public function setBudget(string $budget): void
+    public function setBudget(?string $budget)
     {
         $this->budget = $budget;
     }
@@ -242,7 +242,7 @@ class MarketingEvent
     /**
      * @return string
      */
-    public function getCurrency(): string
+    public function getCurrency(): ?string
     {
         return $this->currency;
     }
@@ -250,7 +250,7 @@ class MarketingEvent
     /**
      * @param string $currency
      */
-    public function setCurrency(string $currency): void
+    public function setCurrency(?string $currency)
     {
         $this->currency = $currency;
     }
@@ -258,7 +258,7 @@ class MarketingEvent
     /**
      * @return string
      */
-    public function getManageUrl(): string
+    public function getManageUrl(): ?string
     {
         return $this->manageUrl;
     }
@@ -266,7 +266,7 @@ class MarketingEvent
     /**
      * @param string $manageUrl
      */
-    public function setManageUrl(string $manageUrl): void
+    public function setManageUrl(?string $manageUrl)
     {
         $this->manageUrl = $manageUrl;
     }
@@ -274,7 +274,7 @@ class MarketingEvent
     /**
      * @return string
      */
-    public function getPreviewUrl(): string
+    public function getPreviewUrl(): ?string
     {
         return $this->previewUrl;
     }
@@ -282,7 +282,7 @@ class MarketingEvent
     /**
      * @param string $previewUrl
      */
-    public function setPreviewUrl(string $previewUrl): void
+    public function setPreviewUrl(?string $previewUrl)
     {
         $this->previewUrl = $previewUrl;
     }
@@ -290,7 +290,7 @@ class MarketingEvent
     /**
      * @return string
      */
-    public function getUtmCampaign(): string
+    public function getUtmCampaign(): ?string
     {
         return $this->utmCampaign;
     }
@@ -298,7 +298,7 @@ class MarketingEvent
     /**
      * @param string $utmCampaign
      */
-    public function setUtmCampaign(string $utmCampaign): void
+    public function setUtmCampaign(?string $utmCampaign)
     {
         $this->utmCampaign = $utmCampaign;
     }
@@ -306,7 +306,7 @@ class MarketingEvent
     /**
      * @return string
      */
-    public function getUtmSource(): string
+    public function getUtmSource(): ?string
     {
         return $this->utmSource;
     }
@@ -314,7 +314,7 @@ class MarketingEvent
     /**
      * @param string $utmSource
      */
-    public function setUtmSource(string $utmSource): void
+    public function setUtmSource(?string $utmSource)
     {
         $this->utmSource = $utmSource;
     }
@@ -322,7 +322,7 @@ class MarketingEvent
     /**
      * @return string
      */
-    public function getUtmMedium(): string
+    public function getUtmMedium(): ?string
     {
         return $this->utmMedium;
     }
@@ -330,7 +330,7 @@ class MarketingEvent
     /**
      * @param string $utmMedium
      */
-    public function setUtmMedium(string $utmMedium): void
+    public function setUtmMedium(?string $utmMedium)
     {
         $this->utmMedium = $utmMedium;
     }
@@ -338,7 +338,7 @@ class MarketingEvent
     /**
      * @return string
      */
-    public function getBudgetType(): string
+    public function getBudgetType(): ?string
     {
         return $this->budgetType;
     }
@@ -346,7 +346,7 @@ class MarketingEvent
     /**
      * @param string $budgetType
      */
-    public function setBudgetType(string $budgetType): void
+    public function setBudgetType(?string $budgetType)
     {
         $this->budgetType = $budgetType;
     }
@@ -354,7 +354,7 @@ class MarketingEvent
     /**
      * @return string
      */
-    public function getDescription(): string
+    public function getDescription(): ?string
     {
         return $this->description;
     }
@@ -362,7 +362,7 @@ class MarketingEvent
     /**
      * @param string $description
      */
-    public function setDescription(string $description): void
+    public function setDescription(?string $description)
     {
         $this->description = $description;
     }
@@ -370,7 +370,7 @@ class MarketingEvent
     /**
      * @return string
      */
-    public function getMarketingChannel(): string
+    public function getMarketingChannel(): ?string
     {
         return $this->marketingChannel;
     }
@@ -378,7 +378,7 @@ class MarketingEvent
     /**
      * @param string $marketingChannel
      */
-    public function setMarketingChannel(string $marketingChannel): void
+    public function setMarketingChannel(?string $marketingChannel)
     {
         $this->marketingChannel = $marketingChannel;
     }
@@ -386,7 +386,7 @@ class MarketingEvent
     /**
      * @return bool
      */
-    public function isPaid(): bool
+    public function isPaid(): ?bool
     {
         return $this->paid;
     }
@@ -394,7 +394,7 @@ class MarketingEvent
     /**
      * @param bool $paid
      */
-    public function setPaid(bool $paid): void
+    public function setPaid(?bool $paid)
     {
         $this->paid = $paid;
     }
@@ -402,7 +402,7 @@ class MarketingEvent
     /**
      * @return string
      */
-    public function getReferringDomain(): string
+    public function getReferringDomain(): ?string
     {
         return $this->referringDomain;
     }
@@ -410,7 +410,7 @@ class MarketingEvent
     /**
      * @param string $referringDomain
      */
-    public function setReferringDomain(string $referringDomain): void
+    public function setReferringDomain(?string $referringDomain)
     {
         $this->referringDomain = $referringDomain;
     }
@@ -418,7 +418,7 @@ class MarketingEvent
     /**
      * @return string
      */
-    public function getBreadcrumbId(): string
+    public function getBreadcrumbId(): ?string
     {
         return $this->breadcrumbId;
     }
@@ -426,7 +426,7 @@ class MarketingEvent
     /**
      * @param string $breadcrumbId
      */
-    public function setBreadcrumbId(string $breadcrumbId): void
+    public function setBreadcrumbId(?string $breadcrumbId)
     {
         $this->breadcrumbId = $breadcrumbId;
     }
@@ -434,7 +434,7 @@ class MarketingEvent
     /**
      * @return string
      */
-    public function getMarketingActivityId(): string
+    public function getMarketingActivityId(): ?string
     {
         return $this->marketingActivityId;
     }
@@ -442,7 +442,7 @@ class MarketingEvent
     /**
      * @param string $marketingActivityId
      */
-    public function setMarketingActivityId(string $marketingActivityId): void
+    public function setMarketingActivityId(?string $marketingActivityId)
     {
         $this->marketingActivityId = $marketingActivityId;
     }
@@ -450,7 +450,7 @@ class MarketingEvent
     /**
      * @return string
      */
-    public function getAdminGraphqlApiId(): string
+    public function getAdminGraphqlApiId(): ?string
     {
         return $this->adminGraphqlApiId;
     }
@@ -458,7 +458,7 @@ class MarketingEvent
     /**
      * @param string $adminGraphqlApiId
      */
-    public function setAdminGraphqlApiId(string $adminGraphqlApiId): void
+    public function setAdminGraphqlApiId(?string $adminGraphqlApiId)
     {
         $this->adminGraphqlApiId = $adminGraphqlApiId;
     }
@@ -474,7 +474,7 @@ class MarketingEvent
     /**
      * @param array $marketedResources
      */
-    public function setMarketedResources(array $marketedResources): void
+    public function setMarketedResources(array $marketedResources)
     {
         $this->marketedResources = $marketedResources;
     }

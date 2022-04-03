@@ -176,7 +176,7 @@ class PriceRule
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -184,7 +184,7 @@ class PriceRule
     /**
      * @return string
      */
-    public function getValueType(): string
+    public function getValueType(): ?string
     {
         return $this->valueType;
     }
@@ -192,7 +192,7 @@ class PriceRule
     /**
      * @param string $valueType
      */
-    public function setValueType(string $valueType): void
+    public function setValueType(?string $valueType)
     {
         $this->valueType = $valueType;
     }
@@ -200,7 +200,7 @@ class PriceRule
     /**
      * @return string
      */
-    public function getValue(): string
+    public function getValue(): ?string
     {
         return $this->value;
     }
@@ -208,7 +208,7 @@ class PriceRule
     /**
      * @param string $value
      */
-    public function setValue(string $value): void
+    public function setValue(?string $value)
     {
         $this->value = $value;
     }
@@ -216,7 +216,7 @@ class PriceRule
     /**
      * @return string
      */
-    public function getCustomerSelection(): string
+    public function getCustomerSelection(): ?string
     {
         return $this->customerSelection;
     }
@@ -224,7 +224,7 @@ class PriceRule
     /**
      * @param string $customerSelection
      */
-    public function setCustomerSelection(string $customerSelection): void
+    public function setCustomerSelection(?string $customerSelection)
     {
         $this->customerSelection = $customerSelection;
     }
@@ -232,7 +232,7 @@ class PriceRule
     /**
      * @return string
      */
-    public function getTargetType(): string
+    public function getTargetType(): ?string
     {
         return $this->targetType;
     }
@@ -240,7 +240,7 @@ class PriceRule
     /**
      * @param string $targetType
      */
-    public function setTargetType(string $targetType): void
+    public function setTargetType(?string $targetType)
     {
         $this->targetType = $targetType;
     }
@@ -248,7 +248,7 @@ class PriceRule
     /**
      * @return string
      */
-    public function getTargetSelection(): string
+    public function getTargetSelection(): ?string
     {
         return $this->targetSelection;
     }
@@ -256,7 +256,7 @@ class PriceRule
     /**
      * @param string $targetSelection
      */
-    public function setTargetSelection(string $targetSelection): void
+    public function setTargetSelection(?string $targetSelection)
     {
         $this->targetSelection = $targetSelection;
     }
@@ -264,7 +264,7 @@ class PriceRule
     /**
      * @return string
      */
-    public function getAllocationMethod(): string
+    public function getAllocationMethod(): ?string
     {
         return $this->allocationMethod;
     }
@@ -272,7 +272,7 @@ class PriceRule
     /**
      * @param string $allocationMethod
      */
-    public function setAllocationMethod(string $allocationMethod): void
+    public function setAllocationMethod(?string $allocationMethod)
     {
         $this->allocationMethod = $allocationMethod;
     }
@@ -288,7 +288,7 @@ class PriceRule
     /**
      * @param int $allocationLimit
      */
-    public function setAllocationLimit(int $allocationLimit): void
+    public function setAllocationLimit(?int $allocationLimit)
     {
         $this->allocationLimit = $allocationLimit;
     }
@@ -296,7 +296,7 @@ class PriceRule
     /**
      * @return bool
      */
-    public function isOncePerCustomer(): bool
+    public function isOncePerCustomer(): ?bool
     {
         return $this->oncePerCustomer;
     }
@@ -304,7 +304,7 @@ class PriceRule
     /**
      * @param bool $oncePerCustomer
      */
-    public function setOncePerCustomer(bool $oncePerCustomer): void
+    public function setOncePerCustomer(?bool $oncePerCustomer)
     {
         $this->oncePerCustomer = $oncePerCustomer;
     }
@@ -320,7 +320,7 @@ class PriceRule
     /**
      * @param int $usageLimit
      */
-    public function setUsageLimit(int $usageLimit): void
+    public function setUsageLimit(?int $usageLimit)
     {
         $this->usageLimit = $usageLimit;
     }
@@ -328,7 +328,7 @@ class PriceRule
     /**
      * @return \DateTimeInterface
      */
-    public function getStartsAt(): \DateTimeInterface
+    public function getStartsAt(): ?\DateTimeInterface
     {
         return $this->startsAt;
     }
@@ -336,7 +336,7 @@ class PriceRule
     /**
      * @param \DateTimeInterface $startsAt
      */
-    public function setStartsAt(\DateTimeInterface $startsAt): void
+    public function setStartsAt(?\DateTimeInterface $startsAt)
     {
         $this->startsAt = $startsAt;
     }
@@ -344,7 +344,7 @@ class PriceRule
     /**
      * @return \DateTimeInterface
      */
-    public function getEndsAt(): \DateTimeInterface
+    public function getEndsAt(): ?\DateTimeInterface
     {
         return $this->endsAt;
     }
@@ -352,7 +352,7 @@ class PriceRule
     /**
      * @param \DateTimeInterface $endsAt
      */
-    public function setEndsAt(\DateTimeInterface $endsAt): void
+    public function setEndsAt(?\DateTimeInterface $endsAt)
     {
         $this->endsAt = $endsAt;
     }
@@ -368,7 +368,7 @@ class PriceRule
     /**
      * @param \DateTimeInterface $createdAt
      */
-    public function setCreatedAt(?\DateTimeInterface $createdAt): void
+    public function setCreatedAt(?\DateTimeInterface $createdAt)
     {
         $this->createdAt = $createdAt;
     }
@@ -384,7 +384,7 @@ class PriceRule
     /**
      * @param \DateTimeInterface $updatedAt
      */
-    public function setUpdatedAt(?\DateTimeInterface $updatedAt): void
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }
@@ -400,7 +400,7 @@ class PriceRule
     /**
      * @param array $entitledProductIds
      */
-    public function setEntitledProductIds(array $entitledProductIds): void
+    public function setEntitledProductIds(array $entitledProductIds)
     {
         $this->entitledProductIds = $entitledProductIds;
     }
@@ -416,7 +416,7 @@ class PriceRule
     /**
      * @param array $entitledVariantIds
      */
-    public function setEntitledVariantIds(array $entitledVariantIds): void
+    public function setEntitledVariantIds(array $entitledVariantIds)
     {
         $this->entitledVariantIds = $entitledVariantIds;
     }
@@ -432,7 +432,7 @@ class PriceRule
     /**
      * @param array $entitledCollectionIds
      */
-    public function setEntitledCollectionIds(array $entitledCollectionIds): void
+    public function setEntitledCollectionIds(array $entitledCollectionIds)
     {
         $this->entitledCollectionIds = $entitledCollectionIds;
     }
@@ -448,7 +448,7 @@ class PriceRule
     /**
      * @param array $entitledCountryIds
      */
-    public function setEntitledCountryIds(array $entitledCountryIds): void
+    public function setEntitledCountryIds(array $entitledCountryIds)
     {
         $this->entitledCountryIds = $entitledCountryIds;
     }
@@ -464,7 +464,7 @@ class PriceRule
     /**
      * @param array $prerequisiteProductIds
      */
-    public function setPrerequisiteProductIds(array $prerequisiteProductIds): void
+    public function setPrerequisiteProductIds(array $prerequisiteProductIds)
     {
         $this->prerequisiteProductIds = $prerequisiteProductIds;
     }
@@ -480,7 +480,7 @@ class PriceRule
     /**
      * @param array $prerequisiteVariantIds
      */
-    public function setPrerequisiteVariantIds(array $prerequisiteVariantIds): void
+    public function setPrerequisiteVariantIds(array $prerequisiteVariantIds)
     {
         $this->prerequisiteVariantIds = $prerequisiteVariantIds;
     }
@@ -496,7 +496,7 @@ class PriceRule
     /**
      * @param array $prerequisiteCollectionIds
      */
-    public function setPrerequisiteCollectionIds(array $prerequisiteCollectionIds): void
+    public function setPrerequisiteCollectionIds(array $prerequisiteCollectionIds)
     {
         $this->prerequisiteCollectionIds = $prerequisiteCollectionIds;
     }
@@ -512,7 +512,7 @@ class PriceRule
     /**
      * @param array $prerequisiteSavedSearchIds
      */
-    public function setPrerequisiteSavedSearchIds(array $prerequisiteSavedSearchIds): void
+    public function setPrerequisiteSavedSearchIds(array $prerequisiteSavedSearchIds)
     {
         $this->prerequisiteSavedSearchIds = $prerequisiteSavedSearchIds;
     }
@@ -528,7 +528,7 @@ class PriceRule
     /**
      * @param array $prerequisiteCustomerIds
      */
-    public function setPrerequisiteCustomerIds(array $prerequisiteCustomerIds): void
+    public function setPrerequisiteCustomerIds(array $prerequisiteCustomerIds)
     {
         $this->prerequisiteCustomerIds = $prerequisiteCustomerIds;
     }
@@ -544,7 +544,7 @@ class PriceRule
     /**
      * @param array $prerequisiteSubtotalRange
      */
-    public function setPrerequisiteSubtotalRange(array $prerequisiteSubtotalRange): void
+    public function setPrerequisiteSubtotalRange(array $prerequisiteSubtotalRange)
     {
         $this->prerequisiteSubtotalRange = $prerequisiteSubtotalRange;
     }
@@ -560,7 +560,7 @@ class PriceRule
     /**
      * @param array $prerequisiteQuantityRange
      */
-    public function setPrerequisiteQuantityRange(array $prerequisiteQuantityRange): void
+    public function setPrerequisiteQuantityRange(array $prerequisiteQuantityRange)
     {
         $this->prerequisiteQuantityRange = $prerequisiteQuantityRange;
     }
@@ -576,7 +576,7 @@ class PriceRule
     /**
      * @param array $prerequisiteShippingPriceRange
      */
-    public function setPrerequisiteShippingPriceRange(array $prerequisiteShippingPriceRange): void
+    public function setPrerequisiteShippingPriceRange(array $prerequisiteShippingPriceRange)
     {
         $this->prerequisiteShippingPriceRange = $prerequisiteShippingPriceRange;
     }
@@ -592,7 +592,7 @@ class PriceRule
     /**
      * @param array $prerequisiteToEntitlementQuantityRatio
      */
-    public function setPrerequisiteToEntitlementQuantityRatio(array $prerequisiteToEntitlementQuantityRatio): void
+    public function setPrerequisiteToEntitlementQuantityRatio(array $prerequisiteToEntitlementQuantityRatio)
     {
         $this->prerequisiteToEntitlementQuantityRatio = $prerequisiteToEntitlementQuantityRatio;
     }
@@ -608,7 +608,7 @@ class PriceRule
     /**
      * @param array $prerequisiteToEntitlementPurchase
      */
-    public function setPrerequisiteToEntitlementPurchase(array $prerequisiteToEntitlementPurchase): void
+    public function setPrerequisiteToEntitlementPurchase(array $prerequisiteToEntitlementPurchase)
     {
         $this->prerequisiteToEntitlementPurchase = $prerequisiteToEntitlementPurchase;
     }
@@ -616,7 +616,7 @@ class PriceRule
     /**
      * @return string
      */
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
@@ -624,7 +624,7 @@ class PriceRule
     /**
      * @param string $title
      */
-    public function setTitle(string $title): void
+    public function setTitle(?string $title)
     {
         $this->title = $title;
     }
@@ -632,7 +632,7 @@ class PriceRule
     /**
      * @return string
      */
-    public function getAdminGraphqlApiId(): string
+    public function getAdminGraphqlApiId(): ?string
     {
         return $this->adminGraphqlApiId;
     }
@@ -640,7 +640,7 @@ class PriceRule
     /**
      * @param string $adminGraphqlApiId
      */
-    public function setAdminGraphqlApiId(string $adminGraphqlApiId): void
+    public function setAdminGraphqlApiId(?string $adminGraphqlApiId)
     {
         $this->adminGraphqlApiId = $adminGraphqlApiId;
     }

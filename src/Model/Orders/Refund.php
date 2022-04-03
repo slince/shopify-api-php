@@ -101,7 +101,7 @@ class Refund
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -117,7 +117,7 @@ class Refund
     /**
      * @param int $orderId
      */
-    public function setOrderId(int $orderId): void
+    public function setOrderId(?int $orderId)
     {
         $this->orderId = $orderId;
     }
@@ -133,7 +133,7 @@ class Refund
     /**
      * @param \DateTimeInterface $createdAt
      */
-    public function setCreatedAt(?\DateTimeInterface $createdAt): void
+    public function setCreatedAt(?\DateTimeInterface $createdAt)
     {
         $this->createdAt = $createdAt;
     }
@@ -141,7 +141,7 @@ class Refund
     /**
      * @return string
      */
-    public function getNote(): string
+    public function getNote(): ?string
     {
         return $this->note;
     }
@@ -149,7 +149,7 @@ class Refund
     /**
      * @param string $note
      */
-    public function setNote(string $note): void
+    public function setNote(?string $note)
     {
         $this->note = $note;
     }
@@ -165,7 +165,7 @@ class Refund
     /**
      * @param int $userId
      */
-    public function setUserId(int $userId): void
+    public function setUserId(?int $userId)
     {
         $this->userId = $userId;
     }
@@ -173,7 +173,7 @@ class Refund
     /**
      * @return string
      */
-    public function getProcessedAt(): string
+    public function getProcessedAt(): ?string
     {
         return $this->processedAt;
     }
@@ -181,7 +181,7 @@ class Refund
     /**
      * @param string $processedAt
      */
-    public function setProcessedAt(string $processedAt): void
+    public function setProcessedAt(?string $processedAt)
     {
         $this->processedAt = $processedAt;
     }
@@ -189,7 +189,7 @@ class Refund
     /**
      * @return bool
      */
-    public function isRestock(): bool
+    public function isRestock(): ?bool
     {
         return $this->restock;
     }
@@ -197,7 +197,7 @@ class Refund
     /**
      * @param bool $restock
      */
-    public function setRestock(bool $restock): void
+    public function setRestock(?bool $restock)
     {
         $this->restock = $restock;
     }
@@ -213,7 +213,7 @@ class Refund
     /**
      * @param Duty[] $duties
      */
-    public function setDuties(array $duties): void
+    public function setDuties(array $duties)
     {
         $this->duties = $duties;
     }
@@ -229,7 +229,7 @@ class Refund
     /**
      * @param PriceSet $totalDutiesSet
      */
-    public function setTotalDutiesSet(PriceSet $totalDutiesSet): void
+    public function setTotalDutiesSet(PriceSet $totalDutiesSet)
     {
         $this->totalDutiesSet = $totalDutiesSet;
     }
@@ -237,7 +237,7 @@ class Refund
     /**
      * @return string
      */
-    public function getAdminGraphqlApiId(): string
+    public function getAdminGraphqlApiId(): ?string
     {
         return $this->adminGraphqlApiId;
     }
@@ -245,7 +245,7 @@ class Refund
     /**
      * @param string $adminGraphqlApiId
      */
-    public function setAdminGraphqlApiId(string $adminGraphqlApiId): void
+    public function setAdminGraphqlApiId(?string $adminGraphqlApiId)
     {
         $this->adminGraphqlApiId = $adminGraphqlApiId;
     }
@@ -261,7 +261,7 @@ class Refund
     /**
      * @param RefundDuty[] $refundDuties
      */
-    public function setRefundDuties(array $refundDuties): void
+    public function setRefundDuties(array $refundDuties)
     {
         $this->refundDuties = $refundDuties;
     }
@@ -277,7 +277,7 @@ class Refund
     /**
      * @param RefundLineItem[] $refundLineItems
      */
-    public function setRefundLineItems(array $refundLineItems): void
+    public function setRefundLineItems(array $refundLineItems)
     {
         $this->refundLineItems = $refundLineItems;
     }
@@ -293,7 +293,7 @@ class Refund
     /**
      * @param Transaction[] $transactions
      */
-    public function setTransactions(array $transactions): void
+    public function setTransactions(array $transactions)
     {
         $this->transactions = $transactions;
     }
@@ -309,7 +309,7 @@ class Refund
     /**
      * @param OrderAdjustment[] $orderAdjustments
      */
-    public function setOrderAdjustments(array $orderAdjustments): void
+    public function setOrderAdjustments(array $orderAdjustments)
     {
         $this->orderAdjustments = $orderAdjustments;
     }

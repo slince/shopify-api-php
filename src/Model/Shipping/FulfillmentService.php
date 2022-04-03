@@ -87,7 +87,7 @@ class FulfillmentService
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -95,7 +95,7 @@ class FulfillmentService
     /**
      * @return string
      */
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->name;
     }
@@ -103,7 +103,7 @@ class FulfillmentService
     /**
      * @param string $name
      */
-    public function setName(string $name): void
+    public function setName(?string $name)
     {
         $this->name = $name;
     }
@@ -111,7 +111,7 @@ class FulfillmentService
     /**
      * @return string
      */
-    public function getEmail(): string
+    public function getEmail(): ?string
     {
         return $this->email;
     }
@@ -119,7 +119,7 @@ class FulfillmentService
     /**
      * @param string $email
      */
-    public function setEmail(string $email): void
+    public function setEmail(?string $email)
     {
         $this->email = $email;
     }
@@ -127,7 +127,7 @@ class FulfillmentService
     /**
      * @return string
      */
-    public function getServiceName(): string
+    public function getServiceName(): ?string
     {
         return $this->serviceName;
     }
@@ -135,7 +135,7 @@ class FulfillmentService
     /**
      * @param string $serviceName
      */
-    public function setServiceName(string $serviceName): void
+    public function setServiceName(?string $serviceName)
     {
         $this->serviceName = $serviceName;
     }
@@ -143,7 +143,7 @@ class FulfillmentService
     /**
      * @return string
      */
-    public function getHandle(): string
+    public function getHandle(): ?string
     {
         return $this->handle;
     }
@@ -151,7 +151,7 @@ class FulfillmentService
     /**
      * @param string $handle
      */
-    public function setHandle(string $handle): void
+    public function setHandle(?string $handle)
     {
         $this->handle = $handle;
     }
@@ -159,7 +159,7 @@ class FulfillmentService
     /**
      * @return bool
      */
-    public function isFulfillmentOrdersOptIn(): bool
+    public function isFulfillmentOrdersOptIn(): ?bool
     {
         return $this->fulfillmentOrdersOptIn;
     }
@@ -167,7 +167,7 @@ class FulfillmentService
     /**
      * @param bool $fulfillmentOrdersOptIn
      */
-    public function setFulfillmentOrdersOptIn(bool $fulfillmentOrdersOptIn): void
+    public function setFulfillmentOrdersOptIn(?bool $fulfillmentOrdersOptIn)
     {
         $this->fulfillmentOrdersOptIn = $fulfillmentOrdersOptIn;
     }
@@ -175,7 +175,7 @@ class FulfillmentService
     /**
      * @return bool
      */
-    public function isIncludePendingStock(): bool
+    public function isIncludePendingStock(): ?bool
     {
         return $this->includePendingStock;
     }
@@ -183,7 +183,7 @@ class FulfillmentService
     /**
      * @param bool $includePendingStock
      */
-    public function setIncludePendingStock(bool $includePendingStock): void
+    public function setIncludePendingStock(?bool $includePendingStock)
     {
         $this->includePendingStock = $includePendingStock;
     }
@@ -199,7 +199,7 @@ class FulfillmentService
     /**
      * @param int $providerId
      */
-    public function setProviderId(int $providerId): void
+    public function setProviderId(?int $providerId)
     {
         $this->providerId = $providerId;
     }
@@ -215,7 +215,7 @@ class FulfillmentService
     /**
      * @param int $locationId
      */
-    public function setLocationId(int $locationId): void
+    public function setLocationId(?int $locationId)
     {
         $this->locationId = $locationId;
     }
@@ -223,7 +223,7 @@ class FulfillmentService
     /**
      * @return string
      */
-    public function getCallbackUrl(): string
+    public function getCallbackUrl(): ?string
     {
         return $this->callbackUrl;
     }
@@ -231,7 +231,7 @@ class FulfillmentService
     /**
      * @param string $callbackUrl
      */
-    public function setCallbackUrl(string $callbackUrl): void
+    public function setCallbackUrl(?string $callbackUrl)
     {
         $this->callbackUrl = $callbackUrl;
     }
@@ -239,7 +239,7 @@ class FulfillmentService
     /**
      * @return bool
      */
-    public function isTrackingSupport(): bool
+    public function isTrackingSupport(): ?bool
     {
         return $this->trackingSupport;
     }
@@ -247,7 +247,7 @@ class FulfillmentService
     /**
      * @param bool $trackingSupport
      */
-    public function setTrackingSupport(bool $trackingSupport): void
+    public function setTrackingSupport(?bool $trackingSupport)
     {
         $this->trackingSupport = $trackingSupport;
     }
@@ -255,7 +255,7 @@ class FulfillmentService
     /**
      * @return bool
      */
-    public function isInventoryManagement(): bool
+    public function isInventoryManagement(): ?bool
     {
         return $this->inventoryManagement;
     }
@@ -263,7 +263,7 @@ class FulfillmentService
     /**
      * @param bool $inventoryManagement
      */
-    public function setInventoryManagement(bool $inventoryManagement): void
+    public function setInventoryManagement(?bool $inventoryManagement)
     {
         $this->inventoryManagement = $inventoryManagement;
     }

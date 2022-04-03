@@ -243,7 +243,7 @@ class Checkout
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id)
     {
         $this->id = $id;
     }
@@ -251,7 +251,7 @@ class Checkout
     /**
      * @return string
      */
-    public function getToken(): string
+    public function getToken(): ?string
     {
         return $this->token;
     }
@@ -259,7 +259,7 @@ class Checkout
     /**
      * @param string $token
      */
-    public function setToken(string $token): void
+    public function setToken(?string $token)
     {
         $this->token = $token;
     }
@@ -267,7 +267,7 @@ class Checkout
     /**
      * @return string
      */
-    public function getCartToken(): string
+    public function getCartToken(): ?string
     {
         return $this->cartToken;
     }
@@ -275,7 +275,7 @@ class Checkout
     /**
      * @param string $cartToken
      */
-    public function setCartToken(string $cartToken): void
+    public function setCartToken(?string $cartToken)
     {
         $this->cartToken = $cartToken;
     }
@@ -283,7 +283,7 @@ class Checkout
     /**
      * @return string
      */
-    public function getEmail(): string
+    public function getEmail(): ?string
     {
         return $this->email;
     }
@@ -291,7 +291,7 @@ class Checkout
     /**
      * @param string $email
      */
-    public function setEmail(string $email): void
+    public function setEmail(?string $email)
     {
         $this->email = $email;
     }
@@ -299,7 +299,7 @@ class Checkout
     /**
      * @return string
      */
-    public function getGateway(): string
+    public function getGateway(): ?string
     {
         return $this->gateway;
     }
@@ -307,7 +307,7 @@ class Checkout
     /**
      * @param string $gateway
      */
-    public function setGateway(string $gateway): void
+    public function setGateway(?string $gateway)
     {
         $this->gateway = $gateway;
     }
@@ -315,7 +315,7 @@ class Checkout
     /**
      * @return bool
      */
-    public function isBuyerAcceptsMarketing(): bool
+    public function isBuyerAcceptsMarketing(): ?bool
     {
         return $this->buyerAcceptsMarketing;
     }
@@ -323,7 +323,7 @@ class Checkout
     /**
      * @param bool $buyerAcceptsMarketing
      */
-    public function setBuyerAcceptsMarketing(bool $buyerAcceptsMarketing): void
+    public function setBuyerAcceptsMarketing(?bool $buyerAcceptsMarketing)
     {
         $this->buyerAcceptsMarketing = $buyerAcceptsMarketing;
     }
@@ -339,7 +339,7 @@ class Checkout
     /**
      * @param \DateTimeInterface $createdAt
      */
-    public function setCreatedAt(?\DateTimeInterface $createdAt): void
+    public function setCreatedAt(?\DateTimeInterface $createdAt)
     {
         $this->createdAt = $createdAt;
     }
@@ -355,7 +355,7 @@ class Checkout
     /**
      * @param \DateTimeInterface $updatedAt
      */
-    public function setUpdatedAt(?\DateTimeInterface $updatedAt): void
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt)
     {
         $this->updatedAt = $updatedAt;
     }
@@ -363,7 +363,7 @@ class Checkout
     /**
      * @return string
      */
-    public function getLandingSite(): string
+    public function getLandingSite(): ?string
     {
         return $this->landingSite;
     }
@@ -371,7 +371,7 @@ class Checkout
     /**
      * @param string $landingSite
      */
-    public function setLandingSite(string $landingSite): void
+    public function setLandingSite(?string $landingSite)
     {
         $this->landingSite = $landingSite;
     }
@@ -379,7 +379,7 @@ class Checkout
     /**
      * @return string
      */
-    public function getNote(): string
+    public function getNote(): ?string
     {
         return $this->note;
     }
@@ -387,7 +387,7 @@ class Checkout
     /**
      * @param string $note
      */
-    public function setNote(string $note): void
+    public function setNote(?string $note)
     {
         $this->note = $note;
     }
@@ -403,7 +403,7 @@ class Checkout
     /**
      * @param NoteAttribute[] $noteAttributes
      */
-    public function setNoteAttributes(array $noteAttributes): void
+    public function setNoteAttributes(array $noteAttributes)
     {
         $this->noteAttributes = $noteAttributes;
     }
@@ -411,7 +411,7 @@ class Checkout
     /**
      * @return string
      */
-    public function getReferringSite(): string
+    public function getReferringSite(): ?string
     {
         return $this->referringSite;
     }
@@ -419,7 +419,7 @@ class Checkout
     /**
      * @param string $referringSite
      */
-    public function setReferringSite(string $referringSite): void
+    public function setReferringSite(?string $referringSite)
     {
         $this->referringSite = $referringSite;
     }
@@ -435,7 +435,7 @@ class Checkout
     /**
      * @param CheckoutShippingLine[] $shippingLines
      */
-    public function setShippingLines(array $shippingLines): void
+    public function setShippingLines(array $shippingLines)
     {
         $this->shippingLines = $shippingLines;
     }
@@ -443,7 +443,7 @@ class Checkout
     /**
      * @return bool
      */
-    public function isTaxesIncluded(): bool
+    public function isTaxesIncluded(): ?bool
     {
         return $this->taxesIncluded;
     }
@@ -451,7 +451,7 @@ class Checkout
     /**
      * @param bool $taxesIncluded
      */
-    public function setTaxesIncluded(bool $taxesIncluded): void
+    public function setTaxesIncluded(?bool $taxesIncluded)
     {
         $this->taxesIncluded = $taxesIncluded;
     }
@@ -467,7 +467,7 @@ class Checkout
     /**
      * @param int $totalWeight
      */
-    public function setTotalWeight(int $totalWeight): void
+    public function setTotalWeight(?int $totalWeight)
     {
         $this->totalWeight = $totalWeight;
     }
@@ -475,7 +475,7 @@ class Checkout
     /**
      * @return string
      */
-    public function getCurrency(): string
+    public function getCurrency(): ?string
     {
         return $this->currency;
     }
@@ -483,7 +483,7 @@ class Checkout
     /**
      * @param string $currency
      */
-    public function setCurrency(string $currency): void
+    public function setCurrency(?string $currency)
     {
         $this->currency = $currency;
     }
@@ -491,7 +491,7 @@ class Checkout
     /**
      * @return \DateTimeInterface
      */
-    public function getCompletedAt(): \DateTimeInterface
+    public function getCompletedAt(): ?\DateTimeInterface
     {
         return $this->completedAt;
     }
@@ -499,7 +499,7 @@ class Checkout
     /**
      * @param \DateTimeInterface $completedAt
      */
-    public function setCompletedAt(\DateTimeInterface $completedAt): void
+    public function setCompletedAt(?\DateTimeInterface $completedAt)
     {
         $this->completedAt = $completedAt;
     }
@@ -507,7 +507,7 @@ class Checkout
     /**
      * @return \DateTimeInterface
      */
-    public function getClosedAt(): \DateTimeInterface
+    public function getClosedAt(): ?\DateTimeInterface
     {
         return $this->closedAt;
     }
@@ -515,7 +515,7 @@ class Checkout
     /**
      * @param \DateTimeInterface $closedAt
      */
-    public function setClosedAt(\DateTimeInterface $closedAt): void
+    public function setClosedAt(?\DateTimeInterface $closedAt)
     {
         $this->closedAt = $closedAt;
     }
@@ -531,7 +531,7 @@ class Checkout
     /**
      * @param int $userId
      */
-    public function setUserId(int $userId): void
+    public function setUserId(?int $userId)
     {
         $this->userId = $userId;
     }
@@ -547,7 +547,7 @@ class Checkout
     /**
      * @param int $locationId
      */
-    public function setLocationId(int $locationId): void
+    public function setLocationId(?int $locationId)
     {
         $this->locationId = $locationId;
     }
@@ -555,7 +555,7 @@ class Checkout
     /**
      * @return string
      */
-    public function getSourceIdentifier(): string
+    public function getSourceIdentifier(): ?string
     {
         return $this->sourceIdentifier;
     }
@@ -563,7 +563,7 @@ class Checkout
     /**
      * @param string $sourceIdentifier
      */
-    public function setSourceIdentifier(string $sourceIdentifier): void
+    public function setSourceIdentifier(?string $sourceIdentifier)
     {
         $this->sourceIdentifier = $sourceIdentifier;
     }
@@ -571,7 +571,7 @@ class Checkout
     /**
      * @return string
      */
-    public function getSourceUrl(): string
+    public function getSourceUrl(): ?string
     {
         return $this->sourceUrl;
     }
@@ -579,7 +579,7 @@ class Checkout
     /**
      * @param string $sourceUrl
      */
-    public function setSourceUrl(string $sourceUrl): void
+    public function setSourceUrl(?string $sourceUrl)
     {
         $this->sourceUrl = $sourceUrl;
     }
@@ -587,7 +587,7 @@ class Checkout
     /**
      * @return string
      */
-    public function getDeviceId(): string
+    public function getDeviceId(): ?string
     {
         return $this->deviceId;
     }
@@ -595,7 +595,7 @@ class Checkout
     /**
      * @param string $deviceId
      */
-    public function setDeviceId(string $deviceId): void
+    public function setDeviceId(?string $deviceId)
     {
         $this->deviceId = $deviceId;
     }
@@ -603,7 +603,7 @@ class Checkout
     /**
      * @return string
      */
-    public function getPhone(): string
+    public function getPhone(): ?string
     {
         return $this->phone;
     }
@@ -611,7 +611,7 @@ class Checkout
     /**
      * @param string $phone
      */
-    public function setPhone(string $phone): void
+    public function setPhone(?string $phone)
     {
         $this->phone = $phone;
     }
@@ -619,7 +619,7 @@ class Checkout
     /**
      * @return string
      */
-    public function getCustomerLocale(): string
+    public function getCustomerLocale(): ?string
     {
         return $this->customerLocale;
     }
@@ -627,7 +627,7 @@ class Checkout
     /**
      * @param string $customerLocale
      */
-    public function setCustomerLocale(string $customerLocale): void
+    public function setCustomerLocale(?string $customerLocale)
     {
         $this->customerLocale = $customerLocale;
     }
@@ -643,7 +643,7 @@ class Checkout
     /**
      * @param LineItem[] $lineItems
      */
-    public function setLineItems(array $lineItems): void
+    public function setLineItems(array $lineItems)
     {
         $this->lineItems = $lineItems;
     }
@@ -651,7 +651,7 @@ class Checkout
     /**
      * @return string
      */
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->name;
     }
@@ -659,7 +659,7 @@ class Checkout
     /**
      * @param string $name
      */
-    public function setName(string $name): void
+    public function setName(?string $name)
     {
         $this->name = $name;
     }
@@ -667,7 +667,7 @@ class Checkout
     /**
      * @return string
      */
-    public function getSource(): string
+    public function getSource(): ?string
     {
         return $this->source;
     }
@@ -675,7 +675,7 @@ class Checkout
     /**
      * @param string $source
      */
-    public function setSource(string $source): void
+    public function setSource(?string $source)
     {
         $this->source = $source;
     }
@@ -683,7 +683,7 @@ class Checkout
     /**
      * @return string
      */
-    public function getAbandonedCheckoutUrl(): string
+    public function getAbandonedCheckoutUrl(): ?string
     {
         return $this->abandonedCheckoutUrl;
     }
@@ -691,7 +691,7 @@ class Checkout
     /**
      * @param string $abandonedCheckoutUrl
      */
-    public function setAbandonedCheckoutUrl(string $abandonedCheckoutUrl): void
+    public function setAbandonedCheckoutUrl(?string $abandonedCheckoutUrl)
     {
         $this->abandonedCheckoutUrl = $abandonedCheckoutUrl;
     }
@@ -707,7 +707,7 @@ class Checkout
     /**
      * @param DiscountCode[] $discountCodes
      */
-    public function setDiscountCodes(array $discountCodes): void
+    public function setDiscountCodes(array $discountCodes)
     {
         $this->discountCodes = $discountCodes;
     }
@@ -723,7 +723,7 @@ class Checkout
     /**
      * @param TaxLine[] $taxLines
      */
-    public function setTaxLines(array $taxLines): void
+    public function setTaxLines(array $taxLines)
     {
         $this->taxLines = $taxLines;
     }
@@ -731,7 +731,7 @@ class Checkout
     /**
      * @return string
      */
-    public function getSourceName(): string
+    public function getSourceName(): ?string
     {
         return $this->sourceName;
     }
@@ -739,7 +739,7 @@ class Checkout
     /**
      * @param string $sourceName
      */
-    public function setSourceName(string $sourceName): void
+    public function setSourceName(?string $sourceName)
     {
         $this->sourceName = $sourceName;
     }
@@ -747,7 +747,7 @@ class Checkout
     /**
      * @return string
      */
-    public function getPresentmentCurrency(): string
+    public function getPresentmentCurrency(): ?string
     {
         return $this->presentmentCurrency;
     }
@@ -755,7 +755,7 @@ class Checkout
     /**
      * @param string $presentmentCurrency
      */
-    public function setPresentmentCurrency(string $presentmentCurrency): void
+    public function setPresentmentCurrency(?string $presentmentCurrency)
     {
         $this->presentmentCurrency = $presentmentCurrency;
     }
@@ -763,7 +763,7 @@ class Checkout
     /**
      * @return string
      */
-    public function getTotalDiscounts(): string
+    public function getTotalDiscounts(): ?string
     {
         return $this->totalDiscounts;
     }
@@ -771,7 +771,7 @@ class Checkout
     /**
      * @param string $totalDiscounts
      */
-    public function setTotalDiscounts(string $totalDiscounts): void
+    public function setTotalDiscounts(?string $totalDiscounts)
     {
         $this->totalDiscounts = $totalDiscounts;
     }
@@ -779,7 +779,7 @@ class Checkout
     /**
      * @return string
      */
-    public function getTotalLineItemsPrice(): string
+    public function getTotalLineItemsPrice(): ?string
     {
         return $this->totalLineItemsPrice;
     }
@@ -787,7 +787,7 @@ class Checkout
     /**
      * @param string $totalLineItemsPrice
      */
-    public function setTotalLineItemsPrice(string $totalLineItemsPrice): void
+    public function setTotalLineItemsPrice(?string $totalLineItemsPrice)
     {
         $this->totalLineItemsPrice = $totalLineItemsPrice;
     }
@@ -795,7 +795,7 @@ class Checkout
     /**
      * @return string
      */
-    public function getTotalPrice(): string
+    public function getTotalPrice(): ?string
     {
         return $this->totalPrice;
     }
@@ -803,7 +803,7 @@ class Checkout
     /**
      * @param string $totalPrice
      */
-    public function setTotalPrice(string $totalPrice): void
+    public function setTotalPrice(?string $totalPrice)
     {
         $this->totalPrice = $totalPrice;
     }
@@ -811,7 +811,7 @@ class Checkout
     /**
      * @return string
      */
-    public function getTotalTax(): string
+    public function getTotalTax(): ?string
     {
         return $this->totalTax;
     }
@@ -819,7 +819,7 @@ class Checkout
     /**
      * @param string $totalTax
      */
-    public function setTotalTax(string $totalTax): void
+    public function setTotalTax(?string $totalTax)
     {
         $this->totalTax = $totalTax;
     }
@@ -827,7 +827,7 @@ class Checkout
     /**
      * @return string
      */
-    public function getSubtotalPrice(): string
+    public function getSubtotalPrice(): ?string
     {
         return $this->subtotalPrice;
     }
@@ -835,7 +835,7 @@ class Checkout
     /**
      * @param string $subtotalPrice
      */
-    public function setSubtotalPrice(string $subtotalPrice): void
+    public function setSubtotalPrice(?string $subtotalPrice)
     {
         $this->subtotalPrice = $subtotalPrice;
     }
@@ -843,7 +843,7 @@ class Checkout
     /**
      * @return string
      */
-    public function getTotalDuties(): string
+    public function getTotalDuties(): ?string
     {
         return $this->totalDuties;
     }
@@ -851,7 +851,7 @@ class Checkout
     /**
      * @param string $totalDuties
      */
-    public function setTotalDuties(string $totalDuties): void
+    public function setTotalDuties(?string $totalDuties)
     {
         $this->totalDuties = $totalDuties;
     }
@@ -867,7 +867,7 @@ class Checkout
     /**
      * @param OrderAddress $billingAddress
      */
-    public function setBillingAddress(OrderAddress $billingAddress): void
+    public function setBillingAddress(OrderAddress $billingAddress)
     {
         $this->billingAddress = $billingAddress;
     }
@@ -883,7 +883,7 @@ class Checkout
     /**
      * @param OrderAddress $shippingAddress
      */
-    public function setShippingAddress(OrderAddress $shippingAddress): void
+    public function setShippingAddress(OrderAddress $shippingAddress)
     {
         $this->shippingAddress = $shippingAddress;
     }
@@ -899,7 +899,7 @@ class Checkout
     /**
      * @param Customer $customer
      */
-    public function setCustomer(Customer $customer): void
+    public function setCustomer(Customer $customer)
     {
         $this->customer = $customer;
     }

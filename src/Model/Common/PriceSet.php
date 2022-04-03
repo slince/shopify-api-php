@@ -36,7 +36,7 @@ class PriceSet
     /**
      * @param Price $shopMoney
      */
-    public function setShopMoney(Price $shopMoney): void
+    public function setShopMoney(Price $shopMoney)
     {
         $this->shopMoney = $shopMoney;
     }
@@ -52,7 +52,7 @@ class PriceSet
     /**
      * @param Price $presentmentMoney
      */
-    public function setPresentmentMoney(Price $presentmentMoney): void
+    public function setPresentmentMoney(Price $presentmentMoney)
     {
         $this->presentmentMoney = $presentmentMoney;
     }
