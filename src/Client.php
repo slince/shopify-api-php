@@ -103,7 +103,7 @@ class Client
     /**
      * @var string
      */
-    protected $apiVersion = '2020-10';
+    protected $apiVersion = '2022-04';
 
     /**
      * @var ResponseInterface
