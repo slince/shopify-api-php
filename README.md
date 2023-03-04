@@ -9,7 +9,7 @@
         <img alt="Software License" src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square">
     </a>
     <a href="https://github.com/slince/shopify-api-php/actions">
-        <img src="https://img.shields.io/github/workflow/status/slince/shopify-api-php/test?style=flat-square" alt="Build Status">
+        <img src="https://img.shields.io/github/actions/workflow/status/slince/shopify-api-php/test.yml?style=flat-square" alt="Build Status">
     </a>
     <a href="https://codecov.io/github/slince/shopify-api-php">
         <img src="https://img.shields.io/codecov/c/github/slince/shopify-api-php/3.x?style=flat-square" alt="Coverage Status">
