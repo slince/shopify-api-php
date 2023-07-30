@@ -1,5 +1,5 @@
 {
-    "name": "slince/shopify-api-php",
+    "name": "adjustmentlayer/shopify-api-php",
     "description": "Shopify API Client for PHP",
     "keywords": ["shopify", "restful", "shopify-sdk", "shopify-api", "shopify-client", "shopify-client-php"],
     "type": "library",
