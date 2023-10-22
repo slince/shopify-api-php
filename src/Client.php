@@ -219,7 +219,7 @@ class Client
 
     public function __call($name, $arguments)
     {
-        if ('Manager' === substr($name, -7)) {
+        if (str_ends_with($name, 'Manager')) {
             $serviceId = substr($name, 3, -7);
             $serviceId = Inflector::tableize(Inflector::pluralize($serviceId));
             return $this->container->get($serviceId);

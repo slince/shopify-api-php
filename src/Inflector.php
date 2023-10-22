@@ -13,49 +13,42 @@ declare(strict_types=1);
 
 namespace Slince\Shopify;
 
-use Doctrine\Common\Inflector\Inflector as LegacyInflector;
 use Doctrine\Inflector\InflectorFactory;
+use Doctrine\Inflector\Inflector as DoctrineInflector;
 
-if (class_exists(InflectorFactory::class)) {
-    final class Inflector
+final class Inflector
+{
+    /**
+     * @var DoctrineInflector|null
+     */
+    protected static ?DoctrineInflector $inflector = null;
+
+    protected static function getInflector(): DoctrineInflector
     {
-        /**
-         * @var \Doctrine\Inflector\Inflector
-         */
-        protected static $inflector;
-
-        protected static function getInflector(): \Doctrine\Inflector\Inflector
-        {
-            if (null !== Inflector::$inflector) {
-                return Inflector::$inflector;
-            }
-            return Inflector::$inflector = InflectorFactory::create()->build();
+        if (null !== Inflector::$inflector) {
+            return Inflector::$inflector;
         }
-
-        public static function pluralize(string $word): string
-        {
-            return static::getInflector()->pluralize($word);
-        }
-
-        public static function tableize(string $word): string
-        {
-            return static::getInflector()->tableize($word);
-        }
-
-        public static function classify(string $word): string
-        {
-            return static::getInflector()->classify($word);
-        }
-
-
-        public static function singularize(string $word)
-        {
-            return static::getInflector()->singularize($word);
-        }
+        return Inflector::$inflector = InflectorFactory::create()->build();
     }
-} else {
-    final class Inflector extends LegacyInflector
-    {
 
+    public static function pluralize(string $word): string
+    {
+        return Inflector::getInflector()->pluralize($word);
+    }
+
+    public static function tableize(string $word): string
+    {
+        return Inflector::getInflector()->tableize($word);
+    }
+
+    public static function classify(string $word): string
+    {
+        return Inflector::getInflector()->classify($word);
+    }
+
+
+    public static function singularize(string $word)
+    {
+        return Inflector::getInflector()->singularize($word);
     }
 }
