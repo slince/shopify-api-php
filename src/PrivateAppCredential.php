@@ -20,17 +20,17 @@ class PrivateAppCredential implements CredentialInterface
     /**
      * @var string
      */
-    protected $apiKey;
+    protected string $apiKey;
 
     /**
      * @var string
      */
-    protected $password;
+    protected string $password;
 
     /**
      * @var string
      */
-    protected $sharedSecret;
+    protected string $sharedSecret;
 
     public function __construct($apiKey, $password, $sharedSecret)
     {
@@ -42,7 +42,7 @@ class PrivateAppCredential implements CredentialInterface
     /**
      * @return string
      */
-    public function getApiKey()
+    public function getApiKey(): string
     {
         return $this->apiKey;
     }

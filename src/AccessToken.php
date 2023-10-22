@@ -15,12 +15,12 @@ namespace Slince\Shopify;
 
 use Slince\Shopify\Exception\InvalidArgumentException;
 
-class AccessToken
+final class AccessToken
 {
     /**
      * @var string
      */
-    protected $token;
+    protected string $token;
 
     public function __construct(string $token)
     {
@@ -35,7 +35,7 @@ class AccessToken
      *
      * @return string
      */
-    public function __toString()
+    public function __toString(): string
     {
         return $this->token;
     }

@@ -20,9 +20,9 @@ class PublicAppCredential implements CredentialInterface
     /**
      * @var AccessToken
      */
-    protected $accessToken;
+    protected AccessToken $accessToken;
 
-    public function __construct($accessToken)
+    public function __construct(AccessToken|string $accessToken)
     {
         $this->accessToken = $accessToken instanceof AccessToken ? $accessToken : new AccessToken($accessToken);
     }

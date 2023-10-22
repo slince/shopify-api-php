@@ -86,41 +86,41 @@ class Client
     /**
      * @var Container
      */
-    protected $container;
+    protected Container $container;
 
     /**
      * @var CredentialInterface
      */
-    protected $credential;
+    protected CredentialInterface $credential;
 
     /**
      * The shop.
      *
      * @var string
      */
-    protected $shop;
+    protected string $shop;
 
     /**
      * @var string
      */
-    protected $apiVersion = '2022-04';
+    protected string $apiVersion = '2023-10';
 
     /**
      * @var ResponseInterface
      */
-    protected $lastResponse;
+    protected ResponseInterface $lastResponse;
 
     /**
      * @var MiddlewareChain
      */
-    protected $middlewares;
+    protected MiddlewareChain $middlewares;
 
     /**
      * Array of services classes.
      *
      * @var array
      */
-    public $serviceClass =[
+    public array $serviceClass =[
         // Access
         Service\Access\AccessScopeManager::class,
         Service\Access\StorefrontAccessTokenManager::class,
@@ -188,24 +188,24 @@ class Client
     /**
      * @var array
      */
-    protected $metaDirs = [
+    protected array $metaDirs = [
         'Slince\\Shopify\\Model' => __DIR__.'/../config/serializer'
     ];
 
     /**
      * @var string
      */
-    protected $metaCacheDir;
+    protected string $metaCacheDir;
 
     /**
-     * @var Hydrator
+     * @var Hydrator|null
      */
-    protected $hydrator;
+    protected ?Hydrator $hydrator = null;
 
     /**
      * @var HttpClient
      */
-    protected $httpClient;
+    protected HttpClient $httpClient;
 
     public function __construct($shop, CredentialInterface $credential, array $options = [])
     {
@@ -232,7 +232,7 @@ class Client
      *
      * @return CredentialInterface
      */
-    public function getCredential()
+    public function getCredential(): CredentialInterface
     {
         return $this->credential;
     }
@@ -242,7 +242,7 @@ class Client
      *
      * @param string $shop
      */
-    public function setShop($shop)
+    public function setShop(string $shop): void
     {
         if (!preg_match('/^[a-zA-Z0-9\-]{3,100}\.myshopify\.(?:com|io)$/', $shop)) {
             throw new InvalidArgumentException(
@@ -257,7 +257,7 @@ class Client
      *
      * @return string
      */
-    public function getShop()
+    public function getShop(): string
     {
         return $this->shop;
     }
@@ -266,11 +266,11 @@ class Client
      * Perform a GET request.
      *
      * @param string $resource
-     * @param array  $query
+     * @param array $query
      *
      * @return array
      */
-    public function get($resource, $query = [])
+    public function get(string $resource, array $query = []): array
     {
         return $this->createRequest('GET', $this->buildUrl($resource), [
             'query' => $query,
@@ -281,12 +281,12 @@ class Client
      * Perform a POST request.
      *
      * @param string $resource
-     * @param array  $data
-     * @param array  $query
+     * @param array $data
+     * @param array $query
      *
      * @return array
      */
-    public function post($resource, $data, $query = [])
+    public function post(string $resource, array $data, array $query = []): array
     {
         return $this->createRequest('POST', $this->buildUrl($resource), [
             'query' => $query,
@@ -298,12 +298,12 @@ class Client
      * Perform a PUT request.
      *
      * @param string $resource
-     * @param array  $data
-     * @param array  $query
+     * @param array $data
+     * @param array $query
      *
      * @return array
      */
-    public function put($resource, $data, $query = [])
+    public function put(string $resource, array $data, array $query = []): array
     {
         return $this->createRequest('PUT', $this->buildUrl($resource), [
             'query' => $query,
@@ -315,9 +315,9 @@ class Client
      * Perform a DELETE request.
      *
      * @param string $resource
-     * @param array  $query
+     * @param array $query
      */
-    public function delete($resource, $query = [])
+    public function delete(string $resource, array $query = []): void
     {
         $this->createRequest('DELETE', $this->buildUrl($resource), [
             'query' => $query
@@ -332,7 +332,7 @@ class Client
      * @param array $options
      * @return array
      */
-    public function createRequest($method, $uri, $options = [])
+    public function createRequest(string $method, string $uri, array $options = []): array
     {
         $request = new Request($method, $uri, [
             'Content-Type' => 'application/json',
@@ -354,7 +354,7 @@ class Client
      * @return ResponseInterface
      * @codeCoverageIgnore
      */
-    protected function sendRequest(RequestInterface $request, array $options = [])
+    protected function sendRequest(RequestInterface $request, array $options = []): ResponseInterface
     {
         $request = $this->credential->applyToRequest($request);
         $request = $request->withHeader('User-Agent', static::NAME . '/' . static::VERSION);
@@ -374,7 +374,7 @@ class Client
         return $response;
     }
 
-    protected function raiseException(RequestInterface $request, ResponseInterface $response)
+    protected function raiseException(RequestInterface $request, ResponseInterface $response): void
     {
         if ($response->getStatusCode() < 300) {
             return;
@@ -404,7 +404,7 @@ class Client
      *
      * @return ResponseInterface
      */
-    public function getLastResponse()
+    public function getLastResponse(): ResponseInterface
     {
         return $this->lastResponse;
     }
@@ -413,10 +413,10 @@ class Client
      * Builds an url by given resource name.
      *
      * @param string $resource
-     * @param string $versioning
+     * @param bool $versioning
      * @return string
      */
-    public function buildUrl($resource, $versioning = true)
+    public function buildUrl(string $resource, bool $versioning = true): string
     {
         return $versioning ? sprintf('https://%s/admin/api/%s/%s.json', $this->shop, $this->apiVersion, $resource)
             : sprintf('https://%s/admin/%s.json', $this->shop, $resource);
@@ -468,7 +468,7 @@ class Client
      *
      * @return Hydrator
      */
-    public function getHydrator()
+    public function getHydrator(): Hydrator
     {
         if ($this->hydrator) {
             return $this->hydrator;
@@ -483,10 +483,10 @@ class Client
      * @param string $path
      * @throws RuntimeException
      */
-    public function addMetaDir($namespace, $path)
+    public function addMetaDir(string $namespace, string $path): void
     {
         if ($this->hydrator) {
-            throw new RuntimeException(sprintf('The hydrator has been built, you should add meta dir before getting manager.'));
+            throw new RuntimeException('The hydrator has been built, you should add meta dir before getting manager.');
         }
         $this->metaDirs[$namespace] = $path;
     }
@@ -497,7 +497,7 @@ class Client
      * @param string $serviceClass
      * @throws InvalidArgumentException
      */
-    public function addServiceClass($serviceClass)
+    public function addServiceClass(string $serviceClass): void
     {
         if (!is_subclass_of($serviceClass, ManagerInterface::class)) {
             throw new InvalidArgumentException(sprintf('The service class "%s" should implement "ManagerInterface"', $serviceClass));
@@ -509,7 +509,7 @@ class Client
     /**
      * Initialize base services.
      */
-    protected function initializeBaseServices()
+    protected function initializeBaseServices(): void
     {
         foreach ($this->serviceClass as $serviceClass) {
             $this->container->register($serviceClass::getServiceName(), $serviceClass);

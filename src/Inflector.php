@@ -24,25 +24,25 @@ if (class_exists(InflectorFactory::class)) {
          */
         protected static $inflector;
 
-        protected static function getInflector()
+        protected static function getInflector(): \Doctrine\Inflector\Inflector
         {
-            if (null !== static::$inflector) {
-                return static::$inflector;
+            if (null !== Inflector::$inflector) {
+                return Inflector::$inflector;
             }
-            return static::$inflector = InflectorFactory::create()->build();
+            return Inflector::$inflector = InflectorFactory::create()->build();
         }
 
-        public static function pluralize(string $word)
+        public static function pluralize(string $word): string
         {
             return static::getInflector()->pluralize($word);
         }
 
-        public static function tableize(string $word)
+        public static function tableize(string $word): string
         {
             return static::getInflector()->tableize($word);
         }
 
-        public static function classify(string $word)
+        public static function classify(string $word): string
         {
             return static::getInflector()->classify($word);
         }

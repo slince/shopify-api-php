@@ -12,7 +12,7 @@ use Slince\Shopify\Exception\ClientException;
 class CallableMiddleware implements MiddlewareInterface
 {
     /**
-     * @var Client
+     * @var callable
      */
     protected $callable;
 
